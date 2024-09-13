@@ -152,7 +152,7 @@ marp: true
     - 「木構造」になっている
         - フォルダの「<span style="color:red">下（中）</span>」にファイルがある
         - フォルダの下のフォルダの下にさらにファイル
-        - 「<span style="color:red">上</span>」をたどっていくとドライブ
+        - 「<span style="color:red">上</span>」をたどっていくとドライブやPCに至る
 
 ![w:500](figs/explorer1.png) ![w:500](figs/explorer2.png)
 
@@ -164,14 +164,12 @@ marp: true
     - nautilusを使えばほぼ同じ
     - explorerと同じく端末には「いまいる場所」がある
         - `pwd`と打つと確認可能
-        ```bash
-        ueda@x1win:~$ pwd
-        /home/ueda        # /の下のhomeの下のueda
-        ```
-
-- 違い: 一番上にドライブがない
-
-
+            ```bash
+            ueda@x1win:~$ pwd
+            /home/ueda        # /の下のhomeの下のueda
+            ```
+- 違い: 一番上にドライブがなくて「/」（<span style="color:red">「ルート」</span>）がある
+    - 木構造の「根」という意味
 
 ---
 
@@ -181,8 +179,6 @@ marp: true
 
 - 「フォルダ」は<span style="color:red">「ディレクトリ」</span>と呼ぶ
     - 「フォルダ」は比喩<br />
-- 一番上のディレクトリ「/」: <span style="color:red">「ルート」</span>
-    - 根という意味（木構造の根っこ）<br />
 - `pwd`で出てくる文字列の名前: <span style="color:red">「パス」</span>
     - 住所の都道府県や市町村を`/`で区切って表現しているようなもの
     - ファイル名が含まれてもパスと呼ばれる
@@ -213,24 +209,23 @@ $ rmdir ./hoge        <- hogeを削除
 
 - 空白区切りで文字列（単語）を並べる
 - 基本は先頭の単語がコマンドで、あとは引数
-    - 例
-```bash
-$ ls /etc/            #lsに引数/etc/を与えて、/etc/のリストを表示
-$ touch a.txt b.txt   #「touch」にa.txt、b.txtという文字列を与えてファイルを作成
-$ ls                  #ファイルができているか確認（引数なしでlsを使用）
-a.txt  b.txt
-$ rm a.txt b.txt      #「rm」にファイル名を与えてファイルを削除
-$ ls                  #lsするとa.txt、b.txtは消えている
-```
-        - <span style="color:red">`touch`</span>: ファイルがなければ新規作成、<span style="color:red">`rm`</span>: ファイルの削除<br />　
-- コマンドもファイル
-    - <span style="color:red">`which`</span>で確認可能
-        ```bash
-        $ which ls                #コマンドlsの由来は？
-        /usr/bin/ls               #このファイル
-        $ /usr/bin/ls /etc/       #ファイルを直接指定して実行
-        （出力は省略）
-        ```
+    ```bash
+    ### 例 ###
+    $ ls /etc/            #lsに引数/etc/を与えて、/etc/のリストを表示
+    $ touch a.txt b.txt   #「touch」にa.txt、b.txtという文字列を与えてファイルを作成
+    $ ls                  #ファイルができているか確認（引数なしでlsを使用）
+    a.txt  b.txt
+    $ rm a.txt b.txt      #「rm」にファイル名を与えてファイルを削除
+    $ ls                  #lsするとa.txt、b.txtは消えている
+    ```
+    - 補足: <span style="color:red">`touch`</span>: ファイルがなければ新規作成、<span style="color:red">`rm`</span>: ファイルの削除<br />　
+- コマンドもファイル（<span style="color:red">`which`</span>で確認可能）
+    ```bash
+    $ which ls                #コマンドlsの由来は？
+    /usr/bin/ls               #このファイル
+    $ /usr/bin/ls /etc/       #ファイルを直接指定して実行
+    （出力は省略）
+    ```
 
 ---
 
@@ -242,11 +237,11 @@ $ ls                  #lsするとa.txt、b.txtは消えている
 - コマンドを探しているのもシェル
     - `ls`とユーザが打つ$\rightarrow$`/usr/bin/ls`を探して実行
         - シェルの<span style="color:red">`PATH`</span>という変数に、探すべきディレクトリのリスト
-        ```bash
-        $ echo $PATH
-        /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-        ```
-        - <span style="color:red">`echo`</span>: 引数で指定した文字列や変数を表示
+            ```bash
+            $ echo $PATH  #echo: 引数で指定した文字列や変数を表示
+            /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+            :/usr/games:/usr/local/games:/snap/bin
+            ```
         - 変数があるように、シェルはプログラム言語でもある
 
 
@@ -268,7 +263,7 @@ $ ls                  #lsするとa.txt、b.txtは消えている
     1. <span style="color:red">`nano hello.py`</span>と端末に打ってエディタを立ち上げ
     2. 何か書いて保存（この例はPythonのコード）<br />
 <img width=50% src="figs/nano.png" /><br />
-    3. 下の`^O`（Ctrl+O)で保存
+    3. フッタのメニューにある`^O`（Ctrl+O)で保存
         - `File Name to Write: hello.py`と聞かれるのでEnter
     4. `^X`（Ctrl+X）で終了
 
