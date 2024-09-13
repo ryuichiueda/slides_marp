@@ -1,3 +1,9 @@
+---
+marp: true
+---
+
+<!-- footer: "ロボットシステム学第1回" -->
+
 # ロボットシステム学
 
 ## 第1回: イントロダクション
@@ -10,6 +16,8 @@
 ![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
 
 ---
+
+<!-- paginate: true -->
 
 ## 今日やること
 
