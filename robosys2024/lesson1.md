@@ -73,7 +73,7 @@ marp: true
 
 ---
 
-## 参考文献（<span style="text-transform:none">Python</span>）
+## 参考文献（Python）
 
 - はじめての人向け
     - 森 巧尚: Python 1年生 第2版, 翔泳社, 2022. <br />　
@@ -83,7 +83,7 @@ marp: true
 
 ---
 
-## 参考文献（<span style="text-transform:none">Linux</span>）
+## 参考文献（Linux）
 
 1. 三宅, 大角: 新しいLinuxの教科書　第２版, SBクリエイティブ, 2024. 
     - まずはこれでしょうか
@@ -94,7 +94,7 @@ marp: true
 
 ---
 
-## <span style="text-transform:none">Linux</span>環境の準備
+## Linux環境の準備
 
 - Ubuntu（24.04 LTSを標準とします）
     - 特殊なものは自己責任でご使用を<br />　
@@ -107,7 +107,7 @@ marp: true
 
 ---
 
-## <span style="text-transform:none">Linux</span>環境（CLI）を触る
+## Linux環境（CLI）を触る
 
 - WSL（Windows）、Terminal（Mac, Linux）を立ち上げると字を打ち込める画面が出る
     - <span style="color:red">「端末（terminal）」</span>というもの
@@ -260,7 +260,7 @@ $ rmdir ./hoge        <- hogeを削除
 
 ---
 
-## <span style="text-transform:none">nano</span>を使う
+## nanoを使う
 
 - 手順
     1. <span style="color:red">`nano hello.py`</span>と端末に打ってエディタを立ち上げ
@@ -303,7 +303,7 @@ print("hello")
 
 ---
 
-## 宿題: エディタの<span style="text-transform:none">Vim</span>を<br />使えるようにする
+## 宿題: Vimを使えるようにする
 
 - Vim練習コマンド`vimtutor`を実行
 - 書いてある内容に従う
