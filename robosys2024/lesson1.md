@@ -86,8 +86,8 @@ marp: true
 ## 参考文献（<span style="text-transform:none">Linux</span>）
 
 - 上田, 山田, 田代, 中村, 今泉, 上杉: 1日1問, 半年以内に習得 シェル・ワンライナー160本ノック, 技術評論社, 2021. 
-    - 自著ですがおすすめ。
-    - 少しずつLinux（のコマンドライン）が使えるようになっていく構成になっています。後半は難しいです。
+    - 自著ですがおすすめ
+    - 少しずつLinux（のコマンドライン）が使えるようになっていく構成になっています。後半は難
 
 ---
 
@@ -130,19 +130,19 @@ marp: true
 
 - <span style="color:red">「コマンド（$\fallingdotseq$プログラム）」</span>を呼び出す
     - 例: <span style="color:red">`ls`</span>（ファイルのリスト表示プログラム）の呼び出し
-```bash
-WSL$ ls /mnt/c/Windows/
-Ubuntu$ ls /etc/
-```
+        ```bash
+        WSL$ ls /mnt/c/Windows/
+        Ubuntu$ ls /etc/
+        ```
     - GUIのアプリも立ち上げられる
-```bash
-### エクスプローラーを立ち上げる（上田の経験ではGUIより反応が良い）###
-WSL$ explorer.exe
-WSL$ explorer.exe .
-### Ubuntuで特定のフォルダを開く###
-Ubuntu$ open /etc/  # Ubuntu$ nautilus /etc/ でもOK
-```
-        - 最初はCLIでのファイル操作は難しいので、ストレスを感じたらGUIに逃げましょう。（最初から全部GUIはNG）
+        ```bash
+        ### エクスプローラーを立ち上げる（上田の経験ではGUIより反応が良い）###
+        WSL$ explorer.exe
+        WSL$ explorer.exe .
+        ### Ubuntuで特定のフォルダを開く###
+        Ubuntu$ open /etc/  # Ubuntu$ nautilus /etc/ でもOK
+        ```
+        - 最初はCLIでのファイル操作は難しい$\rightarrow$ストレスを感じたらGUIに逃避を
 
 ---
 
@@ -154,8 +154,7 @@ Ubuntu$ open /etc/  # Ubuntu$ nautilus /etc/ でもOK
         - フォルダの下のフォルダの下にさらにファイル
         - 「<span style="color:red">上</span>」をたどっていくとドライブ
 
-<img width=48% src="figs/explorer1.png" />
-<img width=48% src="figs/explorer2.png" />
+![w:500](figs/explorer1.png) ![w:500](figs/explorer2.png)
 
 ---
 
