@@ -1,6 +1,12 @@
+---
+marp: true
+---
+
+<!-- footer: "ロボットシステム学第2回" -->
+
 # ロボットシステム学
 
-## 第2回: <span style="text-transform:none">Linux環境での<br />PythonプログラミングI</span>
+## 第2回: Linux環境での<br />PythonプログラミングI
 
 千葉工業大学 上田 隆一
 
@@ -14,6 +20,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+<!-- paginate: true -->
+
 ## 今日やること
 
 - 前半: Pythonの入門
@@ -26,7 +34,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 前半: <span style="text-transform:none">Python入門</span>
+## 前半: Python入門
 
 ---
 
@@ -34,26 +42,25 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - Vimで（emacsに慣れている人はemacsで）書きましょう
     - ファイル名は`hello.py`
-```bash
-$ vi hello.py
-```
-    - `hello.py`の中身
-```python
-print("hello")              #文字列を出力
-print(3.14)                 #数字を出力
-```
-        - 「`#`」より後ろはコメント
-- 実行
-    - <span style="color:red">`python3`</span>コマンドに読み込ませる
         ```bash
-        $ python3 hello.py
-        hello
-        3.14
+        $ vi hello.py
         ```
+    - `hello.py`の中身
+        ```python
+        print("hello")              #文字列を出力
+        print(3.14)                 #数字を出力
+        ```
+        - 「`#`」より後ろはコメント
+- 実行（<span style="color:red">`python3`</span>コマンドに読み込ませる）
+    ```bash
+    $ python3 hello.py
+    hello
+    3.14
+    ```
 
 ---
 
-## <span style="text-transform:none">Python</span>の文字列、数字と関数
+## Pythonの文字列、数字と関数
 
 - 文字列、数字（<span style="color:red">リテラル</span>）
     - 文字列は`""`や`''`で囲む
@@ -65,51 +72,49 @@ print(3.14)                 #数字を出力
         3.14, -1, 5
         1.23e+100 #1.23かける10の100乗
         ```
-- 関数の使用
-    - 「`名前(引数, 引数, ...)`」と記述
-    - `print`関数
+- 関数の使用: 「`名前(引数, 引数, ...)`」と記述
+    - 例: 前ページに出てきた関数: `print`関数
         - 字を端末に出力する
         - C言語の`puts`や`printf`などに相当
         - 文字列も数字も（他のいくつかの型のものも）受け付け
 
 ---
 
-## <span style="text-transform:none">Python</span>の変数
+## Pythonの変数
 
 - 要点
     - 値（数字や文字列、その他のもの）に名前を付与できる
-        - 「値を変数に代入」というより「値に名前をつける」
+        - 「値を変数に代入」というより「値を名前で参照」
     - 型は書かなくてよい
 - コードの例
     ```python
     name = "上田"   #「上田」という文字列にnameという名前を付ける
     money = 5       #5という数字にmoneyという名前をつける
-    print(name + "の所持金: " + str(money) + "円") #文字列をくっつけて出力
-    print("{}の所持金: {}円".format(name, money) ) #発展: こういう書き方も
+    print("{}の所持金: {}円".format(name, money) ) #文字列に対してformatメソッドを呼び出し
     ```
-    - <span style="color:red">`str`</span>は数字などを文字列に変換する関数
+    - 「メソッド」: いまのところ値や変数に対してなにか操作するための関数のようなものと理解しておく
     - 実行（`var.py`というファイル名で）
-```bash
-$ python3 var.py
-上田の所持金: 5円
-上田の所持金: 5円
-```
+        ```bash
+        $ python3 var.py
+        上田の所持金: 5円
+        ```
 
 ---
 
-## <span style="text-transform:none">Python</span>のリストと<span style="text-transform:none">for</span>文
+## Python</span>のリストと<span style="text-transform:none">for文
 
 - 要点
-   - Pythonのリスト: 複数の値を持っておけるもの
-   - Pythonのfor文: リストの要素をひとつずつ処理するもの
+   - リスト: 複数の値を並べて記録できるもの
+   - for文: リストの要素をひとつずつ処理するもの
        - for文の中身は右側に余白（<span style="color:red">インデント</span>）
-- コードの例　　　　　　　　　　　　　　　　　　　　　　　
-    ```python
-    fruits = ["apple", "banana", "chery" ]  #文字列3つのリストをfruitsと命名
-    
-    for f in fruits:
-        print(f + "はおいしい")             #インデントは半角空白4文字が標準
-    ```
+        ```python
+        ### コードの例 ###
+        fruits = ["apple", "banana", "chery" ]  #文字列3つのリストをfruitsと命名
+        
+        for f in fruits:
+            print(f + "はおいしい")             # + で文字列を連結できる
+        #↑インデントは半角空白4文字が標準（講義では厳密に守ること）
+        ```
     - 実行（`fruits.py`というファイル名でコードを保存）
         ```python
         $ python3 fruits.py
@@ -124,8 +129,8 @@ $ python3 var.py
 - 要点
     - 基本はC言語と同じ
     - 負の値を指定すると後ろから要素を指定可能
-- コードの例（`list.py`）
     ```python
+    ### コードの例（list.py） ###
     fruits = ["apple", "banana", "chery" ]
     print("最初の要素: " + fruits[0])      #先頭は0番目
     print("次の要素: " + fruits[1])        #次の要素は1番目
@@ -141,17 +146,17 @@ $ python3 var.py
 
 ---
 
-## リスト要素の範囲指定<br />（スライス）
+## リスト要素の範囲指定（スライス）
 
 - リストを部分的に取り出して新たにリストを作成できる
-- コードの例（`list2.py`）
     ```python
+    ### コードの例（list2.py） ###
     fruits = ["a", "b", "c", "d", "e" ]
     print("0番目から2番目の要素: ", fruits[0:3])
     print("2番目以降の要素: ", fruits[2:])
     print("ひとつ飛ばしでリストを作成: ", fruits[0::2])
     ```
-    - 注意: 文字列とリストは`+`で連結できないので、上のprintでは引数を分けている
+    - 注意: 上のprintでは出力したい文字列をふたつの引数に分けている
 - 実行結果
     ```bash
     $ python3 list2.py 
@@ -165,22 +170,22 @@ $ python3 var.py
 ## 練習
 
 - 次のようなPythonのスクリプトを作ってみましょう
-    - なにかリストを作成して、作ったリストについて、奇数の要素だけ出力（`print`）
+    - なにかリストを作成して、作ったリストについて、奇数の要素だけ出力
     - さらに余裕があれば、出力する際になにか文字を付加
         - 例: 6ページ or 7ページ
 
 ---
 
-## 後半: <span style="text-transform:none">Linux</span>とスクリプト
+## 後半: Linuxとスクリプト
 
 ---
 
-## <span style="text-transform:none">hello.py</span>のコードの動き方
+## hello.pyの実行方法の観察
 
 - コマンド「`python3`」がファイル「`hello.py`」の中身を見て実行
-```bash
-$ python3 hello.py
-```
+    ```bash
+    $ python3 hello.py
+    ```
     - テキストファイルを読み込んで直接実行: <span style="color:red">インタプリタ</span>
         - 厳密には少し違うけど、とりあえずこの理解で
     - C言語と異なる
@@ -194,13 +199,13 @@ $ python3 hello.py
 ## 問題: 次のような需要が存在
 
 - `./a.out`みたいに、次のように実行したい
-```bash
-$ ./hello.py
-```
-    - プログラムを使う側は、インタプリタが何かを意識したくない
-    - 一応「`.py`」と拡張子があるが・・・
-        - Python 2.xかもしれない
-        - 本来いらないはず（`ls`が`ls.py`という名前だとおかしい）<br />　
+    ```bash
+    $ ./hello.py
+    ```
+    - 理由
+        - プログラムを使う側は、インタプリタが何かを意識したくない
+            - 適切なインタプリタを勝手に選んでほしい
+            - `ls`が`ls.py`という名前だとおかしい
 - 可能とするには2つ作業が必要
     - シバンによるインタプリタの指定
     - 実行権限の付与
@@ -267,7 +272,7 @@ $ ./hello.py
 
 ---
 
-## <span style="text-transform:none">hello（.py）</span>の実行
+## hello（.py）の実行
 
 - こうなればOK
     ```bash
