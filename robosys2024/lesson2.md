@@ -223,9 +223,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         print(3.14)
         ```
     - シバンの書き方
-        - 1行目に「`#!インタプリタ`」と記述
+        - 1行目に「`#!<インタプリタ名>`」と記述<br />（`<>`は「必ず書く」という意味を表すカッコで実際は書かない）
             - インタプリタはパスで指定（<span style="color:red">`which python3`</span>で調査可能）
-            - インタプリタも含め、<span style="color:red">コマンドはファイル</span>
         - `#!`の前に空白を入れない
     - Linuxがシバンを読んでインタプリタを起動
 
