@@ -243,7 +243,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         $ ls -l a.out                           #gccで作ったa.outには最初から存在
         -rwxr-xr-x 1 ueda ueda 16464 11月 30 07:16 a.out
         ```
-- 手続き: <span style="color:red">`chmod`</span>を使用
+- 付与の方法: <span style="color:red">`chmod`</span>を使用
     ```bash
     $ chmod +x hello.py
     $ ./hello.py                            #実行できる
