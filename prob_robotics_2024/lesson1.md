@@ -33,7 +33,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 不確かな状況での活動
+## 不確かな状況での活動
 
 - 例
     - 受験でどこを受けるか（将来の不確かさ）
@@ -44,7 +44,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### もう少しだけ「不確かさ」を考察
+## もう少しだけ「不確かさ」を考察
 
 - 五感で直接得られない、直接の体験で得られない情報
     - 隣の部屋、下の部屋で何が起きているかは分からない
@@ -60,7 +60,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 「分からない」$\neq$「行動できない」
+## 「分からない」$\neq$「行動できない」
 
 - 動物や人間はいい加減に生きている
     - 動物は言葉を知らないけど困ってもいない
@@ -74,19 +74,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 不確かさ、自信のなさ、いい加減な行動をロボットの中に表現
+## 不確かさ、自信のなさ、いい加減な行動をロボットの中に表現
 
 - 動機: 4〜6ページのような状況に対応できる知能をロボットに持たせたい
     - 自信満々はとにかく危なっかしい
     - 損得勘定
 - 方法: 数学を使うとなると「確率・統計」が道具となる
 <br />　
-<br />　
 <div style="text-align:center">ということで確率ロボティクスという分野が存在</div>
 
 ---
 
-### Probabilistic ROBOTICS（確率ロボティクス）
+## Probabilistic ROBOTICS（確率ロボティクス）
 
 - セバスチャン・スランらの教科書
     - 1995年頃から10年間に確立したロボット用の推論アルゴリズム（+カルマンフィルタ）を掲載
@@ -98,16 +97,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 現在
+## 他の分野との関連性
 
-- いわゆる「人工知能」ブーム
-    - 良く言うとゴールドラッシュ、悪く言うとうさんくさい<br />　
-- （うさんくさくない）ブームの裏側: 機械学習の進歩
-    - 機械学習: 大雑把に言うと<span style="color:red">データから何か原因を推論</span>すること
-        - 確率ロボティクスの各手法も機械学習に含まれると言える
-        - 深層学習も機械学習の一分野。人工ニューラルネットワークを利用<br />　
-
-<span style="color:red">原因を確率的に表すとベイズの話が出てくる</span>
+- 制御に対する確率ロボティクス
+    - いわゆる現代制御理論を1段階抽象化したもの
+- 機械学習の手法群から見た確率ロボティクス
+    - 機械学習の一部
+    - 機械学習のブームの前にあったブーム
+    - 確率ロボティクスのブーム→機械学習のブーム→人工ニューラルネットワーク（機械学習に含まれる）のブーム
+        - 機械学習: 大雑把に言うと<span style="color:red">データから何か原因を推論</span>すること
 
 
 ---
@@ -163,7 +161,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### リポジトリ・ウェブサイト
+## リポジトリ・ウェブサイト
 
 - サンプルコード
     - 書籍掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
