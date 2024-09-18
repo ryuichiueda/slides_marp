@@ -42,6 +42,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 例
     - 受験でどこを受けるか（将来の不確かさ）
     - 枕元のメガネを探す/なくしたものを探す（場所の不確かさ）
+    - ツイッターで誰かが言っていることを信じる/信じない（情報の不確かさ）
 - 適切に行動できていると誰も自信を持って言えない
     - 特に失敗に代償が伴う場合は<span style="color:red">自信満々はかえって危険</span>$\rightarrow$ロボットも同じ
 
