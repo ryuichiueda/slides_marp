@@ -104,8 +104,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 機械学習の手法群から見た確率ロボティクス
     - 機械学習の一部
     - 機械学習のブームの前にあったブーム
-    - 確率ロボティクスのブーム→機械学習のブーム→人工ニューラルネットワーク（機械学習に含まれる）のブーム
-        - 機械学習: 大雑把に言うと<span style="color:red">データから何か原因を推論</span>すること
+<br />　
+- 補足: 機械学習ってなに？
+    - 大雑把に言うと<span style="color:red">データから何か原因を推論</span>する方法
+    - 人工ニューラルネットワークも含まれる
 
 
 ---
