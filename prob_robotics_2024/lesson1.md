@@ -149,7 +149,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 追加の教材
+## 追加の教材（余裕があれば）
 
 - 上田: [ロボットの確率・統計](https://www.coronasha.co.jp/np/isbn/9784339046878/), コロナ社
+    - 詳解確率ロボティクスよりは基礎から書いてあります
 
