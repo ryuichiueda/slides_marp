@@ -51,7 +51,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 値のゆらぎ
+### 値のゆらぎ・ばらつき
 
 - LiDARからの値（最初に得られた10個）
     - 214, 211, 199, 208, 212, 212, 215, 218, 208, 217, ... <br />　
@@ -66,11 +66,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 2.2 度数分布と確率分布
-
----
-
-## 2.2.1 ヒストグラムの描画
+## 値のばらつきの観察
 
 LiDARからの値（以後センサ値と呼ぶ）のばらつきを視認してみましょう
 
