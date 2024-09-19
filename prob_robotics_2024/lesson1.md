@@ -136,11 +136,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## リポジトリ・ウェブサイト
 
-- サンプルコード
-    - 詳解確率ロボティクス掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
-    - 完成したコードだけ残したもの: [ryuichiueda/LNPR](https://github.com/ryuichiueda/LNPR)<br />　
 - 講義用スライド
     - リポジトリ: [ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2024)
         - [目次](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2024/README.md)
+- 詳解確率ロボティクス
+    - 詳解確率ロボティクス掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
+    - 完成したコードだけ残したもの: [ryuichiueda/LNPR](https://github.com/ryuichiueda/LNPR)<br />　
+    - 書籍解説スライド: [ryuichiueda/LNPR_SLIDES](https://github.com/ryuichiueda/LNPR_SLIDES)<br />　
 - 訂正等の情報
     - https://ueda.tech/?page=lnpr
