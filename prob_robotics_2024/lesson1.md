@@ -113,7 +113,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 講義の進め方
 
-- 基本は「詳解確率ロボティクス」の順番にしたがって進行
+- 基本は「[詳解確率ロボティクス](https://www.kspub.co.jp/book/detail/5170069.html)」の順番にしたがって進行
     - 13章あるので講義の週数と同じ
 - ・・・なんだけど難解なので皆さんの理解度に合わせてスピードを緩めます
     - 正直に書いておくと、期末の時点で2章の内容も理解できない人が大半
@@ -145,3 +145,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 書籍解説スライド: [ryuichiueda/LNPR_SLIDES](https://github.com/ryuichiueda/LNPR_SLIDES)<br />　
 - 訂正等の情報
     - https://ueda.tech/?page=lnpr
+
+
+---
+
+## 追加の教材
+
+- 上田: [ロボットの確率・統計](https://www.coronasha.co.jp/np/isbn/9784339046878/), コロナ社
+
