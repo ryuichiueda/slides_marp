@@ -114,9 +114,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 講義の進め方
 
 - 基本は「詳解確率ロボティクス」の順番にしたがって進行
-    - 12章あるので講義の週数と同じ
+    - 13章あるので講義の週数と同じ
 - ・・・なんだけど難解なので皆さんの理解度に合わせてスピードを緩めます
-    - 正直に書いておくと、期末の時点では2章の内容も理解できない人が大半
+    - 正直に書いておくと、期末の時点で2章の内容も理解できない人が大半
         - 救い: 講義が終わった後でぼんやり分かってくる
     - 分からないときは講義は止めること
         - 他の人も分かってない確率が非常に高い
@@ -125,13 +125,22 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 点数について
+
+- テスト: 60点
+- 課題: 40点
+    - 締め切りは年末あたりにしていますが、応相談
+
+
+---
+
 ## リポジトリ・ウェブサイト
 
 - サンプルコード
-    - 書籍掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
+    - 詳解確率ロボティクス掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
     - 完成したコードだけ残したもの: [ryuichiueda/LNPR](https://github.com/ryuichiueda/LNPR)<br />　
 - 講義用スライド
-    - リポジトリ: [ryuichiueda/LNPR_SLIDES](https://github.com/ryuichiueda/LNPR_SLIDES)
-    - [目次](https://b.ueda.tech/?page=lnpr#%E8%AC%9B%E7%BE%A9%E7%94%A8%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89)<br />　
+    - リポジトリ: [ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2024)
+        - [目次]()
 - 訂正等の情報
-    - https://b.ueda.tech/?page=lnpr
+    - https://ueda.tech/?page=lnpr
