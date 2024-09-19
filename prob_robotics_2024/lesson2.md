@@ -61,7 +61,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 200[mm]ということなのに210[mm]前後の値が多い
         - 1[mm]の違いもなくぴったり止まりたいが可能？
 
-統計の知識が必要
+<br /> 
+<center>なんらかの工夫や計算が必要そう</center>
 
 ---
 
