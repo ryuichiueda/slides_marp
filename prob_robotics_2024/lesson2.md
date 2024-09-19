@@ -37,14 +37,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## [200mm壁からロボットを離して得たデータ](https://github.com/ryuichiueda/LNPR/blob/master/data/sensor_data_200.txt)
 
+
+![bg right:30%](./figs/data200.png)
+
 - 列
     - 1: 日付
     - 2: 時分秒
     - 3: 光センサの値（壁から反射した光の強さ）
     - 4: LiDARの1本のレーザから得られた壁の距離[mm]
 
-
-値が揺らいでいる
+<br />　
+<center>値が揺らいでいる</center>
 
 ---
 
