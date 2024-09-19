@@ -141,6 +141,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 完成したコードだけ残したもの: [ryuichiueda/LNPR](https://github.com/ryuichiueda/LNPR)<br />　
 - 講義用スライド
     - リポジトリ: [ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2024)
-        - [目次]()
+        - [目次](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2024/README.md)
 - 訂正等の情報
     - https://ueda.tech/?page=lnpr
