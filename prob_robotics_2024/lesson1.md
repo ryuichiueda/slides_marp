@@ -88,12 +88,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## Probabilistic ROBOTICS（確率ロボティクス）
 
 - セバスチャン・スランらの教科書
-    - 1995年頃から10年間に確立したロボット用の推論アルゴリズム（+カルマンフィルタ）を掲載
+    - 1995年頃から10年間に確立したロボット用の推論アルゴリズムを掲載
     - カルマンフィルタ、パーティクルフィルタ、FastSLAM、GraphSLAM、POMDP手法など
     - 確率ロボティクス分野
         - この教科書の範囲や周辺のアルゴリズムを研究する分野
 
-<img width="50%" src="./figs/probrobo_books.jpeg" />
+<img width="40%" src="./figs/probrobo_books.jpeg" />
 
 ---
 
