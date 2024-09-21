@@ -68,16 +68,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 値のばらつきの観察
 
-LiDARからの値（以後センサ値と呼ぶ）のばらつきを視認してみましょう
+LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認してみましょう
 
-- 度数分布の作成
-    - センサ値の範囲を区切り、各区間の値の個数を集計　
 - ヒストグラムの作成
     - 度数分布をグラフ化
+        - 度数分布: センサ値の範囲を区切り、各区間の値の個数を集計したもの
     - 図: 区間の幅1で描いたヒストグラム
         - （整数のデータで幅1なので例としてはあまりよくない）
 
-<img width="30%" src="./figs/sensor_200_histgram.png" />
+![bg right:40%](./figs/sensor_200_histgram.png)
 
 ---
 
