@@ -84,7 +84,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <ul>
 <li>度数分布をグラフ化
 <ul>
-<li>度数分布: センサ値の範囲を区切り、各区間の値の個数を集計したもの</li>
+<li>度数分布: データの値の範囲を区切り、各区間の値の個数<span style="color:red">頻度</span>を集計したもの</li>
 </ul>
 </li>
 <li>図: 区間の幅1で描いたヒストグラム
@@ -97,8 +97,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </ul>
 <footer>確率ロボティクス第2回</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="5" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="6" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
-<h2 id="222-%E9%A0%BB%E5%BA%A6%E9%9B%91%E9%9F%B3%E3%83%90%E3%82%A4%E3%82%A2%E3%82%B9">2.2.2 頻度、雑音、バイアス</h2>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="5" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="6" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/sensor_200_histgram.png&quot;);"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="6" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="6" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E5%BD%A2%E3%81%AE%E8%A7%A3%E6%9E%90">ヒストグラムの形の解析</h2>
 <ul>
 <li>このヒストグラムや元のデータから何を調べられるでしょうか
 <ul>
@@ -106,15 +106,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </ul>
 </li>
 </ul>
-<img width="48%" src="./figs/sensor_200_histgram.png" />
 <footer>確率ロボティクス第2回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="7" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="6" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="7" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/sensor_200_histgram_35pct.png&quot;);"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="7" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="7" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E9%A0%BB%E5%BA%A6%E3%83%BB%E4%BA%8B%E8%B1%A1">頻度・事象</h3>
 <ul>
 <li><span style="color:red">頻度</span>: ある現象（確率・統計の用語では<span style="color:red">事象</span>）が起きた回数
 <ul>
-<li>頻度の例:
+<li>頻度という言葉の使用例:
 <ul>
 <li>210[mm]あたりの値が得られた頻度が高い</li>
 <li>値が194[mm]や226[mm]に近づくほど頻度が低くなる</li>
@@ -129,52 +128,52 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </ul>
 </li>
 </ul>
-<img width="40%" src="./figs/sensor_200_histgram.png" />
 <footer>確率ロボティクス第2回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="8" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
-<h3 id="%E9%9B%91%E9%9F%B3">雑音</h3>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="7" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="1" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="8" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/sensor_200_histgram_35pct.png&quot;);"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="8" data-marpit-fragments="1" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="8" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E5%BA%83%E3%81%8C%E3%82%8A">ヒストグラムの広がり</h3>
 <ul>
-<li>センサ値が毎回違う、ヒストグラムが広がりをもつのはなぜ？<br />
-<img width="20%" src="./figs/sensor_200_histgram.png" /></li>
-<li>理由: なんらかの<span style="color:red">雑音</span>が存在するから
+<li>疑問: センサ値が毎回違ってヒストグラムが広がりをもつのはなぜ？</li>
+</ul>
+<ul>
+<li data-marpit-fragment="1">理由: なんらかの<span style="color:red">雑音</span>が存在するから
 <ul>
 <li><span style="color:red">雑音（ノイズ）</span>: 値がゆらぐ（乱す）原因
 <ul>
-<li>例: センサ内の電気的なゆらぎ、外光、湿度、<span style="color:red">正体不明</span>・・・</li>
+<li>例: センサ内の電気的なゆらぎ、<br />外光、湿度、<span style="color:red">正体不明</span>・・・</li>
 <li>ロボットの場合、センサを不適切な環境で使うので混沌を極める</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>正体不明でもなんとかするのが確率・統計</p>
 <footer>確率ロボティクス第2回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="9" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
-<h3 id="%E3%83%90%E3%82%A4%E3%82%A2%E3%82%B9">バイアス</h3>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="1" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="8" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-fragments="1" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="9" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/sensor_200_histgram_35pct.png&quot;);"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="9" data-marpit-fragments="1" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="9" style="--footer:確率ロボティクス第2回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="%E3%83%92%E3%82%B9%E3%83%88%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E5%81%8F%E3%82%8A">ヒストグラムの偏り</h3>
 <ul>
-<li>壁の距離が200[mm]と説明されたのにセンサ値は210[mm]くらいになるのはなぜ？<br />
-<img width="20%" src="./figs/sensor_200_histgram.png" /></li>
-<li>なんらかの<span style="color:red">バイアス</span>が存在するから
+<li>疑問: 壁の距離が200[mm]と説明されたのに<br />頻度の高い値が210[mm]付近になるのはなぜ？</li>
+</ul>
+<ul>
+<li data-marpit-fragment="1">なんらかの<span style="color:red">バイアス</span>が存在するから
 <ul>
 <li><span style="color:red">バイアス（偏り）</span>: 値がずれる原因
 <ul>
 <li>例: 筆者の勘違い、センサの取り付けた向きのずれ、正体不明・・・</li>
-<li>事前にキャリブレーションできるがゼロにはできず、ロボットの場合は動かしているうちに再発ということがある</li>
-<li>雑音と違いデータから量を推測ができないこともある</li>
+<li>事前にキャリブレーションできるがゼロにはできず、ロボットの場合は動かしているうちに再発ということも</li>
+<li>雑音と違いデータから量を推測不可能</li>
+</ul>
+</li>
+<li>非常に厄介</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<p>非常に厄介</p>
 <footer>確率ロボティクス第2回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="10" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-marpit-fragments="1" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="9" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="10" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
 <h3 id="%E8%AA%A4%E5%B7%AE">誤差</h3>
 <ul>
-<li><span style="color:red">誤差</span>: 何か測りたいものの「真の」値とセンサの値の差</li>
+<li>何か測りたいものの「真の」値とセンサの値の差</li>
 <li>誤差の種類
 <ul>
 <li>偶然誤差: 主に雑音による</li>
@@ -187,7 +186,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>確率ロボティクス第2回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer="確率ロボティクス第2回" data-paginate="true" lang="C" data-marpit-pagination="11" style="--footer:確率ロボティクス第2回;--paginate:true;" data-marpit-pagination-total="24">
-<h2 id="223-%E9%9B%91%E9%9F%B3%E3%81%AE%E6%95%B0%E5%80%A4%E5%8C%96">2.2.3 雑音の数値化</h2>
+<h2 id="%E9%9B%91%E9%9F%B3%E3%81%AE%E6%95%B0%E5%80%A4%E5%8C%96%E8%A9%B3%E8%A7%A3223%E9%A0%85">雑音の数値化（詳解2.2.3項）</h2>
 <p>いまの話を数字を使って議論しましょう</p>
 <footer>確率ロボティクス第2回</footer>
 </section>
