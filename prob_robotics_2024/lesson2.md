@@ -256,6 +256,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
          - 図: センサ値の$\mu$と$\sigma$から描いたガウス分布
              - ヒストグラムとよく似ている
          - 値が確率でないことに注意（次ページ）
+             - [練習問題](https://b.ueda.tech/?page=robot_and_stats_questions#20240924_2)
 
 ![bg right:30%](./figs/gauss_200.png)
 
