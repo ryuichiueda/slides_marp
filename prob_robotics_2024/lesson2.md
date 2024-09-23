@@ -288,8 +288,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
     - $P(a \le z < b) = P(z < b) - P(z < a)$
 
 
-<img width="35%" src="./figs/gauss_200.png" />
-<img width="35%" src="./figs/cdf.png" />
+![bg right:30%](./figs/cdf.png)
 
 ---
 
