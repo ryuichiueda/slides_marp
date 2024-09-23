@@ -262,19 +262,18 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 
 ---
 
-## 2.3.2 確率密度関数
+## 確率密度関数（詳解2.3.2項）
 
-- ガウス分布からの確率の求め方: $p(x | \mu, \sigma^2 )$を積分
+- ガウス分布からの確率の求め方: $p(z | \mu, \sigma^2 )$を積分
     - $p$の値を<span style="color:red">密度</span>と言う
     - 密度を積分すると確率に（体積と同じ）
-- 例
-    - センサの値が$210$より小さい確率: <span style="font-size:90%">$P(z < 210) = \int_{-\infty}^{210} p(z | \mu, \sigma^2 ) dz$</span>
-    - センサの値が$210$: <span style="font-size:90%">$P(z = 210) = \int_{-209.5}^{210.5} p(z | \mu, \sigma^2 ) dz$</span>
-        - センサの値が離散値なのに連続関数を当てはめているのでこうなる
-        - 右図: この計算で作った確率分布
+    - 例
+        - センサの値が$210$より小さい確率: <span style="font-size:90%">$P(z < 210) = \int_{-\infty}^{210} p(z | \mu, \sigma^2 ) dz$</span>
+        - センサの値が$210$: <span style="font-size:90%">$P(z = 210) = \int_{-209.5}^{210.5} p(z | \mu, \sigma^2 ) dz$</span>
+            - センサの値が離散値なのに連続関数を当てはめているのでこうなる
+    - 右図: この計算で作った確率分布
 
-<img width="30%" src="./figs/gauss_200.png" />
-<img width="30%" src="./figs/int_gauss.png" />
+![bg right:30%](./figs/int_gauss.png)
 
 ---
 
