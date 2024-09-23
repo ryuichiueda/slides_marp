@@ -178,7 +178,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 
 ---
 
-## 確率分布（詳解2.2.4項）
+## （素朴な）確率分布（詳解2.2.4項）
 
 - ここでやりたいこと: 度数分布から、未来にどんなセンサ値が得られそうかを予想　
 - なぜやるか
@@ -191,11 +191,12 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 ### 予想のアイデア
 
 - 未来のセンサ値を集めたら今までと同じ度数分布が得られるのではないか？
-- ただし、集める個数によって値が変わってはいけないので度数分布を頻度でなく割合に
-    - $P_{\textbf{z}\text{LiDAR}}(z) = N_z / N$　（$N_z$: センサの値が$z$だった頻度）
-        - 全センサ値の種類に関して$P_{\textbf{z}\text{LiDAR}}(z)$を足し合わせると1に
-
-<span style="color:red">$P_{\textbf{z}\text{LiDAR}}(z)$を確率と呼びましょう</span>
+- 度数分布を頻度でなく割合の分布に
+    - $P_{\textbf{z}}(z) = N_z / N$
+        - $N_z$: センサの値が$z$だったという事象の頻度
+    - 理由: 集める個数で頻度は変わるので
+- 全センサ値の種類に関して$P_{\textbf{z}}(z)$を足し合わせると1に
+    - <span style="color:red">$P_{\textbf{z}}(z)$を確率と呼びましょう</span>
 
 ![bg right:35%](./figs/sensor_200_histgram_35pct.png)
 
@@ -205,11 +206,11 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 
 - ヒストグラムを確率のグラフに描き直してみる
     - 左: ヒストグラム
-    - 右: 確率$P_{\textbf{z}\text{LiDAR}}$のグラフ
+    - 右: 確率$P_{\textbf{z}}$のグラフ
         - 縦軸の値が変わっただけ
 - 用語
-    - 関数$P_{\textbf{z}\text{LiDAR}}$: 確率質量関数と呼ぶ
-    - $P_{\textbf{z}\text{LiDAR}}$の形状や$P_{\textbf{z}\text{LiDAR}}$そのものを<span style="color:red">確率分布</span>と呼ぶ
+    - 関数$P_{\textbf{z}}$: 確率質量関数と呼ぶ
+    - $P_{\textbf{z}}$の形状や$P_{\textbf{z}}$そのものを<span style="color:red">確率分布</span>と呼ぶ
 
 <img width="40%" src="./figs/sensor_200_histgram.png" />
 <img width="38%" src="./figs/hist_to_prob.png" />
@@ -218,9 +219,9 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 
 ## 2.2.5 確率分布を用いたシミュレーション<span style="font-size:70%">（4章の練習）</span>
 
-- 確率分布$P_{\textbf{z}\text{LiDAR}}$にしたがってセンサ値をひとつずつ生成
+- 確率分布$P_{\textbf{z}}$にしたがってセンサ値をひとつずつ生成
     - 「ドロー」と表現
-    - 数式での表現: <span style="color:red">$z \sim P_{\textbf{z}\text{LiDAR}}$</span>
+    - 数式での表現: <span style="color:red">$z \sim P_{\textbf{z}}$</span>
     - 「したがって」とは
         - 例えば$P(200\text{})/P(150\text{}) = 2$なら$z=200$を$z=150$より2倍出現しやすく　
 - 右のヒストグラム: シミュレーションで得たもの
