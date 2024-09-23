@@ -205,15 +205,15 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 ### 確率分布
 
 - ヒストグラムを確率のグラフに描き直してみる
-    - 左: ヒストグラム
-    - 右: 確率$P_{\textbf{z}}$のグラフ
+    - 上: ヒストグラム
+    - 下: 確率$P_{\textbf{z}}$のグラフ
         - 縦軸の値が変わっただけ
 - 用語
     - 関数$P_{\textbf{z}}$: 確率質量関数と呼ぶ
     - $P_{\textbf{z}}$の形状や$P_{\textbf{z}}$そのものを<span style="color:red">確率分布</span>と呼ぶ
 
-<img width="40%" src="./figs/sensor_200_histgram.png" />
-<img width="38%" src="./figs/hist_to_prob.png" />
+
+![bg right:35%](./figs/hist_and_prob.png)
 
 ---
 
