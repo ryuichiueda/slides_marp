@@ -289,6 +289,7 @@ print("hello")
 
 - 最後に確認問題
     - `hello.py`のパス（`/`から始まる<span style="color:red">フルパス</span>）をノートかどこかに書いてみてください。
+    - <span style="color:red">パスの概念が3回目くらいまでにできてない人は単位厳しいです。</span>
 
 ---
 
