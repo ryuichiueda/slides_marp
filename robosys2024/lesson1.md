@@ -287,6 +287,9 @@ $ cat hello.py
 print("hello")
 ```
 
+- 最後に確認問題
+    - `hello.py`のパス（`/`から始まる<span style="color:red">フルパス</span>）をノートかどこかに書いてみてください。
+
 ---
 
 ## まとめ
