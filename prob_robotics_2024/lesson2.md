@@ -292,34 +292,6 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 
 ---
 
-## 2.3.3 期待値
-
-- 期待値: 無限にセンサ値をドローしたときの平均値
-    - $\langle z \rangle_{P(z)}$、$\langle z \rangle_{p(z)}$と表現
-    - 実際にドローしなくても計算可能
-        - $\langle z \rangle_{P(z)} = \sum_{-\infty}^{\infty} zP(z)$（サイコロで計算してみましょう）
-        - $\langle z \rangle_{p(z)} = \int_{-\infty}^{\infty} zp(z) dz$　
-- 一般化した期待値
-    - $z$が$p(z)$に従うとき、$f(z)$の値はどうなる？
-    - $\langle f(z) \rangle_{p(z)} = \int_{-\infty}^{\infty} f(z)p(z) dz$　
-
----
-
-## 期待値の性質
-
-- 期待値の性質
-    - 線形性
-        - $\big\langle f(z) + \alpha g(z) \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha \big\langle g(z) \big\rangle_{p(z)}$
-        - $\big\langle f(z) + \alpha \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha \big\langle 1 \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha$
-    - 平均値
-        - $\langle z \rangle_{p(z)} = \mu$、$\langle z - \mu \rangle_{p(z)} = 0$
-    - 分散
-        - $\langle (z - \mu)^2 \rangle_{p(z)} = \sigma^2$　
-- その他、各確率モデルには期待値に関する特有の性質があり、計算に利用できる（付録B.2）
-
-
----
-
 ### ここまでのまとめ
 
 - やったこと: LiDARからのデータの解析
@@ -327,7 +299,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
     - 平均値等、データのゆらぎ（ばらつき）の度合いを数値化
     - ガウス分布とみなしてモデル化
         - 確率分布を$\mu$と$\sigma^2$だけで表現　
-- 何ができるようになるか
+- 何ができるようになったか
     - センサの値がばらつく原因が不明でも雑音を分析
     - ロボットが壁に対してどれくらいの正確さで距離をとれるか見積もり
     - 平均値からバイアスによる系統誤差を計算$\rightarrow$キャリブレーション
