@@ -22,7 +22,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 前回の復習
 
 - [演習問題1](https://b.ueda.tech/?page=robot_and_stats_questions#20240927_1)
-- 練習問題2
+- [演習問題2](https://b.ueda.tech/?page=robot_and_stats_questions#20240927_2)
 
 ---
 ## 2.3.3 期待値
