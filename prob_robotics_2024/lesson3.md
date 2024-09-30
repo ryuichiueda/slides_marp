@@ -46,18 +46,16 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ## 期待値の表記と計算
 
-- $\langle f(x) \rangle_{P(x)} = \sum_{x} f(x) P(x)$　　（左辺が表記で右辺が計算式）
+- $\langle f(x) \rangle_{P(x)} = \sum_{x \in \mathcal{X}} f(x) P(x)$　　（左辺が表記で右辺が計算式）
+    - $\mathcal{X}$: すべてのあり得る$x$の値（<span style="color:red">根元事象</span>）の集合
     - 個々の$x$は期待値に影響を与えないので$\langle f \rangle_{P}$とも
-        - 前ページ問題2の例: $f(i)=1000i - 3700$, $\langle f \rangle_{P} = 1000 \sum_{i=1}^6 P(i) - 3700$
-
----
-
-    - 実際にドローしなくても計算可能
-        - $\langle z \rangle_{P(z)} = \sum_{-\infty}^{\infty} zP(z)$（サイコロで計算してみましょう）
-        - $\langle z \rangle_{p(z)} = \int_{-\infty}^{\infty} zp(z) dz$　
-- 一般化した期待値
-    - $z$が$p(z)$に従うとき、$f(z)$の値はどうなる？
-    - $\langle f(z) \rangle_{p(z)} = \int_{-\infty}^{\infty} f(z)p(z) dz$　
+- 前ページ問題2の例
+   - $f$に相当する関数は？
+       * $f(i)=1000i - 3700$
+   - $\langle f \rangle_{P}$の式は？
+       * $\langle f \rangle_{P} = 1000 \sum_{i=1}^6 P(i) - 3700$
+- 確率密度関数に対する関数$f$の期待値
+    - $\langle f \rangle_{p} = \int_{-\infty}^{\infty} f(x)p(x) dx$　
 
 ---
 
