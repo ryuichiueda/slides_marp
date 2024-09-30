@@ -46,8 +46,12 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ## 期待値の表記と計算
 
-- 期待値の表記
-    - $\langle z \rangle_{P(z)}$、$\langle z \rangle_{p(z)}$と表現
+- $\langle f(x) \rangle_{P(x)} = \sum_{x} f(x) P(x)$　　（左辺が表記で右辺が計算式）
+    - 個々の$x$は期待値に影響を与えないので$\langle f \rangle_{P}$とも
+        - 前ページ問題2の例: $f(i)=1000i - 3700$, $\langle f \rangle_{P} = 1000 \sum_{i=1}^6 P(i) - 3700$
+
+---
+
     - 実際にドローしなくても計算可能
         - $\langle z \rangle_{P(z)} = \sum_{-\infty}^{\infty} zP(z)$（サイコロで計算してみましょう）
         - $\langle z \rangle_{p(z)} = \int_{-\infty}^{\infty} zp(z) dz$　
