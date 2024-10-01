@@ -105,7 +105,7 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 <img width="40%" src="./figs/sensor_600_time.png" />
 
-<center>時刻$t$が変数に</center>
+<center>時刻が変数に</center>
 
 ---
 
