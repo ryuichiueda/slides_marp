@@ -192,14 +192,12 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
 
 - ふたつの定理（確率の計算のルールはこれしかない）
     - 乗法定理
-        - $p(x,y) = p(x|y)p(y) = p(y|x)p(x)$
-            - $p$は連続・離散どちらでもよい
+        - $p(x,y) = p(x|y)p(y) = p(y|x)p(x)$　　<span style="font-size:80%">（$p$は連続・離散どちらでもよい）</span>
     - 加法定理
         - $P(x) = \sum_{y=-\infty}^{\infty} P(x,y)$
         - $p(x) = \int_{-\infty}^{\infty} p(x,y) dy$
 - 乗法定理・加法定理を利用した周辺化（$\sum$と$\int$の除去）
-    - $p(x) = \langle p(x|y) \rangle_{p(y)}$
-        - $p$は連続・離散どちらでもよい
+    - $p(x) = \langle p(x|y) \rangle_{p(y)}$　　　　　　 　 　　　　<span style="font-size:80%">（$p$は連続・離散どちらでもよい）</span>
 
 
 ---
