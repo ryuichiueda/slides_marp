@@ -167,53 +167,68 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
     - 下図: 水平方向の確率を足すと$P(z)$に
         - この操作における$P(z)$のことを<span style="color:red">周辺分布</span>、その数値を<span style="color:red">周辺確率</span>と言う
 
-![bg right:35%](./figs/marginalization.png)
-
----
-
-<img width="25%" src="./figs/sensor_600_2d.png" />
-$\rightarrow$
-<img width="40%" src="./figs/sensor_histgram_600.png" />
+![bg right:30%](./figs/marginalization.png)
 
 ---
 
 ### 同時確率と条件付き確率の関係
 
-- $P(z,t)$をある時間帯で切り出すと$P(z|t)$と同じ形に
-    - 大きさは$P(z|t)$の方が$\jump{P(z,t)}_z = P(t)$だけ大きく
-    - つまり次のような関係（<span style="color:red">確率の乗法定理</span>）
+- $P(z,t)$をある時間帯で切り出す$\Rightarrow P(z|t)$と同じ形
+    - 正規化前の大きさは$P(t)$に比例
+    - 次のような関係がある（<span style="color:red">確率の乗法定理</span>）
         - $P(z,t) = P(z|t)P(t)$
         - $p(z,t) = p(z|t)p(t)$
+- 乗法/加法定理と周辺化
+    - $P(z) = \langle P(z|t)\rangle_{P(t)}$
+    - $p(z) = \langle p(z|t)\rangle_{p(t)}$
+        - $P(z) = \sum_{t \in \mathcal{T}} P(z,t)$<br />$= \sum_{t\in\mathcal{T}} P(z|t)P(t)= \langle P(z|t)\rangle_{P(t)}$
+        - ↑確率密度関数の場合も同様の計算で導出
 
-
-<img width="30%" src="./figs/sensor_600_2d.png" />
-<img width="40%" src="./figs/sensor600_6h_14h.png" />
+![bg right:30%](./figs/joint_and_conditional.png)
 
 ---
 
 ### 確率の乗法定理・加法定理のまとめ
 
-- 乗法定理
-$$p(x,y) = p(x|y)p(y) = p(y|x)p(x)$$
-- 加法定理（と、乗法定理を利用した期待値への変形）
-$$p(x) = \jump{p(x,y)}\_y = \jump{p(x|y)p(y)}\_y = \big\langle p(x|y) \big\rangle\_{p(y)}$$
+- ふたつの定理（確率の計算のルールはこれしかない）
+    - 乗法定理
+        - $p(x,y) = p(x|y)p(y) = p(y|x)p(x)$
+            - $p$は連続・離散どちらでもよい
+    - 加法定理
+        - $P(x) = \sum_{y=-\infty}^{\infty} P(x,y)$
+        - $p(x) = \int_{-\infty}^{\infty} p(x,y) dy$
+- 乗法定理・加法定理を利用した周辺化（$\sum$と$\int$の除去）
+    - $p(x) = \langle p(x|y) \rangle_{p(y)}$
+        - $p$は連続・離散どちらでもよい
 
-確率の計算のルールはこれしかない
 
 ---
 
-### 補足: 3変数以上の乗法定理
 
-- 3変数の場合
-    - ひとつの変数を条件に: $p(x,y,z) = p(x,z|y)p(y)$
-    - ふたつの変数を条件に: $p(x,y,z) = p(x|y,z)p(y,z)$
-    - 条件付き確率で一つの変数を条件に: $p(x,y|z) = p(x|y,z)p(y|z)$
-        - $p(x,y) = p(x|y)p(y)$: 隠れている条件を明記していないだけ<br />　
+### 3変数以上の乗法定理
+
+- ひとつの変数を条件に: $p(x,y,z) = p(x,z|y)p(y)$
+- ふたつの変数を条件に: $p(x,y,z) = p(x|y,z)p(y,z)$
+- 条件付き確率で一つの変数を条件に: $p(x,y|z) = p(x|y,z)p(y|z)$
+    - 導出可能
+    - 隠れている条件を明記したとも解釈可能
 - それ以上に変数がある場合
     - 上の記号をベクトルにすると同様に成立
 
+---
+
+### ここまでのまとめ
+
+- 期待値
+    - 普段から投資したお金の回収額としてよく使う
+    - 確率に関する諸定義や確率の演算中にもよく登場
+- 条件付き確率、同時確率を理解
+- 乗法定理、加法定理を理解
+
 
 ---
+
+（lesson4へ）
 
 ## 2.4.3 独立、従属、<br />条件付き独立
 
