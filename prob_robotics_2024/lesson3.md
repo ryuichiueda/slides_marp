@@ -167,6 +167,8 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
     - 下図: 水平方向の確率を足すと$P(z)$に
         - この操作における$P(z)$のことを<span style="color:red">周辺分布</span>、その数値を<span style="color:red">周辺確率</span>と言う
 
+![bg right:35%](./figs/marginalization.png)
+
 ---
 
 <img width="25%" src="./figs/sensor_600_2d.png" />
