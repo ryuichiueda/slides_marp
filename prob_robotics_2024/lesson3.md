@@ -151,24 +151,23 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ![bg right:35% w:450](./figs/sensor_600_2d.png)
 
+$$\newcommand{\V}[1]{\boldsymbol{#1}}$$
+$$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
+
 ---
 
 ### 周辺化
 
-$$\newcommand{\jump}[1]{[\![#1]\!]}$$
-$$\newcommand{\V}[1]{\boldsymbol{#1}}$$
-$$\newcommand{\bigjump}[1]{\big[\!\!\big[#1\big]\!\!\big]}$$
-$$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
-$$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
 
 - $P(z)$を$P(z,t)$として見ると情報が増えた
 - 逆に$t$の情報を消し去ることもできる$\Rightarrow$<span style="color:red">周辺化</span>
     - 式: <span style="color:red">確率の加法定理</span>
         - $P(z) = \sum_{t=-\infty}^{\infty} P(z,t)$
         - $p(z) = \int_{-\infty}^{\infty} p(z,t) dt$
-            - $\sum, \int$の区別をつけたくないので$p(z) = \jump{p(z,t)}_t$と略記
     - 下図: 水平方向の確率を足すと$P(z)$に
         - この操作における$P(z)$のことを<span style="color:red">周辺分布</span>、その数値を<span style="color:red">周辺確率</span>と言う
+
+---
 
 <img width="25%" src="./figs/sensor_600_2d.png" />
 $\rightarrow$
