@@ -65,16 +65,15 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
     - 線形性
         - $\big\langle f(z) + \alpha g(z) \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha \big\langle g(z) \big\rangle_{p(z)}$
         - $\big\langle f(z) + \alpha \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha \big\langle 1 \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha$
+            - 問題2に適用可能（やってみましょう）
     - 平均値
         - $\langle z \rangle_{p(z)} = \mu$、$\langle z - \mu \rangle_{p(z)} = 0$
     - 分散
         - $\langle (z - \mu)^2 \rangle_{p(z)} = \sigma^2$　
-- その他、各確率モデルには期待値に関する特有の性質があり、計算に利用できる（付録B.2）
-
 
 ---
 
-## 2.4 複雑な分布
+## 複雑な分布（詳解2.4節）
 
 - これまでひとつのセンサの値だけを扱ってきたが、<br />センサの値は他の要因で変わる
     - 壁までの距離、向き、その他センサに関する変数・・・ <br />　
@@ -85,17 +84,16 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ---
 
-## 2.4.1 条件付き確率
+## 条件付き確率（詳解2.4.1項）
 
 
-- センサ値のヒストグラム（距離: 600[<span style="text-transform:none">mm</span>])
+- センサ値のヒストグラム（距離: 600mm)
     - ピーク（統計では<span style="color:red">モード</span>）が2つ
         - <span style="color:red">マルチモーダル</span>
     - 635[mm]の頻度がゼロ
 
-<img width="45%" src="./figs/sensor_histgram_600.png" />
-
-今までの解析方法では解析できない
+![](./figs/sensor_histgram_600.png)
+<center>今までの解析方法では解析できない</center>
 
 ---
 
@@ -107,19 +105,18 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 <img width="40%" src="./figs/sensor_600_time.png" />
 
-時刻$t$が変数に
+<center>時刻$t$が変数に</center>
 
 ---
 
 ### 時間別のヒストグラムを作成
 
-- 時間で<span style="color:red">条件付け</span>することでガウス分布となる
+- 時間で<span style="color:red">条件付け</span>することでガウス分布に形が近くなる
     - オレンジ: 昼の14時台
     - 青: 朝の6時台
-<br />
 <img width="60%" src="./figs/sensor600_6h_14h.png" />
 
-「条件付けした分布、確率」というものがある
+<center>「条件付けした分布、確率」というものがある</center>
 
 ---
 
