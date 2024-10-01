@@ -142,14 +142,14 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ## 2.4.2 同時確率と加法定理、乗法定理
 
-- 今度は「時刻（時間帯）$t$で<br />センサ値が$z$となる確率」を<br />考えてみましょう
-    - 二つの事象が同時に<br />起こる確率$\Rightarrow$<span style="color:red">同時確率</span>と呼ぶ<br />　
+- 今度は「時刻（時間帯）$t$でセンサ値が$z$となる確率」を考えてみましょう
+    - 二つの事象が同時に起こる確率<br />$\Rightarrow$<span style="color:red">同時確率</span>と呼ぶ　
 - 同時確率の表記: $P(z, t)$
     - $\sum_z \sum_t P(z, t) =  1$
     - 右図のように確率分布は2次元に
     - $P(z)$より情報が多い
 
-![bg right:40% w:500](./figs/sensor_600_2d.png)
+![bg right:35% w:450](./figs/sensor_600_2d.png)
 
 ---
 
