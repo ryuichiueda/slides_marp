@@ -40,7 +40,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 問題1: $1000/6 + 1000\cdot 2/6 + 1000\cdot 3/6 + 1000\cdot 4/6$
 $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color:red">$= -200$</span>
 - 問題2: $1000P(1) + 1000 P(2) + 1000 P(3) + 1000 P(4)$
-$+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 P(i) - 3700$</span>
+$+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 i P(i) - 3700$</span>
 
 ---
 
@@ -53,7 +53,7 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
    - $f$に相当する関数は？
        * $f(i)=1000i - 3700$
    - $\langle f \rangle_{P}$の式は？
-       * $\langle f \rangle_{P} = 1000 \sum_{i=1}^6 P(i) - 3700$
+       * $\langle f \rangle_{P} = 1000 \sum_{i=1}^6 iP(i) - 3700$
 - 確率密度関数に対する関数$f$の期待値
     - $\langle f \rangle_{p} = \int_{-\infty}^{\infty} f(x)p(x) dx$　
 
