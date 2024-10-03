@@ -109,7 +109,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
        - for文の中身は右側に余白（<span style="color:red">インデント</span>）
         ```python
         ### コードの例 ###
-        fruits = ["apple", "banana", "chery" ]  #文字列3つのリストをfruitsと命名
+        fruits = ["apple", "banana", "cherry" ]  #文字列3つのリストをfruitsと命名
         
         for f in fruits:
             print(f + "はおいしい")             # + で文字列を連結できる
@@ -120,7 +120,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         $ python3 fruits.py
         appleはおいしい
         bananaはおいしい
-        cheryはおいしい
+        cherryはおいしい
         ```
 ---
 
@@ -131,7 +131,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 負の値を指定すると後ろから要素を指定可能
     ```python
     ### コードの例（list.py） ###
-    fruits = ["apple", "banana", "chery" ]
+    fruits = ["apple", "banana", "cherry" ]
     print("最初の要素: " + fruits[0])      #先頭は0番目
     print("次の要素: " + fruits[1])        #次の要素は1番目
     print("最後の要素: " + fruits[-1])     #最後の要素
@@ -141,7 +141,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $ python3 list.py
     最初の要素: apple
     次の要素: banana
-    最後の要素: chery
+    最後の要素: cherry
     ```
 
 ---
