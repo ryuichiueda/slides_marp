@@ -22,6 +22,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 変数どうしの関係性を考える
 
+$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$
+
 ---
 
 ### 独立
@@ -29,6 +31,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - ある条件$y$が$x$の確率分布に何も影響を与えないと次が成立
     - $p(x|y) = p(x)$
         - $y$がなんであろうと$x$の分布は不変
+    - $y$を知っても$x$について何の手がかりにもならない
 - 乗法定理に上の式を代入
     - $p(x,y) = p(x|y)p(y)\Longrightarrow$<span style="color:red">$p(x,y) = p(x)p(y)$</span>
     - この関係を事象$x,y$が互いに<span  style="color:red">独立</span>と表現
