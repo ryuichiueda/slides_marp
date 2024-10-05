@@ -113,30 +113,36 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         ```
         - 実行例は省略
 
-
 ---
 
-## <span style="text-transform:none">if</span>文を使う
+## if文を使う
 
-- 要点: 次のように書く
+- 次のように書く
     ```python
     if 条件1:   #条件1が成り立つと、下の処理が実行される。elif以下の処理はスキップ。
         処理    #処理はインデントのレベルをひとつ上げて記述
         ・・・
-    elif 条件2: #条件1に合わない場合は条件2が調べられる。（elifは省略や複数の記述が可能）
-        処理
+    elif 条件2: #条件1に合わない場合は条件2が調べられる。
+        処理    #（elifのブロックは省略や複数の記述が可能）
         ・・・
     else:       #ifやelifの条件に合わない場合に下の処理が実行される。
         処理
         ・・・
     ```
-- 練習: if文を使い、次のコードを記述しましょう。
-    - コード（3種類書く）
-        1. 引数の数について負の数をカウントしてprint
-        1. 引数の数について負、非負の数をカウントしてprint
-        1. 引数の数について負、ゼロ、正の数をカウントしてprint
-    - 条件の書き方は、この例題についてはC言語と同じ。
-        - 数`x`に対して、`x < 0.0`、`x == 0.0`、`x > 0.0`、`x >= 0.0`などと記述
+- 補足
+    - `elif`: else ifの略
+    - 動かないときはインデントを確認しましょう
+        - `IndentationError`というエラーが出る（ちゃんとログは読みましょう）
+
+---
+
+## 練習: if文を使い、次のコードを記述しましょう。
+- コード（3種類書く）
+    1. 引数の数について負の数をカウントしてprint
+    1. 引数の数について負、非負の数をカウントしてprint
+    1. 引数の数について負、ゼロ、正の数をカウントしてprint
+- 条件の書き方は、この例題についてはC言語と同じ。
+    - 数`x`に対して、`x < 0.0`、`x == 0.0`、`x > 0.0`、`x >= 0.0`などと記述
 
 ---
 
@@ -144,25 +150,23 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 3番目のものだけ記述
     ```python
-    #!/usr/bin/python3
-    import sys
-    
-    minus = 0
-    zero = 0
-    plus = 0
-    for n in sys.argv[1:]:
-        x = float(n)
-    
-        if x < 0.0:
-            minus += 1
-        elif x > 0.0:
-            plus += 1
-        else:
-            zero += 1
-    
-    print("負:", minus)
-    print("０:", zero)
-    print("正:", plus)
+     1 #!/usr/bin/python3
+     2 import sys
+     3 
+     4 minus, zero, plus = 0, 0, 0 #こんなふうにまとめることが可能
+     5
+     6 for n in sys.argv[1:]:
+     7     x = float(n)
+     8     if x < 0.0:
+     9         minus += 1
+    10     elif x > 0.0:
+    11         plus += 1
+    12     else:
+    13         zero += 1
+    14 
+    15 print("負:", minus)
+    16 print("０:", zero)
+    17 print("正:", plus)
     ```
 
 ---
