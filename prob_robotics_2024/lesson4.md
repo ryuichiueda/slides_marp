@@ -23,6 +23,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 変数どうしの関係性を考える
 
 $\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$
+$\newcommand{\V}[1]{\boldsymbol{#1}}$
 
 ---
 
@@ -50,42 +51,36 @@ $\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$
 
 ---
 
-## 2.4.4 確率分布の性質を<br />利用した計算
+## 2.4.4 確率分布の性質を利用した計算
 
-- 例題1: $\int_\{\V\{z\} \in \{\mathbb{R}\}^2\} p(\V\{z\})\\{f(x) + \alpha g(y)\\} d\V\{z\}$
-    - $\V{z} = (x \ y)^\top, x \indep y, x \in \mathbb{R},  y \in \mathbb{R}$とする<br />　
-- 確率の性質だけで式展開可能
-    - 上式 $= \big\langle f(x) + \alpha g(y) \big\rangle_{p(\V{z})}$<br />
-	$ = \big\langle f(x) \big\rangle_{p(\V{z})} +\alpha \big\langle g(y) \big\rangle_{p(\V{z})}  \qquad\qquad$（期待値の線形性から）<br />
-	$ =\big\langle f(x) \big\rangle_{p(x)p(y)} +\alpha \big\langle g(y) \big\rangle_{p(x)p(y)} \quad\ $（$x$と$y$が独立）<br />
-	$ =\big\langle f(x) \big\rangle_{p(x)} +\alpha \big\langle g(y) \big\rangle_{p(y)}  \qquad\qquad$（$f$と$y$、$g$と$x$が無関係）<br />
+- 例題1: $\big\langle f(x) + \alpha g(y) \big\rangle_{p(x,y)}$を展開してみましょう（$x \indep y$）
+    - 確率の性質だけで式展開可能
+    	上式$= \big\langle f(x) \big\rangle_{p(x,y)} +\alpha \big\langle g(y) \big\rangle_{p(x,y)}\quad$（期待値の線形性から）<br />
+    	$=\big\langle f(x) \big\rangle_{p(x)p(y)} +\alpha \big\langle g(y) \big\rangle_{p(x)p(y)}$　　（$x$と$y$が独立）<br />
+    	$=\big\langle f(x) \big\rangle_{p(x)} +\alpha \big\langle g(y) \big\rangle_{p(y)}  \qquad\qquad$（$f$と$y$、$g$と$x$が無関係）<br />
 
 ---
 
 ### もう一つ計算
 
-- 例題2: $\int_\mathcal{\V{z} \in \mathbb{R}^2} p(\V{z})f(x)g(y) d\V{z}$
-    - $\V{z} = (x \ y)^\top, x \indep y, x \in \mathbb{R},  y \in \mathbb{R}$とする<br />　
-- $x,y$に関する期待値の積にできる
-    - <span style="font-size:90%">上式$ = \int_\mathcal{\mathbb{R}} \int_\mathcal{\mathbb{R}} p(x)p(y)f(x)g(y) dy dx$
-$ = \int_\mathcal{\mathbb{R}} p(x) \int_\mathcal{\mathbb{R}} p(y)f(x)g(y) dy dx$
-$ = \int_\mathcal{\mathbb{R}} p(x) \big\langle f(x)g(y) \big\rangle_{p(y)} dx$
-$ = \big\langle \langle f(x) g(y) \rangle_{p(y)} \big\rangle_{p(x)}$
-$ = \big\langle f(x) \langle g(y) \rangle_{p(y)} \big\rangle_{p(x)}$
-$ = \big\langle g(y) \rangle_{p(y)} \langle f(x) \big\rangle_{p(x)}$</span><br />　
-- 結果から得られる関係
-    - <span style="font-size:70%">$\big\langle g(y) \big\rangle_{p(y)} \big\langle f(x) \big\rangle_{p(x)} = \big\langle \langle f(x)g(y) \rangle_{p(x)} \big\rangle_{p(y)}$ $= \big\langle \langle f(x)g(y) \rangle_{p(y)} \big\rangle_{p(x)} = \big\langle f(x)g(y) \big\rangle_{p(x)p(y)} $</span>
+- 例題2: $\big\langle f(x)g(y) \big\rangle_{p(x,y)}$を展開してみましょう（$x \indep y$）
+    - $x,y$に関する期待値の積にできる
+        - 上式$=\big\langle f(x)g(y) \big\rangle_{p(x)p(y)}=\big\langle \langle f(x)g(y) \rangle_{p(x)} \big\rangle_{p(y)}$
+        $=\big\langle g(y) \langle f(x) \rangle_{p(x)} \big\rangle_{p(y)}
+        = \big\langle f(x) \big\rangle_{p(x)}\big\langle g(y) \big\rangle_{p(y)}$
+        - 途中の変形については期待値を$\sum$や$\int$を使った式に戻して確認のこと
 
 ---
 
-## 2.4.5 ベイズの定理
+## ベイズの定理（詳解2.4.5項）
 
 - 乗法定理: $p(z,t) = p(z|t)p(t) = p(t|z)p(z)$から導出
-- 中辺、右辺から<span style="color:red">$$p(z|t) = \dfrac{p(t|z)p(z)}{p(t)} = \eta p(t|z)p(z)$$</span>となる
+- 中辺、右辺から<span style="color:red">$p(z|t) = \dfrac{p(t|z)p(z)}{p(t)} = \eta p(t|z)p(z)$</span>となる<span style="color:red">（ベイズの定理）</span>
     - $\eta$: 正規化定数
-        - $\jump{p(z|t)}_t=1$とするための調整の定数
-    - 意味: $t$と$p(t|z)$が分かると、$p(z)$が$p(z|t)$まで確かになる
-        - $p(t|z)$: $z$がどの時間帯で得られやすいか
+        - $z$の確率の和（積分）が1になるように調整するための定数
+    - 意味: $t$が分かると、$p(z)$が$p(z|t)$まで確かになる
+        - センサ値の例: 得られた時間帯が分かれば、よりセンサ値の分布が確かに
+        - $p(t|z)$が必要（これが何かはおいおい説明）
 
 ---
 
