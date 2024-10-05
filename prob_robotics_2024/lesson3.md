@@ -142,7 +142,7 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ## 同時確率と加法定理、乗法定理<br />（詳解2.4.2項）
 
-- 今度は「時刻（時間帯）$t$でセンサ値が$z$となる確率」を考えてみましょう
+- 今度は「計測したデータをひとつ選んだとき、時刻（時間帯）$t$でセンサ値が$z$である確率」を考えてみましょう
     - 二つの事象が同時に起こる確率<br />$\Rightarrow$<span style="color:red">同時確率</span>と呼ぶ　
 - 同時確率の表記: $P(z, t)$
     - $\sum_z \sum_t P(z, t) =  1$
@@ -177,12 +177,11 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
     - 正規化前の大きさは$P(t)$に比例
     - 次のような関係がある（<span style="color:red">確率の乗法定理</span>）
         - $P(z,t) = P(z|t)P(t)$
-        - $p(z,t) = p(z|t)p(t)$
+            - $P$は質量関数、密度関数どちらでも
 - 乗法/加法定理と周辺化
     - $P(z) = \langle P(z|t)\rangle_{P(t)}$
-    - $p(z) = \langle p(z|t)\rangle_{p(t)}$
-        - $P(z) = \sum_{t \in \mathcal{T}} P(z,t)$<br />$= \sum_{t\in\mathcal{T}} P(z|t)P(t)= \langle P(z|t)\rangle_{P(t)}$
-        - ↑確率密度関数の場合も同様の計算で導出
+        - 乗法定理から（導出してみましょう）
+        - 質量関数、密度関数どちらでも成立
 
 ![bg right:30%](./figs/joint_and_conditional.png)
 
@@ -205,10 +204,10 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
 
 ### 3変数以上の乗法定理
 
-- ひとつの変数を条件に: $p(x,y,z) = p(x,z|y)p(y)$
-- ふたつの変数を条件に: $p(x,y,z) = p(x|y,z)p(y,z)$
-- 条件付き確率で一つの変数を条件に: $p(x,y|z) = p(x|y,z)p(y|z)$
-    - 導出可能
+- $p(x,y|z) = p(x|y,z)p(y|z)$
+    - 解き方: 下のふたつの式の右辺から$p(z)$を割る
+        - $p(x,y,z) = p(x,y|z)p(z)$
+        - $p(x,y,z) = p(x|y,z)p(y,z) = p(x|y,z)p(y|z)p(z)$
     - 隠れている条件を明記したとも解釈可能
 - それ以上に変数がある場合
     - 上の記号をベクトルにすると同様に成立
