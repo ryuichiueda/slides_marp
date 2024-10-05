@@ -211,6 +211,61 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
 - それ以上に変数がある場合
     - 上の記号をベクトルにすると同様に成立
 
+
+---
+
+## 独立、従属、条件付き独立（詳解2.4.3項）
+
+変数どうしの関係性を考える
+
+$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$
+$\newcommand{\V}[1]{\boldsymbol{#1}}$
+
+---
+
+### 独立
+
+- ある条件$y$が$x$の確率分布に何も影響を与えないと次が成立
+    - $p(x|y) = p(x)$
+        - $y$がなんであろうと$x$の分布は不変
+    - $y$を知っても$x$について何の手がかりにもならない
+- 乗法定理に上の式を代入
+    - $p(x,y) = p(x|y)p(y)\Longrightarrow$<span style="color:red">$p(x,y) = p(x)p(y)$</span>
+    - この関係を事象$x,y$が互いに<span  style="color:red">独立</span>と表現
+        - <span style="color:red">$x \indep y$</span>と表記<br />　
+
+---
+
+### 条件付き独立
+
+- $z$が分かっているときに$x$に対して$y$が何も情報を与えない
+    - $P(x|z) = P(x|y,z)$<br />　
+- $p(x,y|z) = p(x|y,z)p(y|z)\Longrightarrow$<span style="color:red">$p(x,y|z) = p(x|z)p(y|z)$</span><br />　
+- 表記: $x \indep y \ | \ z$<br />　
+
+独立、条件付き独立ともに確率の計算で多用<br />（次のページ）
+
+---
+
+## 確率分布の性質を利用した計算（詳解2.4.4項）
+
+- 例題1: $\big\langle f(x) + \alpha g(y) \big\rangle_{p(x,y)}$を展開してみましょう（$x \indep y$）
+    - 確率の性質だけで式展開可能
+    	上式$= \big\langle f(x) \big\rangle_{p(x,y)} +\alpha \big\langle g(y) \big\rangle_{p(x,y)}\quad$（期待値の線形性から）<br />
+    	$=\big\langle f(x) \big\rangle_{p(x)p(y)} +\alpha \big\langle g(y) \big\rangle_{p(x)p(y)}$　　（$x$と$y$が独立）<br />
+    	$=\big\langle f(x) \big\rangle_{p(x)} +\alpha \big\langle g(y) \big\rangle_{p(y)}  \qquad\qquad$（$f$と$y$、$g$と$x$が無関係）<br />
+
+---
+
+### もう一つ計算
+
+- 例題2: $\big\langle f(x)g(y) \big\rangle_{p(x,y)}$を展開してみましょう（$x \indep y$）
+    - $x,y$に関する期待値の積にできる
+        - 上式$=\big\langle f(x)g(y) \big\rangle_{p(x)p(y)}=\big\langle \langle f(x)g(y) \rangle_{p(x)} \big\rangle_{p(y)}$
+        $=\big\langle g(y) \langle f(x) \rangle_{p(x)} \big\rangle_{p(y)}
+        = \big\langle f(x) \big\rangle_{p(x)}\big\langle g(y) \big\rangle_{p(y)}$
+        - 途中の変形については期待値を$\sum$や$\int$を使った式に戻して確認のこと
+
 ---
 
 ### ここまでのまとめ
@@ -220,4 +275,6 @@ $$\newcommand{\indep}{\mathop{\perp\!\!\!\perp}}$$
     - 確率に関する諸定義や確率の演算中にもよく登場
 - 条件付き確率、同時確率を理解
 - 乗法定理、加法定理を理解
+- 独立の理解と、その性質を利用した演算
+    - 情報をもたらさない変数や分布を消去できる
 
