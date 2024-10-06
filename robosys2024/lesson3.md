@@ -237,7 +237,7 @@ $ ./read_stdin < nums
     import sys  
     
     ans = 0.0
-    for line in sys.stdin:
+    for line in sys.stdin:　
         ans += float(line)
     
     print(ans)
@@ -255,22 +255,20 @@ $ ./read_stdin < nums
 
 - 需要: `nums`の中を見てから`plus_stdin`を使いたい
     - 何かデータを処理する前にデータを`cat`する人は多い
-        ```bash
-        $ cat nums
-        1
-        2
-        ・・・
-        $ cat nums    #上矢印ボタンを押すと、直前に打ったcat numsを打ったことに
-```
-- 上矢印を押したあとに、「` | ./plus_stdin`」と打つ
-    ```bash
-    $ cat nums | ./plus_stdin
-    55.0
-    $ seq 10 | ./plus_stdin  #numsを作らなくても結局これでよい
-    55.0
-    ```
-    - <span style="color:red">`|`</span>: <span style="color:red">パイプ</span>
-        - 左のコマンドの標準出力と、右のコマンドの標準入力を接続
+        - 例
+            ```bash
+            $ cat nums
+            1
+            2
+            ・・・
+            $ cat nums    #上矢印ボタンを押すと、直前に打った文字列cat numsを呼び出せる
+            $ cat nums | ./plus_stdin # numsに続けて | ./plus_stdinと入力
+            25.0
+            $ seq 10 | ./plus_stdin  #numsを作らなくても結局これでよい
+            25.0
+            ```
+            - <span style="color:red">`|`</span>: <span style="color:red">パイプ</span>
+                - 左のコマンドの標準出力と、右のコマンドの標準入力を接続
 
 ---
 
