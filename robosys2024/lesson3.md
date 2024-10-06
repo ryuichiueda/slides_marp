@@ -157,13 +157,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
      5
      6 for n in sys.argv[1:]:
      7     x = float(n)
-     8     if x < 0.0:
-     9         minus += 1
-    10     elif x > 0.0:
+     8     if x < 0.0:　
+     9         minus += 1 　　　
+    10     elif x > 0.0:          　
     11         plus += 1
     12     else:
     13         zero += 1
-    14 
+    14   　
     15 print("負:", minus)
     16 print("０:", zero)
     17 print("正:", plus)
@@ -199,41 +199,33 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - Pythonでの受け取り方
     - <span style="color:red">`sys.stdin`</span>とfor文で<span style="color:red">標準入力</span>から行毎に受け取る（`read_stdin`）
     ```python
-    #!/usr/bin/python3
-    import sys                 #余白の関係で詰めてますが下に1行空行があったほうがよいです
-    for line in sys.stdin:
-        print(line)
+    1 #!/usr/bin/python3
+    2    　
+    3 import sys
+    4 　
+    5 for line in sys.stdin:　
+    6     word = line.strip() #最後に改行文字が入っているのでstripメソッドで除去
+    7     print(word + " を標準入力から読んだよ")
     ```
-    - 実行
-        ```bash
-        $ seq 10 > nums    #リダイレクトをつかってnumsというファイルを作成
-        $ cat nums
-        1
-        2
-        	・・・
-        10
-        $ ./read_stdin < nums #実行結果は下
-        ```
-        - <span style="color:red">`seq`</span>: 整数を順に出力するコマンド
 
->>>
+---
 
+### 前ページのコードの実行結果
 
-- 実行結果
-    ```bash
-    $ ./read_stdin < ans
-    1
-    
-    2
-    
-    （略）
-    8
-    
-    9
-    
-    10
-    ```
-    - もとの改行の他に`print`が改行を入れるので、空行が発生
+```bash
+$ seq 5 > nums    #seq: 1から指定された数字まで出力
+$ cat nums         #リダイレクトをつかってnumsというファイルを作成
+1
+2
+	・・・
+5
+$ ./read_stdin < nums
+1 を標準入力から読んだよ
+2 を標準入力から読んだよ
+3 を標準入力から読んだよ
+4 を標準入力から読んだよ
+5 を標準入力から読んだよ
+```
 
 ---
 
