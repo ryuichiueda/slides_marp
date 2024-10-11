@@ -119,19 +119,18 @@ $$\newcommand{\V}[1]{\boldsymbol{#1}}$$
 
 ---
 
-## 2.5.2 共分散の意味（詳解2.5.2項）
+## 共分散の意味（詳解2.5.2項）
 
 - 式（再掲）
     - $\sigma_{xy} = \frac{1}{N}\sum_{i=0}^{N-1}(x_i-\mu_x)(y_i-\mu_y) = \big\langle (x - \mu_x)(y - \mu_y) \big\rangle_{P(x,y)}$
         - $x_i -\mu_x$と$y_i -\mu_y$の符号の多くが一致していると正、不一致だと負に　
 - 共分散が正、負になると楕円が傾く（図）
-    - 左: $\sigma_{xy}=25\sqrt{3}$
-    - 右: $\sigma_{xy}=-25\sqrt{3}$
+    - 左: $\sigma_{xy}=25\sqrt{3}$、右: $\sigma_{xy}=-25\sqrt{3}$
      （どちらも$\sigma_x^2 = 100, \sigma_y^2 = 50$）
 
 <img width="35%" src="./figs/2d_gausses.png" />
 
-$x$が大きいと$y$が大きく/小さくなりやすいという傾向を示す
+ 　　　　　 $x$が大きいと$y$が大きく/小さくなりやすいという傾向を示す
 
 ---
 
