@@ -46,7 +46,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 版管理（バージョン管理）システム
     - ファイルの変更履歴を管理するためのシステム
     - コードや文章を書くときは必須と言っても過言ではない<br />　
-- Linus Torvalds氏が作成
+- Linus Torvalds氏（Linuxを作り出した人）が作成
     - Linuxの共同開発のため
 
 ---
