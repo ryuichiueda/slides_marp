@@ -13,7 +13,6 @@
 <h1 id="%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%AD%A6">ロボットシステム学</h1>
 <h2 id="%E7%AC%AC4%E5%9B%9E-git%E3%81%A8github">第4回: GitとGitHub</h2>
 <p>千葉工業大学 上田 隆一</p>
-<br />
 <p style="font-size:50%">
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -25,7 +24,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <h2 id="%E4%BB%8A%E6%97%A5%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">今日やること</h2>
 <ul>
 <li>GitとGitHubを使う</li>
-<li>Pythonの文法の勉強を少し<br /></li>
+<li>Pythonの文法の勉強を少し</li>
 <li>目次
 <ol>
 <li>準備</li>
@@ -44,12 +43,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonegitspan"><span style="text-transform:none">Git</span></h3>
+<h2 id="git">Git</h2>
 <ul>
 <li>版管理（バージョン管理）システム
 <ul>
 <li>ファイルの変更履歴を管理するためのシステム</li>
-<li>コードや文章を書くときは必須と言っても過言ではない<br /></li>
+<li>コードや文章を書くときは必須と言っても過言ではない</li>
 </ul>
 </li>
 <li>Linus Torvalds氏（Linuxを作り出した人）が作成
@@ -61,22 +60,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonegitspan%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"><span style="text-transform:none">Git</span>のインストール</h3>
+<h2 id="git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Gitのインストール</h2>
 <ul>
 <li>やること
 <ol>
 <li>（<code>git</code>と打って「ない」と言われたら）インストール
 <ul>
 <li><code>sudo apt install git</code></li>
-<li>最近はデフォルトで使える環境が多い</li>
 </ul>
 </li>
-<li>ユーザの設定</li>
-</ol>
-</li>
-</ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ sudo apt install git
-<span class="hljs-comment">####自身の名前とe-mail アドレスを記録しておく###</span>
+<li>ユーザの設定<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">####自身の名前とe-mail アドレスを記録しておく###</span>
 $ git config --global user.name <span class="hljs-string">&quot;Ryuichi Ueda&quot;</span>
 $ git config --global user.email <span class="hljs-string">&quot;ueda@hogehoge.com&quot;</span>
 <span class="hljs-comment">####エディタも登録しておくとよい###</span>
@@ -89,10 +82,14 @@ email = ueda@hogehoge.com
 [core]
 editor = vim
 </code></pre>
+</li>
+</ol>
+</li>
+</ul>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonegithubspan"><span style="text-transform:none">GitHub</span></h3>
+<h2 id="github">GitHub</h2>
 <ul>
 <li>Gitを利用したサービス
 <ul>
@@ -101,7 +98,7 @@ editor = vim
 <li><span style="color:red">リポジトリ</span>: あるソフトウェアに関するファイルの集まり</li>
 </ul>
 </li>
-<li>公開しないリポジトリも作成可能<br /></li>
+<li>公開しないリポジトリも作成可能</li>
 </ul>
 </li>
 <li>利用方法
@@ -110,7 +107,7 @@ editor = vim
 <li>コマンドライン
 <ul>
 <li><code>git</code>コマンド</li>
-<li><code>gh</code>コマンド（本講義では扱わず）<br /></li>
+<li><code>gh</code>コマンド（本講義では扱わず）</li>
 </ul>
 </li>
 </ul>
@@ -124,34 +121,34 @@ editor = vim
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonegithubspan%E3%81%A7%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90"><span style="text-transform:none">GitHub</span>でのアカウント作成</h3>
-<p><span style="font-size:60%">注意: 文言等はよく変更されるので，基本的にサイトの英語を読んで手続きを</span></p>
+<h2 id="github%E3%81%A7%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90">GitHubでのアカウント作成</h2>
+<p>注意: 文言等はよく変更されるので，基本的にサイトの英語を読んで手続きを</p>
 <ol>
 <li>トップページで&quot;Sign up&quot;か&quot;GitHubに登録する&quot;を押す</li>
-<li>ユーザ名，email アドレス，パスワードを決めて<br />&quot;Create account&quot;を押す
+<li>ユーザ名，email アドレス，パスワードを決めて&quot;Create account&quot;を押す
 <ul>
 <li>ユーザ名は恥ずかしくないものを！</li>
 </ul>
 </li>
 <li>画面指示に従って手続き
 <ul>
-<li>プランを選ぶときに&quot;Free&quot;が選択されているのを確認<br /><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>&quot;Finish sign up&quot;</li>
+<li>プランを選ぶときに&quot;Free&quot;が選択されているのを確認<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>&quot;Finish sign up&quot;</li>
 </ul>
 </li>
-<li>登録したメールアドレスに確認メールが届く<br /><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>指示にしたがう</li>
+<li>登録したメールアドレスに確認メールが届く<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>指示にしたがう</li>
 <li>鍵の登録（次ページ）</li>
 <li>（必要ならば）ファイアウォール対策</li>
 </ol>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E9%8D%B5%E3%81%AE%E8%A8%AD%E5%AE%9A%E9%8D%B5%E3%81%AE%E4%BD%9C%E6%88%90">鍵の設定（鍵の作成）</h3>
+<h2 id="%E9%8D%B5%E3%81%AE%E8%A8%AD%E5%AE%9A%E9%8D%B5%E3%81%AE%E4%BD%9C%E6%88%90">鍵の設定（鍵の作成）</h2>
 <ul>
 <li>手元のPCとGitHubとの通信を暗号化するために，<span style="color:red">公開鍵</span>をGitHubに登録
 <ul>
 <li>手元のPCには<span style="color:red">秘密鍵</span>を持っておく
 <ul>
-<li>秘密鍵は文字通り秘密にして他人に見せたり触れたりさせない<br /></li>
+<li>秘密鍵は文字通り秘密にして他人に見せたり触れたりさせない</li>
 </ul>
 </li>
 </ul>
@@ -165,11 +162,16 @@ id_rsa      id_rsa.pub         <span class="hljs-comment">#この2つのファ�
 <li><code>id_rsa.pub</code>の方が公開鍵</li>
 </ul>
 </li>
+<li>参考: 暗号については過去の資料にちょっと書いてある
+<ul>
+<li><a href="https://lab.ueda.tech/?page=robosys_2016_12">https://lab.ueda.tech/?page=robosys_2016_12</a></li>
+</ul>
+</li>
 </ul>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E9%8D%B5%E3%81%AE%E8%A8%AD%E5%AE%9Aspan-styletext-transformnonegithubspan%E3%81%A7%E3%81%AE%E4%BD%9C%E6%A5%AD">鍵の設定（<span style="text-transform:none">GitHub</span>での作業）</h3>
+<h2 id="%E9%8D%B5%E3%81%AE%E8%A8%AD%E5%AE%9Agithub%E3%81%A7%E3%81%AE%E4%BD%9C%E6%A5%AD">鍵の設定（GitHubでの作業）</h2>
 <ul>
 <li>右上のユーザのアイコンを押す<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>Settings<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>SSH and GPG keys<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>New SSH key
 <ul>
@@ -190,7 +192,8 @@ id_rsa      id_rsa.pub         <span class="hljs-comment">#この2つのファ�
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E5%9B%9E%E9%81%BF%E3%81%AE%E8%A8%AD%E5%AE%9A">ファイアウォール回避の設定</h3>
+<h2 id="%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E5%9B%9E%E9%81%BF%E3%81%AE%E8%A8%AD%E5%AE%9A">ファイアウォール回避の設定</h2>
+<p>今年からやらなくてよくなりました！！</p>
 <ul>
 <li>ホーム下の<code>.ssh/config</code>というファイルに次のように記述<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cat</span> ~/.ssh/config
 ・・・
@@ -204,7 +207,7 @@ Host github.com
 ・・・
 </code></pre>
 <ul>
-<li>SSHでデフォルトの22番ポートではなく<br />HTTPSの443番ポートを使う設定
+<li>SSHでデフォルトの22番ポートではなくHTTPSの443番ポートを使う設定
 <ul>
 <li>参考: <a href="https://docs.github.com/ja/authentication/troubleshooting-ssh/using-ssh-over-the-https-port">https://docs.github.com/ja/authentication/troubleshooting-ssh/using-ssh-over-the-https-port</a></li>
 </ul>
@@ -215,7 +218,7 @@ Host github.com
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="11" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h2 id="2-span-styletext-transformnonegithubspan%E3%81%B8%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E4%BF%9D%E5%AD%98">2. <span style="text-transform:none">GitHub</span>へのコードの保存</h2>
+<h2 id="2-github%E3%81%B8%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E4%BF%9D%E5%AD%98">2. GitHubへのコードの保存</h2>
 <ul>
 <li>やること
 <ul>
@@ -240,12 +243,12 @@ ans = <span class="hljs-number">0.0</span>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90">リポジトリの作成</h3>
+<h2 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E4%BD%9C%E6%88%90">リポジトリの作成</h2>
 <p>GitHubに1つ作ってみましょう</p>
 <ul>
 <li>GitHubのサイトでの操作
 <ul>
-<li>右上のアカウントのアイコン横の&quot;+&quot;マークを押して，<br />&quot;New repository&quot;を選択</li>
+<li>右上のアカウントのアイコン横の&quot;+&quot;マークを押して，&quot;New repository&quot;を選択</li>
 <li>必要事項を記入
 <ul>
 <li>名前: robosys202x</li>
@@ -267,7 +270,7 @@ ans = <span class="hljs-number">0.0</span>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="13" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E6%89%8B%E5%85%83%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC">リポジトリを手元にコピー</h3>
+<h2 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E6%89%8B%E5%85%83%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC">リポジトリを手元にコピー</h2>
 <ul>
 <li>リポジトリの画面の&quot;Code&quot;をクリック</li>
 <li>&quot;SSH&quot;を選択してURLをコピー
@@ -295,7 +298,7 @@ $ <span class="hljs-built_in">ls</span> -a
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="14" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0br-1-span-styletext-transformnonegit-addspan">リポジトリにコードを追加<br />1: <span style="text-transform:none">git add</span></h3>
+<h2 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A01-span-styletext-transformnonegit-addspan">リポジトリにコードを追加1: <span style="text-transform:none">git add</span></h2>
 <ul>
 <li>プログラム<code>plus_stdin</code>を一つ置く<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">ls</span>
 README.md  plus_stdin
@@ -319,7 +322,7 @@ Your branch is up to <span class="hljs-built_in">date</span> with <span class="h
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="15" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0br-2-span-styletext-transformnonegit-commitspan">リポジトリにコードを追加<br />2: <span style="text-transform:none">git commit</span></h3>
+<h2 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A02-span-styletext-transformnonegit-commitspan">リポジトリにコードを追加2: <span style="text-transform:none">git commit</span></h2>
 <ul>
 <li><span style="color:red"><code>git commit</code></span>でステージングエリアの情報をリポジトリに反映
 <ul>
@@ -341,7 +344,7 @@ Add a command<br />
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="16" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonegithubspan%E3%81%B8%E3%81%AE%E5%8F%8D%E6%98%A0"><span style="text-transform:none">GitHub</span>への反映</h3>
+<h2 id="github%E3%81%B8%E3%81%AE%E5%8F%8D%E6%98%A0">GitHubへの反映</h2>
 <ul>
 <li>手元のリポジトリをGitHubのリポジトリへ転送
 <ul>
@@ -372,7 +375,7 @@ To github.com:ryuichiueda/robosys2022.git
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonegithubspan%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA"><span style="text-transform:none">GitHub</span>を利用した開発</h3>
+<h2 id="github%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA">GitHubを利用した開発</h2>
 <ul>
 <li>GitHubにコードをアップした時点で様々な利点
 <ul>
@@ -380,7 +383,7 @@ To github.com:ryuichiueda/robosys2022.git
 <li>混乱せずに様々な環境で開発可能に</li>
 <li>自分の力を見せることが可能に
 <ul>
-<li>たとえ学科内だと平凡でも，世の中的にはコードが書けるだけで少数派<br /></li>
+<li>たとえ学科内だと平凡でも，世の中的にはコードが書けるだけで少数派</li>
 </ul>
 </li>
 </ul>
@@ -399,11 +402,11 @@ To github.com:ryuichiueda/robosys2022.git
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="19" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E5%8B%95%E3%81%8F%E3%82%82%E3%81%AE%E3%82%92%E6%AE%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E3%81%AE%E9%96%8B%E7%99%BA">動くものを残しながらの開発</h3>
+<h2 id="%E5%8B%95%E3%81%8F%E3%82%82%E3%81%AE%E3%82%92%E6%AE%8B%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E3%81%AE%E9%96%8B%E7%99%BA">動くものを残しながらの開発</h2>
 <ul>
 <li>よくあるケース
 <ul>
-<li>改良しようと結構手を加えたらコードが動かなくなった<br /></li>
+<li>改良しようと結構手を加えたらコードが動かなくなった</li>
 </ul>
 </li>
 <li>どうする？
@@ -417,7 +420,7 @@ To github.com:ryuichiueda/robosys2022.git
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="20" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81">ブランチ</h3>
+<h2 id="%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81">ブランチ</h2>
 <ul>
 <li>リポジトリの内容を枝分かれして開発を進める
 <ul>
@@ -442,7 +445,7 @@ $ git branch
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonedevspan%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA"><span style="text-transform:none">dev</span>ブランチでの開発</h3>
+<h2 id="span-styletext-transformnonedevspan%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA"><span style="text-transform:none">dev</span>ブランチでの開発</h2>
 <p>ついでにPythonの文法の勉強</p>
 <ul>
 <li>やること1
@@ -478,7 +481,7 @@ ans = <span class="hljs-number">0</span>   <span class="hljs-comment">#もとも
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonedevspan%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA-1"><span style="text-transform:none">dev</span>ブランチでの開発</h3>
+<h2 id="span-styletext-transformnonedevspan%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA-1"><span style="text-transform:none">dev</span>ブランチでの開発</h2>
 <ul>
 <li>やること2
 <ul>
@@ -510,7 +513,7 @@ Branch 'dev' set up to track remote branch 'dev' from 'origin'.<br />
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E5%AF%84%E3%82%8A%E9%81%93%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E8%A6%B3%E5%AF%9F">（寄り道）ブランチの観察</h3>
+<h2 id="%E5%AF%84%E3%82%8A%E9%81%93%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E8%A6%B3%E5%AF%9F">（寄り道）ブランチの観察</h2>
 <ul>
 <li><code>git log --graph</code>で表示してみましょう
 <ul>
@@ -557,7 +560,7 @@ Branch 'dev' set up to track remote branch 'dev' from 'origin'.<br />
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="span-styletext-transformnonedevspan%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA-2"><span style="text-transform:none">dev</span>ブランチでの開発</h3>
+<h2 id="span-styletext-transformnonedevspan%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA-2"><span style="text-transform:none">dev</span>ブランチでの開発</h2>
 <ul>
 <li>やること3: mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
 <ul>
@@ -588,11 +591,11 @@ To github.com:ryuichiueda/robosys2022.git
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="4-%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88">4. コンフリクト</h3>
+<h2 id="4-%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88">4. コンフリクト</h2>
 <ul>
 <li>Gitを使っていると，コミット同士が矛盾することがある
 <ul>
-<li>マージできない<br /></li>
+<li>マージできない</li>
 </ul>
 </li>
 </ul>
@@ -600,7 +603,7 @@ To github.com:ryuichiueda/robosys2022.git
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="26" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%82%92%E8%B5%B7%E3%81%93%E3%81%99%E6%BA%96%E5%82%99">コンフリクトを起こす（準備）</h3>
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%82%92%E8%B5%B7%E3%81%93%E3%81%99%E6%BA%96%E5%82%99">コンフリクトを起こす（準備）</h2>
 <ul>
 <li>ローカルリポジトリを別に作成<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">mkdir</span> ~/tmp/
 $ <span class="hljs-built_in">cd</span> ~/tmp/
@@ -622,7 +625,7 @@ $ git <span class="hljs-built_in">clone</span> git@（略） <span class="hljs-c
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="27" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%82%92%E8%B5%B7%E3%81%93%E3%81%99%E3%81%9D%E3%81%AE1">コンフリクトを起こす（その1）</h3>
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%82%92%E8%B5%B7%E3%81%93%E3%81%99%E3%81%9D%E3%81%AE1">コンフリクトを起こす（その1）</h2>
 <ul>
 <li>リポジトリAで変更してpush
 <ul>
@@ -657,7 +660,7 @@ ans = <span class="hljs-number">0</span>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="28" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%82%92%E8%B5%B7%E3%81%93%E3%81%99%E3%81%9D%E3%81%AE2">コンフリクトを起こす（その2）</h3>
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%82%92%E8%B5%B7%E3%81%93%E3%81%99%E3%81%9D%E3%81%AE2">コンフリクトを起こす（その2）</h2>
 <ul>
 <li>リポジトリBで別の変更
 <ul>
@@ -684,7 +687,7 @@ hint: See the <span class="hljs-string">&#x27;Note about fast-forwards&#x27;</sp
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="29" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%81%AE%E8%A7%A3%E6%B6%88%E3%81%9D%E3%81%AE1">コンフリクトの解消（その1）</h3>
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%81%AE%E8%A7%A3%E6%B6%88%E3%81%9D%E3%81%AE1">コンフリクトの解消（その1）</h2>
 <ul>
 <li>
 <p>リポジトリBで<code>git pull</code></p>
@@ -717,7 +720,7 @@ import sys</p>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="30" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%81%AE%E8%A7%A3%E6%B6%88%E3%81%9D%E3%81%AE2">コンフリクトの解消（その2）</h3>
+<h2 id="%E3%82%B3%E3%83%B3%E3%83%95%E3%83%AA%E3%82%AF%E3%83%88%E3%81%AE%E8%A7%A3%E6%B6%88%E3%81%9D%E3%81%AE2">コンフリクトの解消（その2）</h2>
 <ul>
 <li>コードを手で修正してコミット，push<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-comment">#!/usr/bin/python3</span>
 <span class="hljs-keyword">import</span> sys 
@@ -746,7 +749,7 @@ ans = <span class="hljs-number">0</span>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="32" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E9%81%8E%E5%8E%BB%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%97%E5%8B%95%E6%A9%9F">過去のコードの取り出し（動機）</h3>
+<h2 id="%E9%81%8E%E5%8E%BB%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%97%E5%8B%95%E6%A9%9F">過去のコードの取り出し（動機）</h2>
 <ul>
 <li>昔のコードを一部復活させたいときにやりたくなる
 <ul>
@@ -770,7 +773,7 @@ commit 68d342fbb7a9b65e402d0b6f5a7763e56f248937
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="33" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E9%81%8E%E5%8E%BB%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%97%E6%96%B9%E6%B3%95">過去のコードの取り出し（方法）</h3>
+<h2 id="%E9%81%8E%E5%8E%BB%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%97%E6%96%B9%E6%B3%95">過去のコードの取り出し（方法）</h2>
 <ul>
 <li>取り出すだけなら次の方法で可能<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git switch -d fa8aab8         <span class="hljs-comment">#コミットハッシュ値の先頭何桁を指定</span>
 HEAD is now at fa8aab8 Add a <span class="hljs-built_in">command</span>
@@ -791,7 +794,7 @@ Your branch is up to <span class="hljs-built_in">date</span> with <span class="h
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="34" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%A0%E3%81%91%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%E3%82%92span-styletext-transformnonegithubspan%E3%81%AB%E3%82%A2%E3%83%83%E3%83%97">ローカルリポジトリだけ作ったものを<span style="text-transform:none">GitHub</span>にアップ</h3>
+<h2 id="%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%A0%E3%81%91%E4%BD%9C%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE%E3%82%92github%E3%81%AB%E3%82%A2%E3%83%83%E3%83%97">ローカルリポジトリだけ作ったものをGitHubにアップ</h2>
 <ul>
 <li>手順
 <ol>
@@ -801,19 +804,19 @@ Your branch is up to <span class="hljs-built_in">date</span> with <span class="h
 </li>
 <li>注意: メインのブランチをローカルとリモートで合わせること
 <ul>
-<li>手元が<code>master</code>なのに，リモートが<code>main</code>のときは手元を<code>main</code>にするとよい<br /></li>
+<li>手元が<code>master</code>なのに，リモートが<code>main</code>のときは手元を<code>main</code>にするとよい</li>
 </ul>
 </li>
 </ul>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="35" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h3 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E5%90%8D%E5%89%8D%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%84">リポジトリの名前を変えたい</h3>
+<h2 id="%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%AE%E5%90%8D%E5%89%8D%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%84">リポジトリの名前を変えたい</h2>
 <ul>
 <li>リモート: GitHubのリポジトリのSettingsで変更</li>
 <li>ローカル: リポジトリの<code>.git/config</code>を編集
 <ul>
-<li>実は変えなくてもリモートにpush可能<br /></li>
+<li>実は変えなくてもリモートにpush可能</li>
 </ul>
 </li>
 </ul>
@@ -835,7 +838,7 @@ Your branch is up to <span class="hljs-built_in">date</span> with <span class="h
 </li>
 <li>他にも様々な操作が必要に
 <ul>
-<li>困ったら仕組みから理解してみましょう<br /></li>
+<li>困ったら仕組みから理解してみましょう</li>
 </ul>
 </li>
 </ul>

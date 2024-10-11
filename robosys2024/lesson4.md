@@ -10,7 +10,7 @@ marp: true
 
 千葉工業大学 上田 隆一
 
-<br />
+
 
 <p style="font-size:50%">
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -25,7 +25,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今日やること
 
 - GitとGitHubを使う
-- Pythonの文法の勉強を少し<br />　
+- Pythonの文法の勉強を少し　
 - 目次
     1. 準備
     2. GitHubへのコードの保存
@@ -41,78 +41,75 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### <span style="text-transform:none">Git</span>
+## Git
 
 - 版管理（バージョン管理）システム
     - ファイルの変更履歴を管理するためのシステム
-    - コードや文章を書くときは必須と言っても過言ではない<br />　
+    - コードや文章を書くときは必須と言っても過言ではない　
 - Linus Torvalds氏（Linuxを作り出した人）が作成
     - Linuxの共同開発のため
 
 ---
 
-### <span style="text-transform:none">Git</span>のインストール
+## Gitのインストール
 
 - やること
     1. （`git`と打って「ない」と言われたら）インストール
         - `sudo apt install git`
-        - 最近はデフォルトで使える環境が多い
     2. ユーザの設定
-
-```bash
-$ sudo apt install git
-####自身の名前とe-mail アドレスを記録しておく###
-$ git config --global user.name "Ryuichi Ueda"
-$ git config --global user.email "ueda@hogehoge.com"
-####エディタも登録しておくとよい###
-$ git config --global core.editor vim
-####確認###
-$ cat .gitconfig
-[user]
-name = Ryuichi Ueda
-email = ueda@hogehoge.com
-[core]
-editor = vim
-```
+        ```bash
+        ####自身の名前とe-mail アドレスを記録しておく###
+        $ git config --global user.name "Ryuichi Ueda"
+        $ git config --global user.email "ueda@hogehoge.com"
+        ####エディタも登録しておくとよい###
+        $ git config --global core.editor vim
+        ####確認###
+        $ cat .gitconfig
+        [user]
+        name = Ryuichi Ueda
+        email = ueda@hogehoge.com
+        [core]
+        editor = vim
+        ```
 
 ---
 
-### <span style="text-transform:none">GitHub</span>
+## GitHub
 
 - Gitを利用したサービス
     - 「リポジトリ」のホスティングと公開，コミュニケーション
         - <span style="color:red">リポジトリ</span>: あるソフトウェアに関するファイルの集まり
-    - 公開しないリポジトリも作成可能<br />　
+    - 公開しないリポジトリも作成可能　
 - 利用方法
     - ウェブサイト([https://github.co.jp/ ](https://github.co.jp/))
     - コマンドライン
         - `git`コマンド
-        - `gh`コマンド（本講義では扱わず）<br />　
+        - `gh`コマンド（本講義では扱わず）　
 - 注意: 他にも同様のサービスは存在
     - GitLab, Bitbucketなど
 
 ---
 
-### <span style="text-transform:none">GitHub</span>でのアカウント作成
+## GitHubでのアカウント作成
 
-<span style="font-size:60%">注意: 文言等はよく変更されるので，基本的にサイトの英語を読んで手続きを</span>
+注意: 文言等はよく変更されるので，基本的にサイトの英語を読んで手続きを
 
 1. トップページで"Sign up"か"GitHubに登録する"を押す
-2. ユーザ名，email アドレス，パスワードを決めて<br />"Create account"を押す
+2. ユーザ名，email アドレス，パスワードを決めて"Create account"を押す
     - ユーザ名は恥ずかしくないものを！
 3. 画面指示に従って手続き
-    - プランを選ぶときに"Free"が選択されているのを確認<br />$\rightarrow$"Finish sign up"
-4. 登録したメールアドレスに確認メールが届く<br />$\rightarrow$指示にしたがう
+    - プランを選ぶときに"Free"が選択されているのを確認$\rightarrow$"Finish sign up"
+4. 登録したメールアドレスに確認メールが届く$\rightarrow$指示にしたがう
 5. 鍵の登録（次ページ）
 6. （必要ならば）ファイアウォール対策
 
 ---
 
-### 鍵の設定（鍵の作成）
+## 鍵の設定（鍵の作成）
 
 - 手元のPCとGitHubとの通信を暗号化するために，<span style="color:red">公開鍵</span>をGitHubに登録
     - 手元のPCには<span style="color:red">秘密鍵</span>を持っておく
-        - 秘密鍵は文字通り秘密にして他人に見せたり触れたりさせない<br />　
+        - 秘密鍵は文字通り秘密にして他人に見せたり触れたりさせない　
 - 鍵の作り方
     ```bash
     $ ssh-keygen
@@ -121,10 +118,12 @@ editor = vim
     id_rsa      id_rsa.pub         #この2つのファイルがあれば大丈夫
     ```
     - `id_rsa.pub`の方が公開鍵
+- 参考: 暗号については過去の資料にちょっと書いてある
+    - https://lab.ueda.tech/?page=robosys_2016_12
 
 ---
 
-### 鍵の設定（<span style="text-transform:none">GitHub</span>での作業）
+## 鍵の設定（GitHubでの作業）
 
 - 右上のユーザのアイコンを押す$\rightarrow$Settings$\rightarrow$SSH and GPG keys$\rightarrow$New SSH key
     - titleはなんでもいいので鍵の名前を入れる
@@ -135,7 +134,9 @@ editor = vim
 
 ---
 
-### ファイアウォール回避の設定
+## ファイアウォール回避の設定
+
+今年からやらなくてよくなりました！！
 
 - ホーム下の`.ssh/config`というファイルに次のように記述
     ```bash
@@ -150,13 +151,13 @@ editor = vim
     
     ・・・
     ```
-    - SSHでデフォルトの22番ポートではなく<br />HTTPSの443番ポートを使う設定
+    - SSHでデフォルトの22番ポートではなくHTTPSの443番ポートを使う設定
         - 参考: https://docs.github.com/ja/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
 
 
 ---
 
-## 2. <span style="text-transform:none">GitHub</span>へのコードの保存
+## 2. GitHubへのコードの保存
 
 - やること
     - これまで講義で作ってきたコードをGitHubにアップロード
@@ -175,12 +176,12 @@ editor = vim
 
 ---
 
-### リポジトリの作成
+## リポジトリの作成
 
 GitHubに1つ作ってみましょう
 
 - GitHubのサイトでの操作
-  - 右上のアカウントのアイコン横の"+"マークを押して，<br />"New repository"を選択
+  - 右上のアカウントのアイコン横の"+"マークを押して，"New repository"を選択
   - 必要事項を記入
     - 名前: robosys202x
     - Description: 説明を適当に
@@ -193,7 +194,7 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### リポジトリを手元にコピー
+## リポジトリを手元にコピー
 
 - リポジトリの画面の"Code"をクリック
 - "SSH"を選択してURLをコピー
@@ -215,7 +216,7 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### リポジトリにコードを追加<br />1: <span style="text-transform:none">git add</span>
+## リポジトリにコードを追加1: <span style="text-transform:none">git add</span>
 
 - プログラム`plus_stdin`を一つ置く
     ```bash
@@ -237,7 +238,7 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### リポジトリにコードを追加<br />2: <span style="text-transform:none">git commit</span>
+## リポジトリにコードを追加2: <span style="text-transform:none">git commit</span>
 
 - <span style="color:red">`git commit`</span>でステージングエリアの情報をリポジトリに反映
     - この時点で，手元のリポジトリに`plus_stdin`の記録が残る
@@ -257,7 +258,7 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### <span style="text-transform:none">GitHub</span>への反映
+## GitHubへの反映
 
 - 手元のリポジトリをGitHubのリポジトリへ転送
     - <span style="color:red">プッシュ</span>と呼ぶ
@@ -282,13 +283,13 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### <span style="text-transform:none">GitHub</span>を利用した開発
+## GitHubを利用した開発
 
 - GitHubにコードをアップした時点で様々な利点
     - 自分のコードを紛失する可能性が極めて低く
     - 混乱せずに様々な環境で開発可能に
     - 自分の力を見せることが可能に
-        - たとえ学科内だと平凡でも，世の中的にはコードが書けるだけで少数派<br />　
+        - たとえ学科内だと平凡でも，世の中的にはコードが書けるだけで少数派　
 - 面倒なこと: 少々責任が伴う
     - ライセンス等の整備（また別の回で）
     - <span style="color:red">使えないものを使えると言って置かない</span>
@@ -296,10 +297,10 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### 動くものを残しながらの開発
+## 動くものを残しながらの開発
 
 - よくあるケース
-    - 改良しようと結構手を加えたらコードが動かなくなった<br />　
+    - 改良しようと結構手を加えたらコードが動かなくなった　
 - どうする？
     - そのままGitHubにpushすると他の人がコードを使えなくなる
     - GitHubにpushしないで放置すると作業の記録が残せない
@@ -308,7 +309,7 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### ブランチ
+## ブランチ
 
 - リポジトリの内容を枝分かれして開発を進める
   - ブランチ = 枝
@@ -329,7 +330,7 @@ GitHubに1つ作ってみましょう
 
 ---
 
-### <span style="text-transform:none">dev</span>ブランチでの開発
+## <span style="text-transform:none">dev</span>ブランチでの開発
 
 ついでにPythonの文法の勉強
 
@@ -360,7 +361,7 @@ print(ans)
 
 ---
 
-### <span style="text-transform:none">dev</span>ブランチでの開発
+## <span style="text-transform:none">dev</span>ブランチでの開発
 
 - やること2
     - 検証とコミット（とプッシュ）　　　　　　　　　　　　　
@@ -389,7 +390,7 @@ print(ans)
 
 ---
 
-### （寄り道）ブランチの観察
+## （寄り道）ブランチの観察
 
 - `git log --graph`で表示してみましょう
     - 読み取れること
@@ -418,7 +419,7 @@ print(ans)
 
 ---
 
-### <span style="text-transform:none">dev</span>ブランチでの開発
+## <span style="text-transform:none">dev</span>ブランチでの開発
 
 - やること3: mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
     - まずmainブランチに戻って変更内容の確認
@@ -447,16 +448,16 @@ print(ans)
 
 ---
 
-### 4. コンフリクト
+## 4. コンフリクト
 
 - Gitを使っていると，コミット同士が矛盾することがある
-    - マージできない<br />　
+    - マージできない　
 
 そういう状況を作ってみましょう．
 
 ---
 
-### コンフリクトを起こす（準備）
+## コンフリクトを起こす（準備）
 
 - ローカルリポジトリを別に作成
     ```bash
@@ -471,7 +472,7 @@ print(ans)
 
 ---
 
-### コンフリクトを起こす（その1）
+## コンフリクトを起こす（その1）
 
 - リポジトリAで変更してpush
     - 数字の処理部分を関数に
@@ -499,7 +500,7 @@ print(ans)
 
 ---
 
-### コンフリクトを起こす（その2）
+## コンフリクトを起こす（その2）
 
 - リポジトリBで別の変更
     - リポジトリAの存在を忘れて作業したという状況
@@ -526,7 +527,7 @@ print(ans)
 
 ---
 
-### コンフリクトの解消（その1）
+## コンフリクトの解消（その1）
 
 - リポジトリBで`git pull`
     ```bash
@@ -556,7 +557,7 @@ print(ans)
 
 ---
 
-### コンフリクトの解消（その2）
+## コンフリクトの解消（その2）
 
 - コードを手で修正してコミット，push
     ```python
@@ -585,7 +586,7 @@ print(ans)
 
 ---
 
-### 過去のコードの取り出し（動機）
+## 過去のコードの取り出し（動機）
 
 - 昔のコードを一部復活させたいときにやりたくなる
     - 例: 次の履歴から「Add a command」時のコードを取り出したい
@@ -606,7 +607,7 @@ print(ans)
 
 ---
 
-### 過去のコードの取り出し（方法）
+## 過去のコードの取り出し（方法）
 
 - 取り出すだけなら次の方法で可能　　　　　　　　　
     ```bash
@@ -627,21 +628,21 @@ print(ans)
 
 ---
 
-### ローカルリポジトリだけ作ったものを<span style="text-transform:none">GitHub</span>にアップ
+## ローカルリポジトリだけ作ったものをGitHubにアップ
 
 - 手順
     1. GitHubに同名のリポジトリを作成
     2. `git remote add origin <リポジトリ>`で結びつけ
 - 注意: メインのブランチをローカルとリモートで合わせること
-    - 手元が`master`なのに，リモートが`main`のときは手元を`main`にするとよい<br />　
+    - 手元が`master`なのに，リモートが`main`のときは手元を`main`にするとよい　
 
 ---
 
-### リポジトリの名前を変えたい
+## リポジトリの名前を変えたい
 
 - リモート: GitHubのリポジトリのSettingsで変更
 - ローカル: リポジトリの`.git/config`を編集
-    - 実は変えなくてもリモートにpush可能<br />　
+    - 実は変えなくてもリモートにpush可能　
 
 ---
 
@@ -652,7 +653,7 @@ print(ans)
         - 今日から必須の道具
             - レポート等も管理することを強く推奨
     - 他にも様々な操作が必要に
-        - 困ったら仕組みから理解してみましょう<br />　
+        - 困ったら仕組みから理解してみましょう　
 - Pythonの文法
     - 今回出てきたもの
         - 例外処理
