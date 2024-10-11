@@ -593,20 +593,14 @@ $ git <span class="hljs-built_in">clone</span> git@（略） <span class="hljs-c
 <ul>
 <li>リポジトリAで変更してpush
 <ul>
-<li>数字の処理部分を関数に
-<ul>
-<li>Pythonの関数の定義は初出</li>
-</ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-comment">#!/usr/bin/python3</span>
+<li>数字の処理部分を関数に（ついでなのでPythonの関数も勉強します）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-comment">#!/usr/bin/python3</span>
 <span class="hljs-keyword">import</span> sys
-　 
-　 
+　   <span class="hljs-comment">#スライドの関係で1行だけど、本来、関数の前後は2行空白をあける</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">tonum</span>(<span class="hljs-params">s</span>):   <span class="hljs-comment">#def 関数の名前(引数)で関数を定義</span>
     <span class="hljs-keyword">try</span>:
         <span class="hljs-keyword">return</span> <span class="hljs-built_in">int</span>(s)
     <span class="hljs-keyword">except</span>:
         <span class="hljs-keyword">return</span> <span class="hljs-built_in">float</span>(s)
-　 
 　 
 ans = <span class="hljs-number">0</span>
 <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> sys.stdin:

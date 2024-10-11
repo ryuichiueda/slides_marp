@@ -454,19 +454,16 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 ## コンフリクトを起こす（その1）
 
 - リポジトリAで変更してpush
-    - 数字の処理部分を関数に
-        - Pythonの関数の定義は初出　　　　　　　　　　　　　
+    - 数字の処理部分を関数に（ついでなのでPythonの関数も勉強します）
         ```python
         #!/usr/bin/python3
         import sys
-        　 
-        　 
+        　   #スライドの関係で1行だけど、本来、関数の前後は2行空白をあける
         def tonum(s):   #def 関数の名前(引数)で関数を定義
             try:
                 return int(s)
             except:
                 return float(s)
-        　 
         　 
         ans = 0
         for line in sys.stdin:
