@@ -213,7 +213,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 
 ---
 
-## リポジトリにコードを追加1: <span style="text-transform:none">git add</span>
+## リポジトリにコードを追加1: git add
 
 - プログラム`plus_stdin`を一つ置く
     ```bash
@@ -235,7 +235,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 
 ---
 
-## リポジトリにコードを追加2: <span style="text-transform:none">git commit</span>
+## リポジトリにコードを追加2: git commit
 
 - <span style="color:red">`git commit`</span>でステージングエリアの情報をリポジトリに反映
     - この時点で，手元のリポジトリに`plus_stdin`の記録が残る
@@ -249,7 +249,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         commit fa8aab8a2ade8cd33823f488fbb1bbec6d981260 (HEAD -> main)
         Author: Ryuichi Ueda <ryuichiueda@gmail.com>
         Date:   Tue Dec 7 16:58:54 2021 +0900
-	　
+
             Add a command
         ```
 
