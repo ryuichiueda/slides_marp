@@ -202,16 +202,14 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
     - この操作を<span style="color:red">クローン</span>と言う
         ```bash
         $ git clone <さっきクリップボードにコピーした文字列をペースト>
-        Cloning into 'robosys2022'...
-        remote: Enumerating objects: 3, done.
-        remote: Counting objects: 100% (3/3), done.
-        remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+        Cloning into 'robosys202x'...
+        （略）
         Receiving objects: 100% (3/3), done.
-        $ cd robosys2022/
+        $ cd robosys202x/
         $ ls -a
         .  ..  .git  README.md
         ```
-    - <span style="color:red">注意: </span>鍵，`.git/config`の設定が失敗しているとエラー
+    - <span style="color:red">注意: </span>鍵の設定が失敗しているとエラー
 
 ---
 
@@ -271,7 +269,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         Compressing objects: 100% (3/3), done.
         Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, done.
         Total 3 (delta 0), reused 0 (delta 0)
-        To github.com:ryuichiueda/robosys2022.git
+        To github.com:ryuichiueda/robosys202x.git
            68d342f..fa8aab8  main -> main
         ```
     - プッシュしたらGitHub側で反映されたことを確認のこと
@@ -440,7 +438,7 @@ print(ans)
         （略．例外処理の入ったコードが表示される．）
         $ git push
         Total 0 (delta 0), reused 0 (delta 0)
-        To github.com:ryuichiueda/robosys2022.git
+        To github.com:ryuichiueda/robosys202x.git
            fa8aab8..f02a202  main -> main
         ```
 - 安全にmainブランチを更新できた
@@ -512,9 +510,9 @@ print(ans)
     - コミットしてpushするとエラー
         ```bash
         $ git push 
-        To github.com:ryuichiueda/robosys2022
+        To github.com:ryuichiueda/robosys202x
          ! [rejected]        main -> main (non-fast-forward)
-        error: failed to push some refs to 'git@github.com:ryuichiueda/robosys2022'
+        error: failed to push some refs to 'git@github.com:ryuichiueda/robosys202x'
         hint: Updates were rejected because the tip of your current branch is behind
         hint: its remote counterpart. Integrate the remote changes (e.g.
         hint: 'git pull ...') before pushing again.

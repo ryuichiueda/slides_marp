@@ -277,17 +277,15 @@ ans = <span class="hljs-number">0.0</span>
 <li>リポジトリをコピーしたいディレクトリで次の操作
 <ul>
 <li>この操作を<span style="color:red">クローン</span>と言う<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git <span class="hljs-built_in">clone</span> &lt;さっきクリップボードにコピーした文字列をペースト&gt;
-Cloning into <span class="hljs-string">&#x27;robosys2022&#x27;</span>...
-remote: Enumerating objects: 3, <span class="hljs-keyword">done</span>.
-remote: Counting objects: 100% (3/3), <span class="hljs-keyword">done</span>.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Cloning into <span class="hljs-string">&#x27;robosys202x&#x27;</span>...
+（略）
 Receiving objects: 100% (3/3), <span class="hljs-keyword">done</span>.
-$ <span class="hljs-built_in">cd</span> robosys2022/
+$ <span class="hljs-built_in">cd</span> robosys202x/
 $ <span class="hljs-built_in">ls</span> -a
 .  ..  .git  README.md
 </code></pre>
 </li>
-<li><span style="color:red">注意: </span>鍵，<code>.git/config</code>の設定が失敗しているとエラー</li>
+<li><span style="color:red">注意: </span>鍵の設定が失敗しているとエラー</li>
 </ul>
 </li>
 </ul>
@@ -356,7 +354,7 @@ Delta compression using up to 16 threads
 Compressing objects: 100% (3/3), <span class="hljs-keyword">done</span>.
 Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, <span class="hljs-keyword">done</span>.
 Total 3 (delta 0), reused 0 (delta 0)
-To github.com:ryuichiueda/robosys2022.git
+To github.com:ryuichiueda/robosys202x.git
    68d342f..fa8aab8  main -&gt; main
 </code></pre>
 </li>
@@ -576,7 +574,7 @@ $ <span class="hljs-built_in">cat</span> plus_stdin
 （略．例外処理の入ったコードが表示される．）
 $ git push
 Total 0 (delta 0), reused 0 (delta 0)
-To github.com:ryuichiueda/robosys2022.git
+To github.com:ryuichiueda/robosys202x.git
    fa8aab8..f02a202  main -&gt; main
 </code></pre>
 </li>
@@ -667,9 +665,9 @@ ans = <span class="hljs-number">0</span>
 </code></pre>
 </li>
 <li>コミットしてpushするとエラー<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git push 
-To github.com:ryuichiueda/robosys2022
+To github.com:ryuichiueda/robosys202x
  ! [rejected]        main -&gt; main (non-fast-forward)
-error: failed to push some refs to <span class="hljs-string">&#x27;git@github.com:ryuichiueda/robosys2022&#x27;</span>
+error: failed to push some refs to <span class="hljs-string">&#x27;git@github.com:ryuichiueda/robosys202x&#x27;</span>
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: <span class="hljs-string">&#x27;git pull ...&#x27;</span>) before pushing again.
