@@ -147,16 +147,17 @@ $$\newcommand{\V}[1]{\boldsymbol{#1}}$$
 
 ---
 
-## 2.5.3 共分散行列と誤差楕円
+## 共分散行列と誤差楕円（詳解2.5.3項）
 
 - 共分散行列は対角行列を回転行列で挟んだ形にできる
     - 左のガウス分布:
-        - $\Sigma = \begin{pmatrix} 100 & 25\sqrt{3} \\\\ 25\sqrt{3} & 50 \end{pmatrix} =         R_{\pi/6} \begin{pmatrix} 125 & 0 \\\\ 0 & 25 \end{pmatrix} R_{\pi/6}^{-1}$
+        - $\Sigma = \begin{pmatrix} 100 & 25\sqrt{3} \\ 25\sqrt{3} & 50 \end{pmatrix} =         R_{\pi/6} \begin{pmatrix} 125 & 0 \\ 0 & 25 \end{pmatrix} R_{\pi/6}^{-1}$
     - 右のガウス分布:
-        - $\Sigma = \begin{pmatrix} 100 & -25\sqrt{3} \\\\ -25\sqrt{3} & 50 \end{pmatrix} =         R_{-\pi/6} \begin{pmatrix} 125 & 0 \\\\ 0 & 25 \end{pmatrix} R_{-\pi/6}^{-1}$
-<img width="40%" src="./figs/2d_gausses.png" />
+        - $\Sigma = \begin{pmatrix} 100 & -25\sqrt{3} \\ -25\sqrt{3} & 50 \end{pmatrix} =         R_{-\pi/6} \begin{pmatrix} 125 & 0 \\ 0 & 25 \end{pmatrix} R_{-\pi/6}^{-1}$
     - 等高線は楕円を回転させたもの
     - <span style="color:red">長軸、短軸の長さ $\propto$ 固有値（= その方向の標準偏差）</span>
+
+![bg right:10%](./figs/2d_gausses.png)
 
 ---
 
