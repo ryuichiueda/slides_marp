@@ -327,96 +327,82 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 
 ---
 
-## <span style="text-transform:none">dev</span>ブランチでの開発
+## devブランチでの開発（その1）
 
-ついでにPythonの文法の勉強
+ついでにPythonの文法の勉強もします
 
-- やること1
-    - `plus_stdin`について，整数の入力を整数に変換するよう改良
-        - 注意: 改良じゃないかもしれません
-        - <span style="color:red">例外処理</span>をしてみましょう
-            - 失敗しそうな処理を<span style="color:red">`try`</span>で囲む
-            - 下に<span style="color:red">`except`</span>のブロックを作って例外処理
-
-<div style="font-size:80%">
-
-```python
-#!/usr/bin/python3
-import sys
-           　　 
-ans = 0   #もともと0.0だったのを0に変更
-for line in sys.stdin:
-    try: 
-        ans += int(line)   #intは文字列を整数に（失敗すると例外発生）
-    except:
-        ans += float(line)
-           　 
-print(ans)
-```
-
-</div>
+- `plus_stdin`について，整数の文字列は整数に変換するよう改良
+    - <span style="color:red">例外処理</span>をしてみましょう
+        - 失敗しそうな処理を<span style="color:red">`try`</span>で囲む
+        - 下に<span style="color:red">`except`</span>のブロックを作って例外処理
+            ```python
+            #!/usr/bin/python3
+            import sys
+                       　　 
+            ans = 0　 #もともと0.0だったのを0に変更
+            for line in sys.stdin:
+                try: 
+                    ans += int(line)   #intは文字列を整数に（失敗すると例外発生）
+                except:　
+                    ans += float(line)
+                       　 
+            print(ans)
+            ```
 
 ---
 
-## <span style="text-transform:none">dev</span>ブランチでの開発
+## devブランチでの開発（その2）
 
-- やること2
-    - 検証とコミット（とプッシュ）　　　　　　　　　　　　　
-        ```bash
-        ###動作確認###
-        $ seq 5 | ./plus_stdin 
-        15                        #整数として処理されていることを確認
-        $ seq 5 | sed 's/$/.1/' | ./plus_stdin 
-        15.5                      #小数も計算できることを確認
-        ###バグがないことを確認したらコミット###
-        $ git add -A              #-Aで変更を全部ステージングできる
-        $ git status              #ブランチと変更されたファイルを確認
-        ブランチ dev
-        コミット予定の変更点:
-          (use "git restore --staged <file>..." to unstage)
-        	modified:   plus_stdin
-        $ git commit -m "Support integer only calculation"
-        [dev f02a202] Support integer only calculation
-         1 file changed, 5 insertions(+), 2 deletions(-)
-        ###不要だけどGitHubにもプッシュしてみましょう###
-        $ git push --set-upstream origin dev   #origin: GitHubにあるリポジトリのこと
+- 検証とコミット（とプッシュ）　　　　　　　　　　　　　
+    ```bash
+    ###動作確認###
+    $ seq 5 | ./plus_stdin 
+    15                        #整数として処理されていることを確認
+    $ seq 5 | sed 's/$/.1/' | ./plus_stdin 
+    15.5                      #小数も計算できることを確認
+    ###バグがないことを確認したらコミット###
+    $ git add -A              #-Aで変更を全部ステージングできる
+    $ git status              #ブランチと変更されたファイルを確認
+    ブランチ dev
+    コミット予定の変更点:
+      (use "git restore --staged <file>..." to unstage)
+    	modified:   plus_stdin
+    $ git commit -m "Support integer calculation"
+    [dev f02a202] Support integer calculation
+     1 file changed, 5 insertions(+), 2 deletions(-)
+    ###不要だけどGitHubにもプッシュしてみましょう###
+    $ git push --set-upstream origin dev   #origin: GitHubにあるリポジトリのこと
 	（略）
-         - [new branch]      dev -> dev
-        Branch 'dev' set up to track remote branch 'dev' from 'origin'.
-        ```
+     - [new branch]      dev -> dev
+    Branch 'dev' set up to track remote branch 'dev' from 'origin'.
+    ```
 
 ---
 
 ## （寄り道）ブランチの観察
 
 - `git log --graph`で表示してみましょう
-    - 読み取れること
-        - 各コミットは直列な関係にある
-            - 最初のコミット->mainでのコマンド追加->devでの機能追加
-    - 読み方
-        - 各コミットには`f02a2023...`のような番号がついている
-            - <span style="color:red">コミットハッシュ値</span>
-        - ()の中にブランチ名
-            - `HEAD`: いまのディレクトリの内容を指す
+    ```
+    $ git log --graph  #下の出力は一部省略
+    - commit f02a20237590c9e4650f100928c6c2f969c111c3 (HEAD -> dev, origin/dev)
+    |     Support integer calculation
+    |
+    - commit fa8aab8a2ade8cd33823f488fbb1bbec6d981260 (origin/main, origin/HEAD, main)
+    |     Add a command
+    |
+    - commit 68d342fbb7a9b65e402d0b6f5a7763e56f248937
+          Initial commit
+    ```
+    - ポイント
+        - 各コミットには`f02a2023...`のような識別記号$\rightarrow$<span style="color:red">コミットハッシュ値</span>
+        - ()の中に情報
+            - `HEAD`: いまのディレクトリの内容
             - `origin/<ブランチ名>`: GitHubのリポジトリのブランチ
-                ```
-                $ git log --graph
-                - commit f02a20237590c9e4650f100928c6c2f969c111c3 (HEAD -> dev, origin/dev)
-                |（略）
-                |     Support integer only calculation
-                |
-                - commit fa8aab8a2ade8cd33823f488fbb1bbec6d981260 (origin/main, origin/HEAD, main)
-                |（略）
-                |     Add a command
-                |
-                - commit 68d342fbb7a9b65e402d0b6f5a7763e56f248937
-                （略）
-                      Initial commit
-                ```
+        - 右端の線：コミット同士の関係を表現
 
 ---
 
-## <span style="text-transform:none">dev</span>ブランチでの開発
+## devブランチでの開発
 
 - やること3: mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
     - まずmainブランチに戻って変更内容の確認
@@ -591,7 +577,7 @@ print(ans)
         $ git log 
         commit f02a20237590c9e4650f100928c6c2f969c111c3 (HEAD -> main, origin/main, origin/HEAD)
         （略）
-            Support integer only calculation
+            Support integer calculation
         　
         commit fa8aab8a2ade8cd33823f488fbb1bbec6d981260   #これの`plus_stdin`を取り出したい
         （略）
