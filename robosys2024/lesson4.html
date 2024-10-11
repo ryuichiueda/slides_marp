@@ -528,9 +528,9 @@ Branch <span class="hljs-string">&#x27;dev&#x27;</span> <span class="hljs-built_
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">
-<h2 id="dev%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA">devブランチでの開発</h2>
+<h2 id="dev%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%A7%E3%81%AE%E9%96%8B%E7%99%BA%E3%81%9D%E3%81%AE3">devブランチでの開発（その3）</h2>
 <ul>
-<li>やること3: mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
+<li>mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
 <ul>
 <li>まずmainブランチに戻って変更内容の確認<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git switch main        <span class="hljs-comment"># git checkout mainでも可</span>
 Switched to branch <span class="hljs-string">&#x27;main&#x27;</span>
@@ -539,23 +539,19 @@ $ git diff main dev
 （略．mainとdevのコードの違いが表示される）
 </code></pre>
 </li>
-<li>mainにdevの中身をマージ（併合）してGitHubに反映<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git merge dev
-Updating fa8aab8..f02a202
-Fast-forward
- plus_stdin | 7 +++++--
+<li>mainにdevの中身をマージ（併合）してGitHubに反映<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ git merge dev <span class="hljs-comment">#下の出力には省略あり</span>
  1 file changed, 5 insertions(+), 2 deletions(-)
 $ <span class="hljs-built_in">cat</span> plus_stdin 
-（略．例外処理の入ったコードが表示される．）
+（略．try...exceptの入ったコードが表示される）
 $ git push
-Total 0 (delta 0), reused 0 (delta 0)
 To github.com:ryuichiueda/robosys202x.git
    fa8aab8..f02a202  main -&gt; main
 </code></pre>
 </li>
 </ul>
 </li>
-<li>安全にmainブランチを更新できた</li>
 </ul>
+<center>安全にmainブランチを更新できた</center>
 <footer>ロボットシステム学第4回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="ロボットシステム学第4回" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:ロボットシステム学第4回;--paginate:true;" data-marpit-pagination-total="36">

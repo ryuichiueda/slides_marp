@@ -402,9 +402,9 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 
 ---
 
-## devブランチでの開発
+## devブランチでの開発（その3）
 
-- やること3: mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
+- mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
     - まずmainブランチに戻って変更内容の確認
         ```bash
         $ git switch main        # git checkout mainでも可
@@ -415,19 +415,15 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         ```
     - mainにdevの中身をマージ（併合）してGitHubに反映
         ```bash
-        $ git merge dev
-        Updating fa8aab8..f02a202
-        Fast-forward
-         plus_stdin | 7 +++++--
+        $ git merge dev #下の出力には省略あり
          1 file changed, 5 insertions(+), 2 deletions(-)
         $ cat plus_stdin 
-        （略．例外処理の入ったコードが表示される．）
+        （略．try...exceptの入ったコードが表示される）
         $ git push
-        Total 0 (delta 0), reused 0 (delta 0)
         To github.com:ryuichiueda/robosys202x.git
            fa8aab8..f02a202  main -> main
         ```
-- 安全にmainブランチを更新できた
+<center>安全にmainブランチを更新できた</center>
 
 ---
 
