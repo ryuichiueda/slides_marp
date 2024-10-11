@@ -178,19 +178,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## リポジトリの作成
 
-GitHubに1つ作ってみましょう
-
 - GitHubのサイトでの操作
-  - 右上のアカウントのアイコン横の"+"マークを押して，"New repository"を選択
+  - 右上のアカウントのアイコンを押して"Your repositories"を押す
+  - 右にある"New"を押す
   - 必要事項を記入
-    - 名前: robosys202x
+    - 名前: robosys202x（そのままrobosys202xと入れないように！）
     - Description: 説明を適当に
-    - Publicで
+    - Publicのままに
     - "Add a README file"にチェック
-    - ライセンスは別の回で追加します
+    - ライセンス: None（別の回で追加します）
   - "Create repository"ボタンを押す
-- ウェブ画面にリポジトリの画面
-  - `README.md`がひとつ存在したリポジトリができる
+
+$\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 
 ---
 
