@@ -479,7 +479,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 ## コンフリクトを起こす（その2）
 
 - リポジトリBで別の変更
-    - リポジトリAの存在を忘れて作業したという状況
+    - リポジトリAの存在を忘れて作業したという想定
         ```python
        （略）
         for line in sys.stdin:
@@ -498,7 +498,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         hint: See the 'Note about fast-forwards' in 'git push --help' for details.
         ```
 
-異なる内容はpushして混ぜることができない
+<center>異なる内容はpushして混ぜることができない</center>
 
 
 ---
