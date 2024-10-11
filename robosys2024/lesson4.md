@@ -500,35 +500,30 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 
 <center>異なる内容はpushして混ぜることができない</center>
 
-
 ---
 
 ## コンフリクトの解消（その1）
 
 - リポジトリBで`git pull`
     ```bash
-    $ git pull
-    Auto-merging plus_stdin
+    $ git pull #出力には省略あり
     CONFLICT (content): Merge conflict in plus_stdin
     Automatic merge failed; fix conflicts and then commit the result.
     ```
     - 「`CONFLICT`」と出るが`pull`は完了　　　　　　　　　　　
-        ```python
-	#!/usr/bin/python3
-        import sys
-        
-        <<<<<<< HEAD                #これがローカルの最新コミット内容
-        ans = 0
-        for line in sys.stdin:
-            line = line.rstrip()
-        =======                     #a493...までがリモートの最新内容
-        
-        def tonum(s):
-        >>>>>>> a4936f439aed64b3234d533c6e7a3abc7b5d744d
-            try:
-                return int(s)
-        ```
-        - （この例はかなり乱れているが）A, B両方の更新を反映
+        - `plus_stdin`の内容（A, B両方の更新が反映されるが矛盾も生じる）
+            ```python
+            （略）
+            <<<<<<< HEAD                #Bの内容
+            ans = 0
+            for line in sys.stdin:
+                line = line.rstrip()
+            =======                     #Aの内容
+            
+            def tonum(s):
+            >>>>>>> a4936f439aed64b3234d533c6e7a3abc7b5d744d
+            （以下略）
+            ```
 
 
 ---
@@ -539,15 +534,13 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
     ```python
     #!/usr/bin/python3
     import sys 
-    　
-    　
+    　                   #2行あけましょう
     def tonum(s):
         try:
             return int(s)
         except:
             return float(s)
-    　
-    
+    　                   #2行あけましょう
     ans = 0 
     for line in sys.stdin:
         line = line.rstrip()
