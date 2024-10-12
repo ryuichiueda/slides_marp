@@ -217,7 +217,7 @@ $= \eta e^{-\frac{1}{2} (\V{x}_3-\V{\mu}_1-\V{\mu}_2)^\top(\Sigma_1 +\Sigma_2)^{
     - 分布の中心は$\V{\mu}_1$と$\V{\mu}_2$の和
     - 共分散行列も$\Sigma_1$と$\Sigma_2$の和
 
-<span style="color:red">共分散行列の足し算で不確かさが計算できる</span>
+<center style="color:red">共分散行列の足し算で不確かさが計算できる</center>
 
 ---
 
