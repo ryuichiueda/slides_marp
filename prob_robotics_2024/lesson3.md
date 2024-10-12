@@ -20,8 +20,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 前回の復習
 
-- [演習問題1](https://b.ueda.tech/?page=robot_and_stats_questions#20240927_1)
-- [演習問題2](https://b.ueda.tech/?page=robot_and_stats_questions#20240927_2)
+- [演習問題1](https://b.ueda.tech/?page=robot_and_stats_questions#不偏分散の定義)
+- [演習問題2](https://b.ueda.tech/?page=robot_and_stats_questions#ガウス分布の式)
 
 ---
 
