@@ -15,6 +15,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </p>
 
 $$\newcommand{\V}[1]{\boldsymbol{#1}}$$
+$$\newcommand{\jump}[1]{[\![#1]\!]}$$
+$$\newcommand{\bigjump}[1]{\big[\!\!\big[#1\big]\!\!\big]}$$
+$$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
@@ -189,12 +192,12 @@ $$\newcommand{\V}[1]{\boldsymbol{#1}}$$
 
 ### 計算
 
-- 注意: 書籍と違う方法でやってみます　
 - $\V{x}_1, \V{x}_2$の分布を考える
     - $\V{x}_1 \sim \mathcal{N}_1(\V{x} | \V{\mu_1},\Sigma_1)$
     - $\V{x}_2 \sim \mathcal{N}_2(\V{x} | \V{\mu_2},\Sigma_2)$　
 - $\V{x}_3$の分布を次のように周辺化して求める
-    - $p(\V{x}_3) = \langle p(\V{x}_3| \V{x}_1)\rangle_{p(\V{x}_1)}$
+    - $p(\V{x}_3) = \jump{p(\V{x}_3| \V{x}_1)p(\V{x}_1)}_{\V{x}_1}$
+    　　　（$\jump{f}_x$は上田が勝手に作った$\int_{-\infty}^{\infty} f \text{d}x$の略記）
         - $p(\V{x}_1)$というのは$\mathcal{N}_1$のこと
         - $p(\V{x}_3 | \V{x}_1)$の値は$\mathcal{N}_2(\V{x}_3 - \V{x}_1 | \V{x}_1, \V{\mu}_2, \Sigma_2)$に等しい
             - <span style="color:red">$\because \V{x}_1$のときに$\V{x}_3$となるという事象は、$\V{x}_1$のときに$\V{x}_2 = \V{x}_3 - \V{x}_1$となる事象と同じ</span>
@@ -205,8 +208,7 @@ $\V{p}(\V{x}_3)$の式に$\mathcal{N}_1, \mathcal{N}_2$を代入（次ページ�
 
 ### 計算（続き）
 
-- ここからは書籍と同じ
-    - $p(\V{x}\_3) = \eta \bigjump{ e^{-\frac{1}{2} (\V{x}\_3-\V{x}\_1-\V{\mu}\_2)^\top\Sigma\_2^{-1}( \V{x}\_3-\V{x}\_1-\V{\mu}\_2  )}e^{-\frac{1}{2} (\V{x}\_1-\V{\mu}\_1)^\top\Sigma\_1^{-1}(\V{x}\_1-\V{\mu}\_1)} }\_{\V{x}\_1}$
+- $p(\V{x}_3) = \eta \int \left\{ e^{-\frac{1}{2} (\V{x}_3-\V{x}_1-\V{\mu}_2)^\top\Sigma_2^{-1}( \V{x}_3-\V{x}_1-\V{\mu}_2  )} e^{-\frac{1}{2} (\V{x}_1-\V{\mu}_1)^\top\Sigma_1^{-1}(\V{x}_1-\V{\mu}_1)}\right\} \text{d}\V{x}_1$
 $= \eta \bigjump{ e^{-\frac{1}{2} (\V{x}\_3-\V{x}\_1-\V{\mu}\_2)^\top\Sigma\_2^{-1}( \V{x}\_3-\V{x}\_1-\V{\mu}\_2  )-\frac{1}{2} (\V{x}\_1-\V{\mu}\_1)^\top\Sigma\_1^{-1}(\V{x}\_1-\V{\mu}\_1)} }\_{\V{x}\_1}$
 $= \cdots$（付録B.1.9の方法で$\V{x}_1$の積分が除去できる）
 $= \eta e^{-\frac{1}{2} (\V{x}\_3-\V{\mu}\_1-\V{\mu}\_2)^\top(\Sigma\_1 +\Sigma\_2)^{-1}( \V{x}\_3-\V{\mu}\_1-\V{\mu}\_2  )}$
