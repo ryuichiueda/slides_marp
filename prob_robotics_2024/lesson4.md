@@ -248,25 +248,27 @@ $= \eta e^{ -\frac{1}{2} (\V{x} - \V{\mu}_1)^\top \Sigma_1^{-1} (\V{x} - \V{\mu}
 - <span style="color:red">精度行列$\Lambda$</span>: 共分散行列$\Sigma$の逆行列
     - $\Lambda = \Sigma^{-1}$　
 - 前ページの分布を精度行列で表現
-    - $ p\_3(\V{x})= \eta e^{ -\frac{1}{2} (\V{x} - \V{\mu}\_3)^\top \Lambda\_3(\V{x} - \V{\mu}\_3)}$
+    - $p_3(\V{x})= \eta e^{ -\frac{1}{2} (\V{x} - \V{\mu}_3)^\top \Lambda_3(\V{x} - \V{\mu}_3)}$
        - <span style="color:red">$\Lambda_3 = \Lambda_1 + \Lambda_2$</span>
        - <span style="color:red">$\V{\mu}_3  = \Lambda_3^{-1}(\Lambda_1 \V{\mu}_1 + \Lambda_2 \V{\mu}_2) = (\Lambda_1 + \Lambda_2)^{-1}(\Lambda_1 \V{\mu}_1 + \Lambda_2 \V{\mu}_2)$</span>
            - 1次元の場合: $\mu_3 = \dfrac{\lambda_1^2}{\lambda_1^2 + \lambda_2^2}\mu_1 + \dfrac{\lambda_2^2}{\lambda_1^2 + \lambda_2^2}\mu_2$($\lambda^2_i = \sigma^{-2}_i$: 精度)
 
 
-<span style="color:red">精度行列の和で不確かさの減少が計算できる</span>
+<center>
+<span style="color:red">精度行列の和で不確かさの減少が計算できる</span><br />
 <span style="color:red;font-size:80%">中心は重みつき平均に（精度のよい分布の側に寄る）</span>
+</center>
 
 
 ---
 
-## 2.6 まとめ
+## まとめ
 
-- 2.4節までのまとめ: 前回、前々回のまとめの通り
-- このスライド（2.5節）のまとめ
-    - 多次元ガウス分布を扱った
-    - 共分散行列は分布の大きさや向きを表す
-    - ガウス分布にしたがう変数の和の分布、ガウス分布の積は再びガウス分布となる
-        - <span style="color:red">共分散行列（精度行列）、中心の計算は単純な足し算になる</span>
-        <span style="color:red">$\Longrightarrow$計算は複雑だがプログラムを書くと単純に</span>
+- 多次元ガウス分布を扱った
+- 共分散行列は分布の大きさや向きを表す
+- <span style="color:red">ガウス分布の再生性</span>
+    - ガウス分布にしたがう変数の和の分布はガウス分布に
+    - 正規化したガウス分布の積は再びガウス分布に
+        - <span style="color:red">分布の複雑な計算が共分散行列（精度行列）の単純な計算に</span>
+        <span style="color:red">$\Longrightarrow$プログラムを書くと単純に</span>
 
