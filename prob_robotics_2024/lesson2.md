@@ -158,7 +158,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
 - 今扱っているセンサ値の平均値: 209.7[mm]
     - 分かること: 200[mm]だと言っていたが1[cm]くらい違う
     （平均値がないとこういう議論は不可能）
-- [演習問題](https://b.ueda.tech/?page=robot_and_stats_questions#20240921_1)
+- [演習問題](https://b.ueda.tech/?page=robot_and_stats_questions#大量データの平均値)
 
 ---
 
@@ -174,7 +174,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
     - センサ値と単位が揃うので分散よりイメージがつきやすく便利
         - 「誤差はどれだけ？」と聞かれて答える値
     - 今扱っているセンサ値の標準偏差: 4.8[mm]<span style="font-size:70%">（つまり5[mm]ぐらいの誤差）</span>
-- [演習問題](https://b.ueda.tech/?page=robot_and_stats_questions#20240924_1)
+- [演習問題](https://b.ueda.tech/?page=robot_and_stats_questions#大量データのばらつき)
 
 ---
 
@@ -256,7 +256,7 @@ LiDARからの値（以後センサ値と呼ぶ）の<br />ばらつきを視認
          - 図: センサ値の$\mu$と$\sigma$から描いたガウス分布
              - ヒストグラムとよく似ている
          - 値が確率でないことに注意（次ページ）
-             - [練習問題](https://b.ueda.tech/?page=robot_and_stats_questions#20240924_2)
+             - [練習問題](https://b.ueda.tech/?page=robot_and_stats_questions#連続値と確率)
 
 ![bg right:30%](./figs/gauss_200.png)
 
