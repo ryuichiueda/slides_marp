@@ -23,6 +23,14 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 <!-- paginate: true -->
 
+## 前回のおさらい
+
+- [練習問題1](https://b.ueda.tech/?page=robot_and_stats_questions#同時確率と条件付き確率)
+
+
+
+---
+
 ## ベイズの定理（詳解2.4.5項）
 
 - 乗法定理: $p(z,t) = p(z|t)p(t) = p(t|z)p(z)$から導出
