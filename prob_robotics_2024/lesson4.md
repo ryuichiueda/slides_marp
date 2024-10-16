@@ -25,8 +25,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ## 前回のおさらい
 
-- [練習問題1](https://b.ueda.tech/?page=robot_and_stats_questions#同時確率と条件付き確率)
-- [練習問題2](https://b.ueda.tech/?page=robot_and_stats_questions#独立)
+- [練習問題1](https://b.ueda.tech/?page=robot_and_stats_questions#同時確率と条件付き確率)（同時確率と条件付き確率）
+- [練習問題2](https://b.ueda.tech/?page=robot_and_stats_questions#独立)（独立）
 
 
 
