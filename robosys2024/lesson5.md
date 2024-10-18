@@ -288,7 +288,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     ```python
     #!/usr/bin/python3
     # SPDX-FileCopyrightText: 2022 Ryuichi Ueda 　　　　　
-    # SPDX-License-Identifier: GPL-3.0-or-later
+    # SPDX-License-Identifier: GPL-3.0-only
     
     import sys
     ・・・
