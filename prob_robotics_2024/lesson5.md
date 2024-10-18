@@ -43,7 +43,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 想定するロボット（詳解3.1節）
 
 - 対向2輪型ロボット
-    - 車軸の両側に駆動輪がついており、軸の中心まわりに（つまりその場で）回転可能
+    - 車軸の両側に駆動輪がついており、軸の中心まわりに<br />（つまりその場で）旋回可能
     - 本書では平面上を動くことを仮定
         - 実際にはスロープを登り降りできるが、扱わない
 
@@ -56,35 +56,26 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 速度と角速度だけで表現できると仮定
     - トルクや加速度は無視
-
-<img width="70%" src="./figs/robot_vels.jpg" />
-
-これをシミュレータ上に再現
+        <img width="70%" src="./figs/robot_vels.jpg" />
+        - 図は詳解確率ロボティクスから転載
 
 ---
 
-## 3.2 ロボットの動き
-
----
-
-## 3.2.1 世界座標系と描画
+## 世界座標系と描画（詳解3.2.1, 3.2.2項）
 
 - ロボットの動き回る平面を準備
     - 図のように$X$軸、$Y$軸を設置
     - <span style="color:red">世界座標系</span>$\Sigma_\text{world}$と名付ける
-        - 複数の座標系の関係としてロボットの動きを考えることはロボット工学では極めて重要ですが、書籍では世界座標系しか出てきません。
+- ロボットが$\Sigma_\text{world}$でどのように存在しているか
+    - $(x \ y)^\top$: 位置、$\theta$: 向きで表せる
+    - 「<span style="color:red">姿勢</span>」と呼ぶ　
 
-<img width="30%" src="./figs/world.png" />
+![bg right:30%](./figs/world_coordinate_system.png)
 
 ---
 
 ## 3.2.2 ロボットの姿勢と描画
 
-- $\Sigma_\text{world}$の上にロボットを置く　
-- ロボットが$\Sigma_\text{world}$で
-どのように存在しているか
-    - $(x \ y)^\top$: 位置、$\theta$: 向きで表せる
-    - 「<span style="color:red">姿勢</span>」と呼ぶ　
 - 加速度を考えていないので、この3変数だけ考えると制御可能
     - 制御工学の用語で「<span style="color:red">状態</span>」とも呼べる　
 - ベクトル $\V{x} = (x \ y \ \theta)^\top$として表現
