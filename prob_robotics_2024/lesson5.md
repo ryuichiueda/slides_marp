@@ -24,24 +24,13 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 <!-- paginate: true -->
 
 
-千葉工業大学 上田 隆一
-
-
-
-<p style="font-size:50%">
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-</p>
-
----
-
 ### 練習問題
 
-https://b.ueda.tech/?page=robot_and_stats_answers#独立した変数の和の分散
+https://b.ueda.tech/?page=robot_and_stats_questions#独立した変数の和の分散
 
-https://b.ueda.tech/?page=robot_and_stats_answers#2つのサイコロの目の分散
+https://b.ueda.tech/?page=robot_and_stats_questions#2つのサイコロの目の分散
 
+---
 
 ### 本章の内容
 
