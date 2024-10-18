@@ -347,4 +347,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - コントリビューション（貢献）: 自分自身で作った「より良い」なにか
         - 自身のコントリビューションは何か，既存のものと区別して明記しないと0点になるので高難易度
 
-研究室で論文を書くときにも訓練します．
+<center>研究室で論文を書くときにも訓練します．</center>
