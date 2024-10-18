@@ -116,7 +116,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 作業: コードに著作権表示
 
-- SPDX file tags（次のページで説明）を使います
+- SPDXのタグ（次のページで説明）を使います
 - `plus_stdin`の冒頭に公開年と名前を表記
     ```python
     #!/usr/bin/python3
@@ -157,7 +157,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## そもそもなんでコードを<br/>公開しているのか？
+## そもそもなんでコードを公開しているのか？
 
 - 理由は人それぞれだがメリットは大きい
     - 使用者からのフィードバック
@@ -178,8 +178,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - ある逸話
     - プリンタドライバの作者が，自由に使ってもらうために著作権を放棄
     - プリンタ会社がそれを拾って著作権を主張
-
-これをやられると作者も使えなくなる
+        - これをやられると<span style="color:red">作者も使えなくなる</span>
+<br />
+<center>ちゃんと仕組みが必要</center>
 
 ---
 
@@ -207,21 +208,21 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     2. 著作者に権利を残す
     3. 利用を促進する仕組み
     4. 盗用，タダ乗りを防止
-        - ライセンスの違いは，4の厳しさの度合い
+        - ライセンスの違いは，ivの厳しさの度合い
 
 ---
 
-## 例1: GPL<span style="text-transform:none">（GNU General Public License）</span>
+## 例1: GPL（GNU General Public License）
 
 - 大雑把な説明
     - 「コピーレフト」の考え方をライセンスにしたもの
         - 著作物の自由な利用，改変，再配布を妨げない
-    - GPLで利用許諾を受けたコードやバイナリの再配布$\rightarrow$GPLを適用し，コードを公開する義務
+    - GPLで利用許諾を受けたコードやバイナリの再配布<br/>$\rightarrow$GPLを適用し，コードを公開する義務
         - そうしないと「自由な利用，改変，再配布」を妨げる　
 - どうなるか
     - ちょっとでもGPL適用のコードやバイナリが再配布物に存在<span style="color:red">$\rightarrow$全体もGPL</span>
         - GPLのものを利用して作ったものなので
-    - 「コードを使う側もコードを公開して社会貢献してください」というような意図
+    - 「コードを使う側もコードを公開して社会貢献してください」という意図
 
 ---
 
@@ -287,7 +288,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     ```python
     #!/usr/bin/python3
     # SPDX-FileCopyrightText: 2022 Ryuichi Ueda 　　　　　
-    # SPDX-License-Identifier: GPL-3.0
+    # SPDX-License-Identifier: GPL-3.0-or-later
     
     import sys
     ・・・
