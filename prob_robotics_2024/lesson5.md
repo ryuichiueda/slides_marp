@@ -185,13 +185,14 @@ $= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \b
 
 ---
 
-## 3.3.1 点ランドマークの設置
+## 点ランドマーク（詳解3.3.1）
 
 - 点ランドマーク
     - カメラで観測すると、方角と距離が計測できるもの
+    - 教科書で扱われる基本的なランドマーク
     - 下図: 点ランドマークとみなせる物体の例
 
-<img width="70%" src="./figs/landmarks.jpg" /> 
+<img width="65%" src="./figs/landmarks.jpg" /> 
 
 ---
 
