@@ -68,7 +68,10 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - <span style="color:red">世界座標系</span>$\Sigma_\text{world}$と名付ける
 - ロボットが$\Sigma_\text{world}$でどのように存在しているか
     - $(x \ y)^\top$: 位置、$\theta$: 向きで表せる
-    - 「<span style="color:red">姿勢</span>」と呼ぶ　
+    - ベクトル $\V{x} = (x \ y \ \theta)^\top$として表現
+    - $\V{x}$: 「<span style="color:red">姿勢</span>」と呼んだり「<span style="color:red">状態</span>」と呼んだり
+        - 姿勢: ロボット工学の用語
+        - 状態: 制御工学の用語
 
 ![bg right:30%](./figs/world_coordinate_system.png)
 
@@ -78,7 +81,6 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 加速度を考えていないので、この3変数だけ考えると制御可能
     - 制御工学の用語で「<span style="color:red">状態</span>」とも呼べる　
-- ベクトル $\V{x} = (x \ y \ \theta)^\top$として表現
 
 
 <img width="30%" src="./figs/robot_pose.png" />
