@@ -247,8 +247,7 @@ $= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \b
     - 距離計測: $0.5$〜$6$[m]
     - 方角計測: $-60$〜$60$[deg]
 
-<img width="30%" src="./figs/observation_nolimit.gif" />　　
-<img width="30%" src="./figs/simulator_no_noise.gif" /> 
+<img width="30%" src="./figs/observation_nolimit.gif" /><img width="30%" src="./figs/simulator_no_noise.gif" /> 
 
 ---
 
