@@ -109,20 +109,20 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 扱う問題: ある時刻にロボットが動いたとき、<br />次のステップにロボットの姿勢がどうなるか
     - $\V{x}_i$: 時刻が$t=i$のときの状態
 
-![](./figs/next_step.png)
+![bg right:26%](./figs/next_step.png)
 
 ---
 
 ### 制御指令
 
-- ロボットに与える速度、角速度をそれぞれ$\nu$[m/s]、$\omega$[rad/s]と表現
+- ロボットに与える速度、角速度をそれぞれ<br />$\nu$[m/s]、$\omega$[rad/s]と表現
     - まとめて$\V{u} = (\nu \ \omega)^\top$と表現
     - <span style="color:red">制御指令</span>と呼ぶ
         - 制御入力などとも呼ぶが、入力か出力か紛らわしいので
 
-<img width="30%" src="./figs/control_input.jpg" />
+![bg right:26%](./figs/control_input.png)
 
-世界座標系におけるロボットの動きは？
+<center style="font-size:150%">制御指令と状態の関係は？？</center>
 
 ---
 
