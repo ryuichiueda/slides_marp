@@ -196,7 +196,7 @@ $= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \b
 
 ---
 
-## シミュレータ中のランドマーク
+## 講義で扱う環境中でのランドマーク
 
 - 環境中に$N_\textbf{m}$個置く　
 - 記号の定義
@@ -206,7 +206,7 @@ $= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \b
     - ランドマークの集合を<span style="color:red">地図</span>と呼ぶ 
         - 地図: $\textbf{m} = \{ \text{m}_j | j = 0,1,2,\dots, N_\textbf{m} -1 \}$
 
-<img width="30%" src="./figs/landmarks.png" /> 
+![bg right:40%](./figs/landmarks.png)
 
 ---
 
