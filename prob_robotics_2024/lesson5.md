@@ -13,6 +13,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </p>
+<p style="font-size:50%">
+図の一部は詳解確率ロボティクスから転載しています。
+</p>
 
 $$\newcommand{\V}[1]{\boldsymbol{#1}}$$
 $$\newcommand{\jump}[1]{[\![#1]\!]}$$
@@ -100,7 +103,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - 1ms（ダイナミクスまで考えるロボット）
     - $\Delta t$ごとに、時刻に$t=0,1,2,\dots$と番号を付与　
 - 以後は離散時間でロボットの動きを考える
-    - 理由: ノイマン型の計算機で動くロボットは一定周期でしか計算できない
+    - 理由: コンピュータで制御すると一定周期ごとに制御指令を出すことに
 
 ---
 
@@ -132,10 +135,11 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - $\dot{x} = \nu \cos \theta$　　　　
     - $\dot{y} = \nu \sin \theta$
     - $\dot{\theta} = \omega$　　　
+        - ここで$\dot{a} = \dfrac{\text{d}a}{\text{d}t}$
 
-<img width="30%" src="./figs/robot_motion.jpg" />
+![bg right:30%](./figs/robot_motion.jpg)
 
-時刻$t-1$から$t$の間に制御指令$\V{u}\_t$で<br >姿勢は$\V{x}\_{t-1}$からどう変わるか（計算できます？）
+- 問題： 時刻$t-1$から$t$の間に制御指令$\V{u}_t$で<br >姿勢は$\V{x}_{t-1}$からどう変わるか（計算できます？）
 
 
 ---
@@ -145,9 +149,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 向き$\theta$の変化は単純
     - $\theta_{t} = \theta_{t-1} + \int_{0}^{\Delta t} \omega_t dt  = \theta_{t-1} + \omega_t \Delta t$　
 - 位置の変化の計算では時間$\Delta t$内での向きの変化を考慮しなければならない
-    - $\begin{pmatrix} x_t \\\\ y_t \end{pmatrix} = \begin{pmatrix} x_{t-1} \\\\ y_{t-1} \end{pmatrix} + \begin{pmatrix} \int_0^{\Delta t} \nu_t \cos ( \theta_{t-1} + \omega_t t ) dt\\\\ \int_0^{\Delta t} \nu_t \sin ( \theta_{t-1} + \omega_t t ) dt \end{pmatrix}$
+    - $\begin{pmatrix} x_t \\ y_t \end{pmatrix} = \begin{pmatrix} x_{t-1} \\ y_{t-1} \end{pmatrix} + \begin{pmatrix} \int_0^{\Delta t} \nu_t \cos ( \theta_{t-1} + \omega_t t ) dt\\ \int_0^{\Delta t} \nu_t \sin ( \theta_{t-1} + \omega_t t ) dt \end{pmatrix}$
 $= \cdots$
-$= \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \begin{pmatrix} \sin( \theta\_{t-1} + \omega\_t \Delta t ) - \sin\theta\_{t-1} \\\\ -\cos( \theta\_{t-1} + \omega\_t \Delta t ) + \cos\theta\_{t-1} \end{pmatrix}$
+$= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \begin{pmatrix} \sin( \theta\_{t-1} + \omega\_t \Delta t ) - \sin\theta\_{t-1} \\ -\cos( \theta\_{t-1} + \omega\_t \Delta t ) + \cos\theta\_{t-1} \end{pmatrix}$
          - $\omega_t = 0$の場合は別の式になるが極限をとると一致
 
 ---
@@ -155,14 +159,14 @@ $= \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} 
 ### 状態方程式
 
 - 前ページの計算結果のまとめ
-    - <span style="font-size:90%">$\begin{pmatrix} x_t \\\\ y_t \\\\ \theta_t \end{pmatrix} = \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \\\\ \theta\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \begin{pmatrix} \sin( \theta\_{t-1} + \omega\_t \Delta t ) - \sin\theta\_{t-1} \\\\ -\cos( \theta\_{t-1} + \omega\_t \Delta t ) + \cos\theta\_{t-1} \\\\ \omega_t \Delta t\end{pmatrix}$</span>　
+    - <span style="font-size:90%">$\begin{pmatrix} x_t \\ y_t \\ \theta_t \end{pmatrix} = \begin{pmatrix} x_{t-1}  \\ y_{t-1} \\ \theta_{t-1} \end{pmatrix} + \nu_t\omega_t^{-1} \begin{pmatrix} \sin( \theta_{t-1} + \omega_t \Delta t ) - \sin\theta_{t-1} \\ -\cos( \theta_{t-1} + \omega_t \Delta t ) + \cos\theta_{t-1} \\ \omega_t \Delta t\end{pmatrix}$</span>　
 - 面倒なので次のように書く
-    - $\V{x}\_t = \V{f}(\V{x}\_{t-1},\V{u}\_t) \qquad (t=1,2,3,\dots)$
-    - ロボットの動きはこれだけで表される（雑音がなければ）　
+    - $\V{x}_t = \V{f}(\V{x}_{t-1},\V{u}_t) \qquad (t=1,2,3,\dots)$
+        - ロボットの動きはこれだけで表される（雑音がなければ）　
 - 用語
     - 上の方程式: <span style="color:red">状態方程式</span>
     - 関数$\V{f}$: <span style="color:red">状態遷移関数</span>
-    - 状態が$\V{x}\_{t-1}$から$\V{x}_t$に変わること: <span style="color:red">状態遷移</span>
+    - 状態が$\V{x}_{t-1}$から$\V{x}_t$に変わること: <span style="color:red">状態遷移</span>
 
 ---
 
@@ -206,10 +210,10 @@ $= \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} 
 - 環境中に$N_\textbf{m}$個置く　
 - 記号の定義
     - 一つ一つにIDを付与し、$\text{m}_0, \text{m}_1, \text{m}_2, \dots$と表す
-        - 座標は$\V{m}\_j = (m\_{j,x} \ m\_{j,y})^T$
+        - 座標は$\V{m}_j = (m_{j,x} \ m_{j,y})^T$
             - 普通の字体とイタリック体を使い分けるので注意
     - ランドマークの集合を<span style="color:red">地図</span>と呼ぶ 
-        - 地図: $\textbf{m} = \\{ \text{m}_j | j = 0,1,2,\dots, N_\textbf{m} -1 \\}$
+        - 地図: $\textbf{m} = \{ \text{m}_j | j = 0,1,2,\dots, N_\textbf{m} -1 \}$
 
 <img width="30%" src="./figs/landmarks.png" /> 
 
@@ -222,7 +226,7 @@ $= \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} 
         - これらの値をセンサ値 $\V{z} = (\ell \ \varphi)^T$と呼ぶ
         - センサ座標系とロボット座標系は同じとする　
 - ランドマークの位置とセンサ値の関係
-    - $\ell\_j = |\V{m}\_j - \V{x}| = \sqrt{(m\_{j,x} - x)^2 + (m\_{j,y} - y)^2}$
+    - $\ell_j = |\V{m}_j - \V{x}| = \sqrt{(m_{j,x} - x)^2 + (m_{j,y} - y)^2}$
     - $\varphi_j = \text{atan2}(m_{j,y} - y, m_{j,x} - x) - \theta$
 
 <img width="35%" src="./figs/landmark_obs.jpg" /> 
@@ -233,10 +237,10 @@ $= \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} 
 ### 観測方程式
 
 - 前ページの計算結果のまとめ
-    - $\begin{pmatrix} \ell\_j \\\\  \varphi_j \end{pmatrix} = \begin{pmatrix} \sqrt{(m\_{j,x} - x)^2 + (m\_{j,y} - y)^2} \\\\ \text{atan2}(m_{j,y} - y, m_{j,x} - x) - \theta\end{pmatrix}$　
+    - $\begin{pmatrix} \ell_j \\  \varphi_j \end{pmatrix} = \begin{pmatrix} \sqrt{(m_{j,x} - x)^2 + (m_{j,y} - y)^2} \\ \text{atan2}(m_{j,y} - y, m_{j,x} - x) - \theta\end{pmatrix}$　
 - 面倒なので次のように書く
-    - $\V{z}\_j = \V{h}_j (\V{x})$
-    - $\V{z}\_j = \V{h}(\V{x}, \V{m}_j)$（ランドマークの位置を変数とする場合）
+    - $\V{z}_j = \V{h}_j (\V{x})$
+    - $\V{z}_j = \V{h}(\V{x}, \V{m}_j)$（ランドマークの位置を変数とする場合）
     - ロボットの観測はこれだけで表される（雑音がなければ）　
 - 用語
     - 上の方程式: <span style="color:red">観測方程式</span>
@@ -267,7 +271,7 @@ $= \begin{pmatrix} x\_{t-1}  \\\\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} 
 
 - 本章で実装した<span style="color:red">制御系</span>
     - 次の2つの式が全て
-        - 状態方程式: $\V{x}\_t = \V{f}(\V{x}\_{t-1},\V{u}\_t)$
+        - 状態方程式: $\V{x}_t = \V{f}(\V{x}_{t-1},\V{u}_t)$
         - 観測方程式: $\V{z}_{j,t} = \V{h}_j(\V{x}_t)$　
     - 非線形時不変離散時間系
         - 非線系: 行列の積と和で表現不可能
