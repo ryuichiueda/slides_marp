@@ -210,17 +210,17 @@ $= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \b
 
 ---
 
-## 3.3.2 点ランドマークの観測
+## 点ランドマークの観測（詳解3.3.2項）
 
 - シミュレータの設定
     - センサから見て距離$\ell$と方角$\varphi$が計測可能
         - これらの値をセンサ値 $\V{z} = (\ell \ \varphi)^T$と呼ぶ
-        - センサ座標系とロボット座標系は同じとする　
+        - センサ座標系とロボット座標系は同じと仮定
 - ランドマークの位置とセンサ値の関係
     - $\ell_j = |\V{m}_j - \V{x}| = \sqrt{(m_{j,x} - x)^2 + (m_{j,y} - y)^2}$
     - $\varphi_j = \text{atan2}(m_{j,y} - y, m_{j,x} - x) - \theta$
 
-<img width="35%" src="./figs/landmark_obs.jpg" /> 
+![bg right:28%](./figs/landmark_obs.jpg)
 
 
 ---
