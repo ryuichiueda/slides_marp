@@ -77,16 +77,6 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 3.2.2 ロボットの姿勢と描画
-
-- 加速度を考えていないので、この3変数だけ考えると制御可能
-    - 制御工学の用語で「<span style="color:red">状態</span>」とも呼べる　
-
-
-<img width="30%" src="./figs/robot_pose.png" />
-
----
-
 ### 状態と状態空間
 
 制御の話をするために用語を整理
@@ -95,21 +85,22 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - $\mathcal{X}$を<span style="color:red">状態空間</span>と呼ぶ
     - 要はロボットが行ける範囲　
 - 数式での表現
-    - <span style="font-size:90%">$\mathcal{X} = \\{ \V{x} = (x \ y \ \theta)^\top | x \in [x_\text{min},x_\text{max}] ,y \in [y_\text{min},y_\text{max}], \theta \in [-\pi, \pi) \\}$</span>
+    - <span style="font-size:90%">$\mathcal{X} = \{ \V{x} = (x \ y \ \theta)^\top | x \in [x_\text{min},x_\text{max}] ,y \in [y_\text{min},y_\text{max}], \theta \in [-\pi, \pi) \}$</span>
     - $\V{x} \in \mathcal{X}$
 
-簡単なうちに集合の表現をおさえておきましょう
+注意（重要）: 簡単なうちに集合の表現をおさえておきましょう
 
 ---
 
-## 3.2.3 アニメーションの導入
+## 時刻の扱い
 
-- 作業の話はスライドでは割愛　
 - 時刻を離散的に表現
     - 1ステップの時間を$\Delta t$とする
+        - 画像の更新周期33ms（ゆっくり動く移動ロボットなど）
+        - 1ms（ダイナミクスまで考えるロボット）
     - $\Delta t$ごとに、時刻に$t=0,1,2,\dots$と番号を付与　
 - 以後は離散時間でロボットの動きを考える
-    - ロボットは連続時間の中に存在しているが、基本的に周期的にしか計算ができないので
+    - 理由: ノイマン型の計算機で動くロボットは一定周期でしか計算できない
 
 ---
 
