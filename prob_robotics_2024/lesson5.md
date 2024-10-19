@@ -251,15 +251,9 @@ $= \begin{pmatrix} x\_{t-1}  \\ y\_{t-1} \end{pmatrix} + \nu\_t\omega\_t^{-1} \b
 
 ---
 
-## 3.4 コードの保存と再利用
+## まとめ
 
-作業なので省略
-
----
-
-## 3.5 まとめ
-
-- 本章で実装した<span style="color:red">制御系</span>
+- 今回定義した<span style="color:red">制御系</span>
     - 次の2つの式が全て
         - 状態方程式: $\V{x}_t = \V{f}(\V{x}_{t-1},\V{u}_t)$
         - 観測方程式: $\V{z}_{j,t} = \V{h}_j(\V{x}_t)$　
