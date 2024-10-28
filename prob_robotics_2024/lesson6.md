@@ -138,25 +138,25 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 4.2.2 移動速度へのバイアスの実装
+## 移動速度へのバイアスの実装の例（詳解4.2.2）
 
 - 次の二つの値を違うものとして扱う
     - モータへの制御指令値: $\boldsymbol{u}_t = (\nu_t \ \omega_t)^\top$
-    - 実際のロボットの速度: $\boldsymbol{u}_t^\* = (\nu_t^\* \  \omega_t^\*)^\top$　
-- $\boldsymbol{u}_t$と$\boldsymbol{u}_t^\*$の関係
-    - $(\nu_t^\* \  \omega_t^\*)^\top = (\delta_\nu \nu_t \ \delta_\omega\omega_t)^\top$
-    - $\delta_\nu, \delta_\omega$はシミュレーションの開始時に決めて、以後一定
-	$\rightarrow$<span style="color:red">系統誤差</span>となる
+    - 実際のロボットの速度: $\boldsymbol{u}_t^* = (\nu_t^* \  \omega_t^*)^\top$　
+        - ここで$(\nu_t^* \  \omega_t^*)^\top = (\delta_\nu \nu_t \ \delta_\omega\omega_t)^\top$
+        - $\delta_\nu, \delta_\omega$はシミュレーションの開始時に決めて、以後一定
+	      $\rightarrow$<span style="color:red">系統誤差</span>となる
+- 実際の例
 
 <iframe width="180" height="315" src="https://www.youtube.com/embed/wNm9dhWBqZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-### バイアスのシミュレーション
+### バイアスのシミュレーションの例
 
 - シミュレータでの$\delta_\nu, \delta_\omega$の決め方
     - いずれも平均値$0$、標準偏差$0.1$のガウス分布からドロー
-    - 右図: 灰色がバイアスなし、赤がバイアスあり　
+    - 右図: 灰色がバイアスなし、赤があり　
 - バイアスの存在
     - 推定に悪影響
         - 多くアルゴリズムは無視
@@ -164,7 +164,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - キャリブレーションで小さくすることは可能
     - 根絶は無理
 
-<img width="38%" src="./figs/motion_bias.gif" />
+![bg right:33% 100%](./figs/motion_bias.gif)
 
 ---
 
@@ -292,7 +292,7 @@ $$\boldsymbol{x}\_t \sim p(\boldsymbol{x}|\boldsymbol{x}\_{t-1}, \boldsymbol{u}\
             - 遠くに行くほど距離計測が不確か
         - $\varphi$は距離に関係なく一定の大きさの雑音を　
 - 数式
-    - $\ell\_t \sim \mathcal{N}\left[\ell | \ell^\*\_t, (\ell^\*\_t \sigma\_\ell)^2 \right]$ 
+    - $\ell\_t \sim \mathcal{N}\left[\ell | \ell^*\_t, (\ell^*\_t \sigma\_\ell)^2 \right]$ 
     - $\varphi_t \sim \mathcal{N}\left(\varphi | \varphi^*_t, \sigma_\varphi^2\right) $
         - $^*$付きの変数は真の値
         - $\sigma_\ell, \sigma_\varphi$はパラメータ
