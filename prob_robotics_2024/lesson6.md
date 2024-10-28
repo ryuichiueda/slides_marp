@@ -101,12 +101,14 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### 指数分布の利用
 
 - 指数分布って何？
-    - ランダムなイベントが次に起こるまでの期間がしたがう分布
+    - ランダムなイベントが次に起こるまでの時間などがしたがう分布
        - 例: 「ある川の堤防が10年以内に決壊する確率」など
-- 指数分布の式: $p(x | \lambda ) = \lambda e^{-\lambda x} \quad (x \ge 0)$を利用
-    - $x$: 小石を踏みつけるまでの道のり
-    - $\lambda$: 道のりあたりに踏みつける小石の数の期待値
-        - $1/\lambda$: 踏みつけるまでの道のりの期待値
+- 指数分布の式: $p(x | \lambda ) = \lambda e^{-\lambda x} \quad (x \ge 0)$
+    - $x$: イベントが起こるまでの時間
+    - $\lambda$: 一定時間に起こるイベントの数の期待値
+        - $1/\lambda$: イベントが一定時間に起こる数の期待値
+
+<center>一定区間内の石の数を石をふまない距離に変換できる</center>
 
 ---
 
@@ -118,6 +120,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 <center>
 <img width="35%" src="./figs/expon_lambda1.png" /><img width="35%" src="./figs/expon_lambda2.png" />
 </center>
+
+- 累積分布を書いてみましょう
+
 
 ---
 
