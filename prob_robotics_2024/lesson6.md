@@ -228,7 +228,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - 表記上、各時刻で$\boldsymbol{x}_t$が決まってしまうように見える$\rightarrow$不確かさの表現に限界
         - 「$\boldsymbol{\varepsilon}_t$」のイメージよりも大きい雑音が表現しずらい
 
-もっと一般化した表現が必要
+<br />
+<center>もっと一般化した表現が必要</center>
 
 ---
 
@@ -236,12 +237,14 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 
 - 状態遷移関数$\boldsymbol{f}$に雑音をつけたものを次の確率密度関数で置き換え
-$$p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$$
+    - $p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+        - <span style="color:red">状態遷移分布</span>と呼びましょう
+        （詳解確率ロボティクスでは「状態遷移モデル」と言っていますが）
 - 状態方程式に相当する式
-$$\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$$
+    - $\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+        - <span style="color:red">状態遷移モデル</span>と呼びましょう
 
 
-<span style="font-size:50%">（上の確率密度関数も下の式も）</span><span style="color:red">状態遷移モデル</span>と呼びましょう
 
 
 ---
