@@ -192,7 +192,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 4.2.4 誘拐の実装
+## 4.2.4 誘拐のモデル
 
 - 誘拐
     - 動いているロボットが人に強制移動させられる
@@ -201,19 +201,19 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - 誘拐のタイミング: 指数分布を利用
     - 誘拐後のロボットの姿勢$\boldsymbol{x}$: <span style="color:red">一様分布</span>を利用　
 - 一様分布
-    - $\mathcal{U}(\boldsymbol{x} | X) = \begin{cases} \eta^{-1} & (\boldsymbol{x} \in X)  \\\\ 0 & (\boldsymbol{x} \not\in X) \end{cases}$
+    - $\mathcal{U}(\boldsymbol{x} | X) = \begin{cases} \eta^{-1} & (\boldsymbol{x} \in X)  \\ 0 & (\boldsymbol{x} \not\in X) \end{cases}$
         - $\eta = \int_{X} 1 d\boldsymbol{x}'$（面積や体積）
         - $X$: ロボットの姿勢$\boldsymbol{x}$が存在する範囲（そして$X$内のどこか情報がない）
 
 ---
 
-### 誘拐のシミュレーション
+### 誘拐のシミュレーションの例
 
 - パラメータ
     - 誘拐が起こるまでの時間の期待値: 5[s]
     - 誘拐先の姿勢: $-5<x<5$[m], $-5<y<5$[m], $-\pi<\theta<\pi$
 
-<img width="35%" src="./figs/kidnap.gif" />
+![bg right:35% 100%](./figs/kidnap.gif)
 
 過去の情報を使う自己位置推定には致命的
 
