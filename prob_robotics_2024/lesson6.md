@@ -95,21 +95,27 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 「次に踏むまでの道のり」: どんな計算をすればよいか？
 
+
 ---
 
 ### 指数分布の利用
 
-- $p(x | \lambda ) = \lambda e^{-\lambda x} \quad (x \ge 0)$
+- 指数分布の式: $p(x | \lambda ) = \lambda e^{-\lambda x} \quad (x \ge 0)$を利用
     - $x$: 小石を踏みつけるまでの道のり
     - $\lambda$: 道のりあたりに踏みつける小石の数の期待値
         - $1/\lambda$: 踏みつけるまでの道のりの期待値
-- 下図のような確率密度関数
-    - 左: $\lambda = 1$
-    - 右: $\lambda = 2$
+- ランダムなイベントが次に起こるまでの期間がしたがう分布
+
+---
+
+### 指数分布の確率密度関数
+
+- 下図のような確率密度関数（左: $\lambda = 1$、右: $\lambda = 2$）
     - 右のほうが小石が多いので踏むまでの時間は短くなる
 
-<img width="35%" src="./figs/expon_lambda1.png" />
-<img width="35%" src="./figs/expon_lambda2.png" />
+<center>
+<img width="35%" src="./figs/expon_lambda1.png" /><img width="35%" src="./figs/expon_lambda2.png" />
+</center>
 
 ---
 
