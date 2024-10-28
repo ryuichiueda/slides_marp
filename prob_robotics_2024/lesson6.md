@@ -134,7 +134,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - $\theta_\text{before}$: 小石を踏む前のロボットの向き
     - $\sigma_\theta = \pi/60$（小石を踏むと標準偏差3[deg]で$\theta$がずれる）
 
-<img width="35%" src="./figs/motion_noise.gif" />
+<center><img width="30%" src="./figs/motion_noise.gif" /></center>
 
 ---
 
