@@ -126,7 +126,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-### 雑音のシミュレーション
+### 雑音のシミュレーションの例
 
 - 道のりの計算: $x \sim p(x | \lambda ) = \lambda e^{-\lambda x}$
     - $\lambda = 5$（200[mm]に1回小石を踏む）
