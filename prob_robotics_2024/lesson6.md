@@ -30,7 +30,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 状態方程式・観測方程式を実世界に近づける
     - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
-    - 観測方程式: $\boldsymbol{z}\_j = \boldsymbol{h}_j (\boldsymbol{x})$（$j$: ランドマークのID）
+    - 観測方程式: $\boldsymbol{z}_j = \boldsymbol{h}_j (\boldsymbol{x})$（$j$: ランドマークのID）
 - トラブルのない世界$=$未来が予測可能な世界
     - 確率ロボティクスは必要ない
     - そんな世界はない
@@ -219,14 +219,14 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 4.2.5 状態方程式と確率的な状態遷移モデル
+## 状態方程式と確率的な状態遷移モデル（詳解4.2.5）
 
 - 状態方程式の従来の形式（雑音つき）
-    - $\boldsymbol{x}\_t = \boldsymbol{f}(\boldsymbol{x}\_{t-1}, \boldsymbol{u}\_t) + \boldsymbol{\varepsilon}\_t$
-        - <span style="color:red">「本来あるべき状態遷移があって、それに雑音$\boldsymbol{\varepsilon}\_t$が加わる」</span>という表現
+    - $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_t$
+        - <span style="color:red">「本来あるべき状態遷移があって、それに雑音$\boldsymbol{\varepsilon}_t$が加わる」</span>という表現
     - 問題
         - 表記上、各時刻で$\boldsymbol{x}_t$が決まってしまうように見える$\rightarrow$不確かさの表現に限界
-        - 「$\boldsymbol{\varepsilon}\_t$」のイメージよりも大きい雑音が表現しずらい
+        - 「$\boldsymbol{\varepsilon}_t$」のイメージよりも大きい雑音が表現しずらい
 
 もっと一般化した表現が必要
 
@@ -238,7 +238,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 状態遷移関数$\boldsymbol{f}$に雑音をつけたものを次の確率密度関数で置き換え
 $$p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$$
 - 状態方程式に相当する式
-$$\boldsymbol{x}\_t \sim p(\boldsymbol{x}|\boldsymbol{x}\_{t-1}, \boldsymbol{u}\_t)$$
+$$\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$$
 
 
 <span style="font-size:50%">（上の確率密度関数も下の式も）</span><span style="color:red">状態遷移モデル</span>と呼びましょう
@@ -292,7 +292,7 @@ $$\boldsymbol{x}\_t \sim p(\boldsymbol{x}|\boldsymbol{x}\_{t-1}, \boldsymbol{u}\
             - 遠くに行くほど距離計測が不確か
         - $\varphi$は距離に関係なく一定の大きさの雑音を　
 - 数式
-    - $\ell\_t \sim \mathcal{N}\left[\ell | \ell^*\_t, (\ell^*\_t \sigma\_\ell)^2 \right]$ 
+    - $\ell_t \sim \mathcal{N}\left[\ell | \ell^*_t, (\ell^*_t \sigma_\ell)^2 \right]$ 
     - $\varphi_t \sim \mathcal{N}\left(\varphi | \varphi^*_t, \sigma_\varphi^2\right) $
         - $^*$付きの変数は真の値
         - $\sigma_\ell, \sigma_\varphi$はパラメータ
@@ -385,7 +385,7 @@ graph-based SLAMなどで厄介に（<span style="color:red">外れ値・アウ�
 ## 4.3.6 観測方程式と確率的な観測モデル
 
 - 観測方程式の従来の形式（雑音つき）
-    - $\boldsymbol{z}_t = \boldsymbol{h}_j (\boldsymbol{x}_t) + \boldsymbol{\varepsilon}\_j$
+    - $\boldsymbol{z}_t = \boldsymbol{h}_j (\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_j$
         - $j$はランドマークID
     - 問題: 状態方程式と状態遷移モデルのときと同じ　
 
@@ -395,11 +395,11 @@ graph-based SLAMなどで厄介に（<span style="color:red">外れ値・アウ�
 
 ### <span style="color:red">観測モデル</span>の導入
 
-- ランドマーク$j$を観測したときのモデル: $\boldsymbol{z}_t \sim p\_j (\boldsymbol{z} | \boldsymbol{x}_t)$
+- ランドマーク$j$を観測したときのモデル: $\boldsymbol{z}_t \sim p_j (\boldsymbol{z} | \boldsymbol{x}_t)$
 - すべてのセンサ値に関する観測モデル　: $\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t)$
     - $\textbf{z}$: センサ値のリスト　
 - 各ランドマークから得られるセンサ値が互いに独立なら
-$$\textbf{z}\_t \sim p (\textbf{z} | \boldsymbol{x}\_t) = \prod\_{j=0}^{N\_\textbf{m} -1} p\_j (\boldsymbol{z} | \boldsymbol{x}_t)$$
+$$\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t) = \prod_{j=0}^{N_\textbf{m} -1} p_j (\boldsymbol{z} | \boldsymbol{x}_t)$$
     - バイアスがあり、バイアスを考慮していない確率密度関数を用いるとこのようにはならないことに注意（次ページに補足）
 
 ---
@@ -409,9 +409,9 @@ $$\textbf{z}\_t \sim p (\textbf{z} | \boldsymbol{x}\_t) = \prod\_{j=0}^{N\_\text
 - 独立同分布（independent and identically distributed, iid）
     - 同じ確率分布からドローされた複数の値が、その確率分布以外の関連性を持たないこと
     - 多くのアルゴリズムは、データに独立同分布性を仮定
-    - 例: 同じランドマークから連続で得られたセンサ値$\boldsymbol{z}\_{j,t}$と$\boldsymbol{z}\_{j,t+1}$
-        - $\boldsymbol{z}\_{j,t+1}$は$\boldsymbol{z}\_{j,t}$の値に無関係
-        - そうでないと観測モデルが$\boldsymbol{z}\_{t+1} \sim p\_j (\boldsymbol{z} | \boldsymbol{x}\_t, \boldsymbol{z}\_{j,t})$になってしまう　
+    - 例: 同じランドマークから連続で得られたセンサ値$\boldsymbol{z}_{j,t}$と$\boldsymbol{z}_{j,t+1}$
+        - $\boldsymbol{z}_{j,t+1}$は$\boldsymbol{z}_{j,t}$の値に無関係
+        - そうでないと観測モデルが$\boldsymbol{z}_{t+1} \sim p_j (\boldsymbol{z} | \boldsymbol{x}_t, \boldsymbol{z}_{j,t})$になってしまう　
 - 実際には独立同分布にならない
     - アルゴリズムで利用する$p_j(\boldsymbol{z} | \boldsymbol{x})$でバイアスが考慮されない/できない
     - 状態遷移モデルも同じ
@@ -422,7 +422,7 @@ $$\textbf{z}\_t \sim p (\textbf{z} | \boldsymbol{x}\_t) = \prod\_{j=0}^{N\_\text
 
 - シミュレータを実装　
 - 実装したシステムや他の多くのシステムは次のふたつのモデルで表せる
-    - 状態遷移モデル: $\boldsymbol{x}\_t \sim p(\boldsymbol{x}|\boldsymbol{x}\_{t-1}, \boldsymbol{u}\_t)$
+    - 状態遷移モデル: $\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
     - 観測モデル　　: $\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t)$　
 - ただし
     - 従来の状態方程式、観測方程式も使う
