@@ -45,9 +45,11 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - とにかく様々なことが起こる
     - 小石への片輪の乗り上げ、走り出し、停止時の揺れ、縁石への乗り上げ、走行環境の傾斜、左右の車輪が同じように回らない、穴に車輪が嵌る、人が移動する、・・・
 
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Oz2wIDD02LY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 シミュレータへ実装しているときりがない
+</center>
 
 ---
 
@@ -56,8 +58,11 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - アクシデントは次の2軸で分類可能
     - どれだけ継続期間があるか
         - 例: 小石に車輪が乗り上げた（一瞬）$\leftrightarrow$縁石に乗り上げた（数秒）$\leftrightarrow$右車輪の空気が少ない（ずっと継続）
-    - どれだけ$\boldsymbol{x}$が動くか
+    - どれだけ$\boldsymbol{x}$がずれるか
         - 例: 小石に車輪が乗り上げた（小）$\leftrightarrow$人がロボットを移動（大）　
+
+---
+
 - これらの分類をカバーするように本書では次の4つを実装
     - 雑音: 突発的にロボットの向きを少し変化
     - バイアス: 制御指令値と実際の出力値を常に一定量ずらす
