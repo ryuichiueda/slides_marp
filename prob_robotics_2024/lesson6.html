@@ -382,43 +382,31 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer="確率ロボティクス第5回" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:確率ロボティクス第5回;--paginate:true;" data-marpit-pagination-total="31">
 <h3 id="%E7%8A%B6%E6%85%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%81%A8%E7%8A%B6%E6%85%8B%E9%81%B7%E7%A7%BB%E3%83%A2%E3%83%87%E3%83%AB">状態方程式と状態遷移モデル</h3>
 <ul>
-<li>同じことを表現しているがニュアンスが違う
-<ul>
-<li>場合に応じて使い分け
-<ul>
-<li>加法定理、乗法定理など確率の演算は状態遷移モデルで</li>
-<li>変数レベルの計算や実装などは状態方程式で</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>同じことを表現しているが、場合に応じて使い分け<br />
+- 加法定理、乗法定理など確率の演算は状態遷移モデルで<br />
+- 変数レベルの計算や実装などは状態方程式で</li>
 </ul>
 <img width="100%" src="./figs/fig4.2.jpg" />
 <footer>確率ロボティクス第5回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="確率ロボティクス第5回" data-paginate="true" lang="ja-JP" data-marpit-pagination="19" style="--footer:確率ロボティクス第5回;--paginate:true;" data-marpit-pagination-total="31">
-<h2 id="43-%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E8%A6%B3%E6%B8%AC%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E4%B8%8D%E7%A2%BA%E3%81%8B%E3%81%95%E3%81%AE%E8%A6%81%E5%9B%A0%E3%81%AE%E5%AE%9F%E8%A3%85">4.3 ロボットの観測に対する不確かさの要因の実装</h2>
+<h2 id="%E8%A6%B3%E6%B8%AC%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E4%B8%8D%E7%A2%BA%E3%81%8B%E3%81%95%E3%81%AE%E8%A6%81%E5%9B%A0%E8%A9%B3%E8%A7%A343%E7%AF%80">観測に関する不確かさの要因（詳解4.3節）</h2>
 <ul>
 <li>移動と同じくセンシングでも様々なことが起こる
 <ul>
-<li>2章参照（センサの問題、外的要因）</li>
+<li>詳解2章参照（センサの問題、外的要因）</li>
 </ul>
 </li>
-<li>シミュレーションの方針
+<li>センサ処理で実用上求められること
 <ul>
-<li>偶然誤差、系統誤差、過失誤差をバランスよく
+<li>偶然誤差、系統誤差、過失誤差をバランスよく考慮
 <ul>
-<li>過失誤差: 一般的には実験結果の記入間違いなどを指す
-<ul>
-<li>観測対象の取り違えなどで同様の誤差が発生</li>
+<li>ロボットでの過失誤差: 観測対象の取り違えなどで発生</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<p>次のスライドの5種類の誤差要因を実装</p>
 <footer>確率ロボティクス第5回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer="確率ロボティクス第5回" data-paginate="true" lang="ja-JP" data-marpit-pagination="20" style="--footer:確率ロボティクス第5回;--paginate:true;" data-marpit-pagination-total="31">
