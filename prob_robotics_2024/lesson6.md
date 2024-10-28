@@ -132,9 +132,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - $\lambda = 5$（200[mm]に1回小石を踏む）
 - $\theta$への雑音混入: $\theta \sim \mathcal{N}(\theta | \theta_\text{before}, \sigma_\theta)$
     - $\theta_\text{before}$: 小石を踏む前のロボットの向き
-    - $\sigma_\theta = \pi/60$（小石を踏むと標準偏差3[deg]で$\theta$がずれる）
+    - $\sigma_\theta = \pi/60$<br />（小石を踏むと標準偏差3[deg]で$\theta$がずれる）
 
-<center><img width="30%" src="./figs/motion_noise.gif" /></center>
+![bg right:30% 110%](./figs/motion_noise.gif)
 
 ---
 
