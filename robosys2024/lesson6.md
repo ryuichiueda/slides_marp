@@ -23,24 +23,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今日やること
 
-- シェル（bash）の変数
-- コマンドの終了ステータス
-- テストコマンド
-- 簡単なシェルスクリプト
-- シェルの関数
-- 初歩的なテスト
-
----
-
-## 0. シェルのおさらい
-
-- これまで説明してきた機能
+- シェルとシェルスクリプトの勉強
+- これまで説明してきたシェルの役割
     - ユーザーから文字を受け取ってコマンドを実行する
     - コマンドを見つける（`PATH`）
-- さらに<span style="color:red">プログラミング言語としての側面</span>もある
+- シェルにはさらに<span style="color:red">プログラミング言語としての側面</span>もある
     - コマンドを関数のように組み合わせて制御可能
+    - ファイルにコマンドを動かす手順を書ける（<span style="color:red">シェルスクリプト</span>）
 
-<center>今日はこの機能を使ってplus_stdinが正しいかどうかをテスト</center>
+<center>今日はシェルスクリプトを使ってplus_stdinが正しいかどうかをテスト</center>
 
 ---
 
