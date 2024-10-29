@@ -346,19 +346,19 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 4.3.3 ファントムの実装
+## ファントム（詳解4.3.3項）
 
 - ないはずのものが見える　
-- 実装方法
+- モデル化の例
     - ある一定の確率で、ランドマークの位置を偽の位置にすり替え
-        - 偽ランドマークの位置は一様分布からドロー
+        - 偽の位置: 一様分布からドロー
         - カメラの視界に合わない偽センサ値は除去
     - 図: 確率$0.5$ですり替え
-        - （視界に入らないと除去されるので少なく見える）
+        - （視界に入らないと除去されるので頻度はそれより低い）
 
-<img width="30%" src="./figs/phantom.gif" />
+![bg right:30% 100%](./figs/phantom.gif)
 
-graph-based SLAMなどで厄介に（<span style="color:red">外れ値・アウトライアー</span>）
+<center>graph-based SLAMなどで厄介に<br />（<span style="color:red">外れ値・アウトライアー</span>）</center>
 
 ---
 
