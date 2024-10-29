@@ -205,8 +205,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     #!/bin/bash
     　
     ng () {
-            echo ${1}行目が違うよ   #$1はngの1番目の引数
-            ret=1                   #最後に返す終了ステータスをセット
+            echo ${1}行目が違うよ
+            ret=1                   #追加
     }
     　
     ret=0
@@ -216,16 +216,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     　
     exit $ret     # このシェルスクリプトの終了ステータスを返して終了
     ```
-
- - `||`（OR記号）は左側のコマンドが異常終了したら右側を実行
+    - `||`（OR記号）: 左側のコマンドが異常終了したら右側を実行
 
 ---
->>>
 
 ### 実行結果
 
 ```bash
-$ ./yamada.bash
+$ ./test.bash
 10行目が違うよ
 $ echo $?
 1
