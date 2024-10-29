@@ -178,7 +178,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 基本的な関数の書き方: 名前のうしろに`()`をつけて，`{}`の中に処理を記述
 - 第`n`引数を`${n}`で受け取り
-    - 例: `ng`という関数を作り、呼び出してみる（ファイル名は`ng.bash`）
+    - 例: `ng`という関数を作り、呼び出してみる（ファイル名は`test.bash`）
     ```bash
     #!/bin/bash
     　
@@ -190,16 +190,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     ```
     - 実行
     ```bash
-    $ chmod +x ./ng.bash
+    $ chmod +x ./test.bash
     $ ./ng.bash
     123行目が違うよ
     ```
 
 --- 
 
-- シェルスクリプト中でコマンドのように利用
- - 例: `ng`という関数を作り，テストコマンドの失敗で呼び出し
- - `||`（OR記号）は左側のコマンドが異常終了したら右側を実行
+### コマンドと関数の連携
+
+- `[`が失敗したら`ng`を呼び出す
+    - 例（ファイル名: `test.bash`）
     ```bash
     #!/bin/bash
     　
@@ -215,8 +216,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     　
     exit $ret     # このシェルスクリプトの終了ステータスを返して終了
     ```
- - 実行結果は下に
 
+ - `||`（OR記号）は左側のコマンドが異常終了したら右側を実行
+
+---
 >>>
 
 ### 実行結果
