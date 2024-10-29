@@ -304,16 +304,15 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 4.3.1 センサ値に対する雑音の実装
+## センサ値に混入する雑音のモデルの例（詳解4.3.1項）
 
-- 実装方法
-    - 計測距離$\ell$と向き$\varphi$に、それぞれ独立したガウス分布状の雑音を付加
-        - $\ell$は真の距離に比例した大きさの標準偏差で
-            - 遠くに行くほど距離計測が不確か
-        - $\varphi$は距離に関係なく一定の大きさの雑音を　
+- 計測距離$\ell$と向き$\varphi$に、それぞれ独立したガウス分布状の雑音を付加
+    - $\ell$は真の距離に比例した大きさの標準偏差で
+        - 遠くに行くほど距離計測が不確か
+    - $\varphi$は距離に関係なく一定の大きさの雑音を　
 - 数式
     - $\ell_t \sim \mathcal{N}\left[\ell | \ell^*_t, (\ell^*_t \sigma_\ell)^2 \right]$ 
-    - $\varphi_t \sim \mathcal{N}\left(\varphi | \varphi^*_t, \sigma_\varphi^2\right) $
+    - $\varphi_t \sim \mathcal{N}\left(\varphi | \varphi^*_t, \sigma_\varphi^2\right)$
         - $^*$付きの変数は真の値
         - $\sigma_\ell, \sigma_\varphi$はパラメータ
 
