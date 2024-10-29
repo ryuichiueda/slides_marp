@@ -184,7 +184,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     　
     ng () {
             echo ${1}行目が違うよ  #$1はngの1番目の引数
-            ret=1                  #これはあとで使います
     }
     　
     ng 123
