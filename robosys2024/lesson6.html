@@ -44,13 +44,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <ul>
 <li><span style="color:red">終了ステータス</span>と呼ばれる整数値で伝達
 <ul>
-<li>シェルは<span style="color:red"><code>$?</code></span>という変数にコマンドの終了ステータスを記録</li>
+<li>シェルは<span style="color:red"><code>?</code></span>というパラメータにコマンドの終了ステータスを記録</li>
 </ul>
 </li>
 <li>例: <code>ls</code>の出力<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">ls</span> /etc/passwd   <span class="hljs-comment"># 存在するファイルをls</span>
 /etc/passwd
-$ <span class="hljs-built_in">echo</span> $?
-0                  <span class="hljs-comment"># $?という変数にゼロが入っている．</span>
+$ <span class="hljs-built_in">echo</span> $?          <span class="hljs-comment"># ?に$をつけると値に置き換わる</span>
+0                  <span class="hljs-comment"># ?の値はゼロ</span>
 $ <span class="hljs-built_in">ls</span> aaaaaaaa      <span class="hljs-comment"># 存在しないファイルをls</span>
 <span class="hljs-built_in">ls</span>: <span class="hljs-string">&#x27;aaaaaaaa&#x27;</span> にアクセスできません: そのようなファイルやディレクトリはありません
 $ <span class="hljs-built_in">echo</span> $?
@@ -80,7 +80,7 @@ $ <span class="hljs-built_in">echo</span> $?
 </code></pre>
 </li>
 </ul>
-<p>なんのために終了ステータスがあるか: あとで説明</p>
+<center>なんのために終了ステータスがあるか？→あとで説明</center>
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">

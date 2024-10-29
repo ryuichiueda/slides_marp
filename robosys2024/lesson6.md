@@ -41,13 +41,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - コマンドは人に対してだけでなく，シェルにエラーの有無を伝達
 - 方法 
     - <span style="color:red">終了ステータス</span>と呼ばれる整数値で伝達
-        - シェルは<span style="color:red">`$?`</span>という変数にコマンドの終了ステータスを記録
+        - シェルは<span style="color:red">`?`</span>というパラメータにコマンドの終了ステータスを記録
      - 例: `ls`の出力
         ```bash
         $ ls /etc/passwd   # 存在するファイルをls
         /etc/passwd
-        $ echo $?
-        0                  # $?という変数にゼロが入っている．
+        $ echo $?          # ?に$をつけると値に置き換わる
+        0                  # ?の値はゼロ
         $ ls aaaaaaaa      # 存在しないファイルをls
         ls: 'aaaaaaaa' にアクセスできません: そのようなファイルやディレクトリはありません
         $ echo $?
@@ -71,7 +71,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     1
     ```
 
-なんのために終了ステータスがあるか: あとで説明
+<center>なんのために終了ステータスがあるか？→あとで説明</center>
 
 ---
 
