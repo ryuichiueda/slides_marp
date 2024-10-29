@@ -365,36 +365,64 @@ $ <span class="hljs-built_in">echo</span> $?
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h3 id="%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AE%E7%A2%BA%E8%AA%8D">シェルスクリプトの挙動の確認</h3>
 <ul>
-<li><code>-x</code>や<code>-v</code>でシェルスクリプトの動作を観察可能<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash -xv        &lt;- シバンの後ろに-xvと書いて-xと-vをセット</span>
+<li><code>-x</code>や<code>-v</code>でシェルスクリプトの動作を観察可能（デバッグに便利）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash -xv        &lt;- シバンの後ろに-xvと書いて-xと-vをセット</span>
 （以下略）
 </code></pre>
+<ul>
+<li>動作確認<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">・・・省略・・・
+out=$(<span class="hljs-built_in">seq</span> 5 | ./plus)
+++ <span class="hljs-built_in">seq</span> 5
+++ ./plus
++ out=15
+[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = 15 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>
++ <span class="hljs-string">&#x27;[&#x27;</span> 15 = 15 <span class="hljs-string">&#x27;]&#x27;</span>
+
+[ <span class="hljs-string">&quot;<span class="hljs-variable">${res}</span>&quot;</span> = 0 ] &amp;&amp; <span class="hljs-built_in">echo</span> OK
++ <span class="hljs-string">&#x27;[&#x27;</span> 0 = 0 <span class="hljs-string">&#x27;]&#x27;</span>
++ <span class="hljs-built_in">echo</span> OK
+OK
+<span class="hljs-built_in">exit</span> <span class="hljs-variable">$res</span>
++ <span class="hljs-built_in">exit</span> 0
+</code></pre>
 </li>
-<li>動作確認</li>
+</ul>
+</li>
 </ul>
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h3 id="%E3%83%86%E3%82%B9%E3%83%88%E9%A0%85%E7%9B%AE%E3%81%AE%E8%BF%BD%E5%8A%A0">テスト項目の追加</h3>
 <ul>
-<li>不正な入力に対する挙動もテストするとよい</li>
-<li>入力が正しいような出力をしていないか</li>
-<li>特定の終了ステータスを返しているかどうか<br />
-<code>bash      #!/bin/bash -xv      （略）      ### I/O ###      out=$(seq 5 | ./plus)      [ &quot;${out}&quot; = 15 ] || ng ${LINENO}        　       ### STRANGE INPUT ###      out=$(echo あ | ./plus)      [ &quot;$?&quot; = 1 ]      || ng ${LINENO}      [ &quot;${out}&quot; = &quot;&quot; ] || ng ${LINENO}        　       out=$(echo | ./plus) #空文字      [ &quot;$?&quot; = 1 ]      || ng ${LINENO}      [ &quot;${out}&quot; = &quot;&quot; ] || ng ${LINENO}        　   [ &quot;$res&quot; = 0 ] &amp;&amp; echo OK      exit $res      </code></li>
-<li>注意: 終了ステータスはコマンドを実行したらすぐ確認（変わってしまうので．）</li>
+<li>誤動作を防ぐため、なるべく様々な状況をカバーしておく<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash -xv</span>
+（略）
+<span class="hljs-comment">### NORMAL INPUT ###</span>
+out=$(<span class="hljs-built_in">seq</span> 5 | ./plus)
+[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = 15 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>
+  　 
+<span class="hljs-comment">### STRANGE INPUT ###</span>
+out=$(<span class="hljs-built_in">echo</span> あ | ./plus)           <span class="hljs-comment">#計算できない値を入力してみる</span>
+[ <span class="hljs-string">&quot;$?&quot;</span> = 1 ]      || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span> <span class="hljs-comment">#終了ステータスが1なのを確認</span>
+[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = <span class="hljs-string">&quot;&quot;</span> ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span> <span class="hljs-comment">#この行と上の行は入れ替えるとダメです</span>
+  　                                      <span class="hljs-comment">#（↑なぜかは考えてみましょう）</span>
+out=$(<span class="hljs-built_in">echo</span> | ./plus)              <span class="hljs-comment">#なにも入力しない</span>
+[ <span class="hljs-string">&quot;$?&quot;</span> = 1 ]      || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span> <span class="hljs-comment">#これも異常終了する</span>
+[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = <span class="hljs-string">&quot;&quot;</span> ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>
+  　 
+[ <span class="hljs-string">&quot;<span class="hljs-variable">$res</span>&quot;</span> = 0 ] &amp;&amp; <span class="hljs-built_in">echo</span> OK
+<span class="hljs-built_in">exit</span> <span class="hljs-variable">$res</span>
+</code></pre>
+</li>
 </ul>
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h2 id="%E3%81%BE%E3%81%A8%E3%82%81%E3%83%BB%E5%BE%8C%E5%A7%8B%E6%9C%AB">まとめ・後始末</h2>
 <ul>
-<li>まとめ</li>
 <li>シェルスクリプトを記述</li>
 <li>終了ステータス，変数，テストコマンド，関数</li>
 <li>リグレッションテストの記述</li>
 <li>プログラムと一緒に少しずつ書いていく</li>
-<li>ROSのように標準入出力を使わないものについては第11回で</li>
-<li>後始末</li>
-<li><code>yamada.bash</code>は削除してpush</li>
+<li>ROSのように標準入出力を使わないもののテストについては第11回で</li>
 </ul>
 <footer>ロボットシステム学第6回</footer>
 </section>
