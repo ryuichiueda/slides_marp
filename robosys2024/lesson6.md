@@ -21,17 +21,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <!-- paginate: true -->
 
-## 今日やること
+## おさらいと今日やること
 
-- シェルとシェルスクリプトの勉強
-- これまで説明してきたシェルの役割
+- おさらい: これまで説明してきたシェルの役割
     - ユーザーから文字を受け取ってコマンドを実行する
     - コマンドを見つける（`PATH`）
-- シェルにはさらに<span style="color:red">プログラミング言語としての側面</span>もある
-    - コマンドを関数のように組み合わせて制御可能
-    - ファイルにコマンドを動かす手順を書ける（<span style="color:red">シェルスクリプト</span>）
-
-<center>今日はシェルスクリプトを使ってplus_stdinが正しいかどうかをテスト</center>
+- 今日やること: シェルの<span style="color:red">プログラミング言語としての側面</span>を学習
+    - コマンドを関数のように組み合わせて制御
+    - ファイルにコマンドを動かす手順（<span style="color:red">シェルスクリプト</span>）を書く
+    - シェルスクリプトを使ってplus_stdinが正しいかどうかをテスト
 
 ---
 
