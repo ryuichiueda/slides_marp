@@ -284,7 +284,7 @@ $ echo $?
 
 ```bash
  1 #!/bin/bash
- 2
+ 2           ### 省略しますが、ここに前回学んだ著作権やライセンスの設定を！！
  3 ng () {
  4         echo ${1}行目が違うよ
  5         res=1
@@ -295,66 +295,27 @@ $ echo $?
 10 out=$(seq 5 | ./plus)
 11 [ "${out}" = 15 ] || ng "$LINENO"
 12 　   　
-13 exit $res 
+13 [ "${res}" = 0 ] && echo OK #通ったのが（人間に）分かるように表示
+14 exit $res
 ```
-
-
-- 動作確認
-    ```bash
-    ### 実行権限をお忘れなく ###
-    $ ./test.bash 
-    $ echo $?
-    0
-    ```
-
----
-
- - 15を14に変えて`echo $?`で`1`と出ることも確認$\rightarrow$<span style="color:red">コミットを</span>
- - なんで判定に終了ステータスを使うのかは次回判明
-
----
-
-### さらなる改良
-
-
-- 改良点
- - 人間にも成否が分かるように/テスト項目を追加可能に
-- さきほど習得した関数を利用
- - 前回学んだ著作権やライセンスの設定も
-    ```bash
-    #!/bin/bash
-    # SPDX-FileCopyrightText: 2022 Ryuichi Ueda
-    # SPDX-License-Identifier: BSD-3-Clause
-    　
-    ng () {
-            echo NG at Line $1
-            res=1
-    }
-    　
-    res=0
-    　
-    ### I/O TEST ###
-    out=$(seq 5 | ./plus)
-    [ "${out}" = 14 ] || ng ${LINENO}
-    　
-    [ "$res" = 0 ] && echo OK        # &&（AND記号）は左側が成功すると右側を実行
-    exit $res
-    ```
+- `&&`（AND）: 左のコマンドの終了が正常なら右側を実行
 
 ---
 
 ### 動作確認
 
-- 失敗した行と終了ステータスを確認
-    ```bash
-    ./test.bash
-    NG at Line 12
-    $ echo $?
-    1
-    ```
- - 動作確認したらテストコマンドで比較する数を`15`に戻して動作確認
- - `OK`と出るか．終了ステータスは`0`か．
- - <span style="color:red">commit & push</span>
+```bash
+### 実行権限をお忘れなく ###
+$ ./test.bash 
+OK
+$ echo $?
+0
+```
+
+- `plus`などへの入力を変えるなどの方法で`echo $?`で`1`と出ることも確認
+- なんで判定に終了ステータスを使うのかは次回判明
+
+<center>動作確認が終わったら再度テストが通るように戻してGitHubにpush</center>
 
 ---
 
@@ -366,28 +327,6 @@ $ echo $?
     （以下略）
     ```
  - 動作確認
-        ```bash
-        $ ./test.bash 
-        （略）
-        res=0
-        + res=0
-       　 
-        ### I/O TEST ###
-        out=$(seq 5 | ./plus)
-        ++ seq 5
-        ++ ./plus
-        + out=15
-        [ "${out}" = 15 ] || ng ${LINENO}
-        + '[' 15 = 15 ']'
-       　 
-        [ "$res" = 0 ] && echo OK
-        + '[' 0 = 0 ']'
-        + echo OK
-        OK
-        exit $res
-        + exit 0
-        ```
-
 
 ---
 
