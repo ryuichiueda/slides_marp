@@ -23,8 +23,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="2" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h2 id="%E4%BB%8A%E6%97%A5%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">今日やること</h2>
 <ul>
-<li>コマンドの終了ステータス</li>
 <li>シェル（bash）の変数</li>
+<li>コマンドの終了ステータス</li>
 <li>テストコマンド</li>
 <li>簡単なシェルスクリプト</li>
 <li>シェルの関数</li>
@@ -33,10 +33,52 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
-<h2 id="1-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9">1. コマンドの終了ステータス</h2>
+<h2 id="1-%E3%82%B7%E3%82%A7%E3%83%AB%E3%81%AE%E5%A4%89%E6%95%B0">1. シェルの変数</h2>
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
+<h3 id="%E5%9F%BA%E6%9C%AC%E4%BA%8B%E9%A0%85">基本事項</h3>
+<ul>
+<li>シェルは，<code>変数名=文字列</code>で，文字を記憶<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### 例 ###</span>
+$ X=我々は宇宙人だ   <span class="hljs-comment"># 変数のセット</span>
+</code></pre>
+</li>
+<li><code>${変数名}</code>で値に置換<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### 例 ###</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">${X}</span>ぜ！      <span class="hljs-comment"># 変数を値に</span>
+我々は宇宙人だぜ！
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$X</span>            <span class="hljs-comment"># {}は省略できる（こともある）</span>
+我々は宇宙人だ
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;$X&#x27;</span> <span class="hljs-comment"># 値にしないときはシングルクォートで囲う（``と混同注意）</span>
+<span class="hljs-variable">$X</span>
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### {} が省略できない例 ###</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">${X}</span>Z
+我々は宇宙人だZ
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$XZ</span>
+                        <span class="hljs-comment">#変数「XZ」と解釈されるのでなにも出力されない</span>
+</code></pre>
+</li>
+</ul>
+<footer>ロボットシステム学第6回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
+<h3 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E5%87%BA%E5%8A%9B%E3%82%92%E5%A4%89%E6%95%B0%E3%81%AB">コマンドの出力を変数に</h3>
+<ul>
+<li><code>変数名=$(コマンド)</code></li>
+<li>通常は標準出力に出るコマンドの出力を文字列として変数に格納</li>
+<li>例: <code>ls</code>の出力を変数<code>A</code>に<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ A=$(<span class="hljs-built_in">ls</span>)
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$A</span>
+README.md plus_stdin  <span class="hljs-comment"># 注意: 出力は各自異なります．</span>
+</code></pre>
+</li>
+</ul>
+<footer>ロボットシステム学第6回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
+<h2 id="2-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9">2. コマンドの終了ステータス</h2>
+<footer>ロボットシステム学第6回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h3 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AB%E3%82%88%E3%82%8B%E6%AD%A3%E5%B8%B8%E7%B5%82%E4%BA%86%E3%83%BB%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%AE%E4%BC%9D%E9%81%94">コマンドによる正常終了・異常終了の伝達</h3>
 <ul>
 <li>コマンドは人に対してだけでなく，シェルにエラーの有無を伝達</li>
@@ -62,7 +104,7 @@ $ <span class="hljs-built_in">echo</span> $?
 </ul>
 <footer>ロボットシステム学第6回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h3 id="plus_stdin%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9"><code>plus_stdin</code>の終了ステータス</h3>
 <ul>
 <li>これまで書いてきた<code>plus_stdin</code>も終了ステータスをシェルに伝達
@@ -83,55 +125,18 @@ $ <span class="hljs-built_in">echo</span> $?
 <center>なんのために終了ステータスがあるか？→あとで説明</center>
 <footer>ロボットシステム学第6回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
-<h2 id="2-%E3%82%B7%E3%82%A7%E3%83%AB%E3%81%AE%E5%A4%89%E6%95%B0">2. シェルの変数</h2>
-<footer>ロボットシステム学第6回</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
-<h3 id="%E5%9F%BA%E6%9C%AC%E4%BA%8B%E9%A0%85">基本事項</h3>
-<ul>
-<li>シェルは，<code>変数名=文字列</code>で，文字を記憶</li>
-<li><code>${変数名}</code>で値に置換</li>
-<li>例:<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ X=我々は宇宙人だ   <span class="hljs-comment"># 変数のセット</span>
-$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">${X}</span>ぜ！      <span class="hljs-comment"># 変数を値に</span>
-我々は宇宙人だぜ！
-$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$X</span>            <span class="hljs-comment"># {}は省略できる（こともある）</span>
-我々は宇宙人だ
-$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;$X&#x27;</span> <span class="hljs-comment"># 値にしないときはシングルクォートで囲う（``と混同注意）</span>
-<span class="hljs-variable">$X</span>
-</code></pre>
-</li>
-<li><code>{}</code>が省略できない例:<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">${X}</span>Z
-我々は宇宙人だZ
-$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$XZ</span>
-                     <span class="hljs-comment">#変数「XZ」と解釈されるのでなにも出力されない</span>
-</code></pre>
-</li>
-</ul>
-<footer>ロボットシステム学第6回</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
-<h3 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AE%E5%87%BA%E5%8A%9B%E3%82%92%E5%A4%89%E6%95%B0%E3%81%AB">コマンドの出力を変数に</h3>
-<ul>
-<li><code>変数名=$(コマンド)</code></li>
-<li>通常は標準出力に出るコマンドの出力を文字列として変数に格納</li>
-<li>例: <code>ls</code>の出力を変数<code>A</code>に<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ A=$(<span class="hljs-built_in">ls</span>)
-$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$A</span>
-README.md plus_stdin  <span class="hljs-comment"># 注意: 出力は各自異なります．</span>
-</code></pre>
-</li>
-</ul>
-<footer>ロボットシステム学第6回</footer>
-</section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h2 id="3-%E3%83%86%E3%82%B9%E3%83%88%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">3. テストコマンド</h2>
 <ul>
-<li>以下のいずれかで，文字列を比較可能</li>
+<li>以下のいずれかで，文字列を比較可能
+<ul>
 <li>その1: <code>test 比較したい文字列 = 比較したい文字列</code></li>
 <li>その2: <code>[ 比較したい文字列 = 比較したい文字列 ]</code></li>
 <li>その3: <code>[[ 比較したい文字列 = 比較したい文字列 ]]</code></li>
 <li>例（その1〜3の違いには細かい話はありますが，　　ここでは「その2」だけ）<br />
-<code>bash          $ a=山田          $ [ &quot;$a&quot; = 上田 ]       # [ はコマンドなので，引数はくっつけないようにしましょう．          $ echo $?               #終了ステータスで確認          1          $ [ &quot;$a&quot; = 山田 ]          $ echo $?          0          </code></li>
+<code>bash      $ a=山田      $ [ &quot;$a&quot; = 上田 ]       # [ はコマンドなので，引数はくっつけないようにしましょう．      $ echo $?               #終了ステータスで確認      1      $ [ &quot;$a&quot; = 山田 ]      $ echo $?      0      </code></li>
+</ul>
+</li>
 </ul>
 <footer>ロボットシステム学第6回</footer>
 </section>
