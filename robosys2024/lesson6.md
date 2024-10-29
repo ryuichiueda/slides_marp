@@ -38,6 +38,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - ユーザーから文字を受け取ってコマンドを実行する
     - コマンドを見つける（`PATH`）
 - さらに<span style="color:red">プログラミング言語としての側面</span>もある
+    - コマンドを関数のように組み合わせて制御可能
+
+<center>今日はこの機能を使ってplus_stdinが正しいかどうかをテスト</center>
 
 ---
 
