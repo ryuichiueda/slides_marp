@@ -32,6 +32,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 0. シェルのおさらい
+
+- これまで説明してきた機能
+    - ユーザーから文字を受け取ってコマンドを実行する
+    - コマンドを見つける（`PATH`）
+- さらに<span style="color:red">プログラミング言語としての側面</span>もある
+
+---
+
 ## 1. シェルの変数
 
 ---
