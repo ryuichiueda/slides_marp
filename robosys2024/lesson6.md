@@ -206,15 +206,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     　
     ng () {
             echo ${1}行目が違うよ
-            ret=1                   #追加
+            res=1                   #追加
     }
     　
-    ret=0
+    res=0
     a=山田
     [ "$a" = 上田 ] || ng "$LINENO"  # LINENOは，この行の行番号の入る変数
     [ "$a" = 山田 ] || ng "$LINENO"  # ngに第一引数として$LINENOを付与
     　
-    exit $ret     # このシェルスクリプトの終了ステータスを返して終了
+    exit $res     # このシェルスクリプトの終了ステータスを返して終了
     ```
     - `||`（OR記号）: 左側のコマンドが異常終了したら右側を実行
 
@@ -272,58 +272,43 @@ $ echo $?
 
 ---
 
-### リグレッションテストの書き方
+### コマンドに対するリグレッションテストの記述
 
-- テストの流れ
-    1. テスト対象の関数やプログラム（コマンド）に何か入力
- - 今回は標準入力を使って`plus_stdin`をテスト
-    2. 出力を，あらかじめ期待していたものと比較
-    3. <span style="color:red">比較の結果違っていたら，異常終了</span>　
- - 異常終了 = 終了ステータス非ゼロ　
-- テストの道具
- - 一般には，使う言語のテスト機能やライブラリを利用
- - 今回はシェルスクリプトを利用
- - 理由: 
- - 簡単で，シェルスクリプトは他の用途にも応用可能
- - 終了ステータスを使う点で，他のものと本質的な違いがない
- - コマンドを記述した言語と無関係に，同じ方法で入出力をテスト可能
+- 準備
+    1. `plus_stdin`を`plus`に改名しておく$\rightarrow$<span style="color:red">コミットを</span>
+        - 注意: テストと無関係です．
+    1. さきほどの`test.bash`をリポジトリ直下（`plus`と同じところ）に置いてコミットしてGitHubにpush
+- 次のように`test.bash`を変更（次ページ）
 
 ---
 
-### 準備
+```bash
+ 1 #!/bin/bash
+ 2
+ 3 ng () {
+ 4         echo ${1}行目が違うよ
+ 5         res=1
+ 6 }　
+ 7
+ 8 res=0    
+ 9　
+10 out=$(seq 5 | ./plus)
+11 [ "${out}" = 15 ] || ng "$LINENO"
+12 　   　
+13 exit $res 
+```
 
-1. `plus_stdin`を`plus`に改名しておく$\rightarrow$<span style="color:red">コミットを</span>
- - 注意: テストと無関係です．
-2. 次のようなシェルスクリプトを書いて動作確認
- - `plus`と同じ場所に．名前は`test.bash`で．
-    ```bash
-    #!/bin/bash
-    　
-    seq 5 | ./plus
-    ```
- - 実行すると`15`と出力$\rightarrow$<span style="color:red">コミットを</span>
-3. とりあえずGitHubにpushしておく
- - <span style="color:red">こまめに！</span>
 
----
-
-### テストの記述
-
-- 出力を変数に格納
-- テストコマンドで正解と比較
-    ```bash
-    #!/bin/bash
-    　
-    out=$(seq 5 | ./plus)
-    　
-    [ "${out}" = 15 ]
-    ```
 - 動作確認
     ```bash
+    ### 実行権限をお忘れなく ###
     $ ./test.bash 
     $ echo $?
     0
     ```
+
+---
+
  - 15を14に変えて`echo $?`で`1`と出ることも確認$\rightarrow$<span style="color:red">コミットを</span>
  - なんで判定に終了ステータスを使うのかは次回判明
 

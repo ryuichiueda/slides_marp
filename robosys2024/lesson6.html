@@ -228,15 +228,15 @@ $ ./ng.bash
 　
 <span class="hljs-function"><span class="hljs-title">ng</span></span> () {
         <span class="hljs-built_in">echo</span> <span class="hljs-variable">${1}</span>行目が違うよ
-        ret=1                   <span class="hljs-comment">#追加</span>
+        res=1                   <span class="hljs-comment">#追加</span>
 }
 　
-ret=0
+res=0
 a=山田
 [ <span class="hljs-string">&quot;<span class="hljs-variable">$a</span>&quot;</span> = 上田 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>  <span class="hljs-comment"># LINENOは，この行の行番号の入る変数</span>
 [ <span class="hljs-string">&quot;<span class="hljs-variable">$a</span>&quot;</span> = 山田 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>  <span class="hljs-comment"># ngに第一引数として$LINENOを付与</span>
 　
-<span class="hljs-built_in">exit</span> <span class="hljs-variable">$ret</span>     <span class="hljs-comment"># このシェルスクリプトの終了ステータスを返して終了</span>
+<span class="hljs-built_in">exit</span> <span class="hljs-variable">$res</span>     <span class="hljs-comment"># このシェルスクリプトの終了ステータスを返して終了</span>
 </code></pre>
 <ul>
 <li><code>||</code>（OR記号）: 左側のコマンドが異常終了したら右側を実行</li>
@@ -310,70 +310,49 @@ $ <span class="hljs-built_in">echo</span> $?
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="19" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="26">
-<h3 id="%E3%83%AA%E3%82%B0%E3%83%AC%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9">リグレッションテストの書き方</h3>
+<h3 id="%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%AA%E3%82%B0%E3%83%AC%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%A8%98%E8%BF%B0">コマンドに対するリグレッションテストの記述</h3>
 <ul>
-<li>テストの流れ
+<li>準備
 <ol>
-<li>テスト対象の関数やプログラム（コマンド）に何か入力</li>
+<li><code>plus_stdin</code>を<code>plus</code>に改名しておく<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container><span style="color:red">コミットを</span>
+<ul>
+<li>注意: テストと無関係です．</li>
+</ul>
+</li>
+<li>さきほどの<code>test.bash</code>をリポジトリ直下（<code>plus</code>と同じところ）に置いてコミットしてGitHubにpush</li>
 </ol>
 </li>
-<li>今回は標準入力を使って<code>plus_stdin</code>をテスト<br />
-2. 出力を，あらかじめ期待していたものと比較<br />
-3. <span style="color:red">比較の結果違っていたら，異常終了</span></li>
-<li>異常終了 = 終了ステータス非ゼロ</li>
-<li>テストの道具</li>
-<li>一般には，使う言語のテスト機能やライブラリを利用</li>
-<li>今回はシェルスクリプトを利用</li>
-<li>理由:</li>
-<li>簡単で，シェルスクリプトは他の用途にも応用可能</li>
-<li>終了ステータスを使う点で，他のものと本質的な違いがない</li>
-<li>コマンドを記述した言語と無関係に，同じ方法で入出力をテスト可能</li>
+<li>次のように<code>test.bash</code>を変更（次ページ）</li>
 </ul>
 <footer>ロボットシステム学第6回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="20" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="26">
-<h3 id="%E6%BA%96%E5%82%99">準備</h3>
-<ol>
-<li><code>plus_stdin</code>を<code>plus</code>に改名しておく<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container><span style="color:red">コミットを</span></li>
-</ol>
-<ul>
-<li>注意: テストと無関係です．</li>
-</ul>
-<ol start="2">
-<li>次のようなシェルスクリプトを書いて動作確認</li>
-</ol>
-<ul>
-<li><code>plus</code>と同じ場所に．名前は<code>test.bash</code>で．<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash</span>
-　
-<span class="hljs-built_in">seq</span> 5 | ./plus
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"> 1 <span class="hljs-comment">#!/bin/bash</span>
+ 2
+ 3 <span class="hljs-function"><span class="hljs-title">ng</span></span> () {
+ 4         <span class="hljs-built_in">echo</span> <span class="hljs-variable">${1}</span>行目が違うよ
+ 5         res=1
+ 6 }　
+ 7
+ 8 res=0    
+ 9　
+10 out=$(<span class="hljs-built_in">seq</span> 5 | ./plus)
+11 [ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = 15 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>
+12 　   　
+13 <span class="hljs-built_in">exit</span> <span class="hljs-variable">$res</span> 
 </code></pre>
-</li>
-<li>実行すると<code>15</code>と出力<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container><span style="color:red">コミットを</span></li>
-</ul>
-<ol start="3">
-<li>とりあえずGitHubにpushしておく</li>
-</ol>
 <ul>
-<li><span style="color:red">こまめに！</span></li>
-</ul>
-<footer>ロボットシステム学第6回</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="26">
-<h3 id="%E3%83%86%E3%82%B9%E3%83%88%E3%81%AE%E8%A8%98%E8%BF%B0">テストの記述</h3>
-<ul>
-<li>出力を変数に格納</li>
-<li>テストコマンドで正解と比較<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash</span>
-　
-out=$(<span class="hljs-built_in">seq</span> 5 | ./plus)
-　
-[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = 15 ]
-</code></pre>
-</li>
-<li>動作確認<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ./test.bash 
+<li>動作確認<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### 実行権限をお忘れなく ###</span>
+$ ./test.bash 
 $ <span class="hljs-built_in">echo</span> $?
 0
 </code></pre>
 </li>
+</ul>
+<footer>ロボットシステム学第6回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="26">
+<ul>
 <li>15を14に変えて<code>echo $?</code>で<code>1</code>と出ることも確認<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container><span style="color:red">コミットを</span></li>
 <li>なんで判定に終了ステータスを使うのかは次回判明</li>
 </ul>
