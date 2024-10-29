@@ -286,6 +286,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - 「互いに独立していない」の例: $x_1$が大きい値だと$x_2$の値も大きい、など
         - <span style="color:red">ロボットに関しては成立しないことが多い</span>けど、研究として扱われないなら仮定として与えられることが多い
 - そういう名前の分布があるわけじゃありません（形容詞のように使います）
+- $x_1, x_2, \dots \overset{\text{i.i.d.}}{\sim} p$などと表記
+    - i.i.d.: **i**ndependent and **i**dentically **d**istributed
 
 ---
 
