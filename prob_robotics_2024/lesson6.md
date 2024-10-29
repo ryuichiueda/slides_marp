@@ -415,32 +415,19 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - ランドマーク$j$を観測したときのモデル: $\boldsymbol{z}_t \sim p_j (\boldsymbol{z} | \boldsymbol{x}_t)$
 - すべてのセンサ値に関する観測モデル　: $\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t)$
     - $\textbf{z}$: センサ値のリスト　
+    - $p$は<span style="color:red">観測分布</span>と呼びましょう
 - 各ランドマークから得られるセンサ値が互いに独立なら
-$$\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t) = \prod_{j=0}^{N_\textbf{m} -1} p_j (\boldsymbol{z} | \boldsymbol{x}_t)$$
-    - バイアスがあり、バイアスを考慮していない確率密度関数を用いるとこのようにはならないことに注意（次ページに補足）
+    - $\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t) = \prod_{j=0}^{N_\textbf{m} -1} p_j (\boldsymbol{z} | \boldsymbol{x}_t)$
+
+<conter>バイアスがある場合は「仮定」になるので注意</center>
 
 ---
 
-### 確率モデルに関する補足
+## まとめ
 
-- 独立同分布（independent and identically distributed, iid）
-    - 同じ確率分布からドローされた複数の値が、その確率分布以外の関連性を持たないこと
-    - 多くのアルゴリズムは、データに独立同分布性を仮定
-    - 例: 同じランドマークから連続で得られたセンサ値$\boldsymbol{z}_{j,t}$と$\boldsymbol{z}_{j,t+1}$
-        - $\boldsymbol{z}_{j,t+1}$は$\boldsymbol{z}_{j,t}$の値に無関係
-        - そうでないと観測モデルが$\boldsymbol{z}_{t+1} \sim p_j (\boldsymbol{z} | \boldsymbol{x}_t, \boldsymbol{z}_{j,t})$になってしまう　
-- 実際には独立同分布にならない
-    - アルゴリズムで利用する$p_j(\boldsymbol{z} | \boldsymbol{x})$でバイアスが考慮されない/できない
-    - 状態遷移モデルも同じ
-
----
-
-## 4.4 まとめ
-
-- シミュレータを実装　
-- 実装したシステムや他の多くのシステムは次のふたつのモデルで表せる
+- 移動ロボットにおける移動やセンシングに関する雑音や誤差を確認
+- モデルの導入
     - 状態遷移モデル: $\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
     - 観測モデル　　: $\textbf{z}_t \sim p (\textbf{z} | \boldsymbol{x}_t)$　
-- ただし
-    - 従来の状態方程式、観測方程式も使う
-    - アルゴリズム中で使うモデルと真のシステムには乖離があることに注意
+
+<center>次回以降、このモデルを前提にアルゴリズムを考えていく</center>
