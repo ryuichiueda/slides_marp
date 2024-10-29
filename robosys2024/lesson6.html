@@ -65,17 +65,21 @@ $ <span class="hljs-built_in">echo</span> $?
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="24">
 <h3 id="plus_stdin%E3%81%AE%E7%B5%82%E4%BA%86%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9"><code>plus_stdin</code>の終了ステータス</h3>
 <ul>
-<li>これまで書いてきた<code>plus_stdin</code>も終了ステータスをシェルに伝達</li>
-<li>Pythonが裏でやっているので，任せておいて問題ない<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"></code></pre>
+<li>これまで書いてきた<code>plus_stdin</code>も終了ステータスをシェルに伝達
+<ul>
+<li>Pythonが裏でやっているので，任せておいて問題ない</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">seq</span> 3 | ./plus_stdin    <span class="hljs-comment"># 正常な入力</span>
+6
+$ <span class="hljs-built_in">echo</span> $?
+0
+$ <span class="hljs-built_in">echo</span> あ | ./plus_stdin  <span class="hljs-comment"># ひらがなを入力してエラーを起こさせる</span>
+（エラーの表示．省略．）
+$ <span class="hljs-built_in">echo</span> $?
+1
+</code></pre>
 </li>
 </ul>
-<p>$ seq 3 | ./plus_stdin    # 正常な入力<br />
-6<br />
-$ echo <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="2.199ex" height="1.645ex" role="img" focusable="false" viewBox="0 -705 972 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="3F" d="M226 668Q190 668 162 656T124 632L114 621Q116 621 119 620T130 616T145 607T157 591T162 567Q162 544 147 529T109 514T71 528T55 566Q55 625 100 661T199 704Q201 704 210 704T224 705H228Q281 705 320 692T378 656T407 612T416 567Q416 503 361 462Q267 395 247 303Q242 279 242 241V224Q242 205 239 202T222 198T205 201T202 218V249Q204 320 220 371T255 445T292 491T315 537Q317 546 317 574V587Q317 604 315 615T304 640T277 661T226 668ZM162 61Q162 89 180 105T224 121Q247 119 264 104T281 61Q281 31 264 16T222 1Q197 1 180 16T162 61Z"></path></g><g data-mml-node="mn" transform="translate(472,0)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></svg></mjx-container> echo あ | ./plus_stdin  # ひらがなを入力してエラーを起こさせる<br />
-（エラーの表示．省略．）<br />
-$ echo $?<br />
-1<br />
-```</p>
 <p>なんのために終了ステータスがあるか: あとで説明</p>
 <footer>ロボットシステム学第6回</footer>
 </section>

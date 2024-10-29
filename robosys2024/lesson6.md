@@ -59,16 +59,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### `plus_stdin`の終了ステータス
 
 - これまで書いてきた`plus_stdin`も終了ステータスをシェルに伝達
- - Pythonが裏でやっているので，任せておいて問題ない
+    - Pythonが裏でやっているので，任せておいて問題ない
     ```bash
-$ seq 3 | ./plus_stdin    # 正常な入力
-6
-$ echo $?
-0
-$ echo あ | ./plus_stdin  # ひらがなを入力してエラーを起こさせる
-（エラーの表示．省略．）
-$ echo $?
-1
+    $ seq 3 | ./plus_stdin    # 正常な入力
+    6
+    $ echo $?
+    0
+    $ echo あ | ./plus_stdin  # ひらがなを入力してエラーを起こさせる
+    （エラーの表示．省略．）
+    $ echo $?
+    1
     ```
 
 なんのために終了ステータスがあるか: あとで説明
