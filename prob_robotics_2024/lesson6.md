@@ -2,7 +2,7 @@
 marp: true
 ---
 
-<!-- footer: 確率ロボティクス第5回 -->
+<!-- footer: 確率ロボティクス第6回 -->
 
 # 確率ロボティクス第6回: 不確かさのモデル化
 
@@ -25,6 +25,12 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ---
 
 <!-- paginate: true -->
+
+## 練習問題
+
+- [ガウス分布に従う2変数の和の分布](https://b.ueda.tech/?page=robot_and_stats_questions#ガウス分布に従う2変数の和の分布)
+
+---
 
 ## 今回やること（詳解4.1節）
 
