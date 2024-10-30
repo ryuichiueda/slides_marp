@@ -15,15 +15,22 @@ marp: true
 
 ## 自己紹介
 
-- 上田といいます
-- ロボットの研究してます
-- 長くなるので[続きはウェブで]()
+- 上田隆一という名前です
+- ロボットの研究者です
+- 長くなるので[続きはウェブで](https://ja.wikipedia.org/wiki/上田隆一)
 
 ---
 
 ## 宣伝
 
-本買って
+- 本買って
+- 左から順に
+    - Linuxの本
+    - ロボットの本（今日話する内容）
+    - ロボットで使う数学の本
+
+
+<img width="20%" src="shellgei160.jpg" />  <img width="20%" src="lnpr.jpg" />  <img width="20%" src="robot_stats.png" />
 
 ---
 
