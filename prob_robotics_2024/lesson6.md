@@ -29,6 +29,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 練習問題
 
 - [ガウス分布に従う2変数の和の分布](https://b.ueda.tech/?page=robot_and_stats_questions#ガウス分布に従う2変数の和の分布)
+- [ガウス分布の積](https://b.ueda.tech/?page=robot_and_stats_questions#ガウス分布の積)
 
 ---
 
