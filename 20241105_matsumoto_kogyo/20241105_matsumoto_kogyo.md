@@ -46,7 +46,7 @@ marp: true
     - 美味しいおやつ
     - 通路・扉
         - 扉は猫には開けられません
-- 猫はおやつまでたどり着けるだろうか？
+- 猫様はおやつまでたどり着けるだろうか？
 
 ![bg right:44% 100%](problem-0.png)
 
@@ -56,12 +56,17 @@ marp: true
 
 - だいたい扉の下に手を突っ込んでガリガリして諦める
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JmONWX1IWAk?si=kmL8VdtQict3X7Rn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## ここで質問
 
 - 人間なら簡単なのに猫には難しいのはなんで？
+- 逆に言うと、おやつのところまで行くには何が必要？
+    - 人間は何をしている？
 
 ---
 
+## 答え: たまにしかできない
 
 - 俯瞰が必要
 - 計画が必要
