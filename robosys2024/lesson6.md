@@ -191,7 +191,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 実行
     ```bash
     $ chmod +x ./test.bash
-    $ ./ng.bash
+    $ ./test.bash
     123行目が違うよ
     ```
 
