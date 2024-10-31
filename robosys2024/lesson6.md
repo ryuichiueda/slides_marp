@@ -154,7 +154,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 
 - テストコマンドの例をファイルに保存して実行してみましょう
- - 「`yamada.bash`」というファイルに，次のように記述
+ - 「`test.bash`」というファイルに，次のように記述
     ```bash
     #!/bin/bash
     　 
@@ -166,8 +166,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     ```
  - `chmod`してPythonのスクリプトと同様に実行
     ```bash
-    $ chmod +x yamada.bash
-    $ ./yamada.bash
+    $ chmod +x test.bash
+    $ ./test.bash
     1
     0
     ```
