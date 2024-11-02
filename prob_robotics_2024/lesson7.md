@@ -53,8 +53,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $\textbf{z}_{1:t}$というのは$\textbf{z}_1, \textbf{z}_2, \dots, \textbf{z}_t$の略記
         - ここでの添字は時刻
     - $\textbf{z}_t$には各ランドマークからのセンサ値（入っていないことも）　
-- $p(\V{x} | \V{x}_{t-1}, \V{u}_t)$: 状態遷移モデル
-- $p(\textbf{z} | \V{x})$: 観測モデル
+- $p(\V{x} | \V{x}_{t-1}, \V{u}_t)$: 状態遷移分布
+- $p(\textbf{z} | \V{x})$: 観測分布
 
 数式で考えるとこれしかない
 
