@@ -215,6 +215,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 ### GitHub上での表示
 
 <img src="./figs/readme_with_badge.png" width="70%" />
+（注意: 細かいところは前のページの記述と違いがあります。）
 
 
 ---
