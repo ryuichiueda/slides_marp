@@ -51,6 +51,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $\V{u}_{1:t}$というのは$\V{u}_1, \V{u}_2, \dots, \V{u}_t$の略記　
 - $\textbf{z}_{1:t}$: 各時刻のセンサ値のリスト
     - $\textbf{z}_{1:t}$というのは$\textbf{z}_1, \textbf{z}_2, \dots, \textbf{z}_t$の略記
+        - ここでの添字は時刻
     - $\textbf{z}_t$には各ランドマークからのセンサ値（入っていないことも）　
 - $p(\V{x} | \V{x}_{t-1}, \V{u}_t)$: 状態遷移モデル
 - $p(\textbf{z} | \V{x})$: 観測モデル
