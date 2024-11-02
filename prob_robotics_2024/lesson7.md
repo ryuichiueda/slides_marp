@@ -65,7 +65,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 計算すべきは姿勢ではなく<span style="color:red">姿勢の分布</span>
     - 姿勢だけ求めても、不確かさが表現できない　
 - 計算すべき分布: <span style="color:red">$p_t(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t})$</span>
-    - $\V{x}_t^*$: 真の姿勢
     - 自己位置推定問題: 初期姿勢と、これまでの制御出力、センサ値から分布を計算する問題
 
 ---
@@ -327,7 +326,6 @@ $\delta\_{\nu\nu}^2 : (\delta'\_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 - パーティクルの分布は信念分布の近似
 - 次のような確率計算が可能
     - $P(\V{x}\_t^* \in X ) = \int\_{\V{x} \in X} \hat{b}\_t(\V{x}) d\V{x} \approx \dfrac{1}{N} \sum\_{i=0}^{N-1} \delta(\V{x}\_t^{(i)} \in X)$
-        - $\V{x}\_t^*$: 真の姿勢
         - $X \subset \mathcal{X}$（状態空間$\mathcal{X}$の部分空間）
         - $\delta($事象$)$: 事象が正しければ1、違えば0を返す関数　
     - 式で書くとややこしいが、「ある領域$X$内にロボットの姿勢が含まれる確率は、その領域内にどれだけの割合のパーティクルが含まれるかで近似計算できる」ということ
