@@ -122,10 +122,9 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 
 - リポジトリのページに小さな記号
   - <span style="color:orange">$\bullet$</span>: 実行中、<span style="color:green">$\checkmark$</span>: テスト成功、<span style="color:red">$\times$</span>: テスト失敗
-<img src="./figs/github_actions_running.png" width="55%" />
-- 記号を左クリックすると小窓が出現
-  - 「Details」を押してみましょう。
-<img src="./figs/github_actions_ok.png" width="60%" />
+<img src="./figs/github_actions_running.png" width="65%" />
+- 記号を左クリックすると小窓が出現$\rightarrow$「Details」を押してみましょう。
+<img src="./figs/github_actions_ok.png" width="70%" />
 
 ---
 
