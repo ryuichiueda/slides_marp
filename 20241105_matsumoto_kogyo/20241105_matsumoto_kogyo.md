@@ -138,5 +138,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 頭の中の地図
+## 移動ロボットの話
 
