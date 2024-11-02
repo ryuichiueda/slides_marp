@@ -35,8 +35,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 向き: $\theta$
     - 姿勢・状態: $\V{x} = (x\ y \ \theta)^\top$　
     - 状態空間: $\mathcal{X}$
-    - $\V{u}$: 制御指令
-    - $\textbf{z}$: センサ情報
+    - $\V{u} = (\nu, \omega)$: 制御指令
+    - $\textbf{z} = \{ \V{z}_j | j=1,2,\dots, \}$: センサ情報
+        - ここでの$j$はランドマークのID
+
+![bg right:40% 100%](./figs/symbols_localization.png)
 
 ---
 
