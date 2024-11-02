@@ -71,7 +71,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 5.1.2 信念
+## 信念（詳解5.1.2項）
 
 - 「計算すべき分布」に特別に$b_t$と記号を与えましょう
     - $b_t(\V{x}) = p_t(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t})$
