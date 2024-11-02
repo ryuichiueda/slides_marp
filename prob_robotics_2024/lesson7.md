@@ -118,7 +118,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 $\qquad\qquad\qquad\hat{b}_t$を$b_{t-1}$からどう計算すればよいでしょう？
 
-<!--- $\hat{b}_t(\V{x}) = p(\V{x} = \V{x}_t^* | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$-->
+---
+
+### $\hat{b}_t$の導出
+
+- $\hat{b}_t = p(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
+$= \left\langle p(\V{x}, \V{x}' | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})\right\rangle_{b_{t-1}(\V{x}')}$
 
 ---
 
