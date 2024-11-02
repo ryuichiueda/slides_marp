@@ -123,7 +123,11 @@ $\qquad\qquad\qquad\hat{b}_t$を$b_{t-1}$からどう計算すればよいでし
 ### $\hat{b}_t$の導出
 
 - $\hat{b}_t = p(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
-$= \left\langle p(\V{x}, \V{x}' | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})\right\rangle_{b_{t-1}(\V{x}')}$
+$= \left\langle p(\V{x}, \V{x}_{t-1} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})\right\rangle_{\V{x}_{t-1}}$
+$= \left\langle p(\V{x} | \V{x}_{t-1}, \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{t-1} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})\right\rangle_{\V{x}_{t-1}}$
+$= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) p(\V{x}_{t-1} | \V{x}_0, \V{u}_{1:t-1}, \textbf{z}_{1:t-1})\right\rangle_{\V{x}_{t-1}}$
+$= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) b_{t-1}(\V{x}_{t-1})\right\rangle_{\V{x}_{t-1}}$
+$= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}_{t-1})}$
 
 ---
 
