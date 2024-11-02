@@ -126,6 +126,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 移動ロボットの話
+
+---
+
 - 複雑な道を目的地まで行くロボットをプログラムしたい。どうやって？
     - 前のページと同じで「地図」と「手順の算出（計画）」が必要
     - さらには猫や人間の目に相当する機能を実装しなければならない
@@ -135,8 +139,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 
 <center style="font-size:200%">とても大変・とても難しい</center>
-
----
-
-## 移動ロボットの話
 
