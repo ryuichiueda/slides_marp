@@ -93,7 +93,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 5.1.3 信念の演算
+## 信念の演算（5.1.3項）
 
 - 以下の手順を踏む
     - 初期の信念$b_0$を与える
