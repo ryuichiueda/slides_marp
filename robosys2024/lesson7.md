@@ -132,7 +132,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 
 - Detailsを押すと行われた処理のシェルの出力が閲覧可能
   - 「All test」をクリックすると`test.bash`のログ
-<img src="./figs/testlog.png" width="60%" />
+<img src="./figs/testlog.png" width="70%" />
 - 全項目の終了ステータスが0なら<span style="color:green">$\checkmark$</span>の表示
 
 ---
@@ -173,7 +173,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 
 ### READMEに書くこと
 
-- 全て書く必要はないが、ユーザが困らないように（[例](https://github.com/ryuichiueda/GlueLang)）
+- 全て書く必要はないが、ユーザが困らないように（[例](https://github.com/shellgei/rusty_bash)）
   - 何をするためのソフトか
   - 使い方
     - ダウンロード、インストール、起動する手順、簡単な使い方
