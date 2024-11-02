@@ -8,6 +8,11 @@ marp: true
 
 千葉工業大学 上田 隆一
 
+<p style="font-size:50%">
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+</p>
 
 ---
 
@@ -108,6 +113,14 @@ marp: true
 ## ・・・といいつつ最後の無駄話
 
 - 実は動物は「地図」を頭に持っている
+    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
+- 他，移動や環境の形状に反応する脳細胞
+
+
+
+<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
+
+![bg right:44% 100%](brain.png)
 
 
 ---
