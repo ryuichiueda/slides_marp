@@ -89,7 +89,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <img width="100%" src="figs/various_beliefs.jpg" />
 
-多様な判断が可能に（難しいが。12章で詳しく）
+多様な判断が可能に
 
 ---
 
