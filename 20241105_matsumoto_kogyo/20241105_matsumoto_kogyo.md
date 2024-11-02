@@ -8,6 +8,11 @@ marp: true
 
 千葉工業大学 上田 隆一
 
+<p style="font-size:50%">
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+</p>
 
 ---
 
@@ -81,17 +86,49 @@ marp: true
 
 ---
 
-## 問題を難しくすると人間にも難しい
+## 問題を難しくすると<br />人間にも難しい
 
-- 迷路だと大変
-    - 人間の限界
+- 複雑な迷路だと人間にも大変
 - 迷路でなく人生だと？
-    - 俯瞰できないから遊んでしまう（しかたない）
+    - 俯瞰できないから遊んでしまう
+    - 俯瞰している親や先生の言うことを素直に聞かない
+- 注意
+    - 息抜きは大事・聞きすぎも問題
+    - 親も先生も完全には俯瞰できてない
+
+![bg right:40% 90%](jinsei.png)
+
+---
+
+## 無駄話はこれまで
+
+- 今の話をふまえると自分で考えるロボットをどう作ればよいでしょう？どうしたらロボットが自分で仕事ができるようになる？
+    - 注意: 前のスライドは忘れましょう（ごめんなさい）
+    - 猫と人間の差で考えたけど，そもそも猫の部分（身体や脳など）も作らなければならない
+
+<center style="font-size:200%">いっしょに考えていきましょう</center>
+
+---
+
+## ・・・といいつつ最後の無駄話
+
+- 「地図」を頭に持っている動物がいる
+    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
+       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
+- 他，移動や環境の形状に反応する脳細胞が存在
+
+
+
+<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
+
+![bg right:44% 100%](brain.png)
 
 
 ---
 
-## 移動ロボットをどう作る？
+## 移動ロボットの話
+
+---
 
 - 複雑な道を目的地まで行くロボットをプログラムしたい。どうやって？
     - 前のページと同じで「地図」と「手順の算出（計画）」が必要
@@ -102,8 +139,4 @@ marp: true
 
 
 <center style="font-size:200%">とても大変・とても難しい</center>
-
----
-
-## 頭の中の地図
 
