@@ -35,7 +35,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### ソフトウェアのテスト
 
 - 前回体験
-  - 自分で使うソフトウェアならこれくらいで十分<br />　
+  - 自分で使うソフトウェアならこれくらいで十分　
 - 仕事や人の使うソフトウェアの場合は？
   - 様々な環境に対応する必要性
     - Pythonのバージョン
@@ -52,7 +52,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - そういうものが存在
   - [CircleCI](https://circleci.com/ja/)
   - [Travis CI](https://www.travis-ci.com/)
-  - ・・・<br />　
+  - ・・・　
 - 基本的な動作
   1. GitHub等にpushされたコードをテスト
     - GitHub等のページに結果が表示されるように手配
@@ -68,10 +68,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 抜け目のないテストにより
   - デバッグやリリースの際の手間の削減が可能
   - 「動いているシステムは怖くていじれない」からの脱却
-    - 「継続的インテグレーション（CI）」「継続的デリバリー（CD）」<br />「継続的デプロイ」
-    - CircleCIやTravis CIのサービス（<span style="color:red">CI/CDサービス</span>）のテスト機能: CIやCDを実現するためのもの<br />　
+    - 「継続的インテグレーション（CI）」「継続的デリバリー（CD）」「継続的デプロイ」
+    - CircleCIやTravis CIのサービス（<span style="color:red">CI/CDサービス</span>）のテスト機能: CIやCDを実現するためのもの　
 - <span style="color:red">「自動」でテストできることがキモ</span>
-  - 自動化の仕組み: テストの終了ステータスが0<br />$\rightarrow$自動化のプログラムを起動
+  - 自動化の仕組み: テストの終了ステータスが0$\rightarrow$自動化のプログラムを起動
 
 ---
 
@@ -121,10 +121,10 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 ### push$\rightarrow$ワークフローの自動実行
 
 - リポジトリのページに小さな記号
-  - <span style="color:orange">$\bullet$</span>: 実行中、<span style="color:green">$\checkmark$</span>: テスト成功、<span style="color:red">$\times$</span>: テスト失敗<br />
+  - <span style="color:orange">$\bullet$</span>: 実行中、<span style="color:green">$\checkmark$</span>: テスト成功、<span style="color:red">$\times$</span>: テスト失敗
 <img src="./figs/github_actions_running.png" width="55%" />
 - 記号を左クリックすると小窓が出現
-  - 「Details」を押してみましょう。<br />
+  - 「Details」を押してみましょう。
 <img src="./figs/github_actions_ok.png" width="60%" />
 
 ---
@@ -166,7 +166,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
   ロボットシステム学の練習リポジトリ
   ```
     - Markdownという形式で記述
-  - GitHubだとこのように表示される<br /><img src="./figs/readme_md.png" width="70%" />
+  - GitHubだとこのように表示される<img src="./figs/readme_md.png" width="70%" />
     - 今のところ不親切
 
 
@@ -226,7 +226,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
   - pushしたときに自動でテスト$\rightarrow$結果を表示
     - ユーザに状況を伝達
   - 終了ステータスを利用
-    - 最新のサービスでも基本的な仕組みに依存<br />　
+    - 最新のサービスでも基本的な仕組みに依存　
 - READMEの整備
   - リポジトリのソフトを安心して広く使ってもらうために必須
-  - ある程度フォーマットは決まっているものの、<br />ユーザへの気配り重視で記述しましょう。
+  - ある程度フォーマットは決まっているものの、ユーザへの気配り重視で記述しましょう。
