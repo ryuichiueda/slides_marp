@@ -202,10 +202,10 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
   
   ## 必要なソフトウェア
   - Python
-    - テスト済み: 3.7〜3.10
+    - テスト済みバージョン: 3.7〜3.10
 
   ## テスト環境
-  - Ubuntu
+  - Ubuntu 24.04 LTS
 
   © 2022 Ryuichi Ueda
   ```
