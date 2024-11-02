@@ -60,11 +60,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 計算すべき確率分布
+### 計算すべきもの
 
 - 計算すべきは姿勢ではなく<span style="color:red">姿勢の分布</span>
     - 姿勢だけ求めても、不確かさが表現できない　
-- 計算すべき分布: <span style="color:red">$p_t(\V{x} | \V{x}_0, \V{u}_\{1:t\}, \textbf{z}_\{1:t\})$</span>
+- 計算すべき分布: <span style="color:red">$p_t(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t})$</span>
     - $\V{x}_t^*$: 真の姿勢
     - 自己位置推定問題: 初期姿勢と、これまでの制御出力、センサ値から分布を計算する問題
 
@@ -73,7 +73,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 5.1.2 信念
 
 - 「計算すべき分布」に特別に$b_t$と記号を与えましょう
-    - $b_t(\V{x}) = p_t(\V{x} | \V{x}_0, \V{u}_\{1:t\}, \textbf{z}_\{1:t\})$
+    - $b_t(\V{x}) = p_t(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t})$
         - $XY\theta$空間中の確率分布（下図(a)）
         - ロボットは(b)の世界が見えない。頭の中の(a)だけ
 <img width="70%" src="figs/belief.jpg" />
@@ -107,7 +107,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ロボットが移動したときの演算
 
-- $b_\{t-1\}$に新たに$\V{u}_t$の情報が加わる
+- $b_{t-1}$に新たに$\V{u}_t$の情報が加わる
     - $b_{t-1}(\V{x}) \rightarrow b_{t-1}(\V{x}|\V{u}_t)$　
 - $\hat{b}\_t = b_{t-1}(\V{x}|\V{u}_t)$としましょう
     - $b_t$との違い: $\textbf{z}_t$の情報がまだない
@@ -115,7 +115,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 
-<!--- $\hat{b}_t(\V{x}) = p(\V{x} = \V{x}_t^* | \V{x}_0, \V{u}_\{1:t\}, \textbf{z}_\{1:t-1\})$-->
+<!--- $\hat{b}_t(\V{x}) = p(\V{x} = \V{x}_t^* | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$-->
 
 ---
 
@@ -137,7 +137,7 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
     - $\hat{b}\_t(\V{x}) = \int\_{\V{x}' \in \mathcal{X}} p(\V{x} | \V{x}', \V{u}\_t) b\_{t-1}(\V{x}')  d\V{x}'$
         - $\boldsymbol{x}'$を状態遷移モデルで動かして密度を積分
 - 次のようにも書ける
-    - $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_\{b_\{t-1\}(\V{x}')\}$ 
+    - $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
         - $b_{t-1}$のときに状態遷移モデルから得られる次状態の密度の期待値を$\boldsymbol{x}'$で計算すると$\hat{b}_t(\boldsymbol{x})$になる　
 - 式の名前
     - 筆者は「マルコフ連鎖の式」、「状態遷移の式」などと呼称
@@ -174,7 +174,7 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 ### ベイズフィルタ
 
 - 次の2つの式で$b_0$を$b_1, b_2, \dots$と更新していける
-    - 移動時: $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_\{b_\{t-1\}(\V{x}')\}$ 
+    - 移動時: $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
     - 観測時: $b\_t(\V{x}) = \eta p(\textbf{z}\_t | \V{x}) \hat{b}\_t(\V{x})$
      $\Longrightarrow$この手続きは「ベイズフィルタ」と呼ばれる
 
@@ -337,7 +337,7 @@ $\delta\_{\nu\nu}^2 : (\delta'\_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 
 ### ベイズフィルタとの関係
 
-- ベイズフィルタの移動時の式: $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_\{b_\{t-1\}(\V{x}')\}$　
+- ベイズフィルタの移動時の式: $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$　
 - パーティクルフィルタとベイズフィルタの対応
     - 移動前のパーティクル: $\V{x}^{(i)}\_{t-1} \sim b\_{t-1}$
     - 移動後のパーティクル: $\V{x}^{(i)}\_t \sim p(\V{x} | \V{x}^{(i)}\_{t-1}, \V{u}_t)$
