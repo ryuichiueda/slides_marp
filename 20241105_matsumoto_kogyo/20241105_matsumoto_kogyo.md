@@ -52,17 +52,20 @@ marp: true
 
 ---
 
-## 答え: たまにしかできない
+## 答え: できない
 
-- だいたい扉の下に手を突っ込んでガリガリして諦める
+- 扉の下に手を突っ込んでガリガリして諦める
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JmONWX1IWAk?si=kmL8VdtQict3X7Rn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 
 ## ここで質問
 
 - 人間なら簡単なのに猫には難しいのはなんで？
 - 逆に言うと、おやつのところまで行くには何が必要？
     - 人間は何をしている？
+    - 脳にどんな機能が必要？
 
 ---
 
