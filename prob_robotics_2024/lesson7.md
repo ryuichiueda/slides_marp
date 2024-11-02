@@ -108,22 +108,24 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ロボットが移動したときの演算
 
-- $b_{t-1}$に新たに$\V{u}_t$の情報が加わる
-    - $b_{t-1}(\V{x}) \rightarrow b_{t-1}(\V{x}|\V{u}_t)$　
-- $\hat{b}\_t = b_{t-1}(\V{x}|\V{u}_t)$としましょう
-    - $b_t$との違い: $\textbf{z}_t$の情報がまだない
+- 時刻$t-1$から$t$までの移動を考える
+    - $b_{t-1}$に新たに$\V{u}_t$の情報が加わる
+        - $b_{t-1}(\V{x}) \rightarrow b_{t-1}(\V{x}|\V{u}_t)$　
+    - $\hat{b}_t = b_{t-1}(\V{x}|\V{u}_t)$としましょう
+        - $\hat{b}_t$: 移動したことを考慮した信念
+        - $b_t$との違い: $\textbf{z}_t$の情報がまだない
 
 
-$\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
+$\qquad\qquad\qquad\hat{b}_t$を$b_{t-1}$からどう計算すればよいでしょう？
 
 <!--- $\hat{b}_t(\V{x}) = p(\V{x} = \V{x}_t^* | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$-->
 
 ---
 
-### $b_{t-1}$と$\hat{b}\_t$の関係
+### $b_{t-1}$と$\hat{b}_t$の関係
 
 - 考え方
-    - 例えば時刻$t-1$においてロボットの姿勢が$\V{x}'$である場合、$\V{u}\_t$によって、次状態が状態遷移モデルで$p(\V{x} | \V{x}', \V{u}\_t)$に分布
+    - 例えば時刻$t-1$においてロボットの姿勢が$\V{x}'$である場合、$\V{u}_t$によって、次状態が状態遷移モデルで$p(\V{x} | \V{x}', \V{u}_t)$に分布
         - 信念$b_{t-1}$によると、$\V{x}'$に存在する確率の密度は$b_{t-1}(\V{x}')$
         - 密度$b_{t-1}(\V{x}')$が状態遷移によって拡散
     - $\V{x}'$を状態空間からくまなく選んで密度$b_{t-1}(\V{x}')$を動かし、拡散した密度をある姿勢$\V{x}$で積算すると$\hat{b}_t(\V{x})$に（次ページ）
@@ -132,18 +134,18 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 
 ---
 
-### $\hat{b}\_t$の計算式
+### $\hat{b}_t$の計算式
 
 - 前ページの操作を式に
-    - $\hat{b}\_t(\V{x}) = \int\_{\V{x}' \in \mathcal{X}} p(\V{x} | \V{x}', \V{u}\_t) b\_{t-1}(\V{x}')  d\V{x}'$
+    - $\hat{b}_t(\V{x}) = \int_{\V{x}' \in \mathcal{X}} p(\V{x} | \V{x}', \V{u}_t) b_{t-1}(\V{x}')  d\V{x}'$
         - $\boldsymbol{x}'$を状態遷移モデルで動かして密度を積分
 - 次のようにも書ける
-    - $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
+    - $\hat{b}_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
         - $b_{t-1}$のときに状態遷移モデルから得られる次状態の密度の期待値を$\boldsymbol{x}'$で計算すると$\hat{b}_t(\boldsymbol{x})$になる　
 - 式の名前
     - 筆者は「マルコフ連鎖の式」、「状態遷移の式」などと呼称
         - マルコフ性: 次状態が直前の姿勢と制御出力だけから決まって、それ以前の状態は情報として不要という性質を指す
-            - $p(\V{x} | \V{x}', \V{u}\_t)$がそうなっている
+            - $p(\V{x} | \V{x}', \V{u}_t)$がそうなっている
 
 
 ---
@@ -152,8 +154,8 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 
 - 移動で不確かになった姿勢の情報をセンサ値で修正
    - 下図
-- $\hat{b}\_t(\V{x})$に新たに$\textbf{z}_t$の情報が加わる
-   - $\hat{b}\_t(\V{x}) \rightarrow \hat{b}\_t(\V{x} | \textbf{z}_t) = b_t(\V{x})$
+- $\hat{b}_t(\V{x})$に新たに$\textbf{z}_t$の情報が加わる
+   - $\hat{b}_t(\V{x}) \rightarrow \hat{b}_t(\V{x} | \textbf{z}_t) = b_t(\V{x})$
 
 <img width="60%" src="figs/mcl_observation_update.jpg" />
 
@@ -162,11 +164,11 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 ### $b_t$の計算式
 
 - ベイズの定理を使う
-    - $b\_t(\V{x}) = \hat{b}\_t(\V{x} | \textbf{z}\_t) = \eta p(\textbf{z}\_t | \V{x}) \hat{b}\_t(\V{x})$
-    $ = \eta \hat{b}\_t(\V{x})\prod\_{j=0}^{N\_\textbf{m}-1} p\_j(\V{z}\_{j,t} | \V{x})$
+    - $b_t(\V{x}) = \hat{b}_t(\V{x} | \textbf{z}_t) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$
+    $ = \eta \hat{b}_t(\V{x})\prod_{j=0}^{N_\textbf{m}-1} p_j(\V{z}_{j,t} | \V{x})$
     - 補足
         - 最後の式変形は各ランドマークのセンサ値が独立している場合
-        - $\textbf{z}_t$内にセンサ値がない場合は$b\_t(\V{x}) = \hat{b}\_t(\V{x})$
+        - $\textbf{z}_t$内にセンサ値がない場合は$b_t(\V{x}) = \hat{b}_t(\V{x})$
 
 これで定式化は完了
 
@@ -175,8 +177,8 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 ### ベイズフィルタ
 
 - 次の2つの式で$b_0$を$b_1, b_2, \dots$と更新していける
-    - 移動時: $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
-    - 観測時: $b\_t(\V{x}) = \eta p(\textbf{z}\_t | \V{x}) \hat{b}\_t(\V{x})$
+    - 移動時: $\hat{b}_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
+    - 観測時: $b_t(\V{x}) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$
      $\Longrightarrow$この手続きは「ベイズフィルタ」と呼ばれる
 
 どうやって実装するのか？
@@ -231,10 +233,10 @@ $\hat{b}\_t$を$b_{t-1}$からどう計算すればよいでしょう？
 - $\sigma_{\nu\nu}$のとき、$\nu$に乗せる雑音の量の決め方
     1. $\delta_{\nu\nu} \sim \mathcal{N}(0, \sigma_{\nu\nu}^2)$
         - $\delta_{\nu\nu}$: 1[m]あたりの誤差
-    2.  $\delta\_{\nu\nu}' = \delta\_{\nu\nu}\sqrt{|\nu|/\Delta t}$
+    2.  $\delta_{\nu\nu}' = \delta_{\nu\nu}\sqrt{|\nu|/\Delta t}$
         - $\delta_{\nu\nu}'$: 速度に乗せる誤差
         - 分散（誤差の2乗）の大きさは移動距離に比例するので
-$\delta\_{\nu\nu}^2 : (\delta'\_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
+$\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
             - 2章で説明
     3. $\sigma_{\nu\omega}, \sigma_{\omega\nu}, \sigma_{\omega\omega}$についても同様に
     4. <span style="font-size:80%">$\begin{pmatrix} \nu' \\\\ \omega' \end{pmatrix} = \begin{pmatrix} \nu \\\\ \omega \end{pmatrix} + \begin{pmatrix} \delta_{\nu\nu}\sqrt{|\nu|/\Delta t} + \delta_{\nu\omega}\sqrt{|\omega|/\Delta t} \\\\ \delta_{\omega\nu}\sqrt{|\nu|/\Delta t} + \delta_{\omega\omega}\sqrt{|\omega|/\Delta t} \end{pmatrix}$</span>
@@ -327,7 +329,7 @@ $\delta\_{\nu\nu}^2 : (\delta'\_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 
 - パーティクルの分布は信念分布の近似
 - 次のような確率計算が可能
-    - $P(\V{x}\_t^* \in X ) = \int\_{\V{x} \in X} \hat{b}\_t(\V{x}) d\V{x} \approx \dfrac{1}{N} \sum\_{i=0}^{N-1} \delta(\V{x}\_t^{(i)} \in X)$
+    - $P(\V{x}_t^* \in X ) = \int_{\V{x} \in X} \hat{b}_t(\V{x}) d\V{x} \approx \dfrac{1}{N} \sum_{i=0}^{N-1} \delta(\V{x}_t^{(i)} \in X)$
         - $X \subset \mathcal{X}$（状態空間$\mathcal{X}$の部分空間）
         - $\delta($事象$)$: 事象が正しければ1、違えば0を返す関数　
     - 式で書くとややこしいが、「ある領域$X$内にロボットの姿勢が含まれる確率は、その領域内にどれだけの割合のパーティクルが含まれるかで近似計算できる」ということ
@@ -337,10 +339,10 @@ $\delta\_{\nu\nu}^2 : (\delta'\_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 
 ### ベイズフィルタとの関係
 
-- ベイズフィルタの移動時の式: $\hat{b}\_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$　
+- ベイズフィルタの移動時の式: $\hat{b}_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$　
 - パーティクルフィルタとベイズフィルタの対応
-    - 移動前のパーティクル: $\V{x}^{(i)}\_{t-1} \sim b\_{t-1}$
-    - 移動後のパーティクル: $\V{x}^{(i)}\_t \sim p(\V{x} | \V{x}^{(i)}\_{t-1}, \V{u}_t)$
+    - 移動前のパーティクル: $\V{x}^{(i)}_{t-1} \sim b_{t-1}$
+    - 移動後のパーティクル: $\V{x}^{(i)}_t \sim p(\V{x} | \V{x}^{(i)}_{t-1}, \V{u}_t)$
 
 <span style="color:red">期待値計算をサンプリングで実装</span>
 
