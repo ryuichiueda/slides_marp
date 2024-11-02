@@ -26,7 +26,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 5.1.1 計算すべき確率分布と利用できる情報
+## 計算すべき確率分布と利用できる情報（5.1.1項）
 
 数式で考えていきましょう
 
@@ -34,6 +34,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 位置: $(x,y)$
     - 向き: $\theta$
     - 姿勢・状態: $\V{x} = (x\ y \ \theta)^\top$　
+    - 状態空間: $\mathcal{X}$
 
 ---
 
