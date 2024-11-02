@@ -35,6 +35,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 向き: $\theta$
     - 姿勢・状態: $\V{x} = (x\ y \ \theta)^\top$　
     - 状態空間: $\mathcal{X}$
+    - $\V{u}$: 制御指令
+    - $\textbf{z}$: センサ情報
 
 ---
 
@@ -42,12 +44,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 
 - $\V{x}_0$: 最初の姿勢（分かっているとしましょう）　
-- $\V{u}_\{1:t\}$: 各時刻の制御指令
-    - $\V{u}_\{1:t\}$というのは$\V{u}_1, \V{u}_2, \dots, \V{u}_t$の略記　
-- $\textbf{z}_\{1:t\}$: 各時刻のセンサ値のリスト
-    - $\textbf{z}_\{1:t\}$というのは$\textbf{z}_1, \textbf{z}_2, \dots, \textbf{z}_t$の略記
+- $\V{u}_{1:t}$: 各時刻の制御指令
+    - $\V{u}_{1:t}$というのは$\V{u}_1, \V{u}_2, \dots, \V{u}_t$の略記　
+- $\textbf{z}_{1:t}$: 各時刻のセンサ値のリスト
+    - $\textbf{z}_{1:t}$というのは$\textbf{z}_1, \textbf{z}_2, \dots, \textbf{z}_t$の略記
     - $\textbf{z}_t$には各ランドマークからのセンサ値（入っていないことも）　
-- $p(\V{x} | \V{x}_{t-1}, \V{u}\_t)$: 状態遷移モデル
+- $p(\V{x} | \V{x}_{t-1}, \V{u}_t)$: 状態遷移モデル
 - $p(\textbf{z} | \V{x})$: 観測モデル
 
 数式で考えるとこれしかない
