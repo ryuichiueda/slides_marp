@@ -66,6 +66,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 姿勢だけ求めても、不確かさが表現できない　
 - 計算すべき分布: <span style="color:red">$p_t(\V{x} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t})$</span>
     - 自己位置推定問題: 初期姿勢と、これまでの制御出力、センサ値から分布を計算する問題
+        - 補足: $\V{u}$には、制御指令ではなく車輪の回転計など、計測した移動量<span style="color:red">「オドメトリ」</span>が使われることも
 
 ---
 
