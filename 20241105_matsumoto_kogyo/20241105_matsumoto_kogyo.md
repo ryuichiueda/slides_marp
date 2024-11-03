@@ -198,6 +198,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     2. ロボットが動いたら分身も動かす
     3. センサのデータが入ったら、データと合わないところにいる分身を消す
         - 右図はLiDARではなくカメラで星を見たときの例
+- 確率の計算となる（[講義資料](https://ryuichiueda.github.io/slides_marp/prob_robotics_2024/lesson7.html)）
 
 ![bg right:40% 98%](mcl_simple_resampling.gif)
 
