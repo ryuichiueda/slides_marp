@@ -178,6 +178,19 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 地図作成の方法
+
+1. ロボットを円軌道で動かして、センサで見つけた星の位置を記録（左図）
+（桃色の線分の先端）
+    - <span style="color:red">実際にはロボットの起動は歪む</span>ので先端が揃わない
+2. 星の位置が揃う軌道を推定$\rightarrow$改めて星の位置を記録（右図）
+- 言葉で説明すると簡単だけど数学は難しい$\rightarrow$[大学の講義資料1](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_1.html)、[大学の講義資料2](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_2.html)
+<center>　　　<img width="33%" src="draw_graphslam_log.png" /><img width="33%" src="graphslam.png" />
+</center>
+
+
+---
+
 ## 地図のなかでの位置計算
 
 - よく使われる方法
