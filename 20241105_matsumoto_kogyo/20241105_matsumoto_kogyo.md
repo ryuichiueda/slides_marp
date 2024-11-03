@@ -237,3 +237,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## まとめ
 
 - ロボットの知能（特に移動する知能）について考えた
+    - 移動に関する知能
+        - 猫を見ていると動物の中でも高度な知能と気づく
+        - 人間ですら完璧でない
+- ロボットが移動するための仕組みを勉強
