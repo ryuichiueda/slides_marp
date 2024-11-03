@@ -299,3 +299,10 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 
 <div style="color:red;text-align:center">期待値計算をサンプリングで実装</div>
 
+---
+
+## まとめ
+
+- 以下を確認
+    - パーティクルによる信念分布の近似方法
+    - ロボットが動いたときのパーティクルの位置の更新方法
