@@ -146,7 +146,7 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
 
 ---
 
-### $\left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}_{t-1})}$の図解
+### $\left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$の図解
 
 <img width="80%" src="figs/mcl_motion_update.jpg" />
 
