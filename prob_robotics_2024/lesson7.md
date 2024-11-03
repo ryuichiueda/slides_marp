@@ -180,7 +180,7 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
 - 次の2つの式で$b_0$を$b_1, b_2, \dots$と更新していける
     - 移動時: $\hat{b}_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
     - 観測時: $b_t(\V{x}) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$
-     $\Longrightarrow$この手続きは「ベイズフィルタ」と呼ばれる
+     $\Longrightarrow$この手続きは<span style="color:red">「ベイズフィルタ」</span>と呼ばれる
 
 どうやって実装するのか？
 
