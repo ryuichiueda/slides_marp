@@ -210,26 +210,29 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
     - 雑音とバイアスのシミュレーション
     - パーティクルの分布が信念分布　
 - 前回のような雑音のモデルが使えるが、パラメータが分からない
-    - ロボットの動きの統計をとってシミュレーションしてみましょう
+    - ロボットの動きの統計をとって求める
+    - 環境が変わるとパラメータも変わるので、勘で設定してもよい
+        - 最終的に推定できれば良いパラメータ
 
 ---
 
-## 5.3.1 パーティクルの移動のための状態遷移モデル
+## パーティクルの移動のための状態遷移モデルの例（詳解5.3.1節）
 
 - 移動にともなう姿勢のばらつきをガウス分布で表現
     - 前回と違うけどなんとなく
         - 様々な誤差を考慮していると最終的にはガウス分布に（中心極限定理）　
+        - （注意: パーティクルフィルタでは必ずしもガウス分布を使わなくてもよく、むしろセンシングでガウス分布を使いたくないから考えられている）
 - ガウス分布を4つの標準偏差で表現
     - $\sigma_{\nu\nu}$: 直進1[m]で生じる道のりのばらつき
     - $\sigma_{\nu\omega}$: 回転1[rad]で生じる道のりのばらつき
     - $\sigma_{\omega\nu}$: 直進1[m]で生じるロボットの向きのばらつき
     - $\sigma_{\omega\omega}$: 回転1[rad]で生じるロボットの向きのばらつき　
 
-<span style="font-size:80%">これらの値を実験で求めて実現するように$\nu, \omega$に雑音を乗せる</span>
+<center>これらの値を実験で求めて（あるいは勘で設定して）パーティクルの挙動に反映</center>
 
 ---
 
-## 速度、角速度に乗せる誤差の量
+## 位置や角度の雑音を速度、角速度の雑音に変換
 
 - $\sigma_{\nu\nu}$のとき、$\nu$に乗せる雑音の量の決め方
     1. $\delta_{\nu\nu} \sim \mathcal{N}(0, \sigma_{\nu\nu}^2)$
@@ -238,90 +241,40 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
         - $\delta_{\nu\nu}'$: 速度に乗せる誤差
         - 分散（誤差の2乗）の大きさは移動距離に比例するので
 $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
-            - 2章で説明
     3. $\sigma_{\nu\omega}, \sigma_{\omega\nu}, \sigma_{\omega\omega}$についても同様に
-    4. <span style="font-size:80%">$\begin{pmatrix} \nu' \\\\ \omega' \end{pmatrix} = \begin{pmatrix} \nu \\\\ \omega \end{pmatrix} + \begin{pmatrix} \delta_{\nu\nu}\sqrt{|\nu|/\Delta t} + \delta_{\nu\omega}\sqrt{|\omega|/\Delta t} \\\\ \delta_{\omega\nu}\sqrt{|\nu|/\Delta t} + \delta_{\omega\omega}\sqrt{|\omega|/\Delta t} \end{pmatrix}$</span>
+    4. <span style="font-size:80%">$\begin{pmatrix} \nu' \\ \omega' \end{pmatrix} = \begin{pmatrix} \nu \\ \omega \end{pmatrix} + \begin{pmatrix} \delta_{\nu\nu}\sqrt{|\nu|/\Delta t} + \delta_{\nu\omega}\sqrt{|\omega|/\Delta t} \\ \delta_{\omega\nu}\sqrt{|\nu|/\Delta t} + \delta_{\omega\omega}\sqrt{|\omega|/\Delta t} \end{pmatrix}$</span>
         - $(\nu \ \omega)^\top$: 制御指令
         - $(\nu' \ \omega')^\top$: 実際の速度
 
 ---
 
-## 5.3.2 状態遷移モデルの実装
+## 状態遷移モデルの実装（詳解5.3.2項）
 
 - 前ページの式を実装してパーティクルを動かす
     - （念のため）パーティクルごとに雑音の量は変える
 - まだ$\sigma_{\nu\nu}, \sigma_{\nu\omega}, \sigma_{\omega\nu}, \sigma_{\omega\omega}$の値は未定なので適当な値で観察
-    - 左図: 30[s]後のロボットの姿勢のばらつき
+    - 左図: シミュレータのロボットの30[s]後の姿勢のばらつき
     - 中図: 値を小さくしたとき（小さすぎる）
     - 右図: 値を大きくしたとき（大きすぎる）
-
-<img width="30%" src="figs/particles_vs_robots_robots.png" />
-<img width="30%" src="figs/mcl_motion_nocalib.gif" />
-<img width="30%" src="figs/mcl_motion_nocalib2.gif" />
+<img width="30%" src="figs/particles_vs_robots_robots.png" /><img width="30%" src="figs/mcl_motion_nocalib.gif" /><img width="30%" src="figs/mcl_motion_nocalib2.gif" />
 
 ---
 
-## 5.3.3 パラメータの調整
+## パラメータの調整（詳解5.3.3項）
 
-- 適切な$\sigma_{\nu\nu}, \sigma_{\nu\omega}, \sigma_{\omega\nu}, \sigma_{\omega\omega}$の値を実験で決定　
-- 実験で値を決めるにあたっての方針
-    - 雑音だけでなくバイアスの誤差も$\sigma_{\nu\nu}, \sigma_{\nu\omega}, \sigma_{\omega\nu}, \sigma_{\omega\omega}$に反映
-        - 事前にバイアスの大きさを予想できないので
-    - スタックや誘拐は反映しない
-        - 別の方法で対処
+- ここは割愛
+- パーティクルフィルタを理解してから詳解確率ロボティクスを読み返してみてください
 
 ---
 
-### 前進時の向きのばらつき
-
-- 同じバイアスを持つロボットを4[m]走らせた
-    - 左図のように向きがばらつく
-        - 分散: $0.068$[rad$^2$]、道のり（始点終点の距離で代用）の平均値: $4.08$[m]
-	- <span style="color:red">$\sigma_{\omega\nu} = \sqrt{0.068/4.08} = 0.13$</span>
-- 補足
-    - $\sigma_{\nu\nu}$についてはバイアス込みで後で計算
-    - 前進方向のバイアスは向きのばらつきに無関係
-    - 右図: $\sigma_{\omega\nu} = 0.13$、他の$\sigma$を微小にして得たパーティクルの挙動
-
-<img width="30%" src="./figs/simulation_on.png" />
-<img width="30%" src="./figs/simulated_on.png" />
-
----
-
-### 前進時の道のりのばらつき
-
-- バイアスの異なるロボットで同様に実験
-    - 今度は道のりがばらつく
-        - 分散: $0.14$[m$^2$]、道のり（始点終点の距離で代用）の平均値: $3.97$[m]
-    - <span style="color:red">$\sigma_{\nu\nu} = \sqrt{0.138/3.97} = 0.19$</span>
-
-<img width="30%" src="./figs/forward_bias.png" />
-
----
-
-### 回転時の向きと移動量のばらつき
-
-- $\sigma_{\omega\omega}$について
-    - 実験でバイアス不揃いのロボット100台を4[rad]回転させて算出
-    - 最終的な$\theta$の分散と平均値から計算
-        - 書籍では$\sigma_{\omega\omega}=0.2$とした　
-- $\sigma_{\nu\omega}$について
-    - このシミュレータではロボットが回転してもロボットの位置はずれないのでゼロ
-        - ただしシミュレータで$0$とするとエラーになるので微少量に
-
-<img width="30%" src="./figs/rot_errors.png" />
-
----
-
-## 5.3.4 求めたパラメータによる動作確認
+## 求めたパラメータによる動作確認（詳解5.3.4）
 
 - 左: 30[s]後のロボットの姿勢のばらつき
     - バイアスは不揃い
 - 右: 求めた4つの標準偏差で30[s]パーティクルを動作
     - ロボットの左右で分布が少し広いがシミュレートできている
 
-<img width="35%" src="./figs/particles_vs_robots_robots.png" />&nbsp;
-<img width="35%" src="./figs/particles_vs_robots_particles.png" />
+<img width="35%" src="./figs/particles_vs_robots_robots.png" />&nbsp;<img width="35%" src="./figs/particles_vs_robots_particles.png" />
 
 
 ---
