@@ -193,13 +193,13 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
     - 分身をシミュレート$\Rightarrow$分身の分布が信念分布　
 - 数式でのパーティクルの表現
     - <span style="color:red">$\V{x}_t^{(i)}$</span><span style="font-size:80%">$\quad(i=0,1,2,\dots,N-1)$</span>
-        - あとから変えます
+        - 注意: あとから変えます
         - 分身なので姿勢を変数に持つ
         - $N$個ある　
 - 右図の青の矢印
-    - ロボットの初期姿勢に置いた100個のパーティクル（まだ動かない）
+    - ロボットの初期姿勢に置いた<br />100個のパーティクル（まだ動かない）
 
-<img width="30%" src="figs/particles.png" />
+![bg right:32% 100%](figs/particles.png)
 
 ---
 
