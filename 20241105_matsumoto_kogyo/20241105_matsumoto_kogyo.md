@@ -147,11 +147,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 地図づくり
 
-- まずロボットに地図を与える
-    - ロボットが動いてセンシングしたものをずれないようにつなげていく
+- ロボットを人間が操作してロボットのセンサでセンシング
+- ずれないようにつなげていく
+    （コンピュータに計算させて自動で）
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/b2kYQ11PUSI?si=3VsJxUuX92oP6DZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 - 右図: できた地図
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b2kYQ11PUSI?si=3VsJxUuX92oP6DZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ![bg right:40% 98%](map1.png)
+
+
+---
+
+## 地図づくり
 
