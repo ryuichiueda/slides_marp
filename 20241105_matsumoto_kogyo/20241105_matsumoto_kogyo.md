@@ -141,7 +141,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![](robot_explain.png)
 
-![bg right:25% 90%](man_walking.gif)
+![bg right:30% 90%](man_walking.gif)
 
 
 ---
