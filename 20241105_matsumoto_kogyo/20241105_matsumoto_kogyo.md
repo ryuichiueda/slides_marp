@@ -157,6 +157,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 地図づくり（おまけ）
+
+- 地図が歪んで作られて、修正される様子
+    - [ずれている: 12:49ごろ](https://youtu.be/jS5_a9BW2zI?si=0JT8wF6IS8fOH1Yw&t=769)
+    - [なおっている: 13:16ごろ](https://www.youtube.com/watch?v=jS5_a9BW2zI&t=796s)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jS5_a9BW2zI?si=0JT8wF6IS8fOH1Yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## 大きな地図の例
 
 - 千葉工大の学内の地図
@@ -174,6 +184,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     1. 地図のなかにロボットの分身をたくさんばらまく
     2. ロボットが動いたら分身も動かす
     3. センサのデータが入ったら、データと合わないところにいる分身を消す
+        - 右図はLiDARではなくカメラで星を見たときの例
 
 ![bg right:40% 98%](mcl_simple_resampling.gif)
 
