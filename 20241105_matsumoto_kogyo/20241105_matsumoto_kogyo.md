@@ -80,7 +80,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 猫の頭の中に<span style="color:red">地図</span>はあるだろうか？
     - 自分の見ている風景が地図のどこに相当するか理解できてる？
 - 計画ができていない（これは確実）
-    - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでなさそう
+    - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでない
 
 ![bg right:44% 100%](map.png)
 
@@ -218,6 +218,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 目的地へ
 
+- どうすれば行けるでしょうか？
+
+![bg right:44% 100%](map.png)
 
 ---
 
