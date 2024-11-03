@@ -154,8 +154,7 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
 
 ### ロボットがセンシングしたときの演算
 
-- 移動で不確かになった姿勢の情報をセンサ値で修正
-   - 下図
+- 移動で不確かになった姿勢の情報をセンサ値で修正（下図）
 - $\hat{b}_t(\V{x})$に新たに$\textbf{z}_t$の情報が加わる
    - $\hat{b}_t(\V{x}) \rightarrow \hat{b}_t(\V{x} | \textbf{z}_t) = b_t(\V{x})$
 
@@ -167,7 +166,7 @@ $= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
 
 - ベイズの定理を使う
     - $b_t(\V{x}) = \hat{b}_t(\V{x} | \textbf{z}_t) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$
-    $ = \eta \hat{b}_t(\V{x})\prod_{j=0}^{N_\textbf{m}-1} p_j(\V{z}_{j,t} | \V{x})$
+    $= \eta \hat{b}_t(\V{x})\prod_{j=0}^{N_\textbf{m}-1} p_j(\V{z}_{j,t} | \V{x})$
     - 補足
         - 最後の式変形は各ランドマークのセンサ値が独立している場合
         - $\textbf{z}_t$内にセンサ値がない場合は$b_t(\V{x}) = \hat{b}_t(\V{x})$
