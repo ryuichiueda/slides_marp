@@ -138,8 +138,8 @@ $\qquad\qquad\qquad\hat{b}_t$を$b_{t-1}$からどう計算すればよいでし
 $= \left\langle p(\V{x}, \V{x}_{t-1} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})\right\rangle_{\V{x}_{t-1}}$
 $= \left\langle p(\V{x} | \V{x}_{t-1}, \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{t-1} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})\right\rangle_{\V{x}_{t-1}}$
 $= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) p(\V{x}_{t-1} | \V{x}_0, \V{u}_{1:t-1}, \textbf{z}_{1:t-1})\right\rangle_{\V{x}_{t-1}}$
-$= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) b_{t-1}(\V{x}_{t-1})\right\rangle_{\V{x}_{t-1}}$
-$= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}_{t-1})}$
+$= \left\langle p(\V{x} | \V{x}', \V{u}_t ) b_{t-1}(\V{x}')\right\rangle_{\V{x}'}$　　（$t-1$が重複するので$\V{x}_{t-1}$のほうは$\V{x}'$と表記）
+$= \left\langle p(\V{x} | \V{x}', \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}')}$
     - 式の名前: 筆者は「マルコフ連鎖の式」、「状態遷移の式」などと呼称
     - マルコフ性がある: 次状態が直前の姿勢と制御出力だけから決まって、それ以前の状態は情報として不要という性質を指す
         - $p(\V{x} | \V{x}', \V{u}_t)$がそうなっている
