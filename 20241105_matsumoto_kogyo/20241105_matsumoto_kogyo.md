@@ -201,7 +201,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:40% 98%](mcl_simple_resampling.gif)
 
-
 ---
 
 ## 位置計算しながら走るロボット
@@ -213,4 +212,19 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 坂道 + 十字路のはずが工事中で地図とセンサからのデータに不整合
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dgd2tOCEYno?si=f7AvpZpB1w-TfSS_&amp;start=2211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+## 目的地へ
+
+
+---
+
+## 現在の研究での話題
+
+- 「地図与えて位置計算して経路を計算して」という方法ではなく、もっと手っ取り早い方法がないだろうか？
+    - <span style="color:red">end-to-end学習</span>: カメラやLiDARで何かを見せて「人工知能」に決めさせる
+        - 注意: 「人工知能」という言葉には具体性がないので安易に使わないでね
+          （ロボットという言葉もそうだけど）
 
