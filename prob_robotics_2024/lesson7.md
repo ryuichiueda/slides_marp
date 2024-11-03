@@ -271,16 +271,14 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 ## 求めたパラメータによる動作確認（詳解5.3.4）
 
 - 左: 30[s]後のロボットの姿勢のばらつき
-    - バイアスは不揃い
 - 右: 求めた4つの標準偏差で30[s]パーティクルを動作
     - ロボットの左右で分布が少し広いがシミュレートできている
-
 <img width="35%" src="./figs/particles_vs_robots_robots.png" />&nbsp;<img width="35%" src="./figs/particles_vs_robots_particles.png" />
 
 
 ---
 
-### 数式上の解釈
+### パーティクルによる近似の数式上の解釈
 
 - パーティクルの分布は信念分布の近似
 - 次のような確率計算が可能
@@ -299,5 +297,5 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
     - 移動前のパーティクル: $\V{x}^{(i)}_{t-1} \sim b_{t-1}$
     - 移動後のパーティクル: $\V{x}^{(i)}_t \sim p(\V{x} | \V{x}^{(i)}_{t-1}, \V{u}_t)$
 
-<span style="color:red">期待値計算をサンプリングで実装</span>
+<div style="color:red;text-align:center">期待値計算をサンプリングで実装</div>
 
