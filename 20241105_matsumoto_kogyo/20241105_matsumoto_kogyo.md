@@ -122,7 +122,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:44% 100%](brain.png)
 
-
 ---
 
 ## 移動ロボットの話
@@ -135,3 +134,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
    - ロボットが自分でゴールまで行く
 
 ![bg right:40% 100%](robot.png)
+
+---
+
+## 移動ロボットのハードウェア
+
+<img width="70%" src="robot_explain.png" />
+
