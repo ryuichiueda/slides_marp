@@ -139,5 +139,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 移動ロボットのハードウェア
 
-<img width="70%" src="robot_explain.png" />
+![](robot_explain.png)
+
+![bg right:25% 90%](man_walking.gif)
+
+
+---
+
+## 地図づくり
+
+- まずロボットに地図を与える
+    - ロボットがセンシングしたものを
 
