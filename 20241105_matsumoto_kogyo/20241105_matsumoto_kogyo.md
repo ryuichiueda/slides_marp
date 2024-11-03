@@ -157,6 +157,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 大きな地図の例
+
+- 千葉工大の学内の地図
+    - ロボットを手動で走らせて作成
+    - 200m×300m
+
+
+---
+
 ## 地図のなかでの位置計算
 
 - よく使われる方法
