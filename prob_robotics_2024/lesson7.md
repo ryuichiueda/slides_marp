@@ -144,6 +144,11 @@ $= \left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}_{t
     - マルコフ性がある: 次状態が直前の姿勢と制御出力だけから決まって、それ以前の状態は情報として不要という性質を指す
         - $p(\V{x} | \V{x}', \V{u}_t)$がそうなっている
 
+---
+
+### $\left\langle p(\V{x} | \V{x}_{t-1}, \V{u}_t ) \right\rangle_{b_{t-1}(\V{x}_{t-1})}$の図解
+
+<img width="80%" src="figs/mcl_motion_update.jpg" />
 
 ---
 
