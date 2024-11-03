@@ -155,8 +155,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:40% 98%](map1.png)
 
-
 ---
 
-## 地図づくり
+## 地図のなかでの位置計算
+
+- よく使われる方法
+    1. 地図のなかにロボットの分身をたくさんばらまく
+    2. ロボットが動いたら分身も動かす
+    3. センサのデータが入ったら、データと合わないところにいる分身を消す
 
