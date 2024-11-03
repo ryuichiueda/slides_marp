@@ -223,8 +223,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 現在の研究での話題
 
-- 「地図与えて位置計算して経路を計算して」という方法ではなく、もっと手っ取り早い方法がないだろうか？
-    - <span style="color:red">end-to-end学習</span>: カメラやLiDARで何かを見せて「人工知能」に決めさせる
-        - 注意: 「人工知能」という言葉には具体性がないので安易に使わないでね
-          （ロボットという言葉もそうだけど）
+- <span style="color:red">end-to-end学習</span>
+    - カメラやLiDARで何かを見せて人工ニューラルネットワークに決めさせる
+        - 人工ニューラルネットワーク: 脳の回路や計算方法をコンピュータで再現したもの
+    - 「地図与えて位置計算して経路を計算して」より手っ取り早い
 
