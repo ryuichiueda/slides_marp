@@ -265,7 +265,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 現在の研究での話題
+## 価値反復で動くロボット
+
+- 動く障害物も地図に取り入れて常に時間を計算
+    - 効率よく確実に動く
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n7LXx50gl9g?si=4fcoDk3cdeUNf-uO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+## 最近の研究での話題
 
 - <span style="color:red">end-to-end学習</span>
     - カメラやLiDARで何かを見せて人工ニューラルネットワークに決めさせる
