@@ -216,11 +216,24 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 目的地へ
+## 目的地への移動
 
 - どうすれば行けるでしょうか？
+    - 様々な方法がある
 
 ![bg right:44% 100%](map.png)
+
+
+---
+
+## **r**apidly exploring **r**andom **t**ree（RRT）[LaValle1998]
+
+- スタートあるいはゴール地点から枝をのばしていき、スタートとゴール地点を結ぶ経路を見つける手法
+    - 移動ロボットではあまり使わないが、ロボットの腕のようにもっと複雑な制御対象によく使われる
+- 右の例: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成
+
+![bg right:44% 100%](rrt.gif)
+
 
 ---
 
