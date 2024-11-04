@@ -235,7 +235,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:44% 100%](rrt.gif)
 
-
 ---
 
 ## A*[Pearl1984]などの探索手法
@@ -246,6 +245,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 途中が迷路みたいになっていると、どの手法もたいして違いが出ない
 
 ![bg right:44% 100%](astar.gif)
+
+---
+
+## もっと過激な方法[Ueda2023]
+
 
 ---
 
