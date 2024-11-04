@@ -280,16 +280,21 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 最近の研究での話題
+## 最近の研究での話題1: end-to-end学習
 
-- <span style="color:red">end-to-end学習</span>
-    - カメラやLiDARで何かを見せて人工ニューラルネットワークに決めさせる
-        - 人工ニューラルネットワーク: 脳の回路や計算方法をコンピュータで再現したもの
-    - 「地図与えて位置計算して経路を計算して・・・」より手っ取り早い
-    - 下図: 林原研究室の実験 [岡田 SI2021]
+- カメラやLiDARで何かを見せて人工ニューラルネットワークに決めさせる
+    - 人工ニューラルネットワーク: 脳の回路や計算方法をコンピュータで再現したもの
+- 「地図与えて位置計算して経路を計算して・・・」より手っ取り早い
+- 下図: 林原研究室の実験 [岡田 SI2021]
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bifynZ13QE4?si=GRxeryk1tPV-lCOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+---
+
+## 最近の研究での話題2: 自由エネルギー原理
+
+- 動物はこの式で動いているのではないか？
+    - $F= D_\text{KL}[q || p(\boldsymbol{w} | \boldsymbol{x}_{1:N})] + \{ - \log_e p(\boldsymbol{x}_{1:N}) \}$
 
 ---
 
