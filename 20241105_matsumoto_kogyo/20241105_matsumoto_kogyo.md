@@ -291,10 +291,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 最近の研究での話題2: 自由エネルギー原理
+## 最近の研究での話題2: 自由エネルギー原理（最近ではないけど）
 
-- 動物はこの式で動いているのではないか？
-    - $F= D_\text{KL}[q || p(\boldsymbol{w} | \boldsymbol{x}_{1:N})] + \{ - \log_e p(\boldsymbol{x}_{1:N}) \}$
+- 動物はこの式の値を最小にするように動いているのではないか？
+    - $F= D_\text{KL}[q(\boldsymbol{w}) || p(\boldsymbol{w} | \boldsymbol{z})] + \{ - \log_e p(\boldsymbol{z}) \}$
+        - $\boldsymbol{z}$: いままでの五感での経験（見たものとか）
+        - 右辺最初の項（認識・理解の項）: 認識と現実のズレ
+            - $\boldsymbol{w}$: 知りたいこと
+            - $p$: $\boldsymbol{z}$から導かれる、知りたいことに対する確率分布
+            - $q$: 知りたいことに対する頭の中の認識（確率分布）
+        - 右辺2番目の項（サプライズ項。行動の項）: 頭の中の認識と$\boldsymbol{z}$のズレ
+            - <span style="color:red">びっくりすると値が増える$\rightarrow$びっくりしないように行動</span>
+    - たぶん猫より人間のほうが$q$の表現力が高い
 
 ---
 
