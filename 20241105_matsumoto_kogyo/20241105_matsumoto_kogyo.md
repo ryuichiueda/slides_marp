@@ -238,6 +238,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## A*[Pearl1984]などの探索手法
+
+- スタートあるいはゴール地点からもう片方の地点を少しずつ探していく
+    - なるべく早くゴールが見つかりそうな向きを優先させる
+    - $\rightarrow$優先方法の違いで様々な手法
+        - 途中が迷路みたいになっていると、どの手法もたいして違いが出ない
+
+![bg right:44% 100%](astar.gif)
+
+---
+
 ## 現在の研究での話題
 
 - <span style="color:red">end-to-end学習</span>
