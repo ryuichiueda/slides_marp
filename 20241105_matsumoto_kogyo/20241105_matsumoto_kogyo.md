@@ -231,6 +231,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - スタートあるいはゴール地点から枝をのばしていき、スタートとゴール地点を結ぶ経路を見つける手法
     - 移動ロボットではあまり使わないが、ロボットの腕のようにもっと複雑な制御対象によく使われる
 - 右の例: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成
+    - 障害物<span style="color:blue">$\circ$</span>のなかにある2つの<span style="color:red">x</span>の間を緑の枝で接続
 
 ![bg right:44% 100%](rrt.gif)
 
