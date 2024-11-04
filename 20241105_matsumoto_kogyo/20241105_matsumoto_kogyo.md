@@ -269,6 +269,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 動く障害物も地図に取り入れて常に時間を計算
     - 効率よく確実に動く
+    - ただしバッテリーがどんどん減る
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n7LXx50gl9g?si=4fcoDk3cdeUNf-uO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
