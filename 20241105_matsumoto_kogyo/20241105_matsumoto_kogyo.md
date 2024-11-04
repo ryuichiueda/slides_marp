@@ -300,7 +300,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
             - $\boldsymbol{w}$: 知りたいこと
             - $p$: $\boldsymbol{z}$から導かれる、知りたいことに対する確率分布
             - $q$: 知りたいことに対する頭の中の認識
-                - 確率分布であり、構造は脳で決まる
+                - 確率分布であり、構造は神経回路で決まる
         - 右辺2番目の項（サプライズ項。行動の項）: 頭の中の認識と$\boldsymbol{z}$のズレ
             - <span style="color:red">違和感があると値が増える$\rightarrow$違和感のないように行動</span>
     - たぶん猫より人間のほうが$q$の表現力が高い
