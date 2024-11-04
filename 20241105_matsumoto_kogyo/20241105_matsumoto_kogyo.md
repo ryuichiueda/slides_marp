@@ -253,7 +253,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 価値反復[Bellman1957]を利用
     - 全通りの位置や向きからゴールまでの時間を計算
         - 全部計算しないと正しい結果が出ないので
-        - すごく時間がかかる$\rightarrow$高いコンピュータで制圧
+        - 時間がかかる$\rightarrow$高いコンピュータで制圧
     - 計算結果を使って時間が減る方向にロボットを誘導
 - 例: 右図の環境で、水たまりを避けて🚩まで行く
     - 下図のように🚩から時間が決まっていく
@@ -261,19 +261,21 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <img width="80%" src="vi.jpg" />
 
-![bg right:25% 100%](optimal_policy.gif)
+![bg right:25% 120%](optimal_policy.gif)
 
 ---
 
 ## 価値反復で動くロボット
 
-- 動く障害物も地図に取り入れて常に時間を計算
+- 左: 事前計算した結果を利用
+    - ボールへの寄り付きとキーパーの守備に
+- 右: 動く障害物も地図に取り入れて常に時間を計算
     - 効率よく確実に動く
     - ただしバッテリーがどんどん減る
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cqDU4zmgQSY?si=yhn73i65k2ombzvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n7LXx50gl9g?si=4fcoDk3cdeUNf-uO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div float="left">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cqDU4zmgQSY?si=yhn73i65k2ombzvm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/n7LXx50gl9g?si=4fcoDk3cdeUNf-uO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 
 ---
