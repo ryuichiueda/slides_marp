@@ -182,7 +182,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 1. ロボットを円軌道で動かして、センサで見つけた星の位置を記録（左図）
 （桃色の線分の先端）
-    - <span style="color:red">実際にはロボットの起動は歪む</span>ので先端が揃わない
+    - <span style="color:red">実際にはロボットの経路は歪む</span>ので先端が揃わない
 2. 星の位置が揃う軌道を推定$\rightarrow$改めて星の位置を記録（右図）
 - 言葉で説明すると簡単だけど数学は難しい$\rightarrow$[大学の講義資料1](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_1.html)、[大学の講義資料2](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_2.html)
 <center>　　　<img width="33%" src="draw_graphslam_log.png" /><img width="33%" src="graphslam.png" />
@@ -250,6 +250,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## もっと過激な方法[Ueda2023]
 
+- 価値反復[Bellman1957]を利用
+    - 全通りの位置や向きからゴールまでの時間を計算
+        - 全部計算しないと正しい結果が出ないので
+        - すごく時間がかかる$\rightarrow$高いコンピュータで制圧
+    - 計算結果を使って時間が減る方向にロボットを誘導
+- 例: 右図の環境で、水たまりを避けて🚩まで行く
+    - 下図のように🚩から時間が決まっていく
+
+
+<img width="80%" src="vi.jpg" />
+
+![bg right:25% 100%](optimal_policy.gif)
 
 ---
 
