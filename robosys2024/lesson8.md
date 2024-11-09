@@ -113,20 +113,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ROS1がすでにインストールされている場合
-
-- 方法1: 別の環境を準備する
-- 方法2:
-  - `.bashrc`から関係する記述をコメントアウト
-  - ターミナルを出る
+### `~/.bashrc`の設定
 
 ```bash
 $ vi ~/.bashrc
 （略）
+### ROS 1がインストールされている場合は次のようにコメントアウト ###
 #source /opt/ros/noetic/setup.bash     ←ここから関係する設定をコメントアウト
 #source ~/catkin_ws/devel/setup.bash
 #export ROS_MASTER_URI=http://localhost:11311
 #export ROS_HOSTNAME=localhost
+
+### ROS 2の通信範囲の設定 ###
+export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+# export ROS_LOCALHOST_ONLY=1  #Ubuntu 22.04以前の場合はこっち
 ```
 
 ---
@@ -149,7 +149,6 @@ usage: ros2 [-h] Call `ros2 <command> -h` for more detailed usage. ...
 ros2 is an extensible command-line tool for ROS 2.
 （以下略）
 ```
-- <span style="color:red">さらに`~/.bashrc`に`export ROS_LOCALHOST_ONLY=1`と記述</span>
 
 ---
 
@@ -415,7 +414,7 @@ setup(
 
 ---
 
-### ビルド
+### 依存するパッケージのインストールとビルド
 
 - 他に利用するパッケージを確認してインストール
     - 今の例の場合はやらなくていいです（一般論として説明してます）
