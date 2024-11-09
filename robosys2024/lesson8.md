@@ -245,27 +245,24 @@ ros2_ws/
 - パッケージ: ROSのプログラムの配布単位
     - GitHubのリポジトリにほぼ相当
     - なかにいくつかのノードのプログラムを入れる
-- `ros2 pkg create`を使う
-  - 下の例: mypkgというパッケージを作成
-      ```bash
-      $ cd ~/ros2_ws/src/
-      $ ros2 pkg create mypkg --build-type ament_python
-      going to create a new package
-      package name: mypkg
-      ・・・
-      $ tree
-      .
-      └── mypkg
-          ├── mypkg
-          │   └── __init__.py
-          ├── package.xml
-          ├── resource
-          │   └── mypkg
-          ├── setup.cfg
-          ├── setup.py
-          └── test
-      （略）
-      ```
+    ```bash
+    ### パッケージ作成の例 ###
+    $ cd ~/ros2_ws/src/
+    $ ros2 pkg create mypkg --build-type ament_python
+    $ tree mypkg/
+    mypkg/
+    ├── mypkg
+    │   └── __init__.py
+    ├── package.xml
+    ├── resource
+    │   └── mypkg
+    ├── setup.cfg
+    ├── setup.py
+    └── test
+        ├── test_copyright.py
+        ・・・
+    （略）
+    ```
 
 ---
 

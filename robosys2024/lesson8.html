@@ -346,29 +346,23 @@ ros2_ws/
 <li>GitHubのリポジトリにほぼ相当</li>
 <li>なかにいくつかのノードのプログラムを入れる</li>
 </ul>
-</li>
-<li><code>ros2 pkg create</code>を使う
-<ul>
-<li>下の例: mypkgというパッケージを作成<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cd</span> ~/ros2_ws/src/
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### パッケージ作成の例 ###</span>
+$ <span class="hljs-built_in">cd</span> ~/ros2_ws/src/
 $ ros2 pkg create mypkg --build-type ament_python
-going to create a new package
-package name: mypkg
-・・・
-$ tree
-.
-└── mypkg
-    ├── mypkg
-    │   └── __init__.py
-    ├── package.xml
-    ├── resource
-    │   └── mypkg
-    ├── setup.cfg
-    ├── setup.py
-    └── <span class="hljs-built_in">test</span>
+$ tree mypkg/
+mypkg/
+├── mypkg
+│   └── __init__.py
+├── package.xml
+├── resource
+│   └── mypkg
+├── setup.cfg
+├── setup.py
+└── <span class="hljs-built_in">test</span>
+    ├── test_copyright.py
+    ・・・
 （略）
 </code></pre>
-</li>
-</ul>
 </li>
 </ul>
 <footer>ロボットシステム学第8回</footer>
