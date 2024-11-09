@@ -293,10 +293,10 @@ ros2 is an extensible command-line tool <span class="hljs-keyword">for</span> RO
 </ul>
 </li>
 <li>ノードから出る矢印: 「<span style="color:red">パブリッシャ</span>」</li>
-<li>ノードに入る矢印: 「<span style="color:red">サブスクライバー</span>」</li>
+<li>ノードに入る矢印: 「<span style="color:red">サブスクライバ</span>」</li>
 </ul>
 </li>
-<li>ノードは複数のパブリッシャとサブスクライバーを持てる</li>
+<li>ノードは複数のパブリッシャとサブスクライバを持てる</li>
 </ul>
 <footer>ロボットシステム学第8回</footer>
 </section>
@@ -592,23 +592,28 @@ data: 14
 <ul>
 <li>機能: <code>/countup</code>からメッセージをもらって表示
 <ul>
-<li><code>listener.py</code>という名前で</li>
-</ul>
-</li>
-</ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">  <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
+<li><code>listener.py</code>という名前で<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">  <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
   <span class="hljs-number">2</span> <span class="hljs-keyword">from</span> rclpy.node <span class="hljs-keyword">import</span> Node
   <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> std_msgs.msg <span class="hljs-keyword">import</span> Int16
   <span class="hljs-number">4</span>
-  <span class="hljs-number">5</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">msg</span>):
-  <span class="hljs-number">6</span>     <span class="hljs-keyword">global</span> node
-  <span class="hljs-number">7</span>     node.get_logger().info(<span class="hljs-string">&quot;Listen: %d&quot;</span> % msg.data)
-  <span class="hljs-number">8</span>
-  <span class="hljs-number">9</span> rclpy.init()
- <span class="hljs-number">10</span> node = Node(<span class="hljs-string">&quot;listener&quot;</span>)
- <span class="hljs-number">11</span> pub = node.create_subscription(Int16, <span class="hljs-string">&quot;countup&quot;</span>, cb, <span class="hljs-number">10</span>)
- <span class="hljs-number">12</span> rclpy.spin(node)
+  <span class="hljs-number">5</span>
+  <span class="hljs-number">6</span> rclpy.init()
+  <span class="hljs-number">7</span> node = Node(<span class="hljs-string">&quot;listener&quot;</span>)
+  <span class="hljs-number">8</span> 　
+  <span class="hljs-number">9</span>
+ <span class="hljs-number">10</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">msg</span>):
+ <span class="hljs-number">11</span>     <span class="hljs-keyword">global</span> node
+ <span class="hljs-number">12</span>     node.get_logger().info(<span class="hljs-string">&quot;Listen: %d&quot;</span> % msg.data) 　　　
+ <span class="hljs-number">13</span>
+ <span class="hljs-number">14</span>
+ <span class="hljs-number">15</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+ <span class="hljs-number">16</span>     pub = node.create_subscription(Int16, <span class="hljs-string">&quot;countup&quot;</span>, cb, <span class="hljs-number">10</span>) 　　　
+ <span class="hljs-number">17</span>     rclpy.spin(node)
 </code></pre>
+</li>
+</ul>
+</li>
+</ul>
 <footer>ロボットシステム学第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-footer="ロボットシステム学第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="30" style="--footer:ロボットシステム学第8回;--paginate:true;" data-marpit-pagination-total="31">
@@ -616,7 +621,7 @@ data: 14
 <ul>
 <li><code>listener.py</code>について<code>setup.py</code>への記述
 <ul>
-<li>さきほどコメントに書いた部分の<code>#</code>を消す</li>
+<li>さきほどコメントアウトした行の<code>#</code>を消す</li>
 </ul>
 </li>
 <li><code>colcon build</code>を済ませておく</li>

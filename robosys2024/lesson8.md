@@ -209,8 +209,8 @@ ros2 is an extensible command-line tool for ROS 2.
   - `/chatter`: 流路の名前で「<span style="color:red">トピック</span>」と呼ばれる
     - 流れるデータは「<span style="color:red">メッセージ</span>」
   - ノードから出る矢印: 「<span style="color:red">パブリッシャ</span>」
-  - ノードに入る矢印: 「<span style="color:red">サブスクライバー</span>」
-- ノードは複数のパブリッシャとサブスクライバーを持てる
+  - ノードに入る矢印: 「<span style="color:red">サブスクライバ</span>」
+- ノードは複数のパブリッシャとサブスクライバを持てる
 
 ---
 
@@ -461,27 +461,32 @@ setup(
 
 - 機能: `/countup`からメッセージをもらって表示
   - `listener.py`という名前で
-```python
-  1 import rclpy
-  2 from rclpy.node import Node
-  3 from std_msgs.msg import Int16
-  4
-  5 def cb(msg):
-  6     global node
-  7     node.get_logger().info("Listen: %d" % msg.data)
-  8
-  9 rclpy.init()
- 10 node = Node("listener")
- 11 pub = node.create_subscription(Int16, "countup", cb, 10)
- 12 rclpy.spin(node)
-```
+    ```python
+      1 import rclpy
+      2 from rclpy.node import Node
+      3 from std_msgs.msg import Int16
+      4
+      5
+      6 rclpy.init()
+      7 node = Node("listener")
+      8 　
+      9
+     10 def cb(msg):
+     11     global node
+     12     node.get_logger().info("Listen: %d" % msg.data) 　　　
+     13
+     14
+     15 def main():
+     16     pub = node.create_subscription(Int16, "countup", cb, 10) 　　　
+     17     rclpy.spin(node)
+    ```
 
 ---
 
 ### talkerとlistenerの実行
 
 - `listener.py`について`setup.py`への記述
-  - さきほどコメントに書いた部分の`#`を消す
+  - さきほどコメントアウトした行の`#`を消す
 - `colcon build`を済ませておく
 ```
 端末1$ ros2 run mypkg talker
