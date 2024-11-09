@@ -29,8 +29,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 4. ROS 2プログラミング
 5. まとめ
 - 参考図書
-    - 近藤 豊: [ROS2ではじめよう 次世代ロボットプログラミング](https://gihyo.jp/book/2019/978-4-297-10742-0), 技術評論社, 2019. 
-
+    - 近藤 豊: [改訂新版 ROS 2ではじめよう 次世代ロボットプログラミング](https://www.amazon.co.jp/dp/429714395X), 技術評論社, 2024. 
 ---
 
 ## 1. ROSの概要
