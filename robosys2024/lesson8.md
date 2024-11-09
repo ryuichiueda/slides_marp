@@ -219,7 +219,7 @@ ros2 is an extensible command-line tool for ROS 2.
 
 - 先ほど動かしたtalker、listenerに相当するノードを作成
   - 言語: Python
-  - [参考](https://index.ros.org/doc/ros2/Tutorials/Developing-a-ROS-2-Package/#python-packages)
+  - [参考](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
 - いろいろ作法が細かいので、コードを書く以外のことの意図も確認
   - 誰が作ったパッケージも同じような構造にするため
 
