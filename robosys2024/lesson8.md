@@ -133,9 +133,9 @@ $ vi ~/.bashrc
 
 ### ROS 2のインストール
 
-- [インストールスクリプト](https://github.com/ryuichiueda/ros2_setup_scripts/blob/master/setup.bash)
-    - 手順は次の通り
-    - 余計なものを入れたくない場合は`setup.bash`の`ros-${ROS_VER}-desktop`を`ros-${ROS_VER}-ros-base`に変更して実行
+- 手順は次の通り
+    - 注意: 時刻がずれていると止まります（`date -s`でセットを）
+- 余計なものを入れたくない場合は`setup.bash`の`ros-${ROS_VER}-desktop`を`ros-${ROS_VER}-ros-base`に変更して実行
 
 ```bash
 $ git clone https://github.com/ryuichiueda/ros2_setup_scripts
@@ -165,16 +165,16 @@ ros2 is an extensible command-line tool for ROS 2.
   ```
   - 「"Hello World: 数字"を発行」と言っている
 - もうひとつプログラムを立ち上げ
-```bash
-端末2$ ros2 run demo_nodes_py listener
-・・・
-[INFO] [listener]: I heard: [Hello World: 55]
-[INFO] [listener]: I heard: [Hello World: 56]
-・・・
-```
+  ```bash
+  端末2$ ros2 run demo_nodes_py listener
+  ・・・
+  [INFO] [listener]: I heard: [Hello World: 55]
+  [INFO] [listener]: I heard: [Hello World: 56]
+  ・・・
+  ```
   - 「"Hello World: 数字"を聞いた」と言っている
 
-で、これは何をしているのか？
+<center>で、これは何をしているのか？</center>
 
 ---
 
