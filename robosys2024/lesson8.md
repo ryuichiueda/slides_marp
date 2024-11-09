@@ -51,23 +51,23 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### どんなものか
 
 - 本体: プロセス間通信をつかさどる
-  - プロセス同士をpublish-subscribeモデルや<br />client-serverモデルでつなぐ
-  - 通信するデータに型<br />　
+  - プロセス同士をpublish-subscribeモデルやclient-serverモデルでつなぐ
+  - 通信するデータに型　
 - 周辺
   - ビルドシステム、パッケージ管理、テストツール、・・・
 
-<span style="color:red;font-size:70%">と書いてもよくわからんので使うメリットから</span>
+<center><span style="color:red">と書いてもよくわからんので使うメリットから</span></center>
 
 ---
 
-### ROS化されている<br />重要なソフトウェア
+### ROS化されている重要なソフトウェア
 
 - 移動ロボットの制御ソフトウェア
   - gmapping, Cartographer, ナビゲーションメタパッケージ
-    - 地図生成（次のページにデモ）、位置推定、経路生成<br />　
+    - 地図生成（次のページにデモ）、位置推定、経路生成　
 - マニピュレータのソフトウェア
   - MoveIt!
-    - 腕の動作計画 腕先の位置を入力→関節角を計算（逆運動学）<br />　
+    - 腕の動作計画 腕先の位置を入力→関節角を計算（逆運動学）　
 - 各種センサのインタフェース
   - すぐ使える
   - 以前は（特にLinuxでは）自分でシリアル通信のプログラムを書くなどの苦労があった
@@ -76,7 +76,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ROSを使った移動ロボットの制御
 
-- コントローラでロボットに移動経路を教え、<br />そのあとロボットが自律で経路を移動
+- コントローラでロボットに移動経路を教え、そのあとロボットが自律で経路を移動
   - 地図と経路を計算するCartographerを利用
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eVHkHOCsHns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -85,7 +85,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ROSを使った<br />マニピュレーションの様子
+### ROSを使ったマニピュレーションの様子
 
 - https://twitter.com/i/status/1201399538541400064
   - 2年生有志作
@@ -99,8 +99,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - ROS 1（もともとROSと呼ばれていたもの）
   - オリジナルのROS
   - 主に研究のフレームワークとして発達
-  - まだまだ使われる/研究室でも使う
-    - 習得は2021年までの講義資料でどうぞ（https://youtu.be/PL85Pw_zQH0 ）<br />　
+  - まだまだ使われる
+    - 習得は2021年までの講義資料でどうぞ（https://youtu.be/PL85Pw_zQH0 ）　
 - ROS 2（今回扱うもの）
   - ROSが普及して、当初想定していなかった利用場面が増加
     - セキュリティー、製品化、シビアな通信環境、・・・
@@ -185,7 +185,7 @@ ros2 is an extensible command-line tool for ROS 2.
 ### ROSのノードの基本
 
 - 基本1: プログラムのことを「ノードと呼ぶ」
-- 基本2: ノードは互いに通信する<br />　
+- 基本2: ノードは互いに通信する　
 - これで何ができるか？
   - ロボットの各機能を別のプログラムとして実装できる
     - 例1: 画像処理のプログラムとナビゲーションのプログラムの連携
@@ -487,7 +487,7 @@ setup(
 ## 5. まとめ
 
 - ROS（ROS 2）
-  - 独立したプログラム（プロセス、ノード）を連携<br />　
+  - 独立したプログラム（プロセス、ノード）を連携　
 - パッケージを作り、ふたつのノードを記述
   - 単にプログラムを走らせるだけでなく、様々な手続き
     - 最初は煩わしいが、人に使ってもらうモジュールを作りやすい。
