@@ -320,7 +320,7 @@ setup(
   ```bash
   $ cd ~/ros2_ws/
   $ colcon build
-  （略。警告が出るけどとりあえず気にしない）
+  （略。警告が出る場合があるけどとりあえず気にしない。エラーは気にする。）
   Summary: 1 package finished [0.69s]
     1 package had stderr output: mypkg 
   ```
@@ -347,35 +347,45 @@ setup(
         - [パブリッシャの書き方](https://index.ros.org/doc/ros2/Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber/#write-the-publisher-node)
         - [クラスなしで記述する方法](https://qiita.com/l1sum/items/b7393c34fb0127826f74)
 - `~/ros2_ws/src/mypkg/mypkg`に`talker.py`を書く
-  - コードの前半
-    - オブジェクト: 今のところは様々な機能を持つ変数と考えて良い
-  ```python
-    1 import rclpy                     #ROS 2のクライアントのためのライブラリ
-    2 from rclpy.node import Node      #ノードを実装するためのNodeクラス（クラスは第10回で）
-    3 from std_msgs.msg import Int16   #通信の型（16ビットの符号付き整数）
-    4
-    5 rclpy.init()
-    6 node = Node("talker")            #ノード作成（nodeという「オブジェクト」を作成）
-    7 pub = node.create_publisher(Int16, "countup", 10)   #パブリッシャのオブジェクト作成
-    8 n = 0 #カウント用変数
-    9
-  ```
-（下に続く）
+    - 次ページ、次々ページ
 
->>>
+---
 
-- コードの後半
-    ```python
-     10 def cb():          #17行目で定期実行されるコールバック関数
-     11     global n       #関数を抜けてもnがリセットされないようにしている
-     12     msg = Int16()  #メッセージの「オブジェクト」
-     13     msg.data = n   #msgオブジェクトの持つdataにnを結び付け
-     14     pub.publish(msg)        #pubの持つpublishでメッセージ送信
-     15     n += 1
-     16
-     17 node.create_timer(0.5, cb)  #タイマー設定
-     18 rclpy.spin(node)            #実行（無限ループ）
-  ```
+### コードの前半
+
+```python
+  1 import rclpy      　  　　　　   #ROS 2のクライアントのためのライブラリ
+  2 from rclpy.node import Node      #ノードを実装するためのNodeクラス（クラスは第10回で）
+  3 from std_msgs.msg import Int16   #通信の型（16ビットの符号付き整数）
+  4
+  5 rclpy.init() 　
+  6 node = Node("talker")            #ノード作成（nodeという「オブジェクト」を作成）
+  7 pub = node.create_publisher(Int16, "countup", 10)   #パブリッシャのオブジェクト作成
+  8 n = 0 #カウント用変数
+  9
+ 10
+```
+  - オブジェクト: 今のところは様々な機能を持つ変数と考えて良い
+      - うしろに関数みたいなもの（<span style="color:red">メソッド</span>）をつけて機能を呼び出せる
+（次ページに続く）
+
+---
+
+### コードの後半
+
+```python
+11 def cb():          #17行目で定期実行されるコールバック関数
+12     global n       #関数を抜けてもnがリセットされないようにしている
+13     msg = Int16()  #メッセージの「オブジェクト」
+14     msg.data = n   #msgオブジェクトの持つdataにnを結び付け
+15     pub.publish(msg)        #pubの持つpublishでメッセージ送信
+16     n += 1
+17
+18
+19 def main():
+20     node.create_timer(0.5, cb)  #タイマー設定
+21     rclpy.spin(node)            #実行（無限ループ）
+```
 
 ---
 
@@ -383,23 +393,24 @@ setup(
 
 - パッケージに`talker.py`や依存するモジュールを登録
     - `package.xml`に利用するモジュールを登録
-```
-・・・
-  <license>BSD-3-Clause</license>
-  <exec_depend>rclpy</exec_depend>            <-追加
-  <exec_depend>std_msgs</exec_depend>         <-追加
-・・・
-```
-    - `setup.py`にスクリプト（正確にはエントリポイント）を登録
-```python
-・・・
-        entry_points={
-        'console_scripts': [
-            'talker = mypkg.talker:main',
-            #'listener = mypkg.listener:main', ←あとからコメントアウト
-        ],
-・・・
-```
+        ```
+        ・・・
+          <license>BSD-3-Clause</license>
+          <exec_depend>rclpy</exec_depend>            <-追加
+          <exec_depend>std_msgs</exec_depend>         <-追加
+        ・・・
+        ```
+    - `setup.py`に`talker.py`のどの関数を呼び出すかを登録
+        - エントリポイントと呼ばれます
+        ```python
+        ・・・
+                entry_points={
+                'console_scripts': [
+                    'talker = mypkg.talker:main', #talker.pyのmain関数という意味
+                    #'listener = mypkg.listener:main', ←書いておいて後でコメントアウト
+                ],
+        ・・・
+        ```
 
 
 ---
@@ -407,22 +418,23 @@ setup(
 ### ビルド
 
 - 他に利用するパッケージを確認してインストール
-    - `humble`はUbuntu 22.04用のROS 2のバージョン
-    - 20.04の場合は`foxy`
-    ```bash
-    $ cd ~/ros2_ws
-    $ sudo rosdep install -i --from-path src --rosdistro humble -y 
-    ```
+    - 今の例の場合はやらなくていいです（一般論として説明してます）
+    - `jazzy`はUbuntu 24.04用のROS 2のバージョン
+    - 22.04の場合は`humble`
+        ```bash
+        $ cd ~/ros2_ws
+        $ rosdep install -i --from-path src --rosdistro jazzy -y 
+        ```
 - ビルド
     - `colcon build`して、その後`source`で設定を読み直し
-    ```bash
-    $ colcon build
-    Starting >>> mypkg
-    Finished <<< mypkg [2.55s]
-    
-    Summary: 1 package finished [3.06s]
-    $ source ~/.bashrc
-    ```
+        ```bash
+        $ colcon build    #注意！！必ず~/ros2_wdでやること
+        Starting >>> mypkg
+        Finished <<< mypkg [2.55s]
+        
+        Summary: 1 package finished [3.06s]
+        $ source ~/.bashrc
+        ```
 
 ---
 
