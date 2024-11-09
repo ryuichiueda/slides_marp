@@ -256,7 +256,11 @@ ros2 is an extensible command-line tool <span class="hljs-keyword">for</span> RO
 <h3 id="ros%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%89%E3%81%AE%E5%9F%BA%E6%9C%AC">ROSのノードの基本</h3>
 <ul>
 <li>基本1: プログラムのことを「ノードと呼ぶ」</li>
-<li>基本2: ノードは互いに通信する</li>
+<li>基本2: ノードは互いに通信でデータをやりとり
+<ul>
+<li><span style="color:red">データはC言語の構造体のような型を持つ</span></li>
+</ul>
+</li>
 <li>これで何ができるか？
 <ul>
 <li>ロボットの各機能を別のプログラムとして実装できる
@@ -273,6 +277,7 @@ ros2 is an extensible command-line tool <span class="hljs-keyword">for</span> RO
 </li>
 </ul>
 </li>
+<li>型があるのでデバッグしやすい</li>
 </ul>
 </li>
 </ul>
@@ -299,7 +304,6 @@ ros2 is an extensible command-line tool <span class="hljs-keyword">for</span> RO
 </ul>
 </li>
 <li>ノードは複数のパブリッシャとサブスクライバーを持てる</li>
-<li><span style="color:red">メッセージは型を持つ</span></li>
 </ul>
 <footer>ロボットシステム学第8回</footer>
 </section>
