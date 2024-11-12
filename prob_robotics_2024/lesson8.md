@@ -165,7 +165,7 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
         - 条件（パラメータ）と変数が入れ替わっただけで同じ式　
 - ベイズの定理との関係
     - あえて尤度を使って考察したが、今の議論はベイズの定理でも説明可能
-    - $b\_t(\V{x}\_t^{(i)}) = \hat{b}\_t(\V{x}\_t^{(i)} | \V{z}\_{j,t}) = \eta p\_j(\V{z}\_{j,t} | \V{x}\_t^{(i)}) \hat{b}\_t(\V{x}\_t^{(i)}) \\\\ = \eta L\_j (\V{x}\_t^{(i)} | \V{z}\_{j,t} ) \hat{b}\_t(\V{x}\_t^{(i)})$
+    - $b_t(\V{x}_t^{(i)}) = \hat{b}_t(\V{x}_t^{(i)} | \V{z}_{j,t}) = \eta p_j(\V{z}_{j,t} | \V{x}_t^{(i)}) \hat{b}_t(\V{x}_t^{(i)}) \\\\ = \eta L_j (\V{x}_t^{(i)} | \V{z}_{j,t} ) \hat{b}_t(\V{x}_t^{(i)})$
 
 
 
