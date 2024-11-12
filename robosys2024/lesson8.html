@@ -497,7 +497,7 @@ mypkg
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="ロボットシステム学第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:ロボットシステム学第8回;--paginate:true;" data-marpit-pagination-total="31">
 <h3 id="%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E5%BE%8C%E5%8D%8A">コードの後半</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-number">11</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>():          <span class="hljs-comment">#17行目で定期実行されるコールバック関数</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-number">11</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>():          <span class="hljs-comment">#20行目で定期実行されるコールバック関数</span>
 <span class="hljs-number">12</span>     <span class="hljs-keyword">global</span> n       <span class="hljs-comment">#関数を抜けてもnがリセットされないようにしている</span>
 <span class="hljs-number">13</span>     msg = Int16()  <span class="hljs-comment">#メッセージの「オブジェクト」</span>
 <span class="hljs-number">14</span>     msg.data = n   <span class="hljs-comment">#msgオブジェクトの持つdataにnを結び付け</span>
@@ -556,7 +556,7 @@ $ rosdep install -i --from-path src --rosdistro jazzy -y
 </li>
 <li>ビルド
 <ul>
-<li><code>colcon build</code>して、その後<code>source</code>で設定を読み直し<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ colcon build    <span class="hljs-comment">#注意！！必ず~/ros2_wdでやること</span>
+<li><code>colcon build</code>して、その後<code>source</code>で設定を読み直し<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ colcon build    <span class="hljs-comment">#注意！！必ず~/ros2_wsでやること</span>
 Starting &gt;&gt;&gt; mypkg
 Finished &lt;&lt;&lt; <span class="hljs-string">mypkg [2.55s]
 
