@@ -117,7 +117,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>確率ロボティクス第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:確率ロボティクス第8回;--paginate:true;" data-marpit-pagination-total="28">
-<h2 id="%E4%BD%8D%E7%BD%AE%E3%82%84%E8%A7%92%E5%BA%A6%E3%81%AE%E9%9B%91%E9%9F%B3%E3%82%92%E9%80%9F%E5%BA%A6%E8%A7%92%E9%80%9F%E5%BA%A6%E3%81%AE%E9%9B%91%E9%9F%B3%E3%81%AB%E5%A4%89%E6%8F%9B">位置や角度の雑音を速度、角速度の雑音に変換</h2>
+<h2 id="%E4%BD%8D%E7%BD%AE%E3%82%84%E8%A7%92%E5%BA%A6%E3%81%AE%E9%9B%91%E9%9F%B3%E3%81%8B%E3%82%89%E9%80%9F%E5%BA%A6%E8%A7%92%E9%80%9F%E5%BA%A6%E3%81%AE%E9%9B%91%E9%9F%B3%E3%81%B8%E3%81%AE%E5%A4%89%E6%8F%9B">位置や角度の雑音から速度、角速度の雑音への変換</h2>
 <ul>
 <li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="3.175ex" height="1.314ex" role="img" focusable="false" viewBox="0 -431 1403.5 581"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D70E" d="M184 -11Q116 -11 74 34T31 147Q31 247 104 333T274 430Q275 431 414 431H552Q553 430 555 429T559 427T562 425T565 422T567 420T569 416T570 412T571 407T572 401Q572 357 507 357Q500 357 490 357T476 358H416L421 348Q439 310 439 263Q439 153 359 71T184 -11ZM361 278Q361 358 276 358Q152 358 115 184Q114 180 114 178Q106 141 106 117Q106 67 131 47T188 26Q242 26 287 73Q316 103 334 153T356 233T361 278Z"></path></g><g data-mml-node="TeXAtom" transform="translate(604,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D708" d="M74 431Q75 431 146 436T219 442Q231 442 231 434Q231 428 185 241L137 51H140L150 55Q161 59 177 67T214 86T261 119T312 165Q410 264 445 394Q458 442 496 442Q509 442 519 434T530 411Q530 390 516 352T469 262T388 162T267 70T106 5Q81 -2 71 -2Q66 -2 59 -1T51 1Q45 5 45 11Q45 13 88 188L132 364Q133 377 125 380T86 385H65Q59 391 59 393T61 412Q65 431 74 431Z"></path></g><g data-mml-node="mi" transform="translate(530,0)"><path data-c="1D708" d="M74 431Q75 431 146 436T219 442Q231 442 231 434Q231 428 185 241L137 51H140L150 55Q161 59 177 67T214 86T261 119T312 165Q410 264 445 394Q458 442 496 442Q509 442 519 434T530 411Q530 390 516 352T469 262T388 162T267 70T106 5Q81 -2 71 -2Q66 -2 59 -1T51 1Q45 5 45 11Q45 13 88 188L132 364Q133 377 125 380T86 385H65Q59 391 59 393T61 412Q65 431 74 431Z"></path></g></g></g></g></g></svg></mjx-container>のとき、<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.199ex" height="1ex" role="img" focusable="false" viewBox="0 -442 530 442"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D708" d="M74 431Q75 431 146 436T219 442Q231 442 231 434Q231 428 185 241L137 51H140L150 55Q161 59 177 67T214 86T261 119T312 165Q410 264 445 394Q458 442 496 442Q509 442 519 434T530 411Q530 390 516 352T469 262T388 162T267 70T106 5Q81 -2 71 -2Q66 -2 59 -1T51 1Q45 5 45 11Q45 13 88 188L132 364Q133 377 125 380T86 385H65Q59 391 59 393T61 412Q65 431 74 431Z"></path></g></g></g></svg></mjx-container>に乗せる雑音の量の決め方
 <ol>
@@ -151,7 +151,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <li>前ページの式を実装して値を設定し、パーティクルを動かす
 <ul>
 <li>右図: シミュレータのロボットの30[s]後の姿勢のばらつき</li>
-<li>下図: 雑音が小さすぎる/大きすぎる/ちょうど</li>
+<li>下図: 右図のロボットに対するパラメータ設定の例
+<ul>
+<li>パラメータが小さすぎる/大きすぎる/ちょうど</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>値の設定方法は詳解確率ロボティクスの5.3.3項に<br />
