@@ -106,10 +106,10 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
     - 下図: 右図のロボットに対するパラメータ設定の例
         - パラメータが小さすぎる/大きすぎる/ちょうど
 - 値の設定方法は詳解確率ロボティクスの5.3.3項に
-![bg right:20% 100%](figs/particles_vs_robots_robots.png)
+![bg right:22% 100%](figs/particles_vs_robots_robots.png)
 
 
-<img width="30%" src="figs/mcl_motion_nocalib.gif" /><img width="30%" src="figs/mcl_motion_nocalib2.gif" /><img width="30%" src="figs/mcl_motion_update.gif" />
+<img width="33%" src="figs/mcl_motion_nocalib.gif" /><img width="33%" src="figs/mcl_motion_nocalib2.gif" /><img width="33%" src="figs/mcl_motion_update.gif" />
 
 
 ---
