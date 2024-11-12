@@ -235,7 +235,7 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
         - コピーの重みは$1/N$に
     3. 1, 2を$N$回反復。$N$個のコピーを新たなパーティクルの集合に
 
-<img width="50%" src="./figs/resampling.jpg" />
+<center><img width="50%" src="./figs/resampling.jpg" /></center>
 
 ---
 
