@@ -178,10 +178,10 @@ $\delta_{\nu\nu}^2 : (\delta'_{\nu\nu}\Delta t)^2 = 1 : |\nu|\Delta t$
 - パーティクル（再定義）: $\xi_t^{(i)} = (\V{x}_t^{(i)}, w_t^{(i)})$
     - $\sum_{i=0}^{N-1} w^{(i)} = 1$　
 - 次のように信念分布を近似
-    - $P(\V{x}\_t^- \in X ) = \int\_{\V{x} \in X} b\_t(\V{x}) d\V{x} \approx \sum\_{i=0}^{N-1} w\_t^{(i)} \delta(\V{x}\_t^{(i)} \in X)$
-        - $X$に真の姿勢が含まれる確率をパーティクルの重みつき和で近似　
+    - $P(\V{x}_t^* \in X ) = \int_{\V{x} \in X} b_t(\V{x}) d\V{x} \approx \sum_{i=0}^{N-1} w_t^{(i)} \delta(\V{x}_t^{(i)} \in X)$
+        - $X$に真の姿勢が含まれる確率をパーティクルの重みの和で近似　
 - 重みの計算
-    - $w\_t^{(i)} = L\_j (\V{x}\_t^{(i)} | \V{z}\_{j,t} ) \hat{w}\_t^{(i)}$（あとから正規化）
+    - $w_t^{(i)} = L_j (\V{x}_t^{(i)} | \V{z}_{j,t} ) \hat{w}_t^{(i)}$（あとから正規化）
 
 ---
 
