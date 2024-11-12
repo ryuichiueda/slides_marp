@@ -272,7 +272,7 @@ $\Longrightarrow$それぞれが$1$個ずつきれいに選ばれる確率は低
         - 最初の位置だけ乱数で選ぶ
         - コピーの重みは$1/N$
 
-<img width="70%" src="./figs/systematic_sampling.jpg" />
+<center><img width="70%" src="./figs/systematic_sampling.jpg" /></center>
 
 ---
 
