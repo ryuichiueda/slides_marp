@@ -34,6 +34,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - 観測時: $b_t(\V{x}) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$
     - <span style="color:red">問題: 式をどうやって実装する？</span>
 - 今回: <span style="color:red">パーティクルフィルタ</span>というものを使いましょう
+    - <span style="color:red">Monte Carlo localization（MCL）</span>[Fox 1999][Dellaert 1999]という方法
 
 ---
 
@@ -288,8 +289,9 @@ $\Longrightarrow$それぞれが$1$個ずつきれいに選ばれる確率は低
 
 ---
 
-## 出力の実装（詳解5.6節）
+## 出力の利用（詳解5.6節）
 
+- パーティクルフィルタ
 - 推定結果として、センサ値の反映直後で重みが最大のパーティクルの姿勢を返すコードを書く作業
     - あくまで便宜的なもの
     - 本当はパーティクルの分布（信念分布）自体が推定結果　
