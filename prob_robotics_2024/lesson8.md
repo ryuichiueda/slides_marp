@@ -280,12 +280,11 @@ $\Longrightarrow$それぞれが$1$個ずつきれいに選ばれる確率は低
 
 - 左: 単純なリサンプリング
     - 何も観測していないのにパーティクルが複数のクラスタに分離
-        - 理由: 重みが同じでも選ばれないパーティクルが発生
+        - 理由: 重みが全て同じでも選ばれないパーティクルが発生
 - 右: 系統サンプリングによるリサンプリング
     - 全パーティクルの重みが同じなら全て選ばれる
 
-<img width="38%" src="./figs/mcl_simple_resampling.gif" />&nbsp;&nbsp;
-<img width="38%" src="./figs/mcl_sys_resampling.gif" />
+<img width="30%" src="./figs/mcl_simple_resampling.gif" /><img width="30%" src="./figs/mcl_sys_resampling.gif" />
 
 ---
 
