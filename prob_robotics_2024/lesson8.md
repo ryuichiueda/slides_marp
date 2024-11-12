@@ -284,7 +284,7 @@ $\Longrightarrow$それぞれが$1$個ずつきれいに選ばれる確率は低
 - 右: 系統サンプリングによるリサンプリング
     - 全パーティクルの重みが同じなら全て選ばれる
 
-<img width="30%" src="./figs/mcl_simple_resampling.gif" /><img width="30%" src="./figs/mcl_sys_resampling.gif" />
+<center><img width="30%" src="./figs/mcl_simple_resampling.gif" /><img width="30%" src="./figs/mcl_sys_resampling.gif" /></center>
 
 ---
 
