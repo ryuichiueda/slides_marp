@@ -441,22 +441,30 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>確率ロボティクス第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:確率ロボティクス第8回;--paginate:true;" data-marpit-pagination-total="23">
-<h2 id="%E5%87%BA%E5%8A%9B%E3%81%AE%E5%88%A9%E7%94%A8%E8%A9%B3%E8%A7%A356%E7%AF%80">出力の利用（詳解5.6節）</h2>
+<h2 id="mcl%E3%81%AE%E5%87%BA%E5%8A%9B%E8%A9%B3%E8%A7%A356%E7%AF%80">MCLの出力（詳解5.6節）</h2>
 <ul>
-<li>パーティクルフィルタ</li>
-<li>推定結果として、センサ値の反映直後で重みが最大のパーティクルの姿勢を返すコードを書く作業
+<li>パーティクルフィルタの出力はパーティクル
 <ul>
-<li>あくまで便宜的なもの</li>
-<li>本当はパーティクルの分布（信念分布）自体が推定結果</li>
+<li>推定姿勢ではない。分布を近似したもの</li>
+<li><span style="color:red">推定姿勢は絶対に一意に決まらない</span></li>
 </ul>
 </li>
-<li>他にパーティクルの姿勢の平均値を返す方法もある
+<li>実際には・・・
 <ul>
-<li>分布が二つ以上の集団に分かれていると不適切な結果を返す</li>
+<li>多くの行動決定ソフトは姿勢を求めるので推定姿勢を出力
+<ul>
+<li>ありえる出力値
+<ul>
+<li>分布の平均値</li>
+<li>直近のセンサ値に対して最も重みが大きいパーティクルの姿勢</li>
 </ul>
 </li>
 </ul>
-<p>結局、分布から姿勢を一つ決めることはできない$\Longrightarrow$12章のPOMDPでこのテーマを扱う</p>
+</li>
+</ul>
+</li>
+</ul>
+<center>本来は分布で行動を決めなければいけないことに注意（詳解12章）</center>
 <footer>確率ロボティクス第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:確率ロボティクス第8回;--paginate:true;" data-marpit-pagination-total="23">
