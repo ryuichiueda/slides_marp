@@ -373,7 +373,7 @@ setup(
 ### コードの後半
 
 ```python
-11 def cb():          #17行目で定期実行されるコールバック関数
+11 def cb():          #20行目で定期実行されるコールバック関数
 12     global n       #関数を抜けてもnがリセットされないようにしている
 13     msg = Int16()  #メッセージの「オブジェクト」
 14     msg.data = n   #msgオブジェクトの持つdataにnを結び付け
@@ -427,7 +427,7 @@ setup(
 - ビルド
     - `colcon build`して、その後`source`で設定を読み直し
         ```bash
-        $ colcon build    #注意！！必ず~/ros2_wdでやること
+        $ colcon build    #注意！！必ず~/ros2_wsでやること
         Starting >>> mypkg
         Finished <<< mypkg [2.55s]
         
