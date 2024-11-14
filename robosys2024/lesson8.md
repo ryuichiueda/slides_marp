@@ -343,7 +343,7 @@ setup(
 - 機能: 数字をカウントしてトピック`/countup`を通じて送信
   - メッセージの型は16ビット符号つき整数
     - 参考にしたページ
-        - [パブリッシャの書き方](https://index.ros.org/doc/ros2/Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber/#write-the-publisher-node)
+        - [パブリッシャの書き方](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
         - [クラスなしで記述する方法](https://qiita.com/l1sum/items/b7393c34fb0127826f74)
 - `~/ros2_ws/src/mypkg/mypkg`に`talker.py`を書く
     - 次ページ、次々ページ
