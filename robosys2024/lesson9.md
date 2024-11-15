@@ -1,10 +1,15 @@
+---
+marp: true
+---
+
+<!-- footer: "ロボットシステム学第9回" -->
+
 # ロボットシステム学
 
 ## 第9回: ROS 2の通信と型
 
 千葉工業大学 上田 隆一
 
-<br />
 
 <p style="font-size:50%">
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -14,6 +19,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+<!-- paginate: true -->
+
 ## 今日やること
 
 1. launchファイル（前回の続き）
@@ -21,40 +28,40 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 3. サービスの実装
 4. パラメータ、actionlib
 
-* 注意
-  * こまめにGitHubにpushしながら進めましょう
-  * 動画ではGitを使いませんので各自で
+- 注意
+  - こまめにGitHubにpushしながら進めましょう
+  - 動画ではGitを使いませんので各自で
 
 ---
 
 ## 1. <span style="text-transform:none">launchファイル</span>
 
-* launchファイル
-  * 複数のノードを一度に立ち上げるもの
-    * 他にもいろいろ可能だがとりあえず
-  * 作っておくと、ノードごとに`ros2 run`しなくてよい
+- launchファイル
+  - 複数のノードを一度に立ち上げるもの
+    - 他にもいろいろ可能だがとりあえず
+  - 作っておくと、ノードごとに`ros2 run`しなくてよい
 
 ---
 
 ###  <span style="text-transform:none">launch</span>ファイルの作成（準備）
 
-* パッケージのディレクトリに`launch`ディレクトリを作成
+- パッケージのディレクトリに`launch`ディレクトリを作成
 ```
 $ cd ~/ros2_ws/src/mypkg/
 $ mkdir launch
 ```
 
-* `setup.py`にローンチファイルの場所を記述
+- `setup.py`にローンチファイルの場所を記述
 ```
   2 import os                  #追加
   3 from glob import glob      #追加
 （中略）
  11     data_files=[
 （中略）                       #↓追加
- 15        (os.path.join('share', package_name), glob('launch/*.launch.py'))
+ 15        (os.path.join('share', package_name), glob('launch/-.launch.py'))
  16     ],
 ```
-* `package.xml`に依存関係を記述
+- `package.xml`に依存関係を記述
 ```
  12   <exec_depend>launch_ros</exec_depend>
 ```
@@ -63,9 +70,9 @@ $ mkdir launch
 
 ###  <span style="text-transform:none">launch</span>ファイルの作成（記述）
 
-* さきほど作った`launch`ディレクトリに設置
-* 名前は`talk_listen.launch.py`としましょう
-  * `setup.py`に`.launch.py`で終わると書いたので、それは守る
+- さきほど作った`launch`ディレクトリに設置
+- 名前は`talk_listen.launch.py`としましょう
+  - `setup.py`に`.launch.py`で終わると書いたので、それは守る
     ```python
       1 import launch
       2 import launch.actions
@@ -92,7 +99,7 @@ $ mkdir launch
 
 ### ローンチファイル（実行）
 
-* `colcon build`して実行
+- `colcon build`して実行
 ```bash
 $ ros2 launch mypkg talk_listen.launch.py
 [INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/202...
@@ -107,20 +114,20 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ## 2. 独自のメッセージ型の作成
 
-* 前回の通信: ひとつ整数を送受信するだけ
-* 意味のあるひとかたまりのデータをまとめて送るには？
-  * 意味のあるひとかたまりのデータ: 構造体に相当するもの<br />　
-* 方法
-  * 既存の型を利用
-    * `$ ros2 interface list`で一覧表示可能
-  * 自分で型（と型のためのパッケージ）を作成
-    * やってみましょう
+- 前回の通信: ひとつ整数を送受信するだけ
+- 意味のあるひとかたまりのデータをまとめて送るには？
+  - 意味のあるひとかたまりのデータ: 構造体に相当するもの<br />　
+- 方法
+  - 既存の型を利用
+    - `$ ros2 interface list`で一覧表示可能
+  - 自分で型（と型のためのパッケージ）を作成
+    - やってみましょう
 
 ---
 
 ### <span style="text-transform:none">msg</span>ファイルの作成
 
-* 型を定義するパッケージを作成
+- 型を定義するパッケージを作成
   ```bash
   $ cd ~/ros2_ws/src
   $ ros2 pkg create --build-type ament_cmake person_msgs
@@ -129,27 +136,27 @@ $ ros2 launch mypkg talk_listen.launch.py
   $ mkdir msg
   $ cd msg
   ```
-* `msg`下に、次のような`Person.msg`というファイルを設置
+- `msg`下に、次のような`Person.msg`というファイルを設置
     ```
     string name
     uint8 age
     ```
-   * このファイルから、各言語で使える構造体のようなものが生成される
+   - このファイルから、各言語で使える構造体のようなものが生成される
 
 ---
 
 ### ビルドの準備
 
-* パッケージのトップディレクトリにある`CMakeList.txt`を編集
-  * `find_package(ament_cmake REQUIRED)`の下あたりに、次の4行を記述
+- パッケージのトップディレクトリにある`CMakeList.txt`を編集
+  - `find_package(ament_cmake REQUIRED)`の下あたりに、次の4行を記述
     ```cmake
     find_package(rosidl_default_generators REQUIRED)
     rosidl_generate_interfaces(${PROJECT_NAME}
       "msg/Person.msg"
     )
     ```
-* `package.xml`も編集
-  * `buildtool_depend`の下あたりに、次の3行を追加
+- `package.xml`も編集
+  - `buildtool_depend`の下あたりに、次の3行を追加
     ```xml
     <build_depend>rosidl_default_generators</build_depend>
     <exec_depend>rosidl_default_runtime</exec_depend>
@@ -160,7 +167,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### ビルド
 
-* ビルドして環境に反映
+- ビルドして環境に反映
   ```bash
   $ cd ~/ros2_ws
   $ colcon build
@@ -172,7 +179,7 @@ $ ros2 launch mypkg talk_listen.launch.py
   Summary: 2 packages finished [2.51s]
     1 package had stderr output: mypkg
   ```
-* `source`して、型が利用できるようになっているか確認
+- `source`して、型が利用できるようになっているか確認
   ```bash
   $ source ~/.bashrc
   $ ros2 interface show person_msgs/msg/Person
@@ -184,7 +191,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### <span style="text-transform:none">Person型の利用（publish）</span>
 
-* `talker.py`からPerson型のメッセージを送信
+- `talker.py`からPerson型のメッセージを送信
     ```python
      1 import rclpy
      2 from rclpy.node import Node
@@ -205,14 +212,14 @@ $ ros2 launch mypkg talk_listen.launch.py
     17 node.create_timer(0.5, cb)
     18 rclpy.spin(node)
     ```
-   * ビルドして実行し、`ros2 topic echo`で確認のこと
+   - ビルドして実行し、`ros2 topic echo`で確認のこと
   
 
 ---
 
 ### <span style="text-transform:none">Person型の利用（subscribe）</span>
 
-* `listener.py`でPerson型のメッセージを受信、表示
+- `listener.py`でPerson型のメッセージを受信、表示
   ```python
    1 import rclpy
    2 from rclpy.node import Node
@@ -228,55 +235,55 @@ $ ros2 launch mypkg talk_listen.launch.py
   12
   13 rclpy.spin(node)
   ```
-  * `ros2 launch`で動作確認を
+  - `ros2 launch`で動作確認を
 
 ---
 
 ## 3. サービスの実装
 
-* トピックは基本的にいつpublishしてもよいし、<br />いつsubscribeしてもよい
-  * ノード同士が干渉することがない<br />　
-* ノード同士が直接、仕事の依頼やデータをやりとりしたいときは？$\Rightarrow$<span style="color:red">サービスの利用</span><br />　
-* サービス
-  * あるノードが別のノードに仕事を依頼する仕組み<br />　
-* サービスを実装してみましょう
+- トピックは基本的にいつpublishしてもよいし、<br />いつsubscribeしてもよい
+  - ノード同士が干渉することがない<br />　
+- ノード同士が直接、仕事の依頼やデータをやりとりしたいときは？$\Rightarrow$<span style="color:red">サービスの利用</span><br />　
+- サービス
+  - あるノードが別のノードに仕事を依頼する仕組み<br />　
+- サービスを実装してみましょう
 
 ---
 
 ### 実装するサービス
 
-* 人の名前を送ったら、その人の年齢を返すサービス
-  * `listener`が依頼する側
-  * `talker`が依頼する側
+- 人の名前を送ったら、その人の年齢を返すサービス
+  - `listener`が依頼する側
+  - `talker`が依頼する側
 
 ---
 
 ### <span style="text-transform:none">srvファイルの作成</span>
 
-* 準備: `person_msgs`に`srv`というディレクトリを作成
-  * `msg`と同じところに
-  * 中に、次のような`Query.srv`を置く
+- 準備: `person_msgs`に`srv`というディレクトリを作成
+  - `msg`と同じところに
+  - 中に、次のような`Query.srv`を置く
     ```
     string name
     ---
     uint8 age
     ```
-    * `---`の上: サービスを呼び出すときに呼び出し側が渡すデータ
-    * `---`の下: サービスの実行後に呼び出し側が受け取るデータ
+    - `---`の上: サービスを呼び出すときに呼び出し側が渡すデータ
+    - `---`の下: サービスの実行後に呼び出し側が受け取るデータ
 
 
 ---
 
 ### ビルド
 
-* `CMakeList.txt`に`Query.srv`を追加
+- `CMakeList.txt`に`Query.srv`を追加
   ```cmake
    15 rosidl_generate_interfaces(${PROJECT_NAME}
    16   "msg/Person.msg"
    17   "srv/Query.srv"   # 追加
    18 )
    ```
-* ビルド、`source`、確認
+- ビルド、`source`、確認
   ```bash
   $ cd ~/ros2_ws/
   $ colcon build
@@ -292,8 +299,8 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### サービスのためのコールバック関数の実装
 
-* `talker`側に、サービスが呼び出されたときの処理を書く
-  * `talker.py`
+- `talker`側に、サービスが呼び出されたときの処理を書く
+  - `talker.py`
     ```python
       1 import rclpy
       2 from rclpy.node import Node
@@ -317,8 +324,8 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### コマンドによる動作確認
 
-* `ros2 service`を使用
-* `talker`を立ち上げてからサービスの存在を確認し、<br />呼び出してみる
+- `ros2 service`を使用
+- `talker`を立ち上げてからサービスの存在を確認し、<br />呼び出してみる
   ```bash
   ### 確認 ###
   $ ros2 service list
@@ -341,10 +348,10 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### ノードからのサービス呼び出し
 
-* `listener.py`を次のように書き換え
-  * サービスとは関係ないですが、処理を`main`関数内に記述のこと
-    * `setup.py`内の`listner:main`という記述に合わせるため
-  * 前半
+- `listener.py`を次のように書き換え
+  - サービスとは関係ないですが、処理を`main`関数内に記述のこと
+    - `setup.py`内の`listner:main`という記述に合わせるため
+  - 前半
     ```python
       1 import rclpy
       2 from rclpy.node import Node
@@ -362,12 +369,12 @@ $ ros2 launch mypkg talk_listen.launch.py
      14     future = client.call_async(req) #非同期でサービスを呼び出し
      15
     ```
-    * 後半（下）に続く
+    - 後半（下）に続く
 
 >>>
 
-* 後半
-  * 後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）
+- 後半
+  - 後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）
     ```python
      16     while rclpy.ok():
      17         rclpy.spin_once(node) #一回だけサービスを呼び出したら終わり
@@ -392,15 +399,15 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ### 動作確認
 
-* 順番を変えて立ち上げてみましょう
-  * `talker`を先、`listener`を後: 年齢が受け取れる
+- 順番を変えて立ち上げてみましょう
+  - `talker`を先、`listener`を後: 年齢が受け取れる
     ```bash
     $ ros2 run mypkg listener
     [INFO] [1664865500.552181002] [listener]: 待機中
     [INFO] [1664865501.554913737] [listener]: 待機中
     [INFO] [1664865501.806117977] [listener]: age: 44
     ```
-  * `listener`を先、`talker`を後: 「待機中」が出たあと年齢が受け取れる
+  - `listener`を先、`talker`を後: 「待機中」が出たあと年齢が受け取れる
     ```bash
     $ ros2 run mypkg listener
     [INFO] [1664865501.806117977] [listener]: age: 44
@@ -410,9 +417,9 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ## 4. パラメータ、アクション
 
-* トピック、サービスの他のデータや処理の受け渡し方法
-  * パラメータ: 定数やたまに変更するデータ
-    * センサの周波数など
+- トピック、サービスの他のデータや処理の受け渡し方法
+  - パラメータ: 定数やたまに変更するデータ
+    - センサの周波数など
       ```bash
       $ ros2 param list
       /talker:
@@ -420,22 +427,22 @@ $ ros2 launch mypkg talk_listen.launch.py
       $ ros2 param get /talker use_sim_time 
       Boolean value is: False
       ```
-* アクション
-  * サービスの長時間版
-    * 呼び出し側が、途中の経過の観察やキャンセルできる
-  * 使用例
-    * ナビゲーション（目的地を指定して終わるまで待つ）
-    * マニピュレータの姿勢変更（最終的な姿勢を指定して終わるまで待つ）
-  * トピックやサービスを組み合わせて実装される
+- アクション
+  - サービスの長時間版
+    - 呼び出し側が、途中の経過の観察やキャンセルできる
+  - 使用例
+    - ナビゲーション（目的地を指定して終わるまで待つ）
+    - マニピュレータの姿勢変更（最終的な姿勢を指定して終わるまで待つ）
+  - トピックやサービスを組み合わせて実装される
 
 ---
 
 ## まとめ
 
-* やったこと
-  * ローンチファイルを作成
-  * 独自のメッセージの型、サービスを実装
-  * パラメータ、アクションの把握（紹介のみ）
-* 確認
-  * 本日扱ったふたつのパッケージがGitHubにpushされていること
-    * コミットの履歴も残っていること
+- やったこと
+  - ローンチファイルを作成
+  - 独自のメッセージの型、サービスを実装
+  - パラメータ、アクションの把握（紹介のみ）
+- 確認
+  - 本日扱ったふたつのパッケージがGitHubにpushされていること
+    - コミットの履歴も残っていること
