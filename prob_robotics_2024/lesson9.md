@@ -91,9 +91,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - $\V{u}_t, \V{u}'_t$: それぞれ制御指令と実際の制御
         - $A_t$: 後述
 
-<img width="60%" src="./figs/motion_linerized.jpg" />
+<center><img width="60%" src="./figs/motion_linerized.jpg" /></center>
 
-速度、角速度の誤差が等倍に広がる
+<center>速度、角速度の誤差がXY$\theta$空間で等倍に広がる</center>
 
 ---
 
