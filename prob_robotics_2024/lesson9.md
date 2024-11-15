@@ -88,7 +88,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 移動後の姿勢$\V{x}_t$の分布がガウス分布になるように、状態方程式を次のような形式に<span style="color:red">線形近似</span>
     - $\V{x}_t = \V{f}(\V{x}_{t-1}, \V{u}_t')$ <span style="color:red">$\approx \V{f}(\V{x}_{t-1}, \V{u}_t) + A_t (\V{u}_t' - \V{u}_t)$</span>
-        - $\V{u}_t, \V{u}'_t$: それぞれ制御指令（既知）と真の動き（未知）
+        - $\V{u}_t, \V{u}'_t$: それぞれ制御指令（既知）と真の動き（未知でばらつく）
         - $A_t$: 後述
 
 <center><img width="60%" src="./figs/motion_linerized.jpg" /></center>
@@ -110,9 +110,10 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### 行列$A_t$の計算
 
 - 状態方程式
-    - <span style="font-size:70%">$\\boldsymbol{f}(\\boldsymbol{x}, \\boldsymbol{u}) = \\begin{pmatrix} x \\\\ y \\\\ \\theta \\end{pmatrix} + \\begin{pmatrix} \\nu\\omega^{-1}\\left\{\\sin( \\theta + \\omega \\Delta t ) - \\sin\\theta \\right\} \\\\ \\nu\\omega^{-1}\\left\{-\\cos( \\theta + \\omega \\Delta t ) + \\cos\\theta \\right\} \\\\ \\omega \\Delta t \\end{pmatrix}$</span>
+    - <span style="font-size:70%">$\boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u}) = \begin{pmatrix} x \\ y \\ \theta \end{pmatrix} + \begin{pmatrix} \nu\omega^{-1}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} \\ \nu\omega^{-1}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} \\ \omega \Delta t \end{pmatrix}$</span>
 - 状態方程式の偏微分
-    - <span style="font-size:70%">$\\dfrac{\\partial \\boldsymbol{f}}{\\partial \\boldsymbol{u}} = \\begin{pmatrix} \\partial f_x/\\partial \\nu & \\partial f_x/\\partial \\omega \\\\ \\partial f_y/\\partial \\nu & \\partial f_y/\\partial \\omega \\\\ \\partial f_\\theta/\\partial \\nu & \\partial f_\\theta/\\partial \\omega \\end{pmatrix} \\nonumber \\\\ \hspace{-5em} = \\begin{pmatrix} \\omega^{-1}\\left\{\\sin( \\theta + \\omega \\Delta t ) - \\sin\\theta \\right\} & -\\nu\\omega^{-2}\\left\{\\sin( \\theta + \\omega \\Delta t ) - \\sin\\theta \\right\} + \\nu\\omega^{-1}\\Delta t \\cos( \\theta + \\omega \\Delta t )  \\\\ \\omega^{-1}\\left\{-\\cos( \\theta + \\omega \\Delta t ) + \\cos\\theta \\right\} & -\\nu\\omega^{-2}\\left\{-\\cos( \\theta + \\omega \\Delta t ) + \\cos\\theta \\right\} + \\nu\\omega^{-1}\\Delta t\\sin( \\theta + \\omega \\Delta t ) \\\\ 0 & \\Delta t \\end{pmatrix}$</span>
+    - <span style="font-size:70%">$\dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{u}}=\begin{pmatrix} \partial f_x/\partial \nu & \partial f_x/\partial \omega \\ \partial f_y/\partial \nu & \partial f_y/\partial \omega \\ \partial f_\theta/\partial \nu & \partial f_\theta/\partial \omega \end{pmatrix} \nonumber \\ \hspace{-5em}$
+    $= \begin{pmatrix} \omega^{-1}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} & -\nu\omega^{-2}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} + \nu\omega^{-1}\Delta t \cos( \theta + \omega \Delta t )  \\ \omega^{-1}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} & -\nu\omega^{-2}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} + \nu\omega^{-1}\Delta t\sin( \theta + \omega \Delta t ) \\ 0 & \Delta t \end{pmatrix}$</span>
 
 これに$\boldsymbol{x} = \boldsymbol{x}_{t-1}, \boldsymbol{u} = \boldsymbol{u}_t$を代入すると$A_t$が計算できる
 
