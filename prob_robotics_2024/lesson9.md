@@ -66,10 +66,10 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 移動後の信念分布の更新（詳解6.2節）
 
 - やること: 移動時のベイズフィルタの式をガウス分布だけの演算に
-    - <span style="color:red">近似が必要</span>　
 - ベイズフィルタの式
     - $\hat{b}_t(\V{x}) = \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}= \int_{\V{x}' \in \mathcal{X}} p(\V{x} | \V{x}', \V{u}_t) b_{t-1}(\V{x}') d\V{x}'$
-        - 右辺はガウス分布になるだろうか？
+        - Q. 右辺はガウス分布になるだろうか？
+        - A. ならないので<span style="color:red">近似が必要</span>　
 
 ---
 
