@@ -256,12 +256,13 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ## 3. サービスの実装
 
-- トピックは基本的にいつpublishしてもよいし、<br />いつsubscribeしてもよい
-  - ノード同士が干渉することがない<br />　
-- ノード同士が直接、仕事の依頼やデータをやりとりしたいときは？$\Rightarrow$<span style="color:red">サービスの利用</span><br />　
-- サービス
-  - あるノードが別のノードに仕事を依頼する仕組み<br />　
-- サービスを実装してみましょう
+- 疑問: ノード同士が直接、仕事の依頼やデータをやりとりしたいときにトピックは使える？
+    - 使えるけど仕事の終わりの確認がめんどくさい
+- <span style="color:red">サービス</span>を使うほうがよい
+    - サービス: あるノードが別のノードに仕事を依頼する仕組み　
+
+
+<center>実装してみましょう</center>
 
 ---
 
@@ -340,7 +341,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 ### コマンドによる動作確認
 
 - `ros2 service`を使用
-- `talker`を立ち上げてからサービスの存在を確認し、<br />呼び出してみる
+- `talker`を立ち上げてからサービスの存在を確認し、呼び出してみる
   ```bash
   ### 確認 ###
   $ ros2 service list
