@@ -28,11 +28,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - 次のベイズフィルタの式をすべてガウス分布の演算に
         - 移動時: $\hat{b}_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
         - 観測時: $b_t(\V{x}) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$<br />　
-- 本書で扱う系は<span style="color:red">非線形系</span><br />$\Longrightarrow$<span style="color:red">線形化</span>という操作が必要
-    - 線形化をともなうカルマンフィルタ: 「拡張カルマンフィルタ」
-    - 本書でいうカルマンフィルタは拡張カルマンフィルタのこと
 
-なぜガウス分布にこだわるのか？
+<center>疑問: なぜガウス分布にこだわるのか？</center>
 
 ---
 
