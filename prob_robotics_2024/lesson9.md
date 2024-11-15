@@ -88,7 +88,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 移動後の姿勢$\V{x}_t$の分布がガウス分布になるように、状態方程式を次のような形式に<span style="color:red">線形近似</span>
     - $\V{x}_t = \V{f}(\V{x}_{t-1}, \V{u}_t')$ <span style="color:red">$\approx \V{f}(\V{x}_{t-1}, \V{u}_t) + A_t (\V{u}_t' - \V{u}_t)$</span>
-        - $\V{u}_t, \V{u}'_t$: それぞれ制御指令と実際の制御
+        - $\V{u}_t, \V{u}'_t$: それぞれ制御指令（既知）と真の動き（未知）
         - $A_t$: 後述
 
 <center><img width="60%" src="./figs/motion_linerized.jpg" /></center>
