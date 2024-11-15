@@ -39,6 +39,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
   - 複数のノードを一度に立ち上げるもの
     - 他にもいろいろ可能だがとりあえず
   - 作っておくと、ノードごとに`ros2 run`しなくてよい
+- 形式
+    - `setup.py`みたいにPythonでプログラムするもの（今日はこっち）
+    - `package.xml`みたいにXMLで記述するもの
+    - 他にもあったような
 
 ---
 
