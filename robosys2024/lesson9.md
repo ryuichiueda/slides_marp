@@ -23,14 +23,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今日やること
 
-1. launchファイル（前回の続き）
+1. launchファイル
 2. 独自のメッセージ型の作成
 3. サービスの実装
 4. パラメータ、actionlib
 
 - 注意
   - こまめにGitHubにpushしながら進めましょう
-  - 動画ではGitを使いませんので各自で
 
 ---
 
