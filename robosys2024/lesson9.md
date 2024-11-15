@@ -341,15 +341,14 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ---
 
-### コマンドによる動作確認
+### `ros2 service`で動作確認
 
-- `ros2 service`を使用
 - `talker`を立ち上げてからサービスの存在を確認し、呼び出してみる
   ```bash
   ### 確認 ###
   $ ros2 service list
   /query                  <- 表示されるか確認
-（以下略）
+  （以下略）
   ### 実行 ###
   $ ros2 service call /query person_msgs/srv/Query "name: 上田隆一"
   requester: making request: person_msgs.srv.Query_Request(name='上田隆一')
@@ -390,7 +389,7 @@ $ ros2 launch mypkg talk_listen.launch.py
     ```
     - 後半（下）に続く
 
->>>
+---
 
 - 後半
   - 後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）
