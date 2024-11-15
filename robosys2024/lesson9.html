@@ -371,22 +371,25 @@ uint8 age
 <ul>
 <li><code>talker</code>側に、サービスが呼び出されたときの処理を書く
 <ul>
-<li><code>talker.py</code><pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">  <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
-  <span class="hljs-number">2</span> <span class="hljs-keyword">from</span> rclpy.node <span class="hljs-keyword">import</span> Node
-  <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> person_msgs.srv <span class="hljs-keyword">import</span> Query <span class="hljs-comment">#使う型を変更</span>
-  <span class="hljs-number">4</span> 
-  <span class="hljs-number">5</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">request, response</span>):
-  <span class="hljs-number">6</span>     <span class="hljs-keyword">if</span> request.name == <span class="hljs-string">&quot;上田隆一&quot;</span>:
-  <span class="hljs-number">7</span>         response.age = <span class="hljs-number">44</span>
-  <span class="hljs-number">8</span>     <span class="hljs-keyword">else</span>:
-  <span class="hljs-number">9</span>         response.age = <span class="hljs-number">255</span>
- <span class="hljs-number">10</span> 
- <span class="hljs-number">11</span>     <span class="hljs-keyword">return</span> response
- <span class="hljs-number">12</span> 
- <span class="hljs-number">13</span> rclpy.init()
- <span class="hljs-number">14</span> node = Node(<span class="hljs-string">&quot;talker&quot;</span>)
- <span class="hljs-number">15</span> srv = node.create_service(Query, <span class="hljs-string">&quot;query&quot;</span>, cb) <span class="hljs-comment">#サービスの作成</span>
- <span class="hljs-number">16</span> rclpy.spin(node)
+<li><code>talker.py</code><pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">（略）
+ <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> person_msgs.srv <span class="hljs-keyword">import</span> Query <span class="hljs-comment">#使う型を変更</span>
+ <span class="hljs-number">4</span> 
+ <span class="hljs-number">5</span> rclpy.init()
+ <span class="hljs-number">6</span> node = Node(<span class="hljs-string">&quot;talker&quot;</span>)
+ <span class="hljs-number">7</span> 
+ <span class="hljs-number">8</span> 
+ <span class="hljs-number">9</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">request, response</span>):
+<span class="hljs-number">10</span>     <span class="hljs-keyword">if</span> request.name == <span class="hljs-string">&quot;上田隆一&quot;</span>:
+<span class="hljs-number">11</span>         response.age = <span class="hljs-number">46</span>
+<span class="hljs-number">12</span>     <span class="hljs-keyword">else</span>:
+<span class="hljs-number">13</span>         response.age = <span class="hljs-number">255</span>
+<span class="hljs-number">14</span> 
+<span class="hljs-number">15</span>     <span class="hljs-keyword">return</span> response
+<span class="hljs-number">16</span> 
+<span class="hljs-number">17</span> 
+<span class="hljs-number">18</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+<span class="hljs-number">19</span>     srv = node.create_service(Query, <span class="hljs-string">&quot;query&quot;</span>, cb) <span class="hljs-comment">#サービスの作成     </span>
+<span class="hljs-number">20</span>     rclpy.spin(node)
 </code></pre>
 </li>
 </ul>

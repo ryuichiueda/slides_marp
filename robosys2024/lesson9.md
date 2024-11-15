@@ -318,22 +318,25 @@ $ ros2 launch mypkg talk_listen.launch.py
 - `talker`側に、サービスが呼び出されたときの処理を書く
   - `talker.py`
     ```python
-      1 import rclpy
-      2 from rclpy.node import Node
-      3 from person_msgs.srv import Query #使う型を変更
-      4 
-      5 def cb(request, response):
-      6     if request.name == "上田隆一":
-      7         response.age = 44
-      8     else:
-      9         response.age = 255
-     10 
-     11     return response
-     12 
-     13 rclpy.init()
-     14 node = Node("talker")
-     15 srv = node.create_service(Query, "query", cb) #サービスの作成
-     16 rclpy.spin(node)
+    （略）
+     3 from person_msgs.srv import Query #使う型を変更
+     4 
+     5 rclpy.init()
+     6 node = Node("talker")
+     7 
+     8 
+     9 def cb(request, response):
+    10     if request.name == "上田隆一":
+    11         response.age = 46
+    12     else:
+    13         response.age = 255
+    14 
+    15     return response
+    16 
+    17 
+    18 def main():
+    19     srv = node.create_service(Query, "query", cb) #サービスの作成     
+    20     rclpy.spin(node)
     ```
 
 ---
