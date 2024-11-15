@@ -389,7 +389,6 @@ $ ros2 launch mypkg talk_listen.launch.py
 ---
 
 - 後半
-  - 後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）
     ```python
     18     while rclpy.ok():
     19         rclpy.spin_once(node) #一回だけサービスを呼び出したら終わり
@@ -403,8 +402,8 @@ $ ros2 launch mypkg talk_listen.launch.py
     27 
     28             break #whileを出る
     29 
-    30     node.destroy_node() #ノードの後始末
-    31     rclpy.shutdown()    #通信の後始末
+    30     node.destroy_node() #ノードの後始末   （後始末は無限ループでないので書きました。
+    31     rclpy.shutdown()    #通信の後始       ただ、本来は無限ループでも書いたほうがよいです。）
     ```
 
 ---
@@ -417,12 +416,12 @@ $ ros2 launch mypkg talk_listen.launch.py
     $ ros2 run mypkg listener
     [INFO] [1664865500.552181002] [listener]: 待機中
     [INFO] [1664865501.554913737] [listener]: 待機中
-    [INFO] [1664865501.806117977] [listener]: age: 44
+    [INFO] [1664865501.806117977] [listener]: age: 46
     ```
   - `listener`を先、`talker`を後: 「待機中」が出たあと年齢が受け取れる
     ```bash
     $ ros2 run mypkg listener
-    [INFO] [1664865501.806117977] [listener]: age: 44
+    [INFO] [1664865501.806117977] [listener]: age: 46
     ```
 
 ---

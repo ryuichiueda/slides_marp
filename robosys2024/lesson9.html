@@ -451,9 +451,7 @@ person_msgs.srv.Query_Response(age=255)
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="ロボットシステム学第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:ロボットシステム学第9回;--paginate:true;" data-marpit-pagination-total="24">
 <ul>
-<li>後半
-<ul>
-<li>後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-number">18</span>     <span class="hljs-keyword">while</span> rclpy.ok():
+<li>後半<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-number">18</span>     <span class="hljs-keyword">while</span> rclpy.ok():
 <span class="hljs-number">19</span>         rclpy.spin_once(node) <span class="hljs-comment">#一回だけサービスを呼び出したら終わり</span>
 <span class="hljs-number">20</span>         <span class="hljs-keyword">if</span> future.done():     <span class="hljs-comment">#終わっていたら</span>
 <span class="hljs-number">21</span>             <span class="hljs-keyword">try</span>:
@@ -465,11 +463,9 @@ person_msgs.srv.Query_Response(age=255)
 <span class="hljs-number">27</span> 
 <span class="hljs-number">28</span>             <span class="hljs-keyword">break</span> <span class="hljs-comment">#whileを出る</span>
 <span class="hljs-number">29</span> 
-<span class="hljs-number">30</span>     node.destroy_node() <span class="hljs-comment">#ノードの後始末</span>
-<span class="hljs-number">31</span>     rclpy.shutdown()    <span class="hljs-comment">#通信の後始末</span>
+<span class="hljs-number">30</span>     node.destroy_node() <span class="hljs-comment">#ノードの後始末   （後始末は無限ループでないので書きました。</span>
+<span class="hljs-number">31</span>     rclpy.shutdown()    <span class="hljs-comment">#通信の後始       ただ、本来は無限ループでも書いたほうがよいです。）</span>
 </code></pre>
-</li>
-</ul>
 </li>
 </ul>
 <footer>ロボットシステム学第9回</footer>
@@ -482,11 +478,11 @@ person_msgs.srv.Query_Response(age=255)
 <li><code>talker</code>を先、<code>listener</code>を後: 年齢が受け取れる<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ros2 run mypkg listener
 [INFO] [1664865500.552181002] [listener]: 待機中
 [INFO] [1664865501.554913737] [listener]: 待機中
-[INFO] [1664865501.806117977] [listener]: age: 44
+[INFO] [1664865501.806117977] [listener]: age: 46
 </code></pre>
 </li>
 <li><code>listener</code>を先、<code>talker</code>を後: 「待機中」が出たあと年齢が受け取れる<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ros2 run mypkg listener
-[INFO] [1664865501.806117977] [listener]: age: 44
+[INFO] [1664865501.806117977] [listener]: age: 46
 </code></pre>
 </li>
 </ul>
