@@ -77,10 +77,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 分布$p(\V{x} | \V{x}', \V{u}_t)$がガウス分布にはならない
     - 例: 前章では$\V{u}_t$のばらつきをガウス分布でモデル化したが、そうであってもロボットをまっすぐ走らせるとパーティクルが弓状の分布に
-
-<img width="30%" src="./figs/simulated_on.png" /><img width="40%" src="./figs/nonliner_motion.jpg" />
-
-<center>むりやりガウス分布に近似しましょう</center>
+        <img width="30%" src="./figs/simulated_on.png" /><img width="40%" src="./figs/nonliner_motion.jpg" />
+- どうするか？$\rightarrow$ むりやりガウス分布に近似
 
 ---
 
