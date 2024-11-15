@@ -77,9 +77,10 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 分布$p(\V{x} | \V{x}', \V{u}_t)$がガウス分布にはならない
     - 例: 前章では$\V{u}_t$のばらつきをガウス分布でモデル化したが、そうであってもロボットをまっすぐ走らせるとパーティクルが弓状の分布に
-        <img width="30%" src="./figs/simulated_on.png" /><img width="40%" src="./figs/nonliner_motion.jpg" />
+        <img width="30%" src="./figs/simulated_on.png" /><img width="35%" src="./figs/nonliner_motion.jpg" />
 - どうするか？$\rightarrow$ むりやりガウス分布に近似
-    - 推定姿勢のまわり（信念分布の中心）ほど近似誤差が少ないようにしてずれを抑える
+    - 推定姿勢のまわり（信念分布の中心）ほど近似誤差が少ないように
+    - 推定の精度を高く保てば問題ないという考え方
 
 ---
 
