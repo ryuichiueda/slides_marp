@@ -425,26 +425,20 @@ person_msgs.srv.Query_Response(age=255)
 <ul>
 <li><code>listener.py</code>を次のように書き換え
 <ul>
-<li>サービスとは関係ないですが、処理を<code>main</code>関数内に記述のこと
-<ul>
-<li><code>setup.py</code>内の<code>listner:main</code>という記述に合わせるため</li>
-</ul>
-</li>
-<li>前半<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">  <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
-  <span class="hljs-number">2</span> <span class="hljs-keyword">from</span> rclpy.node <span class="hljs-keyword">import</span> Node
-  <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> person_msgs.srv <span class="hljs-keyword">import</span> Query
-  <span class="hljs-number">4</span>
-  <span class="hljs-number">5</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
-  <span class="hljs-number">6</span>     rclpy.init()
-  <span class="hljs-number">7</span>     node = Node(<span class="hljs-string">&quot;listener&quot;</span>)
-  <span class="hljs-number">8</span>     client = node.create_client(Query, <span class="hljs-string">&#x27;query&#x27;</span>) <span class="hljs-comment">#サービスのクライアントの作成</span>
-  <span class="hljs-number">9</span>     <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> client.wait_for_service(timeout_sec=<span class="hljs-number">1.0</span>): <span class="hljs-comment">#サービスの待ち待ち</span>
- <span class="hljs-number">10</span>         node.get_logger().info(<span class="hljs-string">&#x27;待機中&#x27;</span>)
- <span class="hljs-number">11</span>
- <span class="hljs-number">12</span>     req = Query.Request()
- <span class="hljs-number">13</span>     req.name = <span class="hljs-string">&quot;上田隆一&quot;</span>
- <span class="hljs-number">14</span>     future = client.call_async(req) <span class="hljs-comment">#非同期でサービスを呼び出し</span>
- <span class="hljs-number">15</span>
+<li>前半<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">（ヘッダ部分はtalker.pyと同じ）
+ <span class="hljs-number">4</span>
+ <span class="hljs-number">5</span> rclpy.init()
+ <span class="hljs-number">6</span> node = Node(<span class="hljs-string">&quot;listener&quot;</span>)
+ <span class="hljs-number">7</span> 
+ <span class="hljs-number">8</span> 
+ <span class="hljs-number">9</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+<span class="hljs-number">10</span>     client = node.create_client(Query, <span class="hljs-string">&#x27;query&#x27;</span>) <span class="hljs-comment">#サービスのクライアントの作成</span>
+<span class="hljs-number">11</span>     <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> client.wait_for_service(timeout_sec=<span class="hljs-number">1.0</span>): <span class="hljs-comment">#サービスの待ち待ち</span>
+<span class="hljs-number">12</span>         node.get_logger().info(<span class="hljs-string">&#x27;待機中&#x27;</span>)
+<span class="hljs-number">13</span>
+<span class="hljs-number">14</span>     req = Query.Request()
+<span class="hljs-number">15</span>     req.name = <span class="hljs-string">&quot;上田隆一&quot;</span>
+<span class="hljs-number">16</span>     future = client.call_async(req) <span class="hljs-comment">#非同期でサービスを呼び出し</span>
 </code></pre>
 <ul>
 <li>後半（下）に続く</li>
@@ -459,23 +453,20 @@ person_msgs.srv.Query_Response(age=255)
 <ul>
 <li>後半
 <ul>
-<li>後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"> <span class="hljs-number">16</span>     <span class="hljs-keyword">while</span> rclpy.ok():
- <span class="hljs-number">17</span>         rclpy.spin_once(node) <span class="hljs-comment">#一回だけサービスを呼び出したら終わり</span>
- <span class="hljs-number">18</span>         <span class="hljs-keyword">if</span> future.done():     <span class="hljs-comment">#終わっていたら</span>
- <span class="hljs-number">19</span>             <span class="hljs-keyword">try</span>:
- <span class="hljs-number">20</span>                 response = future.result() <span class="hljs-comment">#結果を受取り</span>
- <span class="hljs-number">21</span>             <span class="hljs-keyword">except</span>:
- <span class="hljs-number">22</span>                 node.get_logger().info(<span class="hljs-string">&#x27;呼び出し失敗&#x27;</span>)
- <span class="hljs-number">23</span>             <span class="hljs-keyword">else</span>: <span class="hljs-comment">#このelseは「exceptじゃなかったら」という意味のelse</span>
- <span class="hljs-number">24</span>                 node.get_logger().info(<span class="hljs-string">&quot;age: {}&quot;</span>.<span class="hljs-built_in">format</span>(response.age))
- <span class="hljs-number">25</span>
- <span class="hljs-number">26</span>             <span class="hljs-keyword">break</span> <span class="hljs-comment">#whileを出る</span>
- <span class="hljs-number">27</span>
- <span class="hljs-number">28</span>     node.destroy_node() <span class="hljs-comment">#ノードの後始末</span>
- <span class="hljs-number">29</span>     rclpy.shutdown()    <span class="hljs-comment">#ノードの後始末</span>
- <span class="hljs-number">30</span>
- <span class="hljs-number">31</span> <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>: <span class="hljs-comment">#ライブラリと区別するためのPythonの記法</span>
- <span class="hljs-number">32</span>     main()
+<li>後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-number">18</span>     <span class="hljs-keyword">while</span> rclpy.ok():
+<span class="hljs-number">19</span>         rclpy.spin_once(node) <span class="hljs-comment">#一回だけサービスを呼び出したら終わり</span>
+<span class="hljs-number">20</span>         <span class="hljs-keyword">if</span> future.done():     <span class="hljs-comment">#終わっていたら</span>
+<span class="hljs-number">21</span>             <span class="hljs-keyword">try</span>:
+<span class="hljs-number">22</span>                 response = future.result() <span class="hljs-comment">#結果を受取り</span>
+<span class="hljs-number">23</span>             <span class="hljs-keyword">except</span>:
+<span class="hljs-number">24</span>                 node.get_logger().info(<span class="hljs-string">&#x27;呼び出し失敗&#x27;</span>)
+<span class="hljs-number">25</span>             <span class="hljs-keyword">else</span>: <span class="hljs-comment">#このelseは「exceptじゃなかったら」という意味のelse</span>
+<span class="hljs-number">26</span>                 node.get_logger().info(<span class="hljs-string">&quot;age: {}&quot;</span>.<span class="hljs-built_in">format</span>(response.age))
+<span class="hljs-number">27</span> 
+<span class="hljs-number">28</span>             <span class="hljs-keyword">break</span> <span class="hljs-comment">#whileを出る</span>
+<span class="hljs-number">29</span> 
+<span class="hljs-number">30</span>     node.destroy_node() <span class="hljs-comment">#ノードの後始末</span>
+<span class="hljs-number">31</span>     rclpy.shutdown()    <span class="hljs-comment">#通信の後始末</span>
 </code></pre>
 </li>
 </ul>

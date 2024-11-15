@@ -367,25 +367,22 @@ $ ros2 launch mypkg talk_listen.launch.py
 ### ノードからのサービス呼び出し
 
 - `listener.py`を次のように書き換え
-  - サービスとは関係ないですが、処理を`main`関数内に記述のこと
-    - `setup.py`内の`listner:main`という記述に合わせるため
   - 前半
     ```python
-      1 import rclpy
-      2 from rclpy.node import Node
-      3 from person_msgs.srv import Query
-      4
-      5 def main():
-      6     rclpy.init()
-      7     node = Node("listener")
-      8     client = node.create_client(Query, 'query') #サービスのクライアントの作成
-      9     while not client.wait_for_service(timeout_sec=1.0): #サービスの待ち待ち
-     10         node.get_logger().info('待機中')
-     11
-     12     req = Query.Request()
-     13     req.name = "上田隆一"
-     14     future = client.call_async(req) #非同期でサービスを呼び出し
-     15
+    （ヘッダ部分はtalker.pyと同じ）
+     4
+     5 rclpy.init()
+     6 node = Node("listener")
+     7 
+     8 
+     9 def main():
+    10     client = node.create_client(Query, 'query') #サービスのクライアントの作成
+    11     while not client.wait_for_service(timeout_sec=1.0): #サービスの待ち待ち
+    12         node.get_logger().info('待機中')
+    13
+    14     req = Query.Request()
+    15     req.name = "上田隆一"
+    16     future = client.call_async(req) #非同期でサービスを呼び出し
     ```
     - 後半（下）に続く
 
@@ -394,23 +391,20 @@ $ ros2 launch mypkg talk_listen.launch.py
 - 後半
   - 後始末は、このノードが無限ループではないので記述（本当は無限ループでも記述したほうがよい）
     ```python
-     16     while rclpy.ok():
-     17         rclpy.spin_once(node) #一回だけサービスを呼び出したら終わり
-     18         if future.done():     #終わっていたら
-     19             try:
-     20                 response = future.result() #結果を受取り
-     21             except:
-     22                 node.get_logger().info('呼び出し失敗')
-     23             else: #このelseは「exceptじゃなかったら」という意味のelse
-     24                 node.get_logger().info("age: {}".format(response.age))
-     25
-     26             break #whileを出る
-     27
-     28     node.destroy_node() #ノードの後始末
-     29     rclpy.shutdown()    #ノードの後始末
-     30
-     31 if __name__ == '__main__': #ライブラリと区別するためのPythonの記法
-     32     main()
+    18     while rclpy.ok():
+    19         rclpy.spin_once(node) #一回だけサービスを呼び出したら終わり
+    20         if future.done():     #終わっていたら
+    21             try:
+    22                 response = future.result() #結果を受取り
+    23             except:
+    24                 node.get_logger().info('呼び出し失敗')
+    25             else: #このelseは「exceptじゃなかったら」という意味のelse
+    26                 node.get_logger().info("age: {}".format(response.age))
+    27 
+    28             break #whileを出る
+    29 
+    30     node.destroy_node() #ノードの後始末
+    31     rclpy.shutdown()    #通信の後始末
     ```
 
 ---
