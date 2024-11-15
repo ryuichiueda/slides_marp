@@ -93,7 +93,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 <center><img width="60%" src="./figs/motion_linerized.jpg" /></center>
 
-<center>速度、角速度の誤差がXY$\theta$空間で等倍に広がる</center>
+<center>速度、角速度の誤差がXYθ空間で等倍に広がる</center>
 
 ---
 
