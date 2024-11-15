@@ -137,15 +137,15 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### $R_t$の計算
 
 1. 制御のばらつきを$\boldsymbol{u}' \sim \mathcal{N}(\boldsymbol{u}, M_t)$でモデル化
-    - $M_t = \dfrac{1}{\Delta t}\begin{pmatrix} \sigma^2_{\nu\nu}|\nu_t| + \sigma^2_{\nu\omega}|\omega_t| & 0 \\\\ 0 & \sigma^2_{\omega\nu}|\nu_t| + \sigma^2_{\omega\omega}|\omega_t| \end{pmatrix}$
-    - $\sigma^2_{ab}$: 移動量$b$あたりの$a$の分散
-    - <span style="color:red">これはパーティクルフィルタで使ったモデルと同じ</span>
-    - すべて分かっている変数で構成される　
+    - $M_t = \dfrac{1}{\Delta t}\begin{pmatrix} \sigma^2_{\nu\nu}|\nu_t| + \sigma^2_{\nu\omega}|\omega_t| & 0 \\ 0 & \sigma^2_{\omega\nu}|\nu_t| + \sigma^2_{\omega\omega}|\omega_t| \end{pmatrix}$
+        - $\sigma^2_{ab}$: 移動量$b$あたりの$a$の分散
+        - <span style="color:red">これはパーティクルフィルタで使ったモデルと同じ</span>
+        - すべて分かっている変数で構成される　
 2. 共分散行列の定義から
     - $R_t = \left\langle  (\V{x}_t - \V{\mu}_t) (\V{x}_t - \V{\mu}_t)^\top \right\rangle_{\mathcal{N}(\V{u}, M_t)}$
     $= \left\langle A_t (\V{u}'_t - \V{u}_t) \left\{ A_t (\V{u}'_t - \V{u}_t) \right\}^\top \right\rangle_{\mathcal{N}(\V{u}, M_t)}$
     $= A_t  \left\{ \left\langle (\V{u}'_t - \V{u}_t) (\V{u}'_t - \V{u}_t)^\top \right\rangle_{\mathcal{N}(\V{u}, M_t)} \right\} A_t^\top$
-	<span style="color:red">$ = A_t M_t A_t^\top$</span>
+	<span style="color:red">$= A_t M_t A_t^\top$</span>
         <span style="font-size:60%">※ 書籍（付録B.1.10）はもう少し回りくどい方法で計算しています。書き直したい・・・</span>
 
 ---
