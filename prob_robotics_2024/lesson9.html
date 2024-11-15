@@ -30,21 +30,25 @@
 </li>
 </ul>
 </li>
+<li>疑問: なぜガウス分布にこだわるのか？
+<ul>
+<li><span style="color:red">計算量が小さい</span>
+<ul>
+<li>平均値と共分散行列の演算だけでベイズフィルタを実装可能</li>
+<li>状態の次元が高くても適用可能</li>
 </ul>
-<center>疑問: なぜガウス分布にこだわるのか？</center>
+</li>
+</ul>
+</li>
+</ul>
 <footer>確率ロボティクス第9回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-footer="確率ロボティクス第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:確率ロボティクス第9回;--paginate:true;" data-marpit-pagination-total="20">
-<h3 id="%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AE%E6%80%A7%E8%B3%AA">カルマンフィルタの性質</h3>
-<p>パーティクルフィルタと比較すると・・・</p>
+<h3 id="%E8%87%AA%E5%B7%B1%E4%BD%8D%E7%BD%AE%E6%8E%A8%E5%AE%9A%E3%81%B8%E3%81%AE%E9%81%A9%E7%94%A8">自己位置推定への適用</h3>
 <ul>
-<li>利点: <span style="color:red">計算量が小さい</span>
+<li>いろいろ問題がある
 <ul>
-<li>平均値と共分散行列の演算だけでベイズフィルタを実装可能</li>
-<li>状態の次元が高くても適用可能<br /></li>
-</ul>
-</li>
-<li>問題1: ガウス分布なので次のような状況で信念が表現しずらい
+<li>ガウス分布なので次のような状況で信念が表現しずらい
 <ul>
 <li>ロボットが壁ぎわにいて、壁の向こうにはいる可能性がない
 <ul>
@@ -52,11 +56,13 @@
 </ul>
 </li>
 <li>分布がマルチモーダル</li>
-<li>自己位置の情報がない（一様分布）<br /></li>
+<li>自己位置の情報がない（一様分布）</li>
 </ul>
 </li>
-<li>問題2: 全部ガウス分布で計算できるのか？</li>
 </ul>
+</li>
+</ul>
+<p>ということで自己位置推定にはあまり使われないけど、考え方は重要なので計算方法をおさえましょう</p>
 <footer>確率ロボティクス第9回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="確率ロボティクス第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:確率ロボティクス第9回;--paginate:true;" data-marpit-pagination-total="20">
