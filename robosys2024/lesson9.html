@@ -63,27 +63,29 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="ロボットシステム学第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:ロボットシステム学第9回;--paginate:true;" data-marpit-pagination-total="18">
 <h3 id="span-styletext-transformnonelaunchspan%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%9C%E6%88%90%E6%BA%96%E5%82%99"><span style="text-transform:none">launch</span>ファイルの作成（準備）</h3>
 <ul>
-<li>パッケージのディレクトリに<code>launch</code>ディレクトリを作成</li>
-</ul>
+<li>
+<p>パッケージのディレクトリに<code>launch</code>ディレクトリを作成</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>$ cd ~/ros2_ws/src/mypkg/
 $ mkdir launch
 </code></pre>
-<ul>
-<li><code>setup.py</code>にローンチファイルの場所を記述</li>
-</ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>  2 import os                  #追加
-  3 from glob import glob      #追加
+</li>
+<li>
+<p><code>setup.py</code>にローンチファイルの場所を記述</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>  2 import os                  #追加。OSの機能のパッケージ
+  3 from glob import glob      #追加。グロブ（ワイルドカード）を扱う関数
 （中略）
  11     data_files=[
-（中略）                       #↓追加
- 15        (os.path.join('share', package_name), glob('launch/-.launch.py'))
- 16     ],
+（中略）
+ 15        (os.path.join('share', package_name), glob('launch/*.launch.py'))
+ 16     ],                       #↑追加
 </code></pre>
-<ul>
-<li><code>package.xml</code>に依存関係を記述</li>
+</li>
+<li>
+<p><code>package.xml</code>に依存関係を記述</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>12   &lt;exec_depend&gt;launch_ros&lt;/exec_depend&gt;
+</code></pre>
+</li>
 </ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code> 12   &lt;exec_depend&gt;launch_ros&lt;/exec_depend&gt;
-</code></pre>
 <footer>ロボットシステム学第9回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットシステム学第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットシステム学第9回;--paginate:true;" data-marpit-pagination-total="18">

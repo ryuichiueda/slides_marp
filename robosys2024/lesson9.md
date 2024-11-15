@@ -49,25 +49,25 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ###  <span style="text-transform:none">launch</span>ファイルの作成（準備）
 
 - パッケージのディレクトリに`launch`ディレクトリを作成
-```
-$ cd ~/ros2_ws/src/mypkg/
-$ mkdir launch
-```
+    ```
+    $ cd ~/ros2_ws/src/mypkg/
+    $ mkdir launch
+    ```
 
 - `setup.py`にローンチファイルの場所を記述
-```
-  2 import os                  #追加
-  3 from glob import glob      #追加
-（中略）
- 11     data_files=[
-（中略）                       #↓追加
- 15        (os.path.join('share', package_name), glob('launch/-.launch.py'))
- 16     ],
-```
+    ```
+      2 import os                  #追加。OSの機能のパッケージ
+      3 from glob import glob      #追加。グロブ（ワイルドカード）を扱う関数
+    （中略）
+     11     data_files=[
+    （中略）
+     15        (os.path.join('share', package_name), glob('launch/*.launch.py'))
+     16     ],                       #↑追加
+    ```
 - `package.xml`に依存関係を記述
-```
- 12   <exec_depend>launch_ros</exec_depend>
-```
+    ```
+    12   <exec_depend>launch_ros</exec_depend>
+    ```
 
 ---
 
