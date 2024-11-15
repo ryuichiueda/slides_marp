@@ -68,7 +68,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - やること: 移動時のベイズフィルタの式をガウス分布だけの演算に
 - ベイズフィルタの式
     - $\hat{b}_t(\V{x}) = \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}= \int_{\V{x}' \in \mathcal{X}} p(\V{x} | \V{x}', \V{u}_t) b_{t-1}(\V{x}') d\V{x}'$
-        - Q. $\hat{b}_t$はガウス分布になるだろうか？
+        - 疑問: $\hat{b}_t$はガウス分布になるだろうか？
 
 ---
 
