@@ -86,16 +86,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
       7 def generate_launch_description():
       8
       9     talker = launch_ros.actions.Node(
-     10         package='mypkg',
-     11         executable='talker',
+     10         package='mypkg',      #パッケージの名前を指定
+     11         executable='talker',  #実行するファイルの指定
      12         )
      13     listener = launch_ros.actions.Node(
      14         package='mypkg',
      15         executable='listener',
-     16         output='screen'
+     16         output='screen'        #ログを端末に出すための設定
      17         )
      18
-     19     return launch.LaunchDescription([talker, listener])
+     19     return launch.LaunchDescription([talker, listener])                      
     ```
 
 ---
@@ -202,8 +202,8 @@ $ ros2 launch mypkg talk_listen.launch.py
      4 
      5 rclpy.init()
      6 node = Node("talker")
-     7 pub = node.create_publisher(Person, "person", 10) #変更
-     8 n = 0
+     7 pub = node.create_publisher(Person, "person", 10) #変更 　　　　　　          
+     8 n = 0        #ここ、詰めて書いちゃってますけど、関数の上は空白2行分空けましょう
      9 def cb():
     10     global n
     11     msg = Person()         #受信するデータの型を変更
@@ -211,7 +211,7 @@ $ ros2 launch mypkg talk_listen.launch.py
     13     msg.age = n            #msgファイルに書いた「age」
     14     pub.publish(msg)
     15     n += 1
-    16 
+    16           
     17 node.create_timer(0.5, cb)
     18 rclpy.spin(node)
     ```

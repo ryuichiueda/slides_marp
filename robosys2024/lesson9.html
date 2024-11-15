@@ -103,16 +103,16 @@ $ mkdir launch
   <span class="hljs-number">7</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_launch_description</span>():
   <span class="hljs-number">8</span>
   <span class="hljs-number">9</span>     talker = launch_ros.actions.Node(
- <span class="hljs-number">10</span>         package=<span class="hljs-string">&#x27;mypkg&#x27;</span>,
- <span class="hljs-number">11</span>         executable=<span class="hljs-string">&#x27;talker&#x27;</span>,
+ <span class="hljs-number">10</span>         package=<span class="hljs-string">&#x27;mypkg&#x27;</span>,      <span class="hljs-comment">#パッケージの名前を指定</span>
+ <span class="hljs-number">11</span>         executable=<span class="hljs-string">&#x27;talker&#x27;</span>,  <span class="hljs-comment">#実行するファイルの指定</span>
  <span class="hljs-number">12</span>         )
  <span class="hljs-number">13</span>     listener = launch_ros.actions.Node(
  <span class="hljs-number">14</span>         package=<span class="hljs-string">&#x27;mypkg&#x27;</span>,
  <span class="hljs-number">15</span>         executable=<span class="hljs-string">&#x27;listener&#x27;</span>,
- <span class="hljs-number">16</span>         output=<span class="hljs-string">&#x27;screen&#x27;</span>
+ <span class="hljs-number">16</span>         output=<span class="hljs-string">&#x27;screen&#x27;</span>        <span class="hljs-comment">#ログを端末に出すための設定</span>
  <span class="hljs-number">17</span>         )
  <span class="hljs-number">18</span>
- <span class="hljs-number">19</span>     <span class="hljs-keyword">return</span> launch.LaunchDescription([talker, listener])
+ <span class="hljs-number">19</span>     <span class="hljs-keyword">return</span> launch.LaunchDescription([talker, listener])                      
 </code></pre>
 </li>
 </ul>
@@ -239,8 +239,8 @@ uint8 age
  <span class="hljs-number">4</span> 
  <span class="hljs-number">5</span> rclpy.init()
  <span class="hljs-number">6</span> node = Node(<span class="hljs-string">&quot;talker&quot;</span>)
- <span class="hljs-number">7</span> pub = node.create_publisher(Person, <span class="hljs-string">&quot;person&quot;</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">#変更</span>
- <span class="hljs-number">8</span> n = <span class="hljs-number">0</span>
+ <span class="hljs-number">7</span> pub = node.create_publisher(Person, <span class="hljs-string">&quot;person&quot;</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">#変更 　　　　　　          </span>
+ <span class="hljs-number">8</span> n = <span class="hljs-number">0</span>        <span class="hljs-comment">#ここ、詰めて書いちゃってますけど、関数の上は空白2行分空けましょう</span>
  <span class="hljs-number">9</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>():
 <span class="hljs-number">10</span>     <span class="hljs-keyword">global</span> n
 <span class="hljs-number">11</span>     msg = Person()         <span class="hljs-comment">#受信するデータの型を変更</span>
@@ -248,7 +248,7 @@ uint8 age
 <span class="hljs-number">13</span>     msg.age = n            <span class="hljs-comment">#msgファイルに書いた「age」</span>
 <span class="hljs-number">14</span>     pub.publish(msg)
 <span class="hljs-number">15</span>     n += <span class="hljs-number">1</span>
-<span class="hljs-number">16</span> 
+<span class="hljs-number">16</span>           
 <span class="hljs-number">17</span> node.create_timer(<span class="hljs-number">0.5</span>, cb)
 <span class="hljs-number">18</span> rclpy.spin(node)
 </code></pre>
