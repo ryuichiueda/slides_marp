@@ -231,44 +231,26 @@ $ ros2 launch mypkg talk_listen.launch.py
 ### Person型の利用（subscribe）
 
 - `listener.py`でPerson型のメッセージを受信、表示
-  ```python
+    ```python
      1 import rclpy
      2 from rclpy.node import Node
-     3 from std_msgs.msg import Int16
+     3 from person_msgs.msg import Person
      4 
-     5 rclpy.init()
-     6 node = Node("talker")
-     7 pub = node.create_publisher(Int16, "countup", 10)
-     8 n = 0
+     5 
+     6 rclpy.init()
+     7 node = Node("listener")
+     8 
      9 
-    10 
-    11 def cb():
-    12     global n
-    13     msg = Int16()
-    14     msg.data = n
-    15     pub.publish(msg)
-    16     n += 1
-    17 
-    18 
-    19 def main():
-    20     node.create_timer(0.5, cb)
-    21     rclpy.spin(node)
-
-   1 import rclpy
-   2 from rclpy.node import Node
-   3 from person_msgs.msg import Person
-   4
-   5 def cb(msg):
-   6     global node
-   7     node.get_logger().info("Listen: %s" % msg) #変更
-   8
-   9 rclpy.init()
-  10 node = Node("listener")
-  11 pub = node.create_subscription(Person, "person", cb, 10) #変更
-  12
-  13 rclpy.spin(node)
-  ```
-  - `ros2 launch`で動作確認を
+    10 def cb(msg):
+    11     global node
+    12     node.get_logger().info("Listen: %s" % msg)
+    13 
+    14 
+    15 def main():
+    16     pub = node.create_subscription(Person, "person", cb, 10)                 
+    17     rclpy.spin(node)
+    ```
+    - `ros2 launch`で動作確認を
 
 ---
 

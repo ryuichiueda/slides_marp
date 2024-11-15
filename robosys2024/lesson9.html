@@ -270,41 +270,23 @@ uint8 age
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer="ロボットシステム学第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="13" style="--footer:ロボットシステム学第9回;--paginate:true;" data-marpit-pagination-total="19">
 <h3 id="person%E5%9E%8B%E3%81%AE%E5%88%A9%E7%94%A8subscribe">Person型の利用（subscribe）</h3>
 <ul>
-<li><code>listener.py</code>でPerson型のメッセージを受信、表示<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python">   <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
-   <span class="hljs-number">2</span> <span class="hljs-keyword">from</span> rclpy.node <span class="hljs-keyword">import</span> Node
-   <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> std_msgs.msg <span class="hljs-keyword">import</span> Int16
-   <span class="hljs-number">4</span> 
-   <span class="hljs-number">5</span> rclpy.init()
-   <span class="hljs-number">6</span> node = Node(<span class="hljs-string">&quot;talker&quot;</span>)
-   <span class="hljs-number">7</span> pub = node.create_publisher(Int16, <span class="hljs-string">&quot;countup&quot;</span>, <span class="hljs-number">10</span>)
-   <span class="hljs-number">8</span> n = <span class="hljs-number">0</span>
-   <span class="hljs-number">9</span> 
-  <span class="hljs-number">10</span> 
-  <span class="hljs-number">11</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>():
-  <span class="hljs-number">12</span>     <span class="hljs-keyword">global</span> n
-  <span class="hljs-number">13</span>     msg = Int16()
-  <span class="hljs-number">14</span>     msg.data = n
-  <span class="hljs-number">15</span>     pub.publish(msg)
-  <span class="hljs-number">16</span>     n += <span class="hljs-number">1</span>
-  <span class="hljs-number">17</span> 
-  <span class="hljs-number">18</span> 
-  <span class="hljs-number">19</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
-  <span class="hljs-number">20</span>     node.create_timer(<span class="hljs-number">0.5</span>, cb)
-  <span class="hljs-number">21</span>     rclpy.spin(node)
-
- <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
+<li><code>listener.py</code>でPerson型のメッセージを受信、表示<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"> <span class="hljs-number">1</span> <span class="hljs-keyword">import</span> rclpy
  <span class="hljs-number">2</span> <span class="hljs-keyword">from</span> rclpy.node <span class="hljs-keyword">import</span> Node
  <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> person_msgs.msg <span class="hljs-keyword">import</span> Person
- <span class="hljs-number">4</span>
- <span class="hljs-number">5</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">msg</span>):
- <span class="hljs-number">6</span>     <span class="hljs-keyword">global</span> node
- <span class="hljs-number">7</span>     node.get_logger().info(<span class="hljs-string">&quot;Listen: %s&quot;</span> % msg) <span class="hljs-comment">#変更</span>
- <span class="hljs-number">8</span>
- <span class="hljs-number">9</span> rclpy.init()
-<span class="hljs-number">10</span> node = Node(<span class="hljs-string">&quot;listener&quot;</span>)
-<span class="hljs-number">11</span> pub = node.create_subscription(Person, <span class="hljs-string">&quot;person&quot;</span>, cb, <span class="hljs-number">10</span>) <span class="hljs-comment">#変更</span>
-<span class="hljs-number">12</span>
-<span class="hljs-number">13</span> rclpy.spin(node)
+ <span class="hljs-number">4</span> 
+ <span class="hljs-number">5</span> 
+ <span class="hljs-number">6</span> rclpy.init()
+ <span class="hljs-number">7</span> node = Node(<span class="hljs-string">&quot;listener&quot;</span>)
+ <span class="hljs-number">8</span> 
+ <span class="hljs-number">9</span> 
+<span class="hljs-number">10</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">msg</span>):
+<span class="hljs-number">11</span>     <span class="hljs-keyword">global</span> node
+<span class="hljs-number">12</span>     node.get_logger().info(<span class="hljs-string">&quot;Listen: %s&quot;</span> % msg)
+<span class="hljs-number">13</span> 
+<span class="hljs-number">14</span> 
+<span class="hljs-number">15</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+<span class="hljs-number">16</span>     pub = node.create_subscription(Person, <span class="hljs-string">&quot;person&quot;</span>, cb, <span class="hljs-number">10</span>)                 
+<span class="hljs-number">17</span>     rclpy.spin(node)
 </code></pre>
 <ul>
 <li><code>ros2 launch</code>で動作確認を</li>
