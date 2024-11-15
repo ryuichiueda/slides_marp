@@ -33,7 +33,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 1. <span style="text-transform:none">launchファイル</span>
+## 1. launchファイル
 
 - launchファイル
   - 複数のノードを一度に立ち上げるもの
@@ -46,7 +46,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-###  <span style="text-transform:none">launch</span>ファイルの作成（準備）
+###  launchファイルの作成（準備）
 
 - パッケージのディレクトリに`launch`ディレクトリを作成
     ```
@@ -71,7 +71,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-###  <span style="text-transform:none">launch</span>ファイルの作成（記述）
+###  launchファイルの作成（記述）
 
 - さきほど作った`launch`ディレクトリに設置
 - 名前は`talk_listen.launch.py`としましょう
@@ -128,7 +128,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ---
 
-### <span style="text-transform:none">msg</span>ファイルの作成
+### msgファイルの作成
 
 - 型を定義するパッケージを作成
   ```bash
@@ -192,7 +192,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ---
 
-### <span style="text-transform:none">Person型の利用（publish）</span>
+### Person型の利用（publish）
 
 - `talker.py`からPerson型のメッセージを送信
     ```python
@@ -220,7 +220,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ---
 
-### <span style="text-transform:none">Person型の利用（subscribe）</span>
+### Person型の利用（subscribe）
 
 - `listener.py`でPerson型のメッセージを受信、表示
   ```python
@@ -261,7 +261,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 
 ---
 
-### <span style="text-transform:none">srvファイルの作成</span>
+### srvファイルの作成
 
 - 準備: `person_msgs`に`srv`というディレクトリを作成
   - `msg`と同じところに
