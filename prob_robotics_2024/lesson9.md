@@ -150,7 +150,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 6.2.2 信念分布の遷移
+## 信念分布の遷移（詳解6.2.2）
 
 - 今まで: 姿勢の状態遷移をガウス分布で近似
     - 点を分布に
@@ -167,14 +167,15 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### ガウス分布を代入したベイズフィルタの移動の式
 
 - 代入するガウス分布
-    - $p(\V{x} | \V{x}', \V{u}_t) = \mathcal{N}(\V{x} | \V{\mu}_t, R_t) $
+    - $p(\V{x} | \V{x}', \V{u}_t) = \mathcal{N}(\V{x} | \V{\mu}_t, R_t)$
     $= \mathcal{N}\left[ \V{f}(\V{x}',\V{u}_t),R_t \right]$
    <span style="color:red">$= \eta \exp\left\{ -\frac{1}{2} \left[\V{x} - \V{f}(\V{x}',\V{u}_t) \right]^\top R_t^{-1} \left[ \V{x} - \V{f}(\V{x}',\V{u}_t) \right] \right\}$</span>
         - $R_t$の逆行列は存在しないがその問題はあとで扱う
-    - $b_{t-1}(\V{x}') = \mathcal{N}( \V{x}' | \V{\mu}_{t-1}, \Sigma_{t-1} ) $
+    - $b_{t-1}(\V{x}') = \mathcal{N}( \V{x}' | \V{\mu}_{t-1}, \Sigma_{t-1} )$
     <span style="color:red">$= \eta \exp\left\{-\frac{1}{2}(\V{x}' - \V{\mu}_{t-1})^\top \Sigma_{t-1}^{-1} (\V{x}' - \V{\mu}_{t-1})  \right\}$</span>　
 - 代入して式を整理
-    - $ \hat{b}_t(\V{x}) = \eta\int_{\V{x}' \in \mathcal{X}} $<span style="font-size:90%">$\exp\big\{ -\frac{1}{2} \big[\V{x} - \V{f}(\V{x}',\V{u}_t) \big]^\top R_t^{-1} \big[ \V{x} - \V{f}(\V{x}',\V{u}_t) \big] \\\\ -\frac{1}{2} (\V{x}' - \V{\mu}_{t-1})^\top \Sigma_{t-1}^{-1} (\V{x}' - \V{\mu}_{t-1}) \big\}  d\V{x}' $</span>
+    - $\hat{b}_t(\V{x}) = \eta\int_{\V{x}' \in \mathcal{X}}\exp\big\{ -\frac{1}{2} \big[\V{x} - \V{f}(\V{x}',\V{u}_t) \big]^\top R_t^{-1} \big[ \V{x} - \V{f}(\V{x}',\V{u}_t) \big]$
+    $-\frac{1}{2} (\V{x}' - \V{\mu}_{t-1})^\top \Sigma_{t-1}^{-1} (\V{x}' - \V{\mu}_{t-1}) \big\}  d\V{x}'$
 
 $\V{f}$が非線形なので$\hat{b}_t$がガウス分布にならない
 
