@@ -9,7 +9,7 @@ marp: true
 千葉工業大学 上田 隆一
 
 <p style="font-size:50%">
-図の一部は詳解確率ロボティクスから転載しています。
+図の一部は詳解確率ロボティクスから転載しています．
 </p>
 
 $$\newcommand{\V}[1]{\boldsymbol{#1}}$$
@@ -39,12 +39,12 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - いろいろ問題がある
     - ガウス分布なので次のような状況で信念が表現しずらい
-        - ロボットが壁ぎわにいて、壁の向こうにはいる可能性がない
+        - ロボットが壁ぎわにいて，壁の向こうにはいる可能性がない
             - 壁のところで分布を打ち切れない
         - 分布がマルチモーダル
         - 自己位置の情報がない（一様分布）
 
-ということで自己位置推定にはあまり使われないけど、考え方は重要なので計算方法をおさえましょう
+ということで自己位置推定にはあまり使われないけど，考え方は重要なので計算方法をおさえましょう
 
 ---
 
@@ -55,7 +55,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 右図: ロボットの初期姿勢まわりに置いた誤差楕円
     - $XY\theta$空間中の楕円球となる
         - （ユークリッド空間とみなせば）　
-    - 以後、次の2要素で描画
+    - 以後，次の2要素で描画
         - $XY$平面の$3\sigma$範囲を表す楕円
         - $\theta$方向の$3\sigma$範囲を示す2本の線分
 
@@ -76,7 +76,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 6.2.1 状態遷移モデルの線形化
 
 - 分布$p(\V{x} | \V{x}', \V{u}_t)$がガウス分布にはならない
-    - 例: 前章では$\V{u}_t$のばらつきをガウス分布でモデル化したが、そうであってもロボットをまっすぐ走らせるとパーティクルが弓状の分布に
+    - 例: 前章では$\V{u}_t$のばらつきをガウス分布でモデル化したが，そうであってもロボットをまっすぐ走らせるとパーティクルが弓状の分布に
         <img width="30%" src="./figs/simulated_on.png" /><img width="35%" src="./figs/nonliner_motion.jpg" />
 - どうするか？$\rightarrow$ むりやりガウス分布に近似
     - 推定姿勢のまわり（信念分布の中心）ほど近似誤差が少ないように
@@ -86,14 +86,14 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ### 近似の方法（状態遷移関数の線形化）
 
-- 移動後の姿勢$\V{x}_t$の分布がガウス分布になるように、状態方程式を次のような形式に<span style="color:red">線形近似</span>
+- 移動後の姿勢$\V{x}_t$の分布がガウス分布になるように，状態方程式を次のような形式に<span style="color:red">線形近似</span>
     - $\V{x}_t = \V{f}(\V{x}_{t-1}, \V{u}_t')$ <span style="color:red">$\approx \V{f}(\V{x}_{t-1}, \V{u}_t) + A_t (\V{u}_t' - \V{u}_t)$</span>
         - $\V{u}_t, \V{u}'_t$: それぞれ制御指令（既知）と真の動き（未知でばらつく）
         - $A_t$: 後述
 
 <center><img width="60%" src="./figs/motion_linerized.jpg" /></center>
 
-<center>速度、角速度の誤差がXYθ空間で等倍に広がる</center>
+<center>速度，角速度の誤差がXYθ空間で等倍に広がる</center>
 
 ---
 
@@ -102,8 +102,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - $A_t = \dfrac{\partial \V{f}}{\partial \V{u}}\Big|_{\V{x}=\V{x}_{t-1},\V{u}=\V{u}_t}$
     - 近似した状態方程式（再掲）: $\V{x}_t \approx \V{f}(\V{x}_{t-1}, \V{u}_t) + A_t (\V{u}_t' - \V{u}_t)$　
 - 解釈
-    - <span style="color:red">$\V{x} =\V{x}_{t-1}, \V{u} = \V{u}_t$において、$\V{u}$が少しずれると$\V{f}$がどれだけずれるかを計算したもの</span>
-    - $A_t$に$\V{u}'_t - \V{u}$（速度・角速度の誤差）をかけることで、$\V{f}$のズレ（$=XY\theta$空間での$\V{x}_t$の誤差）が計算できる　
+    - <span style="color:red">$\V{x} =\V{x}_{t-1}, \V{u} = \V{u}_t$において，$\V{u}$が少しずれると$\V{f}$がどれだけずれるかを計算したもの</span>
+    - $A_t$に$\V{u}'_t - \V{u}$（速度・角速度の誤差）をかけることで，$\V{f}$のズレ（$=XY\theta$空間での$\V{x}_t$の誤差）が計算できる　
 
 ---
 
@@ -122,7 +122,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### 状態遷移モデルの近似
 
 - 次にやること
-    - $\V{x}_t \approx \V{f}(\V{x}_{t-1}, \V{u}_t) + A_t (\V{u}_t' - \V{u}_t)$について、$\V{u}'_t$がばらつくときの$\V{x}_t$の分布を求める　
+    - $\V{x}_t \approx \V{f}(\V{x}_{t-1}, \V{u}_t) + A_t (\V{u}_t' - \V{u}_t)$について，$\V{u}'_t$がばらつくときの$\V{x}_t$の分布を求める　
 - 分布の式
     - $\V{x}_t \sim \mathcal{N}(\V{x} | \V{\mu}_t , R_t)$
         - $\V{\mu}_t = \V{f}(\V{x}_{t-1}, \V{u}_t)$
@@ -146,7 +146,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     $= \left\langle A_t (\V{u}'_t - \V{u}_t) \left\{ A_t (\V{u}'_t - \V{u}_t) \right\}^\top \right\rangle_{\mathcal{N}(\V{u}, M_t)}$
     $= A_t  \left\{ \left\langle (\V{u}'_t - \V{u}_t) (\V{u}'_t - \V{u}_t)^\top \right\rangle_{\mathcal{N}(\V{u}, M_t)} \right\} A_t^\top$
 	<span style="color:red">$= A_t M_t A_t^\top$</span>
-        <span style="font-size:60%">※ 書籍（付録B.1.10）はもう少し回りくどい方法で計算しています。書き直したい・・・</span>
+        <span style="font-size:60%">※ 書籍（付録B.1.10）はもう少し回りくどい方法で計算しています．書き直したい・・・</span>
 
 ---
 
@@ -185,14 +185,14 @@ $\V{f}$が非線形なので$\hat{b}_t$がガウス分布にならない
 
 - $\hat{b}_t$の積分内の指数部
     - <span style="font-size:75%">$-\dfrac{1}{2} \big[\V{x} - \V{f}(\V{x}',\V{u}_t) \big]^\top R_t^{-1} \big[ \V{x} - \V{f}(\V{x}',\V{u}_t) \big] -\dfrac{1}{2} (\V{x}' - \V{\mu}_{t-1})^\top \Sigma_{t-1}^{-1} (\V{x}' - \V{\mu}_{t-1})$</span>
-    - <span style="color:red">$\V{x}'$を非線形な関数$\V{f}$の外に出すと、指数部が$\V{x}'$の分布に対応する多項式と$\V{x}$の分布に対応する多項式に分けることが可能</span>
+    - <span style="color:red">$\V{x}'$を非線形な関数$\V{f}$の外に出すと，指数部が$\V{x}'$の分布に対応する多項式と$\V{x}$の分布に対応する多項式に分けることが可能</span>
         - この分離で$\hat{b}_t$がガウス分布に（理由はあとで）　
 - 今度は$\V{x}'$（$= \V{x}_{t-1}$）に着目して$\V{f}$の線形近似を行う
     - $\V{f}(\V{x}', \V{u}_t) \approx \V{f}(\V{\mu}_{t-1}, \V{u}_t) + F_t(\V{x}' - \V{\mu}_{t-1})$
         - $F_t = \dfrac{\partial \V{f}(\V{x}', \V{u})}{\partial \V{x}'}\Big|_{ \V{x}' = \V{\mu}_{t-1}}$
             - さっきは$\V{u}$で偏微分していた　
 - 近似式の意味
-    - 移動前の姿勢$\V{x}'$が信念分布の中心$\V{\mu}_{t-1}$から$\V{x}'-\V{\mu}_{t-1}$だけずれているとき、その誤差は移動後に$F_t$倍拡大される
+    - 移動前の姿勢$\V{x}'$が信念分布の中心$\V{\mu}_{t-1}$から$\V{x}'-\V{\mu}_{t-1}$だけずれているとき，その誤差は移動後に$F_t$倍拡大される
 
 ---
 
@@ -223,7 +223,7 @@ $= \eta\int_{\V{x}' \in \mathcal{X}} \exp\{L(\V{x}) \}\exp\{L'(\V{x}') \} \exp (
 $= \eta \exp(C) \exp\{L(\V{x}) \}\int_{\V{x}' \in \mathcal{X}} \exp\{L'(\V{x}') \} d\V{x}'$
 <span style="font-size:70%">$\qquad\qquad$（↑$C, L$は$\V{x}'$を含まないので）</span>
 $= \eta \exp\{L(\V{x}) \}\int_{\V{x}' \in \mathcal{X}} \mathcal{N}(\V{x}') d\V{x}'$
-<span style="font-size:70%">$\qquad\qquad$（↑定数を整理、$L'$で$\V{x}'$のガウス分布を作る）</span>
+<span style="font-size:70%">$\qquad\qquad$（↑定数を整理，$L'$で$\V{x}'$のガウス分布を作る）</span>
 $= \eta \exp\{L(\V{x}) \}$
 $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right] }$
 <span style="color:red">$= \mathcal{N}\left[\V{x} \Big| \V{f}(\V{\mu}_{t-1}, \V{u}_t), F_t \Sigma_{t-1} F_t^\top + R_t\right]$</span>
@@ -238,7 +238,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
     - <span style="color:red">$\hat{\mu}_t = \V{f}(\V{\mu}_{t-1}, \V{u}_t)$</span>
         - 移動前の信念分布の中心$\V{\mu}_{t-1}$を$\V{f}$で移動
     - <span style="color:red">$\hat{\Sigma}_t = F_t \Sigma_{t-1} F_t^\top + R_t = F_t \Sigma_{t-1} F_t^\top + A_t M_t A_t^\top$</span>
-        - 移動前の共分散行列$\Sigma_{t-1}$を移動による誤差の拡大行列$F_t$で大きくして、移動による雑音の共分散行列$R_t$を足す
+        - 移動前の共分散行列$\Sigma_{t-1}$を移動による誤差の拡大行列$F_t$で大きくして，移動による雑音の共分散行列$R_t$を足す
 
 導出がややこしい割にはたったこれだけ
 
@@ -248,7 +248,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 - 左図: 3台のロボットを動かした結果
 - 右図: 左回りで100台のロボットを30[s]動かした結果
-    - 左図で左回りをしているロボットの位置推定結果と比較すると、分布の形状が単純化されているのが分かる
+    - 左図で左回りをしているロボットの位置推定結果と比較すると，分布の形状が単純化されているのが分かる
 
 <center><img width="35%" src="figs/kalman_no_obs.gif" /><img width="35%" src="figs/particles_vs_robots_robots.png" /></center>
 
@@ -260,7 +260,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
     - $R_t$は$3\times 3$行列だが$M_t$は$2\times 2$行列なのでランク落ち
     $\Longrightarrow$逆行列は存在しない
     - 物理的な意味
-        - 速度、角速度の2変数に雑音をのせても$XY\theta$の3次元では雑音が3次元に広がらない　
+        - 速度，角速度の2変数に雑音をのせても$XY\theta$の3次元では雑音が3次元に広がらない　
 - 困るのかどうか$\Longrightarrow$困らない
     - 実用上の理由: $\hat{\Sigma}_t = F_t \Sigma_{t-1} F_t^\top + R_t$に$R_t^{-1}$が登場しない
     - 物理的な理由: 速度・角速度の雑音がなくても不確かさ$F_t \Sigma_{t-1} F_t^\top$は存在
@@ -279,7 +279,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 - ひとつのセンサ値$\V{z}$を信念分布に反映する式
     - $b(\V{x}) = \eta p(\V{z} | \V{x}) \hat{b}(\V{x}) = \eta L(\V{x} | \V{z}) \hat{b}(\V{x})$
-        - ランドマーク1個、時間の流れも気にしなくていいので添字は省略<br />　
+        - ランドマーク1個，時間の流れも気にしなくていいので添字は省略<br />　
 - 尤度関数はパーティクルフィルタのものと共通
     - $L(\V{x} | \V{z}) = \mathcal{N}\left[ \V{z} | \V{h}(\V{x}), Q(\V{x}) \right]$
         - $Q(\V{x}) = \begin{pmatrix} [\ell(\V{x})\sigma_\ell]^2 & 0 \\ 0 & \sigma^2_\varphi \end{pmatrix}$
@@ -292,7 +292,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 ### 尤度関数の形
 
-- $XY$平面で見ると、尤度のモードはドーナツ状に
+- $XY$平面で見ると，尤度のモードはドーナツ状に
     - 信念分布と掛け算してもガウス分布にならない
 <img width="35%" src="figs/likelihood_function.jpg" />
 - どうするか？$\Longrightarrow$信念分布の中心で線形化
@@ -320,8 +320,8 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
     - $\V{h}(\V{x}) \approx \V{h}(\hat{\V{\mu}}) + H(\V{x} - \hat{\V{\mu}})$
         - $\hat{\V{\mu}}$: 信念分布の中心
         - $H = \dfrac{\partial \V{h}}{\partial \V{x}}\Big|_{\V{x} = \hat{\V{\mu}}}$
-    - 意味: ある姿勢$\V{x}$でのセンサ値は、分布の中心で得られるセンサ値$\V{h}(\hat{\V{\mu}})$に、中心からのずれ$\V{x} - \hat{\V{\mu}}$を$H$倍した値を足したものに
-        - もちろん近似で、$\V{x}$が$\hat{\V{\mu}}$から離れるとデタラメ
+    - 意味: ある姿勢$\V{x}$でのセンサ値は，分布の中心で得られるセンサ値$\V{h}(\hat{\V{\mu}})$に，中心からのずれ$\V{x} - \hat{\V{\mu}}$を$H$倍した値を足したものに
+        - もちろん近似で，$\V{x}$が$\hat{\V{\mu}}$から離れるとデタラメ
 
 ---
 
@@ -341,7 +341,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 $\Longrightarrow$信念分布の中心$\hat{\V{\mu}}$で$\V{x}$を代用<br />　
 - $Q_{\ell_{\hat{\V{\mu}}}} = \begin{pmatrix} [\ell_{\hat{\V{\mu}}} \sigma_\ell]^2 & 0 \\ 0 & \sigma_\varphi^2 \end{pmatrix}\label{eq:kalman_q_lmu}$ を使う
    - $\ell_{\hat{\V{\mu}}}$: $\hat{\V{\mu}}$でのランドマークとの距離<br />　
-- 以後、$Q$という表記は$Q_{\ell_{\hat{\V{\mu}}}}$のこと
+- 以後，$Q$という表記は$Q_{\ell_{\hat{\V{\mu}}}}$のこと
 
 ---
 
@@ -352,7 +352,7 @@ $\qquad\qquad -\frac{1}{2} ( \V{x} - \hat{\V{\mu}} )^\top \hat\Sigma^{-1} ( \V{x
     - $\V{x}$の多項式として指数部を整理
         - 2次の項: $-\dfrac{1}{2} \V{x}^\top (H^\top Q^{-1}H + \hat\Sigma^{-1} ) \V{x}$
         - 1次の項: $\V{x}^\top \{ H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}} \}$
-- ガウス分布は次のようにも書けるので、上の1, 2次の項から$b = \mathcal{N}(\V{\mu},\Sigma)$が求まる
+- ガウス分布は次のようにも書けるので，上の1, 2次の項から$b = \mathcal{N}(\V{\mu},\Sigma)$が求まる
     - $p(\V{x}) = \eta \exp \left\{ -\dfrac{1}{2}\V{x}^\top \Sigma^{-1} \V{x} + \V{x}^\top \Sigma^{-1}\V{\mu} \right\}$
 
 ---
@@ -369,14 +369,14 @@ $\quad = \Sigma \{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1} 
 - 解釈
     - 更新後の精度行列: 更新前の情報$\hat{\Sigma}^{-1}$にセンサ値からの情報$H^\top Q^{-1}H$を
     足したもの
-    - 更新後の分布の中心: 更新前の中心$\hat{\V{\mu}}$に、センサ値のずれ$\V{z} - \V{h}(\hat{\V{\mu}})$を
+    - 更新後の分布の中心: 更新前の中心$\hat{\V{\mu}}$に，センサ値のずれ$\V{z} - \V{h}(\hat{\V{\mu}})$を
     <span style="color:red">行列$\Sigma H^\top Q^{-1}$</span>で変換した量を足したもの
 
 ---
 
 ## カルマンゲインによる表現（詳解6.3.3）
 
-- 行列$\Sigma H^\top Q^{-1}$を、センサ値のずれに応じて信念分布の中心を移動するための拡大率と考え<span style="color:red">カルマンゲイン</span>と呼ぶ　
+- 行列$\Sigma H^\top Q^{-1}$を，センサ値のずれに応じて信念分布の中心を移動するための拡大率と考え<span style="color:red">カルマンゲイン</span>と呼ぶ　
 - カルマンゲインを使って更新式を整理
 （行列の計算は書籍参考のこと）
     - $K = \hat\Sigma H^\top (H \hat\Sigma H^\top + Q )^{-1}$
@@ -384,7 +384,7 @@ $\quad = \Sigma \{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1} 
     - $\V{\mu} = K (\V{z} - \V{h}(\hat{\V{\mu}})) + \hat{\V{\mu}}$　
 - 新たな解釈
     - 更新後の共分散行列: 更新前の不確かさ$\hat{\Sigma}$が$KH\hat{\Sigma}$だけ縮小
-    - 更新後の分布の中心: センサ値のズレを$K$で$XY\theta$空間に写像して、
+    - 更新後の分布の中心: センサ値のズレを$K$で$XY\theta$空間に写像して，
     その分だけ中心をずらす
 
 ---
@@ -401,13 +401,13 @@ $\quad = \Sigma \{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1} 
 
 ---
 
-## 6.4 まとめ
+## まとめ
 
 - カルマンフィルタを実装
     - ガウス分布のパラメータ計算だけでベイズフィルタを実装
     - <span style="color:red">計算が分かれば</span>実装が簡単
     - 本章以降でも同様の計算（理屈をしっかりおさえましょう）
-        - FastSLAM、graph-based SLAM、POMDP　
+        - FastSLAM，graph-based SLAM，POMDP　
 - バイアスは自己位置推定の大敵
     - 残念ながら信念分布はそのまま鵜呑みにできない　
 - 誘拐やスタックなど大きな誤りを生む問題は未解決
