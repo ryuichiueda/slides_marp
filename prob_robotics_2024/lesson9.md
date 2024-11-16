@@ -110,7 +110,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### 行列$A_t$の計算
 
 - 状態方程式
-    - <span style="font-size:70%">$\boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u}) = \begin{pmatrix} x \\ y \\ \theta \end{pmatrix} + \begin{pmatrix} \nu\omega^{-1}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} \\ \nu\omega^{-1}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} \\ \omega \Delta t \end{pmatrix}$</span>
+    - <span style="font-size:90%">$\boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u}) = \begin{pmatrix} x \\ y \\ \theta \end{pmatrix} + \begin{pmatrix} \nu\omega^{-1}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} \\ \nu\omega^{-1}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} \\ \omega \Delta t \end{pmatrix}$</span>
 - 状態方程式の偏微分
     - <span style="font-size:70%">$\dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{u}}=\begin{pmatrix} \partial f_x/\partial \nu & \partial f_x/\partial \omega \\ \partial f_y/\partial \nu & \partial f_y/\partial \omega \\ \partial f_\theta/\partial \nu & \partial f_\theta/\partial \omega \end{pmatrix} \nonumber \\ \hspace{-5em}$
     $= \begin{pmatrix} \omega^{-1}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} & -\nu\omega^{-2}\left\{\sin( \theta + \omega \Delta t ) - \sin\theta \right\} + \nu\omega^{-1}\Delta t \cos( \theta + \omega \Delta t )  \\ \omega^{-1}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} & -\nu\omega^{-2}\left\{-\cos( \theta + \omega \Delta t ) + \cos\theta \right\} + \nu\omega^{-1}\Delta t\sin( \theta + \omega \Delta t ) \\ 0 & \Delta t \end{pmatrix}$</span>
@@ -184,11 +184,11 @@ $\V{f}$が非線形なので$\hat{b}_t$がガウス分布にならない
 ### $\V{f}$の線形化
 
 - $\hat{b}_t$の積分内の指数部
-    - <span style="font-size:75%">$-\dfrac{1}{2} \big[\V{x} - \V{f}(\V{x}',\V{u}_t) \big]^\top R_t^{-1} \big[ \V{x} - \V{f}(\V{x}',\V{u}_t) \big] -\dfrac{1}{2} (\V{x}' - \V{\mu}_{t-1})^\top \Sigma_{t-1}^{-1} (\V{x}' - \V{\mu}_{t-1}) $</span>
+    - <span style="font-size:75%">$-\dfrac{1}{2} \big[\V{x} - \V{f}(\V{x}',\V{u}_t) \big]^\top R_t^{-1} \big[ \V{x} - \V{f}(\V{x}',\V{u}_t) \big] -\dfrac{1}{2} (\V{x}' - \V{\mu}_{t-1})^\top \Sigma_{t-1}^{-1} (\V{x}' - \V{\mu}_{t-1})$</span>
     - <span style="color:red">$\V{x}'$を非線形な関数$\V{f}$の外に出すと、指数部が$\V{x}'$の分布に対応する多項式と$\V{x}$の分布に対応する多項式に分けることが可能</span>
         - この分離で$\hat{b}_t$がガウス分布に（理由はあとで）　
 - 今度は$\V{x}'$（$= \V{x}_{t-1}$）に着目して$\V{f}$の線形近似を行う
-    - $ \V{f}(\V{x}', \V{u}_t) \approx \V{f}(\V{\mu}_{t-1}, \V{u}_t) + F_t(\V{x}' - \V{\mu}_{t-1}) $
+    - $\V{f}(\V{x}', \V{u}_t) \approx \V{f}(\V{\mu}_{t-1}, \V{u}_t) + F_t(\V{x}' - \V{\mu}_{t-1})$
         - $F_t = \dfrac{\partial \V{f}(\V{x}', \V{u})}{\partial \V{x}'}\Big|_{ \V{x}' = \V{\mu}_{t-1}}$
             - さっきは$\V{u}$で偏微分していた　
 - 近似式の意味
