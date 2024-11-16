@@ -337,9 +337,9 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 ### $Q_\V{x}$の近似
 
-- $Q(\V{x}) = \begin{pmatrix} [\ell(\V{x})\sigma_\ell]^2 & 0 \\\\ 0 & \sigma^2_\varphi \end{pmatrix}$を定数にしたい<br />　
+- $Q(\V{x}) = \begin{pmatrix} [\ell(\V{x})\sigma_\ell]^2 & 0 \\ 0 & \sigma^2_\varphi \end{pmatrix}$を定数にしたい<br />　
 $\Longrightarrow$信念分布の中心$\hat{\V{\mu}}$で$\V{x}$を代用<br />　
-- $Q_{\ell_{\hat{\V{\mu}}}} = \begin{pmatrix} [\ell_{\hat{\V{\mu}}} \sigma_\ell]^2 & 0 \\\\ 0 & \sigma_\varphi^2 \end{pmatrix}\label{eq:kalman_q_lmu}$ を使う
+- $Q_{\ell_{\hat{\V{\mu}}}} = \begin{pmatrix} [\ell_{\hat{\V{\mu}}} \sigma_\ell]^2 & 0 \\ 0 & \sigma_\varphi^2 \end{pmatrix}\label{eq:kalman_q_lmu}$ を使う
    - $\ell_{\hat{\V{\mu}}}$: $\hat{\V{\mu}}$でのランドマークとの距離<br />　
 - 以後、$Q$という表記は$Q_{\ell_{\hat{\V{\mu}}}}$のこと
 
@@ -347,12 +347,13 @@ $\Longrightarrow$信念分布の中心$\hat{\V{\mu}}$で$\V{x}$を代用<br />�
 
 ### 近似後の$b$の式
 
-- $b(\V{x}) = \eta\exp \left\\{ -\frac{1}{2} \left[ \V{z} - \V{h}(\hat{\V{\mu}}) - H(\V{x} - \hat{\V{\mu}})  \right]^\top Q^{-1} \left[ \text{省略}\right] \\\\ \qquad\qquad\qquad\qquad -\frac{1}{2} ( \V{x} - \hat{\V{\mu}} )^\top \hat\Sigma^{-1} ( \V{x} - \hat{\V{\mu}} ) \right\\}$
+- $b(\V{x}) = \eta\exp \Big\{ -\frac{1}{2} \Big[ \V{z} - \V{h}(\hat{\V{\mu}}) - H(\V{x} - \hat{\V{\mu}})  \Big]^\top Q^{-1} \Big[ \text{省略}\Big]$
+$\qquad\qquad -\frac{1}{2} ( \V{x} - \hat{\V{\mu}} )^\top \hat\Sigma^{-1} ( \V{x} - \hat{\V{\mu}} ) \Big\}$
     - $\V{x}$の多項式として指数部を整理
         - 2次の項: $-\dfrac{1}{2} \V{x}^\top (H^\top Q^{-1}H + \hat\Sigma^{-1} ) \V{x}$
-        - 1次の項: $ \V{x}^\top \\{ H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}} \\} $<br />　
-- ガウス分布は次のようにも書けるので、<br />上の1, 2次の項から$b = \mathcal{N}(\V{\mu},\Sigma)$が求まる
-    - $p(\V{x}) = \eta \exp \left\\{ -\dfrac{1}{2}\V{x}^\top \Sigma^{-1} \V{x} + \V{x}^\top \Sigma^{-1}\V{\mu} \right\\}$
+        - 1次の項: $\V{x}^\top \{ H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}} \}$
+- ガウス分布は次のようにも書けるので、上の1, 2次の項から$b = \mathcal{N}(\V{\mu},\Sigma)$が求まる
+    - $p(\V{x}) = \eta \exp \left\{ -\dfrac{1}{2}\V{x}^\top \Sigma^{-1} \V{x} + \V{x}^\top \Sigma^{-1}\V{\mu} \right\}$
 
 ---
 
@@ -362,9 +363,9 @@ $\Longrightarrow$信念分布の中心$\hat{\V{\mu}}$で$\V{x}$を代用<br />�
     - $\Sigma^{-1} =  H^\top Q^{-1}H + \hat\Sigma^{-1}$
      $\Longrightarrow$<span style="color:red">$\Sigma =  (H^\top Q^{-1}H + \hat\Sigma^{-1} )^{-1}$</span>
 - 1次の項から
-    - $\Sigma^{-1}\V{\mu} = H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}}$<br />　
-<span style="color:red">$\V{\mu} =$</span>$\Sigma \\{ H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}} \\}$<br />　
-$\quad = \Sigma \\{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1} H + \hat\Sigma^{-1} )\hat{\V{\mu}} \\}$<br />
+    - $\Sigma^{-1}\V{\mu} = H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}}$　
+<span style="color:red">$\V{\mu} =$</span>$\Sigma \{ H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}} \}$　
+$\quad = \Sigma \{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1} H + \hat\Sigma^{-1} )\hat{\V{\mu}} \}$
 <span style="color:red">$\qquad = \Sigma H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}})) + \hat{\V{\mu}}$</span>
 - 解釈
     - 更新後の精度行列: 更新前の情報$\hat{\Sigma}^{-1}$にセンサ値からの情報$H^\top Q^{-1}H$を足したもの
@@ -374,12 +375,12 @@ $\quad = \Sigma \\{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1}
 
 ## 6.3.3 カルマンゲインによる表現
 
-- 行列$\Sigma H^\top Q^{-1}$を、センサ値のずれに応じて信念分布の中心を移動するための拡大率と考え<span style="color:red">カルマンゲイン</span>と呼ぶ<br />　
-- カルマンゲインを使って更新式を整理<br />
+- 行列$\Sigma H^\top Q^{-1}$を、センサ値のずれに応じて信念分布の中心を移動するための拡大率と考え<span style="color:red">カルマンゲイン</span>と呼ぶ　
+- カルマンゲインを使って更新式を整理
 （行列の計算は書籍参考のこと）
     - $K = \hat\Sigma H^\top (H \hat\Sigma H^\top + Q )^{-1}$
     - $\Sigma =  (I - KH) \hat{\Sigma}$
-    - $\V{\mu} = K (\V{z} - \V{h}(\hat{\V{\mu}})) + \hat{\V{\mu}}$<br />　
+    - $\V{\mu} = K (\V{z} - \V{h}(\hat{\V{\mu}})) + \hat{\V{\mu}}$　
 - 新たな解釈
     - 更新後の共分散行列: 更新前の不確かさ$\hat{\Sigma}$が$KH\hat{\Sigma}$だけ縮小
     - 更新後の分布の中心: センサ値のズレを$K$で$XY\theta$空間に写像して、その分だけ中心をずらす
@@ -389,7 +390,7 @@ $\quad = \Sigma \\{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1}
 ## 6.3.4 観測後の更新の実装
 
 - 行列とベクトルの計算式をシミュレータに実装
-    - 同時刻に複数のランドマークを観測した場合:<br />前ページの処理を繰り返す
+    - 同時刻に複数のランドマークを観測した場合:前ページの処理を繰り返す
     - センサ値のバイアスで誤差楕円から出てしまうがこれはパーティクルフィルタと同じ（4章の独立同分布の問題がある）
 
 <img width="35%" src="./figs/kalman_filter.gif" />
@@ -402,8 +403,8 @@ $\quad = \Sigma \\{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1}
     - ガウス分布のパラメータ計算だけでベイズフィルタを実装
     - <span style="color:red">計算が分かれば</span>実装が簡単
     - 本章以降でも同様の計算（理屈をしっかりおさえましょう）
-        - FastSLAM、graph-based SLAM、POMDP<br />　
+        - FastSLAM、graph-based SLAM、POMDP　
 - バイアスは自己位置推定の大敵
-    - 残念ながら信念分布はそのまま鵜呑みにできない<br />　
+    - 残念ながら信念分布はそのまま鵜呑みにできない　
 - 誘拐やスタックなど大きな誤りを生む問題は未解決
 
