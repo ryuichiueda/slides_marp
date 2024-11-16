@@ -367,8 +367,10 @@ $\qquad\qquad -\frac{1}{2} ( \V{x} - \hat{\V{\mu}} )^\top \hat\Sigma^{-1} ( \V{x
 $\quad = \Sigma \{ H^\top Q^{-1}(\V{z} - \V{h}(\hat{\V{\mu}})) + (H^\top Q^{-1} H + \hat\Sigma^{-1} )\hat{\V{\mu}} \}$
 <span style="color:red">$\qquad = \Sigma H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}})) + \hat{\V{\mu}}$</span>
 - 解釈
-    - 更新後の精度行列: 更新前の情報$\hat{\Sigma}^{-1}$にセンサ値からの情報$H^\top Q^{-1}H$を足したもの
-    - 更新後の分布の中心: 更新前の中心$\hat{\V{\mu}}$に、センサ値のずれ$\V{z} - \V{h}(\hat{\V{\mu}})$を<span style="color:red">行列$\Sigma H^\top Q^{-1}$</span>で変換した量を足したもの
+    - 更新後の精度行列: 更新前の情報$\hat{\Sigma}^{-1}$にセンサ値からの情報$H^\top Q^{-1}H$を
+    足したもの
+    - 更新後の分布の中心: 更新前の中心$\hat{\V{\mu}}$に、センサ値のずれ$\V{z} - \V{h}(\hat{\V{\mu}})$を
+    <span style="color:red">行列$\Sigma H^\top Q^{-1}$</span>で変換した量を足したもの
 
 ---
 
