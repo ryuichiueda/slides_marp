@@ -230,12 +230,12 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 ---
 
-## 6.2.3 移動後の更新の実装
+## 移動後の更新の実装（詳解6.2.3）
 
 - 得られた$\hat{b}_t$の式
-    - $ \hat{b}_t(\V{x}) = \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right] }$
+    - $\hat{b}_t(\V{x}) = \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right] }$
 - カルマンフィルタで実装すべき更新式
-    - <span style="color:red">$\hat{\mu}_t = \V{f}(\V{\mu}_{t-1}, \V{u}_t) $</span>
+    - <span style="color:red">$\hat{\mu}_t = \V{f}(\V{\mu}_{t-1}, \V{u}_t)$</span>
         - 移動前の信念分布の中心$\V{\mu}_{t-1}$を$\V{f}$で移動
     - <span style="color:red">$\hat{\Sigma}_t = F_t \Sigma_{t-1} F_t^\top + R_t = F_t \Sigma_{t-1} F_t^\top + A_t M_t A_t^\top$</span>
         - 移動前の共分散行列$\Sigma_{t-1}$を移動による誤差の拡大行列$F_t$で大きくして、移動による雑音の共分散行列$R_t$を足す
