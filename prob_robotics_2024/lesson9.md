@@ -294,7 +294,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 - $XY$平面で見ると、尤度のモードはドーナツ状に
     - 信念分布と掛け算してもガウス分布にならない
-<img width="40%" src="figs/likelihood_function.jpg" />
+<img width="35%" src="figs/likelihood_function.jpg" />
 - どうするか？$\Longrightarrow$信念分布の中心で線形化
 
 ---
