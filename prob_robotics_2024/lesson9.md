@@ -218,15 +218,15 @@ $\V{f}$が非線形なので$\hat{b}_t$がガウス分布にならない
 
 ### $\hat{b}_t$はガウス分布になる
 
-- $ \hat{b}_t(\V{x}) = \eta\int_{\V{x}' \in \mathcal{X}} \exp\big\{$指数部$ \big\}  d\V{x}'$
-$ = \eta\int_{\V{x}' \in \mathcal{X}} \exp\{L(\V{x}) \}\exp\{L'(\V{x}') \} \exp ( C ) d\V{x}'$
-$ = \eta \exp(C) \exp\{L(\V{x}) \}\int_{\V{x}' \in \mathcal{X}} \exp\{L'(\V{x}') \} d\V{x}'$
+- $\hat{b}_t(\V{x}) = \eta\int_{\V{x}' \in \mathcal{X}} \exp\big\{$指数部$\big\}  d\V{x}'$
+$= \eta\int_{\V{x}' \in \mathcal{X}} \exp\{L(\V{x}) \}\exp\{L'(\V{x}') \} \exp ( C ) d\V{x}'$
+$= \eta \exp(C) \exp\{L(\V{x}) \}\int_{\V{x}' \in \mathcal{X}} \exp\{L'(\V{x}') \} d\V{x}'$
 <span style="font-size:70%">$\qquad\qquad$（↑$C, L$は$\V{x}'$を含まないので）</span>
-$ = \eta \exp\{L(\V{x}) \}\int_{\V{x}' \in \mathcal{X}} \mathcal{N}(\V{x}') d\V{x}'$
+$= \eta \exp\{L(\V{x}) \}\int_{\V{x}' \in \mathcal{X}} \mathcal{N}(\V{x}') d\V{x}'$
 <span style="font-size:70%">$\qquad\qquad$（↑定数を整理、$L'$で$\V{x}'$のガウス分布を作る）</span>
-$ = \eta \exp\{L(\V{x}) \}$
-$ = \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right] }$
-<span style="color:red">$ = \mathcal{N}\left[\V{x} \Big| \V{f}(\V{\mu}_{t-1}, \V{u}_t), F_t \Sigma_{t-1} F_t^\top + R_t\right]$</span>
+$= \eta \exp\{L(\V{x}) \}$
+$= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right] }$
+<span style="color:red">$= \mathcal{N}\left[\V{x} \Big| \V{f}(\V{\mu}_{t-1}, \V{u}_t), F_t \Sigma_{t-1} F_t^\top + R_t\right]$</span>
 
 ---
 
