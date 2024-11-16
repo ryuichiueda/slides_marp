@@ -327,9 +327,9 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 ### $H$の計算
 
-- <span style="font-size:80%">$H = \dfrac{\partial \V{h}}{\partial \V{x}}\Big|\_{\V{x} = \hat{\V{\mu}}}$</span>
-<span style="font-size:60%">$ = \begin{pmatrix} (x - m\_x)/\sqrt{(x - m\_x)^2 + (y - m\_y)^2} & (y - m\_y)/\sqrt{(x - m\_x)^2 + (y - m\_y)^2} & 0 \\\\ (m\_y - y)/\{(x-m\_x)^2+(y-m\_y)^2\} & (x - m\_x)/\{(x-m\_x)^2+(y-m\_y)^2\} & -1 \end{pmatrix} \Bigg|\_{\V{x} = \V{\hat{\mu}}} $</span>
-<span style="font-size:80%">$ = \begin{pmatrix} (\hat{\mu}\_x - m\_x)/\ell\_{\hat{\V{\mu}}} & (\hat{\mu}\_y - m\_y)/\ell\_{\hat{\V{\mu}}} & 0 \\\\ (m\_y - \hat{\mu}\_y)/\ell\_{\hat{\V{\mu}}}^2 & (\hat{\mu}\_x - m\_x)/\ell\_{\hat{\V{\mu}}}^2 & -1 \end{pmatrix}$</span>
+- $H = \dfrac{\partial \V{h}}{\partial \V{x}}\Big|_{\V{x} = \hat{\V{\mu}}}$
+<span style="font-size:80%">$= \begin{pmatrix} (x - m_x)/\sqrt{(x - m_x)^2 + (y - m_y)^2} & (y - m_y)/\sqrt{(x - m_x)^2 + (y - m_y)^2} & 0 \\ (m_y - y)/\{(x-m_x)^2+(y-m_y)^2\} & (x - m_x)/\{(x-m_x)^2+(y-m_y)^2\} & -1 \end{pmatrix} \Bigg|_{\V{x} = \V{\hat{\mu}}}$</span>
+<span style="font-size:80%">$= \begin{pmatrix} (\hat{\mu}_x - m_x)/\ell_{\hat{\V{\mu}}} & (\hat{\mu}_y - m_y)/\ell_{\hat{\V{\mu}}} & 0 \\ (m_y - \hat{\mu}_y)/\ell_{\hat{\V{\mu}}}^2 & (\hat{\mu}_x - m_x)/\ell_{\hat{\V{\mu}}}^2 & -1 \end{pmatrix}$</span>
     - ここで<span style="font-size:80%">$\quad \ell_{\hat{\V{\mu}}} = \sqrt{(\hat{\mu}_x - m_x)^2 + (\hat{\mu}_x - m_y)^2}$</span>
     - すべて既知の変数で構成される
 
