@@ -256,8 +256,9 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 ### $R_t$に逆行列がない問題
 
-- $ R_t = A_t M_t A_t^\top$
-    - $R_t$は$3\times 3$行列だが$M_t$は$2\times 2$行列なのでランク落ち$\Longrightarrow$逆行列は存在しない
+- $R_t = A_t M_t A_t^\top$
+    - $R_t$は$3\times 3$行列だが$M_t$は$2\times 2$行列なのでランク落ち
+    $\Longrightarrow$逆行列は存在しない
     - 物理的な意味
         - 速度、角速度の2変数に雑音をのせても$XY\theta$の3次元では雑音が3次元に広がらない　
 - 困るのかどうか$\Longrightarrow$困らない
