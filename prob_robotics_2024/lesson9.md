@@ -203,16 +203,13 @@ $\V{f}$が非線形なので$\hat{b}_t$がガウス分布にならない
 <span style="font-size:70%">$= \begin{pmatrix} 1 & 0 & \nu_t\omega_t^{-1}\{\cos(\mu_{\theta_{t-1}} + \omega_t\Delta t) - \cos \mu_{\theta_{t-1}} \} \\ 0 & 1 & \nu_t\omega_t^{-1}\{\sin(\mu_{\theta_{t-1}} + \omega_t\Delta t) - \sin \mu_{\theta_{t-1}} \} \\ 0 & 0 & 1 \end{pmatrix}$</span>
 
 
-
-
 ---
 
 ### 指数部の計算
 
 - 指数部に近似式を代入
-    - <span style="font-size:90%">$ = - \dfrac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) - F_t(\V{x}' - \V{\mu}_{t-1}) \right]^\top R_t^{-1} \left[ \text{省略} \right] \\\\ - \dfrac{1}{2}( \V{x}' - \V{\mu}_{t-1} )^\top \Sigma_{t-1}^{-1} ( \text{省略} ) $</span>
-<span style="font-size:90%">$ = - \dfrac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right] $</span>
-<span style="font-size:90%">$- \dfrac{1}{2} (\V{x}'$の二次形式$)+$定数</span>
+    - <span style="font-size:80%">$= - \dfrac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) - F_t(\V{x}' - \V{\mu}_{t-1}) \right]^\top R_t^{-1} \left[ \text{省略} \right] \\\\ - \dfrac{1}{2}( \V{x}' - \V{\mu}_{t-1} )^\top \Sigma_{t-1}^{-1} ( \text{省略} )$</span>
+<span style="font-size:80%">$= - \dfrac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top (F_t \Sigma_{t-1} F_t^\top + R_t)^{-1} \left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]- \dfrac{1}{2} (\V{x}'$の二次形式$)+$定数</span>
         - 二次形式: ガウス分布の指数部が作れるということ
 
 それぞれの項を$L(\V{x}), L'(\V{x}'), C$と表して元の式に戻しましょう
