@@ -360,8 +360,7 @@ $\qquad\qquad -\frac{1}{2} ( \V{x} - \hat{\V{\mu}} )^\top \hat\Sigma^{-1} ( \V{x
 ### センサ値を反映するための更新式
 
 - 2次の項から
-    - $\Sigma^{-1} =  H^\top Q^{-1}H + \hat\Sigma^{-1}$
-     $\Longrightarrow$<span style="color:red">$\Sigma =  (H^\top Q^{-1}H + \hat\Sigma^{-1} )^{-1}$</span>
+    - $\Sigma^{-1} =  H^\top Q^{-1}H + \hat\Sigma^{-1}$<span style="color:red">$\ \Longrightarrow\ \Sigma =  (H^\top Q^{-1}H + \hat\Sigma^{-1} )^{-1}$</span>
 - 1次の項から
     - $\Sigma^{-1}\V{\mu} = H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}}$　
 <span style="color:red">$\V{\mu} =$</span>$\Sigma \{ H^\top Q^{-1} (\V{z} - \V{h}(\hat{\V{\mu}}) + H\hat{\V{\mu}}) + \hat\Sigma^{-1} \hat{\V{\mu}} \}$　
