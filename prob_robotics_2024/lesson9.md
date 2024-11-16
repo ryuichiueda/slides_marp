@@ -250,8 +250,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 - 右図: 左回りで100台のロボットを30[s]動かした結果
     - 左図で左回りをしているロボットの位置推定結果と比較すると、分布の形状が単純化されているのが分かる
 
-<img width="40%" src="figs/kalman_no_obs.gif" />
-<img width="40%" src="figs/particles_vs_robots_robots.png" />
+<center><img width="35%" src="figs/kalman_no_obs.gif" /><img width="35%" src="figs/particles_vs_robots_robots.png" /></center>
 
 ---
 
