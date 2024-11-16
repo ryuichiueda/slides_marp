@@ -305,7 +305,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
     - ここで
         - $Q_{\V{x}}$: $Q(\V{x})$のこと
         - $\hat{b} = \mathcal{N}(\hat{\V{\mu}}, \hat\Sigma)$
-        - $\V{h}(\V{x}) = \begin{pmatrix} \sqrt{(x - m_x)^2 + (y - m_y)^2} \\\\ \text{atan2}(m_y - y, m_x - x) - \theta \end{pmatrix}$<br />　
+        - $\V{h}(\V{x}) = \begin{pmatrix} \sqrt{(x - m_x)^2 + (y - m_y)^2} \\ \text{atan2}(m_y - y, m_x - x) - \theta \end{pmatrix}$<br />　
     - <span style="color:red">指数部が$\V{x}$の二次形式になればガウス分布になる</span><br />　
 - やるべき近似
     1. 非線形な$\V{h}$から$\V{x}$を救出
@@ -314,7 +314,7 @@ $= \eta e^{-\frac{1}{2}\left[ \V{x} - \V{f}(\V{\mu}_{t-1}, \V{u}_t) \right]^\top
 
 ---
 
-## 6.3.2 $XY\theta$空間での観測方程式の線形近似
+## $XY\theta$空間での観測方程式の線形近似（詳解6.3.2項）
 
 - $\V{h}$を次のように近似して$\V{x}$の多項式に
     - $\V{h}(\V{x}) \approx \V{h}(\hat{\V{\mu}}) + H(\V{x} - \hat{\V{\mu}})$
