@@ -29,7 +29,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - 移動時: $\hat{b}_t(\V{x}) =  \big\langle p(\V{x} | \V{x}', \V{u}_t) \big\rangle_{b_{t-1}(\V{x}')}$ 
         - 観測時: $b_t(\V{x}) = \eta p(\textbf{z}_t | \V{x}) \hat{b}_t(\V{x})$<br />　
 - 疑問: なぜガウス分布にこだわるのか？
-    - <span style="color:red">計算量が小さい</span>
+    - （パーティクルフィルタと比べると）<span style="color:red">計算量が小さい</span>
         - 平均値と共分散行列の演算だけでベイズフィルタを実装可能
         - 状態の次元が高くても適用可能
 
