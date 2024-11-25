@@ -442,13 +442,11 @@ $= \eta \big\langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \big\rangle_{\mathcal{N}(
             - 複数のセンサ値が得られたときはこの計算を繰り返す
     - 解釈
         - $\V{x}_t^{(i)}$がドローされる分布の中心は、状態遷移の密度分布の中心の姿勢を、ランドマークの推定位置（分布の中心）から予想されるセンサ値と実際のセンサ値の差に$K$をかけただけ修正した姿勢
-        - $\V{x}_t^{(i)}$がドローされる分布の共分散行列は、移動による誤差の共分散行列$R_t$から、センサ値とランドマークの位置の分布から得られる情報だけ<span style="color:red">小さく</span>したもの
-
-センサ値で修正された狭い分布内に$\V{x}_t^{(i)}$が生成
+        - $\V{x}_t^{(i)}$がドローされる範囲は、センサ値とランドマークの位置の分布から得られる情報だけ<span style="color:red">小さく</span>なる
 
 ---
 
-## 8.6.2 重みの計算
+## 重みの計算（詳解8.6.2項）
 
 - 問題
     - ドローされた$\V{x}_t^{(i)}$にはセンサ値$\V{z}_{j,t}$の情報が反映されている
@@ -465,11 +463,11 @@ $\Longrightarrow$FastSLAM 1.0と同じ重みの計算では二重評価に　
 
 - <span style="font-size:90%">$L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t)$
 $\propto p(\V{z}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t)$
-$= [\\![ p(\V{z}_t, \V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
-$= [\\![ p(\V{z}_t | \V{x}_t, \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
-$= [\\![ p(\V{z}_t | \V{x}_t, \hat{\textbf{m}}_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
-$= [\\![ p(\V{z}_t | \V{x}_t, \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
-$= [\\![  [\\![ p(\V{z}_t | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) ]\\!]_{\V{m}} p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$</span>
+$= \langle p(\V{z}_t, \V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) \rangle_{\V{x}_t}$
+$= \langle p(\V{z}_t | \V{x}_t, \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) \rangle_{\V{x}_t}$
+$= \langle p(\V{z}_t | \V{x}_t, \hat{\textbf{m}}_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) \rangle_{\V{x}_t}$
+$= \langle p(\V{z}_t | \V{x}_t, \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) \rangle_{\V{x}_t}$
+$= \langle  \langle p(\V{z}_t | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) \rangle_{\V{m}} p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) \rangle_{\V{x}_t}$</span>
     - パーティクルの移動に使った分布を$\V{x}_t$で積分したもの
     - パーティクルの移動に使った分布に対して得られたセンサ値$\V{z}_t$がどれだけ妥当なのかという値に
 
@@ -479,7 +477,7 @@ $= [\\![  [\\![ p(\V{z}_t | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}_{t-1
 
 - スライド5の手順1を行う
     - $L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t)$
-$\propto  [\\![ \mathcal{N}(\V{z}_t | \V{\mu}_{\V{z}_t}, Q_{\V{z}_t}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
+$\propto  \langle \mathcal{N}(\V{z}_t | \V{\mu}_{\V{z}_t}, Q_{\V{z}_t}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) \rangle_{\V{x}_t}$
         - $Q_{\V{z}_t} = H_{\V{m}} \Sigma_{t-1}^{(i)} H_{\V{m}}^\top + Q_{\hat{\V{z}}_t}$
         - $\V{\mu}_{\V{z}_t} = \hat{\V{z}}_t - H_{\V{m}}\hat{\V{m}}^{(i)}_{t-1} + H_{\V{x}_t} (\V{x}_t - \hat{\V{x}}_t ) + H_{\V{m}}\hat{\V{m}}_{t-1}^{(i)}$　
 - $\V{z}_t$と$\V{x}_t$の分布に分離して$\V{z}_t$を積分から出す
@@ -491,36 +489,29 @@ $\propto  [\\![ \mathcal{N}(\V{z}_t | \V{\mu}_{\V{z}_t}, Q_{\V{z}_t}) p(\V{x}_t 
 
 ---
 
-## 8.6.3 <span style="text-transform:none">FastSLAM 2.0</span>の実装
+## FastSLAM 1.0とFastSLAM 2.0の比較（詳解8.6.3項）
 
-- パーティクルの移動にセンサ値を使わないといけないのでFastSLAM 1.0から修正が必要となる
 - 左: FastSLAM 1.0、右: FastSLAM 2.0
     - 一見違いはない（近似方法が少し違うだけで元の式は同じ）
 
-<img src="./figs/fastslam_1.0.gif" />
-<img src="./figs/fastslam_2.0.gif" />
+<img width=40% src="./figs/fastslam_1.0.gif" /><img width=40% src="./figs/fastslam_2.0.gif" />
 
 ---
 
 ### 30秒後のパーティクル分布の比較
 
 - 上: FastSLAM 1.0、下: FastSLAM 2.0
-    - 2.0の方が消えるパーティクルの数が少ない$\Longrightarrow$2.0の方がサンプリングバイアスが小さくなる
+    - 2.0の方が分布にムラが少ない
 
+<img width="22%" src="./figs/fastslam1_trial1.png" /><img width="22%" src="./figs/fastslam1_trial2.png" /><img width="22%" src="./figs/fastslam1_trial3.png" />
 
-<img width="25%" src="./figs/fastslam1_trial1.png" />
-<img width="25%" src="./figs/fastslam1_trial2.png" />
-<img width="25%" src="./figs/fastslam1_trial3.png" />
-<div style="margin:-35pt">&nbsp;</div>
-<img width="25%" src="./figs/fastslam2_trial1.png" />
-<img width="25%" src="./figs/fastslam2_trial2.png" />
-<img width="25%" src="./figs/fastslam2_trial3.png" />
+<img width="22%" src="./figs/fastslam2_trial1.png" /><img width="22%" src="./figs/fastslam2_trial2.png" /><img width="22%" src="./figs/fastslam2_trial3.png" />
 
 ---
 
-## 8.7 まとめ
+## まとめ
 
-- FastSLAM 1.0/2.0を実装
+- FastSLAM 1.0/2.0を導出
     - リアルタイムに動作する<span style="color:red">逐次SLAM</span>アルゴリズム
         - Rao-Blackwellizationにより大きな次元の確率分布が推定可能に
     - MCLから派生させて実装
