@@ -244,21 +244,7 @@ $= \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\text
 
 ---
 
-## パーティクルの実装（詳解8.3節）
-
-- 本書のシミュレータではMCLのクラスを継承して作成
-    - 各パーティクルに全ランドマークの推定位置と共分散行列を追加　
-- 下図
-    - 姿勢推定に関しては今のところMCLなのでそのまま動作
-        - 移動時の処理は変更の必要すらない
-        - 観測時の処理は以後のスライドで書き換え
-    - 地図はまだ推定できないので描画は適当
-
-<img width="25%" src="figs/8.2.jpg" />
-
----
-
-## 8.4 ランドマークの位置推定の実装
+## ランドマークの位置推定の実装（詳解8.4節）
 
 - やること
     - 実装レベルまで次の更新式を変形
@@ -267,18 +253,21 @@ $= \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\text
 
 ---
 
-## 8.4.1 更新則の導出
+## 更新則の導出（詳解8.4.1項）
 
 - 地図の推定の式を実装できるように変形していく
     - パーティクルとランドマークのIDを表す添字は省略
-    - $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta p(\V{z}_{t}| \V{m}, \V{x}_t) p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) \\ = \eta \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]  \\ \qquad -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\}$
+    - $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta p(\V{z}_{t}| \V{m}, \V{x}_t) p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1})$
+    $= \eta \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]$
+    $\qquad -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\}$
         - 6章のカルマンフィルタでセンサ値の反映に使った式と同じような式だが、<span style="color:red">姿勢が定数でランドマークの位置が変数に逆転</span>
 
 ---
 
 ### 線形化
 
-- <span style="font-size:80%">$p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]$$ -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\}$</span>を$\V{m}$のガウス分布に　
+- $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]$
+$-\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\}$を$\V{m}$のガウス分布に
 - 手順
     1. $\V{h}$を線形化して$\V{m}$の多項式に
         - $\V{h}(\V{m}) \approx \V{h}(\hat{\V{m}}_{t-1}) + H (\V{m} - \hat{\V{m}}_{t-1})$
@@ -292,7 +281,8 @@ $= \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\text
 ### ランドマーク位置推定の更新式
 
 - $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t})$の指数部
-    - $-\frac{1}{2} \big[ \V{z}_t - \V{h}(\hat{\V{m}}_{t-1}) - H(\V{m} - \hat{\V{m}}_{t-1} )  \big]^\top Q_{\hat{\V{m}}_{t-1}}^{-1} \big[（略）\big] \\ -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1})$　
+    - $-\frac{1}{2} \big[ \V{z}_t - \V{h}(\hat{\V{m}}_{t-1}) - H(\V{m} - \hat{\V{m}}_{t-1} )  \big]^\top Q_{\hat{\V{m}}_{t-1}}^{-1} \big[（略）\big]$
+    $-\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1})$　
 - 1次、2次の項を整理して分布の更新式を算出
     - <span style="color:red">$\hat{\V{m}}_t = K \left[\V{z}_t - \V{h}(\hat{\V{m}}_{t-1}) \right] + \hat{\V{m}}_{t-1}$</span>
         - <span style="color:red">$K = \Sigma_{t-1} H^\top ( Q + H \Sigma_{t-1} H^\top )^{-1}$</span>
@@ -304,11 +294,12 @@ $= \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\text
 
 ---
 
-## 8.4.2 初期値の設定方法の導出
+## 初期値の設定方法の導出（詳解8.4.2項）
 
 - ガウス分布$\mathcal{N}(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t})$をいつ準備するか
     - 本書では最初に得られたセンサ値で初期化
-    - センサ値が得られる前に初期化してもよさそうだが線形化による悪影響が心配　
+    - センサ値が得られる前に初期化してもよさそうだが
+    線形化による悪影響が心配　
 - センサ値$\V{z}_t$が得られたときに、尤度で初期化
     - <span style="font-size:80%">$p(\V{m} | \V{z}_t) = \eta p(\V{z}_t|\V{m},\V{x}_t) = \eta \exp\left\{ -\frac{1}{2} \left[ \V{z}_t - \V{h}(\V{m}) \right]^\top Q(\V{m})^{-1} \left[ \V{z}_t - \V{h}(\V{m}) \right] \right\}$</span>
          - $\V{x}_t$はパーティクルの姿勢
@@ -334,16 +325,16 @@ $= \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\text
 
 ---
 
-## 8.4.3 実装
+## 実装（詳解8.4.3項）
 
 - ここまでを実装すると一応動くように
     - 重みの計算がまだ
 - 図
-    - 地図はPythonのリストの先頭にいるパーティクルのもの
+    - 地図は配列の先頭にいるパーティクルのもの
         - 本当はパーティクルの数だけ地図が存在することに注意
-    - ランドマーク位置推定について、初期化と更新の様子が見られる
+    - ランドマークの位置推定について、初期化と更新の様子が見られる
 
-<img width="35%" src="figs/fastslam_update_landmarks.gif" />
+![bg right:40% 100%](figs/fastslam_update_landmarks.gif)
 
 ---
 
