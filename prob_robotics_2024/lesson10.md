@@ -64,19 +64,16 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 分布が多次元すぎて扱えないので変形
     - 軌跡の分布と地図の分布に分解できる（ラオ・ブラックウェル化）
-$$\begin{align} &b_t(\boldsymbol{x}_{1:t}, \textbf{m}) = p(\boldsymbol{x}_{1:t},\textbf{m} | \boldsymbol{x}_{0}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) \\
-&=
-p(\textbf{m} | \boldsymbol{x}_{1:t}, \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
-p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) & （乗法定理）\\
-&=
-p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
-p(\textbf{m} | \boldsymbol{x}_{0:t}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) & （左右入れ替え）\\
-&=
-p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
-p(\textbf{m} | \boldsymbol{x}_{0:t}, \textbf{z}_{1:t}) & （不要な条件を削除）\\
-\end{align}$$
-    - 左の分布の軌跡をパーティクルで表す$\Longrightarrow$パーティクルごとに地図を推定する問題に分解される
-        - <span style="color:red">Rao-Blackwellized particle filter（RBPF）</span>という種類のパーティクルフィルタに
+$b_t(\boldsymbol{x}_{1:t}, \textbf{m}) = p(\boldsymbol{x}_{1:t},\textbf{m} | \boldsymbol{x}_{0}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})$
+$= p(\textbf{m} | \boldsymbol{x}_{1:t}, \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})$（乗法定理）
+$= p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
+p(\textbf{m} | \boldsymbol{x}_{0:t}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})$ （左右入れ替え）
+$= p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
+p(\textbf{m} | \boldsymbol{x}_{0:t}, \textbf{z}_{1:t})$ （不要な条件を削除）
+    - 左の分布の軌跡をパーティクルで表す
+    $\Longrightarrow$パーティクルごとに地図を推定する問題に分解される
+        - <span style="color:red">Rao-Blackwellized particle filter（RBPF）</span>
+        という種類のパーティクルフィルタに
 
 ---
 
