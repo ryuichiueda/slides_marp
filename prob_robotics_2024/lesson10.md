@@ -63,34 +63,34 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### <span style="text-transform:none">Rao-Blackwellization</span>
 
 - 分布が多次元すぎて扱えないので変形
-    - 軌跡の分布と地図の分布に分解できる<br />（ラオ・ブラックウェル化）
-<span style="font-size:80%">$$\begin{align} &b_t(\boldsymbol{x}_\{1:t\}, \textbf{m}) = p(\boldsymbol{x}_\{1:t\},\textbf{m} | \boldsymbol{x}_{0}, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\}) \\\\
+    - 軌跡の分布と地図の分布に分解できる（ラオ・ブラックウェル化）
+$$\begin{align} &b_t(\boldsymbol{x}_{1:t}, \textbf{m}) = p(\boldsymbol{x}_{1:t},\textbf{m} | \boldsymbol{x}_{0}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) \\
 &=
-p(\textbf{m} | \boldsymbol{x}_\{1:t\}, \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\})
-p(\boldsymbol{x}_\{1:t\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\}) & （乗法定理）\\\\
+p(\textbf{m} | \boldsymbol{x}_{1:t}, \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
+p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) & （乗法定理）\\
 &=
-p(\boldsymbol{x}_\{1:t\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\})
-p(\textbf{m} | \boldsymbol{x}_{0:t}, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\}) & （左右入れ替え）\\\\
+p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
+p(\textbf{m} | \boldsymbol{x}_{0:t}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t}) & （左右入れ替え）\\
 &=
-p(\boldsymbol{x}_\{1:t\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\})
-p(\textbf{m} | \boldsymbol{x}_{0:t}, \textbf{z}_\{1:t\}) & （不要な条件を削除）\\\\
-\end{align}$$</span>
-    - 左の分布の軌跡をパーティクルで表す$\Longrightarrow$<br />パーティクルごとに地図を推定する問題に分解される
-        - <span style="color:red">Rao-Blackwellized particle filter（RBPF）</span><br />という種類のパーティクルフィルタに
+p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
+p(\textbf{m} | \boldsymbol{x}_{0:t}, \textbf{z}_{1:t}) & （不要な条件を削除）\\
+\end{align}$$
+    - 左の分布の軌跡をパーティクルで表す$\Longrightarrow$パーティクルごとに地図を推定する問題に分解される
+        - <span style="color:red">Rao-Blackwellized particle filter（RBPF）</span>という種類のパーティクルフィルタに
 
 ---
 
 ### ランドマークごとに問題を分解
 
 - $\textbf{m}$をランドマークごとの式に分解
-    - $b_t(\boldsymbol{x}_\{1:t\}, \textbf{m}) 
-  = p(\boldsymbol{x}_\{1:t\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\})
-  \prod_{j=0}^{N_\textbf{m}-1} p(\boldsymbol{m}_j | \boldsymbol{x}_{0:t}, \V{z}_\{j, 1:t\})$
-        - センサ値のないランドマークについては$p(\boldsymbol{m}_j | \boldsymbol{x}_{0:t}, \V{z}_\{j, 1:t\}) = 1$とする<br />　
-- 確率分布$p(\boldsymbol{m}_j | \boldsymbol{x}_{0:t}, \V{z}_\{j,1:t\})$の計算: 単なる測量
-    - 軌跡$\boldsymbol{x}_{0:t}$が分かっている前提でセンサ値の履歴$\V{z}_\{j,1:t\}$から求めた$\boldsymbol{m}_j$の分布<br />　
+    - $b_t(\boldsymbol{x}_{1:t}, \textbf{m}) 
+  = p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})
+  \prod_{j=0}^{N_\textbf{m}-1} p(\boldsymbol{m}_j | \boldsymbol{x}_{0:t}, \V{z}_{j, 1:t})$
+        - センサ値のないランドマークについては$p(\boldsymbol{m}_j | \boldsymbol{x}_{0:t}, \V{z}_{j, 1:t}) = 1$とする　
+- 確率分布$p(\boldsymbol{m}_j | \boldsymbol{x}_{0:t}, \V{z}_{j,1:t})$の計算: 単なる測量
+    - 軌跡$\boldsymbol{x}_{0:t}$が分かっている前提でセンサ値の履歴$\V{z}_{j,1:t}$から求めた$\boldsymbol{m}_j$の分布　
 - 残っている問題
-    - $p(\boldsymbol{x}_\{1:t\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t\})$をパーティクルでどう計算するか
+    - $p(\boldsymbol{x}_{1:t} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t})$をパーティクルでどう計算するか
     - 履歴を使うとリアルタイム性が保てない
 
 ---
@@ -106,18 +106,18 @@ p(\textbf{m} | \boldsymbol{x}_{0:t}, \textbf{z}_\{1:t\}) & （不要な条件を
 ### 移動後の更新
 
 - $\textbf{z}_t$が入る前の信念分布
-    - $\hat{b}_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})$<br />　
+    - $\hat{b}_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})$　
 - 右辺の左側の分布を変形
-    - $p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$<br />
+    - $p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
     $\begin{align}
 &=
-p(\boldsymbol{x}_t | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t-1\}, \boldsymbol{x}_\{1:t-1\})
-p(\boldsymbol{x}_\{1:t-1\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t\}, \textbf{z}_\{1:t-1\}) \\\\
+p(\boldsymbol{x}_t | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t-1}, \boldsymbol{x}_{1:t-1})
+p(\boldsymbol{x}_{1:t-1} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t-1}) \\
 &=
 p(\boldsymbol{x}_t | \boldsymbol{x}_{t-1},\boldsymbol{u}_t)
-p(\boldsymbol{x}_\{1:t-1\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t-1\}, \textbf{z}_\{1:t-1\}) 
+p(\boldsymbol{x}_{1:t-1} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t-1}, \textbf{z}_{1:t-1}) 
 \end{align}$
-    - 最後の式の右側の分布と、$\hat{b}_t$の$\prod$の部分をかけると$b_{t-1}$に<br />　
+    - 最後の式の右側の分布と、$\hat{b}_t$の$\prod$の部分をかけると$b_{t-1}$に　
 - $\Longrightarrow\hat{b}_t(\V{x}_{0:t},\textbf{m}) = p(\V{x}_t | \V{x}_{t-1}, \V{u}_t)b_{t-1}(\V{x}_{0:t-1},\textbf{m})$
     - MCLと同様の逐次式に
 
@@ -126,9 +126,9 @@ p(\boldsymbol{x}_\{1:t-1\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t-1\}, \textbf
 ### 観測後の軌跡の更新
 
 - $\textbf{z}_t$が入ったあとの信念分布
-    - $b_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$<br />　
+    - $b_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$　
 - ベイズの定理で右辺の左側の分布を変形
-    - $p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \\\\ = \eta p(\textbf{z}_t | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}, \V{x}_{1:t}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \\\\ = \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
+    - $p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \\ = \eta p(\textbf{z}_t | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}, \V{x}_{1:t}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \\ = \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
         - 左側の分布: 今までの履歴からセンサ値を占う分布
         - 右側の分布: 今までの履歴から軌跡を占う分布
 
@@ -140,22 +140,22 @@ p(\boldsymbol{x}_\{1:t-1\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t-1\}, \textbf
 ### 観測後の地図の更新
 
 - $\textbf{z}_t$が入ったあとの信念分布（再掲）
-    - $b_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$<br />　
+    - $b_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$　
 - ベイズの定理で右辺の右側の分布を変形
-    - $p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) \\\\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_{0:t}, \V{z}_{j,1:t-1}) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})  \\\\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})   \\\\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$
+    - $p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) \\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_{0:t}, \V{z}_{j,1:t-1}) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})  \\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})   \\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$
         - ただしセンサ値$\V{z}_{j,t}$が存在しないときは$p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) = p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})$と解釈
 
-<span style="font-size:80%">地図の更新は（$\V{m}_j$が分からないけど）<br />$p(\V{z}_{j,t} | \V{m}_j, \V{x}_t)$をかけるだけの逐次式に</span>
+<span style="font-size:80%">地図の更新は（$\V{m}_j$が分からないけど）$p(\V{z}_{j,t} | \V{m}_j, \V{x}_t)$をかけるだけの逐次式に</span>
 
 ---
 
 ### $\hat{b}_t$から$b_t$への更新式
 
 - 前の2ページをまとめると
-    - <span style="font-size:75%">$b_t(\V{x}_{0:t},\textbf{m}) = \left\\{\eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \prod_{\V{z}_{j,t} \in \textbf{z}_t} \eta_j p(\V{z}_{j,t}| \V{m}_j, \V{x}_t) \right\\} \hat{b}_t(\V{x}_{0:t},\textbf{m})$</span>
-        - $\\{\\}$の中身: 前の2ページの計算で増えた因子
+    - <span style="font-size:75%">$b_t(\V{x}_{0:t},\textbf{m}) = \left\{\eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \prod_{\V{z}_{j,t} \in \textbf{z}_t} \eta_j p(\V{z}_{j,t}| \V{m}_j, \V{x}_t) \right\} \hat{b}_t(\V{x}_{0:t},\textbf{m})$</span>
+        - $\{\}$の中身: 前の2ページの計算で増えた因子
 
-移動後の更新と違い、逐次式にならないし、<br />計算方法も分からない
+移動後の更新と違い、逐次式にならないし、計算方法も分からない
 
 ---
 
@@ -177,7 +177,7 @@ p(\boldsymbol{x}_\{1:t-1\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t-1\}, \textbf
 - 手続き（MCLとほぼ同じ）
     - すべてのパーティクル$\xi_{t-1}^{(i)}$に対し
         1. $\V{x}_t \sim p(\V{x}_t | \V{x}_{t-1}, \V{u}_t)$
-        2. $\V{x}_t$を$\V{x}_{0:t-1}^{(i)}$にくっつけて$\V{x}_{0:t}^{(i)}$に<br />　
+        2. $\V{x}_t$を$\V{x}_{0:t-1}^{(i)}$にくっつけて$\V{x}_{0:t}^{(i)}$に　
 - この手続きでは時刻$t-2$以前の履歴を使わない
     - あとの手続きでも同様なら履歴を使わないで済むかもしれない
 
@@ -186,10 +186,10 @@ p(\boldsymbol{x}_\{1:t-1\} | \boldsymbol{x}_0, \boldsymbol{u}_\{1:t-1\}, \textbf
 ## 8.2.2 観測後の地図の更新
 
 - 各パーティクルの持つ地図の情報を次のように表現
-    - $\hat{\textbf{m}}_t^{(i)} = \\{ \hat{\boldsymbol{m}}_\{j,t\}^{(i)}, \Sigma_\{j,t\}^{(i)} | j=0,1,2,\dots,N_\textbf{m}-1 \\}$
-        - 各ランドマークの位置推定をガウス分布$\mathcal{N}(\hat{\boldsymbol{m}}_\{j,t\}^{(i)}, \Sigma_\{j,t\}^{(i)})$で表し、<br />カルマンフィルタを使って行う<br />　
+    - $\hat{\textbf{m}}_t^{(i)} = \{ \hat{\boldsymbol{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)} | j=0,1,2,\dots,N_\textbf{m}-1 \}$
+        - 各ランドマークの位置推定をガウス分布$\mathcal{N}(\hat{\boldsymbol{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)})$で表し、カルマンフィルタを使って行う　
 - ランドマークの位置推定の式をパーティクル仕様に
-    - <span style="font-size:80%">$p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$<br />$\Longrightarrow$
+    - <span style="font-size:80%">$p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$$\Longrightarrow$
 $p(\V{m}_j | \hat{\V{m}}_{j,t}^{(i)}, \hat{\Sigma}_{j,t}^{(i)}) = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t^{(i)}) p(\V{m}_j | \hat{\V{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}^{(i)})$</span>
         - パーティクルごとに$\V{m}_j$を推定するためには
              - $\V{x}_{0:t}$をパーティクルの軌跡で置き換え
@@ -201,8 +201,8 @@ $p(\V{m}_j | \hat{\V{m}}_{j,t}^{(i)}, \hat{\Sigma}_{j,t}^{(i)}) = \eta_j  p(\V{z
 ## 8.2.3 観測後の重みの更新
 
 - スライド9ページの次の式をパーティクルを使って表現
-    - <span style="font-size:90%">$p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) = \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$<br />
-$\Longrightarrow w_t^{(i)} = p(\textbf{z}_t | \boldsymbol{x}_{0:t}^{(i)}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t-1}) w_{t-1}^{(i)}$</span><br />
+    - <span style="font-size:90%">$p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) = \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
+$\Longrightarrow w_t^{(i)} = p(\textbf{z}_t | \boldsymbol{x}_{0:t}^{(i)}, \boldsymbol{u}_{1:t}, \textbf{z}_{1:t-1}) w_{t-1}^{(i)}$</span>
 $\Longrightarrow w_t^{(i)} = p(\textbf{z}_t | \boldsymbol{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) w_{t-1}^{(i)}$</span>
 
 
@@ -213,11 +213,11 @@ $p(\textbf{z}_t | \boldsymbol{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1})$をどう計�
 ### $p(\textbf{z}_t | \boldsymbol{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1})$の計算
 
 - 加法定理を使って地図を登場させる
-    - <span style="font-size:85%">$p(\textbf{z}_t | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) = [\\![ p(\textbf{z}_t, \textbf{m} | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) ]\\!]_\textbf{m}$<br />
-$= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\textbf{m} | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) ]\\!]_\textbf{m} \\\\ = \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) \big\rangle_{ p(\textbf{m} | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) } = \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\textbf{m} | \V{x}_{0:t-1}^{(i)}, \textbf{z}_{1:t-1}) } \\\\ = \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\textbf{m} | \hat{\textbf{m}}_{t-1}^{(i)}) } $</span>
+    - <span style="font-size:85%">$p(\textbf{z}_t | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) = [\\![ p(\textbf{z}_t, \textbf{m} | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) ]\\!]_\textbf{m}$
+$= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\textbf{m} | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) ]\\!]_\textbf{m} \\ = \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) \big\rangle_{ p(\textbf{m} | \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) } = \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\textbf{m} | \V{x}_{0:t-1}^{(i)}, \textbf{z}_{1:t-1}) } \\ = \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{ p(\textbf{m} | \hat{\textbf{m}}_{t-1}^{(i)}) } $</span>
         - ここで$p(\textbf{m} | \hat{\textbf{m}}_{t-1}^{(i)})$は、
 スライド14ページの$p(\V{m}_j | \hat{\V{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}^{(i)})$を
-全ランドマークの推定位置の同時分布にしたもの<br />　
+全ランドマークの推定位置の同時分布にしたもの　
 
 <span style="font-size:50%">どう計算するかはともかく、</span>履歴にたよらず計算可能
 
@@ -231,7 +231,7 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
     - 観測後の更新
         - 重み: $w_t^{(i)} = w_{t-1}^{(i)} \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{	p(\textbf{m} | \hat{\textbf{m}}_{t-1}^{(i)}) }$
         - 地図: $p(\V{m}_j | \hat{\V{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)})\approx \eta_j p(\V{z}_{j,t}| \V{m}_j, \V{x}_t^{(i)}) p(\V{m}_j | \hat{\V{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}^{(i)})$
-            - カルマンフィルタを使うので近似<br />　
+            - カルマンフィルタを使うので近似　
 - パーティクルから履歴を追い出して再定義
     - $\xi_t^{(i)} = ( \V{x}_t^{(i)}, w_t^{(i)}, \hat{\textbf{m}}_t^{(i)} )\quad$<span style="font-size:70%">$(i=0,1,2,\dots,N-1)$</span>
         - ただし、姿勢については$\V{x}_t$でなく$\V{x}_{0:t}$を推定していることに注意
@@ -241,7 +241,7 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 ## 8.3 パーティクルの実装
 
 - 本書のシミュレータではMCLのクラスを継承して作成
-    - 各パーティクルに全ランドマークの推定位置と共分散行列を追加<br />　
+    - 各パーティクルに全ランドマークの推定位置と共分散行列を追加　
 - 下図
     - 姿勢推定に関しては今のところMCLなのでそのまま動作
         - 移動時の処理は変更の必要すらない
@@ -252,7 +252,7 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 
 ---
 
-## 8.4 ランドマークの<br />位置推定の実装
+## 8.4 ランドマークの位置推定の実装
 
 - やること
     - 実装レベルまで次の更新式を変形
@@ -265,20 +265,20 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 
 - 地図の推定の式を実装できるように変形していく
     - パーティクルとランドマークのIDを表す添字は省略
-    - $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta p(\V{z}_{t}| \V{m}, \V{x}_t) p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) \\\\ = \eta \exp\big\\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]  \\\\ \qquad -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\\}$
+    - $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta p(\V{z}_{t}| \V{m}, \V{x}_t) p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) \\ = \eta \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]  \\ \qquad -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\}$
         - 6章のカルマンフィルタでセンサ値の反映に使った式と同じような式だが、<span style="color:red">姿勢が定数でランドマークの位置が変数に逆転</span>
 
 ---
 
 ### 線形化
 
-- <span style="font-size:80%">$p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta \exp\big\\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]$<br />$ -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\\}$</span>を$\V{m}$のガウス分布に<br />　
+- <span style="font-size:80%">$p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t}) = \eta \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q_{\V{m}}^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big]$$ -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\}$</span>を$\V{m}$のガウス分布に　
 - 手順
     1. $\V{h}$を線形化して$\V{m}$の多項式に
         - $\V{h}(\V{m}) \approx \V{h}(\hat{\V{m}}_{t-1}) + H (\V{m} - \hat{\V{m}}_{t-1})$
             - $H = \dfrac{\partial \V{h}}{\partial \V{m}}\Big|_{\V{m} = \hat{\V{m}}_{t-1}}$
     2. $Q_{\V{m}}$を定数に
-        - $Q(\V{m})$を$Q(\hat{\V{m}}_{t-1})$で代用（以後、$Q$と表記）<br />　
+        - $Q(\V{m})$を$Q(\hat{\V{m}}_{t-1})$で代用（以後、$Q$と表記）　
 - これで指数部が$\V{m}$の多項式に（次のスライド）
 
 ---
@@ -286,13 +286,13 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 ### ランドマーク位置推定の更新式
 
 - $p(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t})$の指数部
-    - $-\frac{1}{2} \big[ \V{z}_t - \V{h}(\hat{\V{m}}_{t-1}) - H(\V{m} - \hat{\V{m}}_{t-1} )  \big]^\top Q_{\hat{\V{m}}_{t-1}}^{-1} \big[（略）\big] \\\\ -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1})$<br />　
+    - $-\frac{1}{2} \big[ \V{z}_t - \V{h}(\hat{\V{m}}_{t-1}) - H(\V{m} - \hat{\V{m}}_{t-1} )  \big]^\top Q_{\hat{\V{m}}_{t-1}}^{-1} \big[（略）\big] \\ -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1})$　
 - 1次、2次の項を整理して分布の更新式を算出
     - <span style="color:red">$\hat{\V{m}}_t = K \left[\V{z}_t - \V{h}(\hat{\V{m}}_{t-1}) \right] + \hat{\V{m}}_{t-1}$</span>
         - <span style="color:red">$K = \Sigma_{t-1} H^\top ( Q + H \Sigma_{t-1} H^\top )^{-1}$</span>
         - センサ値で求まるズレ$[\V{z}_t - \V{h}(\hat{\V{m}}_{t-1})]$の$K$倍だけ位置を修正
     - <span style="color:red">$\Sigma_t = (I - KH ) \Sigma_{t-1}$</span>
-        - 割合にして$KH$だけ共分散行列が縮小<br />　
+        - 割合にして$KH$だけ共分散行列が縮小　
 
 <span style="font-size:90%">各パーティクルの各ランドマーク位置推定に適用</span>
 
@@ -302,9 +302,9 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 
 - ガウス分布$\mathcal{N}(\V{m} | \hat{\V{m}}_{t}, \Sigma_{t})$をいつ準備するか
     - 本書では最初に得られたセンサ値で初期化
-    - センサ値が得られる前に初期化してもよさそうだが線形化による悪影響が心配<br />　
+    - センサ値が得られる前に初期化してもよさそうだが線形化による悪影響が心配　
 - センサ値$\V{z}_t$が得られたときに、尤度で初期化
-    - <span style="font-size:80%">$p(\V{m} | \V{z}_t) = \eta p(\V{z}_t|\V{m},\V{x}_t) = \eta \exp\left\\{ -\frac{1}{2} \left[ \V{z}_t - \V{h}(\V{m}) \right]^\top Q(\V{m})^{-1} \left[ \V{z}_t - \V{h}(\V{m}) \right] \right\\}$</span>
+    - <span style="font-size:80%">$p(\V{m} | \V{z}_t) = \eta p(\V{z}_t|\V{m},\V{x}_t) = \eta \exp\left\{ -\frac{1}{2} \left[ \V{z}_t - \V{h}(\V{m}) \right]^\top Q(\V{m})^{-1} \left[ \V{z}_t - \V{h}(\V{m}) \right] \right\}$</span>
          - $\V{x}_t$はパーティクルの姿勢
          - パーティクルごとにランドマーク位置推定を初期化することに
          - 線形化しないとガウス分布にならないので線形化
@@ -315,12 +315,12 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 ### 線形化と初期の分布の導出
 
 - 分布の指数部
-    - $-\frac{1}{2} \left[ \V{z}_t - \V{h}(\V{m}) \right]^\top Q(\V{m})^{-1} \left[ \V{z}_t - \V{h}(\V{m}) \right]$<br />　
+    - $-\frac{1}{2} \left[ \V{z}_t - \V{h}(\V{m}) \right]^\top Q(\V{m})^{-1} \left[ \V{z}_t - \V{h}(\V{m}) \right]$　
 - $\V{h}$を近似して$\V{m}$の多項式に
     - $\V{h}(\V{m}) \approx \hat{\V{m}} + H (\V{m} - \hat{\V{m}})$
         - $\hat{\V{m}}$はパーティクルの姿勢とセンサ値から計算されるランドマークの位置
 - $Q(\V{m})$を定数に
-    - $\V{m}$の代わりに$\hat{\V{m}}$を使用（$Q(\V{m})$を以後$Q$と表記）<br />　
+    - $\V{m}$の代わりに$\hat{\V{m}}$を使用（$Q(\V{m})$を以後$Q$と表記）　
 - 得られる共分散行列
     - $\Sigma_t = ( H^\top Q^{-1} H )^{-1}$
     - $\hat{\V{m}}$と$\Sigma_t$で初期化すればよい
@@ -344,9 +344,9 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 ## 8.5 重みの更新の実装
 
 - 重みの式を変形して個々のランドマークの尤度の掛け算に
-    - <span style="font-size:80%">$w_t^{(i)} = w_{t-1}^{(i)} \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{	p(\textbf{m} | \hat{\textbf{m}}_{t-1}^{(i)}) } \\\\ = w_{t-1}^{(i)} \prod_{\boldsymbol{z}_\{j,t\} \in \textbf{z}_t} \big\langle p(\boldsymbol{z}_\{j,t\} | \boldsymbol{m}_j, \boldsymbol{x}_t^{(i)}) \big\rangle_{ p(\boldsymbol{m}_j | \hat{\boldsymbol{m}}_\{j,t-1\}^{(i)}, \Sigma_\{j,t-1\}) }$<br />　
+    - <span style="font-size:80%">$w_t^{(i)} = w_{t-1}^{(i)} \big\langle p(\textbf{z}_t | \textbf{m}, \V{x}_t^{(i)}) \big\rangle_{	p(\textbf{m} | \hat{\textbf{m}}_{t-1}^{(i)}) } \\ = w_{t-1}^{(i)} \prod_{\boldsymbol{z}_{j,t} \in \textbf{z}_t} \big\langle p(\boldsymbol{z}_{j,t} | \boldsymbol{m}_j, \boldsymbol{x}_t^{(i)}) \big\rangle_{ p(\boldsymbol{m}_j | \hat{\boldsymbol{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}) }$　
 - 個々のランドマークの尤度をさらに変形（添字は省略）
-    - <span style="font-size:75%">$\big\langle p(\V{z}_t | \V{m}, \V{x}_t) \big\rangle_{ p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) } = \eta \Big[\\!\\!\Big[ \exp\big\\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q({\V{m}})^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big] \\\\ \qquad\qquad\qquad\qquad\qquad\qquad -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\\} \Big]\\!\\!\Big]_\V{m}$</span>
+    - <span style="font-size:75%">$\big\langle p(\V{z}_t | \V{m}, \V{x}_t) \big\rangle_{ p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) } = \eta \Big[\\!\\!\Big[ \exp\big\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q({\V{m}})^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big] \\ \qquad\qquad\qquad\qquad\qquad\qquad -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \big\} \Big]\\!\\!\Big]_\V{m}$</span>
         - ランドマークの位置推定のときに出てきた$p(\V{m}|\hat{\V{m}}_t, \Sigma_t)$の式と同じ
         - 今度は分布を近似するのではなく、値を求めなければならない
 
@@ -357,11 +357,11 @@ $= [\\![ p(\textbf{z}_t | \textbf{m}, \V{x}_{0:t}^{(i)}, \textbf{z}_{1:t-1}) p(\
 - 前ページで得た式を変数$\V{z}_t$のガウス分布に近似
     - カルマンフィルタの章で移動後の分布を求める際に使ったテクニックを利用し、$\V{z}_t$の分布と$\V{m}$の分布を分離して後者を消去
         - 参考: 前ページ最後の式の積分
-            - <span style="font-size:80%">$ [\\![ \exp \\{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q({\V{m}})^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big] -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \\} ]\\!]_\V{m}$</span>
+            - <span style="font-size:80%">$ [\\![ \exp \{ -\frac{1}{2} \big[ \V{z}_t - \V{h}(\V{m}) \big]^\top Q({\V{m}})^{-1} \big[ \V{z}_t - \V{h}(\V{m}) \big] -\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat{\V{m}}_{t-1}) \} ]\\!]_\V{m}$</span>
         - このように$\V{m}$の分布を消去
-            - $\big\langle p(\V{z}_t | \V{m}, \V{x}_t) \big\rangle_{ p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) } = \eta \exp\\{L(\V{z}_t) \\} \big[\\!\\!\big[ L'(\V{m}) \big]\\!\\!\big]_\V{m} = \eta\exp \\{ L(\V{z}_t) \\}$
+            - $\big\langle p(\V{z}_t | \V{m}, \V{x}_t) \big\rangle_{ p(\V{m} | \hat{\V{m}}_{t-1}, \Sigma_{t-1}) } = \eta \exp\{L(\V{z}_t) \} \big[\\!\\!\big[ L'(\V{m}) \big]\\!\\!\big]_\V{m} = \eta\exp \{ L(\V{z}_t) \}$
         - ここで$L(\V{z}_t)$は次のような式になる（センサ値$\V{z}_t$から値を計算可能）
-            - $L(\V{z}_t) = -\frac{1}{2}[\V{z}_t -\V{h}(\hat{\V{m}}_{t-1})]^\top [H\Sigma_{t-1}H^\top + Q(\hat{\V{m}}_{t-1})]^{-1}[\V{z}_t -\V{h}(\hat{\V{m}}_{t-1})]$<br />　
+            - $L(\V{z}_t) = -\frac{1}{2}[\V{z}_t -\V{h}(\hat{\V{m}}_{t-1})]^\top [H\Sigma_{t-1}H^\top + Q(\hat{\V{m}}_{t-1})]^{-1}[\V{z}_t -\V{h}(\hat{\V{m}}_{t-1})]$　
 - 求まる尤度の性質
     - 時刻$t-1$の時点でのランドマーク推定位置からセンサ値$\V{z}_t$が離れていると値が小さく
     - 計算に使う分布の共分散行列は、ランドマークの推定位置の曖昧さを表す$H\Sigma_{t-1}H^\top$とセンサ値の曖昧さを表す$Q$の和
