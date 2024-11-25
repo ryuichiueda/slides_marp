@@ -187,22 +187,23 @@ p(\boldsymbol{x}_{1:t-1} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t-1}, \textbf{z}_
 
 ---
 
-## 8.2.2 観測後の地図の更新
+## 観測後の地図の更新（詳解8.2.2項）
 
 - 各パーティクルの持つ地図の情報を次のように表現
     - $\hat{\textbf{m}}_t^{(i)} = \{ \hat{\boldsymbol{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)} | j=0,1,2,\dots,N_\textbf{m}-1 \}$
-        - 各ランドマークの位置推定をガウス分布$\mathcal{N}(\hat{\boldsymbol{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)})$で表し、カルマンフィルタを使って行う　
+        - 各ランドマークの位置推定をガウス分布$\mathcal{N}(\hat{\boldsymbol{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)})$で表し、
+        カルマンフィルタを使って計算
 - ランドマークの位置推定の式をパーティクル仕様に
     - <span style="font-size:80%">$p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$$\Longrightarrow$
-$p(\V{m}_j | \hat{\V{m}}_{j,t}^{(i)}, \hat{\Sigma}_{j,t}^{(i)}) = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t^{(i)}) p(\V{m}_j | \hat{\V{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}^{(i)})$</span>
+$p(\V{m}_j | \hat{\V{m}}_{j,t}^{(i)}, \Sigma_{j,t}^{(i)}) = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t^{(i)}) p(\V{m}_j | \hat{\V{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}^{(i)})$</span>
         - パーティクルごとに$\V{m}_j$を推定するためには
              - $\V{x}_{0:t}$をパーティクルの軌跡で置き換え
              - $p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$を、パーティクルを使って計算した結果である$p(\V{m}_j | \hat{\V{m}}_{j,t-1}^{(i)}, \Sigma_{j,t-1}^{(i)})$で置き換え（どう計算するかはまだ不明）
-    - 逐次式になっている
+        - 逐次式になっている
 
 ---
 
-## 8.2.3 観測後の重みの更新
+## 観測後の重みの更新（詳解8.2.3項）
 
 - スライド9ページの次の式をパーティクルを使って表現
     - <span style="font-size:90%">$p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) = \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
