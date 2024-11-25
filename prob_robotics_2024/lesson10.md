@@ -419,9 +419,9 @@ $= \eta \big\langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \big\rangle_{\mathcal{N}(
 
 ### 移動に使う分布の線形化
 
-<span style="font-size:70%">ランドマークの添字は省略</span>
+ランドマークの添字は省略
 
-- <span style="font-size:90%">$\eta [\\![ p( \V{z}_{t} | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}^{(i)}_{t-1}, \Sigma_{t-1}^{(i)}) ]\\!]_{\V{m}} p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t) $</span>を$\V{x}_t$のガウス分布として近似する
+- $\eta \langle p( \V{z}_{t} | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}^{(i)}_{t-1}, \Sigma_{t-1}^{(i)}) \rangle_{\V{m}} p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$を$\V{x}_t$のガウス分布として近似する
 - 手順
     1. 積分の中を$\V{z}_{t}$の分布$\mathcal{N}(\V{\mu}_{\V{z}_t}, Q_{\V{z_t}})$に近似
 （積分内を$\V{z}_{t}$と$\V{m}$の分布に分けて$\V{z}_{t}$の分布を積分外に）
