@@ -401,17 +401,17 @@ $-\frac{1}{2} ( \V{m} - \hat{\V{m}}_{t-1})^\top \Sigma_{t-1}^{-1} ( \V{m} - \hat
 
 ---
 
-## 8.6.1 センサ値を考慮したパーティクルの姿勢の更新
+## センサ値を考慮したパーティクルの姿勢の更新（詳解8.6.1項）
 
 - パーティクルの移動に使う分布を導出
-    - <span style="font-size:70%">$p(\V{x}_t | \V{x}^{(i)}_{t-1}, \hat{\textbf{m}}^{(i)}_{t-1}, \V{u}_t, \V{z}_{j,t})$<br />
-$ = \eta p( \V{z}_{j,t} | \V{x}_t, \V{x}^{(i)}_{t-1}, \hat{\textbf{m}}^{(i)}_{t-1}, \V{u}_t) p(\V{x}_t | \V{x}^{(i)}_{t-1}, \hat{\textbf{m}}^{(i)}_{t-1}, \V{u}_t)$ <br />
-$ = \eta p( \V{z}_{j,t} | \V{x}_t, \hat{\textbf{m}}^{(i)}_{t-1}) p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t) $<br />
-$= \eta [\\![ p( \V{z}_{j,t}, \V{m}_j |\V{x}_t, \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) ]\\!]_{\V{m}_j} \ p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$<br />
-$= \eta [\\![ p( \V{z}_{j,t}, |\V{x}_t, \V{m}_j, \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) p(\V{m}_j | \V{x}_t, \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) ]\\!]_{\V{m}_j} \ p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$<br />
-$= \eta [\\![ p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \mathcal{N}(\V{m}_j | \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) ]\\!]_{\V{m}_j} p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t) $<br />
-$= \eta \big\langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \big\rangle_{\mathcal{N}(\V{m}_j | \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) } p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t) $</span>
-    - 意味　
+    - $p(\V{x}_t | \V{x}^{(i)}_{t-1}, \hat{\textbf{m}}^{(i)}_{t-1}, \V{u}_t, \V{z}_{j,t})$
+$= \eta p( \V{z}_{j,t} | \V{x}_t, \V{x}^{(i)}_{t-1}, \hat{\textbf{m}}^{(i)}_{t-1}, \V{u}_t) p(\V{x}_t | \V{x}^{(i)}_{t-1}, \hat{\textbf{m}}^{(i)}_{t-1}, \V{u}_t)$ 
+$= \eta p( \V{z}_{j,t} | \V{x}_t, \hat{\textbf{m}}^{(i)}_{t-1}) p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$
+$= \eta \langle p( \V{z}_{j,t}, \V{m}_j |\V{x}_t, \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) \rangle_{\V{m}_j} \ p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$
+$= \eta \langle p( \V{z}_{j,t}, |\V{x}_t, \V{m}_j, \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) p(\V{m}_j | \V{x}_t, \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) \rangle_{\V{m}_j}$
+$\cdot p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$
+$= \eta \langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \mathcal{N}(\V{m}_j | \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) \rangle_{\V{m}_j} p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$
+$= \eta \big\langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \big\rangle_{\mathcal{N}(\V{m}_j | \hat{\V{m}}^{(i)}_{j,t-1}, \Sigma_{j,t-1}^{(i)}) } p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t)$
         - 左側の期待値で表された分布: ランドマークの位置の不確かさを加味したセンサ値のばらつき
         - 右側の分布: 状態遷移
 
@@ -421,9 +421,9 @@ $= \eta \big\langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \big\rangle_{\mathcal{N}(
 
 <span style="font-size:70%">ランドマークの添字は省略</span>
 
-- <span style="font-size:90%">$\eta [\\![ p( \V{z}_{t} | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}^{(i)}_{t-1}, \Sigma_{t-1}^{(i)}) ]\\!]_{\V{m}} p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t) $</span><br />を$\V{x}_t$のガウス分布として近似する
+- <span style="font-size:90%">$\eta [\\![ p( \V{z}_{t} | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}^{(i)}_{t-1}, \Sigma_{t-1}^{(i)}) ]\\!]_{\V{m}} p(\V{x}_t | \V{x}^{(i)}_{t-1}, \V{u}_t) $</span>を$\V{x}_t$のガウス分布として近似する
 - 手順
-    1. 積分の中を$\V{z}_{t}$の分布$\mathcal{N}(\V{\mu}_{\V{z}_t}, Q_{\V{z_t}})$に近似<br />
+    1. 積分の中を$\V{z}_{t}$の分布$\mathcal{N}(\V{\mu}_{\V{z}_t}, Q_{\V{z_t}})$に近似
 （積分内を$\V{z}_{t}$と$\V{m}$の分布に分けて$\V{z}_{t}$の分布を積分外に）
         - $Q_{\V{z}_t} = H_{\V{m}} \Sigma_{t-1}^{(i)} H_{\V{m}}^\top + Q_{\hat{\V{z}}_t}$
         - $\V{\mu}_{\V{z}_t} = \hat{\V{z}}_t + H_{\V{x}_t} (\V{x}_t - \hat{\V{x}}_t )$
@@ -452,23 +452,23 @@ $= \eta \big\langle p( \V{z}_{j,t} | \V{x}_t, \V{m}_j) \big\rangle_{\mathcal{N}(
 
 - 問題
     - ドローされた$\V{x}_t^{(i)}$にはセンサ値$\V{z}_{j,t}$の情報が反映されている
-$\Longrightarrow$FastSLAM 1.0と同じ重みの計算では二重評価に<br />　
+$\Longrightarrow$FastSLAM 1.0と同じ重みの計算では二重評価に　
 - どうするか
     - 遷移前の姿勢$\V{x}_{t-1}^{(i)}$の尤度を重みにかける
         - 姿勢$\V{x}_{t-1}^{(i)}$をセンサ値$\V{z}_{j,t}$で評価
-        - 評価が終わってから、$\V{z}_{j,t}$にもとづいてパーティクルを移動<br />　
+        - 評価が終わってから、$\V{z}_{j,t}$にもとづいてパーティクルを移動　
 - 式: $w_t^{(i)} = \eta L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t) w_{t-1}^{(i)}$
 
 ---
 
 ### 尤度の計算
 
-- <span style="font-size:90%">$L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t)$<br />
-$\propto p(\V{z}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t)$<br />
-$= [\\![ p(\V{z}_t, \V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$<br />
-$= [\\![ p(\V{z}_t | \V{x}_t, \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$<br />
-$= [\\![ p(\V{z}_t | \V{x}_t, \hat{\textbf{m}}_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$<br />
-$= [\\![ p(\V{z}_t | \V{x}_t, \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$<br />
+- <span style="font-size:90%">$L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t)$
+$\propto p(\V{z}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t)$
+$= [\\![ p(\V{z}_t, \V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
+$= [\\![ p(\V{z}_t | \V{x}_t, \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \hat{\textbf{m}}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
+$= [\\![ p(\V{z}_t | \V{x}_t, \hat{\textbf{m}}_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
+$= [\\![ p(\V{z}_t | \V{x}_t, \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
 $= [\\![  [\\![ p(\V{z}_t | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}_{t-1}^{(i)}, \Sigma_{t-1}^{(i)}) ]\\!]_{\V{m}} p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$</span>
     - パーティクルの移動に使った分布を$\V{x}_t$で積分したもの
     - パーティクルの移動に使った分布に対して得られたセンサ値$\V{z}_t$がどれだけ妥当なのかという値に
@@ -478,10 +478,10 @@ $= [\\![  [\\![ p(\V{z}_t | \V{x}_t, \V{m}) \mathcal{N}(\V{m} | \hat{\V{m}}_{t-1
 ### 重みの計算結果
 
 - スライド5の手順1を行う
-    - $L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t)$<br />
+    - $L( \V{x}_{t-1}^{(i)} | \V{z}_{j,t},\hat{\textbf{m}}_{t-1}^{(i)},  \V{u}_t)$
 $\propto  [\\![ \mathcal{N}(\V{z}_t | \V{\mu}_{\V{z}_t}, Q_{\V{z}_t}) p(\V{x}_t | \V{x}_{t-1}^{(i)}, \V{u}_t) ]\\!]_{\V{x}_t}$
         - $Q_{\V{z}_t} = H_{\V{m}} \Sigma_{t-1}^{(i)} H_{\V{m}}^\top + Q_{\hat{\V{z}}_t}$
-        - $\V{\mu}_{\V{z}_t} = \hat{\V{z}}_t - H_{\V{m}}\hat{\V{m}}^{(i)}_{t-1} + H_{\V{x}_t} (\V{x}_t - \hat{\V{x}}_t ) + H_{\V{m}}\hat{\V{m}}_{t-1}^{(i)}$<br />　
+        - $\V{\mu}_{\V{z}_t} = \hat{\V{z}}_t - H_{\V{m}}\hat{\V{m}}^{(i)}_{t-1} + H_{\V{x}_t} (\V{x}_t - \hat{\V{x}}_t ) + H_{\V{m}}\hat{\V{m}}_{t-1}^{(i)}$　
 - $\V{z}_t$と$\V{x}_t$の分布に分離して$\V{z}_t$を積分から出す
     - 結果: $w_t^{(i)} = \mathcal{N}(\V{z}_t | \hat{\V{z}}_t, H_{\V{x}_t} R_t H_{\V{x}_t}^\top + Q_{\V{z}_t})w_{t-1}^{(i)}$
     - 解釈
@@ -505,9 +505,9 @@ $\propto  [\\![ \mathcal{N}(\V{z}_t | \V{\mu}_{\V{z}_t}, Q_{\V{z}_t}) p(\V{x}_t 
 ### 30秒後のパーティクル分布の比較
 
 - 上: FastSLAM 1.0、下: FastSLAM 2.0
-    - 2.0の方が消えるパーティクルの数が少ない<br />$\Longrightarrow$2.0の方がサンプリングバイアスが小さくなる
+    - 2.0の方が消えるパーティクルの数が少ない$\Longrightarrow$2.0の方がサンプリングバイアスが小さくなる
 
-<br />
+
 <img width="25%" src="./figs/fastslam1_trial1.png" />
 <img width="25%" src="./figs/fastslam1_trial2.png" />
 <img width="25%" src="./figs/fastslam1_trial3.png" />
@@ -524,7 +524,7 @@ $\propto  [\\![ \mathcal{N}(\V{z}_t | \V{\mu}_{\V{z}_t}, Q_{\V{z}_t}) p(\V{x}_t 
     - リアルタイムに動作する<span style="color:red">逐次SLAM</span>アルゴリズム
         - Rao-Blackwellizationにより大きな次元の確率分布が推定可能に
     - MCLから派生させて実装
-        - 推定対象が「姿勢」から「軌跡+地図」に<br />　
+        - 推定対象が「姿勢」から「軌跡+地図」に　
 - 現在はLiDARと共によく用いられる
     - ROSのgmapping（FastSLAM 2.0）
     - 点ランドマークよりも尤度の計算や地図の作成方法が複雑に
