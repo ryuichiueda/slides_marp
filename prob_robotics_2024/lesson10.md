@@ -161,10 +161,10 @@ p(\boldsymbol{x}_{1:t-1} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t-1}, \textbf{z}_
 
 ---
 
-## 8.2 PFによる演算
+## パーティクルフィルタによる演算（詳解8.2節）
 
 - 次のようなパーティクルを仮に導入
-    - $\xi_t^{(i)} = ( \boldsymbol{x}_{0:t}^{(i)}, w_t^{(i)}, \hat{\textbf{m}}_t^{(i)} )\quad$<span style="font-size:70%">$(i=0,1,2,\dots,N-1)$</span>
+    - $\xi_t^{(i)} = ( \boldsymbol{x}_{0:t}^{(i)}, w_t^{(i)}, \hat{\textbf{m}}_t^{(i)} )\quad(i=0,1,2,\dots,N-1)$
         - $\hat{\textbf{m}}_t^{(i)}$: 地図の分布の変数
             - 各ランドマークの位置や, その不確かさを表す変数
     - <span style="color:red">各パーティクルが軌跡の推定値と推定地図を持つ</span>（下図）
