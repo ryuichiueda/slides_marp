@@ -2,7 +2,7 @@
 marp: true
 ---
 
-<!-- footer: 確率ロボティクス第9回 -->
+<!-- footer: 確率ロボティクス第10回 -->
 
 # 確率ロボティクス第10回: FastSLAM
 
@@ -92,7 +92,7 @@ p(\textbf{m} | \boldsymbol{x}_{0:t}, \textbf{z}_{1:t})$ （不要な条件を削
 
 ---
 
-## 8.1.2 逐次式への変換（未遂）
+## 逐次式への変換（ただし未遂）（詳解8.1.2項）
 
 - やること
     - 履歴を式から追い出す
@@ -123,9 +123,11 @@ p(\boldsymbol{x}_{1:t-1} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t-1}, \textbf{z}_
 ### 観測後の軌跡の更新
 
 - $\textbf{z}_t$が入ったあとの信念分布
-    - $b_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$　
+    - $b_t(\V{x}_{1:t}, \textbf{m})= p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$　
 - ベイズの定理で右辺の左側の分布を変形
-    - $p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \\ = \eta p(\textbf{z}_t | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}, \V{x}_{1:t}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}) \\ = \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
+    - $p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t})$
+    $= \eta p(\textbf{z}_t | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1}, \V{x}_{1:t}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
+    $= \eta p(\textbf{z}_t | \V{x}_{0:t}, \V{u}_{1:t}, \textbf{z}_{1:t-1}) p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t-1})$
         - 左側の分布: 今までの履歴からセンサ値を占う分布
         - 右側の分布: 今までの履歴から軌跡を占う分布
 
@@ -139,10 +141,13 @@ p(\boldsymbol{x}_{1:t-1} | \boldsymbol{x}_0, \boldsymbol{u}_{1:t-1}, \textbf{z}_
 - $\textbf{z}_t$が入ったあとの信念分布（再掲）
     - $b_t(\V{x}_{1:t}, \textbf{m}) = p(\V{x}_{1:t} | \V{x}_0, \V{u}_{1:t}, \textbf{z}_{1:t}) \prod_{j=0}^{N_\textbf{m}-1} p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$　
 - ベイズの定理で右辺の右側の分布を変形
-    - $p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) \\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_{0:t}, \V{z}_{j,1:t-1}) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})  \\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})   \\ = \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$
+    - $p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t})$
+    $= \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_{0:t}, \V{z}_{j,1:t-1}) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})$
+    $= \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})$
+    $= \eta_j  p(\V{z}_{j,t} | \V{m}_j, \V{x}_t) p(\V{m}_j | \V{x}_{0:t-1}, \V{z}_{j,1:t-1})$
         - ただしセンサ値$\V{z}_{j,t}$が存在しないときは$p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t}) = p(\V{m}_j | \V{x}_{0:t}, \V{z}_{j,1:t-1})$と解釈
 
-<span style="font-size:80%">地図の更新は（$\V{m}_j$が分からないけど）$p(\V{z}_{j,t} | \V{m}_j, \V{x}_t)$をかけるだけの逐次式に</span>
+地図の更新は（$\V{m}_j$が分からないけど）$p(\V{z}_{j,t} | \V{m}_j, \V{x}_t)$をかけるだけの逐次式に
 
 ---
 
