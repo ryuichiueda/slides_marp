@@ -74,10 +74,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### <span style="text-transform:none">test.bash</span>の内容
 
-- 10秒間ノードを実行して、`listener`が出力するべき行を探すという簡単なものを書く
+- 10秒間ノードを実行して、`listener`が出力するべき行を探す簡単なものを記述
     - 出力されているべき行: `[listener-2] ...: Listen: 10`という行
     - 書いたら動作確認を
-        - `grep`の行を変えて終了ステータスを観察するなど
+        - `grep`の行を変えて終了ステータスを観察する、`mypkg.log`を確認するなど
         ```bash
          1 #!/bin/bash
          2
@@ -137,12 +137,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
          9       - name: build and test
         10         run: |
         11           rsync -av ./ /root/ros2_ws/src/mypkg/    # リポジトリの下をros2_ws下にコピー
-        12           cd /root/ros2_ws
-        13           rosdep update                                            #14行目のために必要
-        14           rosdep install -i --from-path src --rosdistro humble -y  #不要だけど念のため
-        15           bash -xv ./src/mypkg/test/test.bash /root
+        12           cd /root/ros2_ws  #↓追加のパッケージが必要なら実行前にrosdep
+        13           bash -xv ./src/mypkg/test/test.bash /root #実行
         ```
-        - 実行例: https://github.com/ryuichiueda/mypkg/actions/runs/3398928719
+        - [実行例](https://github.com/ryuichiueda/mypkg/actions/runs/12026268478/job/33524904278)
 
 ---
 
