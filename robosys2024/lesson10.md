@@ -24,16 +24,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今日やること
 
 1. 第8回の内容のコードをGitHubから取り出す
-  - 第9回でないので注意
+    - 第9回でないので注意
 2. 第8回のlistener、talkerの動作を確認するテストを書く
-  - シェルスクリプトで（非標準かもしれない）
+    - シェルスクリプトで（非標準かもしれない）
 3. GitHub Actionsでテストを動かす
 4. まとめ
-<br /> 　
-<div style="font-size:90%">
-注意: 第1回の予告での第10回と第11回を入れ替えました<br />
-（テストを書いてからのほうがコードを変更しやすいので）
-</div>
 
 ---
 
