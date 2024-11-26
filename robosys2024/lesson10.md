@@ -80,13 +80,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - `grep`の行を変えて終了ステータスを観察する、`mypkg.log`を確認するなど
         ```bash
          1 #!/bin/bash
-         2
+         2　
          3 dir=~
          4 [ "$1" != "" ] && dir="$1"   #引数があったら、そちらをホームに変える。
-         5
+         5    　　     　　　
          6 cd $dir/ros2_ws
          7 colcon build
-         8 source $dir/.bashrc
+         8 source $dir/.bashrc 　
          9 timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
         10
         11 cat /tmp/mypkg.log |
@@ -129,15 +129,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
          1 name: test
          2 on: push
          3 jobs:
-         4   test:
+         4 　test:
          5     runs-on: ubuntu-22.04
          6     container: ryuichiueda/ubuntu22.04-ros2:latest #前ページのコンテナを使うという宣言
-         7     steps:
+         7     steps:　
          8       - uses: actions/checkout@v2    #コンテナのカレントディレクトリにリポジトリを配置
          9       - name: build and test
         10         run: |
         11           rsync -av ./ /root/ros2_ws/src/mypkg/    # リポジトリの下をros2_ws下にコピー
-        12           cd /root/ros2_ws  #↓追加のパッケージが必要なら実行前にrosdep
+        12           cd /root/ros2_ws　#↓追加のパッケージが必要なら実行前にrosdep
         13           bash -xv ./src/mypkg/test/test.bash /root #実行
         ```
         - [実行例](https://github.com/ryuichiueda/mypkg/actions/runs/12026268478/job/33524904278)

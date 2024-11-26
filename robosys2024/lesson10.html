@@ -95,13 +95,13 @@ $ vi test.bash             <span class="hljs-comment"># 記述（次ページ）
 <li><code>grep</code>の行を変えて終了ステータスを観察する、<code>mypkg.log</code>を確認するなど</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"> 1 <span class="hljs-comment">#!/bin/bash</span>
- 2
+ 2　
  3 <span class="hljs-built_in">dir</span>=~
  4 [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> != <span class="hljs-string">&quot;&quot;</span> ] &amp;&amp; <span class="hljs-built_in">dir</span>=<span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>   <span class="hljs-comment">#引数があったら、そちらをホームに変える。</span>
- 5
+ 5    　　     　　　
  6 <span class="hljs-built_in">cd</span> <span class="hljs-variable">$dir</span>/ros2_ws
  7 colcon build
- 8 <span class="hljs-built_in">source</span> <span class="hljs-variable">$dir</span>/.bashrc
+ 8 <span class="hljs-built_in">source</span> <span class="hljs-variable">$dir</span>/.bashrc 　
  9 <span class="hljs-built_in">timeout</span> 10 ros2 launch mypkg talk_listen.launch.py &gt; /tmp/mypkg.log
 10
 11 <span class="hljs-built_in">cat</span> /tmp/mypkg.log |
@@ -167,15 +167,15 @@ $ vi test.bash             <span class="hljs-comment"># 記述（次ページ）
 <li>ディレクトリ構成がややこしく、うまくいかないと何時間もバグがとれないのですぐ質問を<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"> 1 name: <span class="hljs-built_in">test</span>
  2 on: push
  3 <span class="hljs-built_in">jobs</span>:
- 4   <span class="hljs-built_in">test</span>:
+ 4 　<span class="hljs-built_in">test</span>:
  5     runs-on: ubuntu-22.04
  6     container: ryuichiueda/ubuntu22.04-ros2:latest <span class="hljs-comment">#前ページのコンテナを使うという宣言</span>
- 7     steps:
+ 7     steps:　
  8       - uses: actions/checkout@v2    <span class="hljs-comment">#コンテナのカレントディレクトリにリポジトリを配置</span>
  9       - name: build and <span class="hljs-built_in">test</span>
 10         run: |
 11           rsync -av ./ /root/ros2_ws/src/mypkg/    <span class="hljs-comment"># リポジトリの下をros2_ws下にコピー</span>
-12           <span class="hljs-built_in">cd</span> /root/ros2_ws  <span class="hljs-comment">#↓追加のパッケージが必要なら実行前にrosdep</span>
+12           <span class="hljs-built_in">cd</span> /root/ros2_ws　<span class="hljs-comment">#↓追加のパッケージが必要なら実行前にrosdep</span>
 13           bash -xv ./src/mypkg/test/test.bash /root <span class="hljs-comment">#実行</span>
 </code></pre>
 <ul>
