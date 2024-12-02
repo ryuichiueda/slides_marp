@@ -40,7 +40,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
   - 例: 
     - `msg.data = n`
     - `pub.publish(msg)`
-  - 注意: オブジェクトの持っている変数や関数は、正確には「属性」（attribute）と呼ばれる　
+  - 注意: オブジェクトの持っている変数や関数（メソッド）は、まとめて「属性」（attribute）と呼ばれる　
 - ひとつのオブジェクトで関連する属性をまとめて管理可能
   - ROS 2のノードと同様、機能をうまく切り分けていくと分かりやすいソフトウェアに
 
@@ -76,11 +76,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
   2 from rclpy.node import Node
   3 from std_msgs.msg import Int16
   4
-  5 class Talker():          #ヘッダの下にTalkerというクラスを作成
-  6     def __init__(self):  # オブジェクトを作ると呼ばれる関数
-  7         self.pub = node.create_publisher(Int16, "countup", 10)
-  8         self.n = 0
-  9         # ↑ selfはオブジェクトのこと
+  5 ### ヘッダの下にTalkerというクラスを作成 ###
+  6 class Talker(Node):     #Nodeというクラスの機能を受け継いだクラスになる
+  7     def __init__(self):            #オブジェクトができたときに呼ばれる
+  8         super().__init__("takler") #Nodeのオブジェクトとしての初期化
+  9         self.pub = self.create_publisher(Int16, "countup", 10)
+ 10         self.create_timer(0.5, self.cb)
+ 11         self.n = 0
+            # ↑ selfはオブジェクト自身のこと
             # ↑ オブジェクトにひとつパブリッシャと変数をもたせる。
 （次ページに続く）
 ```
@@ -90,24 +93,22 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### クラスの作成と初期化（その2）
 
 - やること（その2）
-  - 3. オブジェクトの作成
-  - 4. コールバック関数の書き換え
-    - オブジェクトのパブリッシャや変数を使うように
+  - 3. コールバック関数もTalkerのメソッドに
+  - 4. mainでTalkerのオブジェクトを作成
 - 書き換えたら動作確認（テスト）を
 
 ```python
- 10 rclpy.init()
- 11 node = Node("talker")
- 12 talker = Talker()      #オブジェクトを作成（__init__が実行される。）
- 13
- 14 def cb():              #関数内のnやpubをtalkerのものに変更
- 15     msg = Int16()
- 16     msg.data = talker.n
- 17     talker.pub.publish(msg)
- 18     talker.n += 1
+ 14     def cb(self):         #コールバックのメソッド
+ 15         msg = Int16()
+ 16         msg.data = self.n #属性には必ずselfをつける
+ 17         self.pub.publish(msg)
+ 18         self.n += 1
  19
- 20 node.create_timer(0.5, cb)
- 21 rclpy.spin(node)
+ 20
+ 21 def main():
+ 22     rclpy.init()
+ 23     node = Talker() #Talkerのオブジェクトを作成
+ 24     rclpy.spin(node)  #↑あとは__init__が呼ばれてすべてが動き出す
 ```
 
 ---

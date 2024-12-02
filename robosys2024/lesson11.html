@@ -48,7 +48,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <li><code>pub.publish(msg)</code></li>
 </ul>
 </li>
-<li>注意: オブジェクトの持っている変数や関数は、正確には「属性」（attribute）と呼ばれる</li>
+<li>注意: オブジェクトの持っている変数や関数（メソッド）は、まとめて「属性」（attribute）と呼ばれる</li>
 </ul>
 </li>
 <li>ひとつのオブジェクトで関連する属性をまとめて管理可能
@@ -111,11 +111,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
   <span class="hljs-number">2</span> <span class="hljs-keyword">from</span> rclpy.node <span class="hljs-keyword">import</span> Node
   <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> std_msgs.msg <span class="hljs-keyword">import</span> Int16
   <span class="hljs-number">4</span>
-  <span class="hljs-number">5</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Talker</span>():          <span class="hljs-comment">#ヘッダの下にTalkerというクラスを作成</span>
-  <span class="hljs-number">6</span>     <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):  <span class="hljs-comment"># オブジェクトを作ると呼ばれる関数</span>
-  <span class="hljs-number">7</span>         self.pub = node.create_publisher(Int16, <span class="hljs-string">&quot;countup&quot;</span>, <span class="hljs-number">10</span>)
-  <span class="hljs-number">8</span>         self.n = <span class="hljs-number">0</span>
-  <span class="hljs-number">9</span>         <span class="hljs-comment"># ↑ selfはオブジェクトのこと</span>
+  <span class="hljs-number">5</span> <span class="hljs-comment">### ヘッダの下にTalkerというクラスを作成 ###</span>
+  <span class="hljs-number">6</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Talker</span>(<span class="hljs-title class_ inherited__">Node</span>):     <span class="hljs-comment">#Nodeというクラスの機能を受け継いだクラスになる</span>
+  <span class="hljs-number">7</span>     <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):            <span class="hljs-comment">#オブジェクトができたときに呼ばれる</span>
+  <span class="hljs-number">8</span>         <span class="hljs-built_in">super</span>().__init__(<span class="hljs-string">&quot;takler&quot;</span>) <span class="hljs-comment">#Nodeのオブジェクトとしての初期化</span>
+  <span class="hljs-number">9</span>         self.pub = self.create_publisher(Int16, <span class="hljs-string">&quot;countup&quot;</span>, <span class="hljs-number">10</span>)
+ <span class="hljs-number">10</span>         self.create_timer(<span class="hljs-number">0.5</span>, self.cb)
+ <span class="hljs-number">11</span>         self.n = <span class="hljs-number">0</span>
+            <span class="hljs-comment"># ↑ selfはオブジェクト自身のこと</span>
             <span class="hljs-comment"># ↑ オブジェクトにひとつパブリッシャと変数をもたせる。</span>
 （次ページに続く）
 </code></pre>
@@ -128,33 +131,29 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <ul>
 <li>
 <ol start="3">
-<li>オブジェクトの作成</li>
+<li>コールバック関数もTalkerのメソッドに</li>
 </ol>
 </li>
 <li>
 <ol start="4">
-<li>コールバック関数の書き換え</li>
+<li>mainでTalkerのオブジェクトを作成</li>
 </ol>
-<ul>
-<li>オブジェクトのパブリッシャや変数を使うように</li>
-</ul>
 </li>
 </ul>
 </li>
 <li>書き換えたら動作確認（テスト）を</li>
 </ul>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"> <span class="hljs-number">10</span> rclpy.init()
- <span class="hljs-number">11</span> node = Node(<span class="hljs-string">&quot;talker&quot;</span>)
- <span class="hljs-number">12</span> talker = Talker()      <span class="hljs-comment">#オブジェクトを作成（__init__が実行される。）</span>
- <span class="hljs-number">13</span>
- <span class="hljs-number">14</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>():              <span class="hljs-comment">#関数内のnやpubをtalkerのものに変更</span>
- <span class="hljs-number">15</span>     msg = Int16()
- <span class="hljs-number">16</span>     msg.data = talker.n
- <span class="hljs-number">17</span>     talker.pub.publish(msg)
- <span class="hljs-number">18</span>     talker.n += <span class="hljs-number">1</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"> <span class="hljs-number">14</span>     <span class="hljs-keyword">def</span> <span class="hljs-title function_">cb</span>(<span class="hljs-params">self</span>):         <span class="hljs-comment">#コールバックのメソッド</span>
+ <span class="hljs-number">15</span>         msg = Int16()
+ <span class="hljs-number">16</span>         msg.data = self.n <span class="hljs-comment">#属性には必ずselfをつける</span>
+ <span class="hljs-number">17</span>         self.pub.publish(msg)
+ <span class="hljs-number">18</span>         self.n += <span class="hljs-number">1</span>
  <span class="hljs-number">19</span>
- <span class="hljs-number">20</span> node.create_timer(<span class="hljs-number">0.5</span>, cb)
- <span class="hljs-number">21</span> rclpy.spin(node)
+ <span class="hljs-number">20</span>
+ <span class="hljs-number">21</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+ <span class="hljs-number">22</span>     rclpy.init()
+ <span class="hljs-number">23</span>     node = Talker() <span class="hljs-comment">#Talkerのオブジェクトを作成</span>
+ <span class="hljs-number">24</span>     rclpy.spin(node)  <span class="hljs-comment">#↑あとは__init__が呼ばれてすべてが動き出す</span>
 </code></pre>
 <footer>ロボットシステム学第11回</footer>
 </section>
