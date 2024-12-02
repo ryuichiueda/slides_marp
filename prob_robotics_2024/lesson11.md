@@ -299,7 +299,7 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 ---
 
-## 10.3.3 方策評価の実装
+## 方策評価の実装（詳解10.3.3項）
 
 - ある方策$\Pi$に対して終端状態以外で次の手続きをひたすら繰り返す
     - $V^\Pi(s) \longleftarrow \sum_{s'\in \mathcal{S}} P(s' | s, a) \left[ R(s, a, s') + V^\Pi(s') \right]$
@@ -310,12 +310,12 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 ---
 
-## 10.3.4 計算終了の判定
+## 計算終了の判定（詳解10.3.4項）
 
 - 次の手続きで計算を止める
     - $V^\Pi(s)$の変化量を記録
     - 全離散状態での変化量の最大値が閾値を下回ったら停止
-- 下図: 変化量$0.01$[s]以下で止めて得られた$V^\Pi$
-    - 92スイープで停止
+- 右図: 閾値$0.01$sで止めて得られた$V^\Pi$
+    - （参考: 92スイープで停止）
 
-<img width="50%" src="./figs/policy_evaluation_end_sweeps.png" />
+![bg right:40% 100%](./figs/policy_evaluation_end_sweeps.png)
