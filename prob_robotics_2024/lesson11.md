@@ -178,7 +178,7 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 - 系
     - 時間: $t = 0,1,2,\dots,T$（$T$は不定でよい）
-    - 状態と行動: $\V{x} \in \mathcal{X}$、$a \in \mathcal{A}$
+    - 状態と行動: $\V{x} \in \mathcal{X}$, $a \in \mathcal{A}$
         - 一部の状態が終端状態: $\V{x} \in \mathcal{X}_\text{f} \subset \mathcal{X}$
     - 状態遷移モデル: $p(\V{x}' | \V{x}, a) \ge 0$
 - 評価
