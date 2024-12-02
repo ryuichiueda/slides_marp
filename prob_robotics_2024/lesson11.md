@@ -333,9 +333,9 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 ### 方策改善
 
-- <span style="color:red">行動価値関数</span>
-    - 行動を変数にして価値を考える
-    - $Q^\Pi(s, a)  = \Big\langle R(s, a, s') + V^\Pi(s') \Big\rangle_{ P(s' | s, a) }  \\\\ \qquad = \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^\Pi(s') \right]$　
+- <span style="color:red">行動価値関数</span>: 状態だけでなく行動も変数にした価値関数
+    - $Q^\Pi(s, a)  = \Big\langle R(s, a, s') + V^\Pi(s') \Big\rangle_{ P(s' | s, a) }$
+    $\qquad\qquad\ = \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^\Pi(s') \right]$　
 - 行動価値関数を利用した方策の改善
     - $\Pi(s) \longleftarrow \text{argmax}_{a \in \mathcal{A}} Q^\Pi(s, a)$
     - 価値の計算（方策評価）と、この計算（方策改善）を繰り返すと方策がよくなっていきそうだ
