@@ -127,7 +127,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### 最適化問題を作る
 
 - 前ページの分布の掛け算で評価関数を作る
-    - $f( \V{x}_{0:T}) = p_0(\V{x}_0)\big\\{ \prod_{\textbf{e}_\textbf{z} } p(\V{e}_{j,t_1,t_2}) \big\\} \big\\{ \prod_{ \textbf{e}_\textbf{x} } p(\V{e}_{t_1,t_2}) \big\\}^\lambda$
+    - $f( \V{x}_{0:T}) = p_0(\V{x}_0)\big\{ \prod_{\textbf{e}_\textbf{z} } p(\V{e}_{j,t_1,t_2}) \big\} \big\{ \prod_{ \textbf{e}_\textbf{x} } p(\V{e}_{t_1,t_2}) \big\}^\lambda$
         - $\textbf{e}_\textbf{z}$: 全仮想移動エッジ
         - $\textbf{e}_\textbf{x}$: 全移動エッジ
         - $p_0(\V{x}_0)$は$\hat{\V{x}}_0$まわりの鋭いガウス分布
@@ -137,8 +137,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - <span style="color:red">$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$</span>
         - ここで
             - $J(\V{x}_{0:T}) = (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0) + J_\textbf{z}(\V{x}_{0:T}) + \lambda J_\textbf{x}(\V{x}_{0:T})$
-                - $J_\textbf{z}(\V{x}_{0:T}) =  \sum_{\textbf{e}_\textbf{z}} \left\\{\V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\\}^\top \Omega_{j,t_1,t_2} \left\\{ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\\}$
-                - $J_\textbf{x}(\V{x}_{0:T}) =  \sum_{\textbf{e}_\textbf{x}} \left\\{\V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\\}^\top \Omega_{t_1,t_2} \left\\{ \V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\\}$
+                - $J_\textbf{z}(\V{x}_{0:T}) =  \sum_{\textbf{e}_\textbf{z}} \left\{\V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}^\top \Omega_{j,t_1,t_2} \left\{ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}$
+                - $J_\textbf{x}(\V{x}_{0:T}) =  \sum_{\textbf{e}_\textbf{x}} \left\{\V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}^\top \Omega_{t_1,t_2} \left\{ \V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}$
 
 
 ---
@@ -155,12 +155,12 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 9.1.2 地図の算出問題
+## 地図の算出問題（詳解9.1.2項）
 
 - $\V{x}_{0:T}^*$を使って各ランドマーク$\text{m}_j$の位置$\V{m}_j$を求める
     - 各ランドマーク$\text{m}_j$に対して独立に計算可能　
 - 手続き
-     1.$\text{m}_j$が観測された各姿勢と$\text{m}_j$を結んでエッジとする
+     1. $\text{m}_j$が観測された各姿勢と$\text{m}_j$を結んでエッジとする
         - エッジの集合を$\textbf{e}_{\V{z}_j}$とする
      2. 残差関数と残差の分布、分布の積を考える
         - 残差関数:$\V{e}_{j,t}(\V{m}_j) = \V{m}_j - \V{h}^{-1}(\V{x}_t^*, \V{z}_{j,t})$
@@ -177,7 +177,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - やること
     - 仮想移動エッジだけでポーズ調整　
 - 解く式
-    - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \left\\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\\}$
+    - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \left\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\}$
         - 第一項:$\V{x}_0$を固定（<span style="color:red">アンカー項</span>と呼ぶ。）
         - 第二項: 仮想移動エッジの歪みの評価
         - $\Omega_0$は対角成分が$\infty$であとはゼロの$3\times 3$行列
@@ -256,7 +256,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 最適化の式を満たす$\V{x}_{0:T}$を探す
     - 最適化の式:$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$
-        - $J(\V{x}_{0:T}) = \left\\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ \qquad\qquad +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\\}$
+        - $J(\V{x}_{0:T}) = \left\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ \qquad\qquad +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\}$
     - グラフ上では、ノードを動かして$J$の小さいところを探索するイメージ　
 - 方法
     - $J$を、$\V{x}_{0:T}$をすべてつなげた$3(T+1)$次元のベクトル$\V{x}_{[0:T]}$の関数とみなす
