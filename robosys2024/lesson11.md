@@ -115,7 +115,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 課題
 
-* `listener.py`もクラスを使って書いてみましょう
+- `listener.py`もクラスを使って書いてみましょう
 
 ---
 
