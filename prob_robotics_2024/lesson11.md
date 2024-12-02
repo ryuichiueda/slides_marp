@@ -4,8 +4,7 @@ marp: true
 
 <!-- footer: 確率ロボティクス第11回 -->
 
-# 確率ロボティクス第11回: グラフ表現によるSLAM
-
+# 確率ロボティクス第11回: マルコフ決定過程と動的計画法
 千葉工業大学 上田 隆一
 
 <p style="font-size:50%">
@@ -21,305 +20,295 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 <!-- paginate: true -->
 
-### グラフベースSLAM
+### ロボットの行動決定
 
-- グラフ（グラフ理論のもの）を用いたSLAM
-    - ノード（頂点）: ロボットの姿勢やランドマークの位置 
-    - エッジ（辺）: ノードの相対位置情報
-        - デッドレコニング、センサ値
-- グラフに「歪み」
-    - エッジの相対位置情報が互いに矛盾
-    - 歪みを最小化するようにノードを移動$\Longrightarrow$最尤な地図と軌跡
+* 移動ロボットの場合、経路計画問題として扱われることが多い
+    * ある地点からある地点までの移動を最短経路で<br />　
+* もっと知的にしたい
+    * 例
+        * 危険のある近道と危険でない回り道を柔軟に選択
+        * 目的地に行くことを諦める
 
-
-![bg right:30% 100%](./figs/graph.jpg)
+<span style="color:red">マルコフ決定過程</span>と<span style="color:red">動的計画法</span>の枠組みで考える
 
 ---
 
-## 問題の定式化（詳解9.1節）
+## 10.1 マルコフ決定過程
 
-- 8章のSLAMの式（少し改変）からスタート
-    - $p(\V{x}_{1:T}, \textbf{m} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$
-        - $T$: ロボットが移動、観測を終了する時刻
-        - $\textbf{z}_0$の存在を仮定（あとで不要に）　
-- FastSLAM同様、軌跡の分布と地図の分布に分離
-    - $p(\V{x}_{1:T}, \textbf{m} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T}) = p(\V{x}_{1:T} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T}) p(\textbf{m} | \V{x}_{0:T}, \textbf{z}_{0:T})$　
-- FastSLAMと異なり、次の手順を踏む
-    - $\V{x}_{1:T}^* = \text{argmax}_{\V{x}_{1:T}} p(\V{x}_{1:T} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$で軌跡を算出
-    - $\textbf{m}^* = \text{argmax}_{\textbf{m}} p(\textbf{m} | \V{x}_0, \V{x}_{1:T}^-, \textbf{z}_{0:T})$で地図を算出
-
-推定というより最適化
-
----
-
-## 軌跡の算出問題（詳解9.1.1項）
-
-- 解く問題（<span style="color:red">「ポーズ調整」</span>と呼ばれる）
-    - $\V{x}_{0:T}^* = \text{argmax}_{\V{x}_{0:T}} p(\V{x}_{0:T} | \hat{\V{x}}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$
-        - 前ページと違って$\V{x}_0$を変数に
-        - 条件にあった$\V{x}_0$を仮に$\hat{\V{x}}_0$としておく
-            - $\V{x}_0$と$\hat{\V{x}}_0$は最終的には同じだが定式化の都合上別のものとして扱う
-- 解き方
-    1. 初期値$\hat{\V{x}}_{0:T}$を決める
-        - とりあえず$\V{u}_{1:T}$と状態方程式から雑音を考慮せずに計算
-    2. 上の式の右辺の値が大きくなるように$\hat{\V{x}}_{0:T}$を動かしていく
-
----
-
-### グラフの構成
-
-- 位置情報で関係（<span style="color:red">拘束</span>）のあるノードをエッジでつなぐ
-    1. 時刻が前後するノードは状態方程式で
-    互いに関係
-        - 移動エッジ:$\text{e}_{t_1,t_2} = (\hat{\V{x}}_{t_1}, \hat{\V{x}}_{t_2}, \V{u}_{t_2})$
-            - $t_2 = t_1 + 1$
-    2. 同じランドマークが観測された2姿勢は
-    センサ値を通じて互いに関係
-        - 仮想移動エッジ:$\text{e}_{j,t_1,t_2} = ( \hat{\V{x}}_{t_1}, \hat{\V{x}}_{t_2}, \V{z}_{j, t_1}, \V{z}_{j, t_2})$
-            - 「仮想移動エッジ」というのは
-            あくまで本書の呼び方です
-
-![bg right:35% 100%](./figs/virtual_edges.jpg)
-
----
-
-### 残差と残差関数の準備（移動エッジ）
-
-- 移動エッジの両端のノードを動かそうとすると状態遷移関数からずれる
-
-- 現状のズレの量（残差と呼ぶ）
-    - $\hat{\V{e}}_{t_1,t_2} = \hat{\V{x}}_{t_2} - \V{f}(\hat{\V{x}}_{t_1},\V{u}_{t_2})$
-        - いまのところゼロ
-
-- ノードを動かしたときのズレの量（残差関数と呼ぶ）
-    - $\V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2}) = \V{x}_{t_2} - \V{f}(\V{x}_{t_1},\V{u}_{t_2})$
-
----
-
-### 残差と残差関数の準備（仮想移動エッジ）
-
-- 現状のズレの量（残差）
-    - $\hat{\V{e}}_{j, t_1,t_2} = \V{h}^{-1}(\hat{\V{x}}_{t_1}, \V{z}_{j,t_1}) - \V{h}^{-1}(\hat{\V{x}}_{t_2}, \V{z}_{j,t_2})$
-        - $\V{h}^{-1}$は姿勢とセンサ値からランドマークの位置を計算する関数　
-- ノードを動かしたときのズレの量（残差関数）
-    - $\V{e}_{j, t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2})  = \V{h}^{-1}(\V{x}_{t_1}, \V{z}_{j,t_1}) - \V{h}^{-1}(\V{x}_{t_2}, \V{z}_{j,t_2})$　
-- ズレが大きいほど歪む
-    - しかし、残差は起こりやすいものと起こりにくいものがある
-        - 遠いものを計測した距離は誤差が出やすい$\rightarrow$この誤差をゼロにしようとすると他が歪むのでゆるく修正しないといけない
-
-<center style="color:red;font-size:150%">ズレに重み付けが必要</center>
-
----
-
-### 残差の確率モデルの準備
-
-- 次のような分布で残差の発生しやすさを考える
-    - $p(\V{e}) = \mathcal{N}(\V{e} | \V{0}, \Omega_\text{e}^{-1}) = \eta \exp \left( -\dfrac{1}{2} \V{e}^\top \Omega_{\text{e}} \V{e} \right)$
-        - $\V{e}$: 移動エッジまたは仮想移動エッジの残差関数の値
-        - $\Omega_\text{e}$: 残差に関する精度行列　
-- $p(\V{e})$の性質（具体的な計算は詳解9.2.4項で）
-    - 例えばセンサ値の距離が大きいと$\V{e}$が大きくても$p(\V{e})$の値は小さくならない
-
-残差の最小化ではなく全エッジの$p(\V{e})$の最大化を目標にノードを移動するとよい
-
----
-
-### 最適化問題を作る
-
-- 前ページの分布の掛け算で評価関数を作る
-    - $f( \V{x}_{0:T}) = p_0(\V{x}_0)\big\{ \prod_{\textbf{e}_\textbf{z} } p(\V{e}_{j,t_1,t_2}) \big\} \big\{ \prod_{ \textbf{e}_\textbf{x} } p(\V{e}_{t_1,t_2}) \big\}^\lambda$
-        - $\textbf{e}_\textbf{z}$: 全仮想移動エッジ
-        - $\textbf{e}_\textbf{x}$: 全移動エッジ
-        - $p_0(\V{x}_0)$は$\hat{\V{x}}_0$まわりの鋭いガウス分布
-            - $\V{x}を\hat{\V{x}}_0$から動かすと大きなペナルティーを与えて座標系を固定
-        - $\lambda$: 移動エッジをどれだけ重視するか決める定数（当面$\lambda = 1$）　
-- 対数をとって整理すると次のような問題に
-    - <span style="color:red">$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$</span>
-        - ここで
-            - $J(\V{x}_{0:T}) = (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0) + J_\textbf{z}(\V{x}_{0:T}) + \lambda J_\textbf{x}(\V{x}_{0:T})$
-                - $J_\textbf{z}(\V{x}_{0:T}) =  \sum_{\textbf{e}_\textbf{z}} \left\{\V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}^\top \Omega_{j,t_1,t_2} \left\{ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}$
-                - $J_\textbf{x}(\V{x}_{0:T}) =  \sum_{\textbf{e}_\textbf{x}} \left\{\V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}^\top \Omega_{t_1,t_2} \left\{ \V{e}_{t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right\}$
+* やること
+    * ロボットが行動決定するという現象や問題を定式化
 
 
 ---
 
-### マハラノビス距離
+## 10.1.1 状態遷移と観測
 
-- 前ページの$J$の式に出てきた$\V{e}^\top \Omega \V{e}$の値の平方根
-    - $\sqrt{\V{e}^\top \Omega \V{e}}$
-- $\V{e}^\top \V{e}$: 誤差の内積$=$ 変数の誤差の二乗和
-- $\V{e}^\top \Omega \V{e}$: 精度行列をはさんだ誤差の二乗和
-    - $\V{e}$の各変数の重みが変わる
-    - 確率的に起こりにくい誤差ほど大きく評価される　
-- <span style="color:red">前ページの最適化問題: マハラノビス距離の二乗和を最小化する問題</span>
-
----
-
-## 地図の算出問題（詳解9.1.2項）
-
-- $\V{x}_{0:T}^*$を使って各ランドマーク$\text{m}_j$の位置$\V{m}_j$を求める
-    - 各ランドマーク$\text{m}_j$に対して独立に計算可能　
-- 手続き
-     1. $\text{m}_j$が観測された各姿勢と$\text{m}_j$を結んでエッジに（エッジの集合を$\textbf{e}_{\V{z}_j}$とする）
-     2. 残差関数と残差の分布、分布の積を考える
-        - 残差関数:$\V{e}_{j,t}(\V{m}_j) = \V{m}_j - \V{h}^{-1}(\V{x}_t^*, \V{z}_{j,t})$
-        - 残差の分布:$p_{j,t}(\V{e}_{j,t}) = \eta \exp \left(-\dfrac{1}{2} \V{e}_{j,t}^\top \Omega_{j,t} \V{e}_{j,t} \right)$
-        - 分布の積:$f(\V{m}_j ) = \prod_{\textbf{e}_{\V{z}_j}} p_{j,t}(\V{e}_{j,t})$
-     3. 分布の積の対数から作った最適化の問題を解く
-        - $\V{m}_j^* = \text{argmin}_{\V{m}_j} \sum_{\textbf{e}_{\V{z}_j}} \{\V{e}_{j,t}(\V{m}_j)\}^\top \Omega_{j,t} \{\V{e}_{j,t}(\V{m}_j)\}$
-
-<center>このレベルでのgraph-based SLAMの定式化は終了。あとは実装</center>
-
----
-
-## 仮想移動エッジによる軌跡の算出（詳解9.2節）
-
-- とりあえず仮想移動エッジだけでポーズ調整してみる
-- 解く式
-    - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \big\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)$
-    $+  \sum_{\textbf{e}_\textbf{z}} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]^\top \Omega_{j,t_1,t_2} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]\big\}$
-        - 第一項:$\V{x}_0$を固定（<span style="color:red">アンカー項</span>と呼ぶ。）
-            - $\Omega_0$は対角成分が$\infty$であとはゼロの$3\times 3$行列
-        - 第二項: 仮想移動エッジの歪みの評価
-    - 姿勢が3次元、残差が2次元で解けないので、説明のために暫定的にセンサ値を3次元に（次ページ）
-
----
-
-### センサ値の3次元化
-
-<span style="font-size:80%">※ あくまで説明のためで、あとから2次元に戻します</span>
-
-- $\V{m}$を3次元ベクトルに（左図）
-    - $\V{m} = (m_x \  m_y \ m_\theta)^\top$
-        - 「$m_\theta$: ランドマークの方角」を追加
-    - $\V{z} = (\ell \ \varphi \ \psi)^\top$
-        - $\psi$: ランドマークのどのツラを見ているかを表す角度
-<img width="40%" src="./figs/9.3.jpg" />$\qquad$<img width="36%" src="./figs/9.4.jpg" />
-- 実装では2姿勢間の$\psi$の相対値だけ必要（右図）
+* ロボットの行動
+    * 状態遷移モデル: $\V{x}\_t \\sim p(\V{x} | \V{x}\_{t-1}, a\_t)$<br />$(t=1,2,\\dots,T)$
+        * $T$: タスクが終わる時間（不定）
+        * $\V{x}_T$: 終端状態
+        * $a_t \in \mathcal{A} = \\{a_0, a_1, \dots, a_{M-1}\\}$: 行動
+            * これまでのようにベクトルでもよいし、「走る」、「投げる」などの複合的な動作でもよい。なんなら「食う」、「寝る」、「遊ぶ」などでもよい
+            * 添字が時刻だったり行動の種類のIDだったりするので注意<br />　
+* ロボットの観測
+    * 常に真の状態$\V{x}_t^*$が既知とする
+    * 未知の場合は12章で扱う
 
 
 ---
 
-## ロボットの軌跡の初期値の例<br />（詳解9.2.1項）
+### マルコフ性の仮定
 
-- 詳解確率ロボティクスのシミュレータで採取
-    - $\hat{\V{x}}_{0:T}$が実際とずれており、センサ値が
-    指し示すランドマークの位置もばらばらに
-
-![bg right:35% 100%](./figs/draw_graphslam_log.png)
-
----
-
-## 9.2.3 残差の計算（詳解9.2.3項）
-
-- 残差: エッジの両側の姿勢から計算されるランドマークの姿勢の差
-    - <span style="font-size:80%">$\hat{\boldsymbol{e}}_{j,t_1,t_2} = \begin{pmatrix} \hat{x}_{t_2} + \ell_{j,t_2}\cos (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\ \hat{y}_{t_2} + \ell_{j,t_2}\sin (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\ \hat{\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} \hat{x}_{t_1} + \ell_{j,t_1}\cos (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\ \hat{y}_{t_1} + \ell_{j,t_1}\sin (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\ \hat{\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
-        - ただし$\theta$成分は$[-\pi,\pi)$の範囲に正規化
-- 残差関数
-    - <span style="font-size:80%">$\boldsymbol{e}_{j,t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2}) = \begin{pmatrix} {x}_{t_2} + \ell_{j,t_2}\cos ({\theta}_{t_2} + \varphi_{j,t_2}) \\ {y}_{t_2} + \ell_{j,t_2}\sin ({\theta}_{t_2} + \varphi_{j,t_2}) \\ {\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} {x}_{t_1} + \ell_{j,t_1}\cos ({\theta}_{t_1} + \varphi_{j,t_1}) \\ {y}_{t_1} + \ell_{j,t_1}\sin ({\theta}_{t_1} + \varphi_{j,t_1}) \\ {\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
+* 状態遷移が遷移前の状態よりも前の状態に左右されない場合を考える
+    * $\V{x}\_t \\sim p(\V{x} | \V{x}\_{t-1}, a\_t)$の形を見るとそうなっている
+    * $\V{x}\_{t-2}$以前の状態は何の影響も与えない<br />　
+* そうでない場合はどうする？
+    * マルコフ性を満たすように状態の定義をしなおす
+    * 例: $\V{x}\_{t-2}$まで散々動いてモータが熱々のロボットと$\V{x}\_{t-1}$からスタートするロボットでは動きが違う<br />
+    $\Longrightarrow$モータの温度を$\V{x}$の変数として扱う
 
 ---
 
-## マハラノビス距離を決める精度行列の導出（詳解9.2.4項）
+## 10.1.2 評価関数
 
-- ノード$\text{e}_{j,t_1,t_2}$の$\Omega_{j,t_1,t_2}$を求めましょう
-    - センサ値$\V{z}_{t_1}, \V{z}_{t_2}$の分布を$\ell\varphi\psi$空間から$XY\theta$空間に写像　
-- 求めかた
-    - 写像のための関数を導出: センサ値を変数とした残差（前ページの上の式）の関数$\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b)$を線形化したもの
-        - $\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2}( \boldsymbol{z}_{t_1}, \boldsymbol{z}_{t_2})$
-        $\qquad\qquad\qquad + R_{j,t_1} (\boldsymbol{z}_{j,a} - \boldsymbol{z}_{j,t_1} ) + R_{j,t_2} (\boldsymbol{z}_{j,b} - \boldsymbol{z}_{j,t_2} )$
-            - $R_{j,t}$:$\hat{\boldsymbol{e}}_{j,t_1,t_2}$を$\V{z}_{j,t}$まわりで偏微分したヤコビ行列
-    - 写像する分布:$\mathcal{N}(\V{z}_{t_1}, Q_{j,t_1}), \mathcal{N}(\V{z}_{t_2}, Q_{j,t_2})$
-        - <span style="font-size:80%">$Q_{j,t} = \begin{pmatrix} (\ell_{j,t} \sigma_\ell)^2 & 0 & 0\\ 0 & \sigma_\varphi^2 & 0 \\ 0 & 0 & \sigma_\psi^2 \end{pmatrix}$</span>
+* ロボットの行動を評価する
+    * これまでは自己位置推定やSLAMの性能で評価していたが、これは（ロボットに人格があれば）自律ロボットにとっては手段でしかない。うまく行動できるかどうかが重要。<br />　
+* 評価関数: $J(\boldsymbol{x}\_{0:T}, a\_{1:T}) \in \Re$
+    * やったこと（$a\_{1:T}$）、起こったこと（$\boldsymbol{x}\_{0:T}$）で評価
+    *  評価は時間、消費エネルギー、危険性など多岐にわたるはずであるが、うまく式を作ってスカラ1個で評価することとする
+        *  行動はひとつしか選べないのでこれで十分
 
 ---
 
-### 結果
+## 10.1.3 報酬と終端状態の価値
 
-- $\Omega_{j,t_1,t_2}^{-1} = R_{j,t_1} Q_{j,t_1} R_{j,t_1}^\top + R_{j,t_1} Q_{j,t_2} R_{j,t_1}^\top$
-    - ここで
-        - $R_{j,t_1} = - \begin{pmatrix} \cos(\hat{\theta}_{t_1} + \varphi_{t_1}) & -\ell_{j,t_1}\sin(\hat{\theta}_{t_1} + \varphi_{t_1}) & 0\\ \sin(\hat{\theta}_{t_1} + \varphi_{t_1}) & \ell_{j,t_1}\cos(\hat{\theta}_{t_1} + \varphi_{t_1}) & 0\\ 0 & 1 & -1 \end{pmatrix}$
-        - $R_{j,t_2} = \begin{pmatrix} \cos(\hat{\theta}_{t_2} + \varphi_{t_2}) & -\ell_{j,t_2}\sin(\hat{\theta}_{t_2} + \varphi_{t_2}) & 0\\ \sin(\hat{\theta}_{t_2} + \varphi_{t_2}) & \ell_{j,t_2}\cos(\hat{\theta}_{t_2} + \varphi_{t_2}) & 0\\ 0 & 1 & -1 \end{pmatrix}$
-
----
-
-## 最適化問題の解法（詳解9.2.5項）
-
-- 最適化の式を満たす$\V{x}_{0:T}$を探す
-    - 最適化の式:$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$
-        - $J(\V{x}_{0:T}) = \big\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)$
-        $+\sum_{\textbf{e}_\textbf{z}} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]^\top \Omega_{j,t_1,t_2} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]\big\}$
-    - グラフ上では、ノードを動かして$J$の小さいところを探索するイメージ　
-- 方法
-    - $J$を、$\V{x}_{0:T}$をすべてつなげた$3(T+1)$次元のベクトル$\V{x}_{[0:T]}$の関数とみなす
-    - $J$を$\V{x}_{[0:T]}$のガウス分布の指数部とみなし、ガウス分布の中心を求めると、$J$が最小になる$\V{x}_{[0:T]}$が求まる
-        - すべての$\V{e}_{j,t_1,t_2}$を線形化して整理し、$\V{x}_{[0:T]}$の多項式を作る
+* 評価関数$J(\boldsymbol{x}\_{0:T}, a\_{1:T}) $を次の形式で考える
+    * $J(\boldsymbol{x}\_{0:T}, a\_{1:T}) = \sum\_{t=1}^T r(\boldsymbol{x}\_{t-1}, a\_t, \boldsymbol{x}\_t) + V\_\text{f}(\boldsymbol{x}\_T)$
+        * $r(\boldsymbol{x}\_{t-1}, a\_t, \boldsymbol{x}\_t) \in \Re$: 状態遷移ごとに与える評価を決める関数
+            * 報酬モデルと呼ぶ
+            * 値を<span style="color:red">報酬</span>と呼ぶ
+            * $t=0$から$t=T$までの状態遷移、行動履歴、報酬をまとめて<span style="color:red">エピソード</span>と呼ぶ
+        * $V\_\text{f}(\boldsymbol{x}\_T)$: <span style="color:red">終端状態</span>の評価<br />　
+* 終端状態
+    * 良くも悪くもタスクが終わった状態
+    * $V\_\text{f}(\boldsymbol{x}\_T)$でどのような終わりが良いのか点数をつけておく
 
 ---
 
-### $\V{e}_{j,t_1,t_2}$の線形化
+## 10.1.4 方策と状態価値関数
 
-- 線形化
-    - $\boldsymbol{e}_{j,t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2}) \approx  \boldsymbol{e}_{j,t_1,t_2}(\hat{\boldsymbol{x}}_{t_1}, \hat{\boldsymbol{x}}_{t_2}) + B_{j,t_1} (\boldsymbol{x}_{t_1} - \hat{\boldsymbol{x}}_{t_1}) + B_{j,t_2} (\boldsymbol{x}_{t_2} - \hat{\boldsymbol{x}}_{t_2})$
-        - $B_{j,t_1} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_1}} \Big|_{\boldsymbol{x}_{t_1} = \hat{\V{x}}_{t_1}} = - \begin{pmatrix} 1 & 0 & -\ell_{j,t_1} \sin(\theta_{t_1} + \varphi_{j,t_1}) \\ 0 & 1 & \ell_{j,t_1} \cos(\theta_{t_1} + \varphi_{j,t_1})\\ 0 & 0  & 1\\ \end{pmatrix}$
-        - $B_{j,t_2} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_2}} \Big|_{\boldsymbol{x}_{t_2} = \hat{\V{x}}_{t_2}} = \begin{pmatrix} 1 & 0 & -\ell_{j,t_2} \sin(\theta_{t_2} + \varphi_{j,t_2}) \\ 0 & 1 & \ell_{j,t_2} \cos(\theta_{t_2} + \varphi_{j,t_2})\\ 0 & 0  & 1\\ \end{pmatrix}$
-- 差分$\Delta\V{x}_{0:T} = \V{x}_{0:T} - \hat{\V{x}}_{0:T}$の式に
-    - $\boldsymbol{e}_{j,t_1,t_2}(\Delta \boldsymbol{x}_{t_1}, \Delta \boldsymbol{x}_{t_2}) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1} \Delta \boldsymbol{x}_{t_1} + B_{j,t_2} \Delta \boldsymbol{x}_{t_2}$
-    - これで$J$が$\Delta\V{x}_{0:T}$内のそれぞれの$\V{x}_t$の多項式で表される
-
-$\qquad\qquad\qquad\qquad$まだ$\Delta\V{x}_{[0:T]}$の式ではない
-
----
-
-### $\Delta\V{x}_{[0:T]}$の多項式への変換
-
-- 次のような形式にする
-    - $J(\Delta\V{x}_{[0:T]}) = (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*)^\top \Omega (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*) +$定数
-   $= \Delta\V{x}_{[0:T]}^\top \Omega \Delta\V{x}_{[0:T]} - 2 \Delta\V{x}_{[0:T]}^\top \V{\xi}+$ 定数
-        - $\Omega$:$3(T+1)\times 3(T+1)$行列、$\V{\xi}$:$3(T+1)$ベクトル　
-    - $J$を最小にする$\Delta\V{x}_{[0:T]}^*$は、上の式の中辺と右辺を比較すると
-$$\Delta\V{x}_{[0:T]}^* = \Omega^{-1}\V{\xi}$$
-- $J(\Delta\V{x}_{0:T})$からの変形のしかた
-    - 線形化した$J$の各ノードの項（下の式）を$\Delta\V{x}_{[0:T]}$を変数にして変形
-        - $(\hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1}\Delta\boldsymbol{x}_{t_1} + B_{j,t_2}\Delta\boldsymbol{x}_{t_2} )^\top \Omega_{j,t_1,t_2} (省略)$
-    - そうすると係数が$3(T+1)\times3(T+1)$行列と$3(T+1)$次元ベクトルに（次のページ）$\rightarrow$合計すると$\Omega, \V{\xi}$に
-
----
-
-### $\Omega, \V{\xi}$の計算
-
-- 各ノードの係数を求める
-    - $\Omega^*_{j,t_1,t_2} = \begin{pmatrix} \ddots &  &  &  &  \\ & B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_1} & \cdots & B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_2} &  \\ & \vdots & \ddots & \vdots \\ & B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_1} & \cdots & B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_2} &  \\ & & & & \ddots \end{pmatrix}$
-
-（次ページに続く）
-
----
-
-- ${\boldsymbol{\xi}}^\ast_{j,t_1,t_2} = - \begin{pmatrix} \vdots \\ B_{j,t_1}^\top \\ \vdots \\ B_{j,t_2}^\top \\ \vdots \end{pmatrix} \Omega_{j,t_1,t_2} \hat{\boldsymbol{e}}_{j,t_1,t_2}$
-        - 省略されているところは全てゼロが埋まる　
-- あとは足して、前のページの式を適用するとノードの移動量$\Delta\V{x}_{[0:T]}$が求まる
-    - $\Omega = \sum_{\textbf{e}_\textbf{z}}\Omega^*_{j,t_1,t_2} + \begin{pmatrix}\Omega_0 & O \\ O & O \end{pmatrix}$
-        - 第二項はアンカー項の精度行列
-    - $\V{\xi} = \sum_{\textbf{e}_\textbf{z}} {\boldsymbol{\xi}}^\ast_{j,t_1,t_2}$
+* 同じ初期状態$\V{x}\_0$からタスクを行うと、$J(\V{x}\_{0:T}, a\_{1:T})$の値は毎回変化
+    * 状態遷移が確率的なので<br />　
+* 行動ルールがあったときにどうやって評価する？
+    * 行動ルールのことを$\Pi$と表記して<span style="color:red">方策</span>と呼びましょう
+        * 方策の例: ロボットを動かすための自作のプログラム
+    * 良い方策: $J$の期待値が高い<br />　
+* $\V{x}_0$から$\Pi$でロボットを動かしたときの$J$の期待値を<span style="color:red">価値</span>$V^\Pi(\V{x}_0)$と表記
+    * 価値の性質を調べてみましょう
 
 
 ---
 
-## 9.2.6 仮想移動エッジによる軌跡推定の実装
+### 価値の性質
 
-- ログから各行列を計算して$\Omega, \V{\xi}$に足し込むコードを記述　
+* $V^\Pi(\V{x}\_0) = \left\langle \sum\_{t=1}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V(\V{x}\_T) \right\rangle\_{p(\V{x}\_{1:T}, a\_{1:T}|\V{x}\_0, \Pi)}$
+    * $T$は可変だが、固定として扱える
+        * 早くタスクが完了したら、終端状態で何もしない状態遷移（報酬ゼロ）を繰り返して評価を先延ばしにすればよい
+        * この先延ばしで$T=0$（初期状態=終端状態の場合）でも上式が成立
+    * 終端状態の評価は価値の定義に含まれる<br />　
+* $\V{x}_0$は必ずしも初期状態である必要がない
+    * マルコフ性の前提から、$\V{x}\_{-1}$以前のことは$V^\Pi(\V{x}\_0)$に無関係
+    * 方策でも$\V{x}\_{-1}$以前を考慮する意味はない
+    * タスクのどの時点の状態でも価値$V^\Pi(\V{x})$が考えられる<br />　
+* <span style="color:red">関数$V^\Pi: \mathcal{X} \to \Re$の存在$\Longrightarrow$状態価値関数</span>
 
-- 注意点
-    - 観測のない姿勢のデータは孤立したノードになるので除去
-    - ノードの移動は何回か繰り返す必要がある
-        - $\V{x}_{[0:T]}^* = \Delta\V{x}_{[0:T]} + \hat{\V{x}}_{[0:T]}$には線形化の影響で誤差が混入
-        - $\V{x}_{[0:T]}^*$を新たな初期値$\hat{\V{x}}_{[0:T]}$として再度ノードの移動量を求める
 
 ---
 
-### 得られた軌跡
+### 逐次式による価値の表現
 
-- センサ値がランドマークの位置に揃うように軌跡が逆算される
-    - 移動ノードを使っていないので軌跡が実際よりもガタガタする
+* 価値の式を逐次式にしてみましょう
+    * <span style="font-size:60%">$V^\Pi(\V{x}\_0) = \left\langle r(\V{x}\_0, a\_1, \V{x}\_1) + \sum\_{t=2}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V(\V{x}\_T)  \right\rangle\_{p(\V{x}\_{1:T}, a\_{1:T} |\V{x}\_0, \Pi)}$
+$= \Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) \Big\rangle\_{p(\V{x}\_{1:T}, a\_{1:T} |\V{x}\_0, \Pi)} + \left\langle \sum\_{t=2}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V(\V{x}\_T)  \right\rangle\_{p(\V{x}\_{1:T}, a\_{1:T} |\V{x}\_0, \Pi)}$
+$= \Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) \Big\rangle\_{p(\V{x}\_1 , a\_1 | \V{x}\_0, \Pi )} + \left\langle \sum\_{t=2}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V(\V{x}\_T)  \right\rangle\_{p(\V{x}\_{2:T}, a\_{2:T} |\V{x}\_1, a\_1, \V{x}\_0, \Pi)p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi)}$<br />
+（↑第一項: 余計な変数の消去. 第二項: 乗法定理）
+$= \Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) \Big\rangle\_{p(\V{x}\_1 , a\_1 | \V{x}\_0, \Pi )} + \left\langle \sum\_{t=2}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V(\V{x}\_T)  \right\rangle\_{p(\V{x}\_{2:T}, a\_{2:T} |\V{x}\_1, \Pi)p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi)}$<br />
+（↑第二項: マルコフ性から$\V{x}\_1$が分かれば条件$\V{x}\_0,a\_1$は不要）</span>
 
-<img src="./figs/9.8.jpg" />
+次ページに続く
+
+---
+
+### 逐次式による価値の表現（続き）
+
+* 逐次式になる
+    * <span style="font-size:60%">$=\Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) \Big\rangle\_{p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi )} + \left\langle \left\langle \sum\_{t=2}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V(\V{x}\_T)  \right\rangle\_{p(\V{x}\_{2:T}, a\_{2:T}|\V{x}\_1, \Pi)} \right\rangle\_{p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi)}$
+$= \Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) \Big\rangle\_{p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi )} + \left\langle V^\Pi(\V{x}\_1) \right\rangle\_{p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi)}$<br />
+ （↑第二項: $\V{x}\_1$は$\V{x}\_0$と同様, 初期状態である必要がない）
+$=\Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) + V^\Pi(\V{x}\_1) \Big\rangle\_{p(\V{x}\_1, a\_1 | \V{x}\_0, \Pi )}$<br />
+$= \Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) + V^\Pi(\V{x}\_1) \Big\rangle\_{p(\V{x}\_1 | \V{x}\_0, a\_1, \Pi )P(a\_1 | \V{x}\_0, \Pi)}$<br />
+$= \Big\langle r(\V{x}\_0, a\_1, \V{x}\_1) + V^\Pi(\V{x}\_1) \Big\rangle\_{p(\V{x}\_1 | \V{x}\_0, a\_1 )P(a\_1 | \V{x}\_0, \Pi)}$</span>
+* $\V{x}_0$が初期状態である必要はないので時刻を取り払う
+    * $V^\Pi(\V{x}) = \left\langle r(\V{x}, a, \V{x}') + V^\Pi(\V{x}') \right\rangle\_{p(\V{x}' | \V{x}, a )P(a | \V{x}, \Pi)}$
+        * 価値は、報酬と遷移後の価値の期待値の和と釣り合う
+
+---
+
+### 決定論的方策
+
+* $V^\Pi(\V{x}) = \left\langle r(\V{x}, a, \V{x}') + V^\Pi(\V{x}') \right\rangle\_{p(\V{x}' | \V{x}, a )P(a | \V{x}, \Pi)}$
+    * $a$は、そのときの状態$\V{x}$と方策$\Pi$から確率的に決まるという式になっているが、ロボットが自分で選択可能
+    * $r(\V{x}, a, \V{x}'), V^\Pi(\V{x}'), p(\V{x}' | \V{x}, a )$の値が分かればベストな行動$a^\*$が決まる
+        * $\Pi$から方策を改善できる
+        * 全状態で$\V{x}$に対して$a^*$を決定していくと$\Pi$より性能がよくなる<br />
+<span style="color:red">$\Longrightarrow$確率的な方策があると、それより性能がよい決定論的な方策が存在</span><br />　
+* 方策を実装するときはこの形式で十分
+    * $\Pi: \mathcal{X} \to \mathcal{A}$（<span style="color:red">決定論的方策</span>）
+* $\Pi$が決定論的方策の場合の価値の逐次式
+    * $V^\Pi(\V{x}) = \left\langle r(\V{x}, a, \V{x}') + V^\Pi(\V{x}') \right\rangle\_{p(\V{x}' | \V{x}, a )} \qquad (a =\Pi(\V{x}))$
+
+---
+
+## 10.1.5 マルコフ決定過程の<br />まとめ
+
+* 系
+    * 時間: $t = 0,1,2,\dots,T$（$T$は不定でよい）
+    * 状態と行動: $\V{x} \in \mathcal{X}$、$a \in \mathcal{A}$
+        * 一部の状態が終端状態: $\V{x} \in \mathcal{X}_\text{f} \subset \mathcal{X}$
+    * 状態遷移モデル: $p(\V{x}' | \V{x}, a) \ge 0$
+* 評価
+    * 報酬モデル: $r(\V{x}, a, \V{x}') \in \Re$
+    * 終端状態の価値: $V_\text{f}(\V{x}) \in \Re \quad (\V{x} \in \mathcal{X}_\text{f})$
+    * 評価: $J(\V{x}\_{0:T}, a\_{1:T}) = \sum\_{t=1}^T r(\V{x}\_{t-1}, a\_t, \V{x}\_t) + V\_\text{f}(\V{x}\_T)$
+* 解く問題
+    * なるべく良い方策$\Pi: \mathcal{X} \to \mathcal{A}$を求めたい
+        * 求めた価値の逐次式が解決に重要な役割
+
+---
+
+## 10.2 経路計画問題
+
+* 次のような問題を考えます
+    * ロボットが最短時間でゴールに行く
+    * 水たまりに入りたくない
+    * とれる行動: 前進、右回転、左回転の3種類
+
+<img width="40%" src="./figs/puddle_world4.gif" />
+
+---
+
+## 10.2.1 報酬の設定
+
+* 「ゴールまで早く到達でき、<br />かつ水たまりを避ける」移動を<br />高く評価
+    * $r(\V{x}, a, \V{x}') = -\Delta t - cw(\V{x}')\Delta t$
+        * $\Delta t$: 1ステップの時間
+        * $w(\V{x}')$: 遷移後の状態$\V{x}'$での水深
+        * $c$: どれだけ水がいやなのかを表す係数<br />　
+* シミュレータでの実装
+    * 水たまり: 時間の10倍の罰
+        * ふたつ重なった部分: 20倍
+
+<img width="35%" src="./figs/puddle_world4.gif" />
+
+---
+
+## 10.2.2 エピソードの評価
+
+* 単純に各ステップの$r$を積算して、$J$とする
+    * ゴールした状態の価値を$0$に
+    * $J$: かかった時間と水たまりのペナルティーの和<br />　
+* $r$は負なので$J$は$0$に近いほど良い
+
+---
+
+## 10.3 方策の評価
+
+* 価値が確定している終端状態からさかのぼっていくと$V^\Pi(\V{x})$の値が計算できる
+    * 使う式: $V^\Pi(\V{x}) = \left\langle r(\V{x}, a, \V{x}') + V^\Pi(\V{x}') \right\rangle\_{p(\V{x}' | \V{x}, a )}$
+    * ただし$V^\Pi(\V{x})$はそのままでは計算不可能
+        * $\V{x}$が無限にあるので
+    * 本書では$\mathcal{X}$を格子状に区切って離散化して計算（次ページ）<br />　
+* 例題
+    * スライド15ページにある、水たまりを無視して一直線にゴールに向かう方策（書籍ではpuddle ignore policy）を評価
+
+---
+
+## 10.3.1 状態空間の離散化
+
+* $XY\theta$空間を図のように離散化
+    * 各区画を$s_{(i_x,i_y,i_\theta)}$と番号づけ
+        * $i_x,i_y,i_\theta$: 各軸の区画つけた$0,1,2,\dots$という番号
+        * 実装での区間の幅: $X,Y$軸が200[mm]、$\theta$軸が10[deg]
+<img width="40%" src="./figs/10.4.jpg" />
+* $s_{(i_x,i_y,i_\theta)}$: <span style="color:red">離散状態</span>
+
+---
+
+### 価値関数の初期化
+
+* 終端状態の価値を0、それ以外を大きな負の値にしておく
+* 図: $i_\theta$を固定したときの$XY$平面での価値関数
+    * 白いところがゴール
+
+<img width="40%" src="./figs/init_policy_evaluation.png" />
+
+---
+
+## 10.3.2 離散状態間の状態遷移と状態遷移に対する報酬
+
+* 数式を$\V{x}$から$s$に離散化
+    * 価値関数の式: $V^\Pi(s) = \big\langle R(s, a, s') + V^\Pi(s') \big\rangle\_{ P(s' | s, a) } \\\\ \qquad = \sum\_{s'\in \mathcal{S}} P(s' | s, a) \left[ R(s, a, s') + V^\Pi(s') \right]$
+        * $P(s' | s, a)$: 離散化した状態遷移関数（あとで計算）
+        * $R(s,a,s')$: 離散化した報酬（これもあとで計算）<br />　
+    * 終端状態: 中に含まれるすべての$\V{x}$が終端状態のものを選ぶ<br />　
+
+---
+
+### 方策の離散化
+
+* 各離散状態の中心座標でのpuddle ignore policyの行動を、その離散状態の行動に
+* 方策の形式: $\Pi: \mathcal{S} \to \mathcal{A}$
+
+<img width="50%" src="./figs/init_policy.png" />
+
+
+---
+
+### $P(s' | s, a)$の計算
+
+* ある$i_\theta$に対して、下図のようにモンテカルロ法で求める
+    * $i_x, i_y$については相対値でよい
+
+<img width="100%" src="./figs/10.5.jpg" />
+
+---
+
+### $R(s, a, s')$の計算
+
+* 元の式: $r(\V{x}, a, \V{x}') = -\Delta t - cw(\V{x}')\Delta t$
+* $R(s, a, s')$: 状態$s'$での水の深さの平均値で$w(\V{x}')$を代用して計算
+
+<img width="50%" src="./figs/depth.png" />
+
+---
+
+## 10.3.3 方策評価の実装
+
+* ある方策$\Pi$に対して終端状態以外で次の手続きをひたすら繰り返す
+    * $V^\Pi(s) \longleftarrow \sum\_{s'\in \mathcal{S}} P(s' | s, a) \left[ R(s, a, s') + V^\Pi(s') \right]$
+    * すべての離散状態で一通り計算することをスイープと呼ぶ
+* 下図: puddle ignore policyに対する計算
+
+<img src="./figs/10.6.jpg" />
+
+---
+
+## 10.3.4 計算終了の判定
+
+* 次の手続きで計算を止める
+    * $V^\Pi(s)$の変化量を記録
+    * 全離散状態での変化量の最大値が閾値を下回ったら停止
+* 下図: 変化量$0.01$[s]以下で止めて得られた$V^\Pi$
+    * 92スイープで停止
+
+<img width="50%" src="./figs/policy_evaluation_end_sweeps.png" />
