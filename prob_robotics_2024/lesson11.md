@@ -107,7 +107,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - しかし、残差は起こりやすいものと起こりにくいものがある
         - 遠いものを計測した距離は誤差が出やすい$\rightarrow$この誤差をゼロにしようとすると他が歪むのでゆるく修正しないといけない
 
-<center style="color:red;font-size:200%">ズレに重み付けが必要</center>
+<center style="color:red;font-size:150%">ズレに重み付けが必要</center>
 
 ---
 
