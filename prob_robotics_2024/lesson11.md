@@ -198,7 +198,7 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
     - 水たまりに入りたくない
     - とれる行動: 前進、右回転、左回転の3種類
 
-<img width="40%" src="./figs/puddle_world4.gif" />
+![bg right:40% 100%](./figs/puddle_world4.gif)
 
 ---
 
@@ -213,7 +213,7 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
     - 水たまり: 時間の10倍の罰
         - ふたつ重なった部分: 20倍
 
-<img width="35%" src="./figs/puddle_world4.gif" />
+![bg right:40% 100%](./figs/puddle_world4.gif)
 
 ---
 
