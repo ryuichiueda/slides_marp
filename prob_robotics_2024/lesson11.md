@@ -271,30 +271,36 @@ $\qquad\qquad\qquad\qquad$まだ$\Delta\V{x}_{[0:T]}$の式ではない
 
 ---
 
-###$\Delta\V{x}_{[0:T]}$の多項式への変換
+### $\Delta\V{x}_{[0:T]}$の多項式への変換
 
 - 次のような形式にする
     - $J(\Delta\V{x}_{[0:T]}) = (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*)^\top \Omega (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*) +$定数
-   $ = \Delta\V{x}_{[0:T]}^\top \Omega \Delta\V{x}_{[0:T]} - 2 \Delta\V{x}_{[0:T]}^\top \V{\xi}+$ 定数
+   $= \Delta\V{x}_{[0:T]}^\top \Omega \Delta\V{x}_{[0:T]} - 2 \Delta\V{x}_{[0:T]}^\top \V{\xi}+$ 定数
         - $\Omega$:$3(T+1)\times 3(T+1)$行列、$\V{\xi}$:$3(T+1)$ベクトル　
     - $J$を最小にする$\Delta\V{x}_{[0:T]}^*$は、上の式の中辺と右辺を比較すると
-<span style="color:red">$$\Delta\V{x}_{[0:T]}^* = \Omega^{-1}\V{\xi}$$</span>
+$$\Delta\V{x}_{[0:T]}^* = \Omega^{-1}\V{\xi}$$
 - $J(\Delta\V{x}_{0:T})$からの変形のしかた
     - 線形化した$J$の各ノードの項（下の式）を$\Delta\V{x}_{[0:T]}$を変数にして変形
-        - $(\hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1}\Delta\boldsymbol{x}_{t_1} + B_{j,t_2}\Delta\boldsymbol{x}_{t_2} )^\top \Omega_{j,t_1,t_2} (\hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1}\Delta\boldsymbol{x}_{t_1} + B_{j,t_2}\Delta\boldsymbol{x}_{t_2} )$
+        - $(\hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1}\Delta\boldsymbol{x}_{t_1} + B_{j,t_2}\Delta\boldsymbol{x}_{t_2} )^\top \Omega_{j,t_1,t_2} (省略)$
     - そうすると係数が$3(T+1)\times3(T+1)$行列と$3(T+1)$次元ベクトルに（次のページ）$\rightarrow$合計すると$\Omega, \V{\xi}$に
 
 ---
 
-###$\Omega, \V{\xi}$の計算
+### $\Omega, \V{\xi}$の計算
 
 - 各ノードの係数を求める
-    - $\Omega^-_{j,t_1,t_2} = \begin{pmatrix} \ddots \&  \&  \&  \&  \\ \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\ \& \vdots \& \ddots \& \vdots \\ \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\ \& \& \& \& \ddots \end{pmatrix}$、${\boldsymbol{\xi}}^\\ast_{j,t_1,t_2} = - \begin{pmatrix} \vdots \\ B_{j,t_1}^\top \\ \vdots \\ B_{j,t_2}^\top \\ \vdots \end{pmatrix} \Omega_{j,t_1,t_2} \hat{\boldsymbol{e}}_{j,t_1,t_2}$
+    - $\Omega^*_{j,t_1,t_2} = \begin{pmatrix} \ddots &  &  &  &  \\ & B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_1} & \cdots & B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_2} &  \\ & \vdots & \ddots & \vdots \\ & B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_1} & \cdots & B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_2} &  \\ & & & & \ddots \end{pmatrix}$
+
+（次ページに続く）
+
+---
+
+- ${\boldsymbol{\xi}}^\ast_{j,t_1,t_2} = - \begin{pmatrix} \vdots \\ B_{j,t_1}^\top \\ \vdots \\ B_{j,t_2}^\top \\ \vdots \end{pmatrix} \Omega_{j,t_1,t_2} \hat{\boldsymbol{e}}_{j,t_1,t_2}$
         - 省略されているところは全てゼロが埋まる　
 - あとは足して、前のページの式を適用するとノードの移動量$\Delta\V{x}_{[0:T]}$が求まる
-    - $\Omega = \sum_{\textbf{e}_\textbf{z}}\Omega^-_{j,t_1,t_2} + \begin{pmatrix}\Omega_0 & O \\ O & O \end{pmatrix}$
+    - $\Omega = \sum_{\textbf{e}_\textbf{z}}\Omega^*_{j,t_1,t_2} + \begin{pmatrix}\Omega_0 & O \\ O & O \end{pmatrix}$
         - 第二項はアンカー項の精度行列
-    - $\V{\xi} = \sum_{\textbf{e}_\textbf{z}} {\boldsymbol{\xi}}^\\ast_{j,t_1,t_2}$
+    - $\V{\xi} = \sum_{\textbf{e}_\textbf{z}} {\boldsymbol{\xi}}^\ast_{j,t_1,t_2}$
 
 
 ---
