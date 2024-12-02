@@ -100,7 +100,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 10.1.4 方策と状態価値関数
+## 方策と状態価値関数（詳解10.1.4項）
 
 - 同じ初期状態$\V{x}_0$からタスクを行うと、$J(\V{x}_{0:T}, a_{1:T})$の値は毎回変化
     - 状態遷移が確率的なので　
@@ -133,7 +133,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### 逐次式による価値の表現
 
 - 価値の式を逐次式にしてみましょう
-    - <span style="font-size:60%">$V^\Pi(\V{x}_0) = \left\langle r(\V{x}_0, a_1, \V{x}_1) + \sum_{t=2}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V(\V{x}_T)  \right\rangle_{p(\V{x}_{1:T}, a_{1:T} |\V{x}_0, \Pi)}$
+    - <span style="font-size:80%">$V^\Pi(\V{x}_0) = \left\langle r(\V{x}_0, a_1, \V{x}_1) + \sum_{t=2}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V(\V{x}_T)  \right\rangle_{p(\V{x}_{1:T}, a_{1:T} |\V{x}_0, \Pi)}$
 $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) \Big\rangle_{p(\V{x}_{1:T}, a_{1:T} |\V{x}_0, \Pi)} + \left\langle \sum_{t=2}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V(\V{x}_T)  \right\rangle_{p(\V{x}_{1:T}, a_{1:T} |\V{x}_0, \Pi)}$
 $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) \Big\rangle_{p(\V{x}_1 , a_1 | \V{x}_0, \Pi )} + \left\langle \sum_{t=2}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V(\V{x}_T)  \right\rangle_{p(\V{x}_{2:T}, a_{2:T} |\V{x}_1, a_1, \V{x}_0, \Pi)p(\V{x}_1, a_1 | \V{x}_0, \Pi)}$
 （↑第一項: 余計な変数の消去. 第二項: 乗法定理）
@@ -147,7 +147,7 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) \Big\rangle_{p(\V{x}_1 , a_1 | \V{x}_0, 
 ### 逐次式による価値の表現（続き）
 
 - 逐次式になる
-    - <span style="font-size:60%">$=\Big\langle r(\V{x}_0, a_1, \V{x}_1) \Big\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi )} + \left\langle \left\langle \sum_{t=2}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V(\V{x}_T)  \right\rangle_{p(\V{x}_{2:T}, a_{2:T}|\V{x}_1, \Pi)} \right\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi)}$
+    - <span style="font-size:80%">$=\Big\langle r(\V{x}_0, a_1, \V{x}_1) \Big\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi )} + \left\langle \left\langle \sum_{t=2}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V(\V{x}_T)  \right\rangle_{p(\V{x}_{2:T}, a_{2:T}|\V{x}_1, \Pi)} \right\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi)}$
 $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) \Big\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi )} + \left\langle V^\Pi(\V{x}_1) \right\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi)}$
  （↑第二項: $\V{x}_1$は$\V{x}_0$と同様, 初期状態である必要がない）
 $=\Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1, a_1 | \V{x}_0, \Pi )}$
