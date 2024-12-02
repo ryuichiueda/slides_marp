@@ -338,7 +338,7 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
     $\qquad\qquad\ = \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^\Pi(s') \right]$　
 - 行動価値関数を利用した方策の改善
     - $\Pi(s) \longleftarrow \text{argmax}_{a \in \mathcal{A}} Q^\Pi(s, a)$
-    - 価値の計算（方策評価）と、この計算（方策改善）を繰り返すと方策がよくなっていきそうだ
+    - 価値の計算（方策評価）と，この計算（方策改善）を繰り返すと方策がよくなっていきそうだ
 
 これを突き詰めると次ページのアルゴリズムに
 
@@ -352,10 +352,10 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
     2. 各状態において, 全行動$a \in \mathcal{A}$の行動価値関数を求め, 最大の値を$V(s)$に代入
         - $V(s) \longleftarrow \max_{a \in \mathcal{A}} Q(s, a)$
     3. 2を何スイープも実行
-    4. 収束後、各状態で行動価値関数を最大にする行動を記録
-        - $\Pi^\-(s) = \text{argmax}\_{a \in \mathcal{A}} \sum\_{s'} P(s' | s, a) \left[ R(s, a, s') + V^\-(s') \right]$
-            - $V^-$: 収束した状態価値関数（<span style="color:red">最適状態価値関数</span>）
-            - $\Pi^-$: <span style="color:red">最適方策</span>
+    4. 収束後，各状態で行動価値関数を最大にする行動を記録
+        - $\Pi^*(s) = \text{argmax}_{a \in \mathcal{A}} \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^*(s') \right]$
+            - $V^*$: 収束した状態価値関数（<span style="color:red">最適状態価値関数</span>）
+            - $\Pi^*$: <span style="color:red">最適方策</span>
 
 ---
 
@@ -368,36 +368,35 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 ---
 
-### 方策を用いた行動決定
+### 最適方策を用いた行動決定
 
-- $\Pi^-$: どの状態に対しても最適な行動が記録されている
-    - ロボットは$\Pi^-$を使って反射的に行動を選ぶと最適な経路でゴールに行ける
+- $\Pi^*$: どの状態に対しても最適な行動が記録されている
+    - ロボットは$\Pi^*$を使って反射的に行動を選ぶと最適な経路でゴールに行ける
 
 <img width="40%" src="./figs/optimal_policy.gif" /> 
 
 ---
 
-## 10.5 ベルマン方程式と最適制御
+## ベルマン方程式と最適制御（詳解10.5節）
 
 - やること
     - いままでのことを数式を眺めながらおさらい
 
 ---
 
-## 10.5.1 有限マルコフ決定過程
+## 有限マルコフ決定過程（詳解10.5.1項）
 
-- 離散状態でマルコフ決定過程をまとめなおす
-    - <span style="color:red">有限マルコフ決定過程（finite MDP）</span>
+- 離散状態でのマルコフ決定過程: <span style="color:red">有限マルコフ決定過程（finite MDP）</span>
 - 系
     - 時間: $t = 0,1,2,\dots,T$（$T$は不定でよい）
-    - 状態と行動: $s \in \mathcal{S}$、$a \in \mathcal{A}$
+    - 状態と行動: $s \in \mathcal{S}$，$a \in \mathcal{A}$
         - 一部の状態が終端状態: $s \in \mathcal{S}_\text{f} \subset \mathcal{S}$
     - 状態遷移モデル: $P(s' | s, a) \ge 0$
 - 評価
-    - 報酬モデル: $R(s, a, s') \in \Re$
-    - 終端状態の価値: $V_\text{f}(s) \in \Re \quad (s \in \mathcal{X}_\text{f})$
-    - 評価: $J(s\_{0:T}, a\_{1:T}) = \sum\_{t=1}^T R(s\_{t-1}, a\_t, s\_t) + V\_\text{f}(s\_T)$
-- 最適方策$\Pi^-: \mathcal{S} \to \mathcal{A}$を求める
+    - 報酬モデル: $R(s, a, s') \in \mathbb{R}$
+    - 終端状態の価値: $V_\text{f}(s) \in \mathbb{R} \quad (s \in \mathcal{X}_\text{f})$
+    - 評価: $J(s_{0:T}, a_{1:T}) = \sum_{t=1}^T R(s_{t-1}, a_t, s_t) + V_\text{f}(s_T)$
+- 最適方策$\Pi^*: \mathcal{S} \to \mathcal{A}$を求める
     - （計算量の話を抜きにすると）価値反復で求まる
 
 ---
@@ -405,13 +404,14 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 ## 10.5.2 有限マルコフ決定過程におけるベルマン方程式
 
 - 最適状態価値関数の性質
-    - $V^\-(s) = \max_{a \in \mathcal{A}} \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^\-(s') \right]$
+    - $V^*(s) = \max_{a \in \mathcal{A}} \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^*(s') \right]$
         - 価値反復でもう価値が更新できない状態
         - <span style="color:red">ベルマン（最適）方程式</span>と呼ばれる　
 - 最適方策
-    - $\Pi^\-(s) = \text{argmax}\_{a \in \mathcal{A}} \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^\-(s') \right]$
+    - $\Pi^*(s) = \text{argmax}_{a \in \mathcal{A}} \sum_{s'} P(s' | s, a) \left[ R(s, a, s') + V^*(s') \right]$
     - そのときの状態だけで最適な行動が決まる
-        - その前の状態がなんであろうと関係ないので、終端状態に近いところから部分問題を解いていくと$J$の期待値に対して最適な方策が得られる（<span style="color:red">最適性の原理</span>）
+        - その前の状態がなんであろうと関係ないので，終端状態に近いところから部分問題を解いていくと$J$の期待値に対して最適な方策が得られる
+        （<span style="color:red">最適性の原理</span>）
 
 ---
 
@@ -419,11 +419,11 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 - もう一度連続的な状態空間の話に戻る
     - ベルマン方程式: 
-        - $V^\-(\V{x}) = \int\_{\mathcal{X}} p(\V{x}' | \V{x}, a) \left\\{ r(\V{x}, a, \V{x}') +  V^\-(\V{x}') \right\\} d\V{x}'$
-    - さらに$a$を$\V{u}$に戻し、時間を連続に
-        - 上の式は<span style="color:red">ハミルトン-ヤコビ-ベルマン方程式</span>と呼ばれる、制御問題を扱うための統一的な式になる
+        - $V^*(\V{x}) = \int_{\mathcal{X}} p(\V{x}' | \V{x}, a) \left\\{ r(\V{x}, a, \V{x}') +  V^*(\V{x}') \right\\} d\V{x}'$
+    - さらに$a$を$\V{u}$に戻し，時間を連続に
+        - 上の式は<span style="color:red">ハミルトン-ヤコビ-ベルマン方程式</span>と呼ばれる，制御問題を扱うための統一的な式になる
             - 式は私の手におえないので割愛
-            - ほとんどの制御の問題はHJB方程式を具体化したもので、ほとんどの制御の手法はHJB方程式を近似的に解くためのもの
+            - ほとんどの制御の問題はHJB方程式を具体化したもので，ほとんどの制御の手法はHJB方程式を近似的に解くためのもの
 
 ロボットや人間の行動決定の問題と制御には本質的な違いはない
 
@@ -433,13 +433,13 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
 
 - 本章でやったこと
    - （有限）マルコフ決定過程の定式化
-   - その具体例としてのロボットが水たまりを避けてゴールに向かう問題を定義し、価値反復で最適方策を計算
+   - その具体例としてのロボットが水たまりを避けてゴールに向かう問題を定義し，価値反復で最適方策を計算
    - 最適性の原理やベルマン方程式について確認　
 - 補足
    - 価値反復は速い/遅い
        - 状態空間全域で最適方策を得ようとすればこれ以上速いアルゴリズムはおそらくないので速い
        - 価値反復は簡単にいくらでも並列化できるので速い
        - 状態空間の次元が増えると離散状態が指数乗的に増えるので遅い（<span style="color:red">次元の呪い</span>）
-   - 最適状態価値関数、最適方策を求めない手法は近似
-       - 最悪、ロボットが無限ループに陥る
+   - 最適状態価値関数，最適方策を求めない手法は近似
+       - 最悪，ロボットが無限ループに陥る
 
