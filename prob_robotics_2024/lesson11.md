@@ -73,7 +73,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 10.1.2 評価関数
+## 評価関数（詳解10.1.2項）
 
 - ロボットの行動を評価する
     - 自己位置推定やSLAMの性能は（ロボットに人格があれば）自律ロボットにとっては手段でしかない。うまく行動できるかどうかが重要。　
@@ -84,14 +84,15 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 10.1.3 報酬と終端状態の価値
+## 報酬と終端状態の価値（詳解10.1.3項）
 
-- 評価関数$J(\boldsymbol{x}_{0:T}, a_{1:T}) $を次の形式で考える
+- 評価関数$J(\boldsymbol{x}_{0:T}, a_{1:T})$を次の形式で考える
     - $J(\boldsymbol{x}_{0:T}, a_{1:T}) = \sum_{t=1}^T r(\boldsymbol{x}_{t-1}, a_t, \boldsymbol{x}_t) + V_\text{f}(\boldsymbol{x}_T)$
         - $r(\boldsymbol{x}_{t-1}, a_t, \boldsymbol{x}_t) \in \mathbb{R}$: 状態遷移ごとに与える評価を決める関数
             - 報酬モデルと呼ぶ
             - 値を<span style="color:red">報酬</span>と呼ぶ
-            - $t=0$から$t=T$までの状態遷移、行動履歴、報酬をまとめて<span style="color:red">エピソード</span>と呼ぶ
+            - $t=0$から$t=T$までの状態遷移、行動履歴、
+            報酬をまとめて<span style="color:red">エピソード</span>と呼ぶ
         - $V_\text{f}(\boldsymbol{x}_T)$: <span style="color:red">終端状態</span>の評価　
 - 終端状態
     - 良くも悪くもタスクが終わった状態
