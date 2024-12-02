@@ -208,16 +208,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ![bg right:35% 100%](./figs/draw_graphslam_log.png)
 
-
 ---
 
-## 9.2.2 仮想移動エッジの作成
-
-- 実装なので割愛
-
----
-
-## 9.2.3 残差の計算
+## 9.2.3 残差の計算（詳解9.2.3項）
 
 - 残差: エッジの両側の姿勢から計算されるランドマークの姿勢の差
     - <span style="font-size:80%">$\hat{\boldsymbol{e}}_{j,t_1,t_2} = \begin{pmatrix} \hat{x}_{t_2} + \ell_{j,t_2}\cos (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\ \hat{y}_{t_2} + \ell_{j,t_2}\sin (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\ \hat{\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} \hat{x}_{t_1} + \ell_{j,t_1}\cos (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\ \hat{y}_{t_1} + \ell_{j,t_1}\sin (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\ \hat{\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
@@ -227,7 +220,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 9.2.4 マハラノビス距離を決める精度行列の導出
+## マハラノビス距離を決める精度行列の導出（詳解9.2.4項）
 
 - ノード$\text{e}_{j,t_1,t_2}$の$\Omega_{j,t_1,t_2}$を求めましょう
     - センサ値$\V{z}_{t_1}, \V{z}_{t_2}$の分布$\ell\varphi\psi$空間を残差の$XY\theta$空間に写像　
