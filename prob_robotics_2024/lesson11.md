@@ -58,7 +58,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - $\V{x}_{0:T}^* = \text{argmax}_{\V{x}_{0:T}} p(\V{x}_{0:T} | \hat{\V{x}}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$
         - 前ページと違って$\V{x}_0$を変数に
         - 条件にあった$\V{x}_0$を仮に$\hat{\V{x}}_0$としておく
-            - $\V{x}_0$と$\hat{\V{x}}_0$は計算上の都合でちょっとだけずれる
+            - $\V{x}_0$と$\hat{\V{x}}_0$は最終的には同じだが定式化の都合上別のものとして扱う
 - 解き方
     1. 初期値$\hat{\V{x}}_{0:T}$を決める
         - とりあえず$\V{u}_{1:T}$と状態方程式から雑音を考慮せずに計算
@@ -179,8 +179,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \big\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)$
     $+  \sum_{\textbf{e}_\textbf{z}} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]^\top \Omega_{j,t_1,t_2} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]\big\}$
         - 第一項:$\V{x}_0$を固定（<span style="color:red">アンカー項</span>と呼ぶ。）
+            - $\Omega_0$は対角成分が$\infty$であとはゼロの$3\times 3$行列
         - 第二項: 仮想移動エッジの歪みの評価
-        - $\Omega_0$は対角成分が$\infty$であとはゼロの$3\times 3$行列
     - 姿勢が3次元、残差が2次元で解けないので、説明のために暫定的にセンサ値を3次元に（次ページ）
 
 ---
@@ -190,13 +190,11 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 <span style="font-size:80%">※ あくまで説明のためで、あとから2次元に戻します</span>
 
 - $\V{m}$を3次元ベクトルに（左図）
-    - 「ランドマークの位置」から「ランドマークの姿勢」にする
     - $\V{m} = (m_x \  m_y \ m_\theta)^\top$
-        - $m_\theta$: ランドマークの方角
+        - 「$m_\theta$: ランドマークの方角」を追加
     - $\V{z} = (\ell \ \varphi \ \psi)^\top$
         - $\psi$: ランドマークのどのツラを見ているかを表す角度
-<img width="40%" src="./figs/9.3.jpg" />
-<img width="36%" src="./figs/9.4.jpg" />
+<img width="40%" src="./figs/9.3.jpg" />$\qquad$<img width="36%" src="./figs/9.4.jpg" />
 - 実装では2姿勢間の$\psi$の相対値だけ必要（右図）
 
 
