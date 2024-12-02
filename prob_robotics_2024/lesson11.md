@@ -223,10 +223,11 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## マハラノビス距離を決める精度行列の導出（詳解9.2.4項）
 
 - ノード$\text{e}_{j,t_1,t_2}$の$\Omega_{j,t_1,t_2}$を求めましょう
-    - センサ値$\V{z}_{t_1}, \V{z}_{t_2}$の分布$\ell\varphi\psi$空間を残差の$XY\theta$空間に写像　
+    - センサ値$\V{z}_{t_1}, \V{z}_{t_2}$の分布を$\ell\varphi\psi$空間から$XY\theta$空間に写像　
 - 求めかた
-    - 写像につかう関数: センサ値を変数とした残差（前ページの上の式）の関数$\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b)$を線形化したもの
-        - $\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2}( \boldsymbol{z}_{t_1}, \boldsymbol{z}_{t_2}) + R_{j,t_1} (\boldsymbol{z}_{j,a} - \boldsymbol{z}_{j,t_1} ) + R_{j,t_2} (\boldsymbol{z}_{j,b} - \boldsymbol{z}_{j,t_2} )$
+    - 写像のための関数を導出: センサ値を変数とした残差（前ページの上の式）の関数$\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b)$を線形化したもの
+        - $\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2}( \boldsymbol{z}_{t_1}, \boldsymbol{z}_{t_2})$
+        $\qquad\qquad\qquad + R_{j,t_1} (\boldsymbol{z}_{j,a} - \boldsymbol{z}_{j,t_1} ) + R_{j,t_2} (\boldsymbol{z}_{j,b} - \boldsymbol{z}_{j,t_2} )$
             - $R_{j,t}$:$\hat{\boldsymbol{e}}_{j,t_1,t_2}$を$\V{z}_{j,t}$まわりで偏微分したヤコビ行列
     - 写像する分布:$\mathcal{N}(\V{z}_{t_1}, Q_{j,t_1}), \mathcal{N}(\V{z}_{t_2}, Q_{j,t_2})$
         - <span style="font-size:80%">$Q_{j,t} = \begin{pmatrix} (\ell_{j,t} \sigma_\ell)^2 & 0 & 0\\ 0 & \sigma_\varphi^2 & 0 \\ 0 & 0 & \sigma_\psi^2 \end{pmatrix}$</span>
@@ -242,11 +243,12 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 9.2.5 最適化問題の解法
+## 最適化問題の解法（詳解9.2.5項）
 
 - 最適化の式を満たす$\V{x}_{0:T}$を探す
     - 最適化の式:$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$
-        - $J(\V{x}_{0:T}) = \left\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\ \qquad\qquad +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\}$
+        - $J(\V{x}_{0:T}) = \big\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)$
+        $+\sum_{\textbf{e}_\textbf{z}} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]^\top \Omega_{j,t_1,t_2} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]\big\}$
     - グラフ上では、ノードを動かして$J$の小さいところを探索するイメージ　
 - 方法
     - $J$を、$\V{x}_{0:T}$をすべてつなげた$3(T+1)$次元のベクトル$\V{x}_{[0:T]}$の関数とみなす
@@ -255,18 +257,17 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-###$\V{e}_{j,t_1,t_2}$の線形化
+### $\V{e}_{j,t_1,t_2}$の線形化
 
 - 線形化
     - $\boldsymbol{e}_{j,t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2}) \approx  \boldsymbol{e}_{j,t_1,t_2}(\hat{\boldsymbol{x}}_{t_1}, \hat{\boldsymbol{x}}_{t_2}) + B_{j,t_1} (\boldsymbol{x}_{t_1} - \hat{\boldsymbol{x}}_{t_1}) + B_{j,t_2} (\boldsymbol{x}_{t_2} - \hat{\boldsymbol{x}}_{t_2})$
-        - $B_{j,t_1} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_1}} \Big|_{\boldsymbol{x}_{t_1} = \hat{\V{x}}_{t_1}}$、$B_{j,t_2} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_2}} \Big|_{\boldsymbol{x}_{t_2} = \hat{\V{x}}_{t_2}}$　
+        - $B_{j,t_1} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_1}} \Big|_{\boldsymbol{x}_{t_1} = \hat{\V{x}}_{t_1}} = - \begin{pmatrix} 1 & 0 & -\ell_{j,t_1} \sin(\theta_{t_1} + \varphi_{j,t_1}) \\ 0 & 1 & \ell_{j,t_1} \cos(\theta_{t_1} + \varphi_{j,t_1})\\ 0 & 0  & 1\\ \end{pmatrix}$
+        - $B_{j,t_2} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_2}} \Big|_{\boldsymbol{x}_{t_2} = \hat{\V{x}}_{t_2}} = \begin{pmatrix} 1 & 0 & -\ell_{j,t_2} \sin(\theta_{t_2} + \varphi_{j,t_2}) \\ 0 & 1 & \ell_{j,t_2} \cos(\theta_{t_2} + \varphi_{j,t_2})\\ 0 & 0  & 1\\ \end{pmatrix}$
 - 差分$\Delta\V{x}_{0:T} = \V{x}_{0:T} - \hat{\V{x}}_{0:T}$の式に
     - $\boldsymbol{e}_{j,t_1,t_2}(\Delta \boldsymbol{x}_{t_1}, \Delta \boldsymbol{x}_{t_2}) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1} \Delta \boldsymbol{x}_{t_1} + B_{j,t_2} \Delta \boldsymbol{x}_{t_2}$
-        - ここで
-            - $ B_{j,t_1} = - \begin{pmatrix} 1 & 0 & -\ell_{j,t_1} \sin(\theta_{t_1} + \varphi_{j,t_1}) \\ 0 & 1 & \ell_{j,t_1} \cos(\theta_{t_1} + \varphi_{j,t_1})\\ 0 & 0  & 1\\ \end{pmatrix}$,$\quad B_{j,t_2} = \begin{pmatrix} 1 & 0 & -\ell_{j,t_2} \sin(\theta_{t_2} + \varphi_{j,t_2}) \\ 0 & 1 & \ell_{j,t_2} \cos(\theta_{t_2} + \varphi_{j,t_2})\\ 0 & 0  & 1\\ \end{pmatrix}$
     - これで$J$が$\Delta\V{x}_{0:T}$内のそれぞれの$\V{x}_t$の多項式で表される
 
-まだ$\Delta\V{x}_{[0:T]}$の式ではない
+$\qquad\qquad\qquad\qquad$まだ$\Delta\V{x}_{[0:T]}$の式ではない
 
 ---
 
