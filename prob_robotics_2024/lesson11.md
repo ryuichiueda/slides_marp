@@ -160,8 +160,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - $\V{x}_{0:T}^*$を使って各ランドマーク$\text{m}_j$の位置$\V{m}_j$を求める
     - 各ランドマーク$\text{m}_j$に対して独立に計算可能　
 - 手続き
-     1. $\text{m}_j$が観測された各姿勢と$\text{m}_j$を結んでエッジとする
-        - エッジの集合を$\textbf{e}_{\V{z}_j}$とする
+     1. $\text{m}_j$が観測された各姿勢と$\text{m}_j$を結んでエッジに（エッジの集合を$\textbf{e}_{\V{z}_j}$とする）
      2. 残差関数と残差の分布、分布の積を考える
         - 残差関数:$\V{e}_{j,t}(\V{m}_j) = \V{m}_j - \V{h}^{-1}(\V{x}_t^*, \V{z}_{j,t})$
         - 残差の分布:$p_{j,t}(\V{e}_{j,t}) = \eta \exp \left(-\dfrac{1}{2} \V{e}_{j,t}^\top \Omega_{j,t} \V{e}_{j,t} \right)$
@@ -169,15 +168,16 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
      3. 分布の積の対数から作った最適化の問題を解く
         - $\V{m}_j^* = \text{argmin}_{\V{m}_j} \sum_{\textbf{e}_{\V{z}_j}} \{\V{e}_{j,t}(\V{m}_j)\}^\top \Omega_{j,t} \{\V{e}_{j,t}(\V{m}_j)\}$
 
+<center>このレベルでのgraph-based SLAMの定式化は終了。あとは実装</center>
 
 ---
 
-## 9.2 仮想移動エッジによる軌跡の算出
+## 仮想移動エッジによる軌跡の算出（詳解9.2節）
 
-- やること
-    - 仮想移動エッジだけでポーズ調整　
+- とりあえず仮想移動エッジだけでポーズ調整してみる
 - 解く式
-    - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \left\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\}$
+    - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \big\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)$
+    $+  \sum_{\textbf{e}_\textbf{z}} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]^\top \Omega_{j,t_1,t_2} \big[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\big]\big\}$
         - 第一項:$\V{x}_0$を固定（<span style="color:red">アンカー項</span>と呼ぶ。）
         - 第二項: 仮想移動エッジの歪みの評価
         - $\Omega_0$は対角成分が$\infty$であとはゼロの$3\times 3$行列
@@ -223,10 +223,10 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 9.2.3 残差の計算
 
 - 残差: エッジの両側の姿勢から計算されるランドマークの姿勢の差
-    - <span style="font-size:80%">$\hat{\boldsymbol{e}}_{j,t_1,t_2} = \begin{pmatrix} \hat{x}_{t_2} + \ell_{j,t_2}\cos (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\\\ \hat{y}_{t_2} + \ell_{j,t_2}\sin (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\\\ \hat{\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} \hat{x}_{t_1} + \ell_{j,t_1}\cos (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\\\ \hat{y}_{t_1} + \ell_{j,t_1}\sin (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\\\ \hat{\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
+    - <span style="font-size:80%">$\hat{\boldsymbol{e}}_{j,t_1,t_2} = \begin{pmatrix} \hat{x}_{t_2} + \ell_{j,t_2}\cos (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\ \hat{y}_{t_2} + \ell_{j,t_2}\sin (\hat{\theta}_{t_2} + \varphi_{j,t_2})  \\ \hat{\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} \hat{x}_{t_1} + \ell_{j,t_1}\cos (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\ \hat{y}_{t_1} + \ell_{j,t_1}\sin (\hat{\theta}_{t_1} + \varphi_{j,t_1}) \\ \hat{\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
         - ただし$\theta$成分は$[-\pi,\pi)$の範囲に正規化
 - 残差関数
-    - <span style="font-size:80%">$\boldsymbol{e}_{j,t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2}) = \begin{pmatrix} {x}_{t_2} + \ell_{j,t_2}\cos ({\theta}_{t_2} + \varphi_{j,t_2}) \\\\ {y}_{t_2} + \ell_{j,t_2}\sin ({\theta}_{t_2} + \varphi_{j,t_2}) \\\\ {\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} {x}_{t_1} + \ell_{j,t_1}\cos ({\theta}_{t_1} + \varphi_{j,t_1}) \\\\ {y}_{t_1} + \ell_{j,t_1}\sin ({\theta}_{t_1} + \varphi_{j,t_1}) \\\\ {\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
+    - <span style="font-size:80%">$\boldsymbol{e}_{j,t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2}) = \begin{pmatrix} {x}_{t_2} + \ell_{j,t_2}\cos ({\theta}_{t_2} + \varphi_{j,t_2}) \\ {y}_{t_2} + \ell_{j,t_2}\sin ({\theta}_{t_2} + \varphi_{j,t_2}) \\ {\theta}_{t_2} + \varphi_{j,t_2} - \psi_{j,t_2} \end{pmatrix} - \begin{pmatrix} {x}_{t_1} + \ell_{j,t_1}\cos ({\theta}_{t_1} + \varphi_{j,t_1}) \\ {y}_{t_1} + \ell_{j,t_1}\sin ({\theta}_{t_1} + \varphi_{j,t_1}) \\ {\theta}_{t_1} + \varphi_{j,t_1} - \psi_{j,t_1} \end{pmatrix}$</span>
 
 ---
 
@@ -239,7 +239,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - $\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2}( \boldsymbol{z}_{t_1}, \boldsymbol{z}_{t_2}) + R_{j,t_1} (\boldsymbol{z}_{j,a} - \boldsymbol{z}_{j,t_1} ) + R_{j,t_2} (\boldsymbol{z}_{j,b} - \boldsymbol{z}_{j,t_2} )$
             - $R_{j,t}$:$\hat{\boldsymbol{e}}_{j,t_1,t_2}$を$\V{z}_{j,t}$まわりで偏微分したヤコビ行列
     - 写像する分布:$\mathcal{N}(\V{z}_{t_1}, Q_{j,t_1}), \mathcal{N}(\V{z}_{t_2}, Q_{j,t_2})$
-        - <span style="font-size:80%">$Q_{j,t} = \begin{pmatrix} (\ell_{j,t} \sigma_\ell)^2 & 0 & 0\\\\ 0 & \sigma_\varphi^2 & 0 \\\\ 0 & 0 & \sigma_\psi^2 \end{pmatrix}$</span>
+        - <span style="font-size:80%">$Q_{j,t} = \begin{pmatrix} (\ell_{j,t} \sigma_\ell)^2 & 0 & 0\\ 0 & \sigma_\varphi^2 & 0 \\ 0 & 0 & \sigma_\psi^2 \end{pmatrix}$</span>
 
 ---
 
@@ -247,8 +247,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - $\Omega_{j,t_1,t_2}^{-1} = R_{j,t_1} Q_{j,t_1} R_{j,t_1}^\top + R_{j,t_1} Q_{j,t_2} R_{j,t_1}^\top$
     - ここで
-        - $R_{j,t_1} = - \begin{pmatrix} \cos(\hat{\theta}_{t_1} + \varphi_{t_1}) & -\ell_{j,t_1}\sin(\hat{\theta}_{t_1} + \varphi_{t_1}) & 0\\\\ \sin(\hat{\theta}_{t_1} + \varphi_{t_1}) & \ell_{j,t_1}\cos(\hat{\theta}_{t_1} + \varphi_{t_1}) & 0\\\\ 0 & 1 & -1 \end{pmatrix}$
-        - $R_{j,t_2} = \begin{pmatrix} \cos(\hat{\theta}_{t_2} + \varphi_{t_2}) & -\ell_{j,t_2}\sin(\hat{\theta}_{t_2} + \varphi_{t_2}) & 0\\\\ \sin(\hat{\theta}_{t_2} + \varphi_{t_2}) & \ell_{j,t_2}\cos(\hat{\theta}_{t_2} + \varphi_{t_2}) & 0\\\\ 0 & 1 & -1 \end{pmatrix}$
+        - $R_{j,t_1} = - \begin{pmatrix} \cos(\hat{\theta}_{t_1} + \varphi_{t_1}) & -\ell_{j,t_1}\sin(\hat{\theta}_{t_1} + \varphi_{t_1}) & 0\\ \sin(\hat{\theta}_{t_1} + \varphi_{t_1}) & \ell_{j,t_1}\cos(\hat{\theta}_{t_1} + \varphi_{t_1}) & 0\\ 0 & 1 & -1 \end{pmatrix}$
+        - $R_{j,t_2} = \begin{pmatrix} \cos(\hat{\theta}_{t_2} + \varphi_{t_2}) & -\ell_{j,t_2}\sin(\hat{\theta}_{t_2} + \varphi_{t_2}) & 0\\ \sin(\hat{\theta}_{t_2} + \varphi_{t_2}) & \ell_{j,t_2}\cos(\hat{\theta}_{t_2} + \varphi_{t_2}) & 0\\ 0 & 1 & -1 \end{pmatrix}$
 
 ---
 
@@ -256,7 +256,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 最適化の式を満たす$\V{x}_{0:T}$を探す
     - 最適化の式:$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$
-        - $J(\V{x}_{0:T}) = \left\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ \qquad\qquad +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\}$
+        - $J(\V{x}_{0:T}) = \left\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\ \qquad\qquad +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\}$
     - グラフ上では、ノードを動かして$J$の小さいところを探索するイメージ　
 - 方法
     - $J$を、$\V{x}_{0:T}$をすべてつなげた$3(T+1)$次元のベクトル$\V{x}_{[0:T]}$の関数とみなす
@@ -273,7 +273,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 差分$\Delta\V{x}_{0:T} = \V{x}_{0:T} - \hat{\V{x}}_{0:T}$の式に
     - $\boldsymbol{e}_{j,t_1,t_2}(\Delta \boldsymbol{x}_{t_1}, \Delta \boldsymbol{x}_{t_2}) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1} \Delta \boldsymbol{x}_{t_1} + B_{j,t_2} \Delta \boldsymbol{x}_{t_2}$
         - ここで
-            - $ B_{j,t_1} = - \begin{pmatrix} 1 & 0 & -\ell_{j,t_1} \sin(\theta_{t_1} + \varphi_{j,t_1}) \\\\ 0 & 1 & \ell_{j,t_1} \cos(\theta_{t_1} + \varphi_{j,t_1})\\\\ 0 & 0  & 1\\\\ \end{pmatrix}$,$\quad B_{j,t_2} = \begin{pmatrix} 1 & 0 & -\ell_{j,t_2} \sin(\theta_{t_2} + \varphi_{j,t_2}) \\\\ 0 & 1 & \ell_{j,t_2} \cos(\theta_{t_2} + \varphi_{j,t_2})\\\\ 0 & 0  & 1\\\\ \end{pmatrix}$
+            - $ B_{j,t_1} = - \begin{pmatrix} 1 & 0 & -\ell_{j,t_1} \sin(\theta_{t_1} + \varphi_{j,t_1}) \\ 0 & 1 & \ell_{j,t_1} \cos(\theta_{t_1} + \varphi_{j,t_1})\\ 0 & 0  & 1\\ \end{pmatrix}$,$\quad B_{j,t_2} = \begin{pmatrix} 1 & 0 & -\ell_{j,t_2} \sin(\theta_{t_2} + \varphi_{j,t_2}) \\ 0 & 1 & \ell_{j,t_2} \cos(\theta_{t_2} + \varphi_{j,t_2})\\ 0 & 0  & 1\\ \end{pmatrix}$
     - これで$J$が$\Delta\V{x}_{0:T}$内のそれぞれの$\V{x}_t$の多項式で表される
 
 まだ$\Delta\V{x}_{[0:T]}$の式ではない
@@ -298,10 +298,10 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ###$\Omega, \V{\xi}$の計算
 
 - 各ノードの係数を求める
-    - $\Omega^-_{j,t_1,t_2} = \begin{pmatrix} \ddots \&  \&  \&  \&  \\\\ \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\\\ \& \vdots \& \ddots \& \vdots \\\\ \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\\\ \& \& \& \& \ddots \end{pmatrix}$、${\boldsymbol{\xi}}^\\ast_{j,t_1,t_2} = - \begin{pmatrix} \vdots \\\\ B_{j,t_1}^\top \\\\ \vdots \\\\ B_{j,t_2}^\top \\\\ \vdots \end{pmatrix} \Omega_{j,t_1,t_2} \hat{\boldsymbol{e}}_{j,t_1,t_2}$
+    - $\Omega^-_{j,t_1,t_2} = \begin{pmatrix} \ddots \&  \&  \&  \&  \\ \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\ \& \vdots \& \ddots \& \vdots \\ \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\ \& \& \& \& \ddots \end{pmatrix}$、${\boldsymbol{\xi}}^\\ast_{j,t_1,t_2} = - \begin{pmatrix} \vdots \\ B_{j,t_1}^\top \\ \vdots \\ B_{j,t_2}^\top \\ \vdots \end{pmatrix} \Omega_{j,t_1,t_2} \hat{\boldsymbol{e}}_{j,t_1,t_2}$
         - 省略されているところは全てゼロが埋まる　
 - あとは足して、前のページの式を適用するとノードの移動量$\Delta\V{x}_{[0:T]}$が求まる
-    - $\Omega = \sum_{\textbf{e}_\textbf{z}}\Omega^-_{j,t_1,t_2} + \begin{pmatrix}\Omega_0 & O \\\\ O & O \end{pmatrix}$
+    - $\Omega = \sum_{\textbf{e}_\textbf{z}}\Omega^-_{j,t_1,t_2} + \begin{pmatrix}\Omega_0 & O \\ O & O \end{pmatrix}$
         - 第二項はアンカー項の精度行列
     - $\V{\xi} = \sum_{\textbf{e}_\textbf{z}} {\boldsymbol{\xi}}^\\ast_{j,t_1,t_2}$
 
