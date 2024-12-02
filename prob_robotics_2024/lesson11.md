@@ -76,8 +76,8 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 10.1.2 評価関数
 
 - ロボットの行動を評価する
-    - これまでは自己位置推定やSLAMの性能で評価していたが、これは（ロボットに人格があれば）自律ロボットにとっては手段でしかない。うまく行動できるかどうかが重要。　
-- 評価関数: $J(\boldsymbol{x}_{0:T}, a_{1:T}) \in \Re$
+    - 自己位置推定やSLAMの性能は（ロボットに人格があれば）自律ロボットにとっては手段でしかない。うまく行動できるかどうかが重要。　
+- 評価関数: $J(\boldsymbol{x}_{0:T}, a_{1:T}) \in \mathbb{R}$
     - やったこと（$a_{1:T}$）、起こったこと（$\boldsymbol{x}_{0:T}$）で評価
     -  評価は時間、消費エネルギー、危険性など多岐にわたるはずであるが、うまく式を作ってスカラ1個で評価することとする
         -  行動はひとつしか選べないのでこれで十分
@@ -88,7 +88,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 評価関数$J(\boldsymbol{x}_{0:T}, a_{1:T}) $を次の形式で考える
     - $J(\boldsymbol{x}_{0:T}, a_{1:T}) = \sum_{t=1}^T r(\boldsymbol{x}_{t-1}, a_t, \boldsymbol{x}_t) + V_\text{f}(\boldsymbol{x}_T)$
-        - $r(\boldsymbol{x}_{t-1}, a_t, \boldsymbol{x}_t) \in \Re$: 状態遷移ごとに与える評価を決める関数
+        - $r(\boldsymbol{x}_{t-1}, a_t, \boldsymbol{x}_t) \in \mathbb{R}$: 状態遷移ごとに与える評価を決める関数
             - 報酬モデルと呼ぶ
             - 値を<span style="color:red">報酬</span>と呼ぶ
             - $t=0$から$t=T$までの状態遷移、行動履歴、報酬をまとめて<span style="color:red">エピソード</span>と呼ぶ
@@ -124,7 +124,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
     - マルコフ性の前提から、$\V{x}_{-1}$以前のことは$V^\Pi(\V{x}_0)$に無関係
     - 方策でも$\V{x}_{-1}$以前を考慮する意味はない
     - タスクのどの時点の状態でも価値$V^\Pi(\V{x})$が考えられる　
-- <span style="color:red">関数$V^\Pi: \mathcal{X} \to \Re$の存在$\Longrightarrow$状態価値関数</span>
+- <span style="color:red">関数$V^\Pi: \mathcal{X} \to \mathbb{R}$の存在$\Longrightarrow$状態価値関数</span>
 
 
 ---
@@ -181,8 +181,8 @@ $= \Big\langle r(\V{x}_0, a_1, \V{x}_1) + V^\Pi(\V{x}_1) \Big\rangle_{p(\V{x}_1 
         - 一部の状態が終端状態: $\V{x} \in \mathcal{X}_\text{f} \subset \mathcal{X}$
     - 状態遷移モデル: $p(\V{x}' | \V{x}, a) \ge 0$
 - 評価
-    - 報酬モデル: $r(\V{x}, a, \V{x}') \in \Re$
-    - 終端状態の価値: $V_\text{f}(\V{x}) \in \Re \quad (\V{x} \in \mathcal{X}_\text{f})$
+    - 報酬モデル: $r(\V{x}, a, \V{x}') \in \mathbb{R}$
+    - 終端状態の価値: $V_\text{f}(\V{x}) \in \mathbb{R} \quad (\V{x} \in \mathcal{X}_\text{f})$
     - 評価: $J(\V{x}_{0:T}, a_{1:T}) = \sum_{t=1}^T r(\V{x}_{t-1}, a_t, \V{x}_t) + V_\text{f}(\V{x}_T)$
 - 解く問題
     - なるべく良い方策$\Pi: \mathcal{X} \to \mathcal{A}$を求めたい
