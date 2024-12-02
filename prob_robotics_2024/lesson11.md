@@ -26,7 +26,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - グラフ（グラフ理論のもの）を用いたSLAM
     - ノード（頂点）: ロボットの姿勢やランドマークの位置 
     - エッジ（辺）: ノードの相対位置情報
-        - デッドレコニング、センサ値<br />
+        - デッドレコニング、センサ値
 - グラフに「歪み」
     - エッジの相対位置情報が互いに矛盾
     - 歪みを最小化するようにノードを移動$\Longrightarrow$最尤な地図と軌跡
@@ -41,9 +41,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 8章のSLAMの式（少し改変）からスタート
     - $p(\V{x}_{1:T}, \textbf{m} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$
         - $T$: ロボットが移動、観測を終了する時刻
-        - $\textbf{z}_0$の存在を仮定（あとで不要に）<br />　
+        - $\textbf{z}_0$の存在を仮定（あとで不要に）　
 - FastSLAM同様、軌跡の分布と地図の分布に分離
-    - $p(\V{x}_{1:T}, \textbf{m} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T}) = p(\V{x}_{1:T} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T}) p(\textbf{m} | \V{x}_{0:T}, \textbf{z}_{0:T})$<br />　
+    - $p(\V{x}_{1:T}, \textbf{m} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T}) = p(\V{x}_{1:T} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T}) p(\textbf{m} | \V{x}_{0:T}, \textbf{z}_{0:T})$　
 - FastSLAMと異なり、次の手順を踏む
     - $\V{x}_{1:T}^* = \text{argmax}_{\V{x}_{1:T}} p(\V{x}_{1:T} | \V{x}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$で軌跡を算出
     - $\textbf{m}^* = \text{argmax}_{\textbf{m}} p(\textbf{m} | \V{x}_0, \V{x}_{1:T}^-, \textbf{z}_{0:T})$で地図を算出
@@ -69,14 +69,17 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ### グラフの構成
 
 - 位置情報で関係（<span style="color:red">拘束</span>）のあるノードをエッジでつなぐ
-    1. 時刻が前後するノードは状態方程式で互いに関係
+    1. 時刻が前後するノードは状態方程式で
+    互いに関係
         - 移動エッジ:$\text{e}_{t_1,t_2} = (\hat{\V{x}}_{t_1}, \hat{\V{x}}_{t_2}, \V{u}_{t_2})$
             - $t_2 = t_1 + 1$
-    2. 同じランドマークが観測された2姿勢はセンサ値を通じて互いに関係
+    2. 同じランドマークが観測された2姿勢は
+    センサ値を通じて互いに関係
         - 仮想移動エッジ:$\text{e}_{j,t_1,t_2} = ( \hat{\V{x}}_{t_1}, \hat{\V{x}}_{t_2}, \V{z}_{j, t_1}, \V{z}_{j, t_2})$
-            - 「仮想移動エッジ」というのはあくまで本書の呼び方です
+            - 「仮想移動エッジ」というのは
+            あくまで本書の呼び方です
 
-<img width="40%" src="./figs/virtual_edges.jpg" />
+![bg right:35% 100%](./figs/virtual_edges.jpg)
 
 ---
 
@@ -93,13 +96,13 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-### 残差と残差関数の準備<br />（仮想移動エッジ）
+### 残差と残差関数の準備（仮想移動エッジ）
 
 - 現状のズレの量（残差）
     - $\hat{\V{e}}_{j, t_1,t_2} = \V{h}^{-1}(\hat{\V{x}}_{t_1}, \V{z}_{j,t_1}) - \V{h}^{-1}(\hat{\V{x}}_{t_2}, \V{z}_{j,t_2})$
-        - $\V{h}^{-1}$は姿勢とセンサ値からランドマークの位置を計算する関数<br />　
+        - $\V{h}^{-1}$は姿勢とセンサ値からランドマークの位置を計算する関数　
 - ノードを動かしたときのズレの量（残差関数）
-    - $\V{e}_{j, t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2})  = \V{h}^{-1}(\V{x}_{t_1}, \V{z}_{j,t_1}) - \V{h}^{-1}(\V{x}_{t_2}, \V{z}_{j,t_2})$<br />　
+    - $\V{e}_{j, t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2})  = \V{h}^{-1}(\V{x}_{t_1}, \V{z}_{j,t_1}) - \V{h}^{-1}(\V{x}_{t_2}, \V{z}_{j,t_2})$　
 - ズレが大きいほど歪む
     - しかし、残差は起こりやすいものと起こりにくいものがあるので均一に小さくすればよいわけではない
 
@@ -110,7 +113,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 次のような分布で残差の発生しやすさを考える
     - $p(\V{e}) = \mathcal{N}(\V{e} | \V{0}, \Omega_\text{e}^{-1}) = \eta \exp \left( -\dfrac{1}{2} \V{e}^\top \Omega_{\text{e}} \V{e} \right)$
         - $\V{e}$: 移動エッジまたは仮想移動エッジの残差関数の値
-        - $\Omega_\text{e}$: 残差に関する精度行列<br />　
+        - $\Omega_\text{e}$: 残差に関する精度行列　
 - $p(\V{e})$の性質（具体的な計算は9.2.4項で）
     - 例えばセンサ値の距離が大きいと$\V{e}$が大きくても$p(\V{e})$の値は小さくならない
 
@@ -126,7 +129,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
         - $\textbf{e}_\textbf{x}$: 全移動エッジ
         - $p_0(\V{x}_0)$は$\hat{\V{x}}_0$まわりの鋭いガウス分布
             - $\V{x}を\hat{\V{x}}_0$から動かすと大きなペナルティーを与えて座標系を固定
-        - $\lambda$: 移動エッジをどれだけ重視するか決める定数（当面$\lambda = 1$）<br />　
+        - $\lambda$: 移動エッジをどれだけ重視するか決める定数（当面$\lambda = 1$）　
 - 対数をとって整理すると次のような問題に
     - <span style="color:red">$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$</span>
         - ここで
@@ -144,7 +147,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - $\V{e}^\top \V{e}$: 誤差の内積$=$ 変数の誤差の二乗和
 - $\V{e}^\top \Omega \V{e}$: 精度行列をはさんだ誤差の二乗和
     - $\V{e}$の各変数の重みが変わる
-    - 確率的に起こりにくい誤差ほど大きく評価される<br />　
+    - 確率的に起こりにくい誤差ほど大きく評価される　
 - <span style="color:red">前ページの最適化問題: マハラノビス距離の二乗和を最小化する問題</span>
 
 ---
@@ -152,7 +155,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 9.1.2 地図の算出問題
 
 - $\V{x}_{0:T}^*$を使って各ランドマーク$\text{m}_j$の位置$\V{m}_j$を求める
-    - 各ランドマーク$\text{m}_j$に対して独立に計算可能<br />　
+    - 各ランドマーク$\text{m}_j$に対して独立に計算可能　
 - 手続き
      1.$\text{m}_j$が観測された各姿勢と$\text{m}_j$を結んでエッジとする
         - エッジの集合を$\textbf{e}_{\V{z}_j}$とする
@@ -169,7 +172,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 9.2 仮想移動エッジによる軌跡の算出
 
 - やること
-    - 仮想移動エッジだけでポーズ調整<br />　
+    - 仮想移動エッジだけでポーズ調整　
 - 解く式
     - $\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} \left\\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\\}$
         - 第一項:$\V{x}_0$を固定（<span style="color:red">アンカー項</span>と呼ぶ。）
@@ -227,7 +230,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ## 9.2.4 マハラノビス距離を決める精度行列の導出
 
 - ノード$\text{e}_{j,t_1,t_2}$の$\Omega_{j,t_1,t_2}$を求めましょう
-    - センサ値$\V{z}_{t_1}, \V{z}_{t_2}$の分布$\ell\varphi\psi$空間を残差の$XY\theta$空間に写像<br />　
+    - センサ値$\V{z}_{t_1}, \V{z}_{t_2}$の分布$\ell\varphi\psi$空間を残差の$XY\theta$空間に写像　
 - 求めかた
     - 写像につかう関数: センサ値を変数とした残差（前ページの上の式）の関数$\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b)$を線形化したもの
         - $\hat{\boldsymbol{e}}_{j,t_1,t_2}(\boldsymbol{z}_a, \boldsymbol{z}_b) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2}( \boldsymbol{z}_{t_1}, \boldsymbol{z}_{t_2}) + R_{j,t_1} (\boldsymbol{z}_{j,a} - \boldsymbol{z}_{j,t_1} ) + R_{j,t_2} (\boldsymbol{z}_{j,b} - \boldsymbol{z}_{j,t_2} )$
@@ -251,7 +254,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 - 最適化の式を満たす$\V{x}_{0:T}$を探す
     - 最適化の式:$\V{x}_{0:T}^* = \text{argmin}_{\V{x}_{0:T}} J(\V{x}_{0:T})$
         - $J(\V{x}_{0:T}) = \left\\{ (\V{x}_{0} - \hat{\V{x}}_0)^\top \Omega_0 (\V{x}_{0} - \hat{\V{x}}_0)  \\\\ \qquad\qquad +  \sum_{\textbf{e}_\textbf{z}} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]^\top \Omega_{j,t_1,t_2} \left[ \V{e}_{j,t_1,t_2}(\V{x}_{t_1},\V{x}_{t_2})\right]\right\\}$
-    - グラフ上では、ノードを動かして$J$の小さいところを探索するイメージ<br />　
+    - グラフ上では、ノードを動かして$J$の小さいところを探索するイメージ　
 - 方法
     - $J$を、$\V{x}_{0:T}$をすべてつなげた$3(T+1)$次元のベクトル$\V{x}_{[0:T]}$の関数とみなす
     - $J$を$\V{x}_{[0:T]}$のガウス分布の指数部とみなし、ガウス分布の中心を求めると、$J$が最小になる$\V{x}_{[0:T]}$が求まる
@@ -263,7 +266,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 線形化
     - $\boldsymbol{e}_{j,t_1,t_2}(\boldsymbol{x}_{t_1}, \boldsymbol{x}_{t_2}) \approx  \boldsymbol{e}_{j,t_1,t_2}(\hat{\boldsymbol{x}}_{t_1}, \hat{\boldsymbol{x}}_{t_2}) + B_{j,t_1} (\boldsymbol{x}_{t_1} - \hat{\boldsymbol{x}}_{t_1}) + B_{j,t_2} (\boldsymbol{x}_{t_2} - \hat{\boldsymbol{x}}_{t_2})$
-        - $B_{j,t_1} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_1}} \Big|_{\boldsymbol{x}_{t_1} = \hat{\V{x}}_{t_1}}$、$B_{j,t_2} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_2}} \Big|_{\boldsymbol{x}_{t_2} = \hat{\V{x}}_{t_2}}$<br />　
+        - $B_{j,t_1} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_1}} \Big|_{\boldsymbol{x}_{t_1} = \hat{\V{x}}_{t_1}}$、$B_{j,t_2} = \frac{\partial \boldsymbol{e}_{j,t_1,t_2} } {\partial \boldsymbol{x}_{t_2}} \Big|_{\boldsymbol{x}_{t_2} = \hat{\V{x}}_{t_2}}$　
 - 差分$\Delta\V{x}_{0:T} = \V{x}_{0:T} - \hat{\V{x}}_{0:T}$の式に
     - $\boldsymbol{e}_{j,t_1,t_2}(\Delta \boldsymbol{x}_{t_1}, \Delta \boldsymbol{x}_{t_2}) \approx \hat{\boldsymbol{e}}_{j,t_1,t_2} + B_{j,t_1} \Delta \boldsymbol{x}_{t_1} + B_{j,t_2} \Delta \boldsymbol{x}_{t_2}$
         - ここで
@@ -277,9 +280,9 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 ###$\Delta\V{x}_{[0:T]}$の多項式への変換
 
 - 次のような形式にする
-    - $J(\Delta\V{x}_{[0:T]}) = (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*)^\top \Omega (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*) +$定数<br />
+    - $J(\Delta\V{x}_{[0:T]}) = (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*)^\top \Omega (\Delta\V{x}_{[0:T]} - \Delta\V{x}_{[0:T]}^*) +$定数
    $ = \Delta\V{x}_{[0:T]}^\top \Omega \Delta\V{x}_{[0:T]} - 2 \Delta\V{x}_{[0:T]}^\top \V{\xi}+$ 定数
-        - $\Omega$:$3(T+1)\times 3(T+1)$行列、$\V{\xi}$:$3(T+1)$ベクトル<br />　
+        - $\Omega$:$3(T+1)\times 3(T+1)$行列、$\V{\xi}$:$3(T+1)$ベクトル　
     - $J$を最小にする$\Delta\V{x}_{[0:T]}^*$は、上の式の中辺と右辺を比較すると
 <span style="color:red">$$\Delta\V{x}_{[0:T]}^* = \Omega^{-1}\V{\xi}$$</span>
 - $J(\Delta\V{x}_{0:T})$からの変形のしかた
@@ -293,7 +296,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 - 各ノードの係数を求める
     - $\Omega^-_{j,t_1,t_2} = \begin{pmatrix} \ddots \&  \&  \&  \&  \\\\ \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_1}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\\\ \& \vdots \& \ddots \& \vdots \\\\ \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_1} \& \cdots \& B_{j,t_2}^\top\Omega_{j,t_1,t_2}B_{j,t_2} \&  \\\\ \& \& \& \& \ddots \end{pmatrix}$、${\boldsymbol{\xi}}^\\ast_{j,t_1,t_2} = - \begin{pmatrix} \vdots \\\\ B_{j,t_1}^\top \\\\ \vdots \\\\ B_{j,t_2}^\top \\\\ \vdots \end{pmatrix} \Omega_{j,t_1,t_2} \hat{\boldsymbol{e}}_{j,t_1,t_2}$
-        - 省略されているところは全てゼロが埋まる<br />　
+        - 省略されているところは全てゼロが埋まる　
 - あとは足して、前のページの式を適用するとノードの移動量$\Delta\V{x}_{[0:T]}$が求まる
     - $\Omega = \sum_{\textbf{e}_\textbf{z}}\Omega^-_{j,t_1,t_2} + \begin{pmatrix}\Omega_0 & O \\\\ O & O \end{pmatrix}$
         - 第二項はアンカー項の精度行列
@@ -304,7 +307,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ## 9.2.6 仮想移動エッジによる軌跡推定の実装
 
-- ログから各行列を計算して$\Omega, \V{\xi}$に足し込むコードを記述<br />　
+- ログから各行列を計算して$\Omega, \V{\xi}$に足し込むコードを記述　
 
 - 注意点
     - 観測のない姿勢のデータは孤立したノードになるので除去
