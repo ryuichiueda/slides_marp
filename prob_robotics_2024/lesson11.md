@@ -52,7 +52,7 @@ $$\newcommand{\Bigjump}[1]{\bigg[\!\!\bigg[#1\bigg]\!\!\bigg]}$$
 
 ---
 
-## 9.1.1 軌跡の算出問題
+## 軌跡の算出問題（詳解9.1.1項）
 
 - 解く問題（<span style="color:red">「ポーズ調整」</span>と呼ばれる）
     - $\V{x}_{0:T}^* = \text{argmax}_{\V{x}_{0:T}} p(\V{x}_{0:T} | \hat{\V{x}}_0, \V{u}_{1:T}, \textbf{z}_{0:T})$
