@@ -89,8 +89,8 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
 
 ## 例（詳解11.1.2項）
 
-- まったく方策がない状態からの学習は難しいので、puddle ignore policyで得られる状態価値関数からスタート
-- 前章の離散化と方策評価の方法で、方策と状態価値関数を計算・記録しておく
+- puddle ignore policyを改善してみましょう
+   - puddle ignore policyで得られる方策、状態価値関数からスタート
 
 <img width="40%" src="./figs/init_policy.png" /><img width="40%" src="./figs/policy_evaluation_end_sweeps.png" />
 
