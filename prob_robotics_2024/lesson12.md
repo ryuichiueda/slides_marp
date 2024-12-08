@@ -58,44 +58,41 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
 
 ---
 
-## 11.1.1 Q学習の更新則
+## Q学習の更新則（詳解11.1.1項）
 
 - 行動価値関数を変形
-    - $Q^\Pi(s, a) = \Big\langle R(s,a,s') + V^\Pi(s') \Big\rangle_{ P(s' | s, a) } \\\\ \qquad\qquad = \Big\langle r + \max_{a'}Q^\Pi(s',a') \Big\rangle_{ P(s' | s, a) }$
+    - $Q^\Pi(s, a)$
+    $= \Big\langle R(s,a,s') + V^\Pi(s') \Big\rangle_{ P(s' | s, a) }= \Big\langle r + \max_{a'}Q^\Pi(s',a') \Big\rangle_{ P(s' | s, a) }$
         - 報酬は状態遷移で分かった$r$を用いる
         - $V^\Pi(s)$というのは$Q^\Pi(s,a)$が最大となるように$a$を選んだときの値<br />　
-- さらに変形
-    - $Q(s, a) = \Big\langle r + \max_{a'}Q(s',a') \Big\rangle_{ P(s' | s, a) }$
-        - 方策が定まってないので、とりあえず$Q(s,a)$の値を適当に初期化したものから計算（価値反復と同じような考え方）
+- ドローイングに基づく式に変形（$\Pi$は省略）
+    - $s' \sim P(s'|s,a)$
+    - $Q(s, a) \longleftarrow r + \max_{a'}Q(s',a')$
+        - $Q(s,a)$は適当に初期化しておく
         - 方策（$a$の選び方）はあとで考える
 
 ---
 
 ### Q学習の更新則（続き）
 
-- $P(s' | s, a)$が分からないのでひとつの事象で更新
-    - $Q(s, a) \longleftarrow r + \max_{a'}Q(s',a')$
-    - これはダメ
-        - $a$が一か八かの行動の場合には値が安定しない
-        - 本来は何回も統計をとる必要がある<br />　
+- $Q(s, a) \longleftarrow r + \max_{a'}Q(s',a')$では学習できない
+    - $a$が一か八かの行動の場合には値が安定しない
+    - 本来は何回も統計をとる必要がある<br />　
 - 妥協して更新前の値との折衷案に
-    - <span style="color:red">$Q(s, a) \longleftarrow (1-\alpha)Q(s,a) + \alpha \big\[ r + \max_{a'}Q(s',a')\big\]$</span>
+    - <span style="color:red">$Q(s, a) \longleftarrow (1-\alpha)Q(s,a) + \alpha \big[ r + \max_{a'}Q(s',a')\big]$</span>
     - $\alpha$を小さくするほど過去を忘れにくい
-        - 書籍では$\alpha = 0.5$
+        - 詳解確率ロボティクスでは$\alpha = 0.5$
 
 ロボットをなんらかの方策で動かしながら$Q(s, a)$を更新していき、（だいたいの）収束を目論む
 
 ---
 
-## 11.1.2 準備
+## 例（詳解11.1.2項）
 
-- $Q$学習の実装の準備
-- 書籍でやっていること
-    - まったく方策がない状態からの学習は難しいので、puddle ignore policyからスタート
-    - 前章の離散化と方策評価の方法で、方策と状態価値関数を計算・記録しておく
+- まったく方策がない状態からの学習は難しいので、puddle ignore policyで得られる状態価値関数からスタート
+- 前章の離散化と方策評価の方法で、方策と状態価値関数を計算・記録しておく
 
-<img width="40%" src="./figs/init_policy.png" />
-<img width="40%" src="./figs/policy_evaluation_end_sweeps.png" />
+<img width="40%" src="./figs/init_policy.png" /><img width="40%" src="./figs/policy_evaluation_end_sweeps.png" />
 
 ---
 
