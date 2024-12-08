@@ -37,16 +37,30 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## <span style="text-transform:none">psとtop</span>
+## ps
 
 - `$ ps aux`
   - 項目の意味
-    - USER: ユーザ, PID: プロセスID, %CPU: CPU 使用率,%MEM: メモリ使用率, VSZ: 仮想メモリのサイズ,RSS: 使用している物理メモリ量, TTY: 端末, STAT: プロセスの状態, START: 起動した時間, TIME: 使ったCPU 時間, COMMAND: コマンド名、カーネルスレッド名
+    - USER: ユーザ, PID: プロセスID, %CPU: CPU 使用率,
+    %MEM: メモリ使用率, VSZ: 仮想メモリのサイズ,
+    RSS: 使用している物理メモリ量, TTY: 端末, STAT: プロセスの状態,
+    START: 起動した時間, TIME: 使ったCPU 時間,
+    COMMAND: コマンド名、カーネルスレッド名
   - STATの意味
-    - R: Run, S: Sleep, D: Disk Sleep, T: Stopped, Z: Zombie, +: forground, <: high priority, s: session leader
+    - R: Run, S: Sleep, D: Disk Sleep, T: Stopped, Z: Zombie,
+    +: forground, <: high priority, s: session leader
+
+---
+
+## psとtop
+
 - `$ top -c`
   - 項目の意味
-    - PID: プロセスID, USER: ユーザ, PR: 優先度, NI: nice 値, VIRT: 仮想メモリ使用量, RES: 物理メモリ使用量, SHR: 共有メモリ使用量, S: プロセスの状態,%CPU: CPU 使用率, %MEM: 物理メモリ使用率, TIME+:CPU 使用時間, COMMAND: コマンド
+    - PID: プロセスID, USER: ユーザ, PR: 優先度, NI: nice 値,
+    VIRT: 仮想メモリ使用量, RES: 物理メモリ使用量,
+    SHR: 共有メモリ使用量, S: プロセスの状態,
+    %CPU: CPU 使用率, %MEM: 物理メモリ使用率,
+    TIME+:CPU 使用時間, COMMAND: コマンド
 
 ---
 
@@ -78,7 +92,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## <span style="text-transform:none">fork</span>とプロセスの親子関係
+## forkとプロセスの親子関係
 
 - fork: あるプロセスがふたつに分裂する仕組み
     - あるプロセスがforkすると、プロセス番号を除いて全く同じプロセスがふたつ同時に走るようになる
@@ -90,7 +104,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## <span style="text-transform:none">exec</span>
+## exec
 
 - プロセスの中身が他のプログラムに変わる仕組み
     - 例: 次のプログラムは`exec sleep 100`の瞬間に`sleep`に化ける
