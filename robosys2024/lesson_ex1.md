@@ -23,7 +23,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今日の内容
 
-- プロセス等、Linuxの仕組みについて
+- プロセス等，Linuxの仕組みについて
 
 ---
 
@@ -31,9 +31,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - プログラム実行の一単位
   - 実行中のプログラム＋OSが準備した付帯情報
-  - プロセスID、ユーザ、親プロセス
+  - プロセスID，ユーザ，親プロセス
 - 普段はps(1)やtop(1)で調査（次のページ）
-  - CPUやメモリ使用量、ゴミプロセスがないか調査、等
+  - CPUやメモリ使用量，ゴミプロセスがないか調査，等
 
 ---
 
@@ -45,7 +45,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     %MEM: メモリ使用率, VSZ: 仮想メモリのサイズ,
     RSS: 使用している物理メモリ量, TTY: 端末, STAT: プロセスの状態,
     START: 起動した時間, TIME: 使ったCPU 時間,
-    COMMAND: コマンド名、カーネルスレッド名
+    COMMAND: コマンド名，カーネルスレッド名
   - STATの意味
     - R: Run, S: Sleep, D: Disk Sleep, T: Stopped, Z: Zombie,
     +: forground, <: high priority, s: session leader
@@ -67,7 +67,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## OS本体（カーネル）から見たプロセス
 
 - リソースを割り当てる一単位
-  - 番号（プロセス番号、プロセスID、PID）を付けて管理<br />　
+  - 番号（プロセス番号，プロセスID，PID）を付けて管理<br />　
 - プロセスに対する仕事
   - 生成と消去（メモリの割り当て）
   - CPU の利用時間の管理（タイムシェアリング）
@@ -95,7 +95,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## forkとプロセスの親子関係
 
 - fork: あるプロセスがふたつに分裂する仕組み
-    - あるプロセスがforkすると、プロセス番号を除いて全く同じプロセスがふたつ同時に走るようになる
+    - あるプロセスがforkすると，プロセス番号を除いて全く同じプロセスがふたつ同時に走るようになる
     -  <span style="color:red">これだけ見るとなんのためにあるのか意味不明</span><br />　
 - fork後のプロセス番号
     - 一方は元のプロセス番号（親）
@@ -137,23 +137,23 @@ echo これは実行されない
 
 ---
 
-## <span style="text-transform:none">forkとパイプ
+## forkとパイプ
 
 - シェルが自分に入出力する口を作ってforkするという処理を繰り返していく
     - →コマンドが数珠つなぎに
 
-<img width="35%" src="./md/images/pipe.png" />
+![bg right:40% 100%](./figs/pipe.png)
 
 ---
 
 ## プロセスとメモリ
 
-- プロセスは、基本的に他のプロセスが使っているメモリの中身を見ることができない
-  - --見ることができたら事故--
+- プロセスは，基本的に他のプロセスが使っているメモリの中身を見ることができない
+  - <span style="color:red">見ることができたら事故</span>
 - プロセス間でメモリが見えないようにする仕組み: 仮想記憶
   - 問題: 図のような1列のメモリをどのように複数のプロセスに割り当てる？
 
-<img width="22%" src="./md/images/mem_sequence.png" />
+<img width="22%" src="./figs/mem_sequence.png" />
 
 ---
 
@@ -165,7 +165,7 @@ echo これは実行されない
 - アドレス空間を「ページ」に分割
 - 仮想のページと物理ページを対応付け
 
-<img width="90%" src="./md/images/page.jpg" />
+<img width="70%" src="./figs/page.jpg" />
 
 ---
 
@@ -174,8 +174,8 @@ echo これは実行されない
 - fork後も参照しているアドレスが変わらない
 - 別のプロセスのメモリ番地が見えない
 - lazyな物理メモリ割り当て
-  - プログラムが割り当てのないページの番地にアクセスした時に、物理メモリのページを割り当て
-  - 割り当てのないページの番地にアクセスすることを「ページフォルト」と言い、これが起こると割り当てが起こる
+  - プログラムが割り当てのないページの番地にアクセスした時に，物理メモリのページを割り当て
+  - 割り当てのないページの番地にアクセスすることを「ページフォルト」と言い，これが起こると割り当てが起こる
 
 ---
 
@@ -238,7 +238,13 @@ sleep 200000 | sleep 200000
 Ctrl+Z
 [2]+  停止                  sleep 2000000 | sleep 2000000
 $ kill %1        #job1を殺す
+```
 
+---
+
+### 続き
+
+```
 $ jobs
 
 [1]  Terminated              sleep 1000000 | cat | cat
