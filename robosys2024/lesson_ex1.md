@@ -52,7 +52,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## psとtop
+## top
 
 - `$ top -c`
   - 項目の意味
@@ -64,7 +64,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## カーネルから見たプロセス
+## OS本体（カーネル）から見たプロセス
 
 - リソースを割り当てる一単位
   - 番号（プロセス番号、プロセスID、PID）を付けて管理<br />　
