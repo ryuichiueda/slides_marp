@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: 確率ロボティクス第12回 -->
 
-# 確率ロボティクス第12回: 強化学習（Q学習）
+# 確率ロボティクス第12回: 強化学習
 
 千葉工業大学 上田 隆一
 
@@ -41,7 +41,6 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
         - Q, Sarsa, $n$-step Sarsa, Sarsa$(\lambda)$, ...
     - 原理はほぼ同じで、学習する方策の違いと価値関数の更新方法が違う
         - 方策の違い: $V^\Pi$（$Q^\Pi$）なのか$V^*$（$Q^*$）なのか
-- この資料ではQ学習だけ説明
 
 ---
 
@@ -159,7 +158,7 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
 
 ---
 
-### <span style="text-transform:none">Sarsa</span>によって得られる方策
+### Sarsaによって得られる方策
 
 - （このタスクでは）Q学習よりも水たまりを早い段階から回避
     - $a'$が最適であることを期待しないので水たまりのリスクを大きく評価
@@ -184,4 +183,113 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
 - Q学習、Sarsa共通の問題
     - <span style="color:red">あるときに画期的な行動選択が行われても、1ステップ分しか価値が更新されない</span>
         - その前の経緯も重要なのに、価値は更新されない
+
+---
+
+## $n$-step Sarsa（詳解11.3節）
+
+- 画期的な行動選択があったときに、過去にさかのぼって価値を更新できないか？<br />　
+- 考えられる方法
+    - Sarsaで、もうちょっと後まで行動選択してから価値を更新
+        - Sarsa: $s, a, r, s', a'$で$Q(s,a)$を更新
+        - 改良: $s, a, r, s', a', s'', a''$で$Q(s,a)$を更新
+        - さらに改良: $s, a, r, s', a', s'', a'', s''', a'''$で$Q(s,a)$を更新
+        - さらにさらに改良: ...<br />　
+- $n$ステップだけ評価を先延ばしにする<br /><span style="color:red">$= n$ステップ過去の状態行動対の価値を更新</span>
+
+---
+
+### 更新式の導出
+
+- $s,a,r,s',a'$の$r,s',a'$を1ステップ後ということで<br />$r^{(1)},s^{(1)},a^{(1)}$と書き直し
+    - Sarsaの式: $Q(s,a) \longleftarrow (1 - \alpha)Q(s,a) + \alpha \left[ r^{(1)} + Q(s^{(1)},a^{(1)}) \right]$<br />　
+- $a^{(2)}$まで評価を先延ばし
+    - $Q(s,a) \longleftarrow (1 - \alpha)Q(s,a) + \alpha \left[ r^{(1)} + r^{(2)} + Q(s^{(2)},a^{(2)}) \right]$ 
+    - Q学習では簡単に先延ばしできない
+- $a^{(n)}$まで評価を先延ばし
+    - $Q(s,a) \longleftarrow (1 - \alpha)Q(s,a) + \alpha \left[ \sum_{i=1}^n r^{(i)} + Q(s^{(n)},a^{(n)}) \right]$<br />　
+- 実装のため、$n$ステップ前の行動価値関数を更新する式に
+    - <span style="color:red;font-size:90%">$Q(s^{(-n)},a^{(-n)}) \longleftarrow (1 - \alpha)Q(s^{(-n)},a^{(-n)}) + \alpha \left[ \sum_{i=0}^{n-1} r^{(-i)} + Q(s,a) \right]$</span>
+
+---
+
+### $n$-step Sarsaの学習結果
+
+- ランダムな方策から、5万秒後には水たまりの反対側からゴールに到達可能に
+    - Q学習の場合は20万秒後でも無理
+
+<center><img width="58%" src="./figs/11.5.jpg" /></center>
+
+---
+
+### $n$-step Sarsaで得られた状態価値関数
+
+- ランダムな方策から学習が進んでいる
+    - まだ収束には遠い
+- （些末な話だが）環境の端の離散状態が大きい（図で示した範囲外も領域に含めている）ので通る機会が多く学習が早く進行
+
+<center><img width="60%" src="./figs/11.6.jpg" /></center>
+
+---
+
+## 11.4 Sarsa$(\lambda)$
+
+
+- 評価を遅らせるのではなく、もっと積極的に過去の状態行動対の価値を変更
+- 考え方
+    - $Q(s,a)$が改善（改悪）された場合、その前の状態行動対の価値もすべて同じだけ更新すべきではないのか？
+        - 例えば下図の$Q=-100 \rightarrow Q = -20$の更新
+
+<center><img width="60%" src="./figs/11.8.jpg" /></center>
+
+---
+
+### Sarsa($\lambda$)の更新式の導出
+
+- Sarsaの式を並び替え
+    - $Q(s,a) \longleftarrow Q(s,a) + \alpha \left[ r + Q(s',a') - Q(s,a) \right]$　
+- Q値の変化を$\Delta Q$とおく
+    - $\Delta Q = r + Q(s',a') - Q(s,a)$
+        - エピソードをさかのぼって価値に$\Delta Q$を足していく
+        - ただし減衰させていく（過去にいくほど因果関係が薄くなるので）　
+- 更新式
+    - <span style="color:red">$Q(s^{(-n)}, a^{(-n)}) \longleftarrow Q(s^{(-n)}, a^{(-n)}) + \alpha \lambda^n \Delta Q \quad (n=0,1,2,\dots)$</span>
+        - $\lambda$: エリジビリティ減衰率
+        - 書籍では$\lambda=0.9$
+
+<center>減衰するものの、エピソードの最初まで更新可能</center>
+
+
+---
+
+### Sarsa($\lambda$)の実装と実行
+
+- 10-step Sarsaよりも早く学習が進行（ただしタスクの性質次第）
+    - ゴールに入ったときや水たまりを回避した行動が得られたときに10ステップ以上前の方策も変化していると推察できる
+
+<center><img width="55%" src="./figs/11.9.jpg" /></center>
+
+---
+
+### Sarsa($\lambda$)で得られた状態価値関数
+
+- こちらも10-step Sarsaより価値の変化が大きい
+
+<center><img width="80%" src="./figs/11.10.jpg" /></center>
+
+---
+
+## 11.5 まとめ
+
+- 4種類の強化学習アルゴリズムを実装
+    - Q学習
+    - SarsaおよびSarsaの改良版
+- Q学習は多段にしにくいが、できないことはない
+    - [Sutton 2018]参照のこと　
+- 本書の離散化は効率が悪い$\rightarrow$関数近似
+    - 価値関数や方策をパラメータで表現してパラメータを学習
+        - Tesauroのバックギャモン
+        - 近年流行しているDQNやA3Cなどは人工ニューラルネットワークで価値関数や方策を近似（+特徴量抽出）
+- アルゴリズム凝りすぎに注意
+    - 応用ならばよいけど基礎研究だと問題に特化していないかということに
 
