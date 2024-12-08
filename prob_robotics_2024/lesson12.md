@@ -52,7 +52,8 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
     - $Q^\Pi(s, a)  = \Big\langle R(s, a, s') + V^\Pi(s') \Big\rangle_{ P(s' | s, a) }$
     - $R(s,a,s')$や$P(s'|s,a)$が分かれば$Q^\Pi(s,a)$は遷移先の$V^\Pi$の値から計算可能<span style="color:red">（でも分からない）</span><br />　
 - 学習前の$Q^\Pi(s, a)$を、$P(s'|s,a)$ではなく、一度の状態遷移から修正するにはどうすればよいか
-    - 状態遷移: $s$から$a$を選んで$s'$に行き、報酬$r$をもらう
+    - 統計の考え方: 分布が分からないときは統計をとる（サンプリング）
+    - $\Rightarrow$<span style="color:red">1回の状態遷移（$s$から$a$を選んで$s'$に行き、報酬$r$をもらう）をドローイングと考える</span>
 
 
 ---
