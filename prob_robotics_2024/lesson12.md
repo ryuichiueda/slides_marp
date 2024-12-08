@@ -279,7 +279,7 @@ $\Longrightarrow$<span style="color:red">強化学習</span>の問題
 
 ---
 
-## 11.5 まとめ
+## まとめ
 
 - 4種類の強化学習アルゴリズムを実装
     - Q学習
