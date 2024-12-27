@@ -1,10 +1,15 @@
+---
+marp: true
+---
+
+<!-- footer: "ロボットシステム学第11回" -->
+
 # ロボットシステム学
 
-## 第11回: <span style="text-transform:none">Python</span>の<br />クラスとオブジェクト
+## 第11回: Pythonのクラスとオブジェクト
 
 千葉工業大学 上田 隆一
 
-<br />
 
 <p style="font-size:50%">
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -14,9 +19,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+<!-- paginate: true -->
+
 ## 今日やること
 
-* 作ってきたROS 2のパッケージのコードをクラスで整理
+- 作ってきたROS 2のパッケージのコードをクラスで整理
   1. オブジェクトとクラスの説明
   1. 実践
   1. まとめ
@@ -27,53 +34,56 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### <span style="text-transform:none">Python</span>のオブジェクト
+### Pythonのオブジェクト
 
-* ドットをつけると持っている変数や関数が使える
-  * 例: 
-    * `msg.data = n`
-    * `pub.publish(msg)`
-  * 注意: オブジェクトの持っている変数や関数は、<br />正確には「属性」（attribute）と呼ばれる<br />　
-* ひとつのオブジェクトで関連する属性を<br />まとめて管理可能
-  * ROS 2のノードと同様、機能をうまく切り分けていくと<br />分かりやすいソフトウェアに
+- ドットをつけると持っている変数や関数が使える
+  - 例: 
+    - `msg.data = n`
+    - `pub.publish(msg)`
+  - 注意: オブジェクトの持っている変数や関数（メソッド）は、まとめて「属性」（attribute）と呼ばれる　
+- ひとつのオブジェクトで関連する属性をまとめて管理可能
+  - ROS 2のノードと同様、機能をうまく切り分けていくと分かりやすいソフトウェアに
 
 ---
 
 ### 2. オブジェクトの作り方
 
-* クラスを使ってオブジェクトを作る
-  * 例: `node = Node("talker")`
-    * 「`Node`」という<span style="color:red">クラス</span>にオブジェクトの定義が書いてあって、<br />それにしたがって`node`オブジェクトができる
-    * C言語の「`struct 構造体の名前 変数の名前;`」に相当
-    * カッコの中の文字列`"talker"`は、オブジェクトの初期化のときに<br />渡す引数<br />　
-  * 遺言
-    * うまくクラスを使えるようになるには豊富な経験が必要
-    * 人のコードを使うときに、どういう属性のまとめ方をしているか<br />観察を
+- クラスを使ってオブジェクトを作る
+  - 例: `node = Node("talker")`
+    - 「`Node`」という<span style="color:red">クラス</span>にオブジェクトの定義が書いてあって、それにしたがって`node`オブジェクトができる
+    - C言語の「`struct 構造体の名前 変数の名前;`」に相当
+    - カッコの中の文字列`"talker"`は、オブジェクトの初期化のときに渡す引数　
+  - 遺言
+    - うまくクラスを使えるようになるには豊富な経験が必要
+    - 人のコードを使うときに、どういう属性のまとめ方をしているか観察を
 
 ---
 
 ## 3. クラスの作成
 
-* `talker.py`をクラスを使った記述に変更してみましょう
+- `talker.py`をクラスを使った記述に変更してみましょう
 
 ---
 
 ### クラスの作成と初期化（その1）
 
-* やること（その1）
-  * 1. `Talker`というクラスを作成
-  * 2. `Talker`にパブリッシャーと変数を属性として実装
+- やること（その1）
+  - 1. `Talker`というクラスを作成
+  - 2. `Talker`にパブリッシャーと変数を属性として実装
 
 ```python
   1 import rclpy
   2 from rclpy.node import Node
   3 from std_msgs.msg import Int16
   4
-  5 class Talker():          #ヘッダの下にTalkerというクラスを作成
-  6     def __init__(self):  # オブジェクトを作ると呼ばれる関数
-  7         self.pub = node.create_publisher(Int16, "countup", 10)
-  8         self.n = 0
-  9         # ↑ selfはオブジェクトのこと
+  5 ### ヘッダの下にTalkerというクラスを作成 ###
+  6 class Talker(Node):     #Nodeというクラスの機能を受け継いだクラスになる
+  7     def __init__(self):            #オブジェクトができたときに呼ばれる
+  8         super().__init__("takler") #Nodeのオブジェクトとしての初期化
+  9         self.pub = self.create_publisher(Int16, "countup", 10)
+ 10         self.create_timer(0.5, self.cb)
+ 11         self.n = 0
+            # ↑ selfはオブジェクト自身のこと
             # ↑ オブジェクトにひとつパブリッシャと変数をもたせる。
 （次ページに続く）
 ```
@@ -82,125 +92,35 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### クラスの作成と初期化（その2）
 
-* やること（その2）
-  * 3. オブジェクトの作成
-  * 4. コールバック関数の書き換え
-    * オブジェクトのパブリッシャや変数を使うように
-* 書き換えたら動作確認（テスト）を
+- やること（その2）
+  - 3. コールバック関数もTalkerのメソッドに
+  - 4. mainでTalkerのオブジェクトを作成
+- 書き換えたら動作確認（テスト）を
 
 ```python
- 10 rclpy.init()
- 11 node = Node("talker")
- 12 talker = Talker()      #オブジェクトを作成（__init__が実行される。）
- 13
- 14 def cb():              #関数内のnやpubをtalkerのものに変更
- 15     msg = Int16()
- 16     msg.data = talker.n
- 17     talker.pub.publish(msg)
- 18     talker.n += 1
+ 14     def cb(self):         #コールバックのメソッド
+ 15         msg = Int16()
+ 16         msg.data = self.n #属性には必ずselfをつける
+ 17         self.pub.publish(msg)
+ 18         self.n += 1
  19
- 20 node.create_timer(0.5, cb)
- 21 rclpy.spin(node)
+ 20
+ 21 def main():
+ 22     rclpy.init()
+ 23     node = Talker() #Talkerのオブジェクトを作成
+ 24     rclpy.spin(node)  #↑あとは__init__が呼ばれてすべてが動き出す
 ```
 
 ---
 
-### メソッドの追加
+## 課題
 
-* `cb`関数も`Talker`の<span style="color:red">メソッド</span>にしてしまいましょう
-  * メソッド: オブジェクト内の変数などを操作するための<br />関数（のようなもの）<br />　
-* 手順
-  * 1. まず、`create_timer`を`__init__`内で実行するようにする
-    * いきなり`cb`をメソッドにすると難しいので
-  * 2. その後、`cb`をメソッドに
-
-
----
-
-### `create_timer`の移動
-
-```python
-  5 class Talker():
-  6     def __init__(self, node): #nodeを__init__の引数に追加
-  7         self.pub = node.create_publisher(Int16, "countup", 10)
-  8         self.n = 0
-  9         node.create_timer(0.5, cb) #ここでタイマーをしかける。
- 10
- （中略）
- 16
- 17 rclpy.init()
- 18 node = Node("talker")
- 19 talker = Talker(node) #処理のためにnodeを渡す。
- 20 rclpy.spin(node)
-```
-
----
-
-### `cb`の移動
-
-```python
-  5 class Talker():
-  6     def __init__(self, node):
-  7         self.pub = node.create_publisher(Int16, "countup", 10)
-  8         self.n = 0
-  9         node.create_timer(0.5, self.cb) #selfをつける。
- 10
- 11     def cb(self):      #インデントをあげてselfを引数に
- 12         msg = Int16()
- 13         msg.data = self.n     #talker -> self
- 14         self.pub.publish(msg) #talker -> self
- 15         self.n += 1           #talker -> self
-```
-
-* これで、「`Talker`の」コールバック関数であることが<br />コードの構造で分かるように
-
----
-
-### クラスの「外側」の観察
-
-* パブリッシャに関する処理はすべて`Talker`クラス内に<br />記述されている状態
-  * 要約されたコードになって読みやすく
-  * 浮いていたグローバルな変数`n`もオブジェクト内に移動
-
-```python
- 17 rclpy.init()
- 18 node = Node("talker")
- 19 talker = Talker(node) #この一行でパブリッシャが動き出す。
- 20 rclpy.spin(node)
-```
-
-* ただし、変なクラスを作るとかえって読みにくくなるので、考えることが必要
-  * なにをまとめると分かりやすいコードになるのか
-
----
-
-### クラスの外側のコードの整理<br />（おまけ）
-
-* 次のように`main`関数を書いておくとよい
-  * グローバル変数がなくなって見通しが良く
-  * `setup.py`で`talker:main`がエントリーポイントだと言っているので（必要ないかもしれないが）合わせておく
-
-```python
- 17 def main():
- 18     rclpy.init()
- 19     node = Node("talker")
- 20     talker = Talker(node)
- 21     rclpy.spin(node)
- 22
- 23 if __name__ == '__main__':
- 24     main()
-```
-
-
+- `listener.py`もクラスを使って書いてみましょう
 
 ---
 
 ## 3. まとめ
 
-* Pythonのクラスを作成
-  * クラスの中にパブリッシャの機能を整理して実装
-  * `listener.py`でもやってみましょう<br />　
-* 他のコードの整理方法
-  * モジュールに関数のコレクションを作るという方法
-    * 数学の関数など、同類ではあるものの互いに独立しているもののコレクションとして作成
-  * 今後は「構造」に注目してプログラミングを！
+- Pythonのクラスを作成
+  - クラスの中にパブリッシャの機能を整理して実装
+- 今後は「構造」に注目してプログラミングを！
