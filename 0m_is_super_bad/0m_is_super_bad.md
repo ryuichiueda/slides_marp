@@ -53,6 +53,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### なぜ0mはダメなのか ―その3: チームがなくなる
 
-- 
+- 大人はメリットがないことはやりません！
+- 学生さんが勉強できるなら投資はすべきなんだけど・・・
+    - 様々な利害関係者から何を言われるか分からない
 
 
