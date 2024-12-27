@@ -30,12 +30,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## なぜ0mはダメなのか ―その1
+### なぜ0mはダメなのか<br />―その1: 主催者の思いをちゃんと受け取っているか？
 
-- 主催者の思いをちゃんと受け取っているのか
-    - たとえばつくばチャレンジでは「本走行」が1回に限定されているのはなぜ？
-
-- 第11回ロボット大賞日本機械工業連合会会長賞の記事(https://www.robotaward.jp/winning/index.html) から
+- Q. たとえばつくばチャレンジでは「本走行」が1回に限定されているのはなぜ？
+- A. 第11回ロボット大賞日本機械工業連合会会長賞の記事(https://www.robotaward.jp/winning/index.html) から
     - 「何が起こるかわからない実環境で、しかもやり直しのきかない1回の本走行で確実に走らせるためには、あらゆる状況を想定し、実験を繰り返して成功率を高めておかなければならず、これが各チームの技術力向上につながっています。」
 
 <center><span style="color:red">チームの技術力向上に疑問が発生</span></center>
@@ -49,3 +47,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 後輩の指針にならない
 - 時間がたつと本走行の記録しか残らなくなる
     - 実験ではどうだったとかは見られない
+
+
+---
+
