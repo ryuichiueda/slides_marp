@@ -47,3 +47,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 引き継ぎの面
     - 先輩の積み上げを台無しに 
     - 後輩の指針にならない
+- 時間がたつと本走行の記録しか残らなくなる
+    - 実験ではどうだったとかは見られない
