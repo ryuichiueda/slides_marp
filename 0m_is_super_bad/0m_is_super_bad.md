@@ -27,3 +27,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - そもそも0mがどれだけアカンのか意識が薄いような気が（こっち先に説明します）
 
 ![bg right:30% 100%](book.png)
+
+---
+
+## なぜ0mはダメなのか<br />（悔しいとかそういう部活動的な話ではない）
+
+- 記録に残る
+
