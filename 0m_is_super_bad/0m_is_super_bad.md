@@ -38,6 +38,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 第11回ロボット大賞日本機械工業連合会会長賞の記事(https://www.robotaward.jp/winning/index.html) から
     - 「何が起こるかわからない実環境で、しかもやり直しのきかない1回の本走行で確実に走らせるためには、あらゆる状況を想定し、実験を繰り返して成功率を高めておかなければならず、これが各チームの技術力向上につながっています。」
 
+<center><span style="color:red">チームの技術力向上に疑問が発生</span></center>
+
 ---
 
 ## なぜ0mはダメなのか ―その2
