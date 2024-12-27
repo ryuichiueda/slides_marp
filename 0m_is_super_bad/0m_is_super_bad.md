@@ -41,7 +41,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## なぜ0mはダメなのか ―その2: 引き継ぎの失敗に
+### なぜ0mはダメなのか ―その2: 引き継ぎの失敗に
 
 - 先輩の積み上げを台無しに 
 - 後輩の指針にならない
@@ -50,4 +50,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 
 ---
+
+### なぜ0mはダメなのか ―その3: チームがなくなる
+
+- 
+
 
