@@ -30,9 +30,15 @@ marp: true
 
 - 英語にするとmachine learning
     - 同名の教科書: https://www.cs.cmu.edu/~tom/mlbook.html によると
+        ```text
+        Definition: A computer program is said to learn from
+        experience E with respect to some class of tasks T
+        and performance measure P, if its performance at tasks in
+        T, as measured by P, improves with experience E.
+        ```
 
 
-わからん
+<center>わからん</center>
 
 ---
 
