@@ -38,7 +38,7 @@ marp: true
         ```
 
 
-<center>わからん</center>
+<center>わからんので別の視点で考えてみましょう</center>
 
 
 ---
