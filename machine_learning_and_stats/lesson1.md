@@ -48,7 +48,7 @@ marp: true
 - 右の図は何に見えますか
 * なんで◯◯に見えるんでしょう？
 
-![bg right:30% 90%](./figs/dots.png)
+![bg right:50% 60%](./figs/dots.png)
 
 ---
 
