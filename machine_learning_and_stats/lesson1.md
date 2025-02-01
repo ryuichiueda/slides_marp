@@ -74,7 +74,9 @@ marp: true
 - 回転していても形が分かる
 - 大きさが違っても形が分かる 
 
-スイッチのON/OFFで考えると全然違う信号なのになんで？
+![](./figs/dots_varisous.png)
+
+<center>スイッチのON/OFFで考えると全然違う信号なのになんで？</center>
 
 ---
 
