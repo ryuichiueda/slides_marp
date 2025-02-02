@@ -29,7 +29,7 @@ marp: true
 ## 機械学習とはなに？
 
 - 英語にするとmachine learning
-    - 同名の教科書: https://www.cs.cmu.edu/~tom/mlbook.html によると
+    - 同名の教科書[Mitchell 1997]: https://www.cs.cmu.edu/~tom/mlbook.html によると
         ```text
         Definition: A computer program is said to learn from
         experience E with respect to some class of tasks T
@@ -75,6 +75,8 @@ marp: true
 - 大きさが違っても形が分かる 
 
 ![](./figs/dots_varisous.png)
+
+- 何匹いるかも分かる
 
 <center>スイッチのON/OFFで考えると全然違う信号なのになんで？</center>
 
@@ -166,6 +168,34 @@ marp: true
     - コンピュータプログラムがタスクのクラスTと性能指標Pに関し
 <span style="color:red">経験</span>Eから学習するとは、T内のタスクのPで測った性能が
 <span style="color:red">経験</span>Eにより改善される事を言う。 — トム・M・ミッチェル
+- 要は
+    - 「経験（情報）を加えていくと、与えられた仕事がより上手にできるようになる仕組みを持つプログラムを、機械学習のプログラムと言いましょう」ということ
+    - どこにも「理屈」とは書いてない
+
+<center>このアプローチが大きな成功を収めている</center>
+
+---
+
+## 機械学習を理解したい（せっかく講義を聞くんだから）
+
+- 「理屈じゃなくて経験を扱う」をどうやって理屈で扱うの？
+    - 残念ながら機械学習のプログラムを書くには理屈は必要
+        <br />
+
+<center>良い道具があります</center>
+
+---
+
+## 良い道具: 確率・統計
+
+- 確率・統計はとりあえず原因は横に置いて、出てきたデータを扱う
+    - 例: 右の写真を見せたら100人中99人が「餃子」、
+    1人が「群れで飛ぶ鳥」と回答
+    →99%の確率で餃子
+    - ↑すごく雑な議論だけどテレビでうるさい「AI」というのは基本こういうもの
+    - 「なにが餃子なのか」は二の次
+
+![bg right:28% 90%](./figs/餃子.jpg)
 
 ---
 
