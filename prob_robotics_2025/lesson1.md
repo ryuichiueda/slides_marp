@@ -177,5 +177,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 代表値で会話する
+### 代表値ってなに?
+
+- まず挙がるもの: 平均値、中央値、最頻値
+    - 統計の講義を受けたことがあれば誰でも知っている
+
 
