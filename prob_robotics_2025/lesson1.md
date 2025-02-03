@@ -20,7 +20,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <!-- paginate: true -->
 
-## 「確率ロボティクス」とは 
+- 今回の内容
+    - イントロダクション
+    - 代表値
+
+---
+
+## イントロダクション
+
+---
+
+
+### 「確率ロボティクス」とは 
 
 - 分からないことをロボットで扱うための分野
 - なぜそんなことが必要か？
@@ -33,7 +44,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 不確かな状況での活動
+### 不確かな状況での活動
 
 - 例
     - 受験でどこを受けるか（将来の不確かさ）
@@ -44,7 +55,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## もう少しだけ「不確かさ」を考察
+### もう少しだけ「不確かさ」を考察
 
 - 五感で直接得られない、直接の体験で得られない情報
     - 隣の部屋、下の部屋で何が起きているかは分からない
@@ -60,7 +71,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 「分からない」$\neq$「行動できない」
+### 「分からない」$\neq$「行動できない」
 
 - 動物や人間はいい加減に生きている
     - 動物は言葉を知らないけど困ってもいない
@@ -74,9 +85,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 不確かさ、自信のなさ、いい加減な行動をロボットの中に表現
+### 不確かさ、自信のなさ、いい加減な行動をロボットの中に表現
 
-- 動機: 4〜6ページのような状況に対応できる知能をロボットに持たせたい
+- 動機: 3〜5ページのような状況に対応できる知能をロボットに持たせたい
     - 自信満々はとにかく危なっかしい
     - 損得勘定
 - 方法: 数学を使うとなると「確率・統計」が道具となる
@@ -85,7 +96,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## Probabilistic ROBOTICS（確率ロボティクス）
+### Probabilistic ROBOTICS（確率ロボティクス）
 
 - セバスチャン・スランらの教科書
     - 1995年頃から10年間に確立したロボット用の推論アルゴリズムを掲載
@@ -97,7 +108,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 他の分野との関連性
+### 他の分野との関連性
 
 - 制御に対する確率ロボティクス
     - いわゆる現代制御理論を1段階抽象化したもの
@@ -111,24 +122,43 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 講義の進め方
+### 講義の進め方
 
 - 「[ロボットの確率・統計](https://www.coronasha.co.jp/np/isbn/9784339046878/)」に基づいて進行
     - より基本から応用までを幅広くカバー
-    - 昨年までは「[詳解確率ロボティクス](https://www.kspub.co.jp/book/detail/5170069.html)」に基づいて進行していましたが、これは興味のある人の自習用ということで
+    - 機械学習の範囲もカバー
+- [詳解確率ロボティクス](https://www.kspub.co.jp/book/detail/5170069.html)はどうするの？
+    - 興味のある人の自習用ということで
 
 ---
 
-## 点数について
+### 各回の内容（その1/2）
+
+- 第1回（今回）: イントロダクション/代表値
+- 第2回: 確率と信頼性工学
+- 第3回: 期待値とギャンブル
+- 第4回: 連続値と多変量
+- 第5回: ベイズの定理と実験
+- 第6回: 動く確率分布とロボット
+- 第7回: センシングとベイズ推定
+
+
+---
+
+### 各回の内容（その2/2）
+
+
+---
+
+### 点数について
 
 - テスト: 60点
 - 課題: 40点
     - 締め切りは年末あたりにしていますが、応相談
 
-
 ---
 
-## リポジトリ・ウェブサイト
+### リポジトリ・ウェブサイト
 
 - 講義用スライド
     - リポジトリ: [ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025)
@@ -139,4 +169,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 書籍解説スライド: [ryuichiueda/LNPR_SLIDES](https://github.com/ryuichiueda/LNPR_SLIDES)<br />　
     - 訂正等の情報
         - https://ueda.tech/?page=lnpr
+
+
+---
+
+## 代表値
+
+---
+
+### 代表値で会話する
 
