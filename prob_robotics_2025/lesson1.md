@@ -181,5 +181,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - まず挙がるもの: 平均値、中央値、最頻値
     - 統計の講義を受けたことがあれば誰でも知っている
+- 安心して寝るのはまだ早い
+    - ちゃんと使いこなしてますか?
 
 
