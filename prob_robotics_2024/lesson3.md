@@ -85,7 +85,6 @@ $+ 1000  P(5) + 1000  P(6) - 3700$ <span style="color:red">$= 1000 \sum_{i=1}^6 
 
 ## 条件付き確率（詳解2.4.1項）
 
-
 - センサ値のヒストグラム（距離: 600mm)
     - ピーク（統計では<span style="color:red">モード</span>）が2つ
         - <span style="color:red">マルチモーダル</span>
