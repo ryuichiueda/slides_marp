@@ -275,4 +275,5 @@ marp: true
 - <span style="color:red">代表値</span>
     - 平均値や中央値など、データを1つの値で要約した値
     - もう少し広い言葉に<span style="color:red">要約統計量</span>という用語
+    - <span style="color:red">1つの値で要約 = 他の情報が抜け落ちる</span>
 
