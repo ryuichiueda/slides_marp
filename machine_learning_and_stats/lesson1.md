@@ -277,3 +277,11 @@ marp: true
     - もう少し広い言葉に<span style="color:red">要約統計量</span>という用語
     - <span style="color:red">1つの値で要約 = 他の情報が抜け落ちる</span>
 
+
+---
+
+### 本日のまとめ
+
+- 機械学習とは
+    - 
+
