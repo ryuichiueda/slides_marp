@@ -68,7 +68,10 @@ marp: true
         - ただしAとBは同時に起きないように定義する必要がある
 - 掛け算（<span style="color:red">乗法定理</span>）
     - $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる|Bが起きる$\}\text{Pr}\{$Bが起きる$\}$
-        - $|$の右側は「<span style="color:red">条件</span>」で、本当に起きる（た）として考える
+        - $\text{Pr}\{$Aが起きる|Bが起きる$\}$: Bが起きることが分かっているときに
+        Aが起きる確率（<span style="color:red">条件付き確率</span>）
+            - $|$の右側は「<span style="color:red">条件</span>」
+
 
 <center>よく分からんのでサイコロで考えましょう</center>
 
