@@ -170,3 +170,4 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 |Bさん: ほぼ1/4の確率で優勝 | $1/4\times 100,000 = 25,000$円 | <span style="color:red">$25,000$円</span>|
 |Cさん: ほぼ3/5の確率で入賞 | <span style="color:red">$3/5\times \ \ 50,000 = 30,000$円</span> | $\ \ 6,000$円 |
 
+<center>（当然ながら）賞金で選考基準が変化</center>
