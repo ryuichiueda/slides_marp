@@ -125,3 +125,5 @@ marp: true
 - $P(m | n, p) =_n\!\!C_m p^m (1-p)^{n-m}$を描画してみましょう
     - 例: $P(m | 5, 1/2) =_5\!\!C_m /2^5 = \dfrac{5!}{2^5(5-m)!m!}$
        - 例: $m=1: 5/32, m=2: $
+
+![bg right:33% 100%](figs/bin_graphs.png)
