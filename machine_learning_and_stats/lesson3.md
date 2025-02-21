@@ -161,5 +161,8 @@ marp: true
 
 ### 分布の平均値
 
-- $P(x)$の平均値=$x$の期待値
+- $P(x)$の平均値: $x$の期待値
+    - 例: さいころの目
+        - $1 \cdot 1/6 + 2 \cdot 1/6 + \cdots + 6 \cdot 1/6 = 3.5$
 
+![bg right:30% 100%](./figs/dice_average.png)
