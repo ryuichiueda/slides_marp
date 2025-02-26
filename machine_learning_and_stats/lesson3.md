@@ -163,7 +163,7 @@ marp: true
 
 - $P(x)$の平均値: $x$の期待値
     - 例: さいころの目
-        - $1 \cdot 1/6 + 2 \cdot 1/6 + \cdots + 6 \cdot 1/6 = 3.5$
+        * $1 \cdot 1/6 + 2 \cdot 1/6 + \cdots + 6 \cdot 1/6 = 3.5$
 - ついでに1: 分布$P(x)$にしたがう$x$の期待値の表記法
     - $\langle x \rangle_P$と書いたり$E_P( x )$と書いたり
         - この資料では前者を使います
@@ -175,4 +175,19 @@ marp: true
 ---
 
 ### 分布の分散
+
+- 平均値と各値との差の2乗の期待値
+    - 例: さいころの目
+        * $(1-3.5)^2 \cdot 1/6 + 
+        (2-3.5)^2 \cdot 1/6 + 
+        (3-3.5)^2 \cdot 1/6$
+        $+ (4-3.5)^2 \cdot 1/6 + 
+        (5-3.5)^2 \cdot 1/6 + 
+        (6-3.5)^2 \cdot 1/6$
+        $=$計算が大変
+        * $\langle ( x - 3.5)^2 \rangle_P = \langle x^2 -7x + (3.5)^2 \rangle_P$
+        $= \langle x^2 \rangle_P -7 \langle x \rangle_P + (3.5)^2 = \langle x^2 \rangle_P -7 \cdot 3.5 + (3.5)^2$
+        $= \langle x^2 \rangle_P - (3.5)^2 = \dfrac{1+4+9+16+25+36}{6} -\dfrac{49}{4}$
+        $= \dfrac{91}{6} - \dfrac{49}{4} = \dfrac{35}{12}$
+
 
