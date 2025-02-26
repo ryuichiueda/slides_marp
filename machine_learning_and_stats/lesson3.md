@@ -171,3 +171,8 @@ marp: true
         - $U(a,b)$と表記（$a$から$b$までの範囲に確率）
 
 ![bg right:30% 100%](./figs/dice_average.png)
+
+---
+
+### 分布の分散
+
