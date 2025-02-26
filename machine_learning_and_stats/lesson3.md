@@ -164,5 +164,8 @@ marp: true
 - $P(x)$の平均値: $x$の期待値
     - 例: さいころの目
         - $1 \cdot 1/6 + 2 \cdot 1/6 + \cdots + 6 \cdot 1/6 = 3.5$
+- ついでに: 分布$P(x)$にしたがう$x$の期待値の表記法
+    - $\langle x \rangle_P$と書いたり$E_P( x )$と書いたり
+        - この資料では前者を使います
 
 ![bg right:30% 100%](./figs/dice_average.png)
