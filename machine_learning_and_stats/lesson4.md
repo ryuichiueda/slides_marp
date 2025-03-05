@@ -32,6 +32,8 @@ marp: true
 ### ポアソン分布
 
 - ある事象が一定時間に起こる回数がしたがう分布
-    - 式: $P(x) = \dfrac{\lambda^x e^{-\lambda}}{x!}  = \eta \dfrac{\lambda^x}{x!}$
-- 例
+    - 式: $P(x) = \dfrac{n^x e^{-n}}{x!}  = \eta \dfrac{n^x}{x!}$
+        - $n$: ある期間にその事象が起こる回数
+- 事象の例
    - 1ヶ月以内の地震の数など
+- 分布の形
