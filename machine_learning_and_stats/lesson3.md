@@ -224,9 +224,10 @@ marp: true
 
 ### ガウス分布の式
 
-- $p(z | \mu, \sigma^2 ) = \frac{1}{\sqrt{2\pi}\sigma} e^{ - \frac{(z - \mu)^2}{2\sigma^2}} = \frac{1}{\sqrt{2\pi}\sigma} \exp\left\{ - \frac{(z - \mu)^2}{2\sigma^2}\right\}$
+- $p(z | \mu, \sigma^2 ) = \frac{1}{\sqrt{2\pi}\sigma} e^{ - \frac{(z - \mu)^2}{2\sigma^2}} = \frac{1}{\sqrt{2\pi}\sigma} \exp\left\{ - \frac{(z - \mu)^2}{2\sigma^2}\right\} = \eta \exp\left\{ - \frac{(z - \mu)^2}{2\sigma^2}\right\}$
    - $\mu$: 平均値、$\sigma$: 標準偏差
    - $e^{...}$と$\exp\{...\}$は同じ意味です。
+   - $\eta$: 分布の形に関係がないので定数としていい部分を表す
 - $e = 2.718...$なので適当に$\mu, \sigma$に数値を入れて図を描いてみましょう
 - 縦軸の数値は確率ではなく確率の<span style="color:red">密度</span>
     - 今日は疲れていると思うのでまた後日
