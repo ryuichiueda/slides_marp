@@ -50,10 +50,13 @@ marp: true
 ## 連続型確率分布からの確率の求め方
 
 - 実のところ積分する機会は少ない（安心）
-- 累積分布（関数）を使用
+- 累積分布関数（の表）を使用
     - $\text{Pr}\{$変数の値が$x$以下$\}$のグラフや表
     - 例: 右図の青色の線
-        - ガウス分布（緑色の線）の累積分布
+        - ガウス分布の累積分布
+        - 緑色の線（ガウス分布の<span style="color:red">確率密度関数</span>）の積分値
+- [表の例](https://unit.aist.go.jp/mcml/rg-orgp/uncertainty_lecture/normsdist.html)（左側からの積分値になっている）
+- もちろん確率密度関数から表計算ソフトで求めてもよい（右図はExcelで描画）
 
 ![bg right:40% 100%](./figs/gauss_accum.png)
 
