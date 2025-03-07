@@ -70,3 +70,4 @@ marp: true
 - 式: $P(x) = \dfrac{1}{t}\exp\left\{-\dfrac{x}{t}\right\}$
     - $t$: 間隔の平均値（$1/t$はポアソン分布の$n$に）
 
+![bg right:30% 90%](./figs/exp_dist.png)
