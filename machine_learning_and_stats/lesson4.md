@@ -33,8 +33,10 @@ marp: true
 ## 離散、連続
 
 - 確率変数が整数のときと実数（小数）のときがある
-    - 二項分布: 整数
-    - ガウス分布: 実数
+    - 二項分布: 整数（<span style="color:red">離散型確率分布</span>）
+    - ガウス分布: 実数（<span style="color:red">連続型確率分布</span>）
+
+![bg right:30% 100%](./figs/bin_and_gauss2.png)
 
 ---
 
