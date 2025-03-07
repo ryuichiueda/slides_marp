@@ -53,6 +53,7 @@ marp: true
 - 累積分布関数を使用
     - $\text{Pr}\{$変数の値が$x$以下$\}$のグラフや表
 
+![bg right:40% 100%](./figs/gauss_accum.png)
 
 ---
 
