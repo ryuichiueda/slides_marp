@@ -40,6 +40,8 @@ marp: true
     - 違うところ
         - 離散型の場合は各変数の確率を足せば1に
         - 連続型の場合は積分しないといけない
+            - グラフの縦軸は確率ではなく<span style="color:red">密度</span>
+            - 変数の範囲$\times$密度$=$確率（次ページ）
 
 ![bg right:30% 100%](./figs/bin_and_gauss2.png)
 
