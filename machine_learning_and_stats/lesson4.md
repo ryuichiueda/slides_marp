@@ -154,3 +154,12 @@ marp: true
     - 例: 身長の高い人は（そうでない場合もあるけど）体重も重い
 - 次の資料で関係していそうな項目を見つけてみましょう
     - [日本病院薬剤師会のサイトにあるデータ](https://www.jshp.or.jp/activity/zasshi-toko/kaiseki-6.xls)（Excelファイル）
+
+---
+
+### 関係のありそうな項目
+
+
+![bg right:40% 100%](./figs/relations.png)
+
+
