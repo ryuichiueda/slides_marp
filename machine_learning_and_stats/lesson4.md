@@ -169,3 +169,35 @@ marp: true
 ![bg right:40% 100%](./figs/relations.png)
 
 
+---
+
+### 共分散
+
+- ふたつの変数の大小の傾向が一致しているかどうかを調べる統計値
+- データがあるときの計算方法
+    - データを$(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$とすると
+    $s_{xy} = \dfrac{1}{1-n}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+        - $\bar{x}, \bar{y}$: それぞれ$x$、$y$の平均値
+
+<center>次のページで計算してみましょう</center>
+
+---
+
+### 共分散の計算
+
+- 右のデータの場合の共分散は?
+- 答え
+    * $(\bar{x}, \bar{y}) = (1, 0)$なので
+    * $s_{xy}=(1+2 + 0 + 10$$-4 + 0 + 7)/6 = 8/3$
+
+
+![bg right:50% 100%](./figs/cov1.png)
+
+---
+
+- 式: $\sigma_{xy} = \langle (x - \bar{x})(y - \bar{y}) \rangle_P$
+    - $P$: $x,y$ふたつの変数がしたがう分布（後述）
+    - $x$が平均値より大きい場合、$x$とペアの変数$y$が・・・
+        - 平均値より大きい場合$\Longrightarrow \sigma_{xy}>0$
+        - 平均値より小さい場合$\Longrightarrow \sigma_{xy}<0$
+
