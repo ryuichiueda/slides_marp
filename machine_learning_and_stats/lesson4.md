@@ -240,10 +240,10 @@ marp: true
 - 二次元のガウス分布の場合（形状の例は次のページ）
     - $P(x,y | \mu_x, \mu_y, \Sigma) = - \eta \exp \left\{ -\frac{1}{2}(x-\mu_x \ y-\mu_y)\Sigma^{-1}\begin{pmatrix}x-\mu_x \\ y-\mu_y\end{pmatrix}\right\}$
         - $(\mu_x \ \mu_y)$: 中心
-        - $\Sigma = \begin{pmatrix}\sigma_{xx} & \sigma_{xy} \\ \sigma_{xy} & \sigma_{yy}\end{pmatrix}$: <span style="color:red">共分散行列</span>
-            - $\sigma_{xx}, \sigma_{yy}$: それぞれ$x$、$y$の分散
+        - $\Sigma = \begin{pmatrix}\sigma^2_{xx} & \sigma_{xy} \\ \sigma_{xy} & \sigma^2_{yy}\end{pmatrix}$: <span style="color:red">共分散行列</span>
+            - $\sigma^2_{xx}, \sigma^2_{yy}$: それぞれ$x$、$y$の分散
             - $\sigma_{xy}$: 共分散
-    - ソフトウェアを使う上では$\mu_x, \mu_y, \sigma_{xx}, \sigma_{yy}, \sigma_{xy}$で形が決まることが重要
+    - ソフトウェアを使う上では$\mu_x, \mu_y, \sigma^2_{xx}, \sigma^2_{yy}, \sigma_{xy}$で形が決まることが重要
 
 
 ---
@@ -254,7 +254,7 @@ marp: true
 （縦軸は密度）
     - 上: <span style="color:red">$\sigma_{xy}=1$</span>
     - 下: <span style="color:red">$\sigma_{xy}=-1$</span>
-    - 他のパラメータ: $(\mu_x, \mu_y) =(5,5), (\sigma_{xx}, \sigma_{yy}) =(2,1)$
+    - 他のパラメータ: $(\mu_x, \mu_y) =(5,5), (\sigma^2_{xx}, \sigma^2_{yy}) =(2,1)$
 
         <br />
 <center>密度の山の向きが変わる</center>
