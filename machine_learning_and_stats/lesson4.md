@@ -250,7 +250,8 @@ marp: true
 
 ### 二次元のガウス分布
 
-- 共分散の値だけ変えて描画したもの（縦軸は密度）
+- 共分散の値だけ変えて描画したもの
+（縦軸は密度）
     - 共通のパラメータ: $(\mu_x, \mu_y) =(5,5), (\sigma_{xx}, \sigma_{yy}) =(2,1)$
     - 上: <span style="color:red">$\sigma_{xy}=1$</span>
     - 下: <span style="color:red">$\sigma_{xy}=-1$</span>
