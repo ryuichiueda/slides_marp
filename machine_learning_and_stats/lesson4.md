@@ -245,3 +245,10 @@ marp: true
             - $\sigma_{xy}$: 共分散
     - ソフトウェアを使う上では$\mu_x, \mu_y, \sigma_{xx}, \sigma_{yy}, \sigma_{xy}$で形が決まることが重要
 
+
+---
+
+### 二次元のガウス分布
+
+![](./figs/mux=5_muy=5_sigmaxx=2_sigmayy=1_sigmaxy=1.png)
+![](./figs/mux=5_muy=5_sigmaxx=2_sigmayy=1_sigmaxy=-1.png)
