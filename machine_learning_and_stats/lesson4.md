@@ -223,6 +223,17 @@ marp: true
 
 ---
 
+### 共分散の値の性質
+
+- 正負が重要
+    - 片方が大きいともう片方も大きい$\Longrightarrow$正
+    - 片方が大きいともう片方は小さい$\Longrightarrow$負
+    - 双方の大小にあまり関係がない$\Longrightarrow$ゼロに近く
+- なんでそうなるか式をもう一度見てみましょう
+    - $s_{xy} = \dfrac{1}{1-n}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+
+---
+
 - 式: $\sigma_{xy} = \langle (x - \bar{x})(y - \bar{y}) \rangle_P$
     - $P$: $x,y$ふたつの変数がしたがう分布（後述）
     - $x$が平均値より大きい場合、$x$とペアの変数$y$が・・・
