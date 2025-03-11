@@ -179,7 +179,7 @@ marp: true
     $s_{xy} = \dfrac{1}{1-n}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
         - $\bar{x}, \bar{y}$: それぞれ$x$、$y$の平均値
 
-<center>次のページで計算してみましょう</center>
+<center>どんな値なのでしょうか？いくつかの例で計算してみましょう</center>
 
 ---
 
