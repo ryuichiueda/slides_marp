@@ -234,9 +234,11 @@ marp: true
 
 ---
 
+### 二次元のガウス分布
+
+- $n$個の変数がそれぞれガウス分布にしたがう場合、<span style="color:red">$n$次元のガウス分布</span>が構成できる
+- 二次元のガウス分布の場合
+
 - 式: $\sigma_{xy} = \langle (x - \bar{x})(y - \bar{y}) \rangle_P$
     - $P$: $x,y$ふたつの変数がしたがう分布（後述）
-    - $x$が平均値より大きい場合、$x$とペアの変数$y$が・・・
-        - 平均値より大きい場合$\Longrightarrow \sigma_{xy}>0$
-        - 平均値より小さい場合$\Longrightarrow \sigma_{xy}<0$
 
