@@ -250,5 +250,9 @@ marp: true
 
 ### 二次元のガウス分布
 
-![](./figs/mux=5_muy=5_sigmaxx=2_sigmayy=1_sigmaxy=1.png)
-![](./figs/mux=5_muy=5_sigmaxx=2_sigmayy=1_sigmaxy=-1.png)
+- 共分散の値だけ変えて描画したもの（縦軸は密度）
+    - 共通のパラメータ: $(\mu_x, \mu_y) =(5,5), (\sigma_{xx}, \sigma_{yy}) =(2,1)$
+    - 上: <span style="color:red">$\sigma_{xy}=1$</span>
+    - 下: <span style="color:red">$\sigma_{xy}=-1$</span>
+
+![bg right:40% 100%](./figs/2d_gausses.png)
