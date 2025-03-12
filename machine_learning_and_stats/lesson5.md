@@ -114,3 +114,16 @@ marp: true
     - $\text{Pr}\{A|B\}\text{Pr}\{B\} = \text{Pr}\{B|A\}\text{Pr}\{A\}$
     $\Longrightarrow$ $\text{Pr}\{A|B\} = \dfrac{\text{Pr}\{B|A\}\text{Pr}\{A\}}{\text{Pr}\{B\}}= \eta\text{Pr}\{B|A\}\text{Pr}\{A\}$
 
+
+---
+
+### もう1問
+
+
+---
+
+### ふわっとした問題
+
+- 今日は台風が来ます。台風が来ると電車が止まることがありますが、その確率は?
+    - 正解はないので「台風が来る」を新たな情報として、ベイズの定理を使って考えてみてください
+
