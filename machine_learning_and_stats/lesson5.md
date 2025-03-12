@@ -130,12 +130,13 @@ marp: true
 
 - $n$階にいる確率を表す確率分布$P(n) = 1/10$を考えると、まず次が成り立つ
     - $P(n|$床が赤色$) = \eta \text{Pr}\{$床が赤色$|n\}P(n) = \eta \text{Pr}\{$床が赤色$|n\}/10$
-- 次も成り立つ（$x$は0でない確率）
+- 次も成り立つ（$x$は$0$でない確率）ので上の式に代入
     - $\text{Pr}\{$床が赤色$|n\} =\begin{cases}0 & (n = 2) \\ x & (n \neq 2)\end{cases}$ 
-- したがって
-    - $\text{Pr}\{$床が赤色$|n\} =\begin{cases}0 & (n = 2) \\ \eta x/10 & (n \neq 2)\end{cases}$ 
+    $\Longrightarrow$ $P(n|$床が赤色$) =\begin{cases}0 & (n = 2) \\ \eta x/10 & (n \neq 2)\end{cases}$ 
 - $P(1|$床が赤色$), P(2|$床が赤色$), \dots, P(10|$床が赤色$)$の和は1なので、
-    - $\text{Pr}\{$床が赤色$|n\} =\begin{cases}0 & (n = 2) \\ 1/9 & (n \neq 2)\end{cases}$ 
+    - $P(n|$床が赤色$) =\begin{cases}0 & (n = 2) \\ 1/9 & (n \neq 2)\end{cases}$ 
+
+※人間だと別のものを見たらすぐ何階か分かるが、ロボットの場合はこうやって位置を求めることがある
 
 ---
 
