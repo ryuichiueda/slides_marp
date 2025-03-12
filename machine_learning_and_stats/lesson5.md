@@ -100,3 +100,17 @@ marp: true
     - $P(x|y) = \eta P(y|x)P(x) = \dfrac{P(y|x)P(x)}{\sum_{x'}P(y|x')P(x')}$
         - $\sum_{x'}$は$x'$に全通りの$x$を入れて足したもの
 
+<br />
+<center>ぱっと見ただけだと難しそうだけど情報を扱う上で自然な式</center>
+
+---
+
+### 乗法定理とベイズの定理
+
+- ベイズの定理は乗法定理から導出できる
+    - $\text{Pr}\{A$かつ$B\} = \text{Pr}\{A|B\}\text{Pr}\{B\}$
+    - $\text{Pr}\{A$かつ$B\} = \text{Pr}\{B|A\}\text{Pr}\{A\}$
+- 右辺から
+    - $\text{Pr}\{A|B\}\text{Pr}\{B\} = \text{Pr}\{B|A\}\text{Pr}\{A\}$
+    $\Longrightarrow$ $\text{Pr}\{A|B\} = \dfrac{\text{Pr}\{B|A\}\text{Pr}\{A\}}{\text{Pr}\{B\}}= \eta\text{Pr}\{B|A\}\text{Pr}\{A\}$
+
