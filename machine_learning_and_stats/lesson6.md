@@ -35,6 +35,13 @@ marp: true
         - 生物的な解釈: <span style="color:red">ある確率なのではないかとだんだん確信していく</span>
 
 
-<center>今日はこれをやります</center>
+<center>今日はこれを掘り下げます</center>
 
 ![bg right:30% 90%](./figs/beta.png)
+
+---
+
+### 問題
+
+- コインだと「裏表1/2の確率」というのがちらつくので
+
