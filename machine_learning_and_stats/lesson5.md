@@ -178,3 +178,9 @@ marp: true
 ![bg right:30% 100%](./figs/knowledge_update.png)
 
 <center style="color:red">同様のことは機械学習でも起こる</center>
+
+---
+
+### 尤度について
+
+- $\text{Pr}\{\circ\circ$は$\times\times$$|$新たな情報$\} =\eta\text{Pr}\{$新たな情報$|\circ\circ$は$\times\times$$\}\text{Pr}\{\circ\circ$は$\times\times\}$
