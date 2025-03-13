@@ -156,5 +156,10 @@ marp: true
 
 ### ベイズの定理による推論の構造
 
-- 「事前知識」に新しい知識が入って知識が更新される
+- 「事前知識」に新しい情報と解釈が入って知識が更新される
+    - 知識: 確率分布
+        - 事前知識: <span style="color:red">事前分布</span>
+        - 更新された知識: <span style="color:red">事後分布</span>
+        - 知識の解釈: <span style="color:red">尤度</span>
+<center><img width="50%" src="./figs/knowledge_update.png" /></center>
 
