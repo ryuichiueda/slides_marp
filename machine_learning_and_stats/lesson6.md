@@ -61,4 +61,4 @@ marp: true
 - ベイズの定理
     - $p(t|$成功$) = \eta\text{Pr}($成功$|t)p(t)=\eta t=2t$
 
-![bg right:30% 100%](./figs/experiment_1.png)
+![bg right:35% 100%](./figs/experiment_1.png)
