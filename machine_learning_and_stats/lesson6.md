@@ -95,3 +95,5 @@ marp: true
 
 - ベイズの定理を使う
     - $p(t|$成功, 成功$) = \eta\text{Pr}($成功$|t)p(t|$成功$)=\eta t2t = 2\eta t^2 = 3t^2$
+
+![bg right:35% 100%](./figs/experiment_2.png)
