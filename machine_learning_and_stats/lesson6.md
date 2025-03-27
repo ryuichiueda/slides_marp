@@ -94,6 +94,9 @@ marp: true
 ### 答え
 
 - ベイズの定理を使う
-    - $p(t|$成功, 成功$) = \eta\text{Pr}($成功$|t)p(t|$成功$)=\eta t2t = 2\eta t^2 = 3t^2$
+    - $p(t|$成功, 成功$) = \eta\text{Pr}($成功$|t)p(t|$成功$)$
+    $=\eta t2t = 2\eta t^2 = 3t^2$
+- グラフから
+    - より$1$に近い成功率の可能性が高まる
 
 ![bg right:35% 100%](./figs/experiment_2.png)
