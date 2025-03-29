@@ -31,6 +31,7 @@ marp: true
 
 - 右図: 第4回の講義で
     - 出典:  [日本病院薬剤師会](https://www.jshp.or.jp/)
+    - 第4回はこのデータで共分散を考えましたが、今回は
 
 ![bg right:40% 100%](./figs/relations.png)
 
