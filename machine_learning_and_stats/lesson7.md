@@ -75,7 +75,7 @@ marp: true
 - 一般的な回帰
     - $L\left[w_{0:M} | (x,y)_{1:N}\right] = \sum_{i=1}^N \left\{f(x_i | w_{0:M}) - y_i \right\}^2$
     の最小化
-    - データ$(x_i, y_i) \ (i=1,2,\dots,N)$に対して$y=f(x|w_{0,M})$を当てはめる場合
+        - データ$(x_i, y_i) \ (i=1,2,\dots,N)$に対して$y=f(x|w_{0,M})$を当てはめる場合
 
 ![bg right:30% 100%](./figs/lsm_liner.png)
 
