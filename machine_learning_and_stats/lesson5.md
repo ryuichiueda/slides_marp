@@ -181,7 +181,7 @@ marp: true
 
 ---
 
-### 尤度について
+### 尤度
 
 - この式（ベイズの定理）の赤い部分
     - $\text{Pr}\{\circ\circ$は$\times\times$$|$新たな情報$\} =\eta$<span style="color:red">$\text{Pr}\{$新たな情報$|\circ\circ$は$\times\times$$\}$</span>$\text{Pr}\{\circ\circ$は$\times\times\}$
@@ -196,7 +196,7 @@ marp: true
 
 ---
 
-### 尤度関数
+### 尤度の表記、性質
 
 - $\text{Pr}\{$新たな情報$|\circ\circ$は$\times\times$$\}$: 「新たな情報」は確定しているので、「$\circ\circ$は$\times\times$」のほうをいろいろ変えると値が変わる$\Longrightarrow$条件のほうが変数になっている
     - おさまりが悪い
