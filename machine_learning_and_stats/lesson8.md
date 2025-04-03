@@ -44,3 +44,4 @@ marp: true
     - 例: 
         - $y = w_1 x + w_0$の場合: $w_1$と$w_0$の確率分布を考える
 
+![bg right:40% 100%](./figs/line_sampling.png)
