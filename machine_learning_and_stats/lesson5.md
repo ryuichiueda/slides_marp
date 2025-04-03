@@ -186,7 +186,15 @@ marp: true
 - この式（ベイズの定理）の赤い部分
     - $\text{Pr}\{\circ\circ$は$\times\times$$|$新たな情報$\} =\eta$<span style="color:red">$\text{Pr}\{$新たな情報$|\circ\circ$は$\times\times$$\}$</span>$\text{Pr}\{\circ\circ$は$\times\times\}$
     - 「$\circ\circ$は$\times\times$だ」と仮定したときに「新たな情報」がどれだけ「尤も（もっとも）らしい」かを数値化
-- $\text{Pr}\{$新たな情報$|\circ\circ$は$\times\times$$\}$: 「新たな情報」は確定しているので、「$\circ\circ$は$\times\times$」のほうをいろいろ変えると値が変わる
+
+---
+
+### 尤度関数
+
+- $\text{Pr}\{$新たな情報$|\circ\circ$は$\times\times$$\}$: 「新たな情報」は確定しているので、「$\circ\circ$は$\times\times$」のほうをいろいろ変えると値が変わる$\Longrightarrow$条件のほうが変数になっている
+    - おさまりが悪いので
+    $L\{\circ\circ$は$\times\times|$新たな情報$\}= \text{Pr}\{$新たな情報$|\circ\circ$は$\times\times\}$
+    を考える
 
 
 ---
