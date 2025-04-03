@@ -46,4 +46,4 @@ marp: true
             - どちらも平均値$0$、標準偏差$1$
             - データ（黒丸）に合うように、<span style="color:red">ベイズの定理で</span>$w_1, w_0$の分布を変更していく
 
-![bg right:35% 100%](./figs/line_sampling.png)
+![bg right:30% 100%](./figs/line_sampling.png)
