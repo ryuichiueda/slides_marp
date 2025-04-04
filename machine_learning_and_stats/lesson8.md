@@ -65,4 +65,5 @@ marp: true
     - 当てはめる式が多項式の場合
         - $y = w_0 + w_1 x^1 + w_2 x^2 \cdots + w_n x^n = f(x | w_{0:n})$
     - 仮定1: $x_i$に対して、$y_i$は平均値$f(x_i | w_{0:n})$、分散$\lambda^{-1}$でばらついて生成されていると仮定
+        - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
 
