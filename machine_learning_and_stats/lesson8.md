@@ -68,12 +68,15 @@ marp: true
 - 仮定2: $w_0, w_1$も多次元のガウス分布で、最初は大きくばらついている
     - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$これが推定対象</span>
         - $\boldsymbol{w} = (w_0, w_1)$
+        - $\boldsymbol{\mu} = (\mu_0, \mu_1)$（$w_0, w_1$の平均値）
         - $\Lambda$は$2\times 2$の行列（精度行列）
 - 仮定3: $\lambda$の値も分からないので確率分布で表現（最初は大きくばらつく）
-    - こういう分布: $p(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
+    - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
 
 
 ---
 
 ### 回帰の方法
 
+- 事前分布
+    - $p_0(w_0, w_1, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1})\text{Gam}(\lambda, a, b)$
