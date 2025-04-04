@@ -80,3 +80,4 @@ marp: true
 
 - 事前分布
     - $p_0(w_0, w_1, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1})\text{Gam}(\lambda, a, b)$
+- データ$(x_1, y_1)$をひとつだけ情報として入れた事後分布
