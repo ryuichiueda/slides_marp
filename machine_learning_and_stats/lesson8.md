@@ -62,12 +62,13 @@ marp: true
 ### 数式
 
 - ややこしいので意味だけ考えましょう
-    - 当てはめる式が多項式の場合
-        - $y = w_0 + w_1 x^1 + w_2 x^2 \cdots + w_n x^n = f(x | w_{0:n})$
-    - 仮定1: $x_i$に対して、$y_i$は$\mathcal{N}\{f(x_i | w_{0:n}), \lambda^{-1}\}$にしたがって生成された
+    - 例: 当てはめる式が多項式の場合
+        - $y = w_0 + w_1 x = f(x | w_0, w_1)$
+    - 仮定1: $x_i$に対して、$y_i$は$\mathcal{N}\{f(x_i | w_0,w_1), \lambda^{-1}\}$にしたがってばらついた
         - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
         - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
-    - 仮定2: $w_{0:n}$も多次元のガウス分布でばらついている
+    - 仮定2: $w_0, w_1$も多次元のガウス分布でばらついている
         - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$これが推定対象</span>
+            - $\boldsymbol{w} = (w_0, w_1)$
         - 仮定2: $w_{0:n}$、$\lambda$も最初は分からないので確率分布で表現
 
