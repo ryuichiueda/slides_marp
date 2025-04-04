@@ -70,4 +70,5 @@ marp: true
         - $\boldsymbol{w} = (w_0, w_1)$
         - $\Lambda$は$2\times 2$の行列（精度行列）
 - 仮定3: $\lambda$の値も分からないので確率分布で表現
+    - こういう分布: $p(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
 
