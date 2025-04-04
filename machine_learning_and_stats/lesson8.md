@@ -68,7 +68,6 @@ marp: true
         - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
         - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
     - 仮定2: $w_{0:n}$も多次元のガウス分布でばらついている
-        - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1})$
-            - <span style="color:red">これが推定対象</span>
+        - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$これが推定対象</span>
         - 仮定2: $w_{0:n}$、$\lambda$も最初は分からないので確率分布で表現
 
