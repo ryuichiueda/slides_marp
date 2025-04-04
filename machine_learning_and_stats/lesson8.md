@@ -89,3 +89,4 @@ marp: true
         - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1(1 \ \ x_1)^\top + \Lambda_0 \boldsymbol{\mu}_0 \}$
         - $a_1 = 1/2 + a_0$
         - $b_1 = \left( y_1^2 -  \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
+            - $\Lambda_1, \boldsymbol{\mu}_1, a_1, b_1$は既存の数値で計算可能$\rightarrow$<span style="color:red">事後分布が計算可能</span>
