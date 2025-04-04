@@ -82,4 +82,5 @@ marp: true
     - $p_0(w_0, w_1, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1})\text{Gam}(\lambda, a, b)$
 - データ$(x_1, y_1)$をひとつだけ情報として入れた事後分布
     - $p(w_0, w_1, \lambda | x_1, y_1) = \eta p(x_1, y_1 | w_0, w_1, \lambda)p_0(w_0, w_1, \lambda)$
-        $= \eta \mathcal{N}\left[ y_1 | \boldsymbol{w}^\top \boldsymbol{\phi}(x_1), \lambda^{-1} \right] p_0(\boldsymbol{w}, \lambda)$
+        $= \cdots$
+        $= \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right] p_0(w_0, w_1, \lambda)$
