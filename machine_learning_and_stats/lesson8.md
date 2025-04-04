@@ -85,7 +85,7 @@ marp: true
         $= \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right] p_0(\boldsymbol{w}, \lambda)\qquad$（仮定1から）
         $= \cdots$
         $= \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
-        - $\Lambda_1 = (w_0 \ \ w_1x_1)^\top (w_0 \ \ w_1x_1) + \Lambda_0$
-        - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1(w_0 \ \ w_1x_1)^\top + \Lambda_0 \boldsymbol{\mu}_0 \}$
+        - $\Lambda_1 = (1 \ \ x_1)^\top (1 \ \ x_1) + \Lambda_0$
+        - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1(1 \ \ x_1)^\top + \Lambda_0 \boldsymbol{\mu}_0 \}$
         - $a_1 = 1/2 + a_0$
         - $b_1 = \left( y_1^2 -  \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
