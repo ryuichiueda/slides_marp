@@ -84,3 +84,4 @@ marp: true
     - $p(w_0, w_1, \lambda | x_1, y_1) = \eta p(x_1, y_1 | w_0, w_1, \lambda)p_0(w_0, w_1, \lambda)$
         $= \cdots$
         $= \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right] p_0(w_0, w_1, \lambda)$
+        $= \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right]\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1})\text{Gam}(\lambda, a, b)$
