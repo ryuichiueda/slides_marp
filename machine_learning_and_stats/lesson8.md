@@ -65,11 +65,11 @@ marp: true
 - 仮定1: $x_i$に対して、$y_i$は$\mathcal{N}\{f(x_i | w_0,w_1), \lambda^{-1}\}$にしたがってばらついた
     - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
     - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
-- 仮定2: $w_0, w_1$も多次元のガウス分布でばらついている
+- 仮定2: $w_0, w_1$も多次元のガウス分布で、最初は大きくばらついている
     - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$これが推定対象</span>
         - $\boldsymbol{w} = (w_0, w_1)$
         - $\Lambda$は$2\times 2$の行列（精度行列）
-- 仮定3: $\lambda$の値も分からないので確率分布で表現
+- 仮定3: $\lambda$の値も分からないので確率分布で表現（最初は大きくばらつく）
     - こういう分布: $p(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
 
 
