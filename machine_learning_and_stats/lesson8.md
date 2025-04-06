@@ -117,3 +117,11 @@ marp: true
             - ここで$\phi(x_i) = (1 \ \ x \ \ x^2 \ \ \dots \ \ x^n)^\top$
 
 <center style="color:red">これもデータと事前分布のパラメータを当てはめるだけ</center>
+
+---
+
+### さらに
+
+- $y = w_0 + w_1 x$以外の曲線を当てはめることを考えてみる 
+    - $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
+
