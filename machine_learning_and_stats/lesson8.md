@@ -115,3 +115,5 @@ marp: true
 	    - $a_N = \dfrac{N}{2} + a_0$
 	    - $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 -  \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
             - ここで$\phi(x_i) = (1 \ \ x \ \ x^2 \ \ \dots \ \ x^n)^\top$
+
+<center style="color:red">これもデータと事前分布のパラメータを当てはめるだけ</center>
