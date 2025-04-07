@@ -84,6 +84,8 @@ marp: true
         - $\Lambda$は$2\times 2$の行列
             - $\lambda\Lambda$: 「精度行列」と呼ばれるもの
 
+<center><img width=50% src="./figs/lsm_params.png" /></center>
+
 ---
 
 ### 回帰のための数式（続き）
