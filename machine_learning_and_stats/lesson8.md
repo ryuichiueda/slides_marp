@@ -68,12 +68,14 @@ marp: true
 - 仮定1: $x_i$に対して、$y_i$は多項式の値$w_0 + w_1 x_i$を
 中心に、分散$\lambda^{-1}$でばらつく
     - $y_i \sim \mathcal{N}(w_0 + w_1 x_i| \lambda^{-1})$と表記
-        - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
+        - $\mathcal{N}(\mu, \sigma^2)$: 平均値$\mu$、分散$\sigma^2$のガウス分布
     - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
 
 ![bg right:30% 100%](./figs/lsm.png)
 
 ---
+
+### 回帰のための数式（続き）
 
 - 仮定2: $w_0, w_1$も多次元のガウス分布で、最初は大きくばらついている
     - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$これが推定対象</span>
