@@ -82,6 +82,11 @@ marp: true
         - $\boldsymbol{w} = (w_0, w_1) = (w_0 \ \ w_1)^\top$
         - $\boldsymbol{\mu} = (\mu_0, \mu_1) = (\mu_0 \ \ \mu_1)^\top$（$w_0, w_1$の平均値）
         - $\Lambda$は$2\times 2$の行列
+
+---
+
+### 回帰のための数式（続き）
+
 - 仮定3: $\lambda$の値も分からないので確率分布で表現（最初は大きくばらつく）
     - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
 
