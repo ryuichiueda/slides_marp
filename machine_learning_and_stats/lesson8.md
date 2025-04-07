@@ -134,4 +134,8 @@ marp: true
 
 ### 例: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
 
-![w:600](./figs/function_estimation.png)
+- 少しずつデータを入力して、事後分布から関数（多項式）をサンプリング
+    - データが増えるにしたがって関数のばらつきが減る
+    - データ（2次関数からサンプリング）にしたがい、高次のパラメータが$0$へ
+
+<center><img width=50% src="./figs/function_estimation.png" /></center>
