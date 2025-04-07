@@ -134,3 +134,4 @@ marp: true
 
 ### 例: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
 
+![w:600](./figs/function_estimation.png)
