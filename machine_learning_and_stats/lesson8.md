@@ -120,11 +120,11 @@ marp: true
 
 ---
 
-### さらに
+### さらに$y = w_0 + w_1 x$以外の曲線を当てはめることを考えてみる 
 
-- $y = w_0 + w_1 x$以外の曲線を当てはめることを考えてみる 
-    - $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
-- 式$y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
-    - $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
-    - $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
+- いろんな関数に係数をかけて足したもの
+    - $y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
+        - $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
+        - $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
+- $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
 
