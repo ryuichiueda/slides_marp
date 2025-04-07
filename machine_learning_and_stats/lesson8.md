@@ -68,7 +68,7 @@ marp: true
 - 仮定1: $x_i$に対して、$y_i$は多項式の値$w_0 + w_1 x_i$を
 中心に、分散$\lambda^{-1}$でばらつく
     - $y_i \sim \mathcal{N}(w_0 + w_1 x_i| \lambda^{-1})$と表記
-    - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
+        - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
     - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
 
 ![bg right:30% 100%](./figs/lsm.png)
