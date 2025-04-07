@@ -63,9 +63,15 @@ marp: true
 ### 回帰のための数式（ややこしいので意味だけ考えましょう）
 
 - 例: 当てはめる式: 多項式 $y = w_0 + w_1 x = f(x | w_0, w_1)$
-- 仮定1: $x_i$に対して、$y_i$は$\mathcal{N}\{f(x_i | w_0,w_1), \lambda^{-1}\}$にしたがってばらついた
+- 仮定1: $x_i$に対して、$y_i$は$\mathcal{N}\{f(x_i | w_0,w_1), \lambda^{-1}\}$
+にしたがってばらつく
     - $\mathcal{N}(\mu, \sigma^2)$は平均値$\mu$、分散$\sigma^2$のガウス分布
     - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
+
+![bg right:30% 100%](./figs/lsm.png)
+
+---
+
 - 仮定2: $w_0, w_1$も多次元のガウス分布で、最初は大きくばらついている
     - 分布$p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$これが推定対象</span>
         - $\boldsymbol{w} = (w_0, w_1)$
