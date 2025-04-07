@@ -127,4 +127,5 @@ marp: true
         - $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
         - $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
 - $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
+    - <span style="color:red">実は前ページの式がそのまま使える</span>
 
