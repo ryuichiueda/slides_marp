@@ -129,3 +129,8 @@ marp: true
 - $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
     - <span style="color:red">実は前ページの式がそのまま使える</span>
 
+
+---
+
+### 例: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
+
