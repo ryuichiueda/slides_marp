@@ -103,6 +103,8 @@ marp: true
 
 - $w_0, w_1, \lambda$の事前分布
     - $p_0(\boldsymbol{w}, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
+        - $\boldsymbol{\mu}_0, \Lambda_0, a_0, b_0$は分布の形を決めるパラメータ
+        （=事前分布のパラメータ）
 
 ---
 
@@ -129,6 +131,9 @@ marp: true
     - 講義だとどうしても原理の話になり、それは重要なのだけど、使うときは前ページの下の4つの式に事前分布のパラメータとデータの値を入力するだけ
     - まず大事なことは、使いどころがどこなのかおさえておくこと
 
+
+<br />
+<center>今の内容、何をやってたのかグループで議論を</center>
 
 ---
 
