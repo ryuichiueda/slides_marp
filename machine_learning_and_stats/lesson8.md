@@ -111,14 +111,16 @@ marp: true
 ### 回帰の方法（続き）
 
 - データ$(x_1, y_1)$をひとつだけ情報として入れた事後分布
-    - $p(\boldsymbol{w}, \lambda | x_1, y_1) = \eta p(x_1, y_1 | \boldsymbol{w}, \lambda)p_0(\boldsymbol{w}, \lambda)= \cdots$
-        $= \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right] p_0(\boldsymbol{w}, \lambda)\qquad$（仮定1から）
-        $= \cdots$
-        $= \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
-        - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$（ここで$\phi(x) = (1 \ \  x)^\top$）
-        - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1\phi(x_1) + \Lambda_0 \boldsymbol{\mu}_0 \}$
-        - $a_1 = 1/2 + a_0$
-        - $b_1 = \left( y_1^2 -  \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
+    - ベイズの定理を使う
+        - $p(\boldsymbol{w}, \lambda | x_1, y_1) = \eta p(x_1, y_1 | \boldsymbol{w}, \lambda)p_0(\boldsymbol{w}, \lambda)$
+    - 仮定1から
+        - $\cdots = \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right] p_0(\boldsymbol{w}, \lambda)\qquad$
+    - 事前分布を前ページのものにして整理していくと最終的にこうなる
+        - $\cdots = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
+            - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$（ここで$\phi(x) = (1 \ \  x)^\top$）
+            - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1\phi(x_1) + \Lambda_0 \boldsymbol{\mu}_0 \}$
+            - $a_1 = 1/2 + a_0$
+            - $b_1 = \left( y_1^2 -  \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
 
 ---
 
