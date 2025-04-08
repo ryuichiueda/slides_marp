@@ -133,7 +133,7 @@ marp: true
 
 
 <br />
-<center>今の内容、何をやってたのかグループで議論を</center>
+<center>今の話、結局何をやってたのかグループで議論を</center>
 
 ---
 
