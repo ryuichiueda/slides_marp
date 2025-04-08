@@ -172,3 +172,10 @@ marp: true
     - データ（2次関数からサンプリング）にしたがい、高次のパラメータが$0$へ
 
 <center><img width=50% src="./figs/function_estimation.png" /></center>
+
+---
+
+## まとめ
+
+- ベイズの定理で回帰がより一般的に
+
