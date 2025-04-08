@@ -94,7 +94,7 @@ marp: true
     - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布、下図）
         - $\lambda = 10^{-2}$で$y_i$のばらつきの標準偏差が$10$
 
-<center><img width=50% src="./figs/gamma_dist.png" /></center>
+<center><img width=60% src="./figs/gamma_dist.png" /></center>
 
 
 ---
@@ -103,6 +103,11 @@ marp: true
 
 - 事前分布
     - $p_0(\boldsymbol{w}, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
+
+---
+
+### 回帰の方法（続き）
+
 - データ$(x_1, y_1)$をひとつだけ情報として入れた事後分布
     - $p(\boldsymbol{w}, \lambda | x_1, y_1) = \eta p(x_1, y_1 | \boldsymbol{w}, \lambda)p_0(\boldsymbol{w}, \lambda)= \cdots$
         $= \eta \mathcal{N}\left[ w_1 x_1 + w_0, \lambda^{-1} \right] p_0(\boldsymbol{w}, \lambda)\qquad$（仮定1から）
