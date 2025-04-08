@@ -101,7 +101,7 @@ marp: true
 
 ### 回帰の方法（式だけ見せますね）
 
-- 事前分布
+- $w_0, w_1, \lambda$の事前分布
     - $p_0(\boldsymbol{w}, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
 
 ---
