@@ -31,7 +31,7 @@ marp: true
 - 第1回のおさらい
     - 右の図は何に見えますか
     - なんで猫に見えるのか？
-- たぶん丸い部分1つと三角の部分1つに点をまとめている
+- たぶん丸い部分1つと三角の部分1つに点をまとめている（クラスタリングしている）
     - [研究例](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
 
 
@@ -70,7 +70,10 @@ marp: true
 - ロボット分野で30年前から利用されてきたもの
     - k-means法
     - EM法
+- 解く問題
+    - 点が散らばっているときに、どれとどれが同じグループに属するか決める
 
+![bg right:30% 78%](./figs/clustering_problem.png)
 
 ---
 
