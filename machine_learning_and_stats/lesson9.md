@@ -31,10 +31,9 @@ marp: true
 - 第1回のおさらい
     - 右の図は何に見えますか
     - なんで猫に見えるのか？
-<br />
+- たぶん丸い部分1つと三角の部分1つに点をまとめている
+    - [研究例](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
 
-<center>たぶん丸い部分1つと三角の部分1つに<br />
-点をまとめている</center>
 
 ![bg right:40% 60%](./figs/dots.png)
 
