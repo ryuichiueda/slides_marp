@@ -79,6 +79,8 @@ marp: true
 
 ## k-means法
 
+![](./figs/k-means.png)
+
 
 ---
 
