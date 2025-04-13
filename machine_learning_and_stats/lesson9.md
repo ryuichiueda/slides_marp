@@ -132,10 +132,14 @@ marp: true
 
 ### EM法（最尤法）
 
+- EM: expectation maximization
+（どういう意味かはあとで説明）
+<br />
 - ある確率分布のモデル（数式）を考え、データを最ももっともらしく
 説明するパラメータを求める
     - なんで右図のようなデータが発生したのか?
-- EM: expectation maximization
+    $\rightarrow$ データの発生源がいくつかあって、
+    そのまわりにデータが発生、と考える
 
 ![bg right:30% 100%](./figs/clustering_reason.png)
 
