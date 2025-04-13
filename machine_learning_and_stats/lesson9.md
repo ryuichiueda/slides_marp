@@ -151,7 +151,7 @@ marp: true
     - 複数のガウス分布を足して、正規化（積分して1に）したもの
     - $p(\boldsymbol{x}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1) + \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2)$
     $\qquad\qquad + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
-        - ここで$\pi_1 + \pi_2 + \dots + \pi_n = 1$
+        - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
         （注意: 円周率ではありません）
 
 ![bg right:30% 100%](./figs/gauss_mix.png)
