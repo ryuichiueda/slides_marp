@@ -154,7 +154,7 @@ marp: true
     - $p(\boldsymbol{x}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1) + \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2)$
     $\qquad\qquad + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
-        （注意: 円周率ではありません）
+        （注意: 円周率ではなく、<span style="color:red">混合比率</span>）
 - 絵に描くと右図のように
 
 ![bg right:30% 100%](./figs/gauss_mix.png)
@@ -165,7 +165,6 @@ marp: true
 ### 手法の概要（字にするとk-means法とほぼ同じ）
 
 1. 最初に適当にクラスタリング
-2. 各クラスタ
-3. 最初に適当にクラスタリング
+2. 各クラスタのガウス分布のパラメータと
 
 
