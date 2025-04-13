@@ -147,12 +147,15 @@ marp: true
 
 ### 「データの発生源がいくつかあってそのまわりにデータが発生」
 
-- この場合の基本的なモデル: <span style="color:red">混合ガウス分布</span>
-    - 複数のガウス分布を足して、正規化（積分して1に）したもの
+この場合の基本的なモデル: <span style="color:red">混合ガウス分布</span>
+
+- 複数のガウス分布を足して、
+正規化（積分して1に）したもの
     - $p(\boldsymbol{x}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1) + \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2)$
     $\qquad\qquad + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
         （注意: 円周率ではありません）
+- 絵に描くと右図のように
 
 ![bg right:30% 100%](./figs/gauss_mix.png)
 
