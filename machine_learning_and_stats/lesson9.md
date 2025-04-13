@@ -61,7 +61,10 @@ marp: true
     - 膨大なデータから経営方針を決定
 - ロボット
     - 動物と同じ
+    - 右図: 掴みやすい面を発見するために、掴める箇所をクラスタリングして一番おおきなクラスタのところをつかむ
+      - [動画](https://github.com/ryuichiueda/jrsj_color_figs/)
 
+![bg right:30% 100%](./figs/cands_real.png)
 
 ---
 
