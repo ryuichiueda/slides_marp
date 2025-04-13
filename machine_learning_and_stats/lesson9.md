@@ -134,7 +134,7 @@ marp: true
 
 - ある確率分布のモデル（数式）を考え、データを最ももっともらしく
 説明するパラメータを求める
-    - なにか
+    - なんで右図のようなデータが発生したのか?
 - EM: expectation maximization
 
 ![bg right:30% 100%](./figs/clustering_reason.png)
