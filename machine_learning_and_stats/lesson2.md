@@ -97,7 +97,7 @@ marp: true
     - 加法定理での、ある事象とある事象が同時に起こるかどうかの判断
         - 事象が同時に起こらないことを<span style="color:red">排反</span>と呼ぶ
     - 乗法定理での、条件を消せるかどうかの判断
-       - ある事象がある事象が条件として影響を与えないことを<span style="color:red">独立</span>と呼ぶ
+       - ある事象がある事象の条件として影響を与えないことを<span style="color:red">独立</span>と呼ぶ
 - 練習問題
     - [同時確率と条件付き確率](https://b.ueda.tech/?page=robot_and_stats_questions#同時確率と条件付き確率)
 
