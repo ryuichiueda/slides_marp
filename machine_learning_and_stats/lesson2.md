@@ -203,7 +203,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ---
 
-### 問題を解きましょう
+### 時間が余ったときの問題
 
 - [3つのサイコロのうち2つ以上が揃う確率](https://b.ueda.tech/?page=robot_and_stats_questions#%E7%A2%BA%E7%8E%87%E3%81%AE%E9%9B%91%E5%A4%9A%E3%81%AA%E5%95%8F%E9%A1%8C1)
 
