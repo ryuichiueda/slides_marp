@@ -197,6 +197,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     - 期待値 = $\text{Pr}\{\text{A}\}f(\text{A}) + \text{Pr}\{\text{B}\}f(\text{B}) + \cdots \text{Pr}\{\text{E}\}f(\text{E})$
         - $f$が、なにか事象にたいしてお金などを決める関数
     - 数式で書くとややこしいけど、さっきのお金の計算を思い出しましょう
+        - [問題](https://b.ueda.tech/?page=robot_and_stats_questions#%E6%9C%9F%E5%BE%85%E5%80%A4%E3%81%AE%E5%BC%8F)（「上の問題」というのはp.12の問題）
 - 平均値も期待値
     - $f$を何にするとよいでしょうか？
 
