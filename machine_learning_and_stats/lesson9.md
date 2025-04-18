@@ -208,19 +208,22 @@ marp: true
 - $\log_e p(X,Z | \boldsymbol{\Theta})$ を変形
     - $\log_e p(X,Z | \boldsymbol{\Theta}) = \log_e p(Z | X, \boldsymbol{\Theta})p(X | \boldsymbol{\Theta})$
     $= \log_e p(Z | X, \boldsymbol{\Theta}) + \log_e p(X | \boldsymbol{\Theta})$（←最後の項は対数尤度）
-- 対数尤度を右辺にもってきて、全体を$Z$で積分（$\int_Z q(Z) = 1$）
-    - $\int_Z \log_e p(X | \boldsymbol{\Theta}) \text{d}Z = \int_Z \log_e p(X,Z |  \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z| X, \boldsymbol{\Theta}) \text{d}Z$
+- 対数尤度を右辺に移動し、各項に$q(Z)$をかけて$Z$で積分（$\int_Z q(Z) \text{d}Z= 1$）
+    - $\int_Z q(Z) \log_e p(X | \boldsymbol{\Theta}) \text{d}Z = \int_Z q(Z) \log_e p(X,Z |  \boldsymbol{\Theta})\text{d}Z$
+    $\qquad\qquad\qquad\qquad\qquad\quad - \int_Z q(Z) \log_e p(Z| X, \boldsymbol{\Theta}) \text{d}Z$
 - 左辺の積分は$Z$が$\log_e p(X | \boldsymbol{\Theta})$内にないので外せる
-    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
 
 ---
 
 ### 潜在変数によって3ページ前の対数尤度を変形（続き）
 
 - 右辺に足して0になる2項を増やして配分
-    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
-    $= \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
-    $\quad- \int_Z \log_e q(Z) \text{d}Z + \int_Z \log_e q(Z) \text{d}Z$
-    $= \int_Z \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z)\log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $= \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $\quad- \int_Z q(Z) \log_e q(Z) \text{d}Z + \int_Z q(Z) \log_e q(Z) \text{d}Z$
+    $= \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
 - 新たな関数を定義して整理
     - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+        - $\mathcal{L}(q, \boldsymbol{\Theta}) = \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z$
+        - $\text{KL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
