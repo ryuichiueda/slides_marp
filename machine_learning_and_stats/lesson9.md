@@ -242,6 +242,6 @@ marp: true
         - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
 - 使い方
     - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定して「良い」$q(Z)$を探す（<span style="color:red">Eステップ</span>）
-        - $\text{KL}$が0になるのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
+        - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
     - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
         - $\mathcal{L}$が最大になるように
