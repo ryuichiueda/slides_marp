@@ -151,8 +151,8 @@ marp: true
 
 - 複数のガウス分布を足して、
 正規化（積分して1に）したもの
-    - $p(\boldsymbol{x}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1) + \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2)$
-    $\qquad\qquad + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
+    - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)$
+    $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
         （注意: 円周率ではなく、<span style="color:red">混合比率</span>）
 - 絵に描くと右図のように
@@ -164,7 +164,9 @@ marp: true
 
 ### データに対する「一番尤もらしい分布」
 
-- 次の数値を最大化するものが「一番尤もらしい」と考える
+- 次の尤度を最大化するものが「一番尤もらしい」と考える
+    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \prod_{i=1}^N p(\boldsymbol{x}_i | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+    - $L( \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n} | \boldsymbol{x}_{1:N} ) = \prod_{i=1}^N p(\boldsymbol{x}_i | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
 
 
 ---
