@@ -231,7 +231,7 @@ marp: true
 
 ---
 
-### できた式の使い方
+### できた式と使い方
 
 - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
     - $q$は$Z$（どのデータがどのクラスタに含まれるかを表す確率分布）
@@ -240,3 +240,5 @@ marp: true
         （一致すると$0$で、違うほどと正の大きな値に）
     - $\mathcal{L}$: 変分下界
         - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+- 使い方
+    - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定
