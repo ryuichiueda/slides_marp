@@ -165,7 +165,8 @@ marp: true
 ### データに対する「一番尤もらしい分布」
 
 - 次の尤度を最大化するものが「一番尤もらしい」と考える
-    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \prod_{i=1}^N p(\boldsymbol{x}_i | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \prod_{j=1}^N p(\boldsymbol{x}_j | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+    $\qquad\qquad\qquad\qquad\qquad = \prod_{j=1}^N \sum_{i=1}^n \pi_i \mathcal{N}(\boldsymbol{x}_j | \boldsymbol{\mu}_i, \Sigma_i)$
         - 左辺: データ$\boldsymbol{x}_{1:N}$が生成した確率の密度
         - 右辺: 各データ$\boldsymbol{x}_i$の密度の掛け算
         - <span style="color:red">データは既知なので、最も尤もらしい（最尤な）パラメータ$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$や、その尤度を求める問題に</span>
@@ -177,12 +178,9 @@ marp: true
 ### 対数尤度が最大になるパラメータの求め方（k-means法とほぼ同じ）
 
 1. 最初に適当にクラスタリング
-2. 各クラスタのガウス分布のパラメータと混合比率（データの数の比）を算出
-3. 各ガウス分布に基づいてクラスタを再構成
-
-- EM法の名前の由来
-    - 3の処理をEステップ（expectationステップ）と呼び
+2. M（maximization）ステップ
+    - 尤度が最大となる各クラスタの$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を算出
+3. E（expectation）ステップ
+    - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$に基づきデータをクラスタリング
         - その時点での分布の尤度の期待値を評価しているという意味
-    - 2の処理をMステップ（maximizationステップ）と呼ぶ
-        - 分布のパラメータの尤度（もっともらしさ）が最大となるパラメータを求めるという意味
 
