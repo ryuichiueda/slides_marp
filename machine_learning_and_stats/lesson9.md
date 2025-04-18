@@ -244,4 +244,4 @@ marp: true
     - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定して「良い」$q(Z)$を探す（<span style="color:red">Eステップ</span>）
         - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
     - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
-        - $\mathcal{L}$が最大になるように
+        - $\mathcal{L}$が最大になるように（対数尤度も大きくなってより良い結果に）
