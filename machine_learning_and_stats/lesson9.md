@@ -200,12 +200,25 @@ marp: true
 
 ---
 
-### 潜在変数によって3ページ前の式を変形
+### 潜在変数によって3ページ前の対数尤度を変形
 
-- $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(\boldsymbol{x}_{1:N} | \boldsymbol{\Theta})$とおくと
-    - $p(\boldsymbol{x}_{1:N}, z_{1:N} | \boldsymbol{\Theta}) = p(z_{1:N} | \boldsymbol{x}_{1:N}, \boldsymbol{\Theta})p(\boldsymbol{x}_{1:N} | \boldsymbol{\Theta})$
-    $\Longrightarrow \log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\Theta}) = \log_e p(\boldsymbol{x}_{1:N}, z_{1:N} | \boldsymbol{\Theta}) - \log_e p(z_{1:N} | \boldsymbol{x}_{1:N}, \boldsymbol{\Theta})$
-- つまり
-    - 対数尤度 $= \log_e p(\boldsymbol{x}_{1:N}, z_{1:N} | \boldsymbol{\Theta}) - \log_e p(z_{1:N} | \boldsymbol{x}_{1:N}, \boldsymbol{\Theta})$
-    $\qquad\quad= \log_e p(\boldsymbol{x}_{1:N}, z_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
-    $\qquad\quad - \log_e p(z_{1:N} | \boldsymbol{x}_{1:N}, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+- 表記を簡略にするため次のように書く
+    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
+    - $z_{1:N} = Z$
+- $\log_e p(X,Z | \boldsymbol{\Theta})$ を変形
+    - $\log_e p(X,Z | \boldsymbol{\Theta}) = \log_e p(Z | X, \boldsymbol{\Theta})p(X | \boldsymbol{\Theta})$
+    $= \log_e p(Z | X, \boldsymbol{\Theta}) + \log_e p(X | \boldsymbol{\Theta})$（←最後の項は対数尤度）
+- 対数尤度を右辺にもってきて、全体を$Z$で積分（$\int_Z q(Z) = 1$）
+    - $\int_Z \log_e p(X | \boldsymbol{\Theta}) \text{d}Z = \int_Z \log_e p(X,Z |  \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z| X, \boldsymbol{\Theta}) \text{d}Z$
+- 左辺の積分は$Z$が$\log_e p(X | \boldsymbol{\Theta})$内にないので外せる
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+
+---
+
+### 潜在変数によって3ページ前の対数尤度を変形（続き）
+
+- 右辺に足して0になる2項を増やして配分
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $= \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $\quad- \int_Z \log_e q(Z) \text{d}Z + \int_Z \log_e q(Z) \text{d}Z$
+    $= \int_Z \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
