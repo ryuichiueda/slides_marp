@@ -187,12 +187,21 @@ marp: true
 
 ---
 
-### もう少し式変形
+### 潜在変数の導入と潜在変数の分布
 
-- 各データ$\boldsymbol{x}_i$がどのクラスタに所属するかを表す変数$z_i$を導入
-    - 例: $z_i = 1$: $\boldsymbol{x}_i$は1番目のクラスタに所属
+- 各データ$\boldsymbol{x}_i$がどのクラスタに所属するかを求めたいのに変数が定義されていない
+    - 変数$z_i$を導入
+        - 例: $z_i = 1$: $\boldsymbol{x}_i$は1番目のクラスタに所属
 - $z_i$の確率分布$q(z_i)$が考えられる
     - 例: $q(z_i = 1) =0.5, q(z_i = 2)=0.5$
         - $\boldsymbol{x}_i$はクラスタ1、2のどちらかに50%の確率で所属
 - さらに全データに関する$z_i$の確率分布$q(z_{1:N})$が考えられる
+
+---
+
+### 潜在変数によって3ページ前の式を変形
+
+- $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(\boldsymbol{x}_{1:N} | \boldsymbol{\Theta})$とおくと
+    - $p(\boldsymbol{x}_{1:N}, z_{1:N} | \boldsymbol{\Theta}) = p(z_{1:N} | \boldsymbol{x}_{1:N}, \boldsymbol{\Theta})p(\boldsymbol{x}_{1:N} | \boldsymbol{\Theta})$
+    $\Longrightarrow \log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\Theta}) = \log_e p(\boldsymbol{x}_{1:N}, z_{1:N} | \boldsymbol{\Theta}) - \log_e p(z_{1:N} | \boldsymbol{x}_{1:N}, \boldsymbol{\Theta})$
 
