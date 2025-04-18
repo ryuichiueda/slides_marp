@@ -227,3 +227,16 @@ marp: true
     - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
         - $\mathcal{L}(q, \boldsymbol{\Theta}) = \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z$
         - $\text{KL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+
+
+---
+
+### できた式の使い方
+
+- $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+    - $q$は$Z$（どのデータがどのクラスタに含まれるかを表す確率分布）
+    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
+        （一致すると$0$で、違うほどと正の大きな値に）
+    - $\mathcal{L}$: 変分下界
+        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
