@@ -222,3 +222,5 @@ marp: true
     $= \int_Z \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
     $\quad- \int_Z \log_e q(Z) \text{d}Z + \int_Z \log_e q(Z) \text{d}Z$
     $= \int_Z \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+- 新たな関数を定義して整理
+    - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
