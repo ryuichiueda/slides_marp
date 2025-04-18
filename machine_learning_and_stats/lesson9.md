@@ -166,8 +166,8 @@ marp: true
 
 - 次の尤度を最大化するものが「一番尤もらしい」と考える
     - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \prod_{i=1}^N p(\boldsymbol{x}_i | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
-    - $L( \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n} | \boldsymbol{x}_{1:N} ) = \prod_{i=1}^N p(\boldsymbol{x}_i | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
-
+- 対数をとって掛け算を足し算にして、<span style="color:red">対数尤度</span>を最大化する
+    - $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \sum{i=1}^N \log_e p(\boldsymbol{x}_i | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
 
 ---
 
