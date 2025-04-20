@@ -151,29 +151,97 @@ marp: true
 
 - 複数のガウス分布を足して、
 正規化（積分して1に）したもの
-    - $p(\boldsymbol{x}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1) + \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2)$
-    $\qquad\qquad + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
+    - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)$
+    $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
         （注意: 円周率ではなく、<span style="color:red">混合比率</span>）
 - 絵に描くと右図のように
+（ちょっと当てはまりは悪いです）
 
 ![bg right:30% 100%](./figs/gauss_mix.png)
 
 ---
 
-### 手法の概要（字にするとk-means法とほぼ同じ）
+### データに対する「一番尤もらしい分布」
+
+- 次の尤度を最大化するものが「一番尤もらしい」と考える
+    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \prod_{j=1}^N p(\boldsymbol{x}_j | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+        - 左辺: データ$\boldsymbol{x}_{1:N}$が生成した確率の密度
+        - 右辺: 各データ$\boldsymbol{x}_i$の密度の掛け算
+        - <span style="color:red">データは既知なので、最も尤もらしい（最尤な）パラメータ$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$や、その尤度を求める問題に</span>
+    - 具体的に書くと
+        - 左辺$= \prod_{j=1}^N  \sum_{i=1}^n \pi_i \mathcal{N}(\boldsymbol{x}_j | \boldsymbol{\mu}_i, \Sigma_i)$
+- 対数をとって掛け算を足し算にして、<span style="color:red">対数尤度</span>を最大化する問題にする
+    - $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \sum_{j=1}^N \log_e p(\boldsymbol{x}_j | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+
+---
+
+### 対数尤度が最大になるパラメータの求め方（k-means法と似ている）
 
 1. 最初に適当にクラスタリング
-2. 各クラスタのガウス分布のパラメータと混合比率（データの数の比）を算出
-3. 各ガウス分布に基づいてクラスタを再構成
+2. Mステップ（maximization step）
+    - 尤度が最大となる各クラスタの$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を算出
+3. Eステップ（expectation step）
+    - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$に基づきデータをクラスタリング
+        - その時点での各データのクラスタへの所属（の期待値）を計算
 
 
 ---
 
-### EM法の名前の由来
+### 潜在変数の導入と潜在変数の分布
 
-- 3の処理をEステップ（expectationステップ）と呼び
-    - その時点での分布の尤度の期待値を評価しているという意味
-- 2の処理をMステップ（maximizationステップ）と呼ぶ
-    - 分布のパラメータの尤度（もっともらしさ）が最大となるパラメータを求めるという意味
+- 各データ$\boldsymbol{x}_i$がどのクラスタに所属するかを求めたいのに変数が定義されていない
+    - 変数$z_i$を導入
+        - 例: $z_i = 1$: $\boldsymbol{x}_i$は1番目のクラスタに所属
+- $z_i$の確率分布$q(z_i)$が考えられる
+    - 例: $q(z_i = 1) =0.5, q(z_i = 2)=0.5$
+        - $\boldsymbol{x}_i$はクラスタ1、2のどちらかに50%の確率で所属
+- さらに全データに関する$z_i$の確率分布$q(z_{1:N})$が考えられる
 
+---
+
+### 潜在変数によって3ページ前の対数尤度を変形
+
+- 表記を簡略にするため次のように書く
+    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
+    - $z_{1:N} = Z$
+- $\log_e p(X,Z | \boldsymbol{\Theta})$ を変形
+    - $\log_e p(X,Z | \boldsymbol{\Theta}) = \log_e p(Z | X, \boldsymbol{\Theta})p(X | \boldsymbol{\Theta})$
+    $= \log_e p(Z | X, \boldsymbol{\Theta}) + \log_e p(X | \boldsymbol{\Theta})$（←最後の項は対数尤度）
+- 対数尤度を右辺に移動し、各項に$q(Z)$をかけて$Z$で積分（$\int_Z q(Z) \text{d}Z= 1$）
+    - $\int_Z q(Z) \log_e p(X | \boldsymbol{\Theta}) \text{d}Z = \int_Z q(Z) \log_e p(X,Z |  \boldsymbol{\Theta})\text{d}Z$
+    $\qquad\qquad\qquad\qquad\qquad\quad - \int_Z q(Z) \log_e p(Z| X, \boldsymbol{\Theta}) \text{d}Z$
+- 左辺の積分は$Z$が$\log_e p(X | \boldsymbol{\Theta})$内にないので外せる
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+
+---
+
+### 潜在変数によって3ページ前の対数尤度を変形（続き）
+
+- 右辺に足して0になる2項を増やして配分
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z)\log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $= \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $\quad- \int_Z q(Z) \log_e q(Z) \text{d}Z + \int_Z q(Z) \log_e q(Z) \text{d}Z$
+    $= \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+- 新たな関数を定義して整理
+    - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+        - $\mathcal{L}(q, \boldsymbol{\Theta}) = \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z$
+        - $\text{KL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+
+
+---
+
+### できた式と使い方
+
+- $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+    - $q$（$q(Z)$）は$Z$（どのデータがどのクラスタに含まれるかを表す確率分布）
+    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
+        （一致すると$0$で、違うほどと正の大きな値に）
+    - $\mathcal{L}$: 変分下界
+        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+- 使い方
+    - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定して「良い」$q(Z)$を探す（<span style="color:red">Eステップ</span>）
+        - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
+    - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
+        - $\mathcal{L}$が最大になるように（対数尤度も大きくなってより良い結果に）
