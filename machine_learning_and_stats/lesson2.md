@@ -64,7 +64,7 @@ marp: true
 
 - 実は足し算と掛け算しかない
 - 足し算（<span style="color:red">加法定理</span>）
-    - $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる$\} +\text{Pr}\{$Bが起きる$\}$
+    - $\text{Pr}\{$AあるいはBが起きる$\} = \text{Pr}\{$Aが起きる$\} +\text{Pr}\{$Bが起きる$\}$
         - ただしAとBは同時に起きないように定義する必要がある
 - 掛け算（<span style="color:red">乗法定理</span>）
     - $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる|Bが起きる$\}\text{Pr}\{$Bが起きる$\}$
