@@ -199,18 +199,21 @@ marp: true
 - 数学的には
     - $\boldsymbol{x}_i$の属するクラスタ$k_i$が$j$番目のクラスタである確率$\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = k_{ij}$の値を求めたい
         - $k_i$が$1,2,\dots,n$の場合すべてに対して
-    - $k_i$のような変数は隠れているので<span style="color:red">潜在変数</span>と呼ばれる
+    - $k_{ij}$のような変数は隠れているので<span style="color:red">潜在変数</span>と呼ばれる
 
 ![bg right:20% 90%](./figs/belong_prob.png)
 
 ---
 
-### Eステップの解き方
+### $k_{ij}$の計算方法
 
-- $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$（ベイズの定理）
-    - $p(\boldsymbol{x}_i | k_i)$: $k_i$番目のクラスタのガウス分布
-    - $\text{Pr}\{ k_i = j \}$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
-- $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
+- $k_{ij}$は、クラスタ$j$のガウス分布の密度に混合比率をかけたものになる
+- 計算方法の導出
+    - $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$（ベイズの定理）
+        - $p(\boldsymbol{x}_i | k_i = j )$: $k_i$番目のクラスタのガウス分布
+        - $\text{Pr}\{ k_i = j \}$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
+    - $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
+        - $\eta$は各クラスタに対する$k_{ij}$の値の和が$1$になるように決める
 
 
 
