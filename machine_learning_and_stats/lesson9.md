@@ -193,20 +193,22 @@ marp: true
 ### Eステップ
 
 - 解きたい問題: 
-    - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$が与えられたときに、$\boldsymbol{x}_i$がクラスタ$k_i$に所属する確率$P(k_i|\boldsymbol{x}_i)$の値を求めたい
+    - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$が与えられたときに、$\boldsymbol{x}_i$の属するクラスタ$k_i$が$j$番目のクラスタである確率$\text{Pr}\{ k_i = j |\boldsymbol{x}_i \}$の値を求めたい
         - $k_i$が$1,2,\dots,n$の場合すべてに対して
         - $k_i$のような変数は隠れているので<span style="color:red">潜在変数</span>と呼ばれる
 - 解き方
-    - $P(k_i|\boldsymbol{x}_i) = \eta p(\boldsymbol{x}_i | k_i)P(k_i)$（ベイズの定理）
+    - $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$（ベイズの定理）
         - $p(\boldsymbol{x}_i | k_i)$: $k_i$番目のクラスタのガウス分布
-        - $P(k_i)$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
-    - $P(k_i|\boldsymbol{x}_i) = \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
+        - $\text{Pr}\{ k_i = j \}$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
+    - $\text{Pr}\{ k_i = j|\boldsymbol{x}_i \} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
 
 ---
 
 ### Mステップ
 
 - $P(k_i)$を固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
+- 方法
+    - $k_j$番目のクラスタについて$\boldsymbol{x_i}$が$k_i$
 
 ---
 
