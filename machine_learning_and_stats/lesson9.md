@@ -220,7 +220,7 @@ marp: true
 
 ---
 
-### 潜在変数によって3ページ前の対数尤度を変形（続き）
+### 潜在変数によるEM法の導出（続き）
 
 - 右辺に足して0になる2項を増やして配分
     - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z)\log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
