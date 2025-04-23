@@ -206,9 +206,10 @@ marp: true
 
 ### Mステップ
 
-- $P(k_i)$を固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
+- $\text{Pr}\{ k_i = j|\boldsymbol{x}_i \}\ (j = 1,2,\dots,n; i=1,2,\dots,N)$を
+固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
 - 方法
-    - $k_j$番目のクラスタについて$\boldsymbol{x_i}$が$k_i$
+    - $j$番目のクラスタについて$\boldsymbol{x_i}$が$\text{Pr}\{ k_i = j|\boldsymbol{x}_i \}$個あると考えて平均値と共分散を計算
 
 ---
 
