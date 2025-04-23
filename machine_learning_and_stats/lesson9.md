@@ -190,6 +190,19 @@ marp: true
 
 ---
 
+### Eステップ
+
+- 解きたい問題: 
+    - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$が与えられたときに、$\boldsymbol{x}_i$がクラスタ$k_i$に所属する確率$P(k_i|\boldsymbol{x}_i)$の値を求めたい
+        - $k_i$が$1,2,\dots,n$の場合すべてに対して
+- 解き方
+    - $P(k_i|\boldsymbol{x}_i) = \eta p(\boldsymbol{x}_i | k_i)P(k_i)$（ベイズの定理）
+        - $p(\boldsymbol{x}_i | k_i)$: $k_i$番目のクラスタのガウス分布
+        - $P(k_i)$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
+    - $P(k_i|\boldsymbol{x}_i) = \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$
+
+---
+
 ### 所属の確率
 
 - 各データ$\boldsymbol{x}_i$がどのクラスタに所属するかを変数$z_i$で表現
@@ -204,7 +217,7 @@ marp: true
 
 ---
 
-### 潜在変数によるEM法の導出
+### 潜在変数を考慮してEM法を導出
 
 - p.13の対数尤度、p.14の潜在変数を次のように記述（記号を減らすため）
     - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
@@ -220,7 +233,7 @@ marp: true
 
 ---
 
-### 潜在変数によるEM法の導出（続き）
+### 潜在変数を考慮してEM法を導出（続き）
 
 - 右辺に足して0になる2項を増やして配分
     - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z)\log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
@@ -235,10 +248,23 @@ marp: true
 
 ---
 
+### できた式
+
+- $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{KL}(q || p)$
+- $ = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+    - $q$（$q(Z)$）: 潜在変数の分布
+    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
+        （一致すると$0$で、違うほどと正の大きな値に）
+    - $\mathcal{L}$: 変分下界
+        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+
+---
+
 ### できた式と使い方
 
 - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
-    - $q$（$q(Z)$）は$Z$（どのデータがどのクラスタに含まれるかを表す確率分布）
+    - $q$（$q(Z)$）: 潜在変数の分布
     - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
         - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
         （一致すると$0$で、違うほどと正の大きな値に）
