@@ -209,11 +209,13 @@ marp: true
 - $k_{ij}\ (j = 1,2,\dots,n; i=1,2,\dots,N)$を
 固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
 - 方法
-    - $\pi_j = \eta \sum_{i=1}^N k_{ij} = \dfrac{1}{N} \sum_{i=1}^N k_{ij}$
+    - まず、$N_j = \sum_{i=1}^N k_{ij}$を考える
+        - 各クラスタの要素の個数に相当
+    - $\pi_j = \eta N_j = N_j / \sum_{j=1}^n N_j$
     - $j$番目のクラスタについて$\boldsymbol{\mu}_j$と$\Sigma_j$を計算
         - $\boldsymbol{x}_i$が$k_{ij}$個あると考えて計算
-            - $\boldsymbol{\mu}_j = \dfrac{\sum_{i=1}^N k_{ij}\boldsymbol{x}_i}{\sum_{i=1}^N k_{ij}}$
-            - $\Sigma_j =$
+            - $\boldsymbol{\mu}_j = \dfrac{1}{N_j}\sum_{i=1}^N k_{ij}\boldsymbol{x}_i$
+            - $\Sigma_j = \dfrac{1}{N_j-1} \sum_{i=1}^N k_{ij}(\boldsymbol{x}_i - \boldsymbol{\mu}_j)(\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top$
 
 ---
 
