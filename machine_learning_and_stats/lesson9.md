@@ -208,7 +208,7 @@ marp: true
 ### $k_{ij}$の計算方法
 
 - $k_{ij}$は、クラスタ$j$のガウス分布の密度に混合比率をかけたものになる
-- 計算方法の導出
+- 計算式の導出
     - $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$（ベイズの定理）
         - $p(\boldsymbol{x}_i | k_i = j )$: $k_i$番目のクラスタのガウス分布
         - $\text{Pr}\{ k_i = j \}$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
