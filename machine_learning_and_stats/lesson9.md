@@ -204,9 +204,9 @@ marp: true
 
 ---
 
-### 潜在変数によって3ページ前の対数尤度を変形
+### 潜在変数によるEM法の導出
 
-- 表記を簡略にするため次のように書く
+- p.13の対数尤度、p.14の潜在変数を次のように記述（記号を減らすため）
     - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
     - $z_{1:N} = Z$
 - $\log_e p(X,Z | \boldsymbol{\Theta})$ を変形
