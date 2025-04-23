@@ -206,7 +206,7 @@ marp: true
 
 ### Mステップ
 
-- 
+- $P(k_i)$を固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
 
 ---
 
