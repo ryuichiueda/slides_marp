@@ -209,10 +209,10 @@ marp: true
 - $k_{ij}\ (j = 1,2,\dots,n; i=1,2,\dots,N)$を
 固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
 - 方法
+    - $\pi_j = \sum_{i=1}^N k_{ij}$
     - $j$番目のクラスタについて$\boldsymbol{\mu}_j$と$\Sigma_j$を計算
         - $\boldsymbol{x}_i$が$k_{ij}$個あると考えて計算
-            - $\boldsymbol{\mu}_j = \dfrac{\sum_{i=1}^N k_{ij}\boldsymbol{x}_i}{\sum_{i=1}^N k_{ij}}$
-    - $\pi_j = \sum_{i=1}^N k_{ij}$
+            - $\boldsymbol{\mu}_j = \dfrac{\sum_{i=1}^N k_{ij}\boldsymbol{x}_i}{\sum_{i=1}^N k_{ij}} = \dfrac{1}{\pi_j}\sum_{i=1}^N k_{ij}\boldsymbol{x}_i$
 
 ---
 
