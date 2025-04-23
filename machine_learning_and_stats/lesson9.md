@@ -211,7 +211,7 @@ marp: true
 - 方法
     - まず、$N_j = \sum_{i=1}^N k_{ij}$を考える
         - 各クラスタの要素の個数に相当
-    - 各クラスタの大きさと、平均値、共分散行列を$N_j$に基づいて計算
+    - 各クラスタの大きさと、平均値、共分散行列を$N_j$と$k_{ij}$に基づいて計算
         - $\pi_j = \eta N_j = N_j / \sum_{j=1}^n N_j$
         - $\boldsymbol{\mu}_j = \dfrac{1}{N_j}\sum_{i=1}^N k_{ij}\boldsymbol{x}_i$
         - $\Sigma_j = \dfrac{1}{N_j-1} \sum_{i=1}^N k_{ij}(\boldsymbol{x}_i - \boldsymbol{\mu}_j)(\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top$
