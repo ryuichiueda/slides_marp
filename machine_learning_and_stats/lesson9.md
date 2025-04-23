@@ -199,7 +199,7 @@ marp: true
     - $P(k_i|\boldsymbol{x}_i) = \eta p(\boldsymbol{x}_i | k_i)P(k_i)$（ベイズの定理）
         - $p(\boldsymbol{x}_i | k_i)$: $k_i$番目のクラスタのガウス分布
         - $P(k_i)$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
-    - $P(k_i|\boldsymbol{x}_i) = \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$
+    - $P(k_i|\boldsymbol{x}_i) = \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
 
 ---
 
