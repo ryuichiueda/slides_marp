@@ -184,8 +184,9 @@ marp: true
     - 尤度が最大となる各クラスタの$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を算出
 3. Eステップ（expectation step）
     - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$に基づきデータをクラスタリング
-        - その時点での各データのクラスタへの所属（の期待値）を計算
+        - その時点での各データのクラスタへの所属の<span style="color:red">確率</span>を計算
 
+![](./figs/em.png)
 
 ---
 
