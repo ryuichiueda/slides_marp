@@ -234,21 +234,11 @@ marp: true
 
 ---
 
-### 所属の確率
-
-- 各データ$\boldsymbol{x}_i$がどのクラスタに所属するかを変数$z_i$で表現
-        - 例: $z_i = 1$: $\boldsymbol{x}_i$は1番目のクラスタに所属
-        - 隠れている変数ということで<span style="color:red">潜在変数</span>と呼ばれる
-- $z_i$の確率分布$q(z_i)$が考えられる
-    - 例: $q(z_i = 1) =0.5, q(z_i = 2)=0.5$
-        - 意味: $\boldsymbol{x}_i$はクラスタ1、2のどちらかに50%の確率で所属
-- さらに全潜在変数の確率分布$q(z_{1:N})$が考えられる
-
-![bg right:25% 90%](./figs/belong_prob.png)
+## 補足資料
 
 ---
 
-### 潜在変数を考慮してEM法を導出
+### EM法の一般的な導出
 
 - p.13の対数尤度、p.14の潜在変数を次のように記述（記号を減らすため）
     - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
