@@ -40,6 +40,7 @@ marp: true
     - ベータ分布: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
     - 実験の結果を1つずつ反映していくと、成功率の分布が変化していった
         - 下図: 成功、成功、失敗、失敗の場合の分布の推移
+            - <span style="color:red">成功率1/2と決めつけない</span>
 
 ![](./figs/success_distribution.png)
 
