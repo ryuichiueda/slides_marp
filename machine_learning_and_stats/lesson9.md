@@ -221,8 +221,7 @@ marp: true
 
 ### Mステップ
 
-- $k_{ij}\ (j = 1,2,\dots,n; i=1,2,\dots,N)$を
-固定して$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$を求める
+- $k_{ij}$を固定して分布のパラメータを計算
 - 方法（$k_{ij}$で重みをつけて統計をとる）
     - まず、$N_j = \sum_{i=1}^N k_{ij}$を考える
         - 各クラスタの要素の個数に相当
@@ -230,6 +229,8 @@ marp: true
         - $\pi_j = \eta N_j = N_j / \sum_{j=1}^n N_j$
         - $\boldsymbol{\mu}_j = \dfrac{1}{N_j}\sum_{i=1}^N k_{ij}\boldsymbol{x}_i$
         - $\Sigma_j = \dfrac{1}{N_j-1} \sum_{i=1}^N k_{ij}(\boldsymbol{x}_i - \boldsymbol{\mu}_j)(\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top$
+
+![bg right:28% 90%](./figs/m-step.png)
 
 ---
 
