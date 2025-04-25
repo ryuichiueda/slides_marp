@@ -58,3 +58,14 @@ marp: true
     - （単純な）ベイズの定理で計算できない
 - どうするか?
     - EM法のように少しずつ分布（の分布）を変えていく
+
+---
+
+### 推定対象のパラメータ
+
+- 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
+    - （おさらい）混合ガウス分布:
+        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) =  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
+        （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
+- 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{ij}$
+
