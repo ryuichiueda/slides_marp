@@ -65,8 +65,15 @@ marp: true
 
 - 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
     - （おさらい）混合ガウス分布:
-        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) =  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
+        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+        $=  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
 - 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
     - どのガウス分布に所属しているか
 
+![bg right:40% 100%](./figs/gauss_mixture.png)
+
+
+---
+
+### パラメータの分布のモデル化（分布の分布）
