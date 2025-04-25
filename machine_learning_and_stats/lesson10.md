@@ -67,5 +67,5 @@ marp: true
     - （おさらい）混合ガウス分布:
         - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) =  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
-- 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{ij}$
+- 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
 
