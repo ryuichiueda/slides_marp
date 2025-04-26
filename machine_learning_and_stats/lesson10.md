@@ -73,6 +73,7 @@ marp: true
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
 - 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
     - どのガウス分布に所属しているか
+    - 潜在変数
 
 ![bg right:40% 100%](./figs/gauss_mixture.png)
 
