@@ -81,8 +81,16 @@ marp: true
 
 ### パラメータの分布のモデル化（分布の分布）
 
-- 混合比率$\boldsymbol{\pi} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
-    - ディリクレ分布: $\text{Dir}(\boldsymbol{\pi} | \boldsymbol{\alpha}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+- 混合比率$\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
+    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{i:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
         - ベータ分布をコインの裏表だけでなくもっと多くの変数
         （例: さいころなら6）に拡張したもの
         - 様々な混合比率のパターンに確率の密度を与える
+    - $\alpha_{1:n}$: $\pi_{1:n}$のばらつきを決めるパラメータ
+        - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
+            - 合計値が大きくなる=さいころをたくさん投げて出目の傾向が分かってきた状態
+
+---
+
+### パラメータの分布のモデル化（分布の分布。続き）
+
