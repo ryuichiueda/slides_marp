@@ -94,5 +94,5 @@ marp: true
 
 ### パラメータの分布のモデル化（分布の分布。続き）
 
-- 各ガウス分布のパラメータ$\boldsymbol{\mu}_k, \Lambda_k$
+- 各ガウス分布のパラメータ$\boldsymbol{\mu}_k, \Lambda_k$の分布: ガウス-ウィシャート分布
     - $\Lambda_k$（精度行列）$= \Sigma_k^{-1}$（計算しやすいので考える）
