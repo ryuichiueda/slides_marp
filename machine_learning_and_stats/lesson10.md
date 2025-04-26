@@ -104,5 +104,5 @@ marp: true
 
 ### パラメータの分布のモデル化（分布の分布。続き）
 
-- $k_{ij}$をすべてのデータ、クラスタについて集めた変数$K$の分布: 次の計算で導出
-    - $q(K) = \langle p(\boldsymbol{x}_{1:N}, K, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
+- $k_{i,1:n}$（データ$\boldsymbol{x}_i$がどのクラスタに所属するか）の分布: 次の計算で導出
+    - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
