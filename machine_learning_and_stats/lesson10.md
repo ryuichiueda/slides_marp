@@ -66,10 +66,10 @@ marp: true
 
 ### 推定対象のパラメータ
 
-- 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
+- 各ガウス分布のパラメータ: $\boldsymbol{\mu}_k, \Sigma_k, \pi_k$
     - （おさらい）混合ガウス分布:
         - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
-        $=  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
+        $=  \sum_{j=1}^n \pi_k \mathcal{N}(\boldsymbol{\mu}_k, \Sigma_k)$
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
 - 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
     - どのガウス分布に所属しているか
@@ -82,7 +82,7 @@ marp: true
 ### パラメータの分布のモデル化（分布の分布）
 
 - 混合比率$\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
-    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{i:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{i:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_k^{\alpha_k - 1}$
         - ベータ分布をコインの裏表だけでなくもっと多くの変数
         （例: さいころなら6）に拡張したもの
         - 様々な混合比率のパターンに確率の密度を与える
@@ -94,3 +94,4 @@ marp: true
 
 ### パラメータの分布のモデル化（分布の分布。続き）
 
+- 各ガウス分布のパラメータ$\boldsymbol{\mu}_k, \Lambda_k (= \Sigma_k^{-1})$
