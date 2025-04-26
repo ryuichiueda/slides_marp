@@ -96,3 +96,4 @@ marp: true
 
 - 各ガウス分布のパラメータ$\boldsymbol{\mu}_k, \Lambda_k$の分布: ガウス-ウィシャート分布
     - $\Lambda_k$（精度行列）$= \Sigma_k^{-1}$（計算しやすいので考える）
+    - ガウス-ウィシャート分布: $p(\boldsymbol{\mu}_k, \Lambda_k) = \mathcal{N}(\boldsymbol{\mu}_k|\boldsymbol{m}_k, (\beta_k \Lambda_k)^{-1})\mathcal{W}()$
