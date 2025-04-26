@@ -83,3 +83,5 @@ marp: true
 
 - 混合比率$\boldsymbol{\pi} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
     - ディリクレ分布: $\text{Dir}(\boldsymbol{\pi} | \boldsymbol{\alpha}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+        - ベータ分布をコインの裏表だけでなくもっと多くの変数
+        （例: さいころなら6）に拡張したもの
