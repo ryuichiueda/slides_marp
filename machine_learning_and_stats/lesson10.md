@@ -83,7 +83,7 @@ marp: true
 ### 混合ガウス分布の分布のモデル化（分布の分布）
 
 - 混合比率$\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
-    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{i:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{1:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
         - ベータ分布をコインの裏表だけでなくもっと多くの変数
         （例: さいころなら6）に拡張したもの
         - 様々な混合比率のパターンに確率の密度を与える
@@ -107,7 +107,8 @@ marp: true
 
 - $k_{i,1:n}$（データ$\boldsymbol{x}_i$がどのクラスタに所属するか）の分布: 次の計算で導出
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
-- $r_{i,k} = \eta \rho_{i,k}$
-        $\log_e \rho_{i,k} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_k)^\top \Lambda_k (\boldsymbol{x}_i - \boldsymbol{\mu}_k) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_k, \Lambda_k)}$
-        $+ \dfrac{1}{2}\langle \log_e |\Lambda_k| \rangle_{\mathcal{W}(\Lambda_k | W_k, \nu_k )}$
-        $+ \langle \log_e \pi_k \rangle_{\text{Dir}(\boldsymbol{\pi} | \boldsymbol{\alpha})}$
+- 計算結果
+    - $r_{ij} = \eta \rho_{ij}$
+        $\log_e \rho_{ij} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top \Lambda_j (\boldsymbol{x}_i - \boldsymbol{\mu}_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_j, \Lambda_j)}$
+        $+ \dfrac{1}{2}\langle \log_e |\Lambda_j| \rangle_{\mathcal{W}(\Lambda_j | W_j, \nu_j )}$
+        $+ \langle \log_e \pi_j \rangle_{\text{Dir}(\pi_{1:n} | \alpha_{1:n})}$
