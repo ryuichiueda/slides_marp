@@ -106,12 +106,16 @@ marp: true
 
 ### これからやること
 
-1. 適当に初期のクラスタを作る
-    - つまり$k_{i,1:n}$の分布を決める
-2. $k_{i,1:n}$の分布から、混合ガウス分布の分布のパラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を計算
+1. 適当に初期のクラスタと混合ガウス分布の分布を決める
+    - $k_{ij}=1$となる確率$r_{ij}$を初期化
+    - パラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$の初期値を与える
+        - $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$としましょう
+2. 上記の初期値から、混合ガウス分布の分布のパラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を計算
     - EM法のMステップに相当（<span style="color:red">変分Mステップ</span>）
 3. 計算した$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$から$k_{i,1:n}$の分布を計算
     - EM法のEステップに相当（<span style="color:red">変分Eステップ</span>）
+- 注意: $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$は固定
+    - 事前分布を固定して、繰り返し事後分布の解を良くしていく
 
 ---
 
