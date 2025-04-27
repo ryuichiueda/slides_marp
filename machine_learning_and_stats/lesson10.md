@@ -103,7 +103,11 @@ marp: true
 
 ---
 
-### 潜在変数の計算
+### 潜在変数の分布の計算
 
 - $k_{i,1:n}$（データ$\boldsymbol{x}_i$がどのクラスタに所属するか）の分布: 次の計算で導出
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
+- $r_{i,k} = \eta \rho_{i,k}$
+        $\log_e \rho_{i,k} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_k)^\top \Lambda_k (\boldsymbol{x}_i - \boldsymbol{\mu}_k) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_k, \Lambda_k)}$
+        $+ \dfrac{1}{2}\langle \log_e |\Lambda_k| \rangle_{\mathcal{W}(\Lambda_k | W_k, \nu_k )}$
+        $+ \langle \log_e \pi_k \rangle_{\text{Dir}(\boldsymbol{\pi} | \boldsymbol{\alpha})}$
