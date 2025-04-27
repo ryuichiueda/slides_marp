@@ -109,6 +109,5 @@ marp: true
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
 - 計算結果: 次の$r_{ij}$が、$k_{ij}$が$1$になる確率
     - $r_{ij} = \eta \rho_{ij}$
-        $\log_e \rho_{ij} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top \Lambda_j (\boldsymbol{x}_i - \boldsymbol{\mu}_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_j, \Lambda_j)}$
-        $+ \dfrac{1}{2}\langle \log_e |\Lambda_j| \rangle_{\mathcal{W}(\Lambda_j | W_j, \nu_j )}$
-        $+ \langle \log_e \pi_j \rangle_{\text{Dir}(\pi_{1:n} | \alpha_{1:n})}$
+        - $\log_e \rho_{ij} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top \Lambda_j (\boldsymbol{x}_i - \boldsymbol{\mu}_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_j, \Lambda_j)}$
+        $+ \dfrac{1}{2}\langle \log_e |\Lambda_j| \rangle_{\mathcal{W}(\Lambda_j | W_j, \nu_j )}+ \langle \log_e \pi_j \rangle_{\text{Dir}(\pi_{1:n} | \alpha_{1:n})}$
