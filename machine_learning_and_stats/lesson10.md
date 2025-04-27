@@ -111,3 +111,4 @@ marp: true
     - $r_{ij} = \eta \rho_{ij}$
         - $\log_e \rho_{ij} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top \Lambda_j (\boldsymbol{x}_i - \boldsymbol{\mu}_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_j, \Lambda_j)}$
         $+ \dfrac{1}{2}\langle \log_e |\Lambda_j| \rangle_{\mathcal{W}(\Lambda_j | W_j, \nu_j )}+ \langle \log_e \pi_j \rangle_{\text{Dir}(\pi_{1:n} | \alpha_{1:n})}$
+            - すべて一時的に値が決まっているか既知なので計算可能
