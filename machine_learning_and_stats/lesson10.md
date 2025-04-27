@@ -106,8 +106,12 @@ marp: true
 
 ### これからやること
 
-- 適当に初期の混合ガウス分布の分布を作る
+1. 適当に初期の混合ガウス分布の分布を作る
     - つまり$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を初期化
+2. 初期化した上記パラメータから$k_{i,1:n}$（各データ$\boldsymbol{x}_i$がどのクラスタに所属するか）の分布を計算
+    - EM法のEステップに相当
+3. $k_{i,1:n}$の分布から$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を計算
+    - EM法のMステップに相当
 
 ---
 
@@ -120,4 +124,3 @@ marp: true
         - $\log_e \rho_{ij} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top \Lambda_j (\boldsymbol{x}_i - \boldsymbol{\mu}_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_j, \Lambda_j)}$
         $+ \dfrac{1}{2}\langle \log_e |\Lambda_j| \rangle_{\mathcal{W}(\Lambda_j | W_j, \nu_j )}+ \langle \log_e \pi_j \rangle_{\text{Dir}(\pi_{1:n} | \alpha_{1:n})}$
             - すべて一時的に値が決まっているか既知なので計算可能
-- この計算はEM法のEステップに相当
