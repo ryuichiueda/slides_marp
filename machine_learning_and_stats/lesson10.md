@@ -139,6 +139,9 @@ marp: true
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
 - 計算結果: 次の$r_{ij}$が、$k_{ij}$が$1$になる確率
     - $r_{ij} = \eta \rho_{ij}$
-        - $\log_e \rho_{ij} = - \dfrac{1}{2}\big\langle (\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top \Lambda_j (\boldsymbol{x}_i - \boldsymbol{\mu}_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_j, \Lambda_j)}$
-        $+ \dfrac{1}{2}\langle \log_e |\Lambda_j| \rangle_{\mathcal{W}(\Lambda_j | W_j, \nu_j )}+ \langle \log_e \pi_j \rangle_{\text{Dir}(\pi_{1:n} | \alpha_{1:n})}$
-            - すべて一時的に値が決まっているか既知なので計算可能
+        - $\log_e \rho_{ij} = -\dfrac{1}{2} d \beta_j^{-1} -\dfrac{1}{2} \nu_j(\boldsymbol{x}_i - \boldsymbol{m}_j)^\top W_j (\boldsymbol{x}_i - \boldsymbol{m}_j)$
+         $\quad+ \dfrac{1}{2} \sum_{j=1}^d \psi\left(\dfrac{\nu_j + 1 - j}{2}\right) + \dfrac{1}{2}\log_e | W_j | + \eta'$
+        $\quad+\psi(\alpha_j) - \psi\left( \sum_{j=1}^K \alpha_j \right)$
+        - 式中の変数はすべて一時的に値が決まっているか既知なので計算可能
+            - $d$: $\boldsymbol{x}$の次元
+            - $\psi$: ディガンマ関数
