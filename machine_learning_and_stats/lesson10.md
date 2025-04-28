@@ -133,7 +133,7 @@ marp: true
 
 ---
 
-### 潜在変数の事後分布の計算
+### 変分Eステップ
 
 - $k_{i,1:n}$（データ$\boldsymbol{x}_i$がどのクラスタに所属するか）の分布: 次の計算で導出
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
