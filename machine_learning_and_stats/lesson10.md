@@ -135,7 +135,7 @@ marp: true
 
 ### 変分Eステップ
 
-- $k_{i,1:n}$（データ$\boldsymbol{x}_i$がどのクラスタに所属するか）の分布: 次の計算で導出
+- $k_{i,1:n} =(k_{i1}, k_{i2},\dots,k_{in})$の分布: 次の計算で導出
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
 - 計算結果: 次の$r_{ij}$が、$k_{ij}$が$1$になる確率
     - $r_{ij} = \eta \rho_{ij}$
