@@ -45,13 +45,18 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="機械学習（と統計）第11回" data-paginate="true" lang="C" data-marpit-pagination="3" style="" data-marpit-pagination-total="5" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="機械学習（と統計）第11回" data-paginate="true" lang="C" data-marpit-pagination="4" style="--footer:機械学習（と統計）第11回;--paginate:true;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="5" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/neuron.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="4" data-footer="機械学習（と統計）第11回" data-paginate="true" lang="C" data-marpit-pagination="4" style="--footer:機械学習（と統計）第11回;--paginate:true;--marpit-advanced-background-split:50%;" data-marpit-pagination-total="5" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E7%A5%9E%E7%B5%8C%E7%B4%B0%E8%83%9E">神経細胞</h3>
 <ul>
-<li>信号を伝える細胞
+<li>信号を伝える細胞</li>
+<li>信号を伝える仕組み
+<ol>
+<li>樹状突起に化学物質をある量受けると電圧が発生<br />
+（<span style="color:red">発火</span>）
 <ul>
-<li>他の神経細胞と接続されている</li>
-<li>他の神経細胞のシナプスから化学物質をある量受けると電圧が発生（<span style="color:red">発火</span>）</li>
-<li>電圧が発生が軸索を通って、その先のシナプスから化学物質を放出</li>
-<li>他の細胞が発火</li>
+<li>視細胞のように他の刺激で発火するものも</li>
 </ul>
+</li>
+<li>電圧が軸索を伝って、その先のシナプスから化学物質を放出</li>
+<li>他の細胞が発火</li>
+</ol>
 </li>
 </ul>
 <center style="font-size:50%">（図: public domain）</center>
@@ -60,11 +65,13 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="機械学習（と統計）第11回" data-paginate="true" lang="C" data-marpit-pagination="4" style="" data-marpit-pagination-total="5" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="機械学習（と統計）第11回" data-paginate="true" lang="C" data-marpit-pagination="5" style="--footer:機械学習（と統計）第11回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="5" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/%E7%9A%AE%E8%B3%AA%E5%B1%80%E6%89%80%E7%A5%9E%E7%B5%8C%E5%9B%9E%E8%B7%AF_%E5%9B%B31.png&quot;);background-size:100%;"></figure><figure style="background-image:url(&quot;./figs/%E7%9A%AE%E8%B3%AA%E5%B1%80%E6%89%80%E7%A5%9E%E7%B5%8C%E5%9B%9E%E8%B7%AF_%E5%9B%B32.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="5" data-footer="機械学習（と統計）第11回" data-paginate="true" lang="C" data-marpit-pagination="5" style="--footer:機械学習（と統計）第11回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="5" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E4%BA%BA%E5%B7%A5%E3%81%A7%E3%81%AA%E3%81%84%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">（人工でない）ニューラルネットワーク</h3>
 <ul>
-<li>目と「犬」、「猫」と音に出す口の間には<span style="color:red">神経細胞</span>から構成される<span style="color:red">ニューラルネットワーク</span>が存在
+<li>脳: 神経細胞が集まって回路を形成
 <ul>
-<li>目から口の筋肉まで信号が加工（計算）されて伝わる</li>
+<li><span style="color:red">計算をしている</span>（後述）</li>
 </ul>
 </li>
+<li>脊髄: 神経が背骨を伝わり体の隅々へ<br />
+（もともと脳ではなくこちらが本体）</li>
 </ul>
 <center style="font-size:50%">（右図：CC BY-NC-SA 4.0, 脳科学辞典から）</center>
 <footer>機械学習（と統計）第11回</footer>
