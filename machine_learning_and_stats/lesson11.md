@@ -21,3 +21,21 @@ marp: true
 
 ## 今日やること
 
+- 人工ニューラルネットワークってなに？
+
+---
+
+## 人工ニューラルネットワークってなに？
+
+- まずは問題
+    - なんで犬とか猫とか我々は認識できるのか?
+    - 入出力はどうなってるの?
+        - 入力は第1回に見せた通り（下図）
+        - 犬・猫などの名前は出力
+        - <span style="color:red">途中はどうなっているのか?</span>
+
+
+![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
+
+![bg right:30% 100%](./figs/cat_and_dog.png)
+
