@@ -42,6 +42,19 @@ marp: true
 
 ---
 
+### 神経細胞
+
+- 信号を伝える細胞
+   - 目から口やのどの筋肉へ
+
+![bg right:60% 100%](./figs/neuron.png)
+
+
+
+<center style="font-size:50%">（図: public domain）</center>
+
+---
+
 ### （人工でない）ニューラルネットワーク
 
 - 目と「犬」、「猫」と音に出す口の間には<span style="color:red">神経細胞</span>から構成される<span style="color:red">ニューラルネットワーク</span>が存在
@@ -51,6 +64,7 @@ marp: true
 
 <center style="font-size:50%">（左図: public domain、右図：CC BY-NC-SA 4.0, 脳科学辞典から）</center>
 
-![bg right:20% 100%](./figs/皮質局所神経回路_図1.png)
+![bg right:30% 100%](./figs/皮質局所神経回路_図1.png)
+![bg right:40% 100%](./figs/皮質局所神経回路_図2.png)
 
 
