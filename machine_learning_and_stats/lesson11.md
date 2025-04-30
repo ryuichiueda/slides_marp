@@ -39,3 +39,9 @@ marp: true
 
 ![bg right:30% 100%](./figs/cat_and_dog.png)
 
+
+---
+
+### （人工でない）ニューラルネットワーク
+
+- 目と「犬」、「猫」と音に出す口の間には<span style="color:red">神経細胞</span>から構成される<span style="color:red">ニューラルネットワーク</span>が存在
