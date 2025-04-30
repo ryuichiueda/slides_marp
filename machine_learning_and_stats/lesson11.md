@@ -29,10 +29,9 @@ marp: true
 
 - まずは問題
     - なんで犬とか猫とか我々は認識できるのか?
-    - 入出力はどうなってるの?
-        - 入力は第1回に見せた通り（下図）
-        - 犬・猫などの名前は出力
-        - <span style="color:red">途中はどうなっているのか?</span>
+        - 脳がやっているということは知っている
+        - 脳に神経があることも知っている
+    - <span style="color:red">脳や神経は具体的にどういう構造なのか?</span>
 
 
 ![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
