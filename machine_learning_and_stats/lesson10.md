@@ -144,4 +144,4 @@ marp: true
         $\quad+\psi(\alpha_j) - \psi\left( \sum_{j=1}^K \alpha_j \right)$
         - 式中の変数はすべて一時的に値が決まっているか既知なので計算可能
             - $d$: $\boldsymbol{x}$の次元
-            - $\psi$: ディガンマ関数
+            - $\psi$: ディガンマ関数という関数（高級な言語にはライブラリあり）
