@@ -146,7 +146,7 @@ marp: true
     - 人間より正確かもしれない
     - （上限があるものの）数が数えられるのはかなり有用
 
-![w:800](figs/2d_clustering_result.png)
+![w:900](figs/2d_clustering_result.png)
 
 
 ---
