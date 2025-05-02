@@ -136,6 +136,7 @@ marp: true
 
 - 10の分布があることを仮定$\rightarrow$不要な分布が消えていく（$\pi_j$の値が0に収束）
 
+![](figs/2d_clustering_process.png)
 
 ---
 
