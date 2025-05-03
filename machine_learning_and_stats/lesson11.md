@@ -90,8 +90,14 @@ marp: true
 
 - 右図のような構造に簡略化
     - 他の$n$個の細胞から信号を受け取る
-    - <span style="color:red">ひとつの値だけ信号を出す</span>
+        - $x_{1:n}$: 他の細胞からの信号の強さ
+        - $w_{1:n}$: 信号を受け取った値にかける「重み」
+    - <span style="color:red">ひとつの値だけ信号$y$を出す</span>
         - 接続先は複数だが同じ値を送信
+- $x_{1:n}$と$y$の関係
+    - $y = f(x)$ 
+        - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
+        - $f$にはよく使われるものがいくつかある
 
 
 ![bg right:30% 100%](./figs/artificial_neuron.png)
