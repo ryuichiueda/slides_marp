@@ -175,7 +175,7 @@ marp: true
 
 ---
 
-### 変分Mステップ
+### 変分Mステップ（各データの所属から分布のパラメータを計算）
 
 - 補助の数値を計算
     - $N_j = \sum_{i=1}^N r_{ij}$
@@ -189,7 +189,7 @@ marp: true
 
 ---
 
-### 変分Eステップ
+### 変分Eステップ（分布のパラメータから各データの所属を計算）
 
 - $k_{i,1:n} =(k_{i1}, k_{i2},\dots,k_{in})$の分布: 次の計算で導出
     - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
