@@ -83,3 +83,16 @@ marp: true
 
 ![bg right:55% 100%](./figs/neuron.png)
 
+
+---
+
+### 神経細胞を単純化したモデル
+
+- 右図のような構造に簡略化
+    - 他の$n$個の細胞から信号を受け取る
+    - <span style="color:red">ひとつの値だけ信号を出す</span>
+        - 接続先は複数だが同じ値を送信
+
+
+![bg right:30% 100%](./figs/artificial_neuron.png)
+
