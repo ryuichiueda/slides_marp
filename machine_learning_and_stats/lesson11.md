@@ -103,6 +103,7 @@ marp: true
 - $x_{1:n}$と$y$の関係（最も単純なもの）
     - $y = \begin{cases}1 & (x \ge \theta) \\ 0 & ( x < \theta)\end{cases}$ 
         - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
+        - 他の細胞も同様にモデル化すると$x_{1:n}$も$0, 1$になってディジタル回路に
 
 
 ![bg right:30% 100%](./figs/artificial_neuron.png)
