@@ -94,10 +94,9 @@ marp: true
         - $w_{1:n}$: 信号を受け取った値にかける「重み」
     - <span style="color:red">ひとつの値だけ信号$y$を出す</span>
         - 接続先は複数だが同じ値を送信
-- $x_{1:n}$と$y$の関係
-    - $y = f(x)$ 
+- $x_{1:n}$と$y$の関係（最も単純なもの）
+    - $y = \begin{cases}1 & (x \ge \theta) \\ 0 & ( x < \theta)\end{cases}$ 
         - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
-        - $f$にはよく使われるものがいくつかある
 
 
 ![bg right:30% 100%](./figs/artificial_neuron.png)
