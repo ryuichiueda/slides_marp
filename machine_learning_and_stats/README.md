@@ -14,4 +14,3 @@
 - 第12回: https://ryuichiueda.github.io/slides_marp/machine_learning_and_stats/lesson12.html
 - 第13回: https://ryuichiueda.github.io/slides_marp/machine_learning_and_stats/lesson13.html
 - 第14回: https://ryuichiueda.github.io/slides_marp/machine_learning_and_stats/lesson14.html
-- 第15回: https://ryuichiueda.github.io/slides_marp/machine_learning_and_stats/lesson15.html
