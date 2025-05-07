@@ -139,5 +139,15 @@ marp: true
     - そのあと成長しても神経細胞は基本的に増えない
     - 猫を識別するにはニューラルネットワークに変更を加えないといけない
     - 頭を開けて配線するわけにはいかない
+
+
+---
+
+### 学習の方法
+
+
+
 - 方法
-    - <span style="color:red">重みを変える</span>
+    * <span style="color:red">重みを変える</span>
+
+![bg right:40% 100%](./figs/ann_learning_problem.png)
