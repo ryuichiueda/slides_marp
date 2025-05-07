@@ -115,7 +115,17 @@ marp: true
 
 - 問題: 2つの数字$z_1$と$z_2$の符号が同じかどうかを調べる
     - 値が0の場合は正としましょう
+    * 答え
+<img width="700" src="./figs/first_neural_network.png" />
 
-<center>
-<img width="800" src="./figs/first_neural_network.png" />
-</center>
+---
+
+### ニューラルネットワーク
+
+- 神経細胞は前ページのように組み合わせてプログラムできる
+- [人の脳には860個の神経細胞](https://www.riken.jp/press/2018/20180326_1/index.html)
+    - 860億個が組み合わさってさまざまな計算をしているので
+        - 目から入った光で猫と犬を識別
+
+
+
