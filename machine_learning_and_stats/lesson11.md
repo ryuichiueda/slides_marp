@@ -140,7 +140,7 @@ marp: true
     - 猫を識別するにはニューラルネットワークに変更を加えないといけない
     - 頭を開けて配線するわけにはいかない
 
-<center>外からの刺激で変更しなければならない（<span style="color:red">つまり学習</span>）</center>
+<center style="color:red">どうやるの?（話し合ってみましょう）</center>
 
 ---
 
