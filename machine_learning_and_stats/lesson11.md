@@ -144,11 +144,9 @@ marp: true
 
 ---
 
-### 学習の方法
+### 学習の方法: 重みを変える
 
 
 
-- 方法
-    * <span style="color:red">重みを変える</span>
 
 ![bg right:40% 100%](./figs/ann_learning_problem.png)
