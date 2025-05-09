@@ -255,8 +255,13 @@ marp: true
     - 上: <span style="color:red">$\sigma_{xy}=1$</span>
     - 下: <span style="color:red">$\sigma_{xy}=-1$</span>
     - 他のパラメータ: $(\mu_x, \mu_y) =(5,5), (\sigma^2_{xx}, \sigma^2_{yy}) =(2,1)$
-
-        <br />
-<center>密度の山の向きが変わる</center>
+- 描画からわかる特徴
+    - 密度の山の向きが変わる
+    - 等高線は楕円型に（数式上も楕円になる）
 
 ![bg right:40% 100%](./figs/2d_gausses.png)
+
+---
+
+### 二次元のガウス分布
+
