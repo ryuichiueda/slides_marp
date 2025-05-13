@@ -33,7 +33,7 @@ marp: true
 
 ![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
 
-人工ニューラルネットワークでできる?$\rightarrow$できる
+人工ニューラルネットワーク（ANN）でできる?$\rightarrow$できる
 
 ---
 
@@ -45,3 +45,17 @@ marp: true
     - 最近のは言語も駆使している（次回）
     - ちょっと古いけど基礎をやりましょう
 
+---
+
+## 視覚・画像とANN
+
+- 映像、画像の特性に特化したものが使用される
+    - 特性: ある画素の周囲に似た画素がある
+- おさらい: ディジタル画像
+
+---
+
+## CNN
+
+- convolutional neural network
+    - テレビ局ではないです
