@@ -62,6 +62,10 @@ marp: true
 - 同じものが大きく写ったり小さく写ったり回転して写ったり
 - 変形したり抽象化されたりデフォルメされたり
 
+![](./figs/dots_varisous.png)
+
+![bg right:30% 90%](./figs/cat_back.png)
+
 ---
 
 ## CNN
