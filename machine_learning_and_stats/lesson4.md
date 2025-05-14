@@ -176,7 +176,7 @@ marp: true
 - ふたつの変数の大小の傾向が一致しているかどうかを調べる統計値
 - データがあるときの計算方法
     - データを$(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$とすると
-    $s_{xy} = \dfrac{1}{1-n}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+    $s_{xy} = \dfrac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
         - $\bar{x}, \bar{y}$: それぞれ$x$、$y$の平均値
 
 <center>どんな値なのでしょうか？いくつかの例で計算してみましょう</center>
@@ -230,7 +230,7 @@ marp: true
     - 片方が大きいともう片方は小さい$\Longrightarrow$負
     - 双方の大小にあまり関係がない$\Longrightarrow$ゼロに近く
 - なんでそうなるか式をもう一度見てみましょう
-    - $s_{xy} = \dfrac{1}{1-n}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+    - $s_{xy} = \dfrac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
 
 ---
 
