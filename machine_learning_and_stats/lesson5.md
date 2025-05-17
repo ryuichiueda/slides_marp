@@ -247,4 +247,8 @@ marp: true
 ### ベイズの定理の利用
 
 - ロボットの位置推定
+    - センサの値と場所の比較をする
+    - [実例1](https://www.youtube.com/watch?v=jXYEA2ptgnA)、[実例2](https://www.youtube.com/watch?v=fvkKHYOLE3E)
+
+![](./figs/robot_bayes_filter.png)
 
