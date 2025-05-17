@@ -146,9 +146,8 @@ marp: true
 
 - ロボットの位置推定
     - センサの値と場所の比較をする
+    ![w:800](./figs/robot_bayes_filter.png)
     - [実例1](https://www.youtube.com/watch?v=jXYEA2ptgnA)、[実例2](https://www.youtube.com/watch?v=Dgd2tOCEYno)
-
-![](./figs/robot_bayes_filter.png)
 
 ---
 
@@ -251,4 +250,15 @@ marp: true
 - 知能の研究的には
     - エージェント（要は個々の人や人工知能）の癖を扱える
     - 尤度や事前分布が決まれば、その前提の上で正しい事後確率を計算できる
+
+
+---
+
+## まとめ
+
+- ベイズの定理
+    - ある情報を知りたい情報の確率分布に反映させる方法
+    - 情報定理から導出できる
+    - 尤度関数が媒介
+    - 「学習」というものの本質?
 
