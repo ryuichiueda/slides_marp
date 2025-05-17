@@ -139,6 +139,17 @@ marp: true
 
 ※人間だと別のものを見たらすぐ何階か分かるが、ロボットの場合はこうやって位置を求めることがある
 
+
+---
+
+### ベイズの定理の実用
+
+- ロボットの位置推定
+    - センサの値と場所の比較をする
+    - [実例1](https://www.youtube.com/watch?v=jXYEA2ptgnA)、[実例2](https://www.youtube.com/watch?v=Dgd2tOCEYno)
+
+![](./figs/robot_bayes_filter.png)
+
 ---
 
 ### これはどうでしょう?
@@ -240,15 +251,4 @@ marp: true
 - 知能の研究的には
     - エージェント（要は個々の人や人工知能）の癖を扱える
     - 尤度や事前分布が決まれば、その前提の上で正しい事後確率を計算できる
-
-
----
-
-### ベイズの定理の利用
-
-- ロボットの位置推定
-    - センサの値と場所の比較をする
-    - [実例1](https://www.youtube.com/watch?v=jXYEA2ptgnA)、[実例2](https://www.youtube.com/watch?v=Dgd2tOCEYno)
-
-![](./figs/robot_bayes_filter.png)
 
