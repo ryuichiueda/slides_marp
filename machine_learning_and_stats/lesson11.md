@@ -168,4 +168,9 @@ marp: true
         - 再掲: $y = \begin{cases}1 & (x \ge \theta) \\ 0 & ( x < \theta)\end{cases}$ 
             - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
 
-とりあえず方法2の路線で対策を
+<center>とりあえず方法2の路線で対策をたてましょう</center>
+
+---
+
+### シグモイド関数で微妙にアナログに
+
