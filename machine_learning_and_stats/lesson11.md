@@ -164,6 +164,8 @@ marp: true
     - 出力を間違えたらあてずっぽで変える$\rightarrow$効率がとても悪い
 - 考えられる方法2
     - ずれが小さくなるようにパラメータを変える
-    $\rightarrow$少し$w_i$を変えても答えが変わらない
+    $\rightarrow$少し$w_i$を変えても$\theta$をまたぐまで答えが変わらない
+        - 再掲: $y = \begin{cases}1 & (x \ge \theta) \\ 0 & ( x < \theta)\end{cases}$ 
+            - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
 
 とりあえず方法2の路線で対策を
