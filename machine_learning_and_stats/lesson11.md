@@ -175,5 +175,8 @@ marp: true
 ### シグモイド関数で微妙にアナログに
 
 - $y = \dfrac{1}{1 + e^{-x}}$という関数を使用
-    - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
+    - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n - \theta$
 
+<center>これでパラメータを少し変えると出力も少し変わるのでずれの修正ができる</center>
+
+![bg right:40% 100%](./figs/sigmoid.png)
