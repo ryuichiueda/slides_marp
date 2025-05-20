@@ -148,9 +148,11 @@ marp: true
 
 ---
 
-- 2層目（入力: $\boldsymbol{z}' = (z_1' \ z_2')$）
+- 2層目
+    - 入力（1層目の出力）: $\boldsymbol{z}' = (z_1' \ z_2')$
     - $W = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b} = (1.1 \ -0.9)$
 - 3層目
+    - 入力（2層目の出力）: $\boldsymbol{z}'' = (z_1'' \ z_2'')$
     - $W = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b} = (0.9)$
 
 ![bg right:38% 100%](./figs/first_neural_network.png)
