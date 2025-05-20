@@ -173,6 +173,7 @@ marp: true
          - <span style="color:red">アフィンレイヤー</span>
      - 閾値処理で1層
          - ステップ関数レイヤー
+- 注意: 右の図ではあまり入出力の数が変わってないが、実際はアフィンレイヤーの前後で変わる
 
 ![bg right:40% 90%](./figs/ann_layer_notation.png)
 
