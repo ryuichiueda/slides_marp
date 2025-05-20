@@ -140,9 +140,9 @@ marp: true
     - 入力: $\boldsymbol{z} = (z_1 \ z_2)$と表現
     - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
         - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
-    - 出力の計算: $\boldsymbol{z}' = \boldsymbol{h}(\boldsymbol{z}W | \boldsymbol{b})$
+    - 出力の計算: $\boldsymbol{z}' = \boldsymbol{h}(\boldsymbol{z}W - \boldsymbol{b})$
         - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
-        - $\boldsymbol{h}$は閾値処理で$\boldsymbol{z}W$と$\boldsymbol{b}$の各要素を大小比較して$0$、$1$を決定
+        - $\boldsymbol{h}$は閾値処理
 
 ![bg right:40% 100%](./figs/first_neural_network.png)
 
@@ -161,6 +161,18 @@ marp: true
     - $W = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b} = (0.9)$
 
 ![bg right:38% 100%](./figs/first_neural_network.png)
+
+
+---
+
+### レイヤーでの表現
+
+- 入出力を線でつなぎ、演算を箱で表現
+- これまで使ってきた例だと、1層分が2層に
+     - 重みの反映（と閾値の引き算）で1層
+     - 閾値処理で1層
+
+![bg right:40% 90%](./figs/ann_layer_notation.png)
 
 ---
 
