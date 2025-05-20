@@ -133,6 +133,23 @@ marp: true
 
 ---
 
+### 人工ニューラルネットワークの正体
+
+- やってることは単なる行列の演算
+
+![bg right:38% 100%](./figs/first_neural_network.png)
+
+- 一番左の「層」（入力: $\boldsymbol{z} = (z_1 \ z_2)$）
+    - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
+    - 閾値: $\boldsymbol{b} = (0 \ 0)$
+    - 閾値処理と出力: $\boldsymbol{z}' = h(\boldsymbol{z}W | \boldsymbol{b})$
+- 2層目（入力: $\boldsymbol{z}'$）
+    - $W = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b} = (1.1 \ -0.9)$
+- 3層目
+    - $W = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b} = (0.9)$
+
+---
+
 ### 残った問題: どう学習するか?
 
 - 動物は生まれたときにある程度プログラミングされた状態だが・・・
