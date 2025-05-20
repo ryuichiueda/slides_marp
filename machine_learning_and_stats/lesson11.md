@@ -199,7 +199,9 @@ marp: true
     2. ずれを小さくするようにパラメータを変える
         - この場合はたとえば$w_1 = 1.9$とすると$0$に
 
-![bg right:30% 90%](./figs/simple_ann_learning.png)
+これを全ニューロンに対してやる（以後はレイヤー表記）
+
+![bg right:25% 90%](./figs/simple_ann_learning.png)
 
 ---
 
@@ -209,11 +211,11 @@ marp: true
     - 出力を間違えたらあてずっぽで変える$\rightarrow$効率がとても悪い
 - 考えられる方法2
     - ずれが小さくなるようにパラメータを変える
-    $\rightarrow$少し$w_i$を変えても$\theta$をまたぐまで答えが変わらない
-        - 再掲: $y = \begin{cases}1 & (x \ge \theta) \\ 0 & ( x < \theta)\end{cases}$ 
-            - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
+    $\rightarrow$少し$W$を変えても$\boldsymbol{h}$に$0$か$1$にされるので効果が分からない
+    - 方法1よりよさそうだけどどうするか?
+    （議論してみましょう）
 
-<center>とりあえず方法2の路線で対策をたてましょう</center>
+![bg right:30% 100%](./figs/gradient_lost.png)
 
 ---
 
