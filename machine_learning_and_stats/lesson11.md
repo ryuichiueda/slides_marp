@@ -136,17 +136,24 @@ marp: true
 ### 人工ニューラルネットワークの正体
 
 - やってることは単なる行列の演算
-
-![bg right:38% 100%](./figs/first_neural_network.png)
-
-- 一番左の「層」（入力: $\boldsymbol{z} = (z_1 \ z_2)$）
+- 先ほどの例の一番左の「層」
+    - 入力: $\boldsymbol{z} = (z_1 \ z_2)$と表現
     - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
-    - 閾値: $\boldsymbol{b} = (0 \ 0)$
-    - 閾値処理と出力: $\boldsymbol{z}' = h(\boldsymbol{z}W | \boldsymbol{b})$
-- 2層目（入力: $\boldsymbol{z}'$）
+        - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
+    - 出力の計算: $\boldsymbol{z}' = \boldsymbol{h}(\boldsymbol{z}W | \boldsymbol{b})$
+        - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
+        - $\boldsymbol{h}$は閾値処理で$\boldsymbol{z}W$と$\boldsymbol{b}$の各要素を大小比較して$0$、$1$を決定
+
+![bg right:40% 100%](./figs/first_neural_network.png)
+
+---
+
+- 2層目（入力: $\boldsymbol{z}' = (z_1' \ z_2')$）
     - $W = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b} = (1.1 \ -0.9)$
 - 3層目
     - $W = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b} = (0.9)$
+
+![bg right:38% 100%](./figs/first_neural_network.png)
 
 ---
 
