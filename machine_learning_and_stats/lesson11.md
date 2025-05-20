@@ -148,6 +148,11 @@ marp: true
 
 ---
 
+### あとは繰り返し
+
+- 1層目（再掲）
+    - 入力: $\boldsymbol{z} = (z_1 \ z_2)$
+    - $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$、$\boldsymbol{b} = (0 \ 0)$
 - 2層目
     - 入力（1層目の出力）: $\boldsymbol{z}' = (z_1' \ z_2')$
     - $W = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b} = (1.1 \ -0.9)$
