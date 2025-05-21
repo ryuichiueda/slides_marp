@@ -277,5 +277,24 @@ marp: true
 
 ### アフィンレイヤーの誤差逆伝播
 
+- 出力の誤差: $\partial L / \partial \boldsymbol{y}$と書ける
+    - 最終的な誤差$L$に対して$\boldsymbol{y}$が与える影響度
+- 入力（前の層の出力）の誤差: 同様に$\partial L / \partial \boldsymbol{x}$
+    - <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} W^\top$</span>
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
+
+---
+
+### アフィンレイヤーのパラメータ修正
+
+
+
+- 誤差に対するパラメータの影響
+    - $W$について: <span style="color:red">$\dfrac{\partial L}{\partial W} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
+    - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{b}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
+
+
+![bg right:35% 90%](./figs/back_propagation_affine.png)
+
+
