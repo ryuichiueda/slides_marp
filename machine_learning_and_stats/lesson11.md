@@ -99,11 +99,11 @@ marp: true
         - $x_{1:n}$: 他の細胞からの信号の強さ
         - $w_{1:n}$: 信号を受け取った値にかける「重み」
     - <span style="color:red">ひとつの値だけ信号$y$を出す</span>
+        - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n \ge b$
+        なら$1$
+            - $b$: 閾値（バイアスとも）
         - 接続先は複数だが同じ値を送信
-- $x_{1:n}$と$y$の関係（最も単純なもの。$\theta$: 閾値）
-    - $y = \begin{cases}1 & (x \ge \theta) \\ 0 & ( x < \theta)\end{cases}$ 
-        - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n$
-        - 他の細胞も同様にモデル化すると$x_{1:n}$も$0, 1$になってディジタル回路に
+- 他の細胞も同様にモデル化すると$x_{1:n}$も$0, 1$になってディジタル回路に
 
 
 ![bg right:25% 100%](./figs/artificial_neuron.png)
@@ -113,7 +113,7 @@ marp: true
 
 ### 人工ニューロンで回路を組んでみる
 
-- 問題: 2つの数字$z_1$と$z_2$の符号が同じかどうかを調べる
+- 問題: 2つの数字$x_1$と$x_2$の符号が同じかどうかを調べる
     - 値が0の場合は正としましょう
     * 答え
 <img width="700" src="./figs/first_neural_network.png" />
@@ -137,10 +137,10 @@ marp: true
 
 - やってることは単なる行列の演算
 - 先ほどの例の一番左の「層」
-    - 入力: $\boldsymbol{z} = (z_1 \ z_2)$と表現
+    - 入力: $\boldsymbol{x} = (z_1 \ z_2)$と表現
     - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
         - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
-    - 出力の計算: $\boldsymbol{z}' = \boldsymbol{h}(\boldsymbol{z}W - \boldsymbol{b})$
+    - 出力の計算: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
         - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
         - $\boldsymbol{h}$は閾値処理
 
@@ -151,13 +151,13 @@ marp: true
 ### あとは繰り返し
 
 - 1層目（再掲）
-    - 入力: $\boldsymbol{z} = (z_1 \ z_2)$
+    - 入力: $\boldsymbol{x} = (x_1 \ x_2)$
     - $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$、$\boldsymbol{b} = (0 \ 0)$
 - 2層目
-    - 入力（1層目の出力）: $\boldsymbol{z}' = (z_1' \ z_2')$
+    - 入力（1層目の出力）: $\boldsymbol{x}' = (x_1' \ x_2')$
     - $W = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b} = (1.1 \ -0.9)$
 - 3層目
-    - 入力（2層目の出力）: $\boldsymbol{z}'' = (z_1'' \ z_2'')$
+    - 入力（2層目の出力）: $\boldsymbol{x}'' = (x_1'' \ x_2'')$
     - $W = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b} = (0.9)$
 
 ![bg right:38% 100%](./figs/first_neural_network.png)
@@ -255,13 +255,15 @@ marp: true
 
 ---
 
-### 送る誤差の大きさ
+### 単純な例
 
-- ある層で誤差が$\alpha$倍になるなら、$\alpha$だけかけて上の層に送る
-    - 上の層での値の違いが$\alpha$倍だけ影響するので
-- 右図: 1入力1出力の単純なレイヤー
+- 送る誤差の大きさ
+    - ある層で誤差が$\alpha$倍になるなら、$\alpha$だけかけて上の層に送る
+        - 上の層での値の違いが$\alpha$倍だけ影響するので
+    - 右図上: 1入力1出力の単純なレイヤー
+- パラメータの修正
 
 
-![bg right:30% 90%](./figs/back_propagation_diff.png)
+![bg right:25% 90%](./figs/back_propagation_diff.png)
 
 
