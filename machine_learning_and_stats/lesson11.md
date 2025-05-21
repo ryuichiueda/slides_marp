@@ -282,13 +282,14 @@ marp: true
 - 入力（前の層の出力）の誤差: 同様に$\partial L / \partial \boldsymbol{x}$
     - <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} W^\top$</span>
         - （行列の計算はさておき）重み$W$の分だけ影響力が増すので、これを上流に送る
+- シグモイドレイヤーも同様に計算すると
+    - $\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} y^2 e^{-x}$となる
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
 
 ---
 
 ### アフィンレイヤーのパラメータ修正
-
 
 
 - 誤差に対するパラメータの影響
