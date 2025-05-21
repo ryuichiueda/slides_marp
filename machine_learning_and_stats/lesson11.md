@@ -278,3 +278,4 @@ marp: true
 ### アフィンレイヤーの誤差逆伝播
 
 
+![bg right:35% 90%](./figs/back_propagation_affine.png)
