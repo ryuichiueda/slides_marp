@@ -258,8 +258,8 @@ marp: true
 ### 単純な例
 
 - 送る誤差の大きさ
-    - ある層で誤差が$\alpha$倍になるなら、$\alpha$かけて上流に送る
-        - 上の層での値の違いが$\alpha$倍だけ影響するので
+    - ある層で誤差が$t$倍になるなら、$t$かけて上流に送る
+        - 上の層での値の違いが$t$倍だけ影響するので
     - 右図上: 1入力1出力の単純なレイヤー
         - $9/10$が入力されて$17/10$を出力
         $\rightarrow$誤差$1/3$が返ってきた
@@ -294,7 +294,8 @@ marp: true
 - 誤差に対するパラメータの影響
     - $W$について: <span style="color:red">$\dfrac{\partial L}{\partial W} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
     - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{b}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
-        - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{b}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
+- これらの値を$\alpha$だけ割り引いて元のパラメータから引く
+    - 割り引くのはひとつの入力だけでパラメータを大きく変えないため
 
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
