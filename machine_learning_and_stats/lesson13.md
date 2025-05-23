@@ -98,4 +98,7 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
     - 単語に（実際はもっと細かく）分けて、埋め込みのベクトルに変換
         - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
 - 文への位置情報の付加
+    - $H = E + P$という行列$H$を作成
+       - $P$には単語が文の何番目にあるかの情報が入る
+           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
 
