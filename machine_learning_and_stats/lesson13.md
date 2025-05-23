@@ -103,3 +103,8 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
            - 単純に「何番目か」ではなく三角関数を使ったややこしもの
 
 <center>とりあえずこれで入力に位置情報が加わる</center>
+
+---
+
+### 文脈の情報の埋め込み
+
