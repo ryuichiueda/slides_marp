@@ -96,5 +96,6 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
 
 - 入力: 文
     - 単語に（実際はもっと細かく）分けて、埋め込みのベクトルに変換
-        - E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+- 文への位置情報の付加
 
