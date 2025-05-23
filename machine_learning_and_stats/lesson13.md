@@ -102,3 +102,4 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
        - $P$には単語が文の何番目にあるかの情報が入る
            - 単純に「何番目か」ではなく三角関数を使ったややこしもの
 
+<center>とりあえずこれで入力に位置情報が加わる</center>
