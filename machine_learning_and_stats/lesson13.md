@@ -81,8 +81,11 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
 
 ---
 
-## Transformer
+## どうすればいいか?
 
 - 埋め込みに語順と文脈の情報を付加してやるとよい
     - 前ページのスライドを逆に考えると、そういうことになる
+- <span style="color:red">Transformer</span>（のエンコーダ）
+    - そのような仕組みで、途中まで入力された文の情報を埋め込んで予測性能を向上
+
 
