@@ -84,5 +84,5 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
 ## Transformer
 
 - 埋め込みに語順と文脈の情報を付加してやるとよい
-    - 前ページのスライドを逆に考える
+    - 前ページのスライドを逆に考えると、そういうことになる
 
