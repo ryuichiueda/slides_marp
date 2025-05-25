@@ -98,30 +98,33 @@
 </ul>
 <footer>機械学習（と統計）第13回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="機械学習（と統計）第13回" data-paginate="true" lang="C" data-marpit-pagination="6" style="--footer:機械学習（と統計）第13回;--paginate:true;" data-marpit-pagination-total="9">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="機械学習（と統計）第13回" data-paginate="true" lang="C" data-marpit-pagination="6" style="--footer:機械学習（と統計）第13回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/Chinchilla.jpg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="6" data-footer="機械学習（と統計）第13回" data-paginate="true" lang="C" data-marpit-pagination="6" style="--footer:機械学習（と統計）第13回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E5%9F%8B%E3%82%81%E8%BE%BC%E3%81%BF%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6skip-gram%E3%81%8C%E3%81%A7%E3%81%8D%E3%82%8C%E3%81%B0%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%81%8C%E6%96%87%E7%AB%A0%E3%82%92%E8%AA%8D%E8%AD%98%E3%81%99%E3%82%8B">埋め込みができて、skip-gramができればコンピュータが文章を認識する?</h3>
 <p>・・・ことはできない</p>
 <ul>
-<li>単語をひとつずつskip-gramで予想して並べていけばそれっぽい文は作れるけど、その文に意味は無意味
+<li>単語をひとつずつskip-gramで予想して並べていけばそれっぽい文は作れるけど、その文は無意味
 <ul>
 <li>マルコフ連鎖ジェネレータのようなもの</li>
 </ul>
 </li>
 <li>単純な埋め込みには限界
 <ul>
-<li>単語が近くにあるという情報はあるが、「語順に関する情報」はない</li>
+<li>語順に関する情報は、完全にはない</li>
 <li>同音異義語に1つのベクトルしか与えないので区別不可能
 <ul>
-<li>例: チンチラ（げっ歯類のチンチラ or 猫のチンチラ）</li>
+<li>例: チンチラ（げっ歯類のチンチラ/猫のチンチラ）</li>
 <li>つまり文脈の依存性に関する情報を持っていない</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+<span style="font-size:70%">
+<a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">写真上 by Guérin Nicolas（CC BY-SA 3.0）</a>
+<a href="https://commons.wikimedia.org/wiki/File:Chinchilla_cat_(3228221937).jpg">写真下 by allen watkin（CC BY-SA 2.0）</a>
 <footer>機械学習（と統計）第13回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="機械学習（と統計）第13回" data-paginate="true" lang="C" data-marpit-pagination="7" style="--footer:機械学習（と統計）第13回;--paginate:true;" data-marpit-pagination-total="9">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="機械学習（と統計）第13回" data-paginate="true" lang="C" data-marpit-pagination="6" style="" data-marpit-pagination-total="9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="機械学習（と統計）第13回" data-paginate="true" lang="C" data-marpit-pagination="7" style="--footer:機械学習（と統計）第13回;--paginate:true;" data-marpit-pagination-total="9">
 <h2 id="%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%8B">どうすればいいか?</h2>
 <ul>
 <li>埋め込みに語順と文脈の情報を付加してやるとよい

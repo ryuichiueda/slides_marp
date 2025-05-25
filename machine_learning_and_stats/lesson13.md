@@ -70,14 +70,20 @@ $\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$がで�
 
 ・・・ことはできない
 
-- 単語をひとつずつskip-gramで予想して並べていけばそれっぽい文は作れるけど、その文に意味は無意味
+- 単語をひとつずつskip-gramで予想して並べていけばそれっぽい文は作れるけど、その文は無意味
     - マルコフ連鎖ジェネレータのようなもの
 - 単純な埋め込みには限界
-    - 単語が近くにあるという情報はあるが、「語順に関する情報」はない
+    - 語順に関する情報は、完全にはない
     - 同音異義語に1つのベクトルしか与えないので区別不可能
-        - 例: チンチラ（げっ歯類のチンチラ or 猫のチンチラ）
+        - 例: チンチラ（げっ歯類のチンチラ/猫のチンチラ）
         - つまり文脈の依存性に関する情報を持っていない
 
+![bg right:20% 100%](./figs/Chinchilla.jpg)
+
+
+<span style="font-size:70%">
+<a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">写真上 by Guérin Nicolas（CC BY-SA 3.0）</a>
+<a href="https://commons.wikimedia.org/wiki/File:Chinchilla_cat_(3228221937).jpg">写真下 by allen watkin（CC BY-SA 2.0）</a>
 
 ---
 
