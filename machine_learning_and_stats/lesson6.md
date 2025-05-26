@@ -247,6 +247,20 @@ marp: true
     - $\text{Dir}(\pi_{1:n} | \alpha_{1:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
         - $\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$: とりうる$n$種類の値が出る確率
         - $\alpha_{1:n}$: ベータ分布の$\alpha, \beta$に相当
-            - $n=2$だとベータ分布に
+            - $n=2$だとベータ分布に（導出してみましょう。解答: 次ページ）
 - 図はWikipediaでも見てください
     - ベータ分布を立体化したような形状
+
+---
+
+### ディリクレ分布からベータ分布への変換
+
+- $n=2$なのでこうなる
+    - $p(\pi_{1:2} | \alpha_{1:2}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}$
+- $\pi_1 + \pi_2 = 1$なので、
+    - $p(\pi_{1}, \pi_{2} | \alpha_{1:2}) = \eta \pi_1^{\alpha_1-1}(1-\pi_1)^{\alpha_2-1}$
+    - $p(\pi_{1}, 1-\pi_{1} | \alpha_{1:2}) = \eta \pi_1^{\alpha_1-1}(1-\pi_1)^{\alpha_2-1}$
+- 「$\pi_1$と$1-\pi_1$」の分布というのはつまり$\pi_1$の分布なので
+    - $p(\pi_{1} | \alpha_{1:2}) = \eta \pi_1^{\alpha_1-1}(1-\pi_1)^{\alpha_2-1}$
+- $\pi_1=t$、$\alpha_1 = \alpha$、$\alpha_2 = \beta$とおくと
+    - $p(t | \alpha,\beta) = \eta t^{\alpha-1}(1-t)^{\beta-1}$
