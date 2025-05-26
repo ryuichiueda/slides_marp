@@ -73,12 +73,12 @@ marp: true
 
 ---
 
-## CNN
+## CNN（convolutional neural network）
 
-- convolutional neural network
-    - テレビ局ではないです
-    - convolutional: 「畳み込みの」
-    -  画像の近いところの画素値を入力して出力するニューロンを多用
-        - 画像の近いところ: $n\times n$画素の正方形領域
+- テレビ局ではないです
+- convolutional: 「畳み込みの」
+-  画像の近いところの画素値を入力して
+出力するニューロンを多用（右図）
+    - 画像の近いところ: $n\times n$画素の正方形領域
 
 ![bg right:30% 90%](./figs/convolution_neuron.png)
