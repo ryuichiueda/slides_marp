@@ -84,3 +84,13 @@ marp: true
     - さらに下の層でも畳み込みすることで全体の特徴を捉える
 
 ![bg right:30% 90%](./figs/convolution_neuron.png)
+
+---
+
+### CNNの構造
+
+
+---
+
+### GAN（generative adversarial networks）
+
