@@ -95,3 +95,4 @@ marp: true
 ### GAN（generative adversarial networks）
 
 - 敵対的生成ネットワーク
+    - 絵を描く人工ニューラルネットワーク
