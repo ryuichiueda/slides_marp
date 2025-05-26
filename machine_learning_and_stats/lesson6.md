@@ -245,7 +245,7 @@ marp: true
         - ディリクレ分布からさいころが製造されるイメージ
 - 分布の式
     - $\text{Dir}(\pi_{1:n} | \alpha_{1:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
-        - $\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$: とりうる$n$種類の値が出る確率
+        - $\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$: とりうる$n$種類の値が出る確率（足すと1）
         - $\alpha_{1:n}$: ベータ分布の$\alpha, \beta$に相当
             - $n=2$だとベータ分布に（導出してみましょう。解答: 次ページ）
 - 図はWikipediaでも見てください
