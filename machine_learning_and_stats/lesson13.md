@@ -49,3 +49,70 @@ marp: true
     （つまり条件付き確率を求める）
     - 大量の文章から学習
     - 予想できるようになったネットワークの途中の層の重みからベクトルが計算できる
+
+---
+
+### skip-gramの埋め込みでできるもの
+
+- 単語が$w_1, w_2, \dots, w_N$だけあると、それぞれに対応する埋め込みのベクトル
+$\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$ができる
+    - 並べると$X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列に
+- もうひとつ、左右の単語の予測のための行列$U$というものもできる
+    - $P(w_j | w_i) = \text{softmax}_{w_j}(U \boldsymbol{x}_{w_i})$
+        - ベクトル$U\boldsymbol{x}_{w_i}$: $w_i$に対する各単語の関連性の強さを表す
+        - $\text{softmax}$: ソフトマックス関数（強さを確率に正規化する関数）
+    - $U=[\boldsymbol{u}_{w_1}\ \boldsymbol{u}_{w_2}\ \dots\ \boldsymbol{u}_{w_N}]^\top$を構成するベクトル$\boldsymbol{u}_{w_j}$も埋め込みのベクトル
+        - おそらく双対ベクトルの一種
+
+---
+
+### 埋め込みができて、skip-gramができればコンピュータが文章を認識する?
+
+・・・ことはできない
+
+- 最尤な単語をskip-gramで予想して並べていけばそれっぽい文は作れるけど、たぶん無意味な文ができる
+    - マルコフ連鎖ジェネレータのようなもの
+- 単純な埋め込みには限界
+    - 語順に関する情報は、完全にはない
+    - 文脈依存な情報を持っていない
+        - 同音異義語に1つのベクトル$\rightarrow$区別してない
+            - 例: チンチラ（げっ歯類にも猫にもいる）
+
+![bg right:20% 100%](./figs/Chinchilla.jpg)
+
+
+<span style="font-size:70%">
+<a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">写真上 by Guérin Nicolas（CC BY-SA 3.0）</a>
+<a href="https://commons.wikimedia.org/wiki/File:Chinchilla_cat_(3228221937).jpg">写真下 by allen watkin（CC BY-SA 2.0）</a>
+
+---
+
+## どうすればいいか?
+
+- 埋め込みに語順と文脈の情報を付加してやるとよい
+    - 前ページのスライドを逆に考えると、そういうことになる
+- <span style="color:red">Transformer</span>（のエンコーダ）
+    - そのような仕組みで、文の情報を埋め込みに追加
+        - 「文脈化トークン埋め込み」を出力
+
+
+---
+
+### Transformerのエンコーダ（学習済みのものの説明）
+
+- 入力: 文
+    - 単語に（実際はもっと細かく）分けて、埋め込みのベクトルに変換
+        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+- 文への位置情報の付加
+    - $H = E + P$という行列$H$を作成
+       - $P$には単語が文の何番目にあるかの情報が入る
+           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
+
+<center>とりあえずこれで入力に位置情報が加わる</center>
+
+---
+
+### 文脈の情報の埋め込み
+
+- 自己注意機構
+
