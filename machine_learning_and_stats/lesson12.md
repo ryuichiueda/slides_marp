@@ -78,4 +78,7 @@ marp: true
 - convolutional neural network
     - テレビ局ではないです
     - convolutional: 「畳み込みの」
-        - ここでの意味: 画像の近いところの画素値を入力して出力するニューロンを多用
+    -  画像の近いところの画素値を入力して出力するニューロンを多用
+        - 画像の近いところ: $n\times n$画素の正方形領域
+
+![bg right:30% 90%](./figs/convolution_neuron.png)
