@@ -66,12 +66,13 @@ marp: true
 ### どうやって「真ん中」を決めるか
 
 - 線とそれぞれの点の$y$軸方向の距離を損失と考えて、距離の2乗を足して最小化
-    - $\{w_1 x_1 + w_0 -y_1\}^2+\{w_1 x_2 + w_0 -y_2\}^2+$
-    $\dots+\{w_1 x_N + w_0 -y_N\}^2$
-    $= \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$の値を最小化
+    - <span style="color:red">損失関数</span>$\mathcal{L} = \{w_1 x_1 + w_0 -y_1\}^2$
+    $\qquad\qquad+\{w_1 x_2 + w_0 -y_2\}^2+\dots$
+    $\qquad\qquad+\{w_1 x_N + w_0 -y_N\}^2$
+    $\qquad\qquad= \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$の値を最小化
     - なんで2乗?: 必然性はないが分散を最小にしたいと解釈すれば自然
 
-![bg right:30% 100%](./figs/lsm_liner.png)
+![bg right:30% 100%](./figs/lsm_loss.png)
 
 ---
 
