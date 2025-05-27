@@ -86,14 +86,8 @@ marp: true
     * $\nabla L(w_{1:2}) = 2 \sum_{i=1}^N \begin{pmatrix} \left\{ (w_1 x_i + w_2 ) - y_i  \right\}x_i \\ \left\{ (w_1 x_i + w_2 ) - y_i  \right\} \end{pmatrix}$
     $= 2N \begin{pmatrix} w_1 \overline{x^2} + w_2 \bar{x} - \overline{xy} \\ w_1 \bar{x} + w_2 - \bar{y} \end{pmatrix} = \boldsymbol{0}$（$\overline{\ }$は平均値）
 <span style="color:red">$\Longrightarrow (w_1 , w_2) = \left( \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2} , \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2}  \right)$</span>
+
 ---
-
-### 一般的な回帰
-
-- $L\left[w_{0:M} | (x,y)_{1:N}\right] = \sum_{i=1}^N \left\{f(x_i | w_{0:M}) - y_i \right\}^2$
-の最小化
-    - データ$(x, y)_{1:N}$に対して$y=f(x|w_{0:M})$を当てはめる場合
-        - （$a_{1:n}$は$a_1, a_2, \dots, a_n$の略記）
 
 
 ---
