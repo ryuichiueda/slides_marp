@@ -71,6 +71,8 @@ marp: true
     $\qquad\qquad+\{w_1 x_N + w_0 -y_N\}^2$
     $\qquad\qquad= \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$の値を最小化
     - なんで2乗?: 必然性はないが分散を最小にしたいと解釈すれば自然
+- 「損失関数の最小化」は機械学習のほぼすべての
+手法で共通の考え方
 
 ![bg right:30% 100%](./figs/lsm_loss.png)
 
