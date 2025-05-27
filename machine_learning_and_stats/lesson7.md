@@ -91,7 +91,7 @@ marp: true
 
 ### 計算してみましょう
 
-- $\Longrightarrow (w_1 , w_2) = \left( \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2} , \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2}  \right)$
+- 式: $(w_1 , w_2) = \left( \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2} , \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2}  \right)$
 
 ---
 
