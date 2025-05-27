@@ -100,6 +100,7 @@ marp: true
 
 ### 計算してみましょう
 
+- $(x,y) = (2,3), (6,2), (-3,1), (-6,2)$
 - 式: $(w_0 , w_1) = \left(
 \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2},
 \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2}
