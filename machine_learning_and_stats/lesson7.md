@@ -84,7 +84,7 @@ marp: true
     - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
 - 前ページの式を解くと（$(x,y) = (x \ y)^\top$としています）
     * $\nabla L(w_{1:2}) = 2 \sum_{i=1}^N \begin{pmatrix} \left\{ (w_1 x_i + w_2 ) - y_i  \right\}x_i \\ \left\{ (w_1 x_i + w_2 ) - y_i  \right\} \end{pmatrix}$
-    $= 2N \begin{pmatrix} w_1 \overline{x^2} + w_2 \bar{x} - \overline{xy} \\ w_1 \bar{x} + w_2 - \bar{y} \end{pmatrix} = \boldsymbol{0}$
+    $= 2N \begin{pmatrix} w_1 \overline{x^2} + w_2 \bar{x} - \overline{xy} \\ w_1 \bar{x} + w_2 - \bar{y} \end{pmatrix} = \boldsymbol{0}$（$\overline{\ }$は平均値）
 <span style="color:red">$\Longrightarrow (w_1 , w_2) = \left( \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2} , \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2}  \right)$</span>
 ---
 
