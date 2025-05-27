@@ -112,6 +112,16 @@ marp: true
 
 ### 答え
 
+- $(x,y) = (2,3), (6,2), (-3,1), (-6,2)$に対して最小二乗法を適用
+    - 各種平均値を計算
+        - $\overline{x}= -1/4$
+        - $\overline{y}= 2$
+        - $\overline{x^2}= 85/4$
+        - $\overline{xy}= 3/4$
+    - $w_0 = (\overline{x^2}\bar{y} - \overline{xy}\bar{x})/(\overline{x^2} - \bar{x}^2)= 2.01$
+    - $w_1 = (\overline{xy} - \bar{x}\bar{y})/(\overline{x^2} - \bar{x}^2)= 0.0590$
+    $\Longrightarrow y=0.0590 x + 2.01$
+
 
 
 ![bg right:40% 100%](./figs/lms_ans.png)
