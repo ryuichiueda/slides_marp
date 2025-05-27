@@ -100,11 +100,13 @@ marp: true
 
 ### 計算してみましょう
 
-- $(x,y) = (2,3), (6,2), (-3,1), (-6,2)$
+- $(x,y) = (2,3), (6,2), (-3,1), (-6,2)$に対して最小二乗法を適用
 - 式: $(w_0 , w_1) = \left(
 \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2},
 \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2}
 \right)$
+
+![bg right:40% 100%](./figs/lms_problem.png)
 
 ---
 
