@@ -80,8 +80,16 @@ marp: true
 
 - 損失関数をパラメータで偏微分して、$0$になるパラメータを求める
     - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
-- 前ページの式を解くと（$(x,y) = (x \ y)^\top$としています）
-    * $\nabla L(w_{0:1}) = 2 \sum_{i=1}^N \begin{pmatrix}
+- 前ページの式を解いてみましょう
+    - $\mathcal{L}(w_{0:1}| x_{1:N}, y_{1:N}) = \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
+
+---
+
+### 答え
+
+ （$(x,y) = (x \ y)^\top$としています）
+
+- $\nabla L(w_{0:1}) = 2 \sum_{i=1}^N \begin{pmatrix}
     \left\{ (w_1 x_i + w_0 ) - y_i  \right\} \\
     \left\{ (w_1 x_i + w_0 ) - y_i  \right\}x_i
     \end{pmatrix}$
@@ -99,7 +107,7 @@ marp: true
 ### 計算してみましょう
 
 - $(x,y) = (2,3), (6,2), (-3,1), (-6,2)$に対して最小二乗法を適用
-- 式: $(w_0 , w_1) = \left(
+- 式（さっき求めたもの）: $(w_0 , w_1) = \left(
 \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2},
 \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2}
 \right)$
