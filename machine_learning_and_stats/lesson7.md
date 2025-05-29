@@ -174,9 +174,9 @@ marp: true
     - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
 - わかること
     - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは
-    $\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$のとき
+    $<span style="color:red">\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>のとき
         - 内積が最小になる
-    - $\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$となるようにパラメータを更新すればよい
+    - 上記の赤字の式にしたがってパラメータを更新すればよい
 
 
 ---
