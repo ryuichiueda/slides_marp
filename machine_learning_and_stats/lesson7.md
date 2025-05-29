@@ -203,4 +203,4 @@ marp: true
    $\rightarrow$正しいこともあるが、単にデータが少ないだけかもしれない
    - 人間でもよくある
 
-![bg right:30% 100%](./figs/lms_ans.png)
+![bg right:40% 90%](./figs/lms_overfit.png)
