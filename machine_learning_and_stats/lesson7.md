@@ -80,8 +80,11 @@ marp: true
 
 - 損失関数をパラメータで偏微分して、$0$になるパラメータを求める
     - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
+        - $w_0$、$w_1$をどうずらしてもそれ以上$\mathcal{L}$の値が変わらない
+        $\Rightarrow$ほかにそういう点がなければそのときの値が$\mathcal{L}$の最小値
 - 前ページの式を解いてみましょう
     - $\mathcal{L}(w_{0:1}| x_{1:N}, y_{1:N}) = \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
+        - $w_0$、$w_1$それぞれで微分するだけ
 
 ---
 
@@ -149,11 +152,12 @@ marp: true
 
 ---
 
-## 一般的な回帰
+## 微分方程式で解けない場合の最適化
 
-- $n+1$個のパラメータで構成される式
-    - 線形な式: $y=w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + \cdots + w_n x^n$
-    - もっと複雑な式: $y=w_0 + w_1 \phi_1(x) + w_2 \phi_2(x) + w_3 \phi_3(x) + \cdots + w_n \phi_n(x)$
+- $n$個のパラメータで構成される損失関数の最適化を考えてみましょう
+    - $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$
+        - どうやって$w_{1:n}$をいじて$\mathcal{L}$の値を減らすか
+
 
 ---
 
