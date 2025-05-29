@@ -79,7 +79,7 @@ marp: true
 ### 損失関数を最小化するパラメータの導出
 
 - 損失関数をパラメータで偏微分して、$0$になるパラメータを求める
-    - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
+    - $\nabla \mathcal{L}(w_{0:1} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
         - $w_0$、$w_1$をどうずらしてもそれ以上$\mathcal{L}$の値が変わらない
         $\Rightarrow$ほかにそういう点がなければそのときの値が$\mathcal{L}$の最小値
 - 前ページの式を解いてみましょう
@@ -163,6 +163,19 @@ marp: true
         「よりよく」なる
     - 問題: いろいろ$\Delta w_{1:n}$を試すとよいんだけどパラメータが多いと組み合わせが多くて大変
     $\Rightarrow$計算で一番よい$\Delta w_{1:n}$を求められないだろうか?
+
+---
+
+### ふたたび偏微分
+
+- $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
+    は、$w_0, w_1, \dots, w_n$それぞれを少しずらしたときの$\mathcal{L}$の変化量
+- 変化量の計算
+    - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(\boldsymbol{w})^\top \Delta \boldsymbol{w}$
+- わかること
+    - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは
+    $\Delta w_{1:n} = - \alpha \nabla \mathcal{L}$のとき
+
 
 ---
 
