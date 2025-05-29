@@ -171,10 +171,12 @@ marp: true
 - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
     は、$w_0, w_1, \dots, w_n$それぞれを少しずらしたときの$\mathcal{L}$の変化量
 - 変化量の計算
-    - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(\boldsymbol{w})^\top \Delta \boldsymbol{w}$
+    - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
 - わかること
     - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは
-    $\Delta w_{1:n} = - \alpha \nabla \mathcal{L}$のとき
+    $\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$のとき
+        - 内積が最小になる
+    - $\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$となるようにパラメータを更新すればよい
 
 
 ---
