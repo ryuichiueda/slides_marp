@@ -108,6 +108,7 @@ marp: true
     - そのような仕組みで、文の情報を埋め込みに追加
         - 「文脈化トークン埋め込み」を出力
 
+![w:800](./figs/add_context_embedding.png)
 
 ---
 
