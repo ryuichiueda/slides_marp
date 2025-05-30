@@ -52,11 +52,24 @@ marp: true
 
 ---
 
-### skip-gramの埋め込みでできるもの
+### skip-gramの埋め込みでできるもの1
 
-- 単語が$w_1, w_2, \dots, w_N$だけあると、それぞれに対応する埋め込みのベクトル
-$\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$ができる
+- 単語が$w_1, w_2, \dots, w_N$だけあると、それぞれに対応する埋め込みのベクトル$\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$ができる
     - 並べると$X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列に
+    - 空間にプロットすると右図のような分布ができる
+        - 意味的に近いものが近くに
+        - 空間の次元が高いので切り出し方によって
+        様々な意味での遠近が出現
+- これらの行列やプロットを作ることやできたものそのものを「埋め込み」と呼んでいる 
+
+
+
+![bg right:20% 100%](./figs/embedding.png)
+
+---
+
+### skip-gramの埋め込みでできるもの2
+
 - もうひとつ、左右の単語の予測のための行列$U$というものもできる
     - $P(w_j | w_i) = \text{softmax}_{w_j}(U \boldsymbol{x}_{w_i})$
         - ベクトル$U\boldsymbol{x}_{w_i}$: $w_i$に対する各単語の関連性の強さを表す
