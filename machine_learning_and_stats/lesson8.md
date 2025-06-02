@@ -143,7 +143,7 @@ marp: true
 
 ### データが複数の場合
 
-- データがはいるごとに事後分布を事前分布にして更新
+- 最小二乗法のように一気に計算可能
 - データ$(x,y)_{1:N}$に対する事後分布:
     - $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
         - $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0$ 
