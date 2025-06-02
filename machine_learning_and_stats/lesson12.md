@@ -87,8 +87,9 @@ marp: true
 
 ---
 
-### CNNの構造
+### CNNの構造1: 畳み込み層
 
+![bg right:20% 90%](./figs/cnn_conv.png)
 
 ---
 
