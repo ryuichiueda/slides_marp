@@ -114,6 +114,11 @@ marp: true
 
 ---
 
+### CNNの構成例
+
+
+---
+
 ## GAN（generative adversarial networks）
 
 - 敵対的生成ネットワーク
