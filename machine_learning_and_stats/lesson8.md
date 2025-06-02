@@ -6,7 +6,7 @@ marp: true
 
 # 機械学習
 
-## 第8回: 法則性の発見+自信のなさの見積もり: ベイズ線型回帰
+## 第8回: 法則性の発見+自信のなさの見積もり: ベイズ線形回帰
 
 千葉工業大学 上田 隆一
 
@@ -21,7 +21,7 @@ marp: true
 
 ## 今日やること
 
-- ベイズ線型回帰
+- ベイズ線形回帰
 
 ---
 
@@ -37,7 +37,7 @@ marp: true
 
 ---
 
-## ベイズ線型回帰
+## ベイズ線形回帰
 
 - $y = f(x)$の分布を考える
     - 関数の分布ってなに? $\Rightarrow$ パラメータの分布
@@ -45,13 +45,13 @@ marp: true
     - $w_1$と$w_0$の確率分布を考える
     - 右図: $w_1, w_0$それぞれをガウス分布で分布すると考えてサンプリング
         - どちらも平均値$0$、標準偏差$1$
-        - データ（黒丸）に合うように、<span style="color:red">ベイズの定理で</span>$w_1, w_0$の分布を変更していく
+        - データ（丸印）に合うように、<span style="color:red">ベイズの定理で</span>$w_1, w_0$の分布を変更していく
 
-![bg right:30% 100%](./figs/line_sampling.png)
+![bg right:30% 100%](./figs/line_sampling2.png)
 
 ---
 
-### ベイズ線型回帰でよくなること
+### ベイズ線形回帰でよくなること
 
 - データ数が少ないときに解を曖昧にしておける
 - 事前分布に予測を盛り込める
@@ -60,7 +60,7 @@ marp: true
 
 ---
 
-### 回帰のための数式
+### ベイズ線形回帰のための数式
 
 ややこしいので意味だけ考えましょう
 
@@ -91,10 +91,12 @@ marp: true
 ### 回帰のための数式（続き）
 
 - 仮定3: $\lambda$の値も分からないので確率分布で表現（最初は大きくばらつく）
-    - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布、下図）
-        - $\lambda = 10^{-2}$で$y_i$のばらつきの標準偏差が$10$
+    - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
+        - 下図(a): ガンマ分布の確率分布
+        - 下図(b): (a)の横軸をlog尺にしたもの
+    - $\lambda = 10^{-2}$で$y_i$のばらつきの標準偏差が$10$
 
-<center><img width=60% src="./figs/gamma_dist.png" /></center>
+<center><img width=50% src="./figs/gamma_dist.png" /></center>
 
 
 ---
@@ -135,20 +137,20 @@ marp: true
 
 
 <br />
-<center>今の話、結局何をやってたのかグループで議論を</center>
+<center>今の話、結局何をやってたのか、何に役立つのかグループで議論を</center>
 
 ---
 
 ### データが複数の場合
 
-- データがはいるごとに事後分布を事前分布にして更新
+- 最小二乗法のように一気に計算可能
 - データ$(x,y)_{1:N}$に対する事後分布:
     - $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
         - $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0$ 
 	    - $\boldsymbol{\mu}_N = \Lambda_N^{-1}\left( \sum_{i=1}^N y_i \boldsymbol{\phi}(x_i)+ \Lambda_0\boldsymbol{\mu}_0 \right)$
 	    - $a_N = \dfrac{N}{2} + a_0$
 	    - $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 -  \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
-            - ここで$\phi(x_i) = (1 \ \ x \ \ x^2 \ \ \dots \ \ x^n)^\top$
+            - ここで$\phi(x_i) = (1 \ \ x_i )^\top$
 
 <center style="color:red">これもデータと事前分布のパラメータを当てはめるだけ</center>
 
@@ -178,6 +180,7 @@ marp: true
 ## まとめ
 
 - ベイズの定理で回帰がより一般的に
+    - 関数の分布=パラメータの分布と考える
     - データの不足によるあいまいさをも考慮可能に
 - ベイズ線形回帰の導出
     - 難しいが結果は機械的に使用可能
