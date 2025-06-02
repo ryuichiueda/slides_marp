@@ -91,10 +91,12 @@ marp: true
 ### 回帰のための数式（続き）
 
 - 仮定3: $\lambda$の値も分からないので確率分布で表現（最初は大きくばらつく）
-    - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布、下図）
-        - $\lambda = 10^{-2}$で$y_i$のばらつきの標準偏差が$10$
+    - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
+        - 下図(a): ガンマ分布の確率分布
+        - 下図(b): (a)の横軸をlog尺にしたもの
+    - $\lambda = 10^{-2}$で$y_i$のばらつきの標準偏差が$10$
 
-<center><img width=60% src="./figs/gamma_dist.png" /></center>
+<center><img width=50% src="./figs/gamma_dist.png" /></center>
 
 
 ---
