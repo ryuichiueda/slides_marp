@@ -89,6 +89,8 @@ marp: true
 
 ### CNNの構造1: 畳み込み層
 
+- 画像の一部（n$\times$n）領域の画素値をひとつの値に置き換えて下流に送る（上図）
+
 ![bg right:20% 90%](./figs/cnn_conv.png)
 
 ---
