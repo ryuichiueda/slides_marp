@@ -124,7 +124,7 @@ marp: true
         - $\eta$は正規化定数$\rightarrow$つまり<span style="color:red">確率として扱われる</span>
 - 例: なにか画像が入力されて、出力
 
-![bg right:30% 90%](./figs/softmax_layer.png)
+![bg right:26% 95%](./figs/softmax_layer.png)
 
 ---
 
