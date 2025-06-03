@@ -120,7 +120,8 @@ marp: true
 
 - なにかを選択するタスクに対して使用される
     - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し
-        $y_i = \eta e^{x_i}$を出力
+    <span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
+        - $\eta$は正規化定数で、つまり<span style="color:red">確率として扱われる</span>
 - 例: なにか画像が入力されて、出力
 
 ---
