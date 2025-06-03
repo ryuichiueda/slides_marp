@@ -110,7 +110,18 @@ marp: true
     - 最大値を残す「maxプーリング」が主に使われる
 - 学習はしない
 
-![bg right:30% 90%](./figs/cnn_pooling.png)
+![bg right:23% 90%](./figs/cnn_pooling.png)
+
+---
+
+### CNNの部品: ソフトマックス層
+
+注意: CNN以外にも使われます
+
+- なにかを選択するタスクに対して使用される
+    - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し
+        $y_i = \eta e^{x_i}$を出力
+- 例: なにか画像が入力されて、出力
 
 ---
 
