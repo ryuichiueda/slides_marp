@@ -118,11 +118,14 @@ marp: true
 
 注意: CNN以外にも使われます
 
-- なにかを選択するタスクに対して使用される
+- 使用例: 画像に映ったものを判別
+    - ひとつに答えを決めないで確率で出力
+        - 例: 犬90%、猫9%、他1%
+        - 「ソフトな最大値」: 最大値を1つに決めないということ
+    - 実世界は微妙な写真が多いので、1つに決めないで少し曖昧に出力したほうがよい
+- 数式
     - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し
-    <span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
-        - $\eta$は正規化定数$\rightarrow$つまり<span style="color:red">確率として扱われる</span>
-- 例: なにか画像が入力されて、出力
+    <span style="color:red">$y_i = \eta e^{x_i}$</span>を出力（$\eta$は正規化定数$\rightarrow$）
 
 ![bg right:26% 95%](./figs/softmax_layer.png)
 
