@@ -135,8 +135,10 @@ marp: true
 - <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
     - 行列$W_\text{q}, W_\text{k}, W_\text{v}$という3つの行列を使う
         - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
-    - 3つの行列から、$H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
-        - 3つの行列から次のベクトルを作成
+    - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
+        - $\boldsymbol{k_i} = W_\text{k}\boldsymbol{h}_i$（キー埋め込み）
+        - $\boldsymbol{v_i} = W_\text{v}\boldsymbol{h}_i$（バリュー埋め込み）
+        - $\boldsymbol{q_i} = W_\text{q}\boldsymbol{h}_i$（クエリ埋め込み）
 
 ---
 
