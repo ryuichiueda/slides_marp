@@ -133,6 +133,7 @@ marp: true
 
 ## Transformerのエンコーダ: 文脈情報の付加
 
+- <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
 
 ---
 
