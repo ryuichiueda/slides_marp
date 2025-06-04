@@ -117,8 +117,6 @@ marp: true
 ## Transformerのエンコーダ: 入力
 
 
-注意: これからするのは学習済みのものの説明
-
 - 入力: 文
     - 単語に（実際はもっと細かく）分けて、埋め込みのベクトルに変換
         - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
@@ -135,6 +133,8 @@ marp: true
 ## Transformerのエンコーダ: 文脈情報の付加
 
 - <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
+    - 行列$W_\text{q}, W_\text{k}, W_\text{v}$という3つの行列を使う
+        - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
 
 ---
 
