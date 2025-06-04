@@ -118,12 +118,13 @@ marp: true
 
 
 - 入力: 文
-    - 単語に（実際はもっと細かく）分けて、埋め込みのベクトルに変換
+    - トークン（単語をより細かく文を区切ったもの）に分けて、
+    埋め込みのベクトルに変換
         - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
 - 文への位置情報の付加
     - $H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$という行列$H$を作成
        - $D$: ベクトルの次元（正規化のため）
-       - $P$には単語が文の何番目にあるかの情報が入る
+       - $P$にはトークンが文の何番目にあるかの情報が入る
            - 単純に「何番目か」ではなく三角関数を使ったややこしもの
 
 <center>とりあえずこれで入力に位置情報が加わる</center>
@@ -136,9 +137,9 @@ marp: true
     - 行列$W_\text{q}, W_\text{k}, W_\text{v}$という3つの行列を使う
         - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
     - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
-        - $\boldsymbol{k_i} = W_\text{k}\boldsymbol{h}_i$（キー埋め込み）
-        - $\boldsymbol{v_i} = W_\text{v}\boldsymbol{h}_i$（バリュー埋め込み）
-        - $\boldsymbol{q_i} = W_\text{q}\boldsymbol{h}_i$（クエリ埋め込み）
+        - $\boldsymbol{k}_i = W_\text{k}\boldsymbol{h}_i$（キー埋め込み）
+        - $\boldsymbol{v}_i = W_\text{v}\boldsymbol{h}_i$（バリュー埋め込み）
+        - $\boldsymbol{q}_i = W_\text{q}\boldsymbol{h}_i$（クエリ埋め込み）
     - 3つのベクトルを使う自己注意機構なので特に
     「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
 
@@ -149,9 +150,15 @@ marp: true
 
 - $\boldsymbol{k}_i, \boldsymbol{v}_i, \boldsymbol{q}_i$から、文脈を考慮した埋め込みベクトルを計算
     - 手順
-        - $i$番目の単語と$j$番目の単語の関連性を次のように計算
+        - $i$番目のトークンと$j$番目のトークンの関連性の強さを次のように計算
             - $s_{ij} = \boldsymbol{q}_i^\top \boldsymbol{k}_j/\sqrt{D}$（内積）
-    - $\boldsymbol{q}_i, \boldsymbol{k}_i$から単語間の関連性を計算
+        - $s_{ij}$をソフトマックス関数で合計1に正規化
+            - $\alpha_{ij} = e^{s_{ij}}/\sum_{j'=1}^Ne^{s_{ij'}}$
+        - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
+            - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
+            - 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{e}_{o_N}]^\top$という行列
+            （文脈化トークン埋め込み）が出力される
+
 
 ---
 
