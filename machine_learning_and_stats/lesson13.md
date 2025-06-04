@@ -105,10 +105,11 @@ marp: true
 - 埋め込みに語順と文脈の情報を付加してやるとよい
     - 前ページのスライドを逆に考えると、そういうことになる
 - <span style="color:red">Transformer</span>（のエンコーダ）
-    - そのような仕組みで、文の情報を埋め込みに追加
-        - 「文脈化トークン埋め込み」を出力
+    - 入力: 埋め込みに位置情報を加えて変更したもの
+    - 出力: <span style="color:red">文脈化トークン埋め込み</span>
+        - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
 
-![w:1200](./figs/add_context_embedding.png)
+![w:1000](./figs/add_context_embedding.png)
 
 ---
 
