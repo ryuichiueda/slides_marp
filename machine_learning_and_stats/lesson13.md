@@ -131,7 +131,7 @@ marp: true
 
 ---
 
-## Transformerのエンコーダ: 文脈情報の付加1
+### Transformerのエンコーダ: 文脈情報の付加1
 
 - <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
     - 行列$W_\text{q}, W_\text{k}, W_\text{v}$という3つの行列を使う
@@ -146,7 +146,7 @@ marp: true
 
 ---
 
-## Transformerのエンコーダ: 文脈情報の付加2
+### Transformerのエンコーダ: 文脈情報の付加2
 
 - $\boldsymbol{k}_i, \boldsymbol{v}_i, \boldsymbol{q}_i$から、文脈を考慮した埋め込みベクトルを計算
     - 手順
@@ -156,9 +156,15 @@ marp: true
             - $\alpha_{ij} = e^{s_{ij}}/\sum_{j'=1}^Ne^{s_{ij'}}$
         - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
             - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
-- 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列（文脈化トークン埋め込み）
-が出力される
 
+---
+
+### Transformerのエンコーダ: 文脈情報の付加3
+
+- $\boldsymbol{o}_i$をフィードフォワード層に通す
+    - このあと2層のニューラルネットワークを通ってさらに文脈が強化されて出力される文脈化トークン埋め込みに
+
+- 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列が出力される
 
 ---
 
