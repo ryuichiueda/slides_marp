@@ -130,7 +130,7 @@ marp: true
 
 ---
 
-## Transformerのエンコーダ: 文脈情報の付加
+## Transformerのエンコーダ: 文脈情報の付加1
 
 - <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
     - 行列$W_\text{q}, W_\text{k}, W_\text{v}$という3つの行列を使う
@@ -139,6 +139,16 @@ marp: true
         - $\boldsymbol{k_i} = W_\text{k}\boldsymbol{h}_i$（キー埋め込み）
         - $\boldsymbol{v_i} = W_\text{v}\boldsymbol{h}_i$（バリュー埋め込み）
         - $\boldsymbol{q_i} = W_\text{q}\boldsymbol{h}_i$（クエリ埋め込み）
+    - 3つのベクトルを使う自己注意機構なので特に
+    「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
+
+
+---
+
+## Transformerのエンコーダ: 文脈情報の付加1
+
+
+    - クエリ埋め込みとキー埋め込みから単語間の関連性を計算
 
 ---
 
