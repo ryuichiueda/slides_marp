@@ -156,8 +156,8 @@ marp: true
             - $\alpha_{ij} = e^{s_{ij}}/\sum_{j'=1}^Ne^{s_{ij'}}$
         - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
             - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
-            - 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{e}_{o_N}]^\top$という行列
-            （文脈化トークン埋め込み）が出力される
+- 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列（文脈化トークン埋め込み）
+が出力される
 
 
 ---
