@@ -145,10 +145,13 @@ marp: true
 
 ---
 
-## Transformerのエンコーダ: 文脈情報の付加1
+## Transformerのエンコーダ: 文脈情報の付加2
 
-
-    - クエリ埋め込みとキー埋め込みから単語間の関連性を計算
+- $\boldsymbol{k}_i, \boldsymbol{v}_i, \boldsymbol{q}_i$から、文脈を考慮した埋め込みベクトルを計算
+    - 手順
+        - $i$番目の単語と$j$番目の単語の関連性を次のように計算
+            - $s_{ij} = \boldsymbol{q}_i^\top \boldsymbol{k}_j/\sqrt{D}$（内積）
+    - $\boldsymbol{q}_i, \boldsymbol{k}_i$から単語間の関連性を計算
 
 ---
 
