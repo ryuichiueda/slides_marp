@@ -108,9 +108,9 @@ marp: true
     - 入力: 埋め込みに位置情報を加えて変更したもの
     - 出力: <span style="color:red">文脈化トークン埋め込み</span>
         - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
-        - 次の単語の予測などに有用な埋め込みが作れる（使い方はあとで）
+        - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
 
-![w:900](./figs/add_context_embedding.png)
+![w:1100](./figs/add_context_embedding.png)
 
 ---
 
