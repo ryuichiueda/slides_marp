@@ -144,7 +144,7 @@ marp: true
 
 ---
 
-### CNNの構成例
+### CNNの構成例: AlexNet [Krizhevsky2012]
 
 
 ---
