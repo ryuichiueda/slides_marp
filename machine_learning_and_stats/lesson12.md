@@ -146,7 +146,13 @@ marp: true
 
 ### CNNの構成
 
+<a style="font-size:80%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">画像: Cmglee, CC BY-SA 4.0</a>
+
 - 例: 画像に写っているものが何かを答えるための構成
+    - 「Dense」はアフィンレイヤー
+    - 「flatten」は配列状のデータを1列にすること
+
+![bg right:60% 100%](./figs/Comparison_image_neural_networks.svg)
 
 
 ---
