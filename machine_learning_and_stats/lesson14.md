@@ -41,3 +41,5 @@ marp: true
 
 ### 行動決定のモデル
 
+- これも確率で考える
+    - $a \sim \Pi(a | \boldsymbol{x})$
