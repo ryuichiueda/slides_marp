@@ -62,7 +62,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
 - $\boldsymbol{\varepsilon}', \boldsymbol{z}_t$のばらつきの想定は、大抵の場合<span style="color:red">正規分布（ガウス分布）</span>
     - ある大きさのばらつきを想定した上で安定で効率の良い制御方法を考える
-    $\longrightarrow$もともと制御では確率が扱われていた
+    $\longrightarrow$もともと制御では確率が扱われていたが限定的
+    - 雑音がたとえば
+        - 「ロボットが段差に引っかかって90度向きがずれた（状態がワープ）」
+        - 「人がセンサを遮った（ばらつきと呼ぶには大きすぎる誤差）」
+        などの規模になると、上記数式で扱うのは困難
+
+<center style="color:red">⇒⇒⇒新しい枠組みが必要</center>
 
 ---
 
