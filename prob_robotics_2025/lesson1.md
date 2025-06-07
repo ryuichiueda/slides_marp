@@ -44,7 +44,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 制御と確率
 
 - いわゆる現代制御
-    - 状態方程式、出力方程式に基づいて機械やプラントの状態推定や制御
+    - 状態方程式、観測方程式に基づいて機械やプラントの状態推定や制御
+        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+            - 制御対象に$\boldsymbol{u}_t$という制御指令を出すと状態$\boldsymbol{x}_{t-1}$が状態$\boldsymbol{x}_t$に変化
+            - ただし<span style="color:red">雑音</span>$\boldsymbol{\varepsilon}$で$\boldsymbol{x}_t$がずれる
+        - 観測（出力）方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
+            - 時刻$t$の状態が$\boldsymbol{x}$だと、$\boldsymbol{z}_t$が観測される
 
 
 ---
