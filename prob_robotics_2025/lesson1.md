@@ -108,6 +108,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 近年の知能ロボティクス
 
+- 機械学習の実空間での応用
 - 機械学習
     - 確率ロボティクス（いわゆる現代制御理論を1段階抽象化したもの）
     - 人工ニューラルネットワーク（最適化手法、関数近似手法）
