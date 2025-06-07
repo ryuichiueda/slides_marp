@@ -41,6 +41,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 制御と確率
+
+- いわゆる現代制御
+    - 状態方程式、出力方程式に基づいて機械やプラントの状態推定や制御
+
+
+---
+
 ### 人間の判断の（いい加減な）例
 
 - 質問: なぜ事故が起きるかもしれない乗り物に乗るのか？
