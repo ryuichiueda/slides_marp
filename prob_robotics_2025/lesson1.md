@@ -149,7 +149,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - <span style="color:red">ある確率分布にしたがう雑音</span>がのった画像から雑音除去する方法を学習
     $\rightarrow$ノイズだけの画像を勝手に解釈して画像を生成
 
-<center>単に統計を学習するだけでなく、確率的になりつつある</center>
+<center>単に統計的な法則を学習するだけでなく、確率的な構造・問題設定により進化</center>
 
 ---
 
