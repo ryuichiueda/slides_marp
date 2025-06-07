@@ -55,6 +55,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 制御と雑音と確率
+
+- 再掲
+    - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+    - 観測（出力）方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
+
+---
+
 ### 人間の判断の（いい加減な）例
 
 - 質問: なぜ事故が起きるかもしれない乗り物に乗るのか？
