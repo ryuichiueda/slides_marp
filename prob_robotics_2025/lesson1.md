@@ -108,7 +108,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 近年のロボティクス
 
-- 確率ロボティクス、機械学習、
+- 確率ロボティクス（=制御）、機械学習、人工ニューラルネットワーク
 
 - 制御に対する確率ロボティクス
     - いわゆる現代制御理論を1段階抽象化したもの
