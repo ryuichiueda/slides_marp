@@ -86,6 +86,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 理詰めで考えすぎると・・・
     - エネルギーや時間がかかる（無限にかかるかも）
     - 人とコミュニケーションが成立しなくなる
+    - 「分からないけどとりあえず動いてみよう」ができない
 - 「みんな乗ってるから」
     - これができるから飛行機のことを仕組みから勉強しなくてもよい
     - <span style="font-size:50%">憲法が保証しているから勉強しなくても生きていける</span>
