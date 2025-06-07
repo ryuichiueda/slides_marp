@@ -41,7 +41,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 制御と確率
+### 運動の面からの理由: 制御と確率
 
 - いわゆる現代制御
     - 状態方程式、観測方程式に基づいて機械やプラントの状態推定や制御
@@ -70,9 +70,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <center style="color:red">⇒⇒⇒新しい枠組みが必要</center>
 
+
 ---
 
-### 人間の判断の（いい加減な）例
+### 知能の面からの理由: 人間の判断のいい加減さ
 
 - 質問: なぜ事故が起きるかもしれない乗り物に乗るのか？
     - 飛行機、自動車、ジェットコースター
@@ -82,7 +83,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - ◯◯だから安全
     - ◯◯だから私は乗らない
 * 不真面目な答え
-    * みんな乗ってるから
+    * <span style="color:red">みんな乗ってるから</span>
     * しらねー（はやくこのくだらない講義から開放してほしい）
     * うるせー（この講義終わったらどこに行こう？）
 
