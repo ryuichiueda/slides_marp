@@ -134,7 +134,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 飛行機の事故「率」: 仕組みが分からなくても統計はとれる
         - 新たに情報を得て、統計からの予測を修正するとき$\rightarrow$確率を使用
     - 「みんなそれを猫と言っている」も統計
-        - <span style="color:red">人工ニューラルネットワークが学習するのはコレ</span>
+        - <span style="color:red">人工ニューラルネットワークが学習してきたのはコレ</span>
 
 統計されとれればロボットが物理学者である必要はないかもしれないし、現に物理学者でない我々は日常生活ができているし、仕事をしている
 
