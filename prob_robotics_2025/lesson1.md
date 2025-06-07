@@ -145,7 +145,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - Transformer, GPT（Generative Pre-trained Transformer）
     - 冒頭/文の途中で、次に出力するのがふさわしい単語を選んで出力
         - 「ふさわしい単語」: 人からの質問、翻訳前の文、自身の出力したこれまでの文を考慮して、各単語が次にくる<span style="color:red">確率が最も高い単語</span>
-- 拡散モデル
+- 拡散モデル（Stable Diffusionなど）
     - <span style="color:red">ある確率分布にしたがう雑音</span>がのった画像から雑音除去する方法を学習
     $\rightarrow$ノイズだけの画像を勝手に解釈して画像を生成
 
