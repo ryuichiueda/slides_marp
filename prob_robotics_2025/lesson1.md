@@ -61,6 +61,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
     - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
 - $\boldsymbol{\varepsilon}', \boldsymbol{z}_t$のばらつきの想定は、大抵の場合<span style="color:red">正規分布（ガウス分布）</span>
+    - ある大きさのばらつきを想定した上で安定で効率の良い制御方法を考える
+    $\longrightarrow$もともと制御では確率が扱われていた
 
 ---
 
