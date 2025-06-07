@@ -105,6 +105,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 統計されとれればロボットが物理学者である必要はないかもしれないし、現に物理学者でない我々は日常生活ができている
 
+---
+
+### 近年のロボティクス
+
+- 制御に対する確率ロボティクス
+    - いわゆる現代制御理論を1段階抽象化したもの
+- 機械学習の手法群から見た確率ロボティクス
+    - 機械学習の一部
+    - 機械学習のブームの前にあったブーム
+<br />　
+- 補足: 機械学習ってなに？
+    - 大雑把に言うと<span style="color:red">データから何か原因を推論</span>する方法
+    - 人工ニューラルネットワークも含まれる
+
 --- 
 
 ### Probabilistic ROBOTICS（確率ロボティクス）
@@ -117,19 +131,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <img width="40%" src="./figs/probrobo_books.jpeg" />
 
----
 
-### 他の分野との関連性
-
-- 制御に対する確率ロボティクス
-    - いわゆる現代制御理論を1段階抽象化したもの
-- 機械学習の手法群から見た確率ロボティクス
-    - 機械学習の一部
-    - 機械学習のブームの前にあったブーム
-<br />　
-- 補足: 機械学習ってなに？
-    - 大雑把に言うと<span style="color:red">データから何か原因を推論</span>する方法
-    - 人工ニューラルネットワークも含まれる
 
 ---
 
