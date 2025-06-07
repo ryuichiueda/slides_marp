@@ -143,10 +143,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 運動・知能双方で確率・統計の考え方が大変重要
 
-- 2つの柱
-    - 確率ロボティクス（いわゆる現代制御理論を1段階抽象化したもの）
-    - 人工ニューラルネットワーク（最適化手法、関数近似手法）
-- いずれも「機械学習」の一部
 
 --- 
 
