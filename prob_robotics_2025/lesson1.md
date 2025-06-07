@@ -102,7 +102,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 出てきたデータの法則性を扱う
     - 例: 右の写真を見せたら100人中99人が「餃子」、
     1人が「シュウマイ」と回答
-    →ロボットにも「餃子」と言わせておけばよい
+    →ロボットにも「これは餃子」と思わせておけば良い
+        - 何が餃子なのか、餃子の定義は二の次
 
 ![bg right:28% 90%](./figs/餃子.jpg)
 
