@@ -36,8 +36,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 確率・統計をロボットで扱うための分野
     - ロボットが工場から人間の生活空間に入る上で必要となった
 - なんで確率・統計なのか？
-    - 生活空間の複雑さをある意味<span style="color:red">「いい加減」</span>に扱うために必要だった
-        - 人間並の判断をしようとすると必然となる
+    - 制御の面から: 生活空間の複雑さに従来の制御が対応できない
+    - 認知・判断の面から: 生活空間の複雑さをある意味<span style="color:red">「いい加減」</span>に扱うために必要となる
 
 ---
 
