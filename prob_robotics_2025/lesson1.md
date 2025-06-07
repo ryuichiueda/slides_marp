@@ -104,6 +104,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 多くの人が「餃子を皿に移して」と指示してロボットがやってくれたら喜ぶ
         - 何が餃子なのか、餃子の定義は二の次
 
+このようないい加減さを数学で扱える（=プログラムできる）のは確率・統計
+
 ![bg right:28% 90%](./figs/餃子.jpg)
 
 
