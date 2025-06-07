@@ -141,7 +141,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### つまり
 
-- 運動・知能双方で確率・統計の考え方が
+- 運動・知能双方で確率・統計の考え方が大変重要
 
 - 2つの柱
     - 確率ロボティクス（いわゆる現代制御理論を1段階抽象化したもの）
