@@ -99,7 +99,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 * 不真面目な答え
     * みんな猫って呼んでるから
     * 犬でもたぬきでも牛でも馬でもないから
-* <span style="color:red">$\Rightarrow$実はコンピュータ/ロボットは不真面目な方の方式</span>
+* <span style="color:red">$\Rightarrow$実は最近のコンピュータ/ロボットは不真面目な方の方式</span>
 
 ---
 
