@@ -174,7 +174,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 一般的な確率・統計の講義と話題の中心が異なる
             - 確率ロボティクスや機械学習で重要な点を中心に
         - 「詳解確率ロボティクスが難しい」との声
-            - 基礎をしっかりやれば独学できる
+            - 基礎をつければ独学できるように書いてある
+
+![bg right:18% 85%](./figs/books.png)
+
 
 --- 
 
