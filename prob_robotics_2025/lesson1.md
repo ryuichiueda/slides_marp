@@ -136,6 +136,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 確率・統計: 原因は横に置いて、出てきたデータの法則性を扱う数学
     - 飛行機の事故「率」: 仕組みが分からなくても統計はとれる
         - 新たに情報を得て、統計からの予測を修正するとき$\rightarrow$確率を使用
+        - 原因は横に置くけど原因を調べるには役立つ
     - 「みんなそれを猫と言っている」も統計
         - <span style="color:red">人工ニューラルネットワークが学習してきたのはコレ</span>
 
