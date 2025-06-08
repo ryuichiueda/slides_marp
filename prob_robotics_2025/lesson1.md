@@ -176,7 +176,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 「詳解確率ロボティクスが難しい」との声
             - 基礎をつければ独学できるように書いてある
 
-![bg right:18% 85%](./figs/books.png)
+![bg right:20% 80%](./figs/books.png)
 
 
 --- 
@@ -191,17 +191,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <img width="40%" src="./figs/probrobo_books.jpeg" />
 
-
-
----
-
-### 講義の進め方
-
-- 「[ロボットの確率・統計](https://www.coronasha.co.jp/np/isbn/9784339046878/)」に基づいて進行
-    - より基本から応用までを幅広くカバー
-    - 機械学習の範囲もカバー
-- [詳解確率ロボティクス](https://www.kspub.co.jp/book/detail/5170069.html)はどうするの？
-    - 興味のある人の自習用ということで
 
 ---
 
