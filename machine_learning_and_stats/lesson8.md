@@ -28,7 +28,7 @@ marp: true
         - ギブアップなら調べましょう
         * 答え: $\mathcal{N}(x | \mu, \sigma^2) = \eta \exp\left\{-\dfrac{(x - \mu)^2}{2\sigma^2}\right\}$
             - $\mathcal{N}(x| \mu, \sigma^2)$: 平均値$\mu$、分散$\sigma^2$のガウス分布
-            - 変数は任意なので$\mathcal{N}(\mu, \sigma^2)$という表記が一般的
+            - 変数は分布の形と無関係なので$\mathcal{N}(\mu, \sigma^2)$という表記が一般的
 
 ---
 
