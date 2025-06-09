@@ -51,24 +51,21 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 観測（出力）方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
             - 時刻$t$の状態が$\boldsymbol{x}$だと、$\boldsymbol{z}_t$が観測される
             - ただし<span style="color:red">雑音</span>で、$\boldsymbol{\varepsilon}'$だけ$\boldsymbol{z}_t$がずれる
+    - <span style="color:red">実は確率を扱っている</span>（雑音は確率的）
 
 
 ---
 
-### 制御と雑音と確率
+### 制御で扱われる確率
 
-- 再掲
-    - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
-    - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
-- $\boldsymbol{\varepsilon}', \boldsymbol{z}_t$のばらつきの想定は、大抵の場合<span style="color:red">正規分布（ガウス分布）</span>
+- 雑音のばらつきの想定は、大抵の場合<span style="color:red">正規分布（ガウス分布）</span>
     - ある大きさのばらつきを想定した上で安定で効率の良い制御方法を考える
-    $\longrightarrow$もともと制御では確率が扱われていたが限定的
-    - 雑音がたとえば
+- このアイデアの限界
+    - 雑音がもっと一般化すると、状態/観測方程式で扱いにくい
         - 「ロボットが段差に引っかかって90度向きがずれた（状態がワープ）」
         - 「人がセンサを遮った（ばらつきと呼ぶには大きすぎる誤差）」
-        などの規模になると、上記数式で扱うのは困難
 
-<center style="color:red">⇒⇒⇒新しい枠組みが必要</center>
+<center style="color:red">⇒⇒⇒新しい道具（数式）が必要</center>
 
 
 ---
