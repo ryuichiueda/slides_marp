@@ -176,19 +176,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:20% 80%](./figs/books.png)
 
-
---- 
-
-### Probabilistic ROBOTICS（確率ロボティクス）
-
-- セバスチャン・スランらの教科書
-    - 1995年頃から10年間に確立したロボット用の推論アルゴリズムを掲載
-    - カルマンフィルタ、パーティクルフィルタ、FastSLAM、GraphSLAM、POMDP手法など
-    - 確率ロボティクス分野
-        - この教科書の範囲や周辺のアルゴリズムを研究する分野
-
-<img width="40%" src="./figs/probrobo_books.jpeg" />
-
 ---
 
 ## 講義の進め方
@@ -231,15 +218,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 参考資料
 
-- 講義用スライド
-    - リポジトリ: [ryuichiueda/slides_marp/prob_robotics_2025](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025)
-        - [目次](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025/README.md)
+- 講義用スライド: [ryuichiueda/slides_marp/prob_robotics_2025](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025)
 - 詳解確率ロボティクス
     - 詳解確率ロボティクス掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
     - 完成したコードだけ残したもの: [ryuichiueda/LNPR](https://github.com/ryuichiueda/LNPR)<br />　
     - 書籍解説スライド: [ryuichiueda/LNPR_SLIDES](https://github.com/ryuichiueda/LNPR_SLIDES)<br />　
-    - 訂正等の情報
-        - https://ueda.tech/?page=lnpr
+    - 訂正等の情報: https://ueda.tech/?page=lnpr
 - Probabilistic ROBOTICS/確率ロボティクス
     - 当時を知るためにいつか読んでみましょう
 
+![bg right:25% 100%](./figs/probrobo_books.jpeg)
