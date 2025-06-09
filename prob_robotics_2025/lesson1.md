@@ -189,6 +189,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <img width="40%" src="./figs/probrobo_books.jpeg" />
 
+---
+
+## 講義の進め方
+
+- 各回で何をするか
+- 点数のつけかた
 
 ---
 
