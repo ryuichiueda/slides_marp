@@ -202,7 +202,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 第6回: 動く確率分布とロボット
 - 第7回: 動く物体の位置推定
 
-
 ---
 
 ### 各回の内容（その2/2）
@@ -212,6 +211,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 第10回: 変分推論の続きと教師あり学習の概要
 - 第11回: 意思決定と確率・統計
 - 第12回: 制御、強化学習についてのベルマン方程式に基づく統一的な理解
+- 第13回: まとめ
 
 ---
 
@@ -223,10 +223,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### リポジトリ・ウェブサイト
+### 参考資料
 
 - 講義用スライド
-    - リポジトリ: [ryuichiueda/slides_marp](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025)
+    - リポジトリ: [ryuichiueda/slides_marp/prob_robotics_2025](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025)
         - [目次](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025/README.md)
 - 詳解確率ロボティクス
     - 詳解確率ロボティクス掲載のコード: [ryuichiueda/LNPR_BOOK_CODES](https://github.com/ryuichiueda/LNPR_BOOK_CODES)
@@ -234,4 +234,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 書籍解説スライド: [ryuichiueda/LNPR_SLIDES](https://github.com/ryuichiueda/LNPR_SLIDES)<br />　
     - 訂正等の情報
         - https://ueda.tech/?page=lnpr
+- Probabilistic ROBOTICS/確率ロボティクス
+    - 当時を知るためにいつか読んでみましょう
 
