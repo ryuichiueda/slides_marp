@@ -41,6 +41,7 @@ marp: true
 - ベイズ的な考え方をとりいれた回帰がないか?
     - ある
 
+![bg right:30% 90%](./figs/lms_overfit.png)
 
 ---
 
