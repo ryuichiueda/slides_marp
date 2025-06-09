@@ -51,12 +51,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 観測（出力）方程式: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
             - 時刻$t$の状態が$\boldsymbol{x}$だと、$\boldsymbol{z}_t$が観測される
             - ただし<span style="color:red">雑音</span>で、$\boldsymbol{\varepsilon}'$だけ$\boldsymbol{z}_t$がずれる
-    - <span style="color:red">実は確率を扱っている</span>（雑音は確率的）
+    - 雑音は確率でモデル化されるので<span style="color:red">実は確率を扱っている</span>
 
 
 ---
 
-### 制御で扱われる確率
+### 状態方程式・観測方程式で扱われる確率
 
 - 雑音のばらつきの想定は、大抵の場合<span style="color:red">正規分布（ガウス分布）</span>
     - ある大きさのばらつきを想定した上で安定で効率の良い制御方法を考える
