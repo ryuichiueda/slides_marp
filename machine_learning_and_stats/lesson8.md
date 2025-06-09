@@ -26,6 +26,9 @@ marp: true
     - ガウス分布の式を書いてみてください！
         - 最初はなにも見ずに（正規化定数は$\eta$でOK）
         - ギブアップなら調べましょう
+        * 答え: $\mathcal{N}(x | \mu, \sigma^2) = \eta \exp\left\{-\dfrac{(x - \mu)^2}{2\sigma^2}\right\}$
+            - $\mathcal{N}(x| \mu, \sigma^2)$: 平均値$\mu$、分散$\sigma^2$のガウス分布
+            - 変数は任意なので$\mathcal{N}(\mu, \sigma^2)$という表記が一般的
 
 ---
 
@@ -65,8 +68,6 @@ marp: true
 - いくつか仮定を置きましょう
     - 仮定1: $x_i$に対して、$y_i$は多項式の値$w_0 + w_1 x_i$を中心に、分散$\lambda^{-1}$でばらつく
         - $y_i \sim \mathcal{N}(y | w_0 + w_1 x_i, \lambda^{-1})$と表記
-            - $\mathcal{N}(y| \mu, \sigma^2)$: 平均値$\mu$、分散$\sigma^2$のガウス分布
-            - 変数は任意なので$\mathcal{N}(\mu, \sigma^2)$という表記が一般的
         - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
 
 ![bg right:30% 100%](./figs/lsm.png)
