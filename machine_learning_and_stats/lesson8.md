@@ -22,6 +22,10 @@ marp: true
 ## 今日やること
 
 - ベイズ線形回帰
+- そのまえに
+    - ガウス分布の式を書いてみてください！
+        - 最初はなにも見ずに（正規化定数は$\eta$でOK）
+        - ギブアップなら調べましょう
 
 ---
 
@@ -60,8 +64,9 @@ marp: true
 - 例: 当てはめる式: 多項式 $y = w_0 + w_1 x$
 - いくつか仮定を置きましょう
     - 仮定1: $x_i$に対して、$y_i$は多項式の値$w_0 + w_1 x_i$を中心に、分散$\lambda^{-1}$でばらつく
-        - $y_i \sim \mathcal{N}(w_0 + w_1 x_i, \lambda^{-1})$と表記
-            - $\mathcal{N}(\mu, \sigma^2)$: 平均値$\mu$、分散$\sigma^2$のガウス分布
+        - $y_i \sim \mathcal{N}(y | w_0 + w_1 x_i, \lambda^{-1})$と表記
+            - $\mathcal{N}(y| \mu, \sigma^2)$: 平均値$\mu$、分散$\sigma^2$のガウス分布
+            - 変数は任意なので$\mathcal{N}(\mu, \sigma^2)$という表記が一般的
         - 補足: 分散の逆数$\lambda$は<span style="color:red">精度</span>と呼ばれる
 
 ![bg right:30% 100%](./figs/lsm.png)
@@ -84,7 +89,7 @@ marp: true
 ### 回帰のための数式（続き）
 
 - 仮定3: $\lambda$の値も分からないので確率分布で表現（最初は大きくばらつく）
-    - こういう分布: $\text{Gam}(\lambda, a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
+    - こういう分布: $\text{Gam}(\lambda | a, b) = \eta \lambda^{a-1}e^{-b\lambda}$（ガンマ分布）
         - 下図(a): ガンマ分布の確率分布
         - 下図(b): (a)の横軸をlog尺にしたもの
     - $\lambda = 10^{-2}$で$y_i$のばらつきの標準偏差が$10$
