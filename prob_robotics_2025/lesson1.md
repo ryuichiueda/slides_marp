@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: 確率ロボティクス第1回 -->
 
-# 確率ロボティクス第1回（その1）: イントロダクション
+# 確率ロボティクス第1回（その1）: <br />イントロダクション
 
 千葉工業大学 上田 隆一
 
@@ -22,7 +22,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 今回の内容
     - イントロダクション
-    - 代表値
+    - 講義の進め方
 
 ---
 
