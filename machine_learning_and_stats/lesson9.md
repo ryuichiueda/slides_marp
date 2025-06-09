@@ -32,7 +32,7 @@ marp: true
     - 右の図は何に見えますか
     - なんで猫に見えるのか？
 - たぶん丸い部分1つと三角の部分1つに点をまとめている（クラスタリングしている）
-    - [研究例](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
+    - [研究例](https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
 
 
 ![bg right:40% 60%](./figs/dots.png)
