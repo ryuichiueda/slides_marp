@@ -91,7 +91,7 @@ marp: true
 
 ### 多段の行動（状態遷移）のモデル
 
-- これの繰り返し
-    - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$
-    - $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$
-    - $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$
+- このワンセットの繰り返し（$i=0,1,2,\dots$）
+    - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$: 　　  　　状態$\boldsymbol{x}_i$から行動$a_{i+1}$を選択
+    - $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$:　　状態が$\boldsymbol{x}_{i+1}$に遷移
+    - $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 損失を観測
