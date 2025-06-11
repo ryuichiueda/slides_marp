@@ -107,7 +107,7 @@ marp: true
 
 - 評価: $\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)$
     - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和（損失の積算）
-    - 2番目の項: 最後の「ご褒美」
+    - 2番目の項: 最後の「ご褒美」（正式には<span style="color:red">価値</span>）
         - 最後の状態（<span style="color:red">終端状態</span>）に対して与える（例:「大学に合格した状態」）
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
 	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
@@ -124,3 +124,4 @@ marp: true
 - 様々な初期状態$\boldsymbol{x}_0$に対して期待値が決まる
     - 終端状態に対しては$V$の値が固定されている
     - 他の状態の期待値は何度も試行して統計をとると求まる
+- 終端状態の価値を拡張して、その状態の価値$V(\boldsymbol{x})$を考える
