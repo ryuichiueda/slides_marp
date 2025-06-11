@@ -92,4 +92,6 @@ marp: true
 ### 多段の行動（状態遷移）のモデル
 
 - これの繰り返し
-    - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$, $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$, $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$
+    - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$
+    - $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$
+    - $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$
