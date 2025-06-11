@@ -106,10 +106,10 @@ marp: true
 今回は終わりのあるタスクを考えましょう
 
 - 評価: $\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)$
-    - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和
+    - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和（損失の積算）
     - 2番目の項: 最後の「ご褒美」
         - 最後の状態に対して与える（例:  「大学に合格した状態」など）
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
-	- $J(\Pi| \boldsymbol{x}_0) = ($損失の積算$+ \boldsymbol{V}_\text{f}$の値$)$の期待値
+	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
 
 
