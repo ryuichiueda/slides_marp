@@ -58,4 +58,7 @@ marp: true
 ### 「良い方策」行動の定義
 
 - 行動の結果に点数をつける
-    - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a)} \right\rangle_{\Pi(a| \boldsymbol{x})}$
+    - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
+        - $\boldsymbol{x}'$: 行動$a$のあとの状態
+        - $p(\boldsymbol{x}'|a, \boldsymbol{x})$: <span style="color:red">状態遷移分布</span>
+            - $\boldsymbol{x}$で行動$a$をとったときの、次の状態$\boldsymbol{x}'$の分布
