@@ -57,7 +57,7 @@ marp: true
 
 ### 「良い方策」行動の定義
 
-- 行動の結果に点数をつける
+- 行動の結果に点数をつける$\rightarrow$良い点数をとれる$\Pi$が良い方策と考える
     - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
         - $\boldsymbol{x}'$: 行動$a$のあとの状態
         - $p(\boldsymbol{x}'|a, \boldsymbol{x})$: <span style="color:red">状態遷移分布</span>
