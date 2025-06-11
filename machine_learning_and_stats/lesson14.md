@@ -123,5 +123,5 @@ marp: true
 	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 - 様々な初期状態$\boldsymbol{x}_0$に対して期待値が決まる
     - 終端状態に対しては$V$の値が固定されている
-    - 他の状態の期待値は何度も試行して統計をとると求まる
+    - 他の状態の期待値は何度も試行して統計をとるか、あとで説明する方法で求まる
 - 終端状態の価値を拡張して、その状態の価値$V(\boldsymbol{x})$を考える
