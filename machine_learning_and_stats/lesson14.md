@@ -108,10 +108,10 @@ marp: true
 - 評価: $\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)$
     - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和（損失の積算）
     - 2番目の項: 最後の「ご褒美」
-        - 最後の状態に対して与える（例:  「大学に合格した状態」など）
+        - 最後の状態（<span style="color:red">終端状態</span>）に対して与える（例:「大学に合格した状態」）
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
 	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
-    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V_\text{f} (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	    - この値が一番よくなるのが「いい方策」
 	    - $\boldsymbol{x}_0$はコントロールできないので条件に
 
@@ -119,6 +119,8 @@ marp: true
 
 ### 「状態の価値」
 
-- この関数について
-	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V_\text{f} (\boldsymbol{x}_T)\right\rangle_{\Pi}$
-
+- この関数について、今度は$\Pi$を固定してみる
+	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+- 様々な初期状態$\boldsymbol{x}_0$に対して期待値が決まる
+    - 終端状態に対しては$V$の値が固定されている
+    - 他の状態の期待値は何度も試行して統計をとると求まる
