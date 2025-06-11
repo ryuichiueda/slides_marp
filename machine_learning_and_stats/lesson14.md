@@ -45,12 +45,17 @@ marp: true
     - $a \sim \Pi(a | \boldsymbol{x})$
         - $a$: 機械のなんらかの出力や動物・人間の行動を漠然と記号化したもの
         - $\boldsymbol{x}$: 世の中の全変数を並べたベクトル（超膨大）
+            - 実際には行動と独立でない変数だけしかいらない
         - <span style="color:red">$\Pi$: 方策</span>
             - 行動を決めているプログラムや脳の一部
+- 例
+    - $\boldsymbol{x}$: 昨夜酒飲んでて4時間しか寝てない
+    - $\Pi($大学に行く$|\boldsymbol{x}) = 0.3$、$\Pi($そのまま布団で寝る$|\boldsymbol{x}) = 0.6$、
+    $\Pi($とりあえず飲みなおす$|\boldsymbol{x}) = 0.1$
 
 ---
 
-### 「良い」行動の定義
+### 「良い方策」行動の定義
 
 - 行動の結果に点数をつける
     - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a)} \right\rangle_{\Pi(a| \boldsymbol{x})}$
