@@ -97,4 +97,4 @@ marp: true
     - $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 損失を観測
 - このような行動の履歴（エピソード）が残っていく
     - $\boldsymbol{x}_0, a_1, \boldsymbol{x}_1, \ell_1, a_2 \boldsymbol{x}_2, \ell_2, \dots, a_t, \boldsymbol{x}_t, \ell_t$
-        - $t$: 現時刻
+        - $t$: 現時刻など
