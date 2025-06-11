@@ -106,6 +106,7 @@ marp: true
 今回は終わりのあるタスクを考えましょう
 
 - 評価: $\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)$
-    - タスクの終わりでの$\ell_1, \ell_2, \dots, \ell_T$の和と+最後の「ご褒美$V(\boldsymbol{x}_T)$」
+    - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和
+    - 2番目の項: 最後の「ご褒美」
 
 
