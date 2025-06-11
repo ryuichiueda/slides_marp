@@ -111,5 +111,6 @@ marp: true
         - 最後の状態に対して与える（例:  「大学に合格した状態」など）
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
 	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
+	    - この値が一番よくなるのが「いい方策」
 
 
