@@ -45,3 +45,12 @@ marp: true
     - $a \sim \Pi(a | \boldsymbol{x})$
         - $a$: 機械のなんらかの出力や動物・人間の行動を漠然と記号化したもの
         - $\boldsymbol{x}$: 世の中の全変数を並べたベクトル（超膨大）
+        - <span style="color:red">$\Pi$: 方策</span>
+            - 行動を決めているプログラムや脳の一部
+
+---
+
+### 「良い」行動の定義
+
+- 行動の結果に点数をつける
+    - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a)} \right\rangle_{\Pi(a| \boldsymbol{x})}$
