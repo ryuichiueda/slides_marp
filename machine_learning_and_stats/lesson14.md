@@ -58,16 +58,16 @@ marp: true
 ### 「良い方策」行動の定義
 
 - 行動の結果に点数をつける$\rightarrow$良い点数をとれる$\Pi$が良い方策と考える
-    - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
+    - $J(\Pi) = \left\langle \left\langle \mathcal{L}(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
         - $\boldsymbol{x}'$: 行動$a$のあとの状態
         - $p(\boldsymbol{x}'|a, \boldsymbol{x})$: <span style="color:red">状態遷移分布</span>
             - $\boldsymbol{x}$で行動$a$をとったときの、次の状態$\boldsymbol{x}'$の分布
-        - $R$: 評価関数
+        - $\mathcal{L}$: 損失関数
             - $\boldsymbol{x}$で行動$a$をとって$\boldsymbol{x}'$に状態が変化したことに対する評価
-            - 損失関数の逆で、マイナスすると損失関数と同じ
-- 前のページの例で$R$を考えてみましょう
-    - 注意: $R$はあくまで主観で、ひとそれぞれ
-        - 社会的にうまくいかないのは$\Pi$のせいではなく$R$のせいと考えましょう
+            - いいことがあればマイナスに（マイナスの損失=報酬）
+- 前のページの例で$\mathcal{L}$を考えてみましょう
+    - 注意: 損失関数はあくまで主観で、ひとそれぞれ
+        - 社会的にうまくいかないのは$\Pi$のせいではなく$\mathcal{L}$のせいと考えましょう
 
 ---
 
@@ -92,5 +92,5 @@ marp: true
 ### 多段の行動（状態遷移）のモデル
 
 - これの繰り返し
-    - $a_1 \sim \Pi(a | \boldsymbol{x}_0)$, $\boldsymbol{x}_1 \sim p(\boldsymbol{x} |a, \boldsymbol{x}_0)$, $r_1 = R(\boldsymbol{x}_0, a_1, \boldsymbol{x}_1)$
+    - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$, $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$, $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$
     - $a_2 \sim \Pi(a | \boldsymbol{x}_1), \dots, a_{t+1} \sim \Pi(a | \boldsymbol{x}_t), \dots$
