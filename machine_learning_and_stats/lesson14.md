@@ -93,4 +93,3 @@ marp: true
 
 - これの繰り返し
     - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$, $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$, $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$
-    - $a_2 \sim \Pi(a | \boldsymbol{x}_1), \dots, a_{t+1} \sim \Pi(a | \boldsymbol{x}_t), \dots$
