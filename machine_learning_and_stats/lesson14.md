@@ -97,4 +97,15 @@ marp: true
     - $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 損失を観測
 - このような行動の履歴（エピソード）が残っていく
     - $\boldsymbol{x}_0, a_1, \boldsymbol{x}_1, \ell_1, a_2 \boldsymbol{x}_2, \ell_2, \dots, a_t, \boldsymbol{x}_t, \ell_t$
-        - $t$: 現時刻など
+        - $t$: 現時刻
+
+---
+
+### 多段の行動の評価
+
+今回は終わりのあるタスクを考えましょう
+
+- 評価: $\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)$
+    - タスクの終わりでの$\ell_1, \ell_2, \dots, \ell_T$の和と+最後の「ご褒美$V(\boldsymbol{x}_T)$」
+
+
