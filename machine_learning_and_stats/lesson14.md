@@ -111,6 +111,14 @@ marp: true
         - 最後の状態に対して与える（例:  「大学に合格した状態」など）
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
 	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
+    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V_\text{f} (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	    - この値が一番よくなるのが「いい方策」
+	    - $\boldsymbol{x}_0$はコントロールできないので条件に
 
+---
+
+### 「状態の価値」
+
+- この関数について
+	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V_\text{f} (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 
