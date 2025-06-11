@@ -62,3 +62,6 @@ marp: true
         - $\boldsymbol{x}'$: 行動$a$のあとの状態
         - $p(\boldsymbol{x}'|a, \boldsymbol{x})$: <span style="color:red">状態遷移分布</span>
             - $\boldsymbol{x}$で行動$a$をとったときの、次の状態$\boldsymbol{x}'$の分布
+        - $R$: 評価関数
+            - $\boldsymbol{x}$で行動$a$をとって$\boldsymbol{x}'$に状態が変化したことに対する評価
+            - 損失関数の逆で、マイナスすると損失関数と同じ
