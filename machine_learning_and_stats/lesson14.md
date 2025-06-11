@@ -91,3 +91,6 @@ marp: true
 
 ### 多段の行動（状態遷移）のモデル
 
+- これの繰り返し
+    - $a_1 \sim \Pi(a | \boldsymbol{x}_0)$, $\boldsymbol{x}_1 \sim p(\boldsymbol{x} |a, \boldsymbol{x}_0)$, $r_1 = R(\boldsymbol{x}_0, a_1, \boldsymbol{x}_1)$
+    - $a_2 \sim \Pi(a | \boldsymbol{x}_1), \dots, a_{t+1} \sim \Pi(a | \boldsymbol{x}_t), \dots$
