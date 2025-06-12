@@ -75,9 +75,12 @@ marp: true
 
 - 「教員がトイレに駆け込んだ状況$\boldsymbol{x}$においてテストでカンニングをするかどうか」で$J, \Pi, p, \mathcal{L}$の式の様々なバージョンを考えてみましょう
     - $J(\Pi) = \left\langle \left\langle \mathcal{L}(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
-- 例
-    * ある人の方策: $\Pi($する$|\boldsymbol{x})=0.01, \Pi($しない$|\boldsymbol{x})=0.99$ 
-    * 状態遷移: $P($ばれる$|$する$, \boldsymbol{x}) = 0.5, P($ばれない$|$する$, \boldsymbol{x}) = 0.5$
+- 例（$J$の計算はお任せします）
+    * ある人の方策: $\Pi($する$|\boldsymbol{x})=0.01, \Pi($しない$|\boldsymbol{x})=0.99$
+    * 状態遷移: $P($ばれる$|$する$, \boldsymbol{x}) = 0.5, P($ばれない$|$する$, \boldsymbol{x}) = 0.5,$
+    $P($ばれない$|$しない$, \boldsymbol{x}) = 1$
+    * 損失関数: $\mathcal{L}(\boldsymbol{x},$する$,$ ばれる$) = -10000,$
+    $\mathcal{L}(\boldsymbol{x},$する$,$ ばれない$) = 80, \mathcal{L}(\boldsymbol{x},$しない$,$ばれない$) = 60$
 
 
 ---
