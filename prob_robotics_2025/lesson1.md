@@ -88,8 +88,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### もう1つ質問
 
-- 猫ってなんで猫ってみんな呼んでるの？そもそも猫ってなに？
-    - 今のコンピュータやロボットは画像から猫を見つけられる
+- 猫ってなんでみんなそう呼んでるの？そもそも猫って何？
 - 真面目な答え
     - 猫という言葉は眠った子という言葉が・・・
     - 猫はネコ科の動物で・・・
@@ -98,6 +97,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     * 犬でもたぬきでも牛でも馬でもないから
 * <span style="color:red">$\Rightarrow$実は最近のコンピュータ/ロボットは不真面目な方の方式</span>
 
+![bg right:23% 100%](./figs/simple_cat.png)
 
 ---
 
@@ -155,14 +155,18 @@ GPT（Generative Pre-trained Transformer）[Radford2018]
 
 ---
 
-### つまり
+### つまり（イントロダクションのまとめ）
 
 - 運動・知能双方で確率・統計の考え方が大変重要になってきており、
 今後もしばらくそうではないか
 
 ---
 
-## 講義で使う教科書
+## 講義の進め方
+
+---
+
+### 講義で使う教科書
 
 - 上田: 「ロボットの確率・統計」, コロナ社, 2024. 
     - 2024年度以前の「詳解確率ロボティクス」から変更
