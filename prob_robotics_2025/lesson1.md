@@ -233,4 +233,4 @@ GPT（Generative Pre-trained Transformer）[Radford2018]
 - Probabilistic ROBOTICS/確率ロボティクス
     - 当時を知るためにいつか読んでみましょう
 
-![bg right:25% 100%](./figs/probrobo_books.jpeg)
+![bg right:25% 85%](./figs/prob_robotics.jpg)
