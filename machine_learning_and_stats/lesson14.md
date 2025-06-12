@@ -80,8 +80,8 @@ marp: true
         * するかしないかどっちかを選ぶときは片方の確率を$1$にする
     * 状態遷移: $P($ばれる$|$する$, \boldsymbol{x}) = 0.5, P($ばれない$|$する$, \boldsymbol{x}) = 0.5,$
     $P($ばれない$|$しない$, \boldsymbol{x}) = 1$
-    * 損失関数: $\mathcal{L}(\boldsymbol{x},$する$,$ ばれる$) = -10000,$
-    $\mathcal{L}(\boldsymbol{x},$する$,$ ばれない$) = 80, \mathcal{L}(\boldsymbol{x},$しない$,$ばれない$) = 60$
+    * 損失関数: $\mathcal{L}(\boldsymbol{x},$する$,$ ばれる$) = 10000,$
+    $\mathcal{L}(\boldsymbol{x},$する$,$ ばれない$) = -80, \mathcal{L}(\boldsymbol{x},$しない$,$ばれない$) = -60$
 
 
 ---
