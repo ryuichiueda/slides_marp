@@ -58,30 +58,29 @@ marp: true
 ### 「良い方策」行動の定義
 
 - 行動の結果に点数をつける$\rightarrow$良い点数をとれる$\Pi$が良い方策と考える
-    - $J(\Pi) = \left\langle \left\langle \mathcal{L}(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
+    - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
         - $\boldsymbol{x}'$: 行動$a$のあとの状態
         - $p(\boldsymbol{x}'|a, \boldsymbol{x})$: <span style="color:red">状態遷移分布</span>
             - $\boldsymbol{x}$で行動$a$をとったときの、次の状態$\boldsymbol{x}'$の分布
-        - $\mathcal{L}$: 損失関数
+        - $R$: 報酬関数（損失関数にマイナスをつけたもの）
             - $\boldsymbol{x}$で行動$a$をとって$\boldsymbol{x}'$に状態が変化したことに対する評価
-            - いいことがあればマイナスに（マイナスの損失=報酬）
-- 前のページの例で$\mathcal{L}$を考えてみましょう
+- 前のページの例で$R$を考えてみましょう
     - 注意: 損失関数はあくまで主観で、ひとそれぞれ
-        - 社会的にうまくいかないのは$\Pi$のせいではなく$\mathcal{L}$のせいと考えましょう
+        - 社会的にうまくいかないのは$\Pi$のせいではなく$R$のせいと考えましょう
 
 ---
 
 ### 問題
 
-- 「教員がトイレに駆け込んだ状況$\boldsymbol{x}$においてテストでカンニングをするかどうか」で$J, \Pi, p, \mathcal{L}$の式の様々なバージョンを考えてみましょう
-    - $J(\Pi) = \left\langle \left\langle \mathcal{L}(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
+- 「教員がトイレに駆け込んだ状況$\boldsymbol{x}$においてテストでカンニングをするかどうか」で$J, \Pi, p, R$の式の様々なバージョンを考えてみましょう
+    - $J(\Pi) = \left\langle \left\langle R(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
 - 例（$J$の計算はお任せします）
     * ある人の方策: $\Pi($する$|\boldsymbol{x})=0.01, \Pi($しない$|\boldsymbol{x})=0.99$
         * するかしないかどっちかを選ぶときは片方の確率を$1$にする
     * 状態遷移: $P($ばれる$|$する$, \boldsymbol{x}) = 0.5, P($ばれない$|$する$, \boldsymbol{x}) = 0.5,$
     $P($ばれない$|$しない$, \boldsymbol{x}) = 1$
-    * 損失関数: $\mathcal{L}(\boldsymbol{x},$する$,$ ばれる$) = 10000,$
-    $\mathcal{L}(\boldsymbol{x},$する$,$ ばれない$) = -80, \mathcal{L}(\boldsymbol{x},$しない$,$ばれない$) = -60$
+    * 損失関数: $R(\boldsymbol{x},$する$,$ ばれる$) = -10000,$
+    $R(\boldsymbol{x},$する$,$ ばれない$) = 80, R(\boldsymbol{x},$しない$,$ばれない$) = 60$
 
 
 ---
@@ -113,7 +112,7 @@ marp: true
 - このワンセットの繰り返し（$i=0,1,2,\dots$）
     - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$: 　　  　　状態$\boldsymbol{x}_i$から行動$a_{i+1}$を選択
     - $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$:　　状態が$\boldsymbol{x}_{i+1}$に遷移
-    - $\ell_{i+1} = \mathcal{L}(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 損失を観測
+    - $\ell_{i+1} = R(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 損失を観測
 - このような行動の履歴（エピソード）が残っていく
     - $\boldsymbol{x}_0, a_1, \boldsymbol{x}_1, \ell_1, a_2 \boldsymbol{x}_2, \ell_2, \dots, a_t, \boldsymbol{x}_t, \ell_t$
         - $t$: 現時刻
@@ -135,7 +134,7 @@ marp: true
 
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
 	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
-    $=\left\langle \sum_{i=1}^T \mathcal{L}(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	    - この値が一番よくなるのが「いい方策」
 	    - $\boldsymbol{x}_0$はコントロールできないので条件に
 
@@ -144,7 +143,7 @@ marp: true
 ### 「状態の価値」
 
 - この関数について、今度は$\Pi$を固定してみる
-	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T \mathcal{L}(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 - 様々な初期状態$\boldsymbol{x}_0$に対して期待値が決まる
     - 終端状態に対しては$V$の値が固定されている
     - 他の状態の期待値は何度も試行して統計をとるか、
