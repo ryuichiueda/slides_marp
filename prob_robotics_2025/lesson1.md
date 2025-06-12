@@ -143,7 +143,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 最近の人工ニューラルネットワークの話題
 
-- Transformerによる翻訳やGPT（Generative Pre-trained Transformer）
+- Transformer[Vaswani2017]による翻訳やGPT（Generative Pre-trained Transformer）
     - 冒頭/文の途中で、次に出力するのがふさわしい単語を選んで出力
         - 「ふさわしい単語」: 人からの質問、翻訳前の文、自身の出力したこれまでの文を考慮して、各単語が次にくる<span style="color:red">確率が最も高い単語</span>
 - 拡散モデル（Stable Diffusionなど）
