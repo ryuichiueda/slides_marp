@@ -123,14 +123,24 @@ marp: true
 
 今回は終わりのあるタスクを考えましょう
 
-- 評価: $\sum_{i=1}^T r_i + V(\boldsymbol{x}_T)$
+- エピソードに対する評価: $\sum_{i=1}^T r_i + V(\boldsymbol{x}_T)$
     - 最初の項: $r_1, r_2, \dots, r_T$の和（報酬の積算）
     - 2番目の項: 最後の「ご褒美」（正式には<span style="color:red">価値</span>）
         - 最後の状態（<span style="color:red">終端状態</span>）に対して与える（例:「大学に合格した状態」）
+- 方策に対する評価
+	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T r_i + V(\boldsymbol{x}_T)\right\}$の期待値
+    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+	    - この値が一番よくなるのが「いい方策」
+	    - $\boldsymbol{x}_0$はコントロールできないので条件に
+
+
+---
+
+
 - 問題
     - ずっと報酬がマイナスで最後に良いことがあるという例を考えてみましょう
         - その例で、$T$が大きいとどうなるでしょうか？
-- 終わりのないタスクに対してこういう式を使うこともある
+- 終わりのないタスクに対して↓こういう式を使うこともある
     * $\sum_{i=1}^\infty \gamma^i r_i$（$0 < \gamma < 1$）
         - 未来に観測される報酬や価値を低く見積もる（$\gamma$が小さいと刹那的に）
 
@@ -148,12 +158,6 @@ marp: true
 ---
 
 ### 多段の行動の評価
-
-- この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
-	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T r_i + V(\boldsymbol{x}_T)\right\}$の期待値
-    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
-	    - この値が一番よくなるのが「いい方策」
-	    - $\boldsymbol{x}_0$はコントロールできないので条件に
 
 
 ---
