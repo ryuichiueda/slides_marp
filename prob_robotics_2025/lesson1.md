@@ -95,7 +95,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 * 不真面目な答え
     * みんな猫って呼んでるから
     * 犬でもたぬきでも牛でも馬でもないから
-* <span style="color:red">$\Rightarrow$実は最近のコンピュータ/ロボットは不真面目な方の方式</span>
+* <span style="color:red">$\Rightarrow$実は最近のコンピュータ/ロボットは不真面目方式</span>
 
 ![bg right:23% 100%](./figs/simple_cat.png)
 
@@ -105,9 +105,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 「正しい情報をたくさん与えると賢いコンピュータが作れて、それをロボットに搭載すれば正しく動くはず」
     - 正しい情報から理屈をこね回して正解の認識や動作ができるはず
-        - キーワード: エキスパートシステム、述語論理、第五世代コンピュータ
+        - キーワード: エキスパートシステム、
+        述語論理、第五世代コンピュータ
 - いかにも頭よさそうだけどほんまか？
-    - 「哺乳類で脚が4本で・・・」という理屈だけで猫が認識できる？
+    - 「哺乳類で脚が4本で・・・」という理屈だけで
+    猫が認識できる？
 
 ![bg right:26% 100%](./figs/cat.png)
 
