@@ -112,9 +112,9 @@ marp: true
 - このワンセットの繰り返し（$i=0,1,2,\dots$）
     - $a_{i+1} \sim \Pi(a | \boldsymbol{x}_i)$: 　　  　　状態$\boldsymbol{x}_i$から行動$a_{i+1}$を選択
     - $\boldsymbol{x}_{i+1} \sim p(\boldsymbol{x} |a_{i+1}, \boldsymbol{x}_i)$:　　状態が$\boldsymbol{x}_{i+1}$に遷移
-    - $\ell_{i+1} = R(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 報酬を観測
+    - $r_{i+1} = R(\boldsymbol{x}_i, a_{i+1}, \boldsymbol{x}_{i+1})$: 報酬を観測
 - このような行動の履歴（エピソード）が残っていく
-    - $\boldsymbol{x}_0, a_1, \boldsymbol{x}_1, \ell_1, a_2 \boldsymbol{x}_2, \ell_2, \dots, a_t, \boldsymbol{x}_t, \ell_t$
+    - $\boldsymbol{x}_0, a_1, \boldsymbol{x}_1, r_1, a_2 \boldsymbol{x}_2, r_2, \dots, a_t, \boldsymbol{x}_t, r_t$
         - $t$: 現時刻
 
 ---
@@ -123,15 +123,15 @@ marp: true
 
 今回は終わりのあるタスクを考えましょう
 
-- 評価: $\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)$
-    - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和（報酬の積算）
+- 評価: $\sum_{i=1}^T r_i + V(\boldsymbol{x}_T)$
+    - 最初の項: $r_1, r_2, \dots, r_T$の和（報酬の積算）
     - 2番目の項: 最後の「ご褒美」（正式には<span style="color:red">価値</span>）
         - 最後の状態（<span style="color:red">終端状態</span>）に対して与える（例:「大学に合格した状態」）
 - 問題
     - ずっと報酬がマイナスで最後に良いことがあるという例を考えてみましょう
         - その例で、$T$が大きいとどうなるでしょうか？
 - 終わりのないタスクに対してこういう式を使うこともある
-    * $\sum_{i=1}^\infty \gamma^i \ell_i$（$0 < \gamma < 1$）
+    * $\sum_{i=1}^\infty \gamma^i r_i$（$0 < \gamma < 1$）
         - 未来に観測される報酬や価値を低く見積もる
 
 ---
@@ -139,10 +139,21 @@ marp: true
 ### 多段の行動の評価
 
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
-	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
+	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T r_i + V(\boldsymbol{x}_T)\right\}$の期待値
     $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	    - この値が一番よくなるのが「いい方策」
 	    - $\boldsymbol{x}_0$はコントロールできないので条件に
+
+
+---
+
+### 遠い目標に前向きになるにはどうしたらいいか？
+
+- 実は人工知能の研究者が取り組んできた課題
+    - ロボットや知能（エージェント）が途中でぐずってタスクを完遂できない
+- ひとつの解: $r$ではなく、<span style="color:red">その状態の価値</span>を計算できるようにする
+
+
 
 ---
 
