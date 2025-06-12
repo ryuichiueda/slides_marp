@@ -71,6 +71,16 @@ marp: true
 
 ---
 
+### 問題
+
+- 「教員がトイレに駆け込んだ状況$\boldsymbol{x}$においてテストでカンニングをするかどうか」で$J, \Pi, p, \mathcal{L}$の式の様々なバージョンを考えてみましょう
+    - $J(\Pi) = \left\langle \left\langle \mathcal{L}(\boldsymbol{x},a,\boldsymbol{x}') \right\rangle_{p(\boldsymbol{x}' | a, \boldsymbol{x})} \right\rangle_{\Pi(a| \boldsymbol{x})}$
+- 例
+    - ある人の方策: $\Pi($する$|\boldsymbol{x})=0.01, \Pi($しない$|\boldsymbol{x})=0.99$ 
+
+
+---
+
 ### 数値ひとつで行動が決められるのか？
 
 - 頭の中はそうなってないかもしれないが、行動は同時にできず1つしか選べないし、なんらかの原因・理由があって今その行動をしているので、なんらかの点数付けの上で行動していると解釈することは可能
@@ -109,9 +119,14 @@ marp: true
     - 最初の項: $\ell_1, \ell_2, \dots, \ell_T$の和（損失の積算）
     - 2番目の項: 最後の「ご褒美」（正式には<span style="color:red">価値</span>）
         - 最後の状態（<span style="color:red">終端状態</span>）に対して与える（例:「大学に合格した状態」）
+
+---
+
+### 多段の行動の評価
+
 - この評価値は$\boldsymbol{x}_0$と方策$\Pi$で決まる
 	- $J(\Pi| \boldsymbol{x}_0) = \left\{\sum_{i=1}^T \ell_i + V(\boldsymbol{x}_T)\right\}$の期待値
-    $=\left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+    $=\left\langle \sum_{i=1}^T \mathcal{L}(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	    - この値が一番よくなるのが「いい方策」
 	    - $\boldsymbol{x}_0$はコントロールできないので条件に
 
@@ -120,7 +135,7 @@ marp: true
 ### 「状態の価値」
 
 - この関数について、今度は$\Pi$を固定してみる
-	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
+	- $J(\Pi| \boldsymbol{x}_0) = \left\langle \sum_{i=1}^T \mathcal{L}(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 - 様々な初期状態$\boldsymbol{x}_0$に対して期待値が決まる
     - 終端状態に対しては$V$の値が固定されている
     - 他の状態の期待値は何度も試行して統計をとるか、
