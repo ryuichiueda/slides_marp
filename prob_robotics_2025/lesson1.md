@@ -169,7 +169,7 @@ GPT（Generative Pre-trained Transformer）[Radford2018]
 - 理由
     - ~~本を買ってほしい~~
     - Probabilistic ROBOTICSの出版から20年を経て
-    ロボティクスがより発展している
+    ロボティクスがより発展
         - 当初の範囲を超えて確率・統計が使われる
     - 確率・統計を基礎から講義したい
         - 一般的な確率・統計の講義と要点が異なる
