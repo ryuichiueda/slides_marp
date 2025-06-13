@@ -168,6 +168,7 @@ marp: true
 - 様々な初期状態$\boldsymbol{x}_0$に対して期待値が決まる
     - 終端状態に対しては$V$の値が固定されている
     - 他の状態の期待値は何度も試行して統計をとると決まる
-$\Longrightarrow$<span style="color:red">終端状態の価値を拡張して、その状態の価値$V(\boldsymbol{x})$を考える</span>
+$\Longrightarrow$終端状態の価値を拡張して、<span style="color:red">その状態の価値$V(\boldsymbol{x})$</span>を考える
 	    - $V^\Pi(\boldsymbol{x}) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	        - ここで$\boldsymbol{x}=\boldsymbol{x}_0$
+- $V^\Pi$: 方策$\Pi$に対する<span style="color:red">状態価値関数</span>と呼ばれる
