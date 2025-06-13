@@ -179,3 +179,4 @@ $\Longrightarrow$終端状態の価値を拡張して、<span style="color:red">
 
 - ある状態の価値は、その状態からタスクの終了までの報酬の積算と終端状態の価値の和
     - つらいタスクでも<span style="color:red">終端状態の価値が織り込まれている</span>
+    $\Longrightarrow$（もし計算できれば）直近の報酬が悪くても「損して得とれ」が可能
