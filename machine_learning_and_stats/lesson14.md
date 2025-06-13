@@ -172,3 +172,8 @@ $\Longrightarrow$終端状態の価値を拡張して、<span style="color:red">
 	    - $V^\Pi(\boldsymbol{x}) = \left\langle \sum_{i=1}^T R(\boldsymbol{x}_{i-1}, a_i, \boldsymbol{x}_i) + V (\boldsymbol{x}_T)\right\rangle_{\Pi}$
 	        - ここで$\boldsymbol{x}=\boldsymbol{x}_0$
 - $V^\Pi$: 方策$\Pi$に対する<span style="color:red">状態価値関数</span>と呼ばれる
+
+---
+
+### 状態の価値、状態価値関数の性質
+
