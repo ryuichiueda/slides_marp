@@ -150,7 +150,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 平均値と各データの<span style="color:red">差の2乗</span>の平均値<span style="font-size:70%">（よりちょっと大きい値）</span>
     - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
         - 不偏分散と呼ばれる値（分母が$N$だと標本分散）
-        - 論文の実験結果に「分散」として書いてあるのはこの値
+        - 論文の実験結果に「分散」として書いてあるのは不偏分散の値
 - なんで$N-1$？
     - 平均値$\bar{x}$もばらついていて定かではないので、
     その分だけ値が大きくなる（「ロボットの確率・統計」の3.3.4項）
