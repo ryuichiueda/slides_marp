@@ -54,6 +54,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 代表値
+
+- データの特徴を1つの数値で表すときに用いられる値
+    - 代表的な代表値は<span style="color:red">平均値, 最大値, 最小値, 中央値, 最頻値</span>
+- 平均値: データをすべて足して、データの個数で割ったもの
+    - $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
+- 最大値・最小値: データ中で最大、最小の値（トートロジーになってますが）
+    - それぞれ$\max{x}_{1:N}, \min{x}_{1:N}$と表記
+
+---
+
 -  代表値 ---統計の知識がないと喧嘩になる
     -  代表値で比較する
         -  試行と事象
