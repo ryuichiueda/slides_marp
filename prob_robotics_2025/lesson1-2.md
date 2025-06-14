@@ -163,6 +163,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
         - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
     - 道具は手計算、表計算、シェル芸なんでもどうぞ
+    - 式（再掲）: $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
 - 答え
     * Aさん: 4.4
     * B君: 1.8
