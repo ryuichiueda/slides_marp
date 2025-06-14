@@ -109,6 +109,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 代表値を使うのは難しい
+
+- 代表値は元のデータの劣化した姿
+    - たくさんのデータを1つで置き換えれば情報量が減る
+
+
+---
+
 -  代表値 ---統計の知識がないと喧嘩になる
     -  代表値で比較する
         -  試行と事象
