@@ -115,6 +115,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - たくさんのデータを1つで置き換えれば情報量が減る
 - 判断材料にすることで代表値は意味を持つ
     - 代表値よりも、それから推測される原因への考察が重要
+    - 講義前半の「統計が不真面目」という
 
 
 ---
