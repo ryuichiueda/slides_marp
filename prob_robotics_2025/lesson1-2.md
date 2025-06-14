@@ -118,7 +118,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 講義前半で言ったように統計は不真面目
 - 優劣を決めるならルールや実験条件の整備が必要
     - それでもなにをもって優れているとするかは、統計は答えを持たない
-
+    - 相手をやり込めるために持ち出しがちだが不適切な場合のほうが多い
 
 ---
 
