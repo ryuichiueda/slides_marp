@@ -154,6 +154,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - なんで$N-1$？
     - 平均値$\bar{x}$もばらついていて定かではないので、
     その分だけ値が大きくなる（「ロボットの確率・統計」の3.3.4項）
+- なんで2乗？
+    - いろいろ計算の上で都合がよい（なんらかの本質性がある？）
 
 ---
 
