@@ -114,6 +114,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 代表値は元のデータの劣化した姿
     - たくさんのデータを1つで置き換えれば情報量が減る
 - 判断材料にすることで代表値は意味を持つ
+    - 代表値よりも、それから推測される原因への考察が重要
 
 
 ---
