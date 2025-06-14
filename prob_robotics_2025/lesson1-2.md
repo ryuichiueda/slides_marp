@@ -139,6 +139,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
 - ここでの問題: 最大値-最小値だけでなく
 データ全体をつかって「ばらつき」を数値化できないか？
+    - 最大値-最小値だと1, 2個の極端な数値に左右されやすい
 
 ---
 
