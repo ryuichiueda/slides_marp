@@ -89,7 +89,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     |:--:|:--:|:--:|:--:|:--:|:--:|
     |Aさん|2.8|**7**|0|2.5|1, 2, 3|
     |B君|**4.1**|6|**2**|**4**|4, 5|
-    - <span style="color:red">計算は簡単だが、何がこれから言えるだろうか？</span>
+    - <span style="color:red">計算は簡単だが、何がこれから言えるだろうか？</span>（考えてみましょう）
 
 ---
 
