@@ -103,7 +103,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     平均値や最小値が小さく早くリタイヤしやすいので原因を調べたほうがいい
     - B君のロボットは平均値や最小値を見ると安定しているが、
     5, 6周より多く周れない原因を調べたほうが良い
-- <span style="color:red">言ってはいけないこと</span>
+- <span style="color:red">言ってはいけないこと（代表値の誤用）</span>
     - 平均値が良いからB君のロボットの方がよい
     - 最大値が良いからAさんのロボットの方がよい
 
