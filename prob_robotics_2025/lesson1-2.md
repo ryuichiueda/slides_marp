@@ -65,7 +65,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 代表値: データの特徴を1つの数値で
+### 代表値: データの特徴を1つの数値で表現したもの
 
 - 代表的な代表値:
     - 平均値: データをすべて足して、データの個数で割ったもの
