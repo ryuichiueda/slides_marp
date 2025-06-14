@@ -104,7 +104,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - B君のロボットは平均値や最小値を見ると安定しているが、
     5, 6周より多く周れない原因を調べたほうが良い
 - <span style="color:red">言ってはいけないこと</span>
-    - （漠然と）B君のロボットの方がよい
+    - 平均値が良いからB君のロボットの方がよい
+    - 最大値が良いからAさんのロボットの方がよい
 
 ---
 
