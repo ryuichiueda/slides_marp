@@ -134,7 +134,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - Aさんの最大値、最小値の開きが大きいことが指摘されていた
 - 確かにAさんの各周回数は、B君のものに比べて互いに
-差が大きい（<spant style="color:red">ばらついている</span>）
+差が大きい（<span style="color:red">ばらついている</span>）
     - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
     - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
 - ここでの問題: 最大値-最小値だけでなく
