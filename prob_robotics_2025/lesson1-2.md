@@ -143,6 +143,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 分散
+
+最も一般的なばらつきの指標
+
+- こういう値をつかう
+
+
+---
+
 -  代表値 ---統計の知識がないと喧嘩になる
     -  他の基本的な代表値とロボティクスでの利用
         -  中央値
