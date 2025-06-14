@@ -60,7 +60,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
     - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
 - 「もっと試行しないと分からない」という話は横において、
-どう比較あるいは分析するか？
+どう比較あるいは分析するか？（考えてみましょう）
     * <span style="color:red">代表値を使う</span>のが初歩
 
 ---
