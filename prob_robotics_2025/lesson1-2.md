@@ -145,8 +145,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 分散
 
-最も一般的なばらつきの指標
-
+- 最も一般的なばらつきの指標
 - 平均値と各データの<span style="color:red">差の2乗</span>の平均値
     - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
 
