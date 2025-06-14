@@ -162,6 +162,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - どっちが大きいでしょうか？
         - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
         - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
+- 答え（計算はワンライナーで実演します）
+    * Aさん: 4.4
+    * B君: 1.8
 
 ---
 
