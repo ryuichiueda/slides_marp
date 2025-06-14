@@ -74,6 +74,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - それぞれ$\max{x}_{1:N}, \min{x}_{1:N}$と表記
     - <span style="color:red">中央値</span>: データを数値の大きさで順に並べた時に順番が中央にきたデータの値
         - データの個数が偶数のときは中央の2つを足して2で割る
+    - <span style="color:red">最頻値</span>: データ列中で最も個数の多い値
+        - 複数のときはぜんぶが最頻値
+- 問題: 前ページのAさん、B君のデータに対してこれらを求めてみましょう
 
 ---
 
