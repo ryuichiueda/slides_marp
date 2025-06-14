@@ -47,6 +47,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 例（教科書より）: Aさんが自作のロボットでコースを何周できるか
 挑戦したときの結果
     - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
+- 用語
+    - データを1個とるために何かを試すこと: <span style="color:red">試行</span>
+    - 試行で観測された現象: <span style="color:red">事象</span>（数値とは限らないので注意）
 
 ---
 
