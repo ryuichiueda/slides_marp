@@ -205,10 +205,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 偏り（バイアス）
+### 偏り（バイアス）と校正
 
 - Zのほうの平均値のずれ$0.17$は<span style="color:red">偏り（バイアス）</span>と呼ばれるもの
     - 毎回おなじだけずれているので「ばらつき」ではない
+- <span style="color:red">校正（キャリブレーション）</span>
+    - バイアスを計測して値に補正をかけること
+- ロボット周りでは校正が必要な場面が多い
+
 
 
 ---
