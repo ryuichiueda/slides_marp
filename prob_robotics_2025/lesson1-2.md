@@ -205,6 +205,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 偏り（バイアス）
+
+
+---
+
 -  代表値 ---統計の知識がないと喧嘩になる
     -   textcolor redデータの偏りと外れ値
         -   textcolor redデータの偏り
