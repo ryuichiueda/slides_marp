@@ -271,3 +271,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 考え方（あくまで一例）
     * このデータを<span style="color:red">外れ値</span>として除外して平均値、標準偏差を求め、「大きく外れた値がでることがある」と但し書きしたほうが特性が伝わる
         - 原因が明らかに違う誤差は分けて考えた方がよい
+
+---
+
+### ロボットと外れ値
+
