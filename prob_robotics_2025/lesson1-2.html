@@ -464,7 +464,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <ul>
 <li>いま扱っている例のようなセンサ値の補正</li>
 <li>カメラの歪み補正</li>
-<li>ジャイロの原点調整</li>
+<li>ジャイロの原点調整（失敗すると目のまわった人みたいにフラフラする）</li>
 <li>台車がまっすぐ走らないときの左右のバランスの補正</li>
 </ul>
 </li>
@@ -475,25 +475,21 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <span style="color:red"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container>とても厄介</span></li>
 </ul>
 </li>
-<li>人間の例
-<ul>
-<li>三半規管の問題で下（重力の方向）の検知にバイアスが発生することがある</li>
-</ul>
-</li>
 </ul>
 <footer>確率ロボティクス第1回（その2）</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer="確率ロボティクス第1回（その2）" data-paginate="true" lang="ja-JP" data-marpit-pagination="20" style="--footer:確率ロボティクス第1回（その2）;--paginate:true;" data-marpit-pagination-total="21">
 <h3 id="%E6%A0%A1%E6%AD%A3%E3%81%97%E3%81%99%E3%81%8E%E3%82%8B%E3%81%AE%E3%81%AF%E5%95%8F%E9%A1%8C%E3%81%A8%E3%81%AA%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B">校正しすぎるのは問題となることがある</h3>
 <ul>
-<li>時間がかかる
+<li>時間がかかる（場合によっては報われない）
 <ul>
-<li>ロボットが動かない原因がバイアスの問題ではないと完全に無駄</li>
+<li>バイアスが原因だとはっきりしていないのに<br />
+校正し続けたことはありませんか？</li>
 </ul>
 </li>
 <li>校正しない（自動化する）方法を考えたほうが生産的
 <ul>
-<li>研究者はこっちに集中しないといけません</li>
+<li>デモも大事ですが研究者はこっちに集中しないといけません</li>
 </ul>
 </li>
 </ul>
