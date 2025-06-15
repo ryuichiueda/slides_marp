@@ -191,7 +191,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ロボットと代表値
+### ロボットと代表値・分散
+
+- センサ情報の処理でよく出てくる
 
 
 ---
