@@ -276,3 +276,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ロボットと外れ値
 
+- バイアスと同様、ロボットにはつきもの
+    - 前半で言った整備されていない環境=外れ値が発生する環境
+        - センサの前を人や猫が横切る
+        - 台車がなにかに引っかかって、モータの出力に対して変な移動量が発生
