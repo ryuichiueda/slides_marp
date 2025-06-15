@@ -24,7 +24,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 代表値
 - データのばらつき
-- ロボットとデータ
+- 偏りと外れ値
 
 ---
 
@@ -186,14 +186,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## ロボットとデータ
+## 偏りと外れ値
 
 
 ---
 
-### ロボットと代表値・分散
+### 偏り
 
-- センサ情報の処理でよく出てくる
 
 
 ---
