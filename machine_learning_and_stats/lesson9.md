@@ -141,7 +141,7 @@ marp: true
     $\rightarrow$ データの発生源がいくつかあって、
     そのまわりにデータが発生、と考える
 
-![bg right:30% 100%](./figs/clustering_reason.png)
+![bg right:28% 95%](./figs/clustering_reason.png)
 
 ---
 
