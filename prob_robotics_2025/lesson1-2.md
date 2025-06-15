@@ -212,6 +212,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - <span style="color:red">校正（キャリブレーション）</span>
     - バイアスを計測して値に補正をかけること
 - ロボット周りでは校正が必要な場面が多い
+    - いま扱っている例のようなセンサ値の補正
+    - カメラの歪み補正
+    - 台車がまっすぐ走らないときの左右のバランスの補正
 
 
 
