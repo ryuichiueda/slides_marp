@@ -188,6 +188,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## ロボットとデータ
 
+
+---
+
+### ロボットと代表値
+
+
 ---
 
 -  代表値 ---統計の知識がないと喧嘩になる
