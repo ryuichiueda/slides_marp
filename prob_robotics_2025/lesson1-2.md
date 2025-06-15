@@ -240,6 +240,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 時間がかかる
 - 校正しない（自動化する）方法を考えたほうが生産的
+    - 研究者はこっちに集中しないといけません
 
 ---
 
