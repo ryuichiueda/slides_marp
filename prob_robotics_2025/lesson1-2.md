@@ -24,9 +24,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 代表値
 - データのばらつき
-
-注意: このスライドは数式重視のものになります。
-各用語や数式の意味は教科書（ロボットの確率・統計）に詳しく書いてあります。
+- ロボットとデータ
 
 ---
 
@@ -186,19 +184,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 「Aさんのロボットはどれだけ周数がばらつくの？」と聞かれたら
         「だいたい2周」と答えておけばよい
 
+---
+
+## ロボットとデータ
 
 ---
 
 -  代表値 ---統計の知識がないと喧嘩になる
-    -  他の基本的な代表値とロボティクスでの利用
-        -  中央値
-            - 使い方の典型例
-            - ロボティクスでの利用
-        -  最頻値，モード
-            - 最頻値
-            - モード
-            - ロボティクスにおけるモード
-        -  標準偏差
     -   textcolor redデータの偏りと外れ値
         -   textcolor redデータの偏り
             -  textcolor red偏りと校正
