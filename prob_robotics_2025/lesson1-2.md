@@ -252,5 +252,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 |試行回 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 平均値|標準偏差|
 |:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--:|:--:|
 |X | 0.90 | 0.75 | 0.83 | 1.20 | 1.12 | 1.15 | 1.07 | 1.21 | 0.93 | 1.21 |  1.04 | 0.17|
-|X' | 0.90 | 0.75 | 0.83 | 1.20 | 1.12 | 1.15 | 1.07 | 1.21 | 0.93 | <span style="color:red">5.00</span> |  1.04 | 0.17|
+|X' | 0.90 | 0.75 | 0.83 | 1.20 | 1.12 | 1.15 | 1.07 | 1.21 | 0.93 | <span style="color:red">5.00</span> |  <span style="color:red">1.42</span> | <span style="color:red">1.27</span>|
 
