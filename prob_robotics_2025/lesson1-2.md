@@ -190,12 +190,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     標準偏差だと「周」
     - グラフに書き込める
 - 人に伝えるときは標準偏差を使う
-    - 「どれだけばらつくの？」と聞かれたら標準偏差を答えておけばよい
-- 表記法
+    - 「どれだけばらつくの？」と聞かれたら
+    標準偏差を答えておけばよい
+- 平均値$\pm$標準偏差: よく使われる表記法
     - Aさん: $2.8 \pm 2.1$周
     - B君: $4.1 \pm 1.3$周
 
-![bg right:40% 100%](./figs/stddev.png)
+![bg right:35% 95%](./figs/stddev.png)
 
 ---
 
