@@ -207,6 +207,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 偏り（バイアス）
 
+- Zのほうの平均値のずれ$0.17$は<span style="color:red">偏り（バイアス）</span>と呼ばれるもの
+
 
 ---
 
