@@ -220,7 +220,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 * 答え
     - Zのほうの計測値から$0.17$を引いて使えばいいかもしれない
-       - Zはなにか問題があるかもという考え方も正しいので絶対ではないですが
+       - Zはなにか問題があるかも、という考え方も正しいので絶対ではない
 
 ---
 
