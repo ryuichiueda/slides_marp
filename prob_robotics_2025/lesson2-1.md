@@ -27,7 +27,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### こんなことはありませんか？
+### こんな経験はありませんか？
 
 - なにか
 
