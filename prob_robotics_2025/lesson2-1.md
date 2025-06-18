@@ -22,7 +22,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今回の内容
 
-- 確率
+- 確率の基礎+信頼性工学
+
+---
 
 {2.}\mokuSEVENjidori {確率 ---機械が動くという奇跡}}{22}
 {2.1}\SEVENjidori {掛け算で動く可能性が減っていくロボット}}{23}
