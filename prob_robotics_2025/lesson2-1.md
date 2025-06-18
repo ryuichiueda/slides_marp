@@ -29,7 +29,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### こんな経験はありませんか？
 
-- なにか
+1. ロボットのなにかの大会に出た
+2. ロボットが始動しなくてリタイアになった
 
 ---
 
