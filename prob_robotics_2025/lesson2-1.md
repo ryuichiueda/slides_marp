@@ -23,6 +23,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今回の内容
 
 - 確率の基礎+信頼性工学
+    - 確率を意識しながらロボットを運用する話
 
 ---
 
