@@ -59,29 +59,29 @@
 <p><img src="./figs/success_distribution.png" alt="" /></p>
 <footer>機械学習（と統計）第10回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="機械学習（と統計）第10回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:機械学習（と統計）第10回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="18" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/various_mixture_gauss.png&quot;);background-size:85%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="5" data-footer="機械学習（と統計）第10回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:機械学習（と統計）第10回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="18" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="機械学習（と統計）第10回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:機械学習（と統計）第10回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="18" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/various_mixture_gauss.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="5" data-footer="機械学習（と統計）第10回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:機械学習（と統計）第10回;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="18" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="%E6%B7%B7%E5%90%88%E3%82%AC%E3%82%A6%E3%82%B9%E5%88%86%E5%B8%83%E3%81%AE%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E5%AE%9A">混合ガウス分布のベイズ推定</h2>
 <ul>
 <li>「混合分布の分布」を考える
 <ul>
-<li>右図のような様々な分布に確率（の密度）を与える</li>
+<li>右図のように分布をドローできるもの</li>
+</ul>
+</li>
+<li>EM法との違い
+<ul>
 <li>最尤なものでなく、分布の分布自体を計算</li>
 </ul>
 </li>
-<li>第6回との違い
+<li>分布の分布の構成（パラメータ数膨大）
 <ul>
-<li>パラメータの数が膨大
-<ul>
-<li>ガウス分布が<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>個（<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>: クラスタの数）</li>
-<li>潜在変数が<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.367ex" height="1.57ex" role="img" focusable="false" viewBox="0 -683 1488 694"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mi" transform="translate(888,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container>個（<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg></mjx-container>: データの数）</li>
+<li>各ガウス分布の形状の分布</li>
+<li>混合比率の分布</li>
+<li>各データの各分布への帰属の分布</li>
 </ul>
 </li>
-<li>（単純な）ベイズの定理で計算できない</li>
-</ul>
-</li>
-<li>どうするか?
+<li>ベイズの定理で事後確率が一発で計算できない
 <ul>
-<li>EM法のように少しずつ分布（の分布）を変えていく</li>
+<li>どうするか?<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>EM法のように少しずつ分布の分布を変えていく</li>
 </ul>
 </li>
 </ul>
