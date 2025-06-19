@@ -119,6 +119,13 @@ marp: true
 
 ![bg right:30% 100%](./figs/belong_prob.png)
 
+
+---
+
+### これまでの変数、パラメータ一覧表
+
+
+
 ---
 
 ### これからやること: <span style="color:red">変分推論</span>
