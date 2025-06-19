@@ -103,8 +103,7 @@ marp: true
 
 - 各ガウス分布$\mathcal{N}(\boldsymbol{\mu}_j, \Lambda_j^{-1})$の分布:
 ガウス-ウィシャート分布
-    - 式:
-    $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+    - $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
         - ウィシャート分布$\mathcal{W}$: 精度行列$\Lambda_j$の分布
         - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 
