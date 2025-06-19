@@ -88,8 +88,7 @@ marp: true
 - 混合比率$\pi_{1:n}$の分布: ディリクレ分布
     - ベータ分布をコインの裏表だけでなく多変数に拡張したもの
         - 例: さいころなら6
-    - 式: $\text{Dir}(\pi_{1:n} | \alpha_{1:n})$
-    $= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
+    - $\text{Dir}(\pi_{1:n} | \alpha_{1:n})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
     $= \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
         - <span style="color:red">$\alpha_{1:n}$</span>: $\pi_{1:n}$のばらつきを決める
         パラメータ
@@ -101,13 +100,13 @@ marp: true
 
 ### 混合ガウス分布の分布のモデル化（続き）
 
-- 各ガウス分布のパラメータ$\boldsymbol{\mu}_j, \Lambda_j$の分布: ガウス-ウィシャート分布
-    - $\Lambda_j$（精度行列）$= \Sigma_j^{-1}$（計算しやすいので考える）
-    - ガウス-ウィシャート分布
-        - 式: $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
-            - ウィシャート分布$\mathcal{W}$: 精度行列の分布
-    - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
+- 各ガウス分布$\mathcal{N}(\boldsymbol{\mu}_j, \Lambda_j^{-1})$の分布:
+ガウス-ウィシャート分布
+    - $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+        - ウィシャート分布$\mathcal{W}$: 精度行列$\Lambda_j$の分布
+        - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 
+![bg right:25% 95%](./figs/gauss_wish.png)
 
 ---
 
