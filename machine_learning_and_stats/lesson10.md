@@ -65,7 +65,9 @@ marp: true
 
 ---
 
-### 推定対象のパラメータ
+### 推定対象（混合ガウス分布）のパラメータ
+
+「分布の分布」ではなく「分布」のほうの話
 
 - 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
     - （おさらい）混合ガウス分布:
@@ -84,13 +86,13 @@ marp: true
 ### 混合ガウス分布の分布のモデル化（分布の分布）
 
 - 混合比率$\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
-    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{1:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+    - 様々な混合比率のパターンに確率の密度を与える分布
         - ベータ分布をコインの裏表だけでなくもっと多くの変数
         （例: さいころなら6）に拡張したもの
-        - 様々な混合比率のパターンに確率の密度を与える
-    - $\alpha_{1:n}$: $\pi_{1:n}$のばらつきを決めるパラメータ
-        - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
-            - 合計値が大きくなる=さいころをたくさん投げて出目の傾向が分かってきた状態
+    - 式: $\text{Dir}(\pi_{1:n} | \alpha_{1:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+        - <span style="color:red">$\alpha_{1:n}$</span>: $\pi_{1:n}$のばらつきを決めるパラメータ
+            - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
+            （ベータ分布のときを思い出しましょう）
 
 ---
 
@@ -98,10 +100,19 @@ marp: true
 
 - 各ガウス分布のパラメータ$\boldsymbol{\mu}_j, \Lambda_j$の分布: ガウス-ウィシャート分布
     - $\Lambda_j$（精度行列）$= \Sigma_j^{-1}$（計算しやすいので考える）
-    - ガウス-ウィシャート分布: $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
-        - ウィシャート分布: 精度行列の分布
-    - 各ガウス分布の分布を決めるパラメータ: $\boldsymbol{m}_j, \beta_j, W_j, \nu_j$
+    - ガウス-ウィシャート分布
+        - 式: $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+            - ウィシャート分布$\mathcal{W}$: 精度行列の分布
+    - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 
+
+---
+
+### 各データの帰属確率のモデル化
+
+- $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する（$k_i = j$となる）確率を考える
+    - $r_{ij}$と表しましょう
+    - これは特定の式にせずにテーブル状のデータに
 
 ---
 
