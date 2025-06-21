@@ -238,6 +238,8 @@ marp: true
 - ハンド
 - ボルト
 
+![bg right:35% 95%](./figs/bolt.png)
+
 ---
 
 ## まとめ
