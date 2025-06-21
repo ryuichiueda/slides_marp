@@ -126,7 +126,7 @@ marp: true
 
 |データ|推定したい分布のパラメータ|推定したい分布の分布のパラメータ|
 |:---:|:---:|:---:|
-|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Sigma_j, \pi_j$|$r_{ij}$|
+|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j$|
 - $i=1,2,\dots,N$（$N$: データの数）
 - $j=1,2,\dots,n$（$n$: ガウス分布の数）
 
@@ -207,14 +207,14 @@ marp: true
 ### 変分Mステップ（各データの所属から分布のパラメータを計算）
 
 - 補助の数値を計算
-    - $N_j = \sum_{i=1}^N r_{ij}$
-    - $\bar{\boldsymbol{x}}_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}\boldsymbol{x}_i$
-    - $\Sigma_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)^\top$
+    - $N_j = \sum_{i=1}^N r_{ij}\qquad\qquad$（分布$j$の重み付きデータ数）
+    - $\bar{\boldsymbol{x}}_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}\boldsymbol{x}_i\ \quad$（分布$j$の重み付き平均）
+    - $\Sigma_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)^\top$（分布$j$の重み付き共分散行列）
 - 事後分布のパラメータを計算
     - $(\alpha_j, \beta_j, \nu_j) =(\alpha_j', \beta_j', \nu_j') + (N_j, N_j, N_j)$（データの個数だけ増大） 
     - $\boldsymbol{m}_j = (\beta_j' \boldsymbol{m}_j' + N_j \bar{\boldsymbol{x}}_j ) /\beta_j\qquad\qquad\qquad$（$\boldsymbol{\mu}_j$の中心の調整）
     - $W^{-1}_j = W'^{-1}_j + N_j \Sigma_j + \dfrac{\beta'_j N_j}{\beta'_j+ N_j} (\bar{\boldsymbol{x}}_j - \boldsymbol{m}_j')(\bar{\boldsymbol{x}}_j - \boldsymbol{m}_j')^\top$
-        （各ガウス分布の共分散行列の調整）
+      　　　  （各ガウス分布の共分散行列の調整）
 
 ---
 
