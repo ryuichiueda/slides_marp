@@ -137,7 +137,7 @@ marp: true
         - $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$としましょう
 2. 上記の初期値から、混合ガウス分布の事後分布のパラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を計算
     - EM法のMステップに相当（<span style="color:red">変分Mステップ</span>）
-3. 計算した$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$から$k_{i,1:n}$の事後分布を計算
+3. 計算した$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$から$r_{ij}$を計算
     - EM法のEステップに相当（<span style="color:red">変分Eステップ</span>）
 - 注意: $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$は固定
     - 事前分布を固定して、繰り返し事後分布の解を良くしていく
