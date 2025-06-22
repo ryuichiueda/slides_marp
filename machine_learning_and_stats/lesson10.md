@@ -123,7 +123,7 @@ marp: true
 
 |データ|推定したい分布のパラメータ|推定したい分布の分布のパラメータ|
 |:---:|:---:|:---:|
-|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j$|
+|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j, \alpha_j$|
 - $i=1,2,\dots,N$（$N$: データの数）
 - $j=1,2,\dots,n$（$n$: ガウス分布の数）
 
