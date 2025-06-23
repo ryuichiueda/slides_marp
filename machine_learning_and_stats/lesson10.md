@@ -235,8 +235,8 @@ marp: true
 
 ### 変分Eステップ（分布のパラメータから各データの所属を計算）
 
-- $\Pr\{k_i = j\} = P(r_{ij})$の分布: 次の計算で導出
-    - $P(r_{ij}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
+- $k_{1:N}$の分布: 次の計算で導出
+    - $P(k_{1:N}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
 - 計算結果: 次の$r_{ij}$が、$k_{ij}$が$1$になる確率
     - $r_{ij} = \eta \rho_{ij}$
         - $\log_e \rho_{ij} = -\dfrac{1}{2} d \beta_j^{-1} -\dfrac{1}{2} \nu_j(\boldsymbol{x}_i - \boldsymbol{m}_j)^\top W_j (\boldsymbol{x}_i - \boldsymbol{m}_j)$
