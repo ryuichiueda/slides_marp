@@ -97,9 +97,10 @@ marp: true
 ### $q_1$のモデル化
 
 - $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
-（$k_i = j$となる）確率を考える
+（$k_i = j$となる）確率分布$q_1'$を考える
     - $r_{ij}$と表しましょう
     - これは特定の式にせずにテーブル状のデータに
+- 各データに対する$q_1'$の積を$q_1$とする
 
 ![bg right:30% 100%](./figs/belong_prob.png)
 
@@ -124,7 +125,7 @@ marp: true
 
 - 各ガウス分布$\mathcal{N}(\boldsymbol{\mu}_j, \Lambda_j^{-1})$の分布:
 ガウス-ウィシャート分布
-    - $q_4(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+    - $q_4'(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
         - ウィシャート分布$\mathcal{W}$: 精度行列$\Lambda_j$の分布
         - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 
