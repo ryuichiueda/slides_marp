@@ -88,12 +88,26 @@ marp: true
         - $q_1$を動かす: クラスタの再構成
         - $q_2$を動かす: 分布の再構成
         <span style="color:red">EM法と同じ</span>（だけど計算はよりややこしく）
+- 次ページから
+    - $q_2 = q_3q_4$とさらに分解して$q_1, q_3, q_4$をモデル化
+        - $q_2(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) = q_3(\pi_{1:n})q_4(\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
 
 ---
 
-### 混合比率$\pi_{1:n}$の分布のモデル化
+### $q_1$のモデル化
 
-- ディリクレ分布
+- $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
+（$k_i = j$となる）確率を考える
+    - $r_{ij}$と表しましょう
+    - これは特定の式にせずにテーブル状のデータに
+
+![bg right:30% 100%](./figs/belong_prob.png)
+
+---
+
+### $q_3$のモデル化
+
+- ディリクレ分布を仮定
     - ベータ分布をコインの裏表だけでなく多変数に拡張したもの
         - 例: さいころなら6
     - $\text{Dir}(\pi_{1:n} | \alpha_{1:n})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
@@ -115,17 +129,6 @@ marp: true
         - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 
 ![bg right:25% 95%](./figs/gauss_wish.png)
-
----
-
-### 各データの帰属確率のモデル化
-
-- $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
-（$k_i = j$となる）確率を考える
-    - $r_{ij}$と表しましょう
-    - これは特定の式にせずにテーブル状のデータに
-
-![bg right:30% 100%](./figs/belong_prob.png)
 
 
 ---
