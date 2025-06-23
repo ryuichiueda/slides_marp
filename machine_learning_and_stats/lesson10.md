@@ -82,7 +82,7 @@ marp: true
 ### <span style="color:red">変分推論</span>による解法
 
 - 推定対象の分布を、パラメータごとに独立な分布の積にして近似
-    - $q(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+    - $q(\pi_{1:n},\boldsymbol{\mu}_{1:n}, \Lambda_{1:n}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:n},\boldsymbol{\mu}_{1:n}, \Lambda_{1:n})$
          - $q$: 近似の分布
     - $q_1$と$q_2$のどちらかを固定、どちらかを動かして交互にデータに合わせていく
         - $q_1$を動かす: クラスタの再構成
@@ -90,7 +90,7 @@ marp: true
         <span style="color:red">EM法と同じ</span>（だけど計算はよりややこしく）
 - 次ページから
     - $q_2 = q_3q_4$とさらに分解して$q_1, q_3, q_4$をモデル化
-        - $q_2(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) = q_3(\pi_{1:n})q_4(\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+        - $q_2(\pi_{1:n},\boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) = q_3(\pi_{1:n})q_4(\boldsymbol{\mu}_{1:n}, \Lambda_{1:n})$
 
 ---
 
