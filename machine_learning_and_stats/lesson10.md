@@ -77,6 +77,17 @@ marp: true
 
 ![bg right:40% 100%](./figs/gauss_mixture.png)
 
+---
+
+### <span style="color:red">変分推論</span>による解法
+
+- 推定対象の分布を、パラメータごとに独立な分布の積にして近似
+    - $q(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+         - $q$: 近似の分布
+    - $q_1$と$q_2$のどちらかを固定、どちらかを動かして交互にデータに合わせていく
+        - $q_1$を動かす: クラスタの再構成
+        - $q_2$を動かす: 分布の再構成
+        <span style="color:red">EM法と同じ</span>（だけど計算はよりややこしく）
 
 ---
 
@@ -126,19 +137,6 @@ marp: true
 |$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j, \alpha_j$|
 - $i=1,2,\dots,N$（$N$: データの数）
 - $j=1,2,\dots,n$（$n$: ガウス分布の数）
-
----
-
-### <span style="color:red">変分推論</span>による解法
-
-難しいので方法だけ
-
-- 推定対象の分布を、パラメータごとに独立な分布の積にして近似
-    - $q(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:n},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
-         - $q$: 近似の分布
-    - $q_1$と$q_2$のどちらかを固定、どちらかを動かして交互にデータに合わせていく
-        - $q_1$を動かす: クラスタの再構成
-        - $q_2$を動かす: 分布の再構成
 
 
 ---
