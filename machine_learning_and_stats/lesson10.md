@@ -98,6 +98,7 @@ marp: true
 
 - $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
 （$k_i = j$となる）確率分布$q_1'$を考える
+<span style="font-size:70%">（添字$1$はデータやクラスタのものでないので注意）</span>
     - $r_{ij}$と表しましょう
     - これは特定の式にせずにテーブル状のデータに
 - 各データに対する$q_1'$の積を$q_1$とする
@@ -128,6 +129,7 @@ marp: true
     - $q_4'(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
         - ウィシャート分布$\mathcal{W}$: 精度行列$\Lambda_j$の分布
         - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
+- 各ガウス分布ごとの$q_4'$の積を$q_4$とする
 
 ![bg right:25% 95%](./figs/gauss_wish.png)
 
