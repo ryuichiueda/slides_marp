@@ -309,11 +309,28 @@ marp: true
 - $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
     - 右図上の状態から右図下の状態にもっていきたい
 - 修正のための式（p. 19のもの）: 
-    - $w_i = w_i- \alpha$入力値$\cdot$誤差（重みが減る）
-    - $b = 1/10+ \alpha$誤差（閾値が上がる）
+    - $w_i \leftarrow w_i- \alpha$入力値$\cdot$誤差
+    - $b \leftarrow b+ \alpha$誤差
 - $\alpha=0.5$で（早く収束させるため大きめ）
-- 様々な値を入力してみましょう
+- $(x_1, x_2, x_3) = (1, 0, 0)$を入力してパラメータを修正してみましょう
 
+
+![bg right:25% 90%](./figs/simple_ann_learning.png)
+
+
+---
+
+### 計算の例
+
+- 目的（再掲）: $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
+- 計算（再掲）
+    - $w_i \leftarrow w_i- \alpha$入力値$\cdot$誤差
+    - $b \leftarrow b+ \alpha$誤差
+
+- $(x_1, x_2, x_3) = (1, 0, 0)$を入力$\rightarrow$出力$1$、誤差$1$
+    - $w_1 = 2 - 1/2 \cdot 1 \cdot 1 = 1.5$（$1$に近づく）
+    - $w_2 = w_3 = 2$（そのまま）
+    - $b = 2 + \alpha1 = 2.5$（$3$に近づく）
 
 ![bg right:25% 90%](./figs/simple_ann_learning.png)
 
