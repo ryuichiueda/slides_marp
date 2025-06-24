@@ -320,9 +320,8 @@ marp: true
 
 ---
 
-### 計算の例
+### 答え
 
-- 目的（再掲）: $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
 - 計算（再掲）
     - $w_i \leftarrow w_i- \alpha$入力値$\cdot$誤差
     - $b \leftarrow b+ \alpha$誤差
@@ -331,8 +330,28 @@ marp: true
     - $w_1 = 2 - 1/2 \cdot 1 \cdot 1 = 1.5$（$1$に近づく）
     - $w_2 = w_3 = 2$（そのまま）
     - $b = 2 + \alpha1 = 2.5$（$3$に近づく）
+- 次に$(x_1, x_2, x_3) = (0, 0, 1)$を入力すると？
 
-![bg right:25% 90%](./figs/simple_ann_learning.png)
+![bg right:30% 90%](./figs/simple_ann_learning_modify.png)
+
+---
+
+### 答え
+
+- 計算（再掲）
+    - $w_i \leftarrow w_i- \alpha$入力値$\cdot$誤差
+    - $b \leftarrow b+ \alpha$誤差
+
+- $(x_1, x_2, x_3) = (0, 0, 1)$を入力$\rightarrow$出力$0$、誤差$-1$
+    - $w_1 = 1.5$（そのまま）
+    - $w_2 = 2$（そのまま）
+    - $w_3 = 2 - 0.5 \cdot 1 \cdot (-1) = 2.5$（$3$に近づく）
+    - $b = 2.5 + 0.5 (-1) = 2$
+        - $b$は$3$から遠ざかる。そういう場合もある。
+- できる人は前方のニューロンに送る誤差も計算を
+
+![bg right:30% 90%](./figs/simple_ann_learning_modify.png)
+
 
 ---
 
