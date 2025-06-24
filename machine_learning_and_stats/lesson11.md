@@ -343,14 +343,13 @@ marp: true
     - $b \leftarrow b+ \alpha$誤差
 
 - $(x_1, x_2, x_3) = (0, 0, 1)$を入力$\rightarrow$出力$0$、誤差$-1$
-    - $w_1 = 1.5$（そのまま）
-    - $w_2 = 2$（そのまま）
+    - $w_1, w_2$はそのまま
     - $w_3 = 2 - 0.5 \cdot 1 \cdot (-1) = 2.5$（$3$に近づく）
     - $b = 2.5 + 0.5 (-1) = 2$
         - $b$は$3$から遠ざかる。そういう場合もある。
 - できる人は前方のニューロンに送る誤差も計算を
 
-![bg right:30% 90%](./figs/simple_ann_learning_modify.png)
+![bg right:30% 90%](./figs/simple_ann_learning_modify2.png)
 
 
 ---
