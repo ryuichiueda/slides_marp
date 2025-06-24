@@ -302,6 +302,18 @@ marp: true
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
 
 
+---
+
+### 問題
+
+- p. 14のニューラルネットワークのパラメータを修正してみましょう
+    - 式（p. 19のもの）: 
+        - $w_i = w_i- \alpha$入力値$\cdot$誤差（重みが減る）
+        - $b = 1/10+ \alpha$誤差（閾値が上がる）
+            - $\alpha=0.5$で
+
+
+![bg right:25% 90%](./figs/simple_ann_learning.png)
 
 ---
 
