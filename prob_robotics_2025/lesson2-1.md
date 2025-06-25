@@ -41,6 +41,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 確率の定義
+
+- 数学的に厳密なものは難しいので、とりあえずこう考える
+    - 未来のことについて、ある事象が起こるか起こらないかの割合
+        - 「未来」は「起こってるけどまだ見てない」などでもよい
+
+
+---
+
 {2.}\mokuSEVENjidori {確率 ---機械が動くという奇跡}}{22}
 {2.1}\SEVENjidori {掛け算で動く可能性が減っていくロボット}}{23}
 {2.1.1}\SEVENjidori {確率の導入}}{23}
