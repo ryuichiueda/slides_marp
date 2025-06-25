@@ -33,6 +33,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 * <span style="color:red">$\uparrow$「運が悪かった」で済ませていませんか？</span>
 * <span style="color:red">$\uparrow$ほんとに運が悪かったんですか？</span>
 * <span style="color:red">$\uparrow$リタイアした原因だけつぶして満足していませんか？</span>
+* <span style="color:red">$\uparrow$なんどもこんなことを繰り返していませんか？</span>
+
+
 
 ---
 
