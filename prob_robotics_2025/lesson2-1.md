@@ -29,8 +29,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### こんな経験はありませんか？
 
-1. ロボットのなにかの大会に出た
-2. ロボットが始動しなくてリタイアになった
+- ロボットのなにかの大会に出た$\rightarrow$ロボットが始動しなくてリタイアになった
+* <span style="color:red">$\uparrow$「運が悪かった」で済ませていませんか？</span>
+* <span style="color:red">$\uparrow$ほんとに運が悪かったんですか？</span>
+* <span style="color:red">$\uparrow$リタイアした原因だけつぶして満足していませんか？</span>
 
 ---
 
