@@ -34,7 +34,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 * <span style="color:red">$\uparrow$ほんとに運が悪かったんですか？</span>
 * <span style="color:red">$\uparrow$リタイアした原因だけつぶして満足していませんか？</span>
 * <span style="color:red">$\uparrow$なんどもこんなことを繰り返していませんか？</span>
-
+* そういう人はおそらくロボットへの知識ではなく<span style="color:red">信頼性工学</span>の知識が足りません
+    - 勉強していきましょう
+    - 信頼性工学は確率を駆使するので、確率の基礎もおさえていきましょう
 
 
 ---
