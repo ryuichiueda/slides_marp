@@ -72,6 +72,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 様々なタイプの事象
 
+- 根元事象
 
 ---
 
