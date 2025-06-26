@@ -73,6 +73,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 様々なタイプの事象
 
 - 根元事象
+    - それ以上分けられない（と決めた）事象
+        - 例: サイコロの1〜6の出目
 
 ---
 
