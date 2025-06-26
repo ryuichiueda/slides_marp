@@ -80,7 +80,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 起こりうるすべての事象を含んだ事象
         - サイコロの例: 1〜6のどれかが出る
 
-<span style="font-size:80%">注意: ほんとうは標本空間などを定義して厳密にする話なんですけど、ここでは少し曖昧に説明しています。</span>
+<span style="font-size:80%">注意: ほんとうは標本空間などを定義して厳密にする話なんですけど、ここでは曖昧に説明しています。</span>
 
 ---
 
