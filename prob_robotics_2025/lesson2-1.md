@@ -91,6 +91,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 余事象
     - 全事象からある事象Aを除いた事象
     - 事象Aに対して余事象はA$^c$と表記
+    - サイコロの例: 「偶数が出る」の余事象は「奇数が出る」
 
 ---
 
