@@ -79,6 +79,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 全事象
     - すべての事象を含んだ事象
         - サイコロの例: 1〜6のどれかが出る
+- 空事象
+    - 起こらない事象で$\varnothing$あるいは$\phi$
+    - 集合論では
 
 ---
 
