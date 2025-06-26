@@ -58,8 +58,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 記号での表記: 事象Xの起こる確率を$\Pr\{$X$\}$と表記
 （事象Aはなんでもよい）
     - 前ページの例: $\Pr\{$Aが正しく立ち上がる$\}=0.9$
-- あとから出てくる$P(x)$との違い
-    - この表記の場合は$x$は変数
+- あとから出てくる$P(x), P(\boldsymbol{x})$との違い
+    - この表記の場合は$x$や$\boldsymbol{x}$はそれぞれスカラやベクトル
     - $\Pr\{$X$\}$のXは事象なので、なんでも書ける
 
 
