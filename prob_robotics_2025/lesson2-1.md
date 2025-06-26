@@ -81,7 +81,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - サイコロの例: 1〜6のどれかが出る
 - 空事象
     - 起こらない事象で$\varnothing$あるいは$\phi$と表記
-    - 集合論の空集合に相当
+    - 集合論の空集合に相当（集合論で確率を定義するときに出てくる）
     - $\Pr\{\varnothing\} = 0$
 
 ---
