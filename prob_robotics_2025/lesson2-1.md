@@ -121,6 +121,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 最初の問題
     - A$_1$が正しく起動する確率が$0.8$で、他の部品の確率が$0.95$とした場合、
     ロボットが正しく起動する確率は？
+    - 計算方法は解説していませんが、とりあえずこれまでの知識でどうぞ
 
 
 ---
@@ -129,6 +130,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - $0.8\cdot 0.95^9 = 0.50$
     - つまり2回に1回起動しない
+    - こういう状態で何かに参加しても2回に1回リタイアとなる
 
 
 ---
