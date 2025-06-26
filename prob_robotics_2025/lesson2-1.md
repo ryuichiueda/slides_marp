@@ -45,6 +45,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 確率と事象
 
+- 信頼性工学に入る前に
+
 ---
 
 ### 確率の定義
