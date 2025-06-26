@@ -58,8 +58,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 記号での表記: 事象Xの起こる確率を$\Pr\{$X$\}$と表記
 （事象Aはなんでもよい）
     - 前ページの例: $\Pr\{$Aが正しく立ち上がる$\}=0.9$
-- あとから出てくる$P(x), P(\boldsymbol{x})$との違い
-    - （本書の場合）この表記の場合は$x$や$\boldsymbol{x}$はそれぞれスカラやベクトル
+- あとから出てくる$P(x), P(\boldsymbol{x})$との違い（本書の場合）
+    - この表記の場合は$x$や$\boldsymbol{x}$はそれぞれスカラやベクトル
         - $P$は定義域が数直線やベクトルの空間で厳密に決まった関数
     - 例: サイコロ
         - $P(1) = 1/6$と書けても$P($ 5以外の数 $)$とは書けない
