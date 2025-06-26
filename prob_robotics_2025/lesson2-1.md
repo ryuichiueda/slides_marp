@@ -80,8 +80,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - すべての事象を含んだ事象
         - サイコロの例: 1〜6のどれかが出る
 - 空事象
-    - 起こらない事象で$\varnothing$あるいは$\phi$
-    - 集合論では
+    - 起こらない事象で$\varnothing$あるいは$\phi$と表記
+    - 集合論の空集合に相当
+    - $\Pr\{\varnothing\} = 0$
 
 ---
 
