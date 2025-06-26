@@ -133,7 +133,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - こういう状態で何かに参加しても2回に1回リタイアとなる
 - うんちく
     - 構成要素が1つでも動かないと動かない構成のロボットや機械，
-    工場や物流の仕組みのことは，直列システムと呼ばれる
+    工場や物流の仕組みのことは，<span style="color:red">直列システム</span>と呼ばれる
+    - 直列システムが正しく稼働する確率:
+        - 各構成要素が正しく稼働する確率の掛け算
+        - <span style="color:red">掛け算で正しく稼働する確率が減る</span>
 
 
 ---
