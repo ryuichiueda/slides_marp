@@ -24,6 +24,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 確率の基礎+信頼性工学
     - 確率を意識しながらロボットを運用する話
+- 内容
+    - 確率と事象
 
 ---
 
@@ -38,6 +40,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 勉強していきましょう
     - 信頼性工学は確率を駆使するので、確率の基礎もおさえていきましょう
 
+
+---
+
+## 確率と事象
 
 ---
 
@@ -95,6 +101,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 事象Xに対して余事象はX$^c$と表記
     - サイコロの例: 「偶数が出る」の余事象は「奇数が出る」
 
+---
+
+## 確率の計算
+
+- ロボットの起動率の計算を例に
+
+---
+
+
+### 例題
 
 
 ---
