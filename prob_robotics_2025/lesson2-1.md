@@ -70,7 +70,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 様々なタイプの事象
+### 様々なタイプの事象1
 
 - 根元事象
     - それ以上分けられない（と決めた）事象
@@ -79,10 +79,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 全事象
     - すべての事象を含んだ事象
         - サイコロの例: 1〜6のどれかが出る
+
+---
+
+### 様々なタイプの事象2
+
 - 空事象
     - 起こらない事象で$\varnothing$あるいは$\phi$と表記
     - 集合論の空集合に相当（集合論で確率を定義するときに出てくる）
     - $\Pr\{\varnothing\} = 0$
+- 余事象
+    - 全事象からある事象Aを除いた事象
+    - 事象Aに対して余事象はA$^c$と表記
 
 ---
 
