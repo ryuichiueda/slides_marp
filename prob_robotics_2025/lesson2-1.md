@@ -95,7 +95,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-{2.}\mokuSEVENjidori {確率 ---機械が動くという奇跡}}{22}
 {2.1}\SEVENjidori {掛け算で動く可能性が減っていくロボット}}{23}
 {2.1.1}\SEVENjidori {確率の導入}}{23}
 {\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}確率の導入}{24}
