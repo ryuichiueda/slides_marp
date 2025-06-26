@@ -77,8 +77,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - サイコロの例: 1〜6の出目
         - 根元事象でない事象の例: サイコロの出目が偶数 
 - 全事象
-    - すべての事象を含んだ事象
+    - 起こりうるすべての事象を含んだ事象
         - サイコロの例: 1〜6のどれかが出る
+
+<span style="font-size:80%">注意: ほんとうは標本空間などを定義して厳密にする話なんですけど、ここでは少し曖昧に説明しています。</span>
 
 ---
 
@@ -92,6 +94,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - ある事象Xに対し、全事象からあるXを除いた事象
     - 事象Xに対して余事象はX$^c$と表記
     - サイコロの例: 「偶数が出る」の余事象は「奇数が出る」
+
+
 
 ---
 
