@@ -172,7 +172,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 人間は自分の興味で現実を歪んだ姿で見る
     - 確率の計算ができれば、その歪みも多少マシになるでしょう
 
-ということで、もっと確率の計算ができるようにしましょう
+<center>ということで、もっと確率の計算ができるようにしましょう</center>
 
 ---
 
