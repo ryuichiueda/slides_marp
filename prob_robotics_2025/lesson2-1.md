@@ -151,6 +151,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     * 興味のあるところしか見ていなくて全体を見ていない
     * ロボットを走らせると興味のなかったところで不具合が起こり、
     ひどい場合にはそれを棚上げにする$\Rightarrow$毎年リタイア
+    * （ロボット関係ないけど）理論派を自称する連中も大抵これ
 
 ---
 
