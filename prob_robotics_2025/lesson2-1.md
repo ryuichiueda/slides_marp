@@ -160,7 +160,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 答え
     * $\alpha^{10} = 0.9$
     * $\alpha = 0.99$
-* つまり「たまに動かないけどまあいいや」みたいな部品は、基本使ってはならない
+* <span style="color:red">「たまに動かないけどまあいいや」みたいな部品は、基本使ってはならない</span>
 
 
 ---
