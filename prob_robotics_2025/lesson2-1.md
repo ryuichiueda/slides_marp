@@ -138,7 +138,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 各構成要素が正しく稼働する確率の掛け算
         - <span style="color:red">掛け算で正しく稼働する確率が減る</span>
 
-
 ---
 
 ### もうひとつ問題
@@ -152,6 +151,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     * 興味のあるところしか見ていなくて全体を見ていない
     * ロボットを走らせると興味のなかったところで不具合が起こり、
     ひどい場合にはそれを棚上げにする$\Rightarrow$毎年リタイア
+
+
+---
+
+### さらに問題
+
+- ロボットの起動率を$0.9$まで引き上げるには、各部品の起動率をどこまで向上させる必要があるでしょうか？すべての部品を同じ起動率$\alpha$まで引き上げる場合、$\alpha$の値はいくつでしょうか？
 
 
 
