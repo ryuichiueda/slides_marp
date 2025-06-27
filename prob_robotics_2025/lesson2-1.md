@@ -197,9 +197,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 直列システムの起動率の計算
+### 直列システムへの乗法定理の適用
 
-- $\Pr\{$A$_{1:10}$が起動$\} = \prod_{i=1}^{10} \Pr\{$A$_i$が起動$\}= 0.8\cdot 0.95^9 = 0.50$
+- $\Pr\{$A$_{1:10}$が起動$\} = \Pr\{$A$_{2:10}$が起動|A$_1$が起動$\}\Pr\{$A$_1$が起動$\}$
 
 ---
 
