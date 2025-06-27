@@ -158,7 +158,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### さらに問題
 
 - ロボットの起動率を$0.9$まで引き上げるには、各部品の起動率をどこまで向上させる必要があるでしょうか？すべての部品を同じ起動率$\alpha$まで引き上げる場合、$\alpha$の値はいくつでしょうか？
-
+- 答え
+    * $\alpha^{10} = 0.9$
+    * $\alpha = 0.99$
 
 
 ---
