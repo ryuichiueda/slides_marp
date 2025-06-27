@@ -180,11 +180,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-{2.1}\SEVENjidori {掛け算で動く可能性が減っていくロボット}}{23}
-{2.1.1}\SEVENjidori {確率の導入}}{23}
-{\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}確率の導入}{24}
-{\hbox to2zw{{\rm (}\hfill 2\hfill {\rm )}}}確率の記号表現と事象}{24}
-{2.1.2}\SEVENjidori {ロボットの起動率の計算}}{25}
 {2.1.3}\SEVENjidori {乗法定理と独立}}{27}
 {\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}乗法定理}{28}
 {\hbox to2zw{{\rm (}\hfill 2\hfill {\rm )}}}独立}{29}
@@ -207,6 +202,3 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 {2.4.4}\SEVENjidori {確率分布と事象の関係}}{45}
 {2.4.5}\SEVENjidori {同時確率質量関数，同時確率分布}}{46}
 {2.5}\SEVENjidori {まとめと議論}}{47}
-{2.5.1}\SEVENjidori {なぜ自動車や飛行機が大丈夫なのかを不真面目に考える}}{47}
-{2.5.2}\SEVENjidori {信頼性向上の方法に関する考察}}{49}
-{2.5.3}\SEVENjidori {冗長化に関する考察}}{51}
