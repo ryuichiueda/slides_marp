@@ -182,6 +182,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 直列システムの起動率はなぜ掛け算になる？
+
+- さきほど、直列システムの起動率を掛け算で求めた
+    - なんで掛け算？
+    - ここでは確率の計算の定理を正しいとして、機械的に考えてみましょう
+- 鍵となる定理: <span style="color:red">乗法定理</span>
+
+
+---
+
 {2.1.3}\SEVENjidori {乗法定理と独立}}{27}
 {\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}乗法定理}{28}
 {\hbox to2zw{{\rm (}\hfill 2\hfill {\rm )}}}独立}{29}
