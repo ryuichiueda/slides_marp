@@ -188,6 +188,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - なんで掛け算？
     - ここでは確率の計算の定理を正しいとして、機械的に考えてみましょう
 - 鍵となる定理: <span style="color:red">乗法定理</span>
+    - $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる|Bが起きる$\}\text{Pr}\{$Bが起きる$\}$
+        - $\text{Pr}\{$Aが起きる|Bが起きる$\}$: Bが起きることが分かっているときに
+        Aが起きる確率（<span style="color:red">条件付き確率</span>）
+            - $|$の右側は「<span style="color:red">条件</span>」
+        - なんでこうなるかはこの講義では扱いません
 
 
 ---
