@@ -25,8 +25,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 確率の基礎+信頼性工学
     - 確率を意識しながらロボットを運用する話
 - 内容
-    - 確率と事象
     - 簡単な確率の計算
+    - 事象
 
 ---
 
@@ -75,7 +75,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $\Pr\{$X$\}$のXは事象なので、なんでも書ける
     - 例: $\Pr\{$ 5以外の数 $\}$
     - 事象の集合に対する関数になっている
-
 
 ---
 
