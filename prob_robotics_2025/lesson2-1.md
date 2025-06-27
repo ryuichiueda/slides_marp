@@ -26,6 +26,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 確率を意識しながらロボットを運用する話
 - 内容
     - 確率と事象
+    - 簡単な確率の計算
 
 ---
 
@@ -146,7 +147,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - さっきのロボットを運用しているチームは、部品A$_1$の起動率が低いことを気にして原因を突き止めて起動率を$1.0$にしました。ロボットの起動率は？
     - 他の部品の起動率は$0.95$のまま
 - 答え
-    * $0.95^9 = 0.63$（<span style="color:red">そんなに改善しない</span>）
+    * $\Pr\{$A$_{1:10}$が起動$\}=$（中略）$=1.0\cdot 0.95^9 = 0.63$（<span style="color:red">そんなに改善しない</span>）
     * A$_1$の改善は必要だが他の部品についても改善する必要がある
 - 学生を見ていてよくあるなあと思うやつ
     * 興味のあるところしか見ていなくて全体を見ていない
