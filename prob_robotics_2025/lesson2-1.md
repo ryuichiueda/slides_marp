@@ -129,7 +129,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 答え
 
 - $\Pr\{$A$_{1:10}$が起動$\} = \prod_{i=1}^{10} \Pr\{$A$_i$が起動$\}= 0.8\cdot 0.95^9 = 0.50$
-    - と、掛け算になる
+と、掛け算になる
     - 答えをみると2回に1回起動しないことが分かる
     - こういう状態で何かに参加しても2回に1回リタイアとなる
 - うんちく
