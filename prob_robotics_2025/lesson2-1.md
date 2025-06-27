@@ -152,7 +152,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     * ロボットを走らせると興味のなかったところで不具合が起こり、
     ひどい場合にはそれを棚上げにする$\Rightarrow$毎年リタイア
 
-
 ---
 
 ### さらに問題
@@ -161,6 +160,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 答え
     * $\alpha^{10} = 0.9$
     * $\alpha = 0.99$
+* つまり「たまに動かないけどまあいいや」みたいな部品は、基本使ってはならない
 
 
 ---
