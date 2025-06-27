@@ -193,7 +193,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - $\text{Pr}\{$Aが起きる|Bが起きる$\}$: Bが起きることが分かっているときに
         Aが起きる確率（<span style="color:red">条件付き確率</span>）
             - $|$の右側は「<span style="color:red">条件</span>」
-        - なんでこうなるかはこの講義では扱いません
 
 
 ---
@@ -206,6 +205,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
    - 「ある部品の起動の成否は他の部品の起動の成否に影響しない」
    <span style="color:red">$\Rightarrow$条件を削除可能</span>
 - このような事象の関係を<span style="color:red">独立</span>という
+- 独立な事象$X$と$Y$の関係:
+	- $\Pr\{X \cap Y\} = \Pr\{X | Y\}\Pr\{Y\} = \Pr\{X\}\Pr\{Y\}$
 
 ---
 
