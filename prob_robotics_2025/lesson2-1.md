@@ -151,7 +151,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 学生を見ていてよくあるなあと思うやつ
     * 興味のあるところばっかり注目して全体を見ていない
     * ロボットを走らせると、興味のなかったところで不具合が起こり、
-    ひどい場合にはそれを棚上げにする
+    ひどい場合にはそれを棚上げにする$\Rightarrow$毎年リタイア
 
 
 
