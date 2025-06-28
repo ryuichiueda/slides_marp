@@ -206,9 +206,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 直列システムへの乗法定理の適用
+### 独立
 
-   - 「ある部品の起動の成否は他の部品の起動の成否に影響しない」
+- $\Pr\{$A$_{2:10}$が起動|A$_1$が起動$\}$
+   - ある部品の起動の成否は他の部品の起動の成否に影響しないと条件にあった
    <span style="color:red">$\Rightarrow$条件を削除可能</span>
 - このような事象の関係を<span style="color:red">独立</span>という
 - 独立な事象$X$と$Y$の関係:
@@ -216,6 +217,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $\Pr\{X \cap Y\} = \Pr\{Y | X\}\Pr\{X\} = \Pr\{X\}\Pr\{Y\}$
 	    - $\cap$は集合の共通部分を表す記号
 	- 表記: $X\perp\!\!\!\!\perp Y$
+- 独立でない場合は<span style="color:red">従属</span>といわれる
+	- 表記: $X\not\perp\!\!\!\!\!\perp Y$
 
 ---
 
