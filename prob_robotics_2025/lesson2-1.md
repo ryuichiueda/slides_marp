@@ -211,7 +211,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $\Pr\{$A$_{2:10}$が起動|A$_1$が起動$\}$
    - ある部品の起動の成否は他の部品の起動の成否に影響しないと条件にあった
    <span style="color:red">$\Rightarrow$条件を削除可能</span>
-- このような事象の関係を<span style="color:red">独立</span>という
+- このような事象の無関係性を<span style="color:red">独立</span>という
 - 独立な事象$X$と$Y$の関係:
 	- $\Pr\{X \cap Y\} = \Pr\{X | Y\}\Pr\{Y\} = \Pr\{X\}\Pr\{Y\}$
 	- $\Pr\{X \cap Y\} = \Pr\{Y | X\}\Pr\{X\} = \Pr\{X\}\Pr\{Y\}$
