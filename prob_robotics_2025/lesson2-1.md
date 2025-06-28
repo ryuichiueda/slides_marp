@@ -234,8 +234,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-{\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}乗法定理}{28}
-{\hbox to2zw{{\rm (}\hfill 2\hfill {\rm )}}}独立}{29}
+### 冗長化されたシステム
+
+---
+
 {2.2}\SEVENjidori {冗長化されたシステム}}{30}
 {2.2.1}\SEVENjidori {加法定理}}{31}
 {2.2.2}\SEVENjidori {冗長化されたA$_1$の起動率}}{32}
