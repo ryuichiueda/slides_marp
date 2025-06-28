@@ -188,19 +188,24 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - さきほど、直列システムの起動率を掛け算で求めた
     - なんで掛け算？
     - ここでは確率の計算の定理を正しいとして、機械的に考えてみましょう
-- 鍵となる定理: <span style="color:red">乗法定理</span>
-    - $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる|Bが起きる$\}\text{Pr}\{$Bが起きる$\}$
-        - $\text{Pr}\{$Aが起きる|Bが起きる$\}$: Bが起きることが分かっているときに
-        Aが起きる確率（<span style="color:red">条件付き確率</span>）
-            - $|$の右側は「<span style="color:red">条件</span>」
+
+
+---
+
+### 鍵となる定理: <span style="color:red">乗法定理</span>
+
+- $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる|Bが起きる$\}\text{Pr}\{$Bが起きる$\}$
+    - $\text{Pr}\{$Aが起きる|Bが起きる$\}$: Bが起きることが分かっているときに
+    Aが起きる確率（<span style="color:red">条件付き確率</span>）
+        - $|$の右側は「<span style="color:red">条件</span>」
+- 直列システムに適用するとこうなる
+    - $\Pr\{$A$_{1:10}$が起動$\} = \Pr\{$A$_{2:10}$が起動|A$_1$が起動$\}\Pr\{$A$_1$が起動$\}$
 
 
 ---
 
 ### 直列システムへの乗法定理の適用
 
-- まずはこうなる
-    - $\Pr\{$A$_{1:10}$が起動$\} = \Pr\{$A$_{2:10}$が起動|A$_1$が起動$\}\Pr\{$A$_1$が起動$\}$
 - 条件つき確率$\Pr\{$A$_{2:10}$が起動|A$_1$が起動$\}$について考察すると・・・
    - 「ある部品の起動の成否は他の部品の起動の成否に影響しない」
    <span style="color:red">$\Rightarrow$条件を削除可能</span>
