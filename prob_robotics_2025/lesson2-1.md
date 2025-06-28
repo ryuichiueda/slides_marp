@@ -209,6 +209,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $\Pr\{X \cap Y\} = \Pr\{X | Y\}\Pr\{Y\} = \Pr\{X\}\Pr\{Y\}$
 	- $\Pr\{X \cap Y\} = \Pr\{Y | X\}\Pr\{X\} = \Pr\{X\}\Pr\{Y\}$
 	    - $\cap$は集合の共通部分を表す記号
+	- 表記: $X\perp\!\!\!\!\perp Y$
 
 ---
 
