@@ -236,6 +236,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 冗長化されたシステム
 
+- 部品A$_1$の起動率を上げるために、次のように複数の部品に置き換え、どれが壊れても問題ないようにしました。
+
+![w:700](./figs/redundant_a1.gif)
+
 ---
 
 {2.2}\SEVENjidori {冗長化されたシステム}}{30}
