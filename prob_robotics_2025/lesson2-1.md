@@ -188,11 +188,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - さきほど、直列システムの起動率を掛け算で求めた
     - なんで掛け算？
     - ここでは確率の計算の定理を正しいとして、機械的に考えてみましょう
+        - <span style="color:red">乗法定理</span>という定理を使う
 
 
 ---
 
-### 鍵となる定理: <span style="color:red">乗法定理</span>
+### 乗法定理
 
 - $\text{Pr}\{$AとBが起きる$\} = \text{Pr}\{$Aが起きる|Bが起きる$\}\text{Pr}\{$Bが起きる$\}$
     - $\text{Pr}\{$Aが起きる|Bが起きる$\}$: Bが起きることが分かっているときに
