@@ -54,11 +54,8 @@ marp: true
     - 右図のように分布をドローできるもの
 - EM法との違い
     - 最尤なものでなく、分布の分布自体を計算
-- 分布の分布の構成（パラメータ数膨大）
-    - 各ガウス分布の形状の分布
-    - 混合比率の分布
-    - 各データの各分布への帰属の分布
-- ベイズの定理で事後確率が一発で計算できない
+    - データが入ると分布をベイズの定理で更新
+- 問題: 事後確率がベイズの定理一発で計算できない
     - どうするか?$\rightarrow$EM法のように少しずつ分布の分布を変えていく
 
 ![bg right:35% 95%](./figs/various_mixture_gauss.png)
@@ -71,7 +68,7 @@ marp: true
 
 - 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
     - （おさらい）混合ガウス分布:
-        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:K}, \Sigma_{1:K}, \pi_{1:K})$
         $=  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
 - 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
@@ -80,44 +77,61 @@ marp: true
 
 ![bg right:40% 100%](./figs/gauss_mixture.png)
 
+---
+
+### <span style="color:red">変分推論</span>による解法
+
+- 推定対象の分布を、パラメータごとに独立な分布の積にして近似
+    - $q(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+         - $q$: 近似の分布
+    - $q_1$と$q_2$のどちらかを固定、どちらかを動かして交互にデータに合わせていく
+        - $q_1$を動かす: クラスタの再構成
+        - $q_2$を動かす: 分布の再構成
+        <span style="color:red">EM法と同じ</span>（だけど計算はよりややこしく）
+- 次ページから
+    - $q_2 = q_3q_4$とさらに分解して$q_1, q_3, q_4$をモデル化
+        - $q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) = q_3(\pi_{1:K})q_4(\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
 
 ---
 
-### 混合ガウス分布の分布のモデル化
+### $q_1$のモデル化
 
-- 混合比率$\pi_{1:n}$の分布: ディリクレ分布
+- $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
+（$k_i = j$となる）確率分布$q_1'$を考える
+<span style="font-size:70%">（添字$1$はデータやクラスタのものでないので注意）</span>
+    - $r_{ij}$と表しましょう
+    - これは特定の式にせずにテーブル状のデータに
+- 各データに対する$q_1'$の積を$q_1$とする
+
+![bg right:30% 100%](./figs/belong_prob.png)
+
+---
+
+### $q_3$のモデル化
+
+- ディリクレ分布を仮定
     - ベータ分布をコインの裏表だけでなく多変数に拡張したもの
         - 例: さいころなら6
-    - $\text{Dir}(\pi_{1:n} | \alpha_{1:n})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
+    - $\text{Dir}(\pi_{1:K} | \alpha_{1:K})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
     $= \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
-        - <span style="color:red">$\alpha_{1:n}$</span>: $\pi_{1:n}$のばらつきを決める
+        - <span style="color:red">$\alpha_{1:K}$</span>: $\pi_{1:K}$のばらつきを決める
         パラメータ
-            - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
+            - $\alpha_{1:K}$の合計値が大きくなるほど値が定まってくる
 
-![bg right:40% 95%](./figs/dil_params.png)
+![bg right:38% 95%](./figs/dil_params.png)
 
 ---
 
-### 混合ガウス分布の分布のモデル化（続き）
+### $q_4$のモデル化
 
 - 各ガウス分布$\mathcal{N}(\boldsymbol{\mu}_j, \Lambda_j^{-1})$の分布:
 ガウス-ウィシャート分布
-    - $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+    - $q_4'(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
         - ウィシャート分布$\mathcal{W}$: 精度行列$\Lambda_j$の分布
         - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
+- 各ガウス分布ごとの$q_4'$の積を$q_4$とする
 
 ![bg right:25% 95%](./figs/gauss_wish.png)
-
----
-
-### 各データの帰属確率のモデル化
-
-- $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
-（$k_i = j$となる）確率を考える
-    - $r_{ij}$と表しましょう
-    - これは特定の式にせずにテーブル状のデータに
-
-![bg right:30% 100%](./figs/belong_prob.png)
 
 
 ---
@@ -126,23 +140,25 @@ marp: true
 
 |データ|推定したい分布のパラメータ|推定したい分布の分布のパラメータ|
 |:---:|:---:|:---:|
-|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j$|
+|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j, \alpha_j$|
 - $i=1,2,\dots,N$（$N$: データの数）
-- $j=1,2,\dots,n$（$n$: ガウス分布の数）
+- $j=1,2,\dots,K$（$K$: ガウス分布の数）
+
 
 ---
 
-### これからやること: <span style="color:red">変分推論</span>
+### 変分推論の手続き
 
-1. 適当に初期のクラスタと混合ガウス分布の分布を決める
-    - $k_{ij}=1$となる確率$r_{ij}$を初期化
-    - パラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$の初期値を与える
-        - $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$としましょう
-2. 上記の初期値から、混合ガウス分布の事後分布のパラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を計算
+
+1. 適当に$q_1q_3q_4$の事前分布を決める
+    - 確率$r_{ij}$を初期化（クラスタリングに相当）
+    - パラメータ$\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$の初期値を与える
+        - $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$としましょう
+2. $q_1$を固定し、$q_3q_4$の事後分布のパラメータ$\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$を計算
     - EM法のMステップに相当（<span style="color:red">変分Mステップ</span>）
-3. 計算した$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$から$k_{i,1:n}$の事後分布を計算
+3. $q_3q_4$を固定し、$q_1$（つまり$r_{ij}$）を計算
     - EM法のEステップに相当（<span style="color:red">変分Eステップ</span>）
-- 注意: $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$は固定
+- 注意: $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$は固定
     - 事前分布を固定して、繰り返し事後分布の解を良くしていく
 
 
@@ -150,7 +166,7 @@ marp: true
 
 ### 変分推論の威力（その1）
 
-とても強力なので2例先に見せます
+とても強力なので具体的な計算方法の前に例を見せます
 
 - 例1: 2次元の点のクラスタリング
     - 右図: 6個のガウス分布を含む混合ガウス分布からランダムに選んだ点
@@ -203,12 +219,30 @@ marp: true
 
 ---
 
-## 実世界での使用例
+## 実世界での使用例1
 
 - ボルトの先端の検出
     - 3次元の位置を1次元に変換してからクラスタリング
 
 ![w:700](./figs/bolt.png)
+
+---
+
+## 実世界での使用例2
+
+- 物体表面の把持位置の
+クラスタリング
+    - 法線ベクトルの位置、向きの6次元空間
+
+![bg right:55% 100%](./figs/cands_real.png)
+
+---
+
+## 変分推論の具体的な計算
+
+- 導出は難しすぎるので、MステップとEステップでの作業だけ示します
+    - $q_1, q_3, q_4$の事後分布をベイズの定理で導出
+    - 導出された式に当てはめるだけで使用可能
 
 
 ---
@@ -229,9 +263,9 @@ marp: true
 
 ### 変分Eステップ（分布のパラメータから各データの所属を計算）
 
-- $k_{i,1:n} =(k_{i1}, k_{i2},\dots,k_{in})$の分布: 次の計算で導出
-    - $q(k_{i,1:n}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
-- 計算結果: 次の$r_{ij}$が、$k_{ij}$が$1$になる確率
+- $k_{1:N}$の分布: 次の計算で導出
+    - $P(k_{1:N}) = \langle p(\boldsymbol{x}_i, k_{i,1:K}, \pi_{1:K}, \boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) \rangle_{\pi_{1:K}, \boldsymbol{\mu}_{1:K}, \Lambda_{1:K}}$
+- 計算結果: 次の$r_{ij}$が、$k_i = j$になる確率
     - $r_{ij} = \eta \rho_{ij}$
         - $\log_e \rho_{ij} = -\dfrac{1}{2} d \beta_j^{-1} -\dfrac{1}{2} \nu_j(\boldsymbol{x}_i - \boldsymbol{m}_j)^\top W_j (\boldsymbol{x}_i - \boldsymbol{m}_j)$
          $\quad+ \dfrac{1}{2} \sum_{j=1}^d \psi\left(\dfrac{\nu_j + 1 - j}{2}\right) + \dfrac{1}{2}\log_e | W_j | + \eta'$
@@ -245,6 +279,8 @@ marp: true
 ## まとめ
 
 - 変分推論
-    - 混合分布とベイズ推論でクラスタリングや、あるデータの原因を調査
-    - EM法より強力
+    - 混合分布の分布を考える
+    - EM法とおなじく繰り返しでクラスタを形成していく
+        - 計算方法が（扱わなかったけど）ベイズの定理に基づいている
+    - 強力
 
