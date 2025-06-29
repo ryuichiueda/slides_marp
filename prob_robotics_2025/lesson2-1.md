@@ -215,7 +215,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 独立な事象$X$と$Y$の関係:
 	- $\Pr\{X \cap Y\} = \Pr\{X | Y\}\Pr\{Y\} = \Pr\{X\}\Pr\{Y\}$
 	- $\Pr\{X \cap Y\} = \Pr\{Y | X\}\Pr\{X\} = \Pr\{X\}\Pr\{Y\}$
-	    - $\cap$は集合の共通部分を表す記号
+	    - $\cap$は集合の共通部分を抽出する演算子
 	- 表記: $X\perp\!\!\!\!\perp Y$
 - 独立でない場合は<span style="color:red">従属</span>といわれる
 	- 表記: $X\not\perp\!\!\!\!\!\perp Y$
@@ -266,7 +266,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 加法定理
 	- $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
     - 排反な場合: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
-
+    - $\cup$は左右の集合を合併した集合を作るときの演算子
 
 ---
 
