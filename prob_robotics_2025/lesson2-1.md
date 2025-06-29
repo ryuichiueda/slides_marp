@@ -263,10 +263,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 乗法定理
     - $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$|$Y$\}\text{Pr}\{$Y$\}$
     - 独立な場合: $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$\}\text{Pr}\{$Y$\}$
+    - 互いに独立なX$_{1:n}$に対し: $\text{Pr}\{\bigcap_{i=1}^n$X$\} = \prod_{i=1}^n\text{Pr}\{$X$_i\}$
 - 加法定理
 	- $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
+        - $\cup$は左右の集合を合併するときの演算子
     - 排反な場合: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
-    - $\cup$は左右の集合を合併するときの演算子
+    - 互いに排反なX$_{1:n}$に対し: $\text{Pr}\{\bigcup_{i=1}^n$X$\} = \sum_{i=1}^n\text{Pr}\{$X$_i\}$
 
 ---
 
