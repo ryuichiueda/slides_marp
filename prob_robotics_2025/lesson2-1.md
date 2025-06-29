@@ -247,7 +247,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 加法定理
 
 - 確率の足し算に関する定理
-	- $\Pr\{X \cup Y\} &= \Pr\{X\} + \Pr\{Y\} - \Pr\{X \cap Y\}$
+	- $\Pr\{$AあるいはBが起こる$\} = \Pr\{$Aが起こる$\} + \Pr\{$Bが起こる$\}$
+    $\qquad\qquad\qquad\qquad\qquad- \Pr\{$AとBが両方起こる$\}$
 
 ---
 
