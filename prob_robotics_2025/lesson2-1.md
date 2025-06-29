@@ -244,6 +244,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 加法定理
+
+- 確率の足し算に関する定理
+	- $\Pr\{X \cup Y\} &= \Pr\{X\} + \Pr\{Y\} - \Pr\{X \cap Y\}$
+
+---
+
 {2.2}\SEVENjidori {冗長化されたシステム}}{30}
 {2.2.1}\SEVENjidori {加法定理}}{31}
 {2.2.2}\SEVENjidori {冗長化されたA$_1$の起動率}}{32}
