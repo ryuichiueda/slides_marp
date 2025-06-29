@@ -259,6 +259,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 確率の計算方法のまとめ
 
 - 重要: 実は乗法定理と加法定理しか定理がない
+- 乗法定理
+    - $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$|$Y$\}\text{Pr}\{$Y$\}$
+    - 独立な場合: $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$\}\text{Pr}\{$Y$\}$
+- 加法定理
+	- $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
+    - 排反な場合: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
 
 
 ---
