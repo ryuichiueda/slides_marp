@@ -274,8 +274,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - a$_{1:3}$のどれかが動作するという事象を排反な事象に切り分ける
     - a$_1$が起動
-    - a$_1$\textbf{が起動せず}，a$_{2}$が起動
-    - a$_{1:2}$\textbf{が両方起動せず}，a$_{3}$が起動
+    - a$_1$が起動せず，a$_{2}$が起動
+    - a$_{1:2}$が両方起動せず，a$_{3}$が起動
 
 ![w:700](./figs/redundant_a1.gif)
 
