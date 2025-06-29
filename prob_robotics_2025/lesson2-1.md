@@ -252,6 +252,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $\Pr\{$AあるいはBが起こる$\} = \Pr\{$Aが起こる$\} + \Pr\{$Bが起こる$\}$
 	が成立
     - AとBが同時に起こりえない: （互いに）<span style="color:red">排反</span>と表現
+        - 例: 「さいころの目が偶数」と「さいころの目が奇数」は排反
 
 ---
 
