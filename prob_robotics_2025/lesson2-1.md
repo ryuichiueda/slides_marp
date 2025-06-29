@@ -266,7 +266,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 加法定理
 	- $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
     - 排反な場合: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
-    - $\cup$は左右の集合を合併した集合を作るときの演算子
+    - $\cup$は左右の集合を合併するときの演算子
 
 ---
 
