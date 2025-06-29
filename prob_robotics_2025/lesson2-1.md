@@ -300,9 +300,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-{2.2.2}\SEVENjidori {冗長化されたA$_1$の起動率}}{32}
-{\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}排反な事象への分解}{33}
-{\hbox to2zw{{\rm (}\hfill 2\hfill {\rm )}}}加法定理を使った式の整理}{33}
+### もうひとつの計算方法
+
+- 余事象を使用
+
+---
+
 {\hbox to2zw{{\rm (}\hfill 3\hfill {\rm )}}}余事象を使った導出}{34}
 {\hbox to2zw{{\rm (}\hfill 4\hfill {\rm )}}}冗長化の効果}{34}
 {2.3}\SEVENjidori {部品が互いに影響を与える場合}}{35}
