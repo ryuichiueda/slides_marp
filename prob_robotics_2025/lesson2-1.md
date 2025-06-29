@@ -238,17 +238,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 部品A$_1$の起動率を上げるために、次のように複数の部品a$_{1:3}$に置き換え、
 どれが壊れても問題ないようにしました。a$_{1:3}$はハブa$_4$につながれています。
-    - 起動率はどう計算するんでしょうか？（こんどは掛け算にはならない）
-
 ![w:700](./figs/redundant_a1.gif)
+    - 起動率はどう計算するんでしょうか？（こんどは掛け算にはならない）
 
 ---
 
 ### 加法定理
 
 - 確率の足し算に関する定理
+	- $\Pr\{$A、Bどちらかor両方起こる$\} = \Pr\{$Aが起こる$\} + \Pr\{$Bが起こる$\}$
+    $\qquad\ \qquad\qquad\qquad\qquad\qquad- \Pr\{$AとBが両方起こる$\}$
+- とくにAとBが同時に起こりえない場合
 	- $\Pr\{$AあるいはBが起こる$\} = \Pr\{$Aが起こる$\} + \Pr\{$Bが起こる$\}$
-    $\qquad\qquad\qquad\qquad\qquad- \Pr\{$AとBが両方起こる$\}$
+	が成立
+    - AとBが同時に起こりえない: （互いに）<span style="color:red">排反</span>と表現
 
 ---
 
