@@ -256,6 +256,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 確率の計算方法のまとめ
+
+- 重要: 実は乗法定理と加法定理しか定理がない
+
+
+---
+
 {2.2}\SEVENjidori {冗長化されたシステム}}{30}
 {2.2.1}\SEVENjidori {加法定理}}{31}
 {2.2.2}\SEVENjidori {冗長化されたA$_1$の起動率}}{32}
