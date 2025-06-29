@@ -270,8 +270,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-{2.2}\SEVENjidori {冗長化されたシステム}}{30}
-{2.2.1}\SEVENjidori {加法定理}}{31}
+### 冗長化したシステムの起動率
+
+- a$_{1:3}$のどれかが動作するという事象を排反な事象に切り分ける
+    - a$_1$が起動
+    - a$_1$\textbf{が起動せず}，a$_{2}$が起動
+    - a$_{1:2}$\textbf{が両方起動せず}，a$_{3}$が起動
+
+![w:700](./figs/redundant_a1.gif)
+
+---
+
 {2.2.2}\SEVENjidori {冗長化されたA$_1$の起動率}}{32}
 {\hbox to2zw{{\rm (}\hfill 1\hfill {\rm )}}}排反な事象への分解}{33}
 {\hbox to2zw{{\rm (}\hfill 2\hfill {\rm )}}}加法定理を使った式の整理}{33}
