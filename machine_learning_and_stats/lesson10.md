@@ -21,6 +21,7 @@ marp: true
 
 ## 今日やること
 
+- 前回つっぱしり過ぎたのでおさらいテストの解説
 - 変分推論
 
 ---
@@ -50,21 +51,23 @@ marp: true
 ## 混合ガウス分布のベイズ推定
 
 - 「混合分布の分布」を考える
-    - 右図のような様々な分布に確率（の密度）を与える
+    - 右図のように分布をドローできるもの
+- EM法との違い
     - 最尤なものでなく、分布の分布自体を計算
-- 第6回との違い
-    - パラメータの数が膨大
-        - ガウス分布が$n$個（$n$: クラスタの数）
-        - 潜在変数が$Nn$個（$N$: データの数）
-    - （単純な）ベイズの定理で計算できない
-- どうするか?
-    - EM法のように少しずつ分布（の分布）を変えていく
+- 分布の分布の構成（パラメータ数膨大）
+    - 各ガウス分布の形状の分布
+    - 混合比率の分布
+    - 各データの各分布への帰属の分布
+- ベイズの定理で事後確率が一発で計算できない
+    - どうするか?$\rightarrow$EM法のように少しずつ分布の分布を変えていく
 
-![bg right:20% 85%](./figs/various_mixture_gauss.png)
+![bg right:35% 95%](./figs/various_mixture_gauss.png)
 
 ---
 
-### 推定対象のパラメータ
+### 推定対象（混合ガウス分布）のパラメータ
+
+「分布の分布」ではなく「分布」のほうの話
 
 - 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
     - （おさらい）混合ガウス分布:
@@ -80,27 +83,52 @@ marp: true
 
 ---
 
-### 混合ガウス分布の分布のモデル化（分布の分布）
+### 混合ガウス分布の分布のモデル化
 
-- 混合比率$\pi_{1:n} = (\pi_1, \pi_2, \dots, \pi_n)$の分布: ディリクレ分布
-    - ディリクレ分布: $\text{Dir}(\pi_{1:n} | \alpha_{1:n}) = \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1} = \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
-        - ベータ分布をコインの裏表だけでなくもっと多くの変数
-        （例: さいころなら6）に拡張したもの
-        - 様々な混合比率のパターンに確率の密度を与える
-    - $\alpha_{1:n}$: $\pi_{1:n}$のばらつきを決めるパラメータ
-        - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
-            - 合計値が大きくなる=さいころをたくさん投げて出目の傾向が分かってきた状態
+- 混合比率$\pi_{1:n}$の分布: ディリクレ分布
+    - ベータ分布をコインの裏表だけでなく多変数に拡張したもの
+        - 例: さいころなら6
+    - $\text{Dir}(\pi_{1:n} | \alpha_{1:n})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
+    $= \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
+        - <span style="color:red">$\alpha_{1:n}$</span>: $\pi_{1:n}$のばらつきを決める
+        パラメータ
+            - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
+
+![bg right:40% 95%](./figs/dil_params.png)
 
 ---
 
-### 混合ガウス分布の分布のモデル化（分布の分布。続き）
+### 混合ガウス分布の分布のモデル化（続き）
 
-- 各ガウス分布のパラメータ$\boldsymbol{\mu}_j, \Lambda_j$の分布: ガウス-ウィシャート分布
-    - $\Lambda_j$（精度行列）$= \Sigma_j^{-1}$（計算しやすいので考える）
-    - ガウス-ウィシャート分布: $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
-        - ウィシャート分布: 精度行列の分布
-    - 各ガウス分布の分布を決めるパラメータ: $\boldsymbol{m}_j, \beta_j, W_j, \nu_j$
+- 各ガウス分布$\mathcal{N}(\boldsymbol{\mu}_j, \Lambda_j^{-1})$の分布:
+ガウス-ウィシャート分布
+    - $p(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+        - ウィシャート分布$\mathcal{W}$: 精度行列$\Lambda_j$の分布
+        - 各ガウス分布の分布を決めるパラメータ: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 
+![bg right:25% 95%](./figs/gauss_wish.png)
+
+---
+
+### 各データの帰属確率のモデル化
+
+- $i$番目のデータ$\boldsymbol{x}_i$が$j$番目のクラスタに所属する
+（$k_i = j$となる）確率を考える
+    - $r_{ij}$と表しましょう
+    - これは特定の式にせずにテーブル状のデータに
+
+![bg right:30% 100%](./figs/belong_prob.png)
+
+
+---
+
+### これまでの変数、パラメータ一覧表
+
+|データ|推定したい分布のパラメータ|推定したい分布の分布のパラメータ|
+|:---:|:---:|:---:|
+|$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j$|
+- $i=1,2,\dots,N$（$N$: データの数）
+- $j=1,2,\dots,n$（$n$: ガウス分布の数）
 
 ---
 
@@ -173,20 +201,29 @@ marp: true
 ![w:1200](figs/1d_clustering.png)
 
 
+---
+
+## 実世界での使用例
+
+- ボルトの先端の検出
+    - 3次元の位置を1次元に変換してからクラスタリング
+
+![w:700](./figs/bolt.png)
+
 
 ---
 
 ### 変分Mステップ（各データの所属から分布のパラメータを計算）
 
 - 補助の数値を計算
-    - $N_j = \sum_{i=1}^N r_{ij}$
-    - $\bar{\boldsymbol{x}}_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}\boldsymbol{x}_i$
-    - $\Sigma_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)^\top$
+    - $N_j = \sum_{i=1}^N r_{ij}\qquad\qquad$（分布$j$の重み付きデータ数）
+    - $\bar{\boldsymbol{x}}_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}\boldsymbol{x}_i\ \quad$（分布$j$の重み付き平均）
+    - $\Sigma_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)^\top$（分布$j$の重み付き共分散行列）
 - 事後分布のパラメータを計算
     - $(\alpha_j, \beta_j, \nu_j) =(\alpha_j', \beta_j', \nu_j') + (N_j, N_j, N_j)$（データの個数だけ増大） 
     - $\boldsymbol{m}_j = (\beta_j' \boldsymbol{m}_j' + N_j \bar{\boldsymbol{x}}_j ) /\beta_j\qquad\qquad\qquad$（$\boldsymbol{\mu}_j$の中心の調整）
     - $W^{-1}_j = W'^{-1}_j + N_j \Sigma_j + \dfrac{\beta'_j N_j}{\beta'_j+ N_j} (\bar{\boldsymbol{x}}_j - \boldsymbol{m}_j')(\bar{\boldsymbol{x}}_j - \boldsymbol{m}_j')^\top$
-        （各ガウス分布の共分散行列の調整）
+      　　　  （各ガウス分布の共分散行列の調整）
 
 ---
 
@@ -202,13 +239,6 @@ marp: true
         - 式中の変数はすべて一時的に値が決まっているか既知なので計算可能
             - $d$: $\boldsymbol{x}$の次元
             - $\psi$: ディガンマ関数という関数（高級な言語にはライブラリあり）
-
----
-
-## 使用例
-
-- ハンド
-- ボルト
 
 ---
 

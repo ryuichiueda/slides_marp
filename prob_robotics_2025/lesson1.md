@@ -2,7 +2,7 @@
 marp: true
 ---
 
-<!-- footer: 確率ロボティクス第1回 -->
+<!-- footer: 確率ロボティクス第1回（その1） -->
 
 # 確率ロボティクス第1回（その1）: <br />イントロダクション
 
@@ -76,9 +76,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 飛行機、自動車、ジェットコースター
     - ロボットも人間並になると考えないといけない問題
 * 真面目な答え
-    - 生活のため（じゃあジェットコースターは？）
     - ◯◯だから安全
     - ◯◯だから私は乗らない
+    - 生活のため（じゃあジェットコースターは？）
 * 不真面目な答え
     * <span style="color:red">みんな乗ってるから</span>
     * しらねー（はやくこのくだらない講義から開放してほしい）
@@ -88,26 +88,28 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### もう1つ質問
 
-- 猫ってなんで猫ってみんな呼んでるの？そもそも猫ってなに？
-    - 今のコンピュータやロボットは画像から猫を見つけられる
+- 猫ってなんでみんなそう呼んでるの？そもそも猫って何？
 - 真面目な答え
     - 猫という言葉は眠った子という言葉が・・・
     - 猫はネコ科の動物で・・・
 * 不真面目な答え
     * みんな猫って呼んでるから
     * 犬でもたぬきでも牛でも馬でもないから
-* <span style="color:red">$\Rightarrow$実は最近のコンピュータ/ロボットは不真面目な方の方式</span>
+* <span style="color:red">$\Rightarrow$実は最近のコンピュータ/ロボットは不真面目方式</span>
 
+![bg right:23% 100%](./figs/simple_cat.png)
 
 ---
 
 ### 従来、多くの研究者が考えていたこと
 
-- 「正しい情報をたくさん与えると賢いコンピュータが作れて、それをロボットに搭載すれば正しく動くはず」
+- 「正しい情報をコンピュータに与え、それをロボットに搭載すれば正しく動くはず」
     - 正しい情報から理屈をこね回して正解の認識や動作ができるはず
-        - キーワード: エキスパートシステム、述語論理、第五世代コンピュータ
+        - キーワード: エキスパートシステム、
+        述語論理、第五世代コンピュータ
 - いかにも頭よさそうだけどほんまか？
-    - 「哺乳類で脚が4本で・・・」という理屈だけで猫が認識できる？
+    - 「哺乳類で脚が4本で・・・」という理屈だけで
+    猫が認識できる？
 
 ![bg right:26% 100%](./figs/cat.png)
 
@@ -143,10 +145,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 最近の人工ニューラルネットワークの話題
 
-- Transformerによる翻訳やGPT（Generative Pre-trained Transformer）
+- Transformer[Vaswani2017]による翻訳や
+GPT（Generative Pre-trained Transformer）[Radford2018]
     - 冒頭/文の途中で、次に出力するのがふさわしい単語を選んで出力
         - 「ふさわしい単語」: 人からの質問、翻訳前の文、自身の出力したこれまでの文を考慮して、各単語が次にくる<span style="color:red">確率が最も高い単語</span>
-- 拡散モデル（Stable Diffusionなど）
+- 拡散モデル（Stable Diffusion[Rombach2021]など）
     - <span style="color:red">ある確率分布にしたがう雑音</span>がのった画像から雑音除去する方法を学習
     $\rightarrow$ノイズだけの画像を勝手に解釈して画像を生成
 
@@ -154,23 +157,28 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### つまり
+### つまり（イントロダクションのまとめ）
 
 - 運動・知能双方で確率・統計の考え方が大変重要になってきており、
 今後もしばらくそうではないか
 
 ---
 
-## 講義で使う教科書
+## 講義の進め方
+
+---
+
+### 講義で使う教科書
 
 - 上田: 「ロボットの確率・統計」, コロナ社, 2024. 
     - 2024年度以前の「詳解確率ロボティクス」から変更
 - 理由
     - ~~本を買ってほしい~~
-    - 20年を経てロボティクスがより発展している
-        - 機械学習や人工ニューラルネットワーク、認知科学との関係性をおさえておく必要がある
+    - Probabilistic ROBOTICSの出版から20年を経て
+    ロボティクスがより発展
+        - 当初の範囲を超えて確率・統計が使われる
     - 確率・統計を基礎から講義したい
-        - 一般的な確率・統計の講義と要点が異なる
+        - 一般向けの講義と要点が異なる
         - 「詳解確率ロボティクスが難しい」との声
             - 基礎をつければ独学できるように書いてある
 
@@ -227,4 +235,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - Probabilistic ROBOTICS/確率ロボティクス
     - 当時を知るためにいつか読んでみましょう
 
-![bg right:25% 100%](./figs/probrobo_books.jpeg)
+![bg right:25% 85%](./figs/prob_robotics.jpg)
