@@ -353,6 +353,8 @@ $=\Pr\{$A$_{1:5}\cap$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\quad\qquad\qquad\quad$�
 $=\Pr\{$A$_{1:5}|$A$_{10}\cap$Z$\}\Pr\{$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\qquad$ （A$_{10}$を条件に移動）
 $=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$（独立性から分解）
 
+<center style="color:red">乗法定理と独立を使って分解していく<br />（確率ロボティクスや機械学習のアルゴリズムの導出の基本）</center>
+
 ---
 
 ### 値の代入
