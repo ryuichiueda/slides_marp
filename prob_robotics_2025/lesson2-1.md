@@ -348,9 +348,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 式の展開
 
-- $\Pr\{$A$_{1:10}|$Z$\}$
-$=\Pr\{$A$_{1:5}\cap$A$_{10}|$A$_{6:9}\cap$Z$\}\Pr\{$A$_{6:9}|$Z$\}$
-$=\Pr\{$A$_{1:5}\cap$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad$（不要な条件を消去）
+- $\Pr\{$A$_{1:10}|$Z$\}=\Pr\{$A$_{1:5}\cap$A$_{10}|$A$_{6:9}\cap$Z$\}\Pr\{$A$_{6:9}|$Z$\}$（部品A$_{6:9}$を条件に移動）
+$=\Pr\{$A$_{1:5}\cap$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\quad\qquad\qquad\quad$（不要な条件を消去）
+$=\Pr\{$A$_{1:5}|$A$_{10}\cap$Z$\}\Pr\{$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\qquad$ （A$_{10}$を条件に移動）
+$=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$（独立性から分解）
 
 ---
 
