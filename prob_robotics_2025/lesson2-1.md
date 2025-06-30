@@ -357,11 +357,15 @@ $=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\pr
 
 ### 値の代入
 
-- $\Pr\{$A$_{1:10}|$Z$\}= \big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)$
-$\qquad\qquad\qquad\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
-- Z=X君の場合: $0.9^5\cdot 0.99 \cdot 0.95^4 \simeq 0.48$
-- Z=Y君の場合: $0.95^5\cdot 0.9 \cdot 0.95^4 \simeq 0.57$
+- 最終的な式
+    - $\Pr\{$ロボットが起動$|$Z$\}$
+    $= \big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)$
+    $\quad\cdot\Pr\{$A$_{10}|$Z$\}\cdot\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
+- 表の数値を当てはめ
+    - Z=X君の場合: $0.9^5\cdot 0.99 \cdot 0.95^4 \simeq 0.48$
+    - Z=Y君の場合: $0.95^5\cdot 0.9 \cdot 0.95^4 \simeq 0.57$
 
+<center style="color:red">Y君のものをつかったほうがよい</center><center>（どっちもどっちだけど）</center>
 
 
 ![bg right:35% 95%](./figs/dependency.png)
