@@ -346,6 +346,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 式の展開
+
+- $\Pr\{$A$_{1:10}|$Z$\}$
+$=\Pr\{$A$_{1:5}\cap$A$_{10}|$A$_{6:9}\cap$Z$\}\Pr\{$A$_{6:9}|$Z$\}$
+$=\Pr\{$A$_{1:5}\cap$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad$（不要な条件を消去）
+
+---
+
 {2.3}\SEVENjidori {部品が互いに影響を与える場合}}{35}
 {2.3.1}\SEVENjidori {乗法定理による計算}}{36}
 {2.3.2}\SEVENjidori {隠れた条件と加法定理}}{38}
