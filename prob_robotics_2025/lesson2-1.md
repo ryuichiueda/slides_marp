@@ -355,6 +355,19 @@ $=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\pr
 
 ---
 
+### 値の代入
+
+- $\Pr\{$A$_{1:10}|$Z$\}= \big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)$
+$\qquad\qquad\qquad\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
+- Z=X君の場合: $0.9^5\cdot 0.99 \cdot 0.95^4 \simeq 0.48$
+- Z=Y君の場合: $0.95^5\cdot 0.9 \cdot 0.95^4 \simeq 0.57$
+
+
+
+![bg right:35% 95%](./figs/dependency.png)
+
+---
+
 {2.3}\SEVENjidori {部品が互いに影響を与える場合}}{35}
 {2.3.1}\SEVENjidori {乗法定理による計算}}{36}
 {2.3.2}\SEVENjidori {隠れた条件と加法定理}}{38}
