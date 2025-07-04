@@ -206,7 +206,7 @@ marp: true
 ### 拡散モデル
 
 - GANと同じく画像を生成する技術
-    - Stable Diffusionの理論的な背景（の半分）
+    - [Stable Diffusion](https://stablediffusionweb.com/ja/app/image-generator)の理論的な背景（の半分）
         - もう半分（言葉による指示）は来週
 - 画像生成するANNの作り方
     - ANNに画像のノイズを消す訓練をさせる
