@@ -206,7 +206,7 @@ marp: true
 
 - [pix2pix](https://arxiv.org/pdf/1611.07004): 入力にノイズではなく画像を入力$\rightarrow$画像を変換するように学習
 - 研究での使用（深度カメラに映った植物の茎と葉を分別）
-    - ![w:500](figs/pix2pix.png)
+    - ![w:850](figs/pix2pix.png)
  
 ---
 
