@@ -149,10 +149,13 @@ marp: true
 <a style="font-size:80%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">画像: Cmglee, CC BY-SA 4.0</a>
 
 - 例: 画像に写っているものが何かを答えるための構成
-    - 「Dense」はアフィンレイヤー
-    - 「flatten」は配列状のデータを1列にすること
+    - Dense: アフィンレイ
+    ヤーのこと
+    - flatten: 配列状のデータを1列にすること
+- [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+    - 学習した中間層や認識結果が見られる
 
-![bg right:60% 100%](./figs/Comparison_image_neural_networks.svg)
+![bg right:55% 100%](./figs/Comparison_image_neural_networks.svg)
 
 
 ---
