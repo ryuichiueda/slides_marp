@@ -200,6 +200,13 @@ marp: true
 - 参考になるサイト: https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5
  
 
+---
+
+### GANの応用
+
+- pix2pix: 入力にノイズではなく画像を入力$\rightarrow$画像を変換するように学習
+- 研究での使用（深度カメラに映った植物の茎と葉を分別）
+    - ![w:500](figs/pix2pix.png)
  
 ---
 
