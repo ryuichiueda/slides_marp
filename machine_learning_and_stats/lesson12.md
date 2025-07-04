@@ -170,6 +170,7 @@ marp: true
         - 生成ネットワーク（generator）: 何かを作るANN
         - 識別ネットワーク（discriminator）: 入力が生成ネットワークの生成物かどうかを判断するANN
     - 生成ネットワークと識別ネットワークが互いに競う（次ページ）
+- [元の論文](https://papers.nips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf)
 
 ---
 
@@ -196,7 +197,10 @@ marp: true
     - ノイズ画像のもやもやを何かに関連づけているらしい
     - 最初は識別ネットワークもポンコツなので少し模様ができると騙せる
     - 参考: 拡散モデル（次のページ）
+- 参考になるサイト: https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5
+ 
 
+ 
 ---
 
 ### 拡散モデル
