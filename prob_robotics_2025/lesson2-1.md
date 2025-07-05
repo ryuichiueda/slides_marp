@@ -25,7 +25,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 確率の基礎+信頼性工学
     - 確率を意識しながらロボットを運用する話
 - 内容
-    - 確率と事象
+    - 確率
     - 簡単な確率の計算
 
 ---
@@ -44,7 +44,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 確率と事象
+## 確率
 
 - 信頼性工学に入る前に
 
