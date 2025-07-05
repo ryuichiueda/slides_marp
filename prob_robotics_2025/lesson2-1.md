@@ -65,7 +65,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 確率の表記
 
 - 記号での表記: 事象Xの起こる確率を$\Pr\{$X$\}$と表記
-（事象Aはなんでもよい）
+（事象Xはなんでもよい）
     - 前ページの例: $\Pr\{$Aが正しく立ち上がる$\}=0.9$
 - あとから出てくる$P(x), P(\boldsymbol{x})$との違い（本書の場合）
     - この表記の場合は$x$や$\boldsymbol{x}$はそれぞれスカラやベクトル
@@ -389,11 +389,11 @@ $=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\pr
     $=\Pr\{$ロボットが起動$|$X$\}\Pr\{$X$\} + \Pr\{$ロボットが起動$|$Y$\}\Pr\{$Y$\}$
 - 代入する値の整理
     - 求めたい値（X君の電源回路を使った割合）を$x$とする
-        - Y君の割合は$x-1$となる
+        - Y君の割合は$1-x$となる
     - X君の電源回路を使ったときのロボットの起動率: $0.48$
     - Y君の（同上）: $0.57$
 - 代入
-    - $0.5 = 0.48x + 0.57(x-1) \ \Longrightarrow\quad\!\!$<span style="color:red">$x=7/9$</span>
+    - $0.5 = 0.48x + 0.57(1-x) \ \Longrightarrow\quad\!\!$<span style="color:red">$x=7/9$</span>
 
 ---
 
