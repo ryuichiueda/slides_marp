@@ -22,11 +22,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今回の内容
 
-- 確率の基礎+信頼性工学
-    - 確率を意識しながらロボットを運用する話
-- 内容
-    - 確率と事象
-    - 簡単な確率の計算
+- 確率変数
+- 確率質量関数
+- 確率分布
+- 同時確率分布
 
 ---
 
