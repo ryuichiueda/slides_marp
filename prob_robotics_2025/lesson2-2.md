@@ -57,6 +57,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 確率変数を横軸にすると確率のグラフが描ける
 
+![bg right:50% 90%](./figs/prob_dist.png)
 
 ---
 
