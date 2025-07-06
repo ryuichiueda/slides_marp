@@ -55,6 +55,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 確率分布
 
+- 確率変数を横軸にすると確率のグラフが描ける
+
 
 ---
 
