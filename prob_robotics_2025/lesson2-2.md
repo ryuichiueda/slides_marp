@@ -29,6 +29,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 確率変数
+
+- 事象に数字割り当てたもの
+
+---
+
 {2.4}\SEVENjidori {確率変数，確率質量関数と確率分布}}{42}
 {2.4.1}\SEVENjidori {確率変数}}{42}
 {2.4.2}\SEVENjidori {確率質量関数}}{43}
