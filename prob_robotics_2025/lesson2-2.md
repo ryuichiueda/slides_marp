@@ -56,8 +56,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 確率分布
 
 - 確率変数を横軸にすると確率のグラフが描ける
-    - 数直線上での確率の「分布」が分かる
-    - この分布: <span style="color:red">確率分布</span>
+    - 数直線上での確率の「分布」が分かる$\Longrightarrow$<span style="color:red">確率分布</span>
+- 典型的な分布には名前
+    - <span style="color:red">ベルヌーイ分布</span>（(a)が1例）
+        - 確率変数が2値だけ
+    - <span style="color:red">一様分布</span>（(b)が1例）
+        - 確率変数のある範囲で確率が一定
 
 ![bg right:50% 90%](./figs/prob_dist.png)
 
