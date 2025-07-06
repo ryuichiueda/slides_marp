@@ -37,6 +37,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - サイコロを振って$n$の目が出る事象に$n$を割り当て
     - 例3（自然にそうなっている+連続的な変数の例）
         - ある人の身長が$x$[mm]であるという事象に$x$を割り当て
+- 大抵は<span style="color:red">根元事象</span>に対して数値を対応
+    - 根元事象: それ以上分けられない/分けない事象（サイコロの目など）
+    - 確率変数の定義域は全ての根元事象を網羅している必要がある
 
 ---
 
