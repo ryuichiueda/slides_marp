@@ -76,8 +76,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $\Pr\{$ $\}$より定義がスッキリ
     - 変数がスカラー
 - 補足
-    - 「$P$」という記号は、本来は$f$だろうが$g$だろうが別になんでもよい
-    - $x$が実数のときは密度の関数になるが今は考えない
+    - 「$P$」という記号は、本来は$f$だろうが
+    $g$だろうが別になんでもよい
+    - $x$が実数のときは密度の関数になるが
+    今は考えない
 
 ![bg right:35% 90%](./figs/prob_dist.png)
 
