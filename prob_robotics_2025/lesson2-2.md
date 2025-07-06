@@ -40,6 +40,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+### 確率変数
+
+- なんで確率変数を考えるのか
+    - 確率分布を考えるため（後述）
+- いちいち「$\circ\circ$という事象が起こった」と言うのがめんどくさい
+
+---
+
 {2.4}\SEVENjidori {確率変数，確率質量関数と確率分布}}{42}
 {2.4.1}\SEVENjidori {確率変数}}{42}
 {2.4.2}\SEVENjidori {確率質量関数}}{43}
