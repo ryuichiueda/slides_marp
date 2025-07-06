@@ -47,7 +47,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 確率分布を考えるため（後述）
 - その他計算のため（期待値など。次回。）
-- いちいち「$\circ\circ$という事象が起こった」と言うのがめんどくさい
+- 事象の扱いがめんどくさい
+    - いちいち「$\circ\circ$という事象が起こった」と言うのがめんどくさい
+    - 根元事象やそうでない事象が入り混じってめんどくさい
 
 ---
 
