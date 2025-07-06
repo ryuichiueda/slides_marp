@@ -47,6 +47,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - なんで確率変数を考えるのか
     - 確率分布を考えるため（後述）
+    - その他計算のため
 - いちいち「$\circ\circ$という事象が起こった」と言うのがめんどくさい
 
 ---
