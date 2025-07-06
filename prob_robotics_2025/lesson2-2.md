@@ -69,11 +69,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 確率質量関数
 
-- $P(x)$: 試行の結果、確率変数の値が$x$となる確率
+- 確率変数の値$x$を変数として、対応する確率を返す関数
+    - 表記: $P(x)$
+    - 要は
 - 確率を、スカラーを変数とする
     - 扱いやすい関数で表現できる
     - 「$P$」という記号は、本来は$f$だろうが$g$だろうが別になんでもよい
     - $x$が実数のときは密度の関数になるが今は考えない
+
+![bg right:35% 90%](./figs/prob_dist.png)
 
 ---
 
