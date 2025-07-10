@@ -118,6 +118,8 @@ marp: true
 
 ![bg right:50% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
+[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
+
 ---
 
 ## Transformerのエンコーダ: 入力
