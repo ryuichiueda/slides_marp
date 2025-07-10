@@ -66,23 +66,9 @@ marp: true
     - $X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
     - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
     $\rightarrow$これが埋め込みのベクトル
+- $U_j$も使われることがある
 
 ![bg right:30% 100%](./figs/skip_gram.png)
-
----
-
-
----
-
-### skip-gramの埋め込みでできるもの2
-
-- もうひとつ、左右の単語の予測のための行列$U$というものもできる
-    - $\boldsymbol{x}_{w_i}$に作用させて別の単語に対して出現確率を計算できる
-        - $P(w_j | w_i) = \text{softmax}_{w_j}(U \boldsymbol{x}_{w_i})$
-            - ベクトル$U\boldsymbol{x}_{w_i}$: $w_i$に対する各単語の関連性の強さを表す
-            - $\text{softmax}$: ソフトマックス関数（強さを確率に正規化する関数）
-    - $U=[\boldsymbol{u}_{w_1}\ \boldsymbol{u}_{w_2}\ \dots\ \boldsymbol{u}_{w_N}]^\top$を構成するベクトル$\boldsymbol{u}_{w_j}$も埋め込みのベクトル
-        - おそらく双対ベクトルの一種
 
 ---
 
