@@ -66,11 +66,6 @@ marp: true
     - $X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
     - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
     $\rightarrow$これが埋め込みのベクトル
-    - 空間にプロットすると右図のような分布ができる
-        - 意味的に近いものが近くに
-        - 空間の次元が高いので、切り出し方によって
-        様々な意味での遠近が出現
-
 
 ![bg right:30% 100%](./figs/skip_gram.png)
 
