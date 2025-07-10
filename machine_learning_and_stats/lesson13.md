@@ -171,6 +171,8 @@ marp: true
         - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
             - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
 
+![bg right:20% 100%](./figs/transformer_kvq.png)
+
 ---
 
 ### Transformerのエンコーダ: 文脈情報の付加3
