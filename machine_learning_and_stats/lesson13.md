@@ -77,7 +77,7 @@ marp: true
 ・・・ことはできない
 
 - 最尤な単語をskip-gramで予想して並べていけばそれっぽい文は作れるけど、たぶん無意味な文ができる
-    - マルコフ連鎖ジェネレータのようなもの
+    - [マルコフ連鎖ジェネレータ](https://lorem.sabigara.com/?source=ginga-tetsudo&format=plain&sentence_count=5)のようなもの
 - 単純な埋め込みには限界
     - 語順に関する情報は、完全にはない
     - 文脈依存な情報を持っていない
