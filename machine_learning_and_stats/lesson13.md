@@ -55,6 +55,11 @@ marp: true
 
 ---
 
+### 埋め込みベクトル
+
+
+---
+
 ### skip-gramの埋め込みでできるもの1
 
 - 単語が$w_1, w_2, \dots, w_N$だけあると、それぞれに対応する埋め込みのベクトル$\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$ができる
