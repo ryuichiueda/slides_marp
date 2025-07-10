@@ -61,12 +61,8 @@ marp: true
 
 ## skip-gramで埋め込みを作る
 
-- 学習
-    - 学習のための損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = - \dfrac{1}{N}\sum_{i=1}^N\sum_{-p\le j \le p} \log P(w_{i+j}|w_i, \boldsymbol{\Theta})$
-        - ある文$w_1, w_2, \dots, w_N$に対して
-        - $\boldsymbol{\Theta}$がパラメータで、$X$、$U_j$を含む
-    - 大量の文章から学習
-- <span style="color:red">行列$X$</span>
+- 学習: 大量の文章から$X$と$U_j$を学習
+- <span style="color:red">学習済み行列$X$=埋め込み</span>
 
 
 - 単語が$w_1, w_2, \dots, w_N$だけあると、それぞれに対応する埋め込みのベクトル$\boldsymbol{x}_{w_1}, \boldsymbol{x}_{w_2}, \dots, \boldsymbol{x}_{w_N}$ができる
