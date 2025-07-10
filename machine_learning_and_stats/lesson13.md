@@ -107,6 +107,19 @@ marp: true
 
 ---
 
+### Transformer
+
+- もともと翻訳のためにGoogleで開発された
+    - 右のような構造
+- GPT（Generative Pre-trained Transformer）などはこれの応用
+- 言葉を扱うアプリケーションはだいたいこれの応用
+- 画像にも応用されている
+    - ViT（Vision Transformer）
+
+![bg right:50% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
+
+---
+
 ## Transformerのエンコーダ: 入力
 
 
