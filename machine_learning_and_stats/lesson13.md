@@ -147,15 +147,16 @@ marp: true
 ### Transformerのエンコーダ: 文脈情報の付加1
 
 - <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
-    - 行列$W_\text{q}, W_\text{k}, W_\text{v}$という3つの行列を使う
+    - 行列$Q, K, V$という3つの行列を使う
         - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
     - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
-        - $\boldsymbol{k}_i = W_\text{k}\boldsymbol{h}_i$（キー埋め込み）
-        - $\boldsymbol{v}_i = W_\text{v}\boldsymbol{h}_i$（バリュー埋め込み）
-        - $\boldsymbol{q}_i = W_\text{q}\boldsymbol{h}_i$（クエリ埋め込み）
+        - $\boldsymbol{k}_i = K\boldsymbol{h}_i$（キー埋め込み）
+        - $\boldsymbol{v}_i = V\boldsymbol{h}_i$（バリュー埋め込み）
+        - $\boldsymbol{q}_i = Q\boldsymbol{h}_i$（クエリ埋め込み）
     - 3つのベクトルを使う自己注意機構なので特に
     「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
 
+![bg right:20% 100%](./figs/transformer_kvq.png)
 
 ---
 
@@ -200,7 +201,7 @@ marp: true
 
 - デコーダが持つ
 - 自己注意機構の計算方法はそのままで、一部エンコーダの出力を使用
-    - クエリ埋め込み$\boldsymbol{q}_i = W_\text{q}\boldsymbol{h}_i$だけエンコーダの埋め込みから計算
+    - クエリ埋め込み$\boldsymbol{q}_i = Q\boldsymbol{h}_i$だけエンコーダの埋め込みから計算
         - 前ページの例の場合: 「私は昼に牛丼を食べました。」
         の文脈化トークン埋め込み
     - キー埋め込み、バリュー埋め込みは、デコーダ側の自己注意機構で計算
