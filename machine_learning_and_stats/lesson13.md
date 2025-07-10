@@ -57,11 +57,11 @@ marp: true
 
 ---
 
-## skip-gramの続き
+## skip-gramで埋め込みを作る
 
-
-- 学習のための損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = - \dfrac{1}{N}\sum_{i=1}^N\sum_{-p\le j \le p} \log P(w_{i+j}|w_i, \boldsymbol{\Theta})$
-    - ある文$w_1, w_2, \dots, w_N$に対して
+- 学習
+    - 学習のための損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = - \dfrac{1}{N}\sum_{i=1}^N\sum_{-p\le j \le p} \log P(w_{i+j}|w_i, \boldsymbol{\Theta})$
+        - ある文$w_1, w_2, \dots, w_N$に対して
     - 大量の文章から学習
 
 ![bg right:30% 100%](./figs/skip_gram.png)
