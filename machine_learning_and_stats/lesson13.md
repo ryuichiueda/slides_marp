@@ -84,6 +84,8 @@ marp: true
         - 同音異義語に1つのベクトル$\rightarrow$区別してない
             - 例: チンチラ（げっ歯類にも猫にもいる）
 
+<center>どうしましょう？</center>
+
 ![bg right:20% 100%](./figs/Chinchilla.jpg)
 
 
