@@ -201,6 +201,14 @@ $\Rightarrow$どうやって?
 
 ![bg right:35% 100%](./figs/transformer_decoder.png)
 
+
+---
+
+### デコーダ側の処理1
+
+- 翻訳途中の文の文脈を埋め込みに反映
+
+
 ---
 
 ### <span style="color:red">交差注意機構</span>
