@@ -182,6 +182,8 @@ marp: true
 
 - 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列が出力される
 
+![bg right:20% 100%](./figs/transformer_ff.png)
+
 ---
 
 ## エンコーダの出力を使った翻訳
