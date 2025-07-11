@@ -221,7 +221,18 @@ $\Rightarrow$どうやって?
     - クエリ埋め込み$\boldsymbol{q}_i = Q\boldsymbol{h}_i$だけデコーダの埋め込みから計算
     - キー埋め込み、バリュー埋め込みは、エンコーダ側の出力から計算
 
-<center>これで翻訳前の文の文脈を翻訳に反映できる</center>
+
+![bg right:15% 100%](./figs/transformer_cross.png)
+
+
+---
+
+### デコーダ側の処理3: 次の単語の出力
+
+![bg right:15% 100%](./figs/transformer_output.png)
+
+- 全単語について次の単語になる確率を計算して、
+その確率が最も高いものを出力
 
 ---
 
