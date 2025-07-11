@@ -214,6 +214,10 @@ marp: true
 
 ## Vision Transformer (ViT）
 
+- Transformerを画像に転用
+- どうやって？
+    - 画像をブロック状に切り取って、各ブロックを1行のデータにして単語のように扱う
+
 ---
 
 ## まとめ
