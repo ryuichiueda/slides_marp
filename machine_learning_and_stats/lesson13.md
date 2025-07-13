@@ -240,7 +240,23 @@ $\Rightarrow$どうやって?
 
 ---
 
-## Vision Transformer (ViT）
+## Transformerの応用例
+
+
+
+---
+
+### GPT（Generative Pre-trained Transformer）
+
+- 途中の文から次の単語を予測
+    - デコーダだけで構成
+- ChatGPTの一部に使われる
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
+
+---
+
+### Vision Transformer (ViT）
 
 - Transformerを画像に転用
     - 画像をブロック状に切り取って、各ブロックを1行のデータにして単語のように扱う
@@ -254,7 +270,7 @@ $\Rightarrow$どうやって?
 
 ---
 
-## Contrastive Language-Image Pre-training (CLIP)
+### Contrastive Language-Image Pre-training (CLIP)
 
 - テキストと画像の関連性を学習したモデル
 - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
@@ -268,7 +284,7 @@ $\rightarrow$画像から文、文から画像などの変換が可能
 
 ---
 
-## Stable Diffusion
+### Stable Diffusion
 
 - プロンプトを画像に変換
     - プロンプトから画像のタネを作るためにCLIPを利用
