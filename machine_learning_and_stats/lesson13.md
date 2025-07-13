@@ -258,7 +258,8 @@ $\Rightarrow$どうやって?
 
 - テキストと画像の関連性を学習したモデル
 - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- ViTを使って画像をテキストに
+- ViTを使って画像をエンコーディング
+- Transformerを使ってテキストをエンコーディング
 
 
 ---
