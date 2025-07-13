@@ -258,8 +258,12 @@ $\Rightarrow$どうやって?
 
 - テキストと画像の関連性を学習したモデル
 - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- ViTを使って画像をエンコーディング
-- Transformerを使ってテキストをエンコーディング
+- 学習方法
+    1. 画像と画像の内容を説明する文を準備
+    2. ViTを使って画像をエンコーディング
+    3. Transformerを使って文をエンコーディング
+    4. エンコーディングされたデータ（埋め込み）同士の相関を学習
+$\rightarrow$画像から文、文から画像などの変換が可能
 
 
 ---
@@ -267,7 +271,7 @@ $\Rightarrow$どうやって?
 ## Stable Diffusion
 
 - プロンプトを画像に変換
-    - プロンプトから
+    - プロンプトから画像のタネを作るためにCLIPを利用
     - 画像を復元するときにも注意機構
 - [図](https://medium.com/data-science/what-are-stable-diffusion-models-and-why-are-they-a-step-forward-for-image-generation-aa1182801d46)
 

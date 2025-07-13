@@ -354,8 +354,15 @@
 <ul>
 <li>テキストと画像の関連性を学習したモデル</li>
 <li><a href="https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training">図</a></li>
+<li>学習方法
+<ol>
+<li>画像と画像の内容を説明する文を準備</li>
 <li>ViTを使って画像をエンコーディング</li>
-<li>Transformerを使ってテキストをエンコーディング</li>
+<li>Transformerを使って文をエンコーディング</li>
+<li>エンコーディングされたデータ（埋め込み）同士の相関を学習<br />
+<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>画像から文、文から画像などの変換が可能</li>
+</ol>
+</li>
 </ul>
 <footer>機械学習（と統計）第13回</footer>
 </section>
@@ -364,7 +371,7 @@
 <ul>
 <li>プロンプトを画像に変換
 <ul>
-<li>プロンプトから</li>
+<li>プロンプトから画像のタネを作るためにCLIPを利用</li>
 <li>画像を復元するときにも注意機構</li>
 </ul>
 </li>
