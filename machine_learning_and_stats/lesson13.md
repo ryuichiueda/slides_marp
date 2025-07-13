@@ -256,7 +256,9 @@ $\Rightarrow$どうやって?
 
 ## Contrastive Language-Image Pre-training (CLIP)
 
-- 文と画像の関連性を学習したモデル
+- テキストと画像の関連性を学習したモデル
+- [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- ViTを使って画像をテキストに
 
 
 ---
