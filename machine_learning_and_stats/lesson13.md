@@ -252,7 +252,12 @@ $\Rightarrow$どうやって?
     - デコーダだけで構成
 - ChatGPTの一部に使われる
 
+[<span style="font-size:70%">画像: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
+
+
 ![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
+
+
 
 ---
 
