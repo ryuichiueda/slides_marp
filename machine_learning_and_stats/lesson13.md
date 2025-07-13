@@ -242,8 +242,6 @@ $\Rightarrow$どうやって?
 
 ## Transformerの応用例
 
-
-
 ---
 
 ### GPT（Generative Pre-trained Transformer）
@@ -256,6 +254,13 @@ $\Rightarrow$どうやって?
 
 
 ![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
+
+
+---
+
+### ChatGPT
+
+- GPTを使って人の質問や発言に答える
 
 
 
