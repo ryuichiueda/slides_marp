@@ -147,12 +147,12 @@ marp: true
 ### Transformerのエンコーダ: 文脈情報の付加1
 
 - <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
-    - 行列$Q, K, V$という3つの行列を使う
+    - 行列$W_Q, W_K, W_V$という3つの行列を使う
         - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
     - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
-        - $\boldsymbol{k}_i = K\boldsymbol{h}_i$（キー埋め込み）
-        - $\boldsymbol{v}_i = V\boldsymbol{h}_i$（バリュー埋め込み）
-        - $\boldsymbol{q}_i = Q\boldsymbol{h}_i$（クエリ埋め込み）
+        - $\boldsymbol{k}_i = W_K\boldsymbol{h}_i$（キー埋め込み）
+        - $\boldsymbol{v}_i = W_V\boldsymbol{h}_i$（バリュー埋め込み）
+        - $\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$（クエリ埋め込み）
     - 3つのベクトルを使う自己注意機構なので特に
     「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
 
@@ -218,7 +218,7 @@ $\Rightarrow$どうやって?
 ### デコーダ側の処理2: <span style="color:red">交差注意機構</span>
 
 - もとの言語の文脈を翻訳中の文に持ち込む
-    - クエリ埋め込み$\boldsymbol{q}_i = Q\boldsymbol{h}_i$だけデコーダの埋め込みから計算
+    - クエリ埋め込み$\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$だけデコーダの埋め込みから計算
     - キー埋め込み、バリュー埋め込みは、エンコーダ側の出力から計算
 
 
