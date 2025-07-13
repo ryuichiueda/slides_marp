@@ -254,6 +254,23 @@ $\Rightarrow$どうやって?
 
 ---
 
+## CLIP
+
+- 文と画像の関連性を学習したモデル
+
+
+---
+
+## Stable Diffusion
+
+- プロンプトを画像に変換
+    - プロンプトから
+    - 画像を復元するときにも注意機構
+- [図](https://medium.com/data-science/what-are-stable-diffusion-models-and-why-are-they-a-step-forward-for-image-generation-aa1182801d46)
+
+
+---
+
 ## まとめ
 
 - 埋め込み
