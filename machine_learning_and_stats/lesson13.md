@@ -243,10 +243,14 @@ $\Rightarrow$どうやって?
 ## Vision Transformer (ViT）
 
 - Transformerを画像に転用
-- どうやって？
     - 画像をブロック状に切り取って、各ブロックを1行のデータにして単語のように扱う
+    - 右図: 画像を9分割してそれぞれを単語扱い
 - 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
     - CNNは遠くのブロックの関係性を見るのが苦手
+
+[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
 
 ---
 
