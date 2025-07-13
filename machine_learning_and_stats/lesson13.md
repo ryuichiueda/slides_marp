@@ -111,14 +111,15 @@ marp: true
 
 ### Transformer
 
-- もともと翻訳のためにGoogleで開発された
-    - 右のような構造
-- GPT（Generative Pre-trained Transformer）などはこれの応用
-- 言葉を扱うアプリケーションはだいたいこれの応用
+- 翻訳のためにGoogleで開発された
+    - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
+- 正体: 右のような構造のニューラルネットワーク（あとから細かく見ていきます）
+    - GPT（Generative Pre-trained Transformer）などはこれの応用
+    - その他言葉を扱うアプリケーションもだいたいこれの応用
 - 画像にも応用されている
     - ViT（Vision Transformer）
 
-![bg right:50% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
 [<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
