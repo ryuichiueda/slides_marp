@@ -254,7 +254,7 @@ $\Rightarrow$どうやって?
 
 ---
 
-## CLIP
+## Contrastive Language-Image Pre-training (CLIP)
 
 - 文と画像の関連性を学習したモデル
 
