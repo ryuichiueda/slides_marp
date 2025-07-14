@@ -295,6 +295,7 @@ $\rightarrow$画像から文、文から画像などの変換が可能
 
 ### [Segment Anything](https://segment-anything.com/)
 
+- [コードや説明](https://github.com/facebookresearch/sam2)
 - プロンプトの指示で画像から特定の部分を切り出す（セグメンテーション）
 - ViTを使う
 
