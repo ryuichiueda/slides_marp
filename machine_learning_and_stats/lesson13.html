@@ -399,7 +399,8 @@
 <ul>
 <li><a href="https://github.com/facebookresearch/sam2">コードや説明</a></li>
 <li>プロンプトの指示で画像から特定の部分を切り出す（セグメンテーション）</li>
-<li>ViTを使う</li>
+<li>画像のエンコードにはViTを使う</li>
+<li>プロンプトのエンコードにはCLIPを使う</li>
 </ul>
 <footer>機械学習（と統計）第13回</footer>
 </section>
@@ -419,15 +420,22 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="機械学習（と統計）第13回" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="--footer:機械学習（と統計）第13回;--paginate:true;" data-marpit-pagination-total="24">
 <h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
 <ul>
+<li>Transformer
+<ul>
+<li>埋め込みに文脈を反映させる仕組み</li>
+</ul>
+</li>
 <li>埋め込み
 <ul>
 <li>次元の高いベクトルで、単語やトークンの様々な関係性を表現可能</li>
 <li>skip-gramなどの学習方法で実用性のある埋め込みが作成可能</li>
+<li>ViTなどでは画像に対しても作られる</li>
 </ul>
 </li>
-<li>Transformer
+<li>埋め込みを使うと性質の異なるデータを交差注意機構で関連させることが可能
 <ul>
-<li>埋め込みに文脈を反映させる仕組み</li>
+<li>ある言語-&gt;別の言語</li>
+<li>画像&lt;-&gt;言語</li>
 </ul>
 </li>
 </ul>
