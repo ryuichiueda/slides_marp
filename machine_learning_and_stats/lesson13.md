@@ -23,6 +23,7 @@ marp: true
 
 - 機械学習での言葉の扱い方
 - Transformer
+- Transformerの応用例
 
 ---
 
