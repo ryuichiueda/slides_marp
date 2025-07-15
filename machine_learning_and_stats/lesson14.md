@@ -68,7 +68,7 @@ marp: true
     - 話を聞くか、寝るか、ゲームをするか、ほかの勉強をするか・・・
         * その場のいいことは$r$が大きい
         * 最終的にいいことは$V(\boldsymbol{x}_\text{f})$が大きい
-        * <span style="color:red">最終的にあとに残るのは$\boldsymbol{x}_\text{f}$のみ</span>
+        * <span style="color:red">最終的にあとに残るのは$\boldsymbol{x}_\text{f}$のみ（薬物依存とか）</span>
 
 ---
 
