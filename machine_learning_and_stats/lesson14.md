@@ -85,6 +85,9 @@ marp: true
 
 - $r_1 + r_2 + \dots + r_i + V(\boldsymbol{x}_\text{f})$がよりよくなる行動を
 コンピュータやロボットに選ばせるように学習させる仕組み
+- 学習するもの: <span style="color:red">$\Pi$: 方策</span>
+    - ある状態$\boldsymbol{x}$でどの行動$a$を選ぶかを決める関数
+    - $a = \Pi(\boldsymbol{x})$
 
 
 ---
