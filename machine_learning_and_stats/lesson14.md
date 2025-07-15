@@ -112,6 +112,8 @@ marp: true
 - おそらくこれ（とにかく穴をさけたほうがよい）
     - $\boldsymbol{x}^{(1)}$以外では「左」を選択
     - $\boldsymbol{x}^{(1)}$で「右」を選択
+- 最適方策:
+    - $\Pi(\boldsymbol{x}^{(i)}) = \begin{cases}\text{右}\quad(i=1)\\\text{左}\quad(i=2,3,\dots,6)\end{cases}$
 
 ![bg right:30% 100%](./figs/q_env.png)
 
