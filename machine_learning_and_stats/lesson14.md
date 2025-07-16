@@ -149,6 +149,9 @@ marp: true
         - $a$: 行動
         - $\boldsymbol{x}'$: 行動をとったあとの状態
         （複数の候補あり）
+    - $\ell(\boldsymbol{x}, a, \boldsymbol{x}')$: 行動に対する損失の関数
+- 右の例: 左端の2つの状態が分かりやすい
+- もし別の行動をとって右辺のほうが左辺よりよかったら$\Rightarrow$<span style="color:red">もっと良い方策がある</span>
 
 
 ![bg right:30% 100%](./figs/value.png)
