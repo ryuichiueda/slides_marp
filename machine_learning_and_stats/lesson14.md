@@ -133,6 +133,7 @@ marp: true
 - $\boldsymbol{x}$は最初の状態でなくてもよい
     - 別の状態からスタートしても、ある時点で$\boldsymbol{x}$にいたら、以後の$J$の期待値は右図の計算した値
 - <span style="color:red">損失関数の期待値を状態の関数にできる</span>
+    - 終端状態の価値を拡張して関数$V(\boldsymbol{x})$（<span style="color:red">状態価値関数</span>）を考える
 
 
 ![bg right:30% 100%](./figs/value.png)
