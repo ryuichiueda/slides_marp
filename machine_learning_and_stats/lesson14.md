@@ -88,6 +88,8 @@ marp: true
 - 学習するもの: <span style="color:red">$\Pi$: 方策</span>
     - ある状態$\boldsymbol{x}$でどの行動$a$を選ぶかを決める関数
     - $a = \Pi(\boldsymbol{x})$
+- 損失関数
+    - $J(\Pi) = \left\langle r_1 + r_2 + \dots + r_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
 
 
 ---
