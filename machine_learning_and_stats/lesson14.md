@@ -130,7 +130,8 @@ marp: true
 - ある状態に対し、そこからスタートしたときの損失関数の期待値が計算可能
     - 損失関数（再掲）: $J(\Pi | \boldsymbol{x}) = \left\langle r_1 + r_2 + \dots + r_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
     - 右図: 計算したもの
-- $\boldsymbol{x}$を変数にしたほうがよい？
+- $\boldsymbol{x}$は最初の状態でなくてもよい
+    - 別の状態からスタートしても、ある時点で$\boldsymbol{x}$にいたら、以後の$J$の期待値は右図の計算した値
 
 
 ![bg right:30% 100%](./figs/value.png)
