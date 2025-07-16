@@ -59,7 +59,7 @@ marp: true
 ### 「よい行動」
 
 - 状態$\boldsymbol{x}$、行動$a$、損失$\ell$、終端状態の価値$V(\boldsymbol{x}_\text{f})$でどう表現するか？
-- こたえ: 一連の行動がおわったときの$r$と$V(\boldsymbol{x}_\text{f})$の和
+- こたえ: 一連の行動がおわったときの$\ell$と$V(\boldsymbol{x}_\text{f})$の和
     - たとえばある状態$\boldsymbol{x}_\text{f}$に行きつくのに10回行動が必要だった$\Rightarrow$
     $\ell_1 + \ell_2 + \dots + \ell_{10} + V(\boldsymbol{x}_\text{f})$
 - あくまで主観
