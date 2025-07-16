@@ -131,7 +131,7 @@ marp: true
     - 右図: 計算したもの
 - $\boldsymbol{x}$は最初の状態でなくてもよい
     - 別の状態からスタートしても、ある時点で$\boldsymbol{x}$にいたら、以後の$J$の期待値は右図の計算した値
-    - 過去のことはこれからの行動選択には無関係
+    - <span style="color:red">過去のことはこれからの行動選択には無関係</span>
 - <span style="color:red">損失関数の期待値を状態の関数にできる</span>
     - 終端状態の価値を拡張して
     関数$V^\Pi(\boldsymbol{x})$（<span style="color:red">状態価値関数</span>）を考える
