@@ -49,7 +49,7 @@ marp: true
 - 記号
     - 状態$\boldsymbol{x}$: 行動に関係する変数を並べたベクトル
     - 行動$a$: 状態を変えるなにか
-    - 報酬$r$: 行動$a$の結果もらえる（行動ごとにもらえる）
+    - 損失$\ell$: 行動$a$の結果被る（行動は疲れる）
     - 終端状態$\boldsymbol{x}_\text{f}$とその価値$V(\boldsymbol{x}_\text{f})$
         - 一連の行動が終わった状態と、その状態の良さ
 
@@ -58,10 +58,10 @@ marp: true
 
 ### 「よい行動」
 
-- 状態$\boldsymbol{x}$、行動$a$、報酬$r$、終端状態の価値$V(\boldsymbol{x}_\text{f})$でどう表現するか？
+- 状態$\boldsymbol{x}$、行動$a$、損失$\ell$、終端状態の価値$V(\boldsymbol{x}_\text{f})$でどう表現するか？
 - こたえ: 一連の行動がおわったときの$r$と$V(\boldsymbol{x}_\text{f})$の和
     - たとえばある状態$\boldsymbol{x}_\text{f}$に行きつくのに10回行動が必要だった$\Rightarrow$
-    $r_1 + r_2 + \dots + r_{10} + V(\boldsymbol{x}_\text{f})$
+    $\ell_1 + \ell_2 + \dots + \ell_{10} + V(\boldsymbol{x}_\text{f})$
 - あくまで主観
     - ひとそれぞれ。何をやってもいつか死ぬので難しい話
 - 授業中の行動をモデル化してみましょう！
