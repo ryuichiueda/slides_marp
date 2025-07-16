@@ -147,7 +147,8 @@ marp: true
     - $V^\Pi(\boldsymbol{x}) = \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
         - $\boldsymbol{x}$: ある状態
         - $a$: 行動
-        - $\boldsymbol{x}'$: 行動をとったあとの状態（複数の候補あり）
+        - $\boldsymbol{x}'$: 行動をとったあとの状態
+        （複数の候補あり）
 
 
 ![bg right:30% 100%](./figs/value.png)
