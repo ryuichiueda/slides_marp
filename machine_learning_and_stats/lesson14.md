@@ -134,7 +134,7 @@ marp: true
     - 別の状態からスタートしても、ある時点で$\boldsymbol{x}$にいたら、以後の$J$の期待値は右図の計算した値
 - <span style="color:red">損失関数の期待値を状態の関数にできる</span>
     - 終端状態の価値を拡張して
-    関数$V(\boldsymbol{x})$（<span style="color:red">状態価値関数</span>）を考える
+    関数$V^\Pi(\boldsymbol{x})$（<span style="color:red">状態価値関数</span>）を考える
 
 
 ![bg right:30% 100%](./figs/value.png)
@@ -144,7 +144,7 @@ marp: true
 ### 状態価値関数の性質
 
 - 方策にしたがって行動をとったときに次の関係
-    - $V(\boldsymbol{x}) = \langle \ell  + V(\boldsymbol{x}' )\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+    - $V^\Pi(\boldsymbol{x}) = \langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
 
 
 ![bg right:30% 100%](./figs/value.png)
