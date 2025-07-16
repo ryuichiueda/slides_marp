@@ -89,7 +89,8 @@ marp: true
     - ある状態$\boldsymbol{x}$でどの行動$a$を選ぶかを決める関数
     - $a = \Pi(\boldsymbol{x})$
 - 損失関数
-    - $J(\Pi) = \left\langle r_1 + r_2 + \dots + r_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
+    - $J(\Pi | \boldsymbol{x}) = \left\langle r_1 + r_2 + \dots + r_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
+        - $\boldsymbol{x}$: 最初の状態
 
 
 ---
