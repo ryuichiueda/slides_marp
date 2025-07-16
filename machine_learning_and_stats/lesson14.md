@@ -127,8 +127,10 @@ marp: true
 
 ### 問題の性質
 
-- ある状態に対し、そこからスタートしたときの損失の和の期待値が計算できる
-   - 右図: 計算したもの
+- ある状態に対し、そこからスタートしたときの損失関数の期待値が計算可能
+    - 損失関数（再掲）: $J(\Pi | \boldsymbol{x}) = \left\langle r_1 + r_2 + \dots + r_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
+    - 右図: 計算したもの
+- $\boldsymbol{x}$を変数にしたほうがよい？
 
 
 ![bg right:30% 100%](./figs/value.png)
