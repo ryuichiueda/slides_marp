@@ -144,7 +144,7 @@ marp: true
 ### 状態価値関数の性質
 
 - 方策にしたがって行動をとったときに次の関係
-    - $V^\Pi(\boldsymbol{x}) = \langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+    - $V^\Pi(\boldsymbol{x}) = \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
 
 
 ![bg right:30% 100%](./figs/value.png)
