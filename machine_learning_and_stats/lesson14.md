@@ -193,6 +193,7 @@ marp: true
 
 - ロボットに適当に動いてもらって$Q$の値を更新
 - 更新式
+	- もとの$Q$の値を少しだけ変更
 	- $Q(\boldsymbol{x}, a)\longleftarrow\alpha q(\boldsymbol{x}, a) + (1-\alpha) Q(\boldsymbol{x}, a)$
         - $\alpha$: 学習率（右図の例だと$\alpha=0.1$）
 	    - $q(\boldsymbol{x}, a) = \ell + V(\boldsymbol{x}')$
