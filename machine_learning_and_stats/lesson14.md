@@ -181,7 +181,7 @@ marp: true
 - ただし、<span style="color:red">行動価値関数</span>というものを考える
     - $Q(\boldsymbol{x}, a)$: $\boldsymbol{x}$で$a$をとるときの状態$\boldsymbol{x}$の価値
     - $V(\boldsymbol{x}) = \max_a Q(\boldsymbol{x}, a)$
-
+- まず、$Q$を初期化（右図）
 
 
 ---
