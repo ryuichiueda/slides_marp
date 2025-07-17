@@ -183,6 +183,7 @@ marp: true
     - $V(\boldsymbol{x}) = \max_a Q(\boldsymbol{x}, a)$
 - まず、$Q$を初期化（右図）
 
+![bg right:35% 100%](./figs/q_init.png)
 
 ---
 
