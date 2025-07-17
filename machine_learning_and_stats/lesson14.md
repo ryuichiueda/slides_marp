@@ -177,13 +177,15 @@ marp: true
 
 ## Q学習
 
-- 先ほどの原理でロボットを学習させてみましょう
+- 先ほどの原理でロボットを
+学習させてみましょう
 - ただし、<span style="color:red">行動価値関数</span>というものを考える
-    - $Q(\boldsymbol{x}, a)$: $\boldsymbol{x}$で$a$をとるときの状態$\boldsymbol{x}$の価値
+    - $Q(\boldsymbol{x}, a)$: $\boldsymbol{x}$で$a$をとるときの
+    状態$\boldsymbol{x}$の価値
     - $V(\boldsymbol{x}) = \max_a Q(\boldsymbol{x}, a)$
 - まず、$Q$を初期化（右図）
 
-![bg right:35% 100%](./figs/q_init.png)
+![bg right:45% 100%](./figs/q_init.png)
 
 ---
 
