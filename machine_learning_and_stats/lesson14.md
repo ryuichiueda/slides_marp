@@ -168,7 +168,9 @@ marp: true
 - 後者のほうがよければ
     - $\Pi(\boldsymbol{x})$の行動を変える
     - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+    - ※ただし、偶然良かっただけかもしれないので慎重に
 
+<center style="color:red">これが強化学習の原理</center>
 
 ---
 
