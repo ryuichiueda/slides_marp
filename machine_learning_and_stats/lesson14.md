@@ -176,3 +176,8 @@ marp: true
 ---
 
 ## Q学習
+
+- 先ほどの原理でロボットを学習させてみましょう
+- ただし、方策を確率的に
+    - $\Pi(a | \boldsymbol{x})$を、「ロボットが$\boldsymbol{x}$で$a$を選ぶ確率」と解釈
+- <span style="color:red">行動価値関数</span>というものを考える
