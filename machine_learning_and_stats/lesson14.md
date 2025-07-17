@@ -159,6 +159,19 @@ marp: true
 
 ---
 
+### 方策の改善
+
+こういう方法が考えられる
+
+- 最初に適当な$V$を設定
+- $V^\Pi(\boldsymbol{x})$と$\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$を比較
+- 後者のほうがよければ
+    - $\Pi(\boldsymbol{x})$の行動を変える
+    - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+
+
+---
+
 ### 「良い方策」行動の定義
 
 - 行動の結果に点数をつける$\rightarrow$良い点数をとれる$\Pi$が良い方策と考える
