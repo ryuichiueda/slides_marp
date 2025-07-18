@@ -174,6 +174,8 @@ marp: true
 
 <center style="color:red">これが強化学習の原理</center>
 
+![bg right:30% 100%](./figs/value.png)
+
 ---
 
 ## Q学習
