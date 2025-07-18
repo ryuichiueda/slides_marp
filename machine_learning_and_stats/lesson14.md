@@ -201,7 +201,6 @@ marp: true
         - $\alpha$: 学習率（右図の例だと$\alpha=0.1$）
 	    - $q(\boldsymbol{x}, a) = \ell + V(\boldsymbol{x}')$
 	        - $V(\boldsymbol{x}') = \min_{a'} Q(\boldsymbol{x}', a')$
-- いずれ収束
 
 
 ![bg right:35% 90%](./figs/q_update.png)
@@ -226,4 +225,9 @@ marp: true
 
 ---
 
-### なぜランダムにするか？
+### 学習の実行例
+
+- 100試行までには最適方策が得られている
+- $V$、$Q$はなかなか収束しない
+
+![bg right:35% 100%](./figs/q_result.png)
