@@ -240,4 +240,7 @@ marp: true
 行くように学習させたい
     - いまのところ水たまりに一直線
 
+<img width="40%" src="./figs/init_policy.png" />
+<img width="40%" src="./figs/policy_evaluation_end_sweeps.png" />
+
 ![bg right:35% 100%](./figs/puddle_world4.gif)
