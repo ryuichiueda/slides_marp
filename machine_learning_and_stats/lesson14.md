@@ -254,7 +254,7 @@ marp: true
 
 - $\varepsilon$-グリーディ方策で
 - 水たまりに入ると損失を与える
-- 先述のQ学習の式で行動価値関数を書き換え
+- Q学習の式で行動価値関数を書き換え
 	- $Q(\boldsymbol{x}, a)\longleftarrow\alpha \{\ell + V(\boldsymbol{x}') \} + (1-\alpha) Q(\boldsymbol{x}, a)$
 
 ![bg right:30% 100%](./figs/agent_on_q_learning.gif)
