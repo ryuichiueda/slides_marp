@@ -217,7 +217,7 @@ marp: true
     - 例: 右図のようになってしまうと$\boldsymbol{x}^{(3)}, \boldsymbol{x}^{(6)}$で左が選ばれなくなり学習が進まない
     - こういうことは日常でないだろうか？
 - $\Rightarrow$方策を次のように確率的に
-（$\varepsilon$グリーディー方策）
+（$\varepsilon$-グリーディー方策）
     - 確率$(1-\varepsilon)$で$Q$値が一番良い行動をとる
     - 確率$\varepsilon$でランダムに行動選択
 
@@ -246,3 +246,16 @@ marp: true
 <img width="45%" src="./figs/policy_evaluation_end_sweeps.png" />
 
 ![bg right:30% 100%](./figs/puddle_world4.gif)
+
+
+---
+
+### ロボットに行動させる
+
+- $\varepsilon$-グリーディ方策で
+- 水たまりに入ると損失を与える
+- 先述のQ学習の式で行動価値関数を書き換え
+	- $Q(\boldsymbol{x}, a)\longleftarrow\alpha \{\ell + V(\boldsymbol{x}') \} + (1-\alpha) Q(\boldsymbol{x}, a)$
+
+![bg right:30% 100%](./figs/agent_on_q_learning.gif)
+
