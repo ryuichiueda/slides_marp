@@ -239,10 +239,10 @@ marp: true
 - 右のロボットが、水たまりを避けてゴールに
 行くように学習させたい
     - いまのところ水たまりに一直線
-- 下図左: 方策（ロボットの向きが左を向いている時のもの）
+- 下図左: 方策（ロボットが左を向いている時のもの）
 - 下図右: 状態価値関数（同上）
 
-<img width="40%" src="./figs/init_policy.png" />
-<img width="40%" src="./figs/policy_evaluation_end_sweeps.png" />
+<img width="45%" src="./figs/init_policy.png" />
+<img width="45%" src="./figs/policy_evaluation_end_sweeps.png" />
 
-![bg right:35% 100%](./figs/puddle_world4.gif)
+![bg right:30% 100%](./figs/puddle_world4.gif)
