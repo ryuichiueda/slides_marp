@@ -108,8 +108,7 @@ marp: true
 
 ## 強化学習
 
-- $\ell_1 + \ell_2 + \dots + \ell_i + V(\boldsymbol{x}_\text{f})$がよりよくなる行動を
-コンピュータやロボットに選ばせるように学習させる仕組み
+- 評価がよりよくなる行動をコンピュータやロボットに選ばせるように学習させる仕組み
     - ロボットには感情がないが、ステップ数が多く、行動の損失が大きい課題を解くのは難しい（計算が難しい）
 - 学習するもの: <span style="color:red">$\Pi$: 方策</span>
     - ある状態$\boldsymbol{x}$でどの行動$a$を選ぶかを決める関数
@@ -118,6 +117,7 @@ marp: true
     - $J(\Pi | \boldsymbol{x}) = \left\langle \ell_1 + \ell_2 + \dots + \ell_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
         - $\boldsymbol{x}$: 最初の状態
 
+![bg right:30% 100%](./figs/reward_model.png)
 
 ---
 
