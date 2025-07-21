@@ -76,7 +76,7 @@ marp: true
 - 問題: 授業中の行動をモデル化してみましょう！
     - 真面目に聞く、寝る、別のことをやる、...
 
-![w:500](./figs/reward_model.png)
+![w:500](./figs/reward_sum.png)
 
 ---
 
