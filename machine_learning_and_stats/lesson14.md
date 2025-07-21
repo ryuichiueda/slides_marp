@@ -86,7 +86,7 @@ marp: true
     - その場のいいことは$\ell$がマイナスに（報酬）
     - 最終的にいいことは$V(\boldsymbol{x}_\text{f})$が大きい
     - <span style="color:red">最終的にあとに残るのは$\boldsymbol{x}_\text{f}$のみ（薬物依存とか）</span>
-- 講義以外でも例がないか考えてみましょう
+- 講義以外でもいろいろありそう
 
 
 ---
