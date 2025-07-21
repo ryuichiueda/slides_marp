@@ -61,6 +61,7 @@ marp: true
 - 終端状態$\boldsymbol{x}_\text{f}$とその価値$V(\boldsymbol{x}_\text{f})$
     - 一連の行動が終わった状態と、その状態の良さ
 
+![w:600](./figs/reward_model.png)
 
 ---
 
