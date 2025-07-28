@@ -113,6 +113,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## 独立同分布
+
+- $x_1 \sim P$、$x_2 \sim P$とふたつ値をドローしたとき、
+$x_1$と$x_2$に、$P$に従う以上の関係性がないこと
+
+---
+
 {2.4.4}\SEVENjidori {確率分布と事象の関係}}{45}
 {2.4.5}\SEVENjidori {同時確率質量関数，同時確率分布}}{46}
 {2.5}\SEVENjidori {まとめと議論}}{47}
