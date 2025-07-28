@@ -50,6 +50,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 事象の扱いがめんどくさい
     - いちいち「$\circ\circ$という事象が起こった」と言うのがめんどくさい
     - 根元事象やそうでない事象が入り混じってめんどくさい
+- 注意: 以後、区別の不要なときは、確率変数を単に「変数」と表記
 
 ---
 
@@ -59,9 +60,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 数直線上での確率の「分布」が分かる$\Longrightarrow$<span style="color:red">確率分布</span>
 - 典型的な分布には名前
     - <span style="color:red">ベルヌーイ分布</span>（例: (a)）
-        - 確率変数が2値だけ
+        - 変数が2値だけ
     - <span style="color:red">一様分布</span>（例: (b)）
-        - 確率変数のある範囲で確率が一定
+        - 変数のある範囲で確率が一定
 
 ![bg right:50% 90%](./figs/prob_dist.png)
 
@@ -69,7 +70,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 確率質量関数
 
-- 確率変数の値に対応する確率を返す関数
+- 変数の値に対応する確率を返す関数
     - 表記: $P(x)$（厳密には$P$）
     - 要は確率分布のグラフの形を決める関数
     - <span style="color:red">これも確率分布と呼ばれる</span>
@@ -85,8 +86,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-{2.4.2}\SEVENjidori {確率質量関数}}{43}
-{2.4.3}\SEVENjidori {確率分布}}{43}
+## 「確率分布に従う」と「ドローイング」
+
+- 変数$x$が$P$で分布するとき、「$x$は$P$に従う」と表現
+    - つまり$P$がなんらかの法則性をあらわしていて、
+    $x$はそれにしたがって発生すると発想
+
+---
+
 {2.4.4}\SEVENjidori {確率分布と事象の関係}}{45}
 {2.4.5}\SEVENjidori {同時確率質量関数，同時確率分布}}{46}
 {2.5}\SEVENjidori {まとめと議論}}{47}
