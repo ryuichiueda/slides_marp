@@ -119,6 +119,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 $x_1$と$x_2$に、$P$に従う以上の関係性がないこと
 - 表記: $x_{1:n} \overset{\text{iid}}{\sim} P$
     - $x_1, x_2, \dots, x_n$が互いに独立同分布
+- 「独立同分布」という分布はない（形容詞のように使う）
 
 
 ---
