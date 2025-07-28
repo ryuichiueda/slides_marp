@@ -117,6 +117,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - $x_1 \sim P$、$x_2 \sim P$とふたつ値をドローしたとき、
 $x_1$と$x_2$に、$P$に従う以上の関係性がないこと
+- 表記: $x_{1:n} \overset{\text{iid}}{\sim} P$
+
 
 ---
 
