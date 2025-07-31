@@ -2,11 +2,11 @@
 marp: true
 ---
 
-<!-- footer: "アドバンストビジョン第9回" -->
+<!-- footer: "アドバンストビジョン第10回" -->
 
 # 機械学習
 
-## 第9回: 敵対的生成ネットワーク
+## 第10回: Transformer
 
 千葉工業大学 上田 隆一
 
@@ -21,209 +21,307 @@ marp: true
 
 ## 今日やること
 
-- CNN
-- GAN
+- 機械学習での言葉の扱い方
+- Transformer
+- Transformerの応用例
 
 ---
 
-## 以前から触れていた話題
+## 機械学習での言葉の扱い方
 
-- 動物は視覚をどう行動や判断に必要な情報に変えているか
-- それをコンピュータで再現できるか
+- 単語の埋め込み
+    - 各単語を数百〜数千次元のベクトルに置き換え
+    - 近い単語は似たベクトルに（=内積の値を大きく）
+        - 例（適当。上記のように次元はもっと必要）
+            - おじさん$= (0.9, 0.32, 0.07)$
+            - おばさん$= (0.7, 0.55, 0.08)$
+            - 不動産$= (0.1, 0.05, 0.88)$
+- 埋め込むと類似度が内積で計算できる
+    - 次元が大きいので様々な切り口で類似度を計算可能
+- これらのベクトルや、それらを作ることを「埋め込み」と呼んでいる （どうやって作るか考えてみましょう）
 
-![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
-
-人工ニューラルネットワーク（ANN）でできる?$\rightarrow$できる
-
----
-
-## もうひとつの話題: なんか自動で絵を描くやつが出現
-
-実例は各自いろんなところで調査を
-
-- こいつらはどういう仕組み?
-    - 最近のは言語も駆使している（次回）
-    - ちょっと古いけど基礎をやりましょう
+![bg right:20% 100%](./figs/embedding.png)
 
 ---
 
-## 視覚・画像とANN
+## 埋め込みの方法（例: skip-gram）
 
-- 映像、画像の特性に特化したANNが存在
-    - 特性
-       - 2次元（深度があれば3次元、動画でも時間軸を入れると3次元）
-       - ある画素の周囲に似た画素がある
-- おさらい: ディジタル画像
-    - 平面が格子状に分割されて、数字の大小で色の濃さが表される
-    （例: 右図。数字はてきとう）
-    - カラーの場合はR、G、Bそれぞれについて格子状の数値データ
+- [word2vec](https://arxiv.org/pdf/1301.3781)というモデル群のなかのひとつ
+- 右図のような人工ニューラルネットワーク
+    - ある単語$w$について、任意の文の左右の$j$単語前/後に単語$w'$がある確率を学習
+- 入力: $\mathcal{v} = (0\ 0\ \cdots\ 1\ 0\ \cdots\ 0)$
+    - ある単語について、その単語に対応する要素が$1$になったベクトル（one-hotベクトル）
+    - 単語の種類だけ次元がある
+- 出力: $j$の位置ごとに、入力と同じ次元のベクトルで、各単語が存在する確率を出力
 
-![bg right:40% 90%](./figs/cat_mono.png)
+<center>これでどうやって埋め込みを作る？</center>
 
----
-
-## 画像認識の難しさ
-
-- 同じものが大きく写ったり小さく写ったり回転して写ったり
-- 変形したり抽象化されたりデフォルメされたり
-
-![](./figs/dots_varisous.png)
-
-![bg right:30% 90%](./figs/cat_back.png)
+![bg right:30% 100%](./figs/skip_gram.png)
 
 ---
 
-## CNN（convolutional neural network）
+## skip-gramで埋め込みを作る
 
-- テレビ局ではないです
-- convolutional: 「畳み込みの」
--  画像の近いところの画素値を入力して
-出力するニューロンを多用（右図）
-    - 画像の近いところ: $n\times n$画素の正方形領域
-    - 小領域の画素の特徴や変化を出力
-    - さらに下の層でも畳み込みすることで全体の特徴を捉える
-- 「畳み込み層」と他の部品を組み合わせて画像を処理させる
+- 学習: 大量の文章から$X$と$U_j$を学習
+- <span style="color:red">学習済み行列$X$=埋め込み</span>
+    - $X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
+    - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
+    $\rightarrow$これが埋め込みのベクトル
+- $U_j$も使われることがある
 
-![bg right:30% 90%](./figs/convolution_neuron.png)
+![bg right:30% 100%](./figs/skip_gram.png)
 
 ---
 
-### CNNの部品1: 畳み込み層
+### 埋め込みができればコンピュータが文章を認識する?
 
-- 概要
-    - 画像の一部（n$\times$n画素の「窓」）領域の画素値をひとつの値に置き換えて下流に送る（上図）
-    - 窓を1つずつ（2つ以上のときもある）ずらして同じ演算
-    $\rightarrow$下流も画像に
-- 値の置き換え方法
-    - 各画素に重み付けして足し、一定値（バイアス）を足す
-        - 層の目的によって重みの付け方を変える
-        - 下流の画素数を変えないために画像の縁をパディングすることがある
-- 学習対象: 重み付け（n$\times$nのデータ: <span style="color:red">フィルタ</span>）とバイアス
+・・・ことはできない
 
-![bg right:20% 90%](./figs/cnn_conv.png)
+- 最尤な単語をskip-gramで予想して並べていけばそれっぽい文は作れるけど、たぶん無意味な文ができる
+    - [マルコフ連鎖ジェネレータ](https://lorem.sabigara.com/?source=ginga-tetsudo&format=plain&sentence_count=5)のようなもの
+- 単純な埋め込みには限界
+    - 語順に関する情報は、完全にはない
+    - 文脈依存な情報を持っていない
+        - 同音異義語に1つのベクトル$\rightarrow$区別してない
+            - 例: チンチラ（げっ歯類にも猫にもいる）
 
----
+<center>どうしましょう？</center>
 
-### CNNの部品2: プーリング層 
+![bg right:20% 100%](./figs/Chinchilla.jpg)
 
-- 窓のなかで特徴の高い画素だけを残して画素数を減らす層
-    - 最大値を残す「maxプーリング」が主に使われる
-- 学習はしない
 
-![bg right:23% 90%](./figs/cnn_pooling.png)
+<span style="font-size:70%">
+<a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">写真上 by Guérin Nicolas（CC BY-SA 3.0）</a>
+<a href="https://commons.wikimedia.org/wiki/File:Chinchilla_cat_(3228221937).jpg">写真下 by allen watkin（CC BY-SA 2.0）</a>
 
 ---
 
-### CNNの部品3: ソフトマックス層
-（注意: CNN以外にも使われます）
+### どうすればいいか?
 
-- softmax（softな最大値）: 1つに決めないということ
-- 使用例: 画像に映ったものを判別
-    - 答えを断定せず確率で出力（例: 犬90%、猫9%、他1%）
-    - 実世界は微妙な場面が多いので、1つに決めないで曖昧に出力したほうが都合よい
-- 数式
-    - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
-        - $\eta$は正規化定数
+- 埋め込みに語順と文脈の情報を付加してやるとよい
+    - 前ページのスライドを逆に考えると、そういうことになる
+- <span style="color:red">Transformer</span>（のエンコーダ）
+    - 入力: 埋め込みに位置情報を加えて変更したもの
+    - 出力: <span style="color:red">文脈化トークン埋め込み</span>
+        - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
+        - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
 
-![bg right:20% 95%](./figs/softmax_layer.png)
-
----
-
-### CNNの部品4: ReLU層
-
-（注意: CNN以外にも使われます）
-
-- ReLU: Rectified Linear Unit
-    - 従来シグモイドが使われていた箇所に新たに使われるようになった活性化関数
-        - 右図の赤線: <span style="color:red">ReLU</span>
-        - 青線: シグモイド
-- ReLUを使うと性能があがる場合が
-報告されて流行、定着
-
-![bg right:40% 95%](./figs/relu.png)
+![w:1100](./figs/add_context_embedding.png)
 
 ---
 
-### CNNの構成
+### Transformer
 
-<a style="font-size:80%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">画像: Cmglee, CC BY-SA 4.0</a>
+- 翻訳のためにGoogleで開発された
+    - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
+- 正体: 右のような構造のニューラルネットワーク（あとから細かく見ていきます）
+    - GPT（Generative Pre-trained Transformer）などはこれの応用
+    - その他言葉を扱うアプリケーションもだいたいこれの応用
+- 画像にも応用されている
+    - ViT（Vision Transformer）
 
-- 例: 画像に写っているものが何かを答えるための構成
-    - Dense: アフィンレイ
-    ヤーのこと
-    - flatten: 配列状のデータを1列にすること
-- [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-    - 学習した中間層や認識結果が見られる
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
-![bg right:55% 100%](./figs/Comparison_image_neural_networks.svg)
+[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
+
+---
+
+## Transformerのエンコーダ: 入力
+
+
+- 入力: 文
+    - トークン（単語をより細かく文を区切ったもの）
+    に分けて、埋め込みのベクトルに変換
+        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+- 文への位置情報の付加（右図Positional Encoding）
+    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
+       - $D$: ベクトルの次元（正規化のため）
+       - $P$にはトークンが文の何番目にあるかの情報が入る
+           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
+
+<center>とりあえずこれで入力に位置情報が加わる</center>
+
+![bg right:20% 100%](./figs/transformer_pos.png)
 
 
 ---
 
-## GAN（generative adversarial networks）
+### Transformerのエンコーダ: 文脈情報の付加1
 
-- 敵対的生成ネットワーク
-    - 「絵を描く人工ニューラルネットワーク」のブームの発端
-    - それ以外にも音声やソフトウェアを作り出すなどの用途
-- 「敵対的」とは何?（人類の敵ではない）
-    - ふたつのANNを準備
-        - 生成ネットワーク（generator）: 何かを作るANN
-        - 識別ネットワーク（discriminator）: 入力が生成ネットワークの生成物かどうかを判断するANN
-    - 生成ネットワークと識別ネットワークが互いに競う（次ページ）
-- [元の論文](https://papers.nips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf)
+- <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
+    - 行列$W_Q, W_K, W_V$という3つの行列を使う
+        - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
+    - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
+        - $\boldsymbol{k}_i = W_K\boldsymbol{h}_i$（キー埋め込み）
+        - $\boldsymbol{v}_i = W_V\boldsymbol{h}_i$（バリュー埋め込み）
+        - $\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$（クエリ埋め込み）
+    - 3つのベクトルを使う自己注意機構なので特に
+    「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
 
----
-
-### 生成/識別ネットワークの競い方
-
-- 準備: 生成ネットワークが生成を目指すべき「本物」のデータを用意
-    - こんな絵を描いて欲しいという絵の見本（たくさん準備）
-- 識別ネットワーク
-    - 本物と生成ネットワークの生成物（便宜的に偽物と呼ぶ）を入力され、
-    本物か偽物かを判別
-    - 判別結果の誤差から自身を学習
-- 生成ネットワーク
-    - 識別ネットワークの判別結果の誤差から学習
-        - より見破られにくい偽物を作って識別ネットワークに挑戦
+![bg right:20% 100%](./figs/transformer_kvq.png)
 
 ---
 
-### 生成ネットワーク
+### Transformerのエンコーダ: 文脈情報の付加2
 
-- 基本的な仕組み
-    - 入力: ランダムなノイズの画像
-    - 出力: 識別ネットワークを騙す画像
-- なんでこれで画像ができるのか?
-    - ノイズ画像のもやもやを何かに関連づけているらしい
-    - 最初は識別ネットワークもポンコツなので少し模様ができると騙せる
-    - 参考: 拡散モデル（次のページ）
-- 参考になるサイト: https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5
- 
+- $\boldsymbol{k}_i, \boldsymbol{v}_i, \boldsymbol{q}_i$から、文脈を考慮した埋め込みベクトルを計算
+    - 手順
+        - $i$番目のトークンと$j$番目のトークンの関連性の強さを次のように計算
+            - $s_{ij} = \boldsymbol{q}_i^\top \boldsymbol{k}_j/\sqrt{D}$（内積）
+        - $s_{ij}$をソフトマックス関数で合計1に正規化
+            - $\alpha_{ij} = e^{s_{ij}}/\sum_{j'=1}^Ne^{s_{ij'}}$
+        - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
+            - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
+
+![bg right:20% 100%](./figs/transformer_kvq.png)
 
 ---
 
-### GANの応用
+### Transformerのエンコーダ: 文脈情報の付加3
 
-- [pix2pix](https://arxiv.org/pdf/1611.07004): 入力にノイズではなく画像を入力$\rightarrow$画像を変換するように学習
-- ロボットでの使用例（深度カメラに映った植物の茎と葉を分別）
-    ![w:870](figs/pix2pix.png)
- 
+- $\boldsymbol{o}_i$をフィードフォワード層に通す
+    - このあと2層のニューラルネットワークを通ってさらに文脈が強化された文脈化トークン埋め込みに
+
+- 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列が出力される
+
+![bg right:20% 100%](./figs/transformer_ff.png)
+
 ---
 
-### 拡散モデル
+## エンコーダの出力を使った翻訳
 
-- GANと同じく画像を生成する技術
-    - [Stable Diffusion](https://stablediffusionweb.com/ja/app/image-generator)の理論的な背景（の半分）
-        - もう半分（言葉による指示）は来週
-- 画像生成するANNの作り方
-    - ANNに画像のノイズを消す訓練をさせる
-    - ランダムなノイズ画像を入力すると元の画像を無理やり想像して画像を生成する
+- 問題の定式化: 条件付き確率の問題にする
+（例: 日本語から英語への翻訳）
+    - 問題1: 先頭のトークンを選ぶ
+        - $p(w_1 |$私 は 牛丼 を 食べ ます 。$)$
+    - 問題2: 2番目のトークンを選ぶ
+        - $p(w_2 |$私 は 牛丼 を 食べ ます 。, I$)$
+    - 問題3: 3番目のトークンを選ぶ
+        - $p(w_3 |$私 は 牛丼 を 食べ ます 。, I eat$)$
+- Transformerのデコーダがこれを解く
+$\Rightarrow$どうやって?
+
+![bg right:35% 100%](./figs/transformer_decoder.png)
+
+
+---
+
+### デコーダ側の処理1
+
+- 自己注意機構で翻訳途中の文の文脈を埋め込みに反映
+    - 途中の文なので計算のときに少し細工が必要だけど、
+    エンコーダと同じ
+
+![bg right:15% 100%](./figs/transformer_dec_context.png)
+
+
+---
+
+### デコーダ側の処理2: <span style="color:red">交差注意機構</span>
+
+- もとの言語の文脈を翻訳中の文に持ち込む
+    - クエリ埋め込み$\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$だけデコーダの埋め込みから計算
+    - キー埋め込み、バリュー埋め込みは、エンコーダ側の出力から計算
+
+
+![bg right:15% 100%](./figs/transformer_cross.png)
+
+
+---
+
+### デコーダ側の処理3: 次の単語の出力
+
+![bg right:15% 100%](./figs/transformer_output.png)
+
+- 全単語について次の単語になる確率を計算して、
+その確率が最も高いものを出力
+    - 文脈がしっかり考慮されているので、かつての
+    マルコフ連鎖ジェネレータのようにはならない
+    - その文脈に最もふさわしい単語が出てくる
+
+---
+
+## Transformerの応用例
+
+---
+
+### GPT（Generative Pre-trained Transformer）
+
+- 途中の文から次の単語を予測
+    - デコーダだけで構成
+- ChatGPTの一部に使われる
+
+[<span style="font-size:70%">画像: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
+
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
+
+
+---
+
+### ChatGPT
+
+- GPTを使ってテキスト（人の質問や発言）に答える
+    - （構造に関する決定的な文献なし）
+
+---
+
+### Vision Transformer (ViT）
+
+- Transformerを画像に転用
+    - 画像をブロック状に切って単語のように扱う（右図）
+    - 右図のCLS: クラストークン
+        - 分類のためにくっつけるデータでこれを計算して出力する
+- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
+    - CNNは遠くのブロックの関係性を見るのが苦手
+
+[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
+
+---
+
+### Contrastive Language-Image Pre-training (CLIP)
+
+- テキストと画像の関連性を学習したモデル（[論文](https://arxiv.org/pdf/2103.00020)）
+- [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- 学習方法
+    1. 画像と画像の内容を説明する文を準備
+    2. ViTを使って画像をエンコーディング
+    3. Transformerを使って文をエンコーディング
+    4. エンコーディングされたデータ（埋め込み）同士の相関を学習
+$\rightarrow$画像から文、文から画像などの変換が可能
+
+
+---
+
+### [Segment Anything](https://segment-anything.com/)
+
+- [コードや説明](https://github.com/facebookresearch/sam2)
+- プロンプトの指示で画像から特定の部分を切り出す（セグメンテーション）
+- 画像のエンコードにはViTを使う
+- プロンプトのエンコードにはCLIPを使う
+
+---
+
+### Stable Diffusion
+
+- プロンプトを画像に変換
+    - プロンプトから画像のタネを作るためにCLIPを利用
+    - 画像を復元するときにも注意機構
+- [図](https://medium.com/data-science/what-are-stable-diffusion-models-and-why-are-they-a-step-forward-for-image-generation-aa1182801d46)
 
 
 ---
 
 ## まとめ
 
-- CNN、GAN、拡散モデルなど画像を扱うANNを勉強
-    - 他、vision transformerなど2, 3年に一度、画期的な手法が発表されている
-        - transformerは次回
+- Transformer
+    - 埋め込みに文脈を反映させる仕組み
+- 埋め込み
+    - 次元の高いベクトルで、単語やトークンの様々な関係性を表現可能
+    - skip-gramなどの学習方法で実用性のある埋め込みが作成可能
+    - ViTなどでは画像に対しても作られる
+- 埋め込みを使うと性質の異なるデータを交差注意機構で関連させることが可能
+    - ある言語$\rightarrow$別の言語
+    - 画像$\leftrightarrow$言語
