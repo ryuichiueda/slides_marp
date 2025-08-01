@@ -24,3 +24,16 @@ marp: true
 - 拡散モデル
 - Stable Diffusion
 
+
+---
+
+### Contrastive Language-Image Pre-training (CLIP)
+
+- テキストと画像の関連性を学習したモデル（[論文](https://arxiv.org/pdf/2103.00020)）
+- [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- 学習方法
+    1. 画像と画像の内容を説明する文を準備
+    2. ViTを使って画像をエンコーディング
+    3. Transformerを使って文をエンコーディング
+    4. エンコーディングされたデータ（埋め込み）同士の相関を学習
+$\rightarrow$画像から文、文から画像などの変換が可能
