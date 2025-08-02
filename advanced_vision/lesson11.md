@@ -52,8 +52,8 @@ $\Longrightarrow$画像とキャプションをいろんなところから大量
 ### Contrastive Language-Image Pre-training (CLIP)
 
 - 学習方法
-    1. 画像と画像の内容を説明する文を準備
+    1. 前ページの方法で学習用のデータを準備
     2. ViTを使って画像をエンコーディング
     3. Transformerを使って文をエンコーディング
     4. エンコーディングされたデータ（埋め込み）同士の相関を学習
-$\rightarrow$画像から文、文から画像などの変換が可能
+$\Longrightarrow$画像から文、文から画像などの変換が可能
