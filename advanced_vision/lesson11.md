@@ -78,4 +78,8 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 - $N$ペアの画像とキャプションをエンコーダに入力
     - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
     - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
-- $\boldsymbol{i}_j$と$\boldsymbol{t}_j$と
+- ペアとなっている画像とキャプションのベクトルを同じにしたい
+    - $\boldsymbol{i}_j$と$\boldsymbol{t}_j$のコサイン類似度を大きくしたい
+        - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
+- ペアでない画像とキャプションのベクトルを違うものにしたい
+    - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
