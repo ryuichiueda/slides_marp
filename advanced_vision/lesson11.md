@@ -86,3 +86,9 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
         - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
 - ペアでない画像とキャプションのベクトルを違うものにしたい
     - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
+- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\dfrac
+{e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}}
+{\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}} -\dfrac{1}{N} \sum_{k=1}^N \ln\dfrac
+{e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}}
+{\sum_{j=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}}$ 
+    - $T$は「温度」で学習が進むにつれて下げていく
