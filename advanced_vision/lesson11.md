@@ -70,3 +70,11 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 - text encoder: Transformerのデコーダから交差注意機構を除いたもの
     - 入力は画像のキャプション
     - 出力をimage encoderに合わせる
+
+---
+
+### 評価方法
+
+- $N$ペアの画像とキャプションをエンコーダに入力
+    - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
+    - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
