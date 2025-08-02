@@ -23,22 +23,6 @@ marp: true
 
 - 人工ニューラルネットワークってなに？
 
----
-
-### あとは繰り返し
-
-- 1層目（再掲）
-    - 入力: $\boldsymbol{x} = (x_1 \ x_2)$
-    - $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$、$\boldsymbol{b} = (0 \ 0)$
-- 2層目
-    - 入力（1層目の出力）: $\boldsymbol{x}' = (x_1' \ x_2')$
-    - $W = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b} = (1.1 \ -0.9)$
-- 3層目
-    - 入力（2層目の出力）: $\boldsymbol{x}'' = (x_1'' \ x_2'')$
-    - $W = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b} = (0.9)$
-
-![bg right:38% 100%](./figs/first_neural_network.png)
-
 
 ---
 
