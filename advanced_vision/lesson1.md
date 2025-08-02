@@ -270,3 +270,17 @@ marp: true
         - 講義中にゲームをする（？）
 - コンピュータでも人工ニューロンで計算すれば or 人工ニューロンを実現するようなコンピュータを作れば、脳の計算が可能$\Longrightarrow$<span style="color:red">人工ニューラルネットワーク</span>
 
+---
+
+### 人工ニューラルネットワークの正体
+
+- やってることは単なる行列の演算
+- 先ほどの例の一番左の「層」
+    - 入力: $\boldsymbol{x} = (z_1 \ z_2)$と表現
+    - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
+        - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
+    - 出力の計算: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
+        - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
+        - $\boldsymbol{h}$は閾値処理
+
+![bg right:40% 100%](./figs/first_neural_network.png)
