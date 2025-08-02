@@ -62,3 +62,4 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ### CLIPの構造
 
+- [全体像](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
