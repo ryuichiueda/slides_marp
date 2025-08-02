@@ -174,3 +174,4 @@ marp: true
         - 脳に神経があることも知っている
     - <span style="color:red">脳や神経は具体的にどういう構造なのか?</span>
 
+![bg right:26% 100%](./figs/cat_and_dog.png)
