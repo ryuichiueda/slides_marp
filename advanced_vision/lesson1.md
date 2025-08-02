@@ -157,6 +157,6 @@ marp: true
     - 第3回: CNN、GAN
     - 第4回: オートエンコーダ・変分オートエンコーダ
     - 第5回: Transformer
-    - 第6回: Vision Transformer、CLIP
+    - 第6回: Vision Transformer、CLIP、SAM
     - 第7回: 拡散モデル、画像生成
-
+    - 第8回: NeRF / 3D Gaussian Splatting
