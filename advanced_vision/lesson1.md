@@ -135,4 +135,6 @@ marp: true
 ### 良い道具3: 最適化
 
 - 機械学習の理論的背景
+- 原理が単純
+    - $\arg\!\min_{w_1,w_2,\dots,w_N} \mathcal{L}(w_1, w_2, \dots, w_N | d_1, d_2, \dots, d_M)$
 
