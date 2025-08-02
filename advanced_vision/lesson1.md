@@ -281,7 +281,7 @@ marp: true
         - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
     - 出力の計算: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
         - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
-        - $\boldsymbol{h}$は閾値処理
+        - $\boldsymbol{h}$は閾値処理（<span style="color:red">活性化関数</span>）
 
 ![bg right:40% 100%](./figs/first_neural_network.png)
 
@@ -304,14 +304,14 @@ marp: true
 
 ---
 
-### レイヤーでの表現
+### レイヤー（層）での表現
 
 - 入出力を線でつなぎ、演算を箱で表現
 - これまで使ってきた例だと1層分が2層に
      - 重みの反映（と閾値の引き算）で1層
-         - <span style="color:red">アフィンレイヤー</span>
+         - <span style="color:red">アフィンレイヤー（全結合層）</span>
      - 閾値処理で1層
-         - ステップ関数レイヤー
+         - <span style="color:red">活性化関数層</span>
 - 注意: 右の図ではあまり入出力の数が変わってないが、実際はアフィンレイヤーの前後で変わる
 
 ![bg right:40% 90%](./figs/ann_layer_notation.png)
