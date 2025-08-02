@@ -75,7 +75,7 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ### 評価方法
 
-- $N$ペアの画像とキャプションをエンコーダに入力
+- $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
     - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
     - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
 - ペアとなっている画像とキャプションのベクトルを同じにしたい
