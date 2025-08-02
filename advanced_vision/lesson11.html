@@ -83,11 +83,13 @@
 <li><a href="https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training">全体像</a></li>
 <li>image encoder: ViT
 <ul>
+<li>入力は画像</li>
 <li>クラストークンを出力として使う（数百次元のベクトル）</li>
 </ul>
 </li>
 <li>text encoder: Transformerのデコーダから交差注意機構を除いたもの
 <ul>
+<li>入力は画像のキャプション</li>
 <li>出力をimage encoderに合わせる</li>
 </ul>
 </li>
