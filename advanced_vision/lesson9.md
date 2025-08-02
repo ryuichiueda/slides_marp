@@ -296,9 +296,6 @@ $\Rightarrow$どうやって?
 - GPTを使ってテキスト（人の質問や発言）に答える
     - （構造に関する決定的な文献なし）
 
-
-
-
 ---
 
 ### [Segment Anything](https://segment-anything.com/)
