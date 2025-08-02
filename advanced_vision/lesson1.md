@@ -175,3 +175,21 @@ marp: true
     - <span style="color:red">脳や神経は具体的にどういう構造なのか?</span>
 
 ![bg right:26% 100%](./figs/cat_and_dog.png)
+
+---
+
+### 神経細胞
+
+- 信号を伝える細胞
+- 信号を伝える仕組み
+   1. 樹状突起に化学物質をある量受けると電圧が発生
+   （<span style="color:red">発火</span>）
+       - 視細胞のように他の刺激で発火するものも
+   2. 電圧が軸索を伝って、その先のシナプスから化学物質を放出
+   3. 他の細胞が発火
+
+![bg right:50% 100%](./figs/neuron.png)
+
+
+<center style="font-size:50%">（図: public domain）</center>
+
