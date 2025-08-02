@@ -64,4 +64,6 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 ### CLIPの構造
 
 - [全体像](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- image encoder: ViT
+    - クラストークンを出力として使う（数百次元のベクトル）
 - text encoder: Transformerのデコーダから交差注意機構を除いたもの
