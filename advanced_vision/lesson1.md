@@ -136,6 +136,8 @@ marp: true
 
 - 機械学習の理論的背景
 - 原理が単純
-    - $\arg\!\min_{w_1,w_2,\dots,w_N} \mathcal{L}(w_1, w_2, \dots, w_N | d_1, d_2, \dots, d_M)$
-        - データ$d_1, d_2, \dots, d_M$から、ある評価関数$\mathcal{L}$を最小化するパラメータ$w_1, w_2, \dots, w_N$を求める
+    - データ$d_1, d_2, \dots, d_M (= d_{1:M}$と表記$)$から、
+    ある評価関数$\mathcal{L}$を最小化するパラメータ$w_1, w_2, \dots, w_N (= w_{1:N})$を求める
+    - $\arg\!\min_{w_{1:N}} \mathcal{L}(w_{1:N} | d_{1:M})$
+        - $a_{1:b} = \{a_1,a_2, \dots,a_b\}$
 
