@@ -38,6 +38,8 @@ marp: true
 
 ### ラベルの部分についてTransformerを使ってなんとかならないか？
 
+- 画像にはキャプションのついたものがある（論文とか）
+
 ---
 
 ### Contrastive Language-Image Pre-training (CLIP)
