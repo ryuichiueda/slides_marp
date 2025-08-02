@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第11回: CLIP
+## 第11回: CLIP (Contrastive Language-Image Pretraining)
 
 千葉工業大学 上田 隆一
 
@@ -21,8 +21,7 @@ marp: true
 
 ## 今日やること
 
-- 拡散モデル
-- Stable Diffusion
+- CLIP
 
 
 ---
