@@ -24,6 +24,9 @@ marp: true
 - CLIP
     - テキストと画像の関連性を学習したモデル（[論文](https://arxiv.org/pdf/2103.00020)）
     - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- CLIPでできること
+    - 画像に何が写っているかを認識（ある意味ではラベルの数に制限がない）
+    - テキストから画像を生成するときの部品
 
 ---
 
