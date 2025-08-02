@@ -158,4 +158,5 @@ marp: true
     - 第4回: オートエンコーダ・変分オートエンコーダ
     - 第5回: Transformer
     - 第6回: Vision Transformer、CLIP
+    - 第7回: 拡散モデル、画像生成
 
