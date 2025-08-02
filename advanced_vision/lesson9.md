@@ -258,6 +258,23 @@ $\Rightarrow$どうやって?
     - 全体を教師あり学習
     - 文がエンコーダを通るとクラストークンに分類のための情報が集まるようになる
 
+
+---
+
+### Vision Transformer (ViT）
+
+- Transformerを画像に転用
+    - 画像をブロック状に切って単語のように扱う（右図）
+    - 右図のCLS: クラストークン
+        - 文の分類と同じ
+- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
+    - CNNは遠くのブロックの関係性を見るのが苦手
+
+[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
+
+
 ---
 
 ### GPT（Generative Pre-trained Transformer）
@@ -279,20 +296,6 @@ $\Rightarrow$どうやって?
 - GPTを使ってテキスト（人の質問や発言）に答える
     - （構造に関する決定的な文献なし）
 
----
-
-### Vision Transformer (ViT）
-
-- Transformerを画像に転用
-    - 画像をブロック状に切って単語のように扱う（右図）
-    - 右図のCLS: クラストークン
-        - 分類のためにくっつけるデータでこれを計算して出力する
-- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
-    - CNNは遠くのブロックの関係性を見るのが苦手
-
-[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
 
 
 
