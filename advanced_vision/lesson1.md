@@ -156,6 +156,6 @@ marp: true
     - 第2回: ニューラルネットワークのおさらい
     - 第3回: CNN、GAN
     - 第4回: オートエンコーダ・変分オートエンコーダ
-    - 第5回: Transformer、Vision Transformer
-    - 第6回: CLIP
+    - 第5回: Transformer
+    - 第6回: Vision Transformer、CLIP
 
