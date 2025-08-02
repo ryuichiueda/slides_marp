@@ -67,3 +67,4 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 - image encoder: ViT
     - クラストークンを出力として使う（数百次元のベクトル）
 - text encoder: Transformerのデコーダから交差注意機構を除いたもの
+    - 出力をimage encoderに合わせる
