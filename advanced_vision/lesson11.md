@@ -36,6 +36,10 @@ marp: true
 
 ---
 
+### ラベルの部分についてTransformerを使ってなんとかならないか？
+
+---
+
 ### Contrastive Language-Image Pre-training (CLIP)
 
 - テキストと画像の関連性を学習したモデル（[論文](https://arxiv.org/pdf/2103.00020)）
