@@ -25,22 +25,6 @@ marp: true
 
 ---
 
-## 人工ニューラルネットワークってなに？
-
-- まずは問題
-    - なんで犬とか猫とか我々は認識できるのか?
-        - 脳がやっているということは知っている
-        - 脳に神経があることも知っている
-    - <span style="color:red">脳や神経は具体的にどういう構造なのか?</span>
-
-
-![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
-
-![bg right:30% 100%](./figs/cat_and_dog.png)
-
-
----
-
 ### 神経細胞
 
 - 信号を伝える細胞
