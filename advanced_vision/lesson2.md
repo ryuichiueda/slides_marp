@@ -95,16 +95,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ---
 
-- パラメータの修正（計算式の根拠は次ページ）
-    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
-    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
+### アフィンレイヤーの場合
 
-
-
-
----
-
-### アフィンレイヤーの誤差逆伝播
+- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial \mathcal{y}}\Delta \mathcal{y}$
 
 - 出力の誤差: $\partial L / \partial \boldsymbol{y}$と書ける
     - 最終的な誤差$L$に対して$\boldsymbol{y}$が与える影響度
@@ -115,6 +108,16 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     - $\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} y^2 e^{-x}$となる
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
+
+---
+
+- パラメータの修正（計算式の根拠は次ページ）
+    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
+    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
+
+
+
+
 
 ---
 
