@@ -86,7 +86,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     $\rightarrow$誤差$1/3$が返ってきた
         （出力$17/10$はもっと小さいべき）
         - $w=2$なので$2$倍して誤差を送信（$2/3$を返す）
-- 理屈: 偏微分
+- 理屈: 偏微分（$x$が少し変化したときの$y$の変化）
+    - $y=2x-1/10$
+    - $\dfrac{\partial y}{\partial x}=2$
 
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
