@@ -317,7 +317,7 @@ marp: true
 
 ---
 
-### 人工ニューラルネットワークの計算しているもの
+### 人工ニューラルネットワークが表現しているもの
 
 - 前のページの例: $\boldsymbol{x}$に対して次のような関数になっている
     - $\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{h} \{ \boldsymbol{h} [ \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)}) W^{(2)} - \boldsymbol{b}^{(2)} ]W^{(3)} - \boldsymbol{b}^{(3)} \}$
@@ -327,8 +327,10 @@ marp: true
 \boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
 \boldsymbol{f}^{(1)}(\boldsymbol{x})$
-        - $\boldsymbol{f}^{(i)}$: $i$層目のアフィンレイヤ（違う場合もある）と活性化関数層のペアに対応する関数
-- これで任意の関数を表現可能（活性化関数）
+        - $\boldsymbol{f}^{(i)}$: $i$層目のアフィンレイヤと活性化関数層のペアに対応する関数
+            - 注意: アフィンレイヤが別のものに変わることも
+- これで任意の関数を表現可能
+    - 活性化関数がないと行列の掛け算になって非線形の関数が表現できない
 
 ---
 
