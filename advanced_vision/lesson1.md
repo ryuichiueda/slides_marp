@@ -321,7 +321,7 @@ marp: true
 
 - 前のページの例: $\boldsymbol{x}$に対して次のような関数になっている
     - $\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{h} \{ \boldsymbol{h} [ \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)}) W^{(2)} - \boldsymbol{b}^{(2)} ]W^{(3)} - \boldsymbol{b}^{(3)} \}$
-![w:500](./figs/ann_layer_notation2.png)
+$\qquad\qquad\qquad$![w:460](./figs/ann_layer_notation2.png)
 - 一般的な表記
     - $\boldsymbol{f}(\boldsymbol{x}) =
 \boldsymbol{f}^{(n)}\circ
