@@ -292,9 +292,9 @@ marp: true
 - 1層目の出力: $\boldsymbol{x}^{(1)} = \boldsymbol{h}(\boldsymbol{x}W^{(1)} + \boldsymbol{b}^{(1)})$
     - $W^{(1)} = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$、$\boldsymbol{b}^{(1)} = (0 \ 0)$
     - 入力: $\boldsymbol{x} = (x_1 \ x_2)$
-- 2層目の出力: $\boldsymbol{x}^{(2)} = \boldsymbol{x}^{(1)}W^{(2)} + \boldsymbol{b}^{(2)}$
+- 2層目の出力: $\boldsymbol{x}^{(2)} = \boldsymbol{h}(\boldsymbol{x}^{(1)}W^{(2)} + \boldsymbol{b}^{(2)})$
     - $W^{(2)} = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b}^{(2)} = (1.1 \ -0.9)$
-- 3層目の出力: $y = \boldsymbol{x}^{(2)}W^{(3)} + \boldsymbol{b}^{(3)}$
+- 3層目の出力: $y = \boldsymbol{h}(\boldsymbol{x}^{(2)}W^{(3)} + \boldsymbol{b}^{(3)})$
     - $W^{(3)} = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b}^{(3)} = (0.9)$
 
 ![bg right:40% 100%](./figs/first_neural_network.png)
