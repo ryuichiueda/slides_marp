@@ -97,7 +97,8 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ### アフィンレイヤーの場合
 
-- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial \mathcal{y}}\Delta \mathcal{y}$
+- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{\mathcal{y}}}\Delta \boldsymbol{\mathcal{y}}$
+- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{\mathcal{y}}}\dfrac{\partial \boldsymbol{\mathcal{y}}}{\partial \boldsymbol{\mathcal{x}}}\Delta \mathcal{x}$
 
 - 出力の誤差: $\partial L / \partial \boldsymbol{y}$と書ける
     - 最終的な誤差$L$に対して$\boldsymbol{y}$が与える影響度
