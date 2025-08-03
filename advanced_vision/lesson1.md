@@ -322,12 +322,17 @@ marp: true
 
 - これまでの閾値処理（ステップ関数）では$0$と$1$しか出力できない
     - 少しこの制限を緩めると良い場合がほとんど
-- シグモイド関数: $h(x) = \dfrac{1}{1 + e^{-x}}$
-    - 右図のような形（緑はステップ関数）
-    ![w:300](./figs/sigmoid.png)
+- 基本的なもの
+    - シグモイド関数（右図青線）
+        - $h(x) = \dfrac{1}{1 + e^{-x}}$
+    - ReLU（Rectified Liner Unit。右図赤線）
+        - $h(x) = \begin{cases}
+0 & (x<0) \\
+x & (x \ge 0)
+\end{cases}$
 
+![bg right:30% 95%](./figs/relu.png)
 
-![bg right:30% 100%](./figs/sigmoid_layer.png)
 
 
 ---

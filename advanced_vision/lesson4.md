@@ -129,21 +129,6 @@ marp: true
 
 ---
 
-### CNNの部品4: ReLU層
-
-（注意: CNN以外にも使われます）
-
-- ReLU: Rectified Linear Unit
-    - 従来シグモイドが使われていた箇所に新たに使われるようになった活性化関数
-        - 右図の赤線: <span style="color:red">ReLU</span>
-        - 青線: シグモイド
-- ReLUを使うと性能があがる場合が
-報告されて流行、定着
-
-![bg right:40% 95%](./figs/relu.png)
-
----
-
 ### CNNの構成
 
 <a style="font-size:80%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">画像: Cmglee, CC BY-SA 4.0</a>
