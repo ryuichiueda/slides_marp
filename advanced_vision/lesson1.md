@@ -330,9 +330,9 @@ marp: true
 0 & (x<0) \\
 x & (x \ge 0)
 \end{cases}$
-            - $x=0$での微分値は適当に近似（$0$など）
+            - $x=0$での微分値は$0$など適当に近似
 
-![bg right:25% 95%](./figs/relu.png)
+![bg right:30% 95%](./figs/relu.png)
 
 ---
 
