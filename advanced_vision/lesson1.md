@@ -327,7 +327,7 @@ marp: true
 \boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
 \boldsymbol{f}^{(1)}(\boldsymbol{x})$
-        - $\boldsymbol{f}^{(i)}$: $i$層目の
+        - $\boldsymbol{f}^{(i)}$: $i$層目のアフィンレイヤ（違う場合もある）と活性化関数層のペアに対応する関数
 - これで
 
 ---
