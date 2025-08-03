@@ -317,8 +317,10 @@ marp: true
 
 ---
 
-### レイヤー（層）での表現
+### 人工ニューラルネットワークの計算しているもの
 
+- $\boldsymbol{x}$に対して次のような関数になっている
+    - $\boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
 
 ---
 
