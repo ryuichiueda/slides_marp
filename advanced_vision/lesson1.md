@@ -327,6 +327,7 @@ marp: true
 \boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
 \boldsymbol{f}^{(1)}(\boldsymbol{x})$
+        - $\boldsymbol{f}^{(i)}$: $i$層目の
 - これで
 
 ---
