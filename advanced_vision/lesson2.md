@@ -73,8 +73,9 @@ marp: true
         - 「影響を考えて」
             - 例: ある層が入力を2倍して出力
             $\rightarrow$その上流の値は結果に対して2倍の影響力
-    ![w:500](./figs/back_propagation.png)
 - その後: 送られてきた誤差が一定の割合で小さくなる方向にパラメータを変更
+
+![w:500](./figs/back_propagation.png)
 
 ---
 
