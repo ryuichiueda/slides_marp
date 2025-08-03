@@ -81,20 +81,22 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ### 単純な例
 
-- 送る誤差の大きさ
-    - ある層で誤差が$t$倍になるなら、$t$かけて上流に送る
-        - 上の層での値の違いが$t$倍だけ影響するので
-    - 右図上: 1入力1出力の単純なレイヤー
-        - $9/10$が入力されて$17/10$を出力
-        $\rightarrow$誤差$1/3$が返ってきた
+- 右図上: 1入力1出力の単純なレイヤー
+    - $9/10$が入力されて$17/10$を出力
+    $\rightarrow$誤差$1/3$が返ってきた
         （出力$17/10$はもっと小さいべき）
         - $w=2$なので$2$倍して誤差を送信（$2/3$を返す）
+
+
+![bg right:25% 90%](./figs/back_propagation_diff.png)
+
+---
+
 - パラメータの修正（計算式の根拠は次ページ）
     - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
     - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
 
 
-![bg right:25% 90%](./figs/back_propagation_diff.png)
 
 
 ---
