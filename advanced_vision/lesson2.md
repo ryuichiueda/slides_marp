@@ -75,7 +75,7 @@ marp: true
             $\rightarrow$その上流の値は結果に対して2倍の影響力
 - その後: 送られてきた誤差が一定の割合で小さくなる方向にパラメータを変更
 
-![w:500](./figs/back_propagation.png)
+$\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ---
 
