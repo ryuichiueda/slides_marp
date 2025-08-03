@@ -319,8 +319,15 @@ marp: true
 
 ### 人工ニューラルネットワークの計算しているもの
 
-- $\boldsymbol{x}$に対して次のような関数になっている
-    - $\boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
+- 前のページの例: $\boldsymbol{x}$に対して次のような関数になっている
+    - $\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{h} \{ \boldsymbol{h} [ \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)}) W^{(2)} - \boldsymbol{b}^{(2)} ]W^{(3)} - \boldsymbol{b}^{(3)} \}$
+![w:500](./figs/ann_layer_notation2.png)
+- 一般的な表記
+    - $\boldsymbol{f}(\boldsymbol{x}) =
+\boldsymbol{f}^{(n)}\circ
+\boldsymbol{f}^{(n-1)}\circ\dots\circ
+\boldsymbol{f}^{(1)}(\boldsymbol{x})$
+- これで
 
 ---
 
