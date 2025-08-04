@@ -105,6 +105,8 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
         - 重み$W$の分だけ影響力が増大
         - 誤差の値を割り引いて$\partial \mathcal{L} / \partial \boldsymbol{y}$の値を決めるとどの層でも具体的な値で誤差の大きさが決まる
 
+---
+
 ### 誤差逆伝播のまとめ
 
 - （層の種類によらず）上流の層はどこでも連鎖律を利用して影響度を計算可能
