@@ -103,7 +103,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
         - 偏微分の連鎖律
         - 重み$W$の分だけ影響力が増大
-        - 誤差の値を割り引いて$\partial \mathcal{L} / \partial \boldsymbol{y}$の値を決めるとどの層でも具体的な値で誤差の大きさが決まる
+        - $\partial \mathcal{L} / \partial \boldsymbol{y}$の値を$\mathcal{L}$の誤差に$\rightarrow$どの層でも具体的な値で誤差の大きさが決まる
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
 
