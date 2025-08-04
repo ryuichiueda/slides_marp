@@ -135,9 +135,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ## パラメータの修正
 
-- 下流から伝わってきた誤差を小さくするようにパラメータ変更
-- パラメータの更新式
-    - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
+- 下流から伝わってきた誤差を小さくするように更新
+- ひとつのパラメータの更新式
+    - $w \longleftarrow w -  \alpha \dfrac{\partial \mathcal{L}}{\partial w} = w -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial w}$
         - $\alpha$は割引率（ひとつの結果で一気にパラメータを修正しないように）
 - 単純な例（右図。$y=wx-b$、$\alpha = 0.1$とする）
     - $\partial \boldsymbol{y}/ \partial w = x = 9/10$、$\partial \boldsymbol{y}/ \partial b = -1$
@@ -146,29 +146,15 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
----
-
-### アフィン層の場合
-
-- パラメータの修正（計算式の根拠は次ページ）
-    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
-    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
-
-
-
-
 
 ---
 
 ### アフィンレイヤーのパラメータ修正
 
-
-
 - 誤差に対するパラメータの影響
-    - $W$について: <span style="color:red">$\dfrac{\partial L}{\partial W} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
-    - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{b}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
-- これらの値を$\alpha$だけ割り引いて元のパラメータから引く
-    - 割り引くのはひとつの入力だけでパラメータを大きく変えないため
+    - $W$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial W} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
+    - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{b}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
+- $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
 
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
