@@ -135,9 +135,12 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ## パラメータの修正
 
+- パラメータの更新式
+    - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
+        - 右辺の偏微分: 損失関数がパラメータでどれだけ変化するか
+        - $\alpha$は割引率（ひとつの結果で一気にパラメータを修正しないように）
 - 下流から伝わってきた誤差を小さくするようにパラメータ変更
-- 更新には$\boldsymbol{y}$をパラメータ$\boldsymbol{w}$で偏微分したものを使う
-    - $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
+- 更新には$\mathcal{L}$をパラメータ$\boldsymbol{w}$で偏微分したものを使う
 
 
 ---
