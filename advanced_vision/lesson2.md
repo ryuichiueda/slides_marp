@@ -126,8 +126,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 - シグモイド関数$h$を（偏）微分してみましょう
     - $\dfrac{\text{d} h}{\text{d} x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
     $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
-- シグモイドレイヤーも同様に計算すると
-    - $\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} y^2 e^{-x}$となる
+    - 各要素の具体的な値: $h$に$y_i = h(x_i)$を代入したもの
+- したがって
+- $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left( h(x_1) \quad h(x_2) \quad \dots \quad h(x_n) \right)$
 
 
 ---
