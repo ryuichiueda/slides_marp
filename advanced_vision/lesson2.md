@@ -128,7 +128,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
     - 各要素の具体的な値: $h$に$y_i = h(x_i)$を代入したもの
 - したがって
-- $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left[ y_1(1-y_1) \quad y_2(1-y_2) \dots y_n(1-y_n) \right]$
+- $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left[ y_1(1-y_1) \quad y_2(1-y_2) \quad \dots \quad y_n(1-y_n) \right]$
 
 
 ---
