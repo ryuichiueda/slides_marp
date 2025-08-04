@@ -135,10 +135,10 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ## パラメータの修正
 
+- 下流から伝わってきた誤差を小さくするようにパラメータ変更
 - パラメータの更新式
     - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
         - $\alpha$は割引率（ひとつの結果で一気にパラメータを修正しないように）
-- 下流から伝わってきた誤差を小さくするようにパラメータ変更
 
 
 ---
