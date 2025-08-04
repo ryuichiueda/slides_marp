@@ -101,7 +101,10 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     - $\mathcal{L}$の誤差に対して$\boldsymbol{y}$が与える影響度
 - 入力側の評価関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{x}$
     - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
+        - 偏微分の連鎖律
         - 重み$W$の分だけ影響力が増大
+
+<center>（層の種類によらず）上流の層はどこでも連鎖律を利用して影響度を計算可能</center>
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
 
