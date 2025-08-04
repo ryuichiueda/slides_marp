@@ -103,8 +103,12 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
         - 偏微分の連鎖律
         - 重み$W$の分だけ影響力が増大
+        - 誤差の値を割り引いて$\partial \mathcal{L} / \partial \boldsymbol{y}$の値を決めるとどの層でも具体的な値で誤差の大きさが決まる
 
-<center>（層の種類によらず）上流の層はどこでも連鎖律を利用して影響度を計算可能</center>
+### 誤差逆伝播のまとめ
+
+- （層の種類によらず）上流の層はどこでも連鎖律を利用して影響度を計算可能
+- ある層の影響度は入出力を使って
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
 
