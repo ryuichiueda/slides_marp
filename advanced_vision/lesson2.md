@@ -136,6 +136,8 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 ## パラメータの修正
 
 - 下流から伝わってきた誤差を小さくするようにパラメータ変更
+- 更新には$\boldsymbol{y}$をパラメータ$\boldsymbol{w}$で偏微分したものを使う
+    - $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
 
 
 ---
