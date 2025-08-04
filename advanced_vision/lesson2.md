@@ -154,7 +154,8 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 - 誤差に対するパラメータの影響
     - $W$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial W} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
     - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{b}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
-- $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
+- 更新式（どのレイヤーでも共通）
+    - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
 
 
 ![bg right:35% 90%](./figs/back_propagation_affine.png)
