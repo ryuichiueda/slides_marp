@@ -153,6 +153,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 - 誤差に対するパラメータの影響
     - $W$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial W} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
+        - [なんで偏微分の順序が変わるか](https://qiita.com/kinkalow/items/2a229cf855df828e4c39)（講師は未検証です。すみません！）
     - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{b}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
 - 更新式（どのレイヤーでも共通）
     - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
