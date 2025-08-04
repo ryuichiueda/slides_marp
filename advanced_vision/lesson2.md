@@ -139,9 +139,16 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 - パラメータの更新式
     - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
         - $\alpha$は割引率（ひとつの結果で一気にパラメータを修正しないように）
+- 単純な例（右図。$y=wx-b$、$\alpha = 0.1$とする）
+    - $\partial \boldsymbol{y}/ \partial w = x = 9/10$、$\partial \boldsymbol{y}/ \partial b = -1$
+    - $w \longleftarrow 2 - 1/10 \cdot 1/3 \cdot 9/10 = 1.97$（小さく）
+    - $b \longleftarrow 1/10 - 1/10 \cdot 1/3 \cdot (-1) = 0.13$（大きく）
 
+![bg right:25% 90%](./figs/back_propagation_diff.png)
 
 ---
+
+### アフィン層の場合
 
 - パラメータの修正（計算式の根拠は次ページ）
     - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
