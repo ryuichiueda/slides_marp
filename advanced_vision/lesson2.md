@@ -95,20 +95,23 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ---
 
-### アフィンレイヤーの場合
+### アフィン層の場合
 
-- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{\mathcal{y}}}\Delta \boldsymbol{\mathcal{y}}$
-- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{\mathcal{y}}}\dfrac{\partial \boldsymbol{\mathcal{y}}}{\partial \boldsymbol{\mathcal{x}}}\Delta \boldsymbol{\mathcal{x}}$
+- 出力側の評価関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{y}$
+    - $\mathcal{L}$の誤差に対して$\boldsymbol{y}$が与える影響度
+- 入力側の評価関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{x}$
+    - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
+        - 重み$W$の分だけ影響力が増大
 
-- 出力の誤差: $\partial L / \partial \boldsymbol{y}$と書ける
-    - 最終的な誤差$L$に対して$\boldsymbol{y}$が与える影響度
-- 入力（前の層の出力）の誤差: 同様に$\partial L / \partial \boldsymbol{x}$
-    - <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} W^\top$</span>
-        - （行列の計算はさておき）重み$W$の分だけ影響力が増すので、これを上流に送る
+![bg right:35% 90%](./figs/back_propagation_affine.png)
+
+---
+
+### シグモイド層の場合
+
 - シグモイドレイヤーも同様に計算すると
     - $\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} y^2 e^{-x}$となる
 
-![bg right:35% 90%](./figs/back_propagation_affine.png)
 
 ---
 
