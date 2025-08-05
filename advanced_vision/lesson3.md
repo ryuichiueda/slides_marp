@@ -165,15 +165,18 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### CNNの構成
+### 代表的なCNN
 
-- LeNetは前ページの構成で手書き文字を識別
+- LeNet: 前ページの構成で手書き文字を識別
     - 畳み込み・プーリング$\rightarrow$全結合層
         - シグモイド関数を活性化関数に使用
 - AlexNet: 畳み込みを5層に深く
     - LeRUを活性化関数に使用
     - 1000種類の識別
 
+![bg right:35% 100%](./figs/Comparison_image_neural_networks.svg)
+
+<a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">右図: Cmglee, CC BY-SA 4.0</a>
 
 ---
 
@@ -191,7 +194,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
     - 学習した中間層や認識結果が見られる
 
-![bg right:55% 100%](./figs/Comparison_image_neural_networks.svg)
 
 
 ---
