@@ -193,3 +193,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ## U-Netと潜在空間
 
 - U-Net: CNNの後ろに逆向きのCNNをつけたもの
+- 「逆向きのCNN」
+
+
+---
+
+### 転置畳み込み
