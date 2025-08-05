@@ -168,7 +168,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 - $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
     - 右図上の状態から右図下の状態にもっていきたい
-- 修正のための式（p. 19のもの）: 
+- 修正のための式（p. 11のもの）: 
     - $w_i \leftarrow w_i- \alpha$入力値$\cdot$誤差
     - $b \leftarrow b+ \alpha$誤差
 - $\alpha=0.5$で（早く収束させるため大きめ）
