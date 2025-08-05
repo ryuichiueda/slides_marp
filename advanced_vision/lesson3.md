@@ -105,7 +105,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - フィルタ: 従来の画像処理に使われてきたものと同じ
     - 局所的な特徴（エッジなど）を検出
 
-![w:700](./figs/cnn_filter.png)
+$\qquad\qquad$![w:700](./figs/cnn_filter.png)
 
 ---
 
