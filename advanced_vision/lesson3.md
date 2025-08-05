@@ -171,6 +171,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 <a href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">右図: Cmglee, CC BY-SA 4.0</a>
 
 <a href="https://www.macnica.co.jp/business/semiconductor/articles/qualcomm/141224/">綺麗な図（株式会社マクニカさん）</a>
+</div>
 
 - 例: 画像に写っているものが何かを答えるための構成
     - Dense: 全結合層
