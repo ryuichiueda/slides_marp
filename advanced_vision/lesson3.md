@@ -163,8 +163,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-## まとめ
+### CNNのまとめ
 
-- CNN、GAN、拡散モデルなど画像を扱うANNを勉強
-    - 他、vision transformerなど2, 3年に一度、画期的な手法が発表されている
-        - transformerは次回
+- 畳み込み層で画像
