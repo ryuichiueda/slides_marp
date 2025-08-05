@@ -194,6 +194,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - U-Net: CNNの後ろに逆向きのCNNをつけたもの
 - 「逆向きのCNN」
+    - 画像を大きくしていく
 
 
 ---
