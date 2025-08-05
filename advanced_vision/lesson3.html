@@ -113,17 +113,22 @@
 </li>
 </ul>
 </li>
+<li>下流の画素数を変えたくないとき<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>画像の縁をパディング</li>
 </ul>
 <footer>アドバンストビジョン第3回</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="" data-marpit-pagination-total="13" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:アドバンストビジョン第3回;--paginate:true;" data-marpit-pagination-total="13">
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>- 2次元になっただけでこれまでと同じ
-    - ただし「全結合」ではない
-- 各画素に重み付けして足し、一定値（バイアス）を足す
-    - 層の目的によって重みの付け方を変える
-    - 下流の画素数を変えないために画像の縁をパディングすることがある
-</code></pre>
+<h3 id="%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF%E5%B1%A4%E8%A3%9C%E8%B6%B3">畳み込み層（補足）</h3>
 <ul>
+<li>2次元になっただけでこれまでと同じ
+<ul>
+<li>ただし「全結合」ではない
+<ul>
+<li>層の目的によって重みの付け方を変える</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>学習対象: 重み付け（n<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.02ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.09ex" role="img" focusable="false" viewBox="0 -491 778 482"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g></g></g></svg></mjx-container>nのデータ: <span style="color:red">フィルタ</span>）とバイアス</li>
 </ul>
 <footer>アドバンストビジョン第3回</footer>
