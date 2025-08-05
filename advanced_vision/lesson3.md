@@ -183,3 +183,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### CNNのまとめ
 
 - 畳み込み層で模様の特徴を抽出
+
+
+---
+
+## U-Netと潜在空間
+
+- U-Net: CNNの後ろに逆向きのCNNをつけたもの
