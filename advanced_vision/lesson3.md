@@ -92,10 +92,11 @@ marp: true
     - 下流の画素数を変えたくない場合$\rightarrow$縁をパディング
     - 2つ以上ずらすこともあり
 - 畳み込みの演算（下図）
+    - $\odot$: アダマール積（要素ごとに掛け算）
 
 ![bg right:20% 90%](./figs/cnn_conv.png)
 
-![w:700](./figs/cnn_calc.png)
+$\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 --- 
 
@@ -104,7 +105,7 @@ marp: true
 - フィルタ: 従来の画像処理に使われてきたものと同じ
     - 局所的な特徴（エッジなど）を検出
 
-![w:800](./figs/cnn_filter.png)
+![w:700](./figs/cnn_filter.png)
 
 ---
 
