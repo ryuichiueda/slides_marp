@@ -156,7 +156,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - カラー（RGB）画像を扱う場合
     - 画素の縦横方向の他に3つの「チャンネル」を持つ
-    - RGBそれぞれにフィルタを用意すると入力、出力も3chに
+    - RGBそれぞれにフィルタを用意すると出力も3chに
 - 1つのチャンネルに複数のフィルタも適用可能
     - この場合、チャンネル数はフィルタの数だけ倍増
         - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
