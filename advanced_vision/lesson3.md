@@ -153,8 +153,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 <a style="font-size:80%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">画像: Cmglee, CC BY-SA 4.0</a>
 
 - 例: 画像に写っているものが何かを答えるための構成
-    - Dense: アフィンレイ
-    ヤーのこと
+    - Dense: 全結合層
     - flatten: 配列状のデータを1列にすること
 - [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
     - 学習した中間層や認識結果が見られる
