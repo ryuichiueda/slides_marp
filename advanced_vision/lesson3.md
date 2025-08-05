@@ -159,7 +159,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - RGBそれぞれにフィルタを用意すると出力も3chに
 - 1つのチャンネルに複数のフィルタも適用可能
     - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
-        - 画像から10種類のものの識別をするCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
+        - 画像から10種類のものを識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
             ![w:900](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
 
 ---
