@@ -104,7 +104,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - フィルタ: 従来の画像処理に使われてきたものと同じ
     - 局所的な特徴（エッジなど）を検出
-    - CNN=フィルタの学習
+    - 畳み込み層の学習=フィルタの学習
 
 $\qquad\qquad$![w:700](./figs/cnn_filter.png)
 
