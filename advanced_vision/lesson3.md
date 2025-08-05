@@ -22,7 +22,6 @@ marp: true
 ## 今日やること
 
 - CNN
-- GAN
 
 ---
 
