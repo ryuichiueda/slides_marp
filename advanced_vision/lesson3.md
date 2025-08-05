@@ -146,6 +146,14 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ![bg right:20% 95%](./figs/softmax_layer.png)
 
+
+---
+
+### チャンネル
+
+- 畳み込み層はいくつもフィルタ
+
+
 ---
 
 ### CNNの構成

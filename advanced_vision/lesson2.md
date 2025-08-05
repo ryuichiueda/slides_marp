@@ -213,7 +213,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ---
 
-## 補足: スキップ接続
+## 補足: スキップ（残差）接続
 
 - あるレイヤーの出力を次の層だけでなく、
 別の層にも入力する接続方法
@@ -222,6 +222,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 - スキップ接続の有無: 初期の学習の容易さに影響
     - スキップ接続なし: 最初は$\boldsymbol{y}$がランダム
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
+- ResNet（2015年）
 
 ![bg right:30% 90%](./figs/skip.png)
 
