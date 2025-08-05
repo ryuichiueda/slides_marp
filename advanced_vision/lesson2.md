@@ -124,11 +124,10 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 - $\boldsymbol{y} = \text{Sigmoid}(\boldsymbol{x}) = \left[ h(x_1) \quad h(x_2) \quad \dots \quad h(x_n) \right]$
     - $h(x) = (1 + e^{-x})^{-1}$
 - シグモイド関数$h$を（偏）微分してみましょう
-    - $\dfrac{\text{d} h}{\text{d} x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
+    * $\dfrac{\text{d} h}{\text{d} x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
     $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
-    - 各要素の具体的な値: $h$に出力値$y_i = h(x_i)$を代入したもの
-- したがって
-- $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left[ y_1(1-y_1) \quad y_2(1-y_2) \quad \dots \quad y_n(1-y_n) \right]$
+- 各要素の具体的な値: $h$に出力値$y_i = h(x_i)$を代入したものなので・・・
+    - $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left[ y_1(1-y_1) \quad y_2(1-y_2) \quad \dots \quad y_n(1-y_n) \right]$
 
 
 ---
