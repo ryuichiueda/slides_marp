@@ -171,12 +171,13 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - 畳み込み・プーリング$\rightarrow$全結合層
         - シグモイド関数を活性化関数に使用
 - AlexNet: 畳み込みを5層に深く
+    - 右図: LeNet（左）とAlexNet（右）の比較
     - LeRUを活性化関数に使用
     - 1000種類の識別
 
-![bg right:35% 100%](./figs/Comparison_image_neural_networks.svg)
+![bg right:30% 100%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
-<a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">右図: Cmglee, CC BY-SA 4.0</a>
+<a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:AlexNet_block_diagram.svg">右図: Zhang et al., CC BY-SA 4.0</a>
 
 ---
 
