@@ -221,3 +221,5 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 転置畳み込み
 
 - 画像の解像度を上げる操作
+
+![bg right:25% 95%](./figs/trans_conv.png)
