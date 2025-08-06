@@ -196,10 +196,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - U-Net: CNNの後ろに逆向きのCNNをつけたもの
     - 当初の用途: セグメンテーション
-        - 画像に写っているものの領域を分割
+        - 画像に写っているものごとに画像の領域を分割
 - 「逆向きのCNN」
     - 「転置畳み込み（後から説明）」という操作で画像を大きくしていく
 
+
+![bg right:25% 90%](https://github.com/ryuichiueda/jrsj_color_figs/blob/main/vol_40_no_2/fig_11.png?raw=true)
 
 ---
 
