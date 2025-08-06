@@ -187,6 +187,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - 畳み込み層で模様の特徴を抽出
 - LeNet、AlexNet: 画像から物体を識別 
+    - CNNはそれだけではなくもっと使える
 
 
 ---
