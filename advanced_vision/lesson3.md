@@ -174,6 +174,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - 右図: LeNet（左）とAlexNet（右）の比較
     - LeRUを活性化関数に使用
     - 1000種類の識別
+    - [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+        - 学習した中間層や認識結果が見られる
 
 ![bg right:33% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
@@ -181,28 +183,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### CNNの構成
-
-<div style="font-size:70%">
-<a href="https://commons.wikimedia.org/wiki/File:Comparison_image_neural_networks.svg">右図: Cmglee, CC BY-SA 4.0</a>
-
-<a href="https://www.macnica.co.jp/business/semiconductor/articles/qualcomm/141224/">綺麗な図（株式会社マクニカさん）</a>
-</div>
-
-- 例: 画像に写っているものが何かを答えるための構成
-    - Dense: 全結合層
-    - flatten: 配列状のデータを1列にすること
-- [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-    - 学習した中間層や認識結果が見られる
-
-
-
----
-
 ### CNNのまとめ
 
 - 畳み込み層で模様の特徴を抽出
-- LeNet、AlexNet: 
+- LeNet、AlexNet: 画像から物体を識別 
 
 
 ---
