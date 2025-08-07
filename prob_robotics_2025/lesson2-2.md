@@ -137,18 +137,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 独立同分布（independent and identically distributed、i.i.d.）
 
-- $x_1 \sim P$、$x_2 \sim P$とふたつ値をドローしたとき、
-$x_1$と$x_2$に、$P$に従う以上の関係性がないこと
-- 表記: $x_{1:n} \overset{\text{iid}}{\sim} P$
-    - $x_1, x_2, \dots, x_n$が互いに独立同分布
-- 「独立同分布」という分布はない（形容詞のように使う）
+- $P$から値$x_1, x_2, \dots, x_n$をドローしたとき、
+値に互いに$P$に従う以上の関係性がないこと
+    - 表記: $x_{1:n} \overset{\text{iid}}{\sim} P$
 - 独立同分布にならない例
     - ディーラーが操作しているルーレットやトランプ
         - 「前がこうだったから次はこう」みたいな操作で独立同分布でなくなる
         - ディーラーがうまくやれば長期的な統計では$P$にしたがう
     - <span style="color:red">センサーの出力</span>
         - 雑音の要因は一定時間続く$\rightarrow$前後の出力には同じ傾向
+- 「独立同分布」という分布はない（形容詞のように使う）
 
+![bg right:30% 90%](./figs/iid.png)
 
 ---
 
