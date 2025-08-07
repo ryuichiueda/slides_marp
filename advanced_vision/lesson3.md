@@ -231,3 +231,11 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ---
 
 ## オートエンコーダと潜在空間
+
+---
+
+### オートエンコーダ
+
+- 入力と出力を一致させるように学習されたANN
+- [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+
