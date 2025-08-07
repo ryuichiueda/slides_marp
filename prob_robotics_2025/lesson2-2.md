@@ -105,13 +105,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 「確率分布に従う」
 
-- 変数$x$が$P$で分布するとき、「$x$は$P$に従う」と表現
+- 変数$x$が$P$で分布するとき、
+「<span style="color:red">$x$は$P$に従う</span>」と表現
     - $P$がなんらかの法則性をあらわしていて、
     $x$はそれにしたがって発生するという発想
-- 数式上の表記: $x \sim P$
+- 数式上の表記: <span style="color:red">$x \sim P$</span>
     - 表記に関する補足
         - $P(x)$は変数の値が$x$となるときの確率
         - $P$は確率分布そのもの
+
+![bg right:35% 90%](./figs/prob_dist_dice.png)
 
 ---
 
