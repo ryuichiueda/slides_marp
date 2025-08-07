@@ -227,3 +227,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - U-Netについての説明はこれで終わりだが、単にセグメンテーションができる以上にこの構造は重要
 
 ![bg right:25% 95%](./figs/trans_conv.png)
+
+---
+
+## オートエンコーダ
