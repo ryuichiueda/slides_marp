@@ -236,6 +236,5 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### オートエンコーダ
 
-- 入力と出力を一致させるように学習されたANN
-- [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+- 入力と出力を一致させるように学習されたANN [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
 
