@@ -130,6 +130,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - サンプリング: 統計を取るときに対象から
     一定数の標本（サンプル）を抜き取ること
 
+![bg right:30% 90%](./figs/draw.png)
 
 ---
 
