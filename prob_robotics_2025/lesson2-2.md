@@ -91,15 +91,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 確率変数の場合、値が異なれば自動的に排反に
     - $\Pr\{a=x_1 \text{\ or\ } x_2 \} = P_a(x_1) + P_a(x_2)$
-        - $x_1 \neq x_2$のとき
+        - ただし$x_1, x_2$が互いに異なるとき
         - 右図の例: $P(0) + P(3) = 0.3$
-    - $\Pr\{\bigvee_{i=1}^n a=x_i \} = \sum_{i=1}^nP_a(x_i)$
-        - 互いに異なる$x_{1:n}$に対して
     - $\Pr\{x_0 \le x \le x_1\} = \sum_{x=x_0}^{x_1} P(x)$
         - 右図の例
             - $\Pr\{1 \le x \le 3\} = 0.2\times 3 = 0.6$
             - $\Pr\{x \ge 3\} = 0.2 + 0.1\times 3 = 0.5$
-- 確率をいくつか足したもの: 確率分布の一部の面積に相当
+    - 何を計算しているか: 確率分布の面積
 
 ![bg right:25% 90%](./figs/prob_dist_calc.png)
 
