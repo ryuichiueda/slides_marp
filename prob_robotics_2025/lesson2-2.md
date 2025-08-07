@@ -135,7 +135,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 独立同分布
+## 独立同分布（independent and identically distributed、i.i.d.）
 
 - $x_1 \sim P$、$x_2 \sim P$とふたつ値をドローしたとき、
 $x_1$と$x_2$に、$P$に従う以上の関係性がないこと
