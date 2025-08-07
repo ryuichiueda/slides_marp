@@ -23,9 +23,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今回の内容
 
 - 確率変数
-- 確率質量関数
 - 確率分布
-- 同時確率分布
+- 独立同分布
+- 多変量の確率分布の計算
 
 ---
 
