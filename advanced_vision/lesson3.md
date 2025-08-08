@@ -279,5 +279,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - 同じ入出力を学習
 - 学習がうまく進むとエンコーダとデコーダができる
+    - エンコーダ: データを次元の低い空間に圧縮
 
-![bg right:35% 95%](./figs/autoenc2.png)
+![bg right:30% 95%](./figs/autoenc2.png)
