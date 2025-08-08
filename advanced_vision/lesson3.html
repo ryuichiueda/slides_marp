@@ -371,7 +371,7 @@
 <p><img src="./figs/decoder.png" alt="" style="width:800px;" /></p>
 <footer>アドバンストビジョン第3回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="23" style="--footer:アドバンストビジョン第3回;--paginate:true;" data-marpit-pagination-total="24">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="23" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/autoenc2.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="23" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="23" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E3%82%AA%E3%83%BC%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%80%E3%81%AE%E5%88%A9%E7%94%A8">オートエンコーダの利用</h3>
 <ul>
 <li>エンコーダとデコーダを分離して利用</li>
@@ -394,18 +394,24 @@
 <center>ちまたで<span style="color:red">生成AI</span>と言われるものの原型</center>
 <footer>アドバンストビジョン第3回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="24" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/autoenc2.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="24" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="24" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h3 id="%E3%82%AA%E3%83%BC%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%80%E3%81%BE%E3%81%A8%E3%82%81">オートエンコーダ（まとめ）</h3>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="23" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="24" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/autoenc2.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="24" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="C" data-marpit-pagination="24" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
 <ul>
-<li>途中にボトルネックのあるANNで同じ入出力を学習</li>
-<li>学習がうまく進むとエンコーダとデコーダができる
+<li>CNNからオートエンコーダまで学習
 <ul>
-<li>エンコーダ: データを潜在空間中に埋め込んで圧縮</li>
-<li>デコーダ: 潜在空間中の点からデータを復元</li>
+<li>画像の識別から生成までの流れを見てきた
+<ul>
+<li>CNNによる物体の識別: エンコーダ+識別器</li>
+<li>U-Netによるセグメンテーション: オートエンコーダに似た構造</li>
 </ul>
 </li>
-<li>右図のようにエンコーダ、デコーダそれぞれを台形で表現することが多い</li>
-<li>潜在空間が生成のための鍵</li>
+<li>次回以降にいくつかの応用
+<ul>
+<li>台形の図がよく出てくる</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <footer>アドバンストビジョン第3回</footer>
 </section>
