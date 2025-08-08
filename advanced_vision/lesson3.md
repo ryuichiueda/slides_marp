@@ -245,3 +245,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 
 ![w:1000](./figs/autoenc.png)
+
+---
+
+### オートエンコーダのやっていること
+
