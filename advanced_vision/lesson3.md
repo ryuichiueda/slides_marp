@@ -280,8 +280,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - エンコーダとデコーダを分離して利用
 - エンコーダ
     - 先に前結合層などを取り付けて分類器に
+    - 先に別のデコーダを取り付けると別のものが<span style="color:red">生成</span>される
 - デコーダ
     - 学習に用いたもの以外のエンコーダを取り付けると変換器に
+        - 例「犬」と入力$\rightarrow$犬の絵を<span style="color:red">生成</span>
+
+<center>ちまたで<span style="color:red">生成AI</span>と言われるものの原型</center>
 
 ---
 
