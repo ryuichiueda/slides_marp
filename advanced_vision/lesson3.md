@@ -246,7 +246,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### 左半分（<span style="color:red">エンコーダ</span>）のやっていること
+### 入力側（<span style="color:red">エンコーダ</span>）のやっていること
 
 - 画像の分類
 
