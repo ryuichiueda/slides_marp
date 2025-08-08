@@ -277,4 +277,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### オートエンコーダ（まとめ）
 
+- 同じ入出力を学習
+- 学習がうまく進むとエンコーダとデコーダができる
+
 ![bg right:35% 95%](./figs/autoenc2.png)
