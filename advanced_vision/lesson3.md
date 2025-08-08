@@ -277,3 +277,4 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### オートエンコーダ（まとめ）
 
+![bg right:35% 95%](./figs/autoenc2.png)
