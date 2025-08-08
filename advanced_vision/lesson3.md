@@ -256,3 +256,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ![bg right:35% 95%](./figs/encoder.png)
 
+
+---
+
+### 出力側（<span style="color:red">デコーダ</span>）のやっていること
+
