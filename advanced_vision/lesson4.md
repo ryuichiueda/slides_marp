@@ -41,6 +41,15 @@ marp: true
 
 ---
 
+### ネットワーク構造の例
+
+- Deep Convlutional GAN（DCGAN）[[Radford 2015]](https://arxiv.org/pdf/1511.06434)
+    - 上: 生成ネットワーク
+    - 下: 識別ネットワーク
+![w:800](./figs/dcgan-cc-by-4.0-by_zhang.png)
+
+---
+
 ### 生成ネットワークの例
 
 - Deep Convlutional GAN（DCGAN）[Radford 2015]のもの
@@ -49,6 +58,12 @@ marp: true
         - <span style="color:red">潜在空間のベクトルに相当</span>
     - 出力は画像
         - 最初はでたらめ
+
+
+---
+
+### 識別ネットワークの例
+
 
 
 ---
