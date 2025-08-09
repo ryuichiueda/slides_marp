@@ -36,7 +36,7 @@ marp: true
     - ふたつのANNを準備
         - 生成ネットワーク（generator）: 何かを作るANN
         - 識別ネットワーク（discriminator）: 入力が生成ネットワークの生成物かどうかを判断するANN
-    - 生成ネットワークと識別ネットワークが互いに競う（次ページ）
+    - 生成ネットワークと識別ネットワークが互いに競う
 - [元の論文](https://papers.nips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf)
 
 ---
