@@ -113,8 +113,26 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="" data-marpit-pagination-total="10" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:アドバンストビジョン第3回;--paginate:true;" data-marpit-pagination-total="10">
 <h3 id="%E7%94%9F%E6%88%90%E8%AD%98%E5%88%A5%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%92%E7%AB%B6%E3%82%8F%E3%81%9B%E3%82%8B">生成/識別ネットワークを競わせる</h3>
 <ul>
-<li>最初は生成ネットワークがでたらめの画像、識別ネットワークがでたらめの識別結果を出力</li>
+<li>損失関数
+<ul>
+<li>識別ネットワークが正解したら生成ネットワークの損失</li>
+<li>識別ネットワークが不正解だったら識別ネットワークの損失</li>
 </ul>
+</li>
+<li>最初はどっちのネットワークもポンコツ
+<ul>
+<li>生成ネットワーク: ノイズ画像</li>
+<li>識別ネットワーク: でたらめの識別結果</li>
+</ul>
+</li>
+<li>損失関数から学習
+<ul>
+<li>生成ネットワーク: 識別ネットワークの正解率を下げるために画像に模様をつけていく</li>
+<li>識別ネットワーク: 識別能力を少しずつ上げていく</li>
+</ul>
+</li>
+</ul>
+<center>これで生成ネットワークが画像を出力できるようになる <a href="https://arxiv.org/pdf/1511.06434">例</a></center>
 <footer>アドバンストビジョン第3回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:アドバンストビジョン第3回;--paginate:true;" data-marpit-pagination-total="10">
