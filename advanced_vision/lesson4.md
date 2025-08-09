@@ -41,6 +41,18 @@ marp: true
 
 ---
 
+### 生成ネットワークの例
+
+- Deep Convlutional GAN（DCGAN）[Radford 2015]のもの
+    - [[Radford 2015]](https://arxiv.org/pdf/1511.06434)のFigure 1
+    - 入力のベクトル（100次元）はランダム
+        - <span style="color:red">潜在空間のベクトルに相当</span>
+    - 出力は画像
+        - 最初はでたらめ
+
+
+---
+
 ### 生成/識別ネットワークの競い方
 
 - 準備: 生成ネットワークが生成を目指すべき「本物」のデータを用意
