@@ -66,7 +66,7 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="10" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/dcgan-cc-by-4.0-by_zhang.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="5" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="10" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="dcgan%E3%81%AE%E7%94%9F%E6%88%90%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">DCGANの生成ネットワーク</h3>
 <ul>
-<li>生成ネットワークの構造: デコーダ
+<li>構造: オートエンコーダのデコーダ
 <ul>
 <li>入力: ランダムなベクトル（100次元）
 <ul>
@@ -77,20 +77,26 @@
 </li>
 </ul>
 </li>
-<li>出力: 画像</li>
+<li>出力: 画像
+<ul>
+<li>最初はでたらめ</li>
+<li>ある訓練をすると画像が生成されるように</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <footer>アドバンストビジョン第3回</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="" data-marpit-pagination-total="10" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="10" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/dcgan-cc-by-4.0-by_zhang.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="6" data-footer="アドバンストビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:アドバンストビジョン第3回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="10" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h3 id="dcgan%E3%81%AE%E8%AD%98%E5%88%A5%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">DCGANの識別ネットワーク</h3>
 <ul>
-<li>識別ネットワークの構造
-<ul>
-<li>エンコーダに似ている
+<li>構造: エンコーダに似ているが出力は1ビット
 <ul>
 <li>入力: 生成ネットワークの画像 or 訓練のために用意した画像</li>
-<li>出力: 「本物」or「偽物」</li>
+<li>出力: 「本物」or「偽物」を表す数値
+<ul>
+<li>1か0</li>
 </ul>
 </li>
 </ul>
