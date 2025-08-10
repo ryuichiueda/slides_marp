@@ -128,14 +128,16 @@ marp: true
 
 ---
 
-### できあがる潜在空間の分布
+### 隙間の問題の解決
 
-- 隙間ができにくい
+- デコーダで生成されるデータに隙間ができにくい
     - [[Kingma 2013]](https://arxiv.org/abs/1312.6114)の中の図4
     - [Kingma氏のデモサイトの例](https://dpkingma.com/sgvb_mnist_demo/demo.html)
+- ただしGANよりぼやけやすい
 
 ### 変分オートエンコーダの構造
 
+- 右図
 
 ---
 
