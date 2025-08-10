@@ -135,6 +135,8 @@ marp: true
     - [Kingma氏のデモサイトの例](https://dpkingma.com/sgvb_mnist_demo/demo.html)
 - ただしGANよりぼやけやすい
 
+---
+
 ### 変分オートエンコーダの構造
 
 - 右図（エンコーダの先に雑音の層を追加）
