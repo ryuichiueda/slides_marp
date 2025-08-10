@@ -120,6 +120,9 @@ marp: true
     - 潜在ベクトルの隙間をあけずに原点付近に集まる
     - 正規分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
 
+<center>分布を学習するので隙間ができない</center>
+
+
 ![bg right:40% 100%](./figs/latent_space_dist.png)
 
 ---
