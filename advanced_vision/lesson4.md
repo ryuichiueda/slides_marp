@@ -98,7 +98,7 @@ marp: true
 
 ---
 
-## 変分オートエンコーダ
+## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)
 
 - オートエンコーダをより表現力豊かにする方法
 - 改善したいオートエンコーダの性質
@@ -115,21 +115,24 @@ marp: true
 
 ### 変分オートエンコーダでの潜在空間の扱い
 
-
-
 - 仮定
     - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布に従う
+        - 空間が無限なのでデータが散らないように縛りを設ける
     - エンコーダへの入力$\boldsymbol{x}$に対し、$P(\boldsymbol{z}|\boldsymbol{x})$の分布も正規分布に従う
+        - これは学習のための仮定
 - 仮定に基づいて学習すると
-    - 潜在ベクトルの隙間をあけずに原点付近に集まる
+    - $\boldsymbol{z}$の隙間があかずに原点付近に集まる
     - $P(\boldsymbol{z})$の分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
-
-<center>分布を学習するので隙間ができない</center>
-
 
 ![bg right:40% 100%](./figs/latent_space_dist.png)
 
 ---
+
+### できあがる潜在空間の分布
+
+- 隙間ができにくい
+    - [[Kingma 2013]](https://arxiv.org/abs/1312.6114)の中の図4
+    - [Kingma氏のデモサイトの例](https://dpkingma.com/sgvb_mnist_demo/demo.html)
 
 ### 変分オートエンコーダの構造
 
