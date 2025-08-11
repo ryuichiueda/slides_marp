@@ -106,7 +106,7 @@ $\rightarrow$精緻な画像
         - $G(\boldsymbol{z}^{(i)})$: 生成ネットワークが生成したデータ（こちらも$m$個用意）
         - $D(\boldsymbol{x})$: 識別ネットワークの識別結果（確率）
 - 生成ネットワークの評価関数
-    - $V(G, D) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
+    - $V(G | D) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
 
 
 ---
