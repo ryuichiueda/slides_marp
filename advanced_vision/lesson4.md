@@ -184,8 +184,10 @@ marp: true
     $\rightarrow$画像を変換するように学習
 - どんなことができるか
     - 線画をカラーの絵や写真のように（図: [[Isora 2016]](https://arxiv.org/abs/1611.07004)）
-    - 馬をしまうまに
+    - 葉に隠れた枝をつなぐ[[三上2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
+
+![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
 
 ---
 
-### CVAE
+### 条件つき変分オートエンコーダ（Conditional VAE、CVAE）
