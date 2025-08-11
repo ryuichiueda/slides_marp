@@ -193,7 +193,7 @@ marp: true
 ### 条件つき変分オートエンコーダ（Conditional VAE、CVAE）
 
 - CGANと同様、エンコーダとデコーダにラベルも入力
-    - デコーダはラベルにしたがって画像を生成できる
-    - <span style="color:red">画像がなにかという情報が潜在ベクトル内には不要に</span>
+    - デコーダはラベルにしたがって画像を生成できる$\rightarrow$
+    - <span style="color:red">画像がなにかという情報が、潜在空間内で必要なくなる</span>
 
 ![bg right:35% 100%](./figs/cvae.png)
