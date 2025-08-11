@@ -97,12 +97,16 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 ### 前ページの例の一般化
 
 - $x \sim P$のとき、$f(x) = w_0 + w_1 g_1(x) + \dots + w_n g_n(x)$の期待値は？
-    - $g_0(x) = 1$とすると$f(x) = \sum_{i=0}^n w_i g_i(x)$
     - 前ページの例:
         - $g_1(x)=x, g_2(x)=x^2$
         - $w_0=w_1=100, w_2=-100$
 - 答え
-    * $\langle f \rangle_P = \sum_{i=0}^n w_i g_i(x)$
+    * $\langle f \rangle_P = \sum_{x=-\infty}^\infty P(x)f(x)$
+    $= \sum_{x=-\infty}^\infty \{ w_0P(x) + w_1P(x)g_1(x) + \cdots + w_nP(x)g_n(x) \}$
+    $= w_0 \sum_{x=-\infty}^\infty P(x) + w_1 \sum_{x=-\infty}^\infty P(x)g_1(x) + \cdots + w_n\sum_{x=-\infty}^\infty P(x)g_n(x)$
+    $= w_0 \langle 1 \rangle_P + w_1 \langle g_1 \rangle_P+ \cdots + w_n \langle g_n \rangle_P$
+* <span style="color:red">ある関数$f$の期待値=$f$の各項の期待値の和</span>
+    - これを「期待値の線形性」と呼ぶ
 
 ---
 
