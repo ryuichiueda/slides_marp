@@ -157,7 +157,7 @@ marp: true
 
 ---
 
-### Conditional GAN（CGAN）
+### 条件付きGAN（Conditional GAN、CGAN）
 
 ---
 
