@@ -21,9 +21,9 @@ marp: true
 
 ## 今日やること
 
-- GAN
-- 変分オートエンコーダ
-- 条件付き変分オートエンコーダ
+- 敵対的生成ネットワーク（GAN）
+- 変分オートエンコーダ（VAE）
+- GAN、VAEの応用
 
 ---
 
@@ -146,6 +146,18 @@ marp: true
         - 確率ロボティクスの講義で一部説明
 
 ![bg right:35% 100%](./figs/vae.png)
+
+---
+
+## GAN、VAEの応用
+
+- CGAN
+- pix2pix
+- cVAE
+
+---
+
+### Conditional GAN（CGAN）
 
 ---
 
