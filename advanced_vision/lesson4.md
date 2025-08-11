@@ -99,9 +99,12 @@ $\rightarrow$精緻な画像
 
 ### GANの損失関数
 
-- $V(G, D) = \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
-    - $G$: 生成ネットワーク（ノイズ$\boldsymbol{z}$をデータ$\boldsymbol{x}$に変換）
-    - $D$: 識別ネットワーク（データ$\boldsymbol{x}$を真偽の確率に変換）
+- 識別ネットワークの評価関数（損失関数に$-1$をかけたもの）
+    - $V(G, D) = \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
+        - $G$: 生成ネットワーク（ノイズ$\boldsymbol{z}$をデータ$\boldsymbol{x}$に変換）
+        - $D$: 識別ネットワーク（データ$\boldsymbol{x}$を真偽の確率に変換）
+        - $\boldsymbol{x}^{(i)}$: 訓練データ（$m$個用意）
+        - $G(\boldsymbol{z}^{(i)})$: 生成ネットワークが生成したデータ（こちらも$m$個用意）
 
 
 ---
