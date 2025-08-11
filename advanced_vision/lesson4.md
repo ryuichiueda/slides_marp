@@ -176,6 +176,7 @@ marp: true
 
 ### pix2pix
 
+- CGANの一種とみなせる
 - pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004)（構造は論文のFigure 2に）
     - 生成ネットワーク: 入力にノイズではなく画像を入力し、画像を出力させる
         - 入力をX、出力をYとしましょう
@@ -187,6 +188,4 @@ marp: true
 
 ---
 
-### pix2pix
-
- 
+### CVAE
