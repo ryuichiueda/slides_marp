@@ -27,7 +27,7 @@ marp: true
 
 ---
 
-## GAN（generative adversarial networks）
+## GAN（generative adversarial networks）[[Goodfellow2014]](https://papers.nips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf)
 
 - 敵対的生成ネットワーク
     - 「絵を描く人工ニューラルネットワーク」のブームの発端
@@ -37,7 +37,6 @@ marp: true
         - 生成ネットワーク（generator）: 何かを作るANN
         - 識別ネットワーク（discriminator）: 入力が生成ネットワークの生成物かどうかを判断するANN
     - 生成ネットワークと識別ネットワークが互いに競う
-- [元の論文](https://papers.nips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf)
 
 ---
 
@@ -94,6 +93,12 @@ marp: true
     - [学習が進んでいく様子](https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5)
 
 <center>これで生成ネットワークが画像を出力できるようになる <a href="https://arxiv.org/pdf/1511.06434">例</a></center>
+
+
+---
+
+### DCGANの損失関数
+
 
 ---
 
