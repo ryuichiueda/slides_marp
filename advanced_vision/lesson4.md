@@ -194,6 +194,7 @@ marp: true
 
 - CGANと同様、エンコーダとデコーダにラベルも入力
     - デコーダはラベルにしたがって画像を生成できる$\rightarrow$
-    - <span style="color:red">画像がなにかという情報が、潜在空間内で必要なくなる</span>
+- <span style="color:red">画像がなにかという情報が、潜在空間内で必要なくなる</span>
+    - <span style="color:red">画像の描き方に関する情報が分布</span>
 
 ![bg right:35% 100%](./figs/cvae.png)
