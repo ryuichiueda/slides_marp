@@ -68,8 +68,8 @@ marp: true
 
 ## 誤差逆伝播法
 
-- 出力側の誤差（評価関数の誤差）をどんどん入力側に送っていく
-    - 誤差の大きさは、そのニューロン（層）の影響を考えて加減する
+- 出力側の誤差（損失関数の値）をどんどん入力側に送っていく
+    - 値の大きさは、そのニューロン（層）の影響を考えて加減する
         - 「影響を考えて」
             - 例: ある層が入力を2倍して出力
             $\rightarrow$その上流の値は結果に対して2倍の影響力
@@ -97,9 +97,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ### アフィン層の場合
 
-- 出力側の評価関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{y}$
-    - $\mathcal{L}$の誤差に対して$\boldsymbol{y}$が与える影響度
-- 入力側の評価関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{x}$
+- 出力側の損失関数の増大率: $\partial \mathcal{L} / \partial \boldsymbol{y}$
+    - $\mathcal{L}$の増加に対して$\boldsymbol{y}$が与える影響度
+- 入力側の損失関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{x}$
     - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
         - 偏微分の連鎖律
         - 重み$W$の分だけ影響力が増大
