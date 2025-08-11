@@ -100,13 +100,13 @@ $\rightarrow$精緻な画像
 ### GANの損失関数
 
 - 識別ネットワークの評価関数（損失関数に$-1$をかけたもの）
-    - $V(G, D) =$訓練データを本物と言った率 + 生成データを偽物と言った率
+    - $V_G(D) =$訓練データを本物と言った率 + 生成データを偽物と言った率
     $\qquad\qquad= \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
         - $\boldsymbol{x}^{(i)}$: 訓練データ（$m$個用意）
         - $G(\boldsymbol{z}^{(i)})$: 生成ネットワークが生成したデータ（こちらも$m$個用意）
         - $D(\boldsymbol{x})$: 識別ネットワークの識別結果（確率）
 - 生成ネットワークの評価関数
-    - $V(G | D) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
+    - $V_D(G) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
 
 
 ---
