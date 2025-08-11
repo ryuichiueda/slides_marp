@@ -88,14 +88,21 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     - $f(x) = -100 + 100x + 100(10-x^2) = 900 + 100x - 100x^2$
 - 計算
     - $\langle f \rangle_P = \sum_{x=1}^6 (900 + 100x - 100x^2)/6$
-    $= 900 + 100 \cdot \dfrac{1}{6}\sum_{x=1}^6 x - 100 \cdot \dfrac{1}{6}\sum_{x=1}^6 x^2$
+    <span style="color:red">$= 900 + 100 \cdot \dfrac{1}{6}\sum_{x=1}^6 x - 100 \cdot \dfrac{1}{6}\sum_{x=1}^6 x^2$</span>
     $= 900 + 100 \cdot 3.5 - 100 \cdot (1+4+9+16+25+36)/6$
     $= 900 + 350 - 100 \cdot 91/6 \approx -267$円
 
 ---
 
-- $x \sim P$のとき、$w_0 f(x) + w_1 f(x) + \dots + w_n f(x)$の期待値は？
+### 前ページの例の一般化
 
+- $x \sim P$のとき、$f(x) = w_0 + w_1 g_1(x) + \dots + w_n g_n(x)$の期待値は？
+    -$g_0(x) = 1$とすると$f(x) = \sum_{i=0}^n w_i g_i(x)$
+    - 前ページの例:
+        - $g_1(x)=x, g_2(x)=x^2$
+        - $w_0=w_1=100, w_2=-100$
+- 答え
+    * $\langle f \rangle_P = \sum_{i=0}^n w_i g_i(x)$
 
 ---
 
