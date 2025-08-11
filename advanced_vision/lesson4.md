@@ -157,11 +157,11 @@ marp: true
 
 ---
 
-### 条件付きGAN（Conditional GAN、CGAN）
+### 条件付きGAN（Conditional GAN、CGAN）[[Mirza2014]](https://arxiv.org/abs/1411.1784)
 
 - GANの生成ネットワークはランダムにデータを出力するだけ
     - 何を出力するかコントロールしたい
-- 条件付きGAN
+- 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
     - 生成ネットワークに何を作って欲しいか指示
         - データのもとになるベクトルと共に指示をベクトル表現して入力
     - 識別ネットワークにもデータと共に何のデータなのか入力
