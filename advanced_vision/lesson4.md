@@ -163,21 +163,24 @@ marp: true
     - 何を出力するかコントロールしたい
 - 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
     - 生成ネットワークに何を作って欲しいか指示
-        - データのもとになるベクトルと共に指示をベクトル表現して入力
-    - 識別ネットワークにもデータと共に何のデータなのか入力
+        - データのもとになるベクトル$\boldsymbol{z}$と共に指示をベクトル表現した$\boldsymbol{y}$を入力
+    - 識別ネットワークにも、生成ネットワークの出力と共に$\boldsymbol{y}$を入力
+        - 条件$\boldsymbol{y}$に合った生成データか判定
 - 補足: 指示の方法
-    - $(0,0,\dots,1,\dots,0,0,0)$という<span style="color:red">one-hot ベクトル</span>がよく用いられる
+    - $\boldsymbol{y}=(0,0,\dots,1,\dots,0,0,0)$という<span style="color:red">one-hot ベクトル</span>がよく用いられる
         - $1$が立っている位置を特定のものと対応づけ
             - 例: 1番目が猫、2番目が犬、など
     - 他のANNでもよく用いられる
 
 ---
 
-### GANの応用
+### pix2pix
 
-- [pix2pix](https://arxiv.org/pdf/1611.07004): 入力にノイズではなく画像を入力$\rightarrow$画像を変換するように学習
-- ロボットでの使用例（深度カメラに映った植物の茎と葉を分別）
-    ![w:870](figs/pix2pix.png)
+- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004)
+    - 生成ネットワーク: 入力にノイズではなく画像を入力し、画像を出力させる
+        - 入力をX、出力をYとしましょう
+    - 識別ネットワークには
+    $\rightarrow$画像を変換するように学習
  
 ---
 
