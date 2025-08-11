@@ -237,7 +237,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### オートエンコーダ
 
 - 入力と出力を一致させるように学習されたANN [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
-    - 学習のためのラベル付けは不要（教師無し）
+    - 損失関数: 入出力の平均二乗誤差（MSE, mean square error）
+        - 学習のためのラベル付けは不要（教師無し）
     - 構成はCNNでも全結合でもよいが、U-Net状に中間の次元を小さく
         - 入力側: どんどん情報を落としていく
         - 出力側: どんどん情報を増やしていく
