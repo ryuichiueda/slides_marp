@@ -230,6 +230,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 - $\sigma_{xy} = \big\langle xy  \big\rangle_{P(x,y)} - \mu_x\mu_y$をさらに整理
 - 計算
-    * $= \big\langle xy  \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$（p.14の性質を利用）
+    * $= \big\langle xy  \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$
+    （p.14の性質を利用）
 $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$</span>
 - $\sigma_{x+y}= \sigma_x^2 + \sigma_y^2$
