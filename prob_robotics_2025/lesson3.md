@@ -233,4 +233,6 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     * $= \big\langle xy  \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$
     （p.14の性質を利用）
 $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$</span>
-- $\sigma_{x+y}= \sigma_x^2 + \sigma_y^2$
+- 上記性質から導出される式
+    - $\sigma_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
+        - 独立な変数に対して分散は足し算に（便利な性質）
