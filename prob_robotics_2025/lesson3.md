@@ -190,7 +190,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 - 確率変数$x$と$y$の和$(x+y)$の分散を計算してみましょう
 	- <span style="color:red">共分散</span> $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$を使って簡略化を
-        - 共分散については次ページ以降と次章で詳しく扱います
+        - 共分散がなんなのかについては次ページ以降
 - 答え
     * $\sigma_{x+y}^2 = \left\langle \left\{ (x+y) - (\mu_x + \mu_y )\right\}^2 \right\rangle_{P(x,y)}$
 	$= \langle (x- \mu_x )^2 \rangle_{P(x,y)} + \langle (y- \mu_y )^2 \rangle_{P(x,y)} + 2 \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
@@ -203,4 +203,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ### 共分散
 
-- $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$を使って簡略化を
+（次回もっと詳しく扱います）
+
+- $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
+    - $\langle\  \rangle$の中: 
