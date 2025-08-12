@@ -23,7 +23,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今回の内容
 
 - 期待値
-- 期待値を使った計算
+- 期待値の計算、期待値を使った計算
+- 共分散
 
 ---
 
