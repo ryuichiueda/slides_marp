@@ -83,7 +83,6 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
         - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
             - 補足: $N-1$で割る必要はないのかどうかの話は後々
 
-
 ---
 
 ### 期待値の線形性
@@ -128,8 +127,14 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ### 線形性の利用の例: 分散の計算
 
-- 確率分布$P$に対する分散: 
-    - $\sigma^2 = \langle (z - \mu)^2 \rangle_{p(z)}$<br />　
+- 確率分布$P$に対する分散の式の簡略化
+    - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
+        - 線形性を使って分解してみましょう
+- 答え
+    * $\sigma^2 = \langle x^2 -2 x\mu + \mu^2\rangle_{P(x)}$
+    $= \langle x^2 \rangle_{P(x)} -2 \mu \langle x\rangle_{P(x)} + \mu^2 \langle 1 \rangle_{P(x)}$
+    $= \langle x^2 \rangle_{P(x)} -2 \mu \mu + \mu^2$
+    $= \langle x^2 \rangle_{P(x)} - \mu^2$
 
 ---
 
