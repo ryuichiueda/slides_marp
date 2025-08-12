@@ -252,5 +252,11 @@ $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$
         - ここで
             - $Q(x_{1:N})=P(x_1)P(x_2)\dots P(x_N)$
             - $\bar{x} = (\sum_{i=1}^N x_i)/N$
-	- $\langle s^2 \rangle_{Q(x_{1:N})}$を変形していきましょう
+	- $\langle s^2 \rangle_{Q(x_{1:N})}$を変形していきましょう（次ページ）
 	    - ヒント: $P(x)$の平均値$\mu$をうまく使います
+
+---
+
+### $\langle s^2 \rangle_{Q(x_{1:N})}$の変形
+
+- 
