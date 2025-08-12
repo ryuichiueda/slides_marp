@@ -65,8 +65,9 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 - 確率変数を使った表記
     - $\langle f \rangle_P = \sum_{x=-\infty}^{x=\infty}f(x)P(x)$
         - $\langle f(x) \rangle_{P(x)}$と表記することも
-    - $\text{E}_P(f)$などの表記もあり
-        - $P$が省略されていて混乱することがあるので注意
+            - 変数が分からないと都合が悪い場合
+        - $\text{E}_P(f)$などの表記もあり
+            - $P$が省略されていて混乱することがあるので注意
 
 ---
 
@@ -136,3 +137,16 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     $= \langle x^2 \rangle_{P(x)} -2 \mu \mu + \mu^2$
     $= \langle x^2 \rangle_{P(x)} - \mu^2$
 
+
+---
+
+### 期待値の他の性質
+
+
+- $\big\langle f(x) \big\rangle_{P(x,y)} = \big\langle f(x) \big\rangle_{P(x)}$
+    - なんででしょう？
+- 答え
+    * $\big\langle f(x) \big\rangle_{P(x,y)}= \sum_{x=-\infty}^\infty \sum_{y=-\infty}^\infty f(x) P(x,y)$
+	$= \sum_{x=-\infty}^\infty f(x) \sum_{y=-\infty}^\infty P(x,y)$
+	$= \sum_{x=-\infty}^\infty f(x) P(x)$
+    $= \big\langle f(x) \big\rangle_{P(x)}$
