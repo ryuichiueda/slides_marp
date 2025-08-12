@@ -25,7 +25,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 期待値
 - 期待値の計算、期待値を使った計算
 - 共分散
-
 ---
 
 ## 期待値
@@ -181,3 +180,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     - 導出
         * $P(x) = \sum_{y=-\infty}^\infty P(x,y) = \sum_{y=-\infty}^\infty P(x|y)P(y) = \langle P(x|y) \rangle_{P(y)}$
     - $\Sigma$や$\infty$を書く必要がなく便利
+
+---
+
+## 共分散
