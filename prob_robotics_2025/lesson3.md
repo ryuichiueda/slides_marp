@@ -25,6 +25,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 期待値
 - 期待値の計算、期待値を使った計算
 
+<center>ひたすら計算の回です</center>
+
 ---
 
 ## 期待値
@@ -237,3 +239,8 @@ $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$
     - $\sigma^2_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
         - 独立な変数に対して分散は足し算に（便利な性質）
     - $\sigma^2_{x_1+x_2+\dots+x_n} = \sum_{i=1}^n \sigma^2_i\quad$（$x_{1:n}$が互いに独立 or 独立同分布）
+
+---
+
+### （本日のラスボス）
+
