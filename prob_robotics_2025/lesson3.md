@@ -268,5 +268,10 @@ $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{Q(x_{1:N})} - N \lef
 $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - N \left\langle 
 	\Big( \dfrac{\sum_{i=1}^{N} x_i}{N} - \mu \Big)^2  \right\rangle_{Q(x_{1:N})}$
 	（$\uparrow$第1項: p.12の性質にもとづいて余計な変数を除去）
-$= N \sigma^2 - \dfrac{1}{N} 
+
+---
+
+### $\langle s^2 \rangle_{Q(x_{1:N})}$の変形（続き）
+
+- $(N-1)\langle s^2 \rangle_{Q(x_{1:N})} = \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - \dfrac{1}{N} 
 	\left\langle \Big( \sum_{i=1}^{N} x_i - N\mu \Big)^2  \right\rangle_{Q(x_{1:N})}$
