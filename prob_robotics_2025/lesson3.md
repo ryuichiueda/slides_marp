@@ -234,5 +234,6 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     （p.14の性質を利用）
 $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$</span>
 - 上記性質から導出される式
-    - $\sigma_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
+    - $\sigma^2_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
         - 独立な変数に対して分散は足し算に（便利な性質）
+    - $\sigma^2_{x_1+x_2+\dots+x_n} = \sum_{i=1}^n \sigma^2_i$（$x_{1:n}$が互いに独立 or 独立同分布）
