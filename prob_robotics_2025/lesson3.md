@@ -290,5 +290,5 @@ $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - N \left\la
 
 - 期待値
     - 損得勘定に便利
-    - 確率の計算にも便利
+    - 確率の計算にも便利（お疲れ様でした）
 
