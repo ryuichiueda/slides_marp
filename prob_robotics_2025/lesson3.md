@@ -171,3 +171,12 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
         $= \big\langle \langle f(x)\rangle_{P(x)}g(y) \big\rangle_{P(y)}$（$x$と無関係な部分を内側の$\langle\rangle$の外に）
         $= \big\langle f(x) \big\rangle_{P(x)} \big\langle g(y) \big\rangle_{P(y)}$（$y$と無関係な部分を外側の$\langle\rangle$の外に）
 
+
+---
+
+### 周辺化の式の簡略化
+
+- $P(x) = \langle P(x|y) \rangle_{P(y)}$
+    - 導出
+        * $P(x) = \sum_{y=-\infty}^\infty P(x,y) = \sum_{y=-\infty}^\infty P(x|y)P(y) = \langle P(x|y) \rangle_{P(y)}$
+    - $\Sigma$や$\infty$を書く必要がなく便利
