@@ -244,6 +244,13 @@ $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$
 
 ### 不偏分散と確率分布の分散の関係（本日のラスボス）
 
-- この2つは一致するか？
-    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
+- $x_{1:N} \overset{\text{iid}}{\sim} P$のとき、この2つは一致するか？
+    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$（の期待値）
     - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
+- 確認してみましょう
+	- $s^2$の期待値を$\langle s^2 \rangle_{Q(x_{1:N})} = \left\langle \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2 \right\rangle_{Q(x_{1:N})}$とおく
+        - ここで
+            - $Q(x_{1:N})=P(x_1)P(x_2)\dots P(x_N)$
+            - $\bar{x} = (\sum_{i=1}^N x_i)/N$
+	- $\langle s^2 \rangle_{Q(x_{1:N})}$を変形していきましょう
+	    - ヒント: $P(x)$の平均値$\mu$をうまく使います
