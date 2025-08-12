@@ -213,15 +213,20 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ---
 
-### 共分散の式の簡略化と独立な場合の性質
+### 共分散の式の簡略化
 
-
-- 共分散の式の簡略化
+- $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$を分解して整理してみましょう
+- 答え
 	* $\sigma_{xy} =  \big\langle xy - x\mu_y - y\mu_x + \mu_x \mu_y  \big\rangle_{P(x,y)}$
 	$= \big\langle xy  \big\rangle_{P(x,y)} - \big\langle x  \big\rangle_{P(x,y)}\mu_y - \big\langle y  \big\rangle_{P(x,y)}\mu_x + \mu_x \mu_y$
 	$= \big\langle xy  \big\rangle_{P(x,y)} - \big\langle x  \big\rangle_{P(x)}\mu_y - \big\langle y  \big\rangle_{P(y)}\mu_x + \mu_x \mu_y$ 
 	$= \big\langle xy  \big\rangle_{P(x,y)} - \mu_x\mu_y - \mu_y\mu_x + \mu_x \mu_y$
 	$= \big\langle xy  \big\rangle_{P(x,y)} - \mu_x\mu_y$
-- さらに$x$と$y$が独立な場合（p.14の性質を利用）
-	* $= \big\langle xy  \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$
-	* <span style="color:red">$x$と$y$が独立だと共分散が$0$</span>
+- この式から次のページの性質が導出できる
+
+---
+
+### さらに$x$と$y$が独立な場合（p.14の性質を利用）
+* $= \big\langle xy  \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$
+* <span style="color:red">$x$と$y$が独立だと共分散が$0$</span>
+- $\sigma_{x+y}= \sigma_x^2 + \sigma_y^2$
