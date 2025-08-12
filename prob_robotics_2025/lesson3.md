@@ -197,3 +197,4 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 	$= \langle (x- \mu_x )^2 \rangle_{P(x)} + \langle (y- \mu_y )^2 \rangle_{P(y)} + 2 \sigma_{xy}$
 	（$\uparrow$p.12から）
 	$= \sigma_x^2 + \sigma_y^2 + 2 \sigma_{xy}$
+- それぞれの分散を足して、さらに$2\times$共分散を足す
