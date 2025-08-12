@@ -203,7 +203,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ### 共分散
 
-（次回もっと詳しく扱います）
-
 - $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
-    - $\langle\  \rangle$の中: 
+    - $\langle\  \rangle$の中
+        - $x$と$y$がそれぞれの平均を上回ると正
+        - 片方が上回って片方が下回ると負
