@@ -70,6 +70,16 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ---
 
+### 確率分布と期待値
+
+- 確率分布の平均値と分散は期待値で表現できる
+- その前におさらい: データの平均値と分散
+    - $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
+    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
+
+
+---
+
 ### 期待値の線形性
 
 - 問題: 100円を払ってサイコロをふったら、AさんとBさんが次のように
@@ -107,6 +117,13 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     $= w_0 \langle 1 \rangle_P + w_1 \langle g_1 \rangle_P+ \cdots + w_n \langle g_n \rangle_P$
 * <span style="color:red">ある関数$f$の期待値=$f$の各項の期待値の和</span>
     - これを「期待値の線形性」と呼ぶ
+
+---
+
+### 線形性の利用の例: 分散の計算
+
+- 確率分布$P$に対する分散: 
+    - $\sigma^2 = \langle (z - \mu)^2 \rangle_{p(z)}$<br />　
 
 ---
 
