@@ -76,7 +76,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 - その前におさらい: データ$x_{1:N}$の平均値と分散
     - $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
     - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
-- $x_{1:n} \overset{\text{iid}}{\sim} P$だとすると、
+- $x_{1:n} \sim P$だとすると、
     - 平均値: $P$から値を無限に取り出した時の期待値
         - $\mu = \langle x \rangle_{P(x)}$
     - 分散: $P$から値を無限に取り出した時の平均値との差の2乗の期待値
