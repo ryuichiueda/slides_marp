@@ -283,3 +283,12 @@ $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - N \left\la
     $\Longrightarrow$ <span style="color:red">$\langle s^2 \rangle_{Q(x_{1:N})} = \sigma^2$が成立</span>
         - 不偏分散の期待値と分布の期待値が一致
         - $N-1$で割ることが妥当ということに
+
+---
+
+## まとめ
+
+- 期待値
+    - 損得勘定に便利
+    - 確率の計算にも便利
+
