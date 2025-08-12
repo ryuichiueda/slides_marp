@@ -242,5 +242,8 @@ $\Longrightarrow$<span style="color:red">$x$と$y$が独立だと共分散が$0$
 
 ---
 
-### （本日のラスボス）
+### 不偏分散と確率分布の分散の関係（本日のラスボス）
 
+- この2つは一致するか？
+    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
+    - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
