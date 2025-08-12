@@ -24,7 +24,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 期待値
 - 期待値の計算、期待値を使った計算
-- 共分散
+
 ---
 
 ## 期待値
@@ -171,6 +171,9 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
         $= \big\langle \langle f(x)\rangle_{P(x)}g(y) \big\rangle_{P(y)}$（$x$と無関係な部分を内側の$\langle\rangle$の外に）
         $= \big\langle f(x) \big\rangle_{P(x)} \big\langle g(y) \big\rangle_{P(y)}$（$y$と無関係な部分を外側の$\langle\rangle$の外に）
 
+---
+
+## 期待値を利用した計算
 
 ---
 
@@ -183,8 +186,14 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ---
 
-## 共分散
+### ふたつの変数の和の分散と共分散
 
-- ふたつの確率変数$x$と$y$の関係性について考える
-    - $x$が大きいと$y$も大きい（逆も成立する）場合
-        - 例: 身長と体重
+- 確率変数$x$と$y$の和$(x+y)$の分散を計算してみましょう
+	- <span style="color:red">共分散</span> $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$を使って簡略化を
+        - 共分散については次ページと次章で詳しく扱います
+- 答え
+    * $\sigma_{x+y}^2 = \left\langle \left\{ (x+y) - (\mu_x + \mu_y )\right\}^2 \right\rangle_{P(x,y)}$
+	$= \langle (x- \mu_x )^2 \rangle_{P(x,y)} + \langle (y- \mu_y )^2 \rangle_{P(x,y)} + 2 \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
+	$= \langle (x- \mu_x )^2 \rangle_{P(x)} + \langle (y- \mu_y )^2 \rangle_{P(y)} + 2 \sigma_{xy}$
+	（$\uparrow$p.12から）
+	$= \sigma_x^2 + \sigma_y^2 + 2 \sigma_{xy}$
