@@ -136,24 +136,3 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     $= \langle x^2 \rangle_{P(x)} -2 \mu \mu + \mu^2$
     $= \langle x^2 \rangle_{P(x)} - \mu^2$
 
----
-
-## 期待値の性質
-
-- 期待値の性質
-    - 線形性
-        - $\big\langle f(z) + \alpha g(z) \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha \big\langle g(z) \big\rangle_{p(z)}$
-        - $\big\langle f(z) + \alpha \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha \big\langle 1 \big\rangle_{p(z)} = \big\langle f(z) \big\rangle_{p(z)} + \alpha$
-    - 平均値
-        - $\langle z \rangle_{p(z)} = \mu$、$\langle z - \mu \rangle_{p(z)} = 0$
-    - 分散
-        - $\langle (z - \mu)^2 \rangle_{p(z)} = \sigma^2$<br />　
-- その他、各確率モデルには期待値に関する特有の性質があり、計算に利用できる（付録B.2）
-
-
----
-
-- 平均値も期待値
-    - $f$を何にするとよいでしょうか？
-- 他、計算上の様々な性質、テクニックがありますがそれはまた今度
-
