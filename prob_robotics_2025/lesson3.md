@@ -78,7 +78,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
 - $x_{1:n} \overset{\text{iid}}{\sim} P$だとすると、
     - 平均値: $P$から値を取り出した時の期待値 $\mu = \langle x \rangle_{P(x)}$
-    - 分散: $P$から値を取り出した時の平均値との差の2乗の期待値: $\langle (x - \mu)^2\rangle_{P(x)}$
+    - 分散: $P$から値を取り出した時の平均値との差の2乗の期待値: $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
 
 
 ---
