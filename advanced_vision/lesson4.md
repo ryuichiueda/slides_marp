@@ -161,6 +161,14 @@ $\rightarrow$精緻な画像
 
 ---
 
+### 学習の確率的な解釈
+
+- データや画像をひとつのベクトル$\boldsymbol{x}$と考えると、訓練に使うデータや画像は$\boldsymbol{x}$の空間の確率分布$P(\boldsymbol)$にしたがって選ばれている
+    - $\boldsymbol{x} \sim P$
+
+
+---
+
 ## GAN、VAEの応用
 
 - CGAN
