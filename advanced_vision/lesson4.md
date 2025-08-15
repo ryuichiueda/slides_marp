@@ -171,7 +171,7 @@ $\rightarrow$精緻な画像
 - デコーダ: エンコーダと逆の変換を学習
     - 出力の分布: $p$（誤差あり）
 
-![bg right:35% 100%](./figs/autoenc_prob.png)
+![bg right:38% 95%](./figs/autoenc_prob.png)
 
 ---
 
