@@ -200,8 +200,17 @@ $\rightarrow$精緻な画像
     - 学習方法: U-Netなどを入力$\boldsymbol{x}^{(j)}_{i+1}$、出力$\boldsymbol{x}^{(j)}_i$で学習 
         - 異なる$i$で同じANNを学習
         - つまりノイズの除去方法を学習させる
+
+
+![bg right:38% 95%](./figs/ddpm_training.png)
+
+
+---
+
 - [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
-    - 出力例: [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
+    - 出力例
+        - [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
+        - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
 
 ---
