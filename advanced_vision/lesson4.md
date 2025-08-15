@@ -200,8 +200,8 @@ $\rightarrow$精緻な画像
             - $x_{i+1}^{(j)}$: $\boldsymbol{x}_{i+1}^{(j)}$の任意の画素
             - $\beta_i$: 拡散率（原著では$T=1000$までに$0.0001$から$0.02$まで線形に増加）
 - 任意の段階の画像を生成できるプログラムを作成
-    - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_t}}x_0^{(j)} + \sqrt{1-\bar{\alpha_t}}\ \varepsilon$
-        - $\alpha_t = 1-\beta_t$、$\bar\alpha_t = \prod_{k=1}^i \alpha_k$
+    - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
+        - $\alpha_i = 1-\beta_i$、$\bar\alpha_i = \prod_{k=1}^i \alpha_k$
         - $\varepsilon \sim \mathcal{N}(0, 1)$
 
 
