@@ -196,7 +196,8 @@ $\rightarrow$精緻な画像
 - 学習データ: 様々な画像$\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ (j=1,2,\dots,N)$</span>を準備
 - ノイズを乗せた画像を作成するプログラムを準備
     - 各画素にガウス分布にしたがうノイズを付加
-        - $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_t}x_{i}^{(j)}, \beta_t)$
+        - $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_i}x_{i}^{(j)}, \beta_i)$
+            - $\beta_i$: 拡散率
     - 任意の時刻のノイズを乗せたデータはその都度計算で作成
         - 各画素にガウス分布を乗せる場合は簡単に計算可能
 
