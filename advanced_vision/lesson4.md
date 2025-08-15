@@ -177,10 +177,17 @@ $\rightarrow$精緻な画像
 
 ---
 
-### 拡散モデル[[Ho2020]](https://arxiv.org/abs/2006.11239)
+### Denoising Diffusion Probabilistic Models[[Ho2020]](https://arxiv.org/abs/2006.11239)
 
+- 一般に（機械学習の文脈で）「拡散モデル」と呼ばれるもの
+- 拡散モデル（拡散過程）
+    - 集まっているものや模様がだんだん散らばっていく過程を定式化したもの
 - ANNに応用すると品質の高い画像を生成できる確率モデル
     - Stable Diffusionなどに用いられる
+
+---
+
+        [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
 - なにか？: ANNの文脈では学習方法と解釈するとよい
     - 学習データ: 画像に少しずつノイズを加えていったもの
         - 例: [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14（※学習データではない）
