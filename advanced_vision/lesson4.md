@@ -163,14 +163,16 @@ $\rightarrow$精緻な画像
 
 ### AE、VAE学習の確率的な解釈
 
-- データや画像をひとつのベクトル$\boldsymbol{x}$と考えると、訓練に使うデータや画像は$\boldsymbol{x}$の空間の確率分布$P(\boldsymbol)$にしたがって選ばれている
-    - $\boldsymbol{x} \sim P$
+- 確率分布$p$を学習している
+    - なんの分布？: データや画像の数値を並べたベクトル$\boldsymbol{x}$
+    - 訓練に使うデータや画像の$\boldsymbol{x}$は、確率分布$p$にしたがって選ばれる（$\boldsymbol{x} \sim p$）
 - エンコーダ
     - AE: $\boldsymbol{x}$を潜在空間のベクトル$\boldsymbol{z}$に変換
-    - VAE: $P$を潜在空間の分布$P_Z$に変換
+    - VAE: $p$を潜在空間の分布$q$に変換
 - デコーダ: エンコーダと逆の変換を学習
-- デコーダの出力: $P$（誤差あり）
+- デコーダの出力: $p$（誤差あり）
 
+![bg right:35% 100%](./figs/autoenc_prob.png)
 
 ---
 
