@@ -186,6 +186,8 @@ $\rightarrow$精緻な画像
     - ANNに応用すると品質の高い画像を生成できる確率モデル
     - Stable Diffusionなどに用いられる
 
+![w:1000](./figs/noising.png)
+
 ---
 
         [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
