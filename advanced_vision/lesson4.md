@@ -184,8 +184,9 @@ $\rightarrow$精緻な画像
     - 集まっているものや模様がだんだん散らばっていく過程を定式化したもの
     ![w:800](./figs/noising.png)
 - 機械学習における拡散モデル
-    - ANNに応用すると品質の高い画像を生成できる確率モデル
-    - Stable Diffusionなどに用いられる
+    - <span style="color:red">拡散の逆の過程をANNに学習させる</span>
+    $\rightarrow$GANやAEのように画像が生成できる
+    - Stable Diffusionなどに用いられるなど高品質
 
 
 ---
