@@ -177,7 +177,7 @@ $\rightarrow$精緻な画像
 
 ---
 
-### Denoising Diffusion Probabilistic Models[[Ho2020]](https://arxiv.org/abs/2006.11239)
+### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)
 
 - 一般に（機械学習の文脈で）「拡散モデル」と呼ばれるもの
 - 拡散モデル（拡散過程）
@@ -191,15 +191,17 @@ $\rightarrow$精緻な画像
 
 ---
 
-        [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
+### Denoising Diffusion Probabilistic Models[[Ho2020]](https://arxiv.org/abs/2006.11239)
+
 - なにか？: ANNの文脈では学習方法と解釈するとよい
     - 学習データ: 画像に少しずつノイズを加えていったもの
-        - 例: [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14（※学習データではない）
         - $i$回ノイズを加えた画像を$\boldsymbol{x}^{(j)}_i$としましょう（$i=0,1,\dots,n$）
             - $j$は画像の番号
     - 学習方法: U-Netなどを入力$\boldsymbol{x}^{(j)}_{i+1}$、出力$\boldsymbol{x}^{(j)}_i$で学習 
         - 異なる$i$で同じANNを学習
         - つまりノイズの除去方法を学習させる
+- [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
+    - 出力例: [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
 
 
 ---
