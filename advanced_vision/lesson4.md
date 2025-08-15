@@ -237,6 +237,11 @@ $\rightarrow$精緻な画像
 
 ---
 
+### Cold Diffusion
+
+
+---
+
 ## GAN、VAEの応用
 
 - CGAN
