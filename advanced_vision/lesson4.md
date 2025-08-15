@@ -191,7 +191,7 @@ $\rightarrow$精緻な画像
 
 ---
 
-### Denoising Diffusion Probabilistic Models[[Ho2020]](https://arxiv.org/abs/2006.11239)
+### DDPMの学習方法
 
 - なにか？: ANNの文脈では学習方法と解釈するとよい
     - 学習データ: 画像に少しずつノイズを加えていったもの
