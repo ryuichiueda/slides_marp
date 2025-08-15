@@ -194,11 +194,15 @@ $\rightarrow$精緻な画像
 ### DDPMの学習方法（訓練用のデータの準備）
 
 - 学習データ: 様々な画像$\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ (j=1,2,\dots,N)$</span>を準備
-- ノイズを乗せた画像を作成するプログラムを準備
+- 拡散させかたの定義
     - 各画素にガウス分布にしたがうノイズを付加
         - $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_i}x_{i}^{(j)}, \beta_i)$
+            - $x_{i+1}^{(j)}$: $\boldsymbol{x}_{i+1}^{(j)}$の任意の画素
             - $\beta_i$: 拡散率（原著では$T=1000$までに$0.0001$から$0.02$まで線形に増加）
-    - 任意の時刻のノイズを乗せたデータはその都度計算で作成
+- 任意の段階の画像を生成できるプログラムを作成
+    - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_t}}x_0^{(j)} + \sqrt{1-\bar{\alpha_t}}\ \varepsilon$
+        - $\alpha_t = 1-\beta_t$、$\bar\alpha_t = \prod_{k=1}^i \alpha_k$
+        - $\varepsilon \sim \mathcal{N}(0, 1)$
 
 
 ![bg right:32% 100%](./figs/ddpm_training_data.png)
