@@ -36,7 +36,7 @@ marp: true
         - Stable Diffusion
         - Segment Anything Model
 - 言語処理の手法の画像処理への応用
-    - 今回扱うTransformer$\rightarrow$Vision Transformer
+    - Transformer（今回扱うもの）$\rightarrow$Vision Transformer
 
 
 ---
