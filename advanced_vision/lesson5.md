@@ -71,6 +71,7 @@ marp: true
 
 ### 埋め込みとこれまでの内容の関係
 
+![bg right:40% 100%](./figs/word_latent.png)
 
 ---
 
