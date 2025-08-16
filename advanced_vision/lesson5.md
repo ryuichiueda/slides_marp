@@ -47,7 +47,8 @@ marp: true
 
 ## Word2vec[[Mikolov2013]](https://arxiv.org/abs/1301.3781)
 
-- Transformerの前に
+- 単語をベクトル表現するためのモデル群や枠組み
+- Word2vecで作られたベクトル表現はTransformerの入力に
 
 ---
 
