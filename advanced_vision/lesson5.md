@@ -132,6 +132,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
+## Transformer
+
+---
+
 ### 埋め込みができればコンピュータが文章を認識する?
 
 ・・・ことはできない
@@ -175,7 +179,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
 - 正体: 右のような構造のニューラルネットワーク（あとから細かく見ていきます）
     - GPT（Generative Pre-trained Transformer）などはこれの応用
-    - その他言葉を扱うアプリケーションもだいたいこれの応用
+    - その他言葉を扱うもので新しいものは、だいたいこれの応用
 - 画像にも応用されている
     - ViT（Vision Transformer）
 
