@@ -87,11 +87,11 @@ marp: true
 ### 埋め込みの方法1: skip-gram
 
 - 右図の構造
+    - アフィン層
     - ある単語$w$について、任意の文の左右の$j$単語前/後に単語$w'$がある確率を学習
-- 入力: $\mathcal{v} = (0\ 0\ \cdots\ 1\ 0\ \cdots\ 0)$
+- 受け付ける入力: $\mathcal{v} = (0\ 0\ \cdots\ 1\ 0\ \cdots\ 0)$
     - ある単語について、その単語に対応する要素が$1$になったベクトル（one-hotベクトル）
     - 単語の種類だけ次元がある
-- 出力: $j$の位置ごとに、入力と同じ次元のベクトルで、各単語が存在する確率を出力
 
 ![bg right:30% 100%](./figs/skip_gram.png)
 
@@ -99,6 +99,7 @@ marp: true
 
 ### skip-gramの学習
 
+- 出力: $j$の位置ごとに、入力と同じ次元のベクトルで、各単語が存在する確率を出力
 - <span style="color:red">これで$\boldsymbol{v}$に対して$\boldsymbol{x}$が埋め込み表現に</span>
 
 ![bg right:30% 100%](./figs/skip_gram.png)
