@@ -206,8 +206,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 
 - 入力: 文
-    - トークン（単語をより細かく文を区切ったもの）
-    に分けて、埋め込みのベクトルに変換
+    - トークン（単語をより細かく文を区切ったもの）の分散表現でのベクトルを並べたもの
         - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
 - 文への位置情報の付加（右図Positional Encoding）
     - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
