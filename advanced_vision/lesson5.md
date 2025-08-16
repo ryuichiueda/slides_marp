@@ -105,8 +105,9 @@ marp: true
     - <span style="font-size:60%">お詫び: 「範囲内」なのか位置を具体的に指定するのかは未調査</span>
     - たくさんの文献から訓練データを作成
 - <span style="color:red">これで$\boldsymbol{v}$に対して$\boldsymbol{x}$が埋め込み表現に</span>
-    - $X$は$[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
-    - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
+    - $X = [\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$
+    - $\boldsymbol{x}_{w_i} = \boldsymbol{v}_{w_i}X$
+        - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
 
 ![bg right:35% 100%](./figs/skip_gram.png)
 
