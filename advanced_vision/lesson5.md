@@ -31,6 +31,10 @@ marp: true
 ## なんでビジョンの講義で自然言語を扱うのか
 
 - 画像$\leftrightarrow$言葉のアプリケーションの存在
+    - 画像説明文生成
+    - プロンプトへの指示$\rightarrow$画像の生成や指定した物体の認識
+        - Stable Diffusion
+        - Segment Anything Model
 
 
 ---
