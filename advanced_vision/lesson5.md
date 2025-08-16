@@ -52,7 +52,7 @@ marp: true
 
 ---
 
-### 単語のベクトル表現（単語の埋め込み）
+### 単語のベクトル表現（単語の埋め込み、分散表現）
 
 - 近い単語は似たベクトルに
     - 例（適当。上記のように次元はもっと必要）
@@ -63,7 +63,8 @@ marp: true
         - おじさん$\cdot$おばさん$=0.77$
         - おじさん$\cdot$不動産$=0.07$
     - 次元を大きくすると、様々な切り口で類似度を計算可能
-- <span style="color:red">埋め込み</span>: これらのベクトルやベクトルの集合、それらを作ること
+- <span style="color:red">分散表現（埋め込み表現）</span>: 上記のような単語のベクトル表現
+- <span style="color:red">埋め込み</span>: 分散表現を作ること
 
 ![bg right:20% 100%](./figs/embedding.png)
 
@@ -71,7 +72,7 @@ marp: true
 
 ### 埋め込みとこれまでの内容の関係
 
-- 埋め込みのベクトルの空間=潜在空間
+- 分散表現の空間=潜在空間
     - 入力をエンコーダで別の空間に写像
     - （Word2vecの場合は確率は考えない）
 - 疑問
@@ -92,6 +93,7 @@ marp: true
     - ある単語について、その単語に対応する要素が$1$になったone-hotベクトル
     - 単語の種類だけ次元がある
 - アフィン層間のベクトル$\boldsymbol{x}$: 数百〜数千次元
+    - <span style="color:red">これが分散表現に</span>
 - 出力: 入力と同じ次元のベクトル
     - 各単語に対応する確率
 
@@ -104,7 +106,7 @@ marp: true
 - ある単語$w$のone-hotベクトル$\boldsymbol{v}_{w}$に対し、ある範囲内に別の単語$\boldsymbol{w}'$がある確率を学習
     - <span style="font-size:60%">お詫び: 「範囲内」なのか位置を具体的に指定するのかは未調査</span>
     - たくさんの文献から訓練データを作成
-- <span style="color:red">これで$\boldsymbol{v}$に対して$\boldsymbol{x}$が埋め込み表現に</span>
+- <span style="color:red">$X$の各行が分散表現に</span>
     - $X = [\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$
     - $\boldsymbol{x}_{w_i} = \boldsymbol{v}_{w_i}X$
         - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
