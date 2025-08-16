@@ -85,6 +85,15 @@ marp: true
 
 ---
 
+### 分布仮説（distributional hypothesis）
+
+- [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
+    - "You shall know a word by the company it keeps!"
+        - ある単語の意味は周辺の単語が担っているということ
+
+
+---
+
 ### 埋め込みの方法1: skip-gram
 
 - 右図の構造のANNを準備
