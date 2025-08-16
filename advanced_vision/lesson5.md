@@ -101,7 +101,7 @@ marp: true
 
 ### skip-gramの学習
 
-- ある単語$\boldsymbol{v}$に対し、ある範囲内に別の単語$\boldsymbol{w}$がある確率を学習
+- ある単語$w$のone-hotベクトル$\boldsymbol{v}_{w}$に対し、ある範囲内に別の単語$\boldsymbol{w}'$がある確率を学習
     - <span style="font-size:60%">お詫び: 「範囲内」なのか位置を具体的に指定するのかは未調査</span>
     - たくさんの文献から訓練データを作成
 - <span style="color:red">これで$\boldsymbol{v}$に対して$\boldsymbol{x}$が埋め込み表現に</span>
