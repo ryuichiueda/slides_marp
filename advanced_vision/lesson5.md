@@ -45,7 +45,9 @@ marp: true
 
 ---
 
-## Word2vec
+## Word2vec[[Mikolov2013]](https://arxiv.org/abs/1301.3781)
+
+- Transformerの前に
 
 ---
 
