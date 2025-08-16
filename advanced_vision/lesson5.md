@@ -101,11 +101,14 @@ marp: true
 
 ### skip-gramの学習
 
-- 出力: $j$の位置ごとに、入力と同じ次元のベクトルで、各単語が存在する確率を出力
-    - ある単語$w$について、任意の文の左右の$j$単語前/後に単語$w'$がある確率を学習
+- ある単語$\boldsymbol{v}$に対し、ある範囲内に別の単語$\boldsymbol{w}$がある確率を学習
+    - <span style="font-size:60%">お詫び: 「範囲内」なのか位置を具体的に指定するのかは未調査</span>
+    - たくさんの文献から訓練データを作成
 - <span style="color:red">これで$\boldsymbol{v}$に対して$\boldsymbol{x}$が埋め込み表現に</span>
+    - $X$は$[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
+    - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
 
-![bg right:30% 100%](./figs/skip_gram.png)
+![bg right:35% 100%](./figs/skip_gram.png)
 
 ---
 
@@ -113,8 +116,6 @@ marp: true
 
 - 学習: 大量の文章から$X$と$U_j$を学習
 - <span style="color:red">学習済み行列$X$=埋め込み</span>
-    - $X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
-    - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
     $\rightarrow$これが埋め込みのベクトル
 - $U_j$も使われることがある
 
