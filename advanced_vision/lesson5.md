@@ -92,8 +92,7 @@ marp: true
     - ある単語について、その単語に対応する要素が$1$になったベクトル（one-hotベクトル）
     - 単語の種類だけ次元がある
 - 出力: $j$の位置ごとに、入力と同じ次元のベクトルで、各単語が存在する確率を出力
-
-<center>これでどうやって埋め込みを作る？</center>
+- <span style="color:red">これで$\boldsymbol{v}$に対して$\boldsymbol{x}$が埋め込み表現に</span>
 
 ![bg right:30% 100%](./figs/skip_gram.png)
 
