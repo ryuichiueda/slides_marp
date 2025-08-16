@@ -35,6 +35,8 @@ marp: true
     - プロンプトへの指示$\rightarrow$画像の生成や指定した物体の認識
         - Stable Diffusion
         - Segment Anything Model
+- 言語処理の手法の画像処理への応用
+    - 今回扱うTransformer$\rightarrow$Vision Transformer
 
 
 ---
