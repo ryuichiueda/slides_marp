@@ -118,6 +118,10 @@ marp: true
 
 ### 埋め込みの方法2: Continuous Bag-of-Words（CBoW）
 
+- あるANNに次の学習をさせる
+    - 文のなかの単語を隠して、周辺の単語から隠した単語を当てる
+    - 入力: 周辺の単語のone-hotベクトルを平均したもの
+        - 例: Tokyo tower is the *** tower in Japan. で、窓の大きさを2とすると、is、the、tower、inのone-hotベクトルを足して平均
 
 ---
 
