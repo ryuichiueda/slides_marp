@@ -87,9 +87,10 @@ marp: true
 
 ### 分布仮説（distributional hypothesis）
 
-- [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
-    - "You shall know a word by the company it keeps!"
-        - ある単語の意味は周辺の単語が担っているということ
+- "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
+    - ある単語の意味は周辺の単語が担っているということ
+- つまり、ある単語のベクトルの値は、文の前後の単語から決めるとよい
+（仮説が正しいならば）
 
 
 ---
