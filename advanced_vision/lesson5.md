@@ -104,7 +104,7 @@ marp: true
 ### skip-gramの学習
 
 - ある単語$w$のone-hotベクトル$\boldsymbol{v}_{w}$に対し、ある範囲内に別の単語$\boldsymbol{w}'$がある確率を学習
-    - <span style="font-size:60%">お詫び: 「範囲内」なのか位置を具体的に指定するのかは未調査</span>
+    - <span style="font-size:60%">お詫び: 「範囲内」なのか位置を具体的に指定するのかは何を読んでもよく分からないのでコードを読まないといけないんですがまだです</span>
     - たくさんの文献から訓練データを作成
 - <span style="color:red">$X$の各行が分散表現に</span>
     - $X = [\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$
