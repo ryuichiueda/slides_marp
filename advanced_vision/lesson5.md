@@ -113,17 +113,6 @@ marp: true
 
 ---
 
-## skip-gramで埋め込みを作る
-
-- 学習: 大量の文章から$X$と$U_j$を学習
-- <span style="color:red">学習済み行列$X$=埋め込み</span>
-    $\rightarrow$これが埋め込みのベクトル
-- $U_j$も使われることがある
-
-![bg right:30% 100%](./figs/skip_gram.png)
-
----
-
 ### 埋め込みができればコンピュータが文章を認識する?
 
 ・・・ことはできない
