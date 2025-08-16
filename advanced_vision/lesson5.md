@@ -133,7 +133,7 @@ marp: true
 
 - 下図のANNに次の学習をさせる
     - 文のなかの単語を隠して、周辺の$C$個の単語から隠した単語を当てる
-        - 例: "Tokyo tower is the ___ tower in Japan."（$C=2$）
+        - 例: "Tokyo Skytree is the ___ tower in Japan."（$C=2$）
         $\rightarrow$ is、the、tower、inからtallestを推測させる
 - ANNの入出力
     - 入力: 前後$C$範囲内の単語のone-hotベクトルを平均したもの
