@@ -48,3 +48,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 <center style="padding-top:100px;font-size:120%">どうしましょう？</center>
 
 ![bg right:30% 95%](./figs/robot_final_pos_b.png)
+
+---
+
+## 連続的な確率変数の扱い
