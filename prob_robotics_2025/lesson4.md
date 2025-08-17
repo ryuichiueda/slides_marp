@@ -45,6 +45,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 - 困ること2: 確率変数$x,y,\theta$が3つもある
     - こういうことは前回もあったが、分布の形については扱っていない
 
-<center>どうしましょう？</center>
+<center style="padding-top:100px;font-size:120%">どうしましょう？</center>
 
 ![bg right:30% 95%](./figs/robot_final_pos_b.png)
