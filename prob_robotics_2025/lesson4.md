@@ -29,10 +29,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## ある実験
 
-- M君がある位置から何度もロボットを4m前進させ、実際に到達した位置$(x,y)$と向き$\theta$の統計をとりました
+- ある位置から何度もロボットを4m前進させ、実際に到達した位置$(x,y)$と向き$\theta$の統計をとった
 - 知りたいこと: ロボットの到達した座標$(x,y,\theta)$の分布は？
-
+    - 右の図のような分布の図を描きたい
 $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
+
+![bg right:30% 95%](./figs/prob_dist.png)
 
 ---
 
@@ -42,3 +44,4 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     - こういうことは前回もあったが、分布の形については扱っていない
 - 困ること2: $x,y,\theta$が「連続的」
 
+![bg right:30% 95%](./figs/robot_final_pos_b.png)
