@@ -31,6 +31,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - M君がある位置から何度もロボットを4m前進させ、実際に到達した位置$(x,y)$と向き$\theta$の統計をとりました
 - 知りたいこと: ロボットの到達した座標$(x,y,\theta)$の分布は？
+    - 困ること1: 確率変数$x,y,\theta$が3つもある
+        - こういうことは前回もあったが、分布の形については扱っていない
+    - 困ること2: $x,y,\theta$が「連続的」
 
-![w:600](./figs/robot_final_pos.png)
+$\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
