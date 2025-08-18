@@ -99,3 +99,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     - データが足りない場合、データの背景、原因を考えたほうがよりよい分布を作れるかもしれない
 
 ![bg right:25% 95%](./figs/discretization_resolution.png)
+
+---
+
+## 空間を囲って確率を計算する方法（モンテカルロ法）
+
