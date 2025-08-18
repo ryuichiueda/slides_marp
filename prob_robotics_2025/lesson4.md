@@ -77,6 +77,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ### 離散値への近似（多次元の場合）
 
+- 2次元の場合: 平面を区画化してデータの数を数えて分布に
+    - 右図: 最初の例の$(x,y)$座標についてこの作業をしたもの
+
 
 ![bg right:30% 95%](./figs/discretization.png)
+
 
