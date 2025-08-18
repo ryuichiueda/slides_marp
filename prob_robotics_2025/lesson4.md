@@ -88,3 +88,11 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 ![bg right:30% 95%](./figs/discretization.png)
 
 
+---
+
+### 離散値への近似（問題点）
+
+- 多次元になるほどデータが不足
+    - データそのものより、データの背景、原因を考えたほうがよりよい分布を作れるかもしれない
+
+
