@@ -126,6 +126,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     - 用途（けっこう重要）
         - 数値計算による積分（<span style="color:red">モンテカルロ積分</span>）
         - 移動ロボットの自己位置推定
+        （Monte Carlo localization [Fox1999]、[Dellaert1999]）
 - 数値計算の例（右図）
     - 矢をランダム（一様分布）で板に刺す
     - 円周率$=4\cdot \frac{\Pr\{円の中に矢の刺さる確率\}}{\Pr\{正方形の中に矢の刺さる確率\}}$
