@@ -149,8 +149,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ## 密度の導入
 
-（ここでは「ロボットの確率・統計」より簡潔に）
-
 ---
 
 ### 連続的な確率変数に対する「確率」
