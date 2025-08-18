@@ -79,6 +79,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 - 2次元の場合: 平面を区画化してデータの数を数えて分布に
     - 右図: 最初の例の$(x,y)$座標についてこの作業をしたもの
+- より高い次元
+    - 3次元空間、4次元空間・・・を同様に区画化
 
 
 ![bg right:30% 95%](./figs/discretization.png)
