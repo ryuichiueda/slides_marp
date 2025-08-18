@@ -139,6 +139,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 - 問題: これもデータ数が不足する場合があり
     - $\Pr\{ (x,y) \in C \} = 0$となってしまうがおそらくそうではない
-        - おそらく: つまり背景になんらかの法則性がある
+        - 単にデータの数が少ない
 
 ![bg right:20% 75%](./figs/montecarlo_error.png)
