@@ -152,6 +152,9 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 - 先述の2つの方法における確率: 区画や囲った範囲に与えられる
     - 区画の1点（本来の確率変数）に対する確率ではない
 
+
+![bg right:30% 95%](./figs/density.png)
+
 ---
 
 ## 密度の導入
