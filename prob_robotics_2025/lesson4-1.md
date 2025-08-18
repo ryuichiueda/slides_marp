@@ -117,6 +117,14 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ![bg right:35% 95%](./figs/montecarlo.png)
 
+
+---
+
+### モンテカルロ法
+
+- 前ページの方法を使う計算方法
+
+
 ---
 
 ### 囲う方法の問題点
