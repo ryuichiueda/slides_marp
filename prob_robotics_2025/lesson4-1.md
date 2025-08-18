@@ -127,6 +127,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
         - 数値計算による積分
         - 移動ロボットの自己位置推定
 
+![bg right:20% 95%](./figs/montecarlo_int.png)
 
 ---
 
