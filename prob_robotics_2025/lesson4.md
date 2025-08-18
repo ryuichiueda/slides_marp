@@ -25,6 +25,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 連続値に対する確率分布の定義方法
 - 多変量の確率分布
 
+教科書では数学的なあれこれがちょっとだけ書いてありますが、講義では実用面から考えましょう。
+
 ---
 
 ## ある実験
@@ -59,4 +61,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     - 密度・確率密度関数の導入
 
 ---
+
+### 離散値への近似
+
+- そんな難しい話ではなく、単に実数を離散値に対応づけると確率分布が描ける
+    - どこかの桁で四捨五入
+    - 範囲に区切る
 
