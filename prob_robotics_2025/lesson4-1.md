@@ -140,5 +140,12 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 - 問題: これもデータ数が不足する場合があり
     - $\Pr\{ (x,y) \in C \} = 0$となってしまうがおそらくそうではない
         - 単にデータの数が少ない
+    - これも特に次元が大きい場合に問題となる
+        - Monte Carlo localizationが、そのままだとドローンの自己位置推定に使いずらいなど
 
 ![bg right:20% 75%](./figs/montecarlo_error.png)
+
+---
+
+## 密度の導入
+
