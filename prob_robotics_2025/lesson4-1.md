@@ -119,6 +119,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ---
 
+### 囲う方法の問題点
+
 - 問題: これもデータ数が不足する場合があり
     - $\Pr\{ (x,y) \in C \} = 0$となってしまうがおそらくそうではない
 
