@@ -111,7 +111,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
         - $\Pr\{ (x,y) \in A \} = 3/20$
         - $\Pr\{ (x,y) \in B \} = 6/20$
         - $\Pr\{ y > 3 \} = 17/20$
-        - $\Pr\{ x > 3 \} = 1\qquad$ など
+        - $\Pr\{ x > 3 \} = 1\qquad\qquad$ など
 - 分布は作れないが、間接的に確率を計算可能
     - たとえばロボットが左にヨレやすいことを数値化できる
 
