@@ -93,6 +93,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 ### 離散値への近似（問題点）
 
 - 多次元になるほどデータが不足
+    - 1次元で$1000$データが必要なら$n$次元だと$1000^n$必要
     - データそのものより、データの背景、原因を考えたほうがよりよい分布を作れるかもしれない
 
 ![bg right:25% 95%](./figs/discretization_resolution.png)
