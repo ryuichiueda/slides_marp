@@ -95,4 +95,4 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 - 多次元になるほどデータが不足
     - データそのものより、データの背景、原因を考えたほうがよりよい分布を作れるかもしれない
 
-
+![bg right:25% 95%](./figs/discretization_resolution.png)
