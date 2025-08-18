@@ -110,6 +110,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     - 例（右図）
         - $\Pr\{ (x,y) \in A \} = 3/20$
         - $\Pr\{ (x,y) \in B \} = 6/20$
+        - $\Pr\{ y > 3 \} = 17/20$
         - $\Pr\{ x > 3 \} = 1$
+        - ...
 
 ![bg right:35% 95%](./figs/montecarlo.png)
