@@ -170,7 +170,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     - $0.3/(25-20)=0.06$
 - この値を<span style="color:red">密度</span>と言う
     - 「確率**質量**関数」というように、確率分布を質量$1$の何かと考える
-    - 質量を連続値で割ると「密度」
+    $\rightarrow$質量を連続値で割ると「密度」
 
 
 ![bg right:30% 95%](./figs/density.png)
