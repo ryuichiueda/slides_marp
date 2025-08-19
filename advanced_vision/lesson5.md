@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第5回: Transformer
+## 第5回: Word2vecとTransformer
 
 千葉工業大学 上田 隆一
 
@@ -189,7 +189,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### 注意機構
 
-- 入力のどこに注目して出力するかを
+- なにかを出力する際、入力のどこに注目するかを
+決める（決めるように訓練される）機構
 
 ---
 
