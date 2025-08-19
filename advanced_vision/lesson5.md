@@ -189,6 +189,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### 注意機構
 
+- 入力のどこに注目して出力するかを
+
 ---
 
 ### Transformer
