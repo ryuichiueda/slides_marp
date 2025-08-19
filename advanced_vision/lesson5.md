@@ -179,6 +179,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 潜在表現のベクトルに位置情報を付加
     - さらに<span style="color:red">注意機構</span>で文脈を考慮
 - <span style="color:red">Transformer</span>で考案された
+    - これらの仕組みで既存のANNを凌駕
 
 
 ---
