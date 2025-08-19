@@ -185,15 +185,13 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### 位置情報の追加
 
-
-- 入力: 文
-    - トークン（単語をより細かく文を区切ったもの）の分散表現でのベクトルを並べたもの
+- そのまえに、文章を数式上、どうやって表現するかを決めましょう
+    - 文章: トークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
         - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+            - なかには「文章の始まり」「文の終わり」などの特殊なトークンも
 - 文への位置情報の付加（右図Positional Encoding）
-    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
-       - $D$: ベクトルの次元（正規化のため）
-       - $P$にはトークンが文の何番目にあるかの情報が入る
-           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
+    - 行列$H = \sqrt{D}E + P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$を作成
+        - $p_i = ()$
 
 <center>とりあえずこれで入力に位置情報が加わる</center>
 
