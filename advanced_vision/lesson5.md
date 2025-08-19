@@ -170,19 +170,15 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 <a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">写真上 by Guérin Nicolas（CC BY-SA 3.0）</a>
 <a href="https://commons.wikimedia.org/wiki/File:Chinchilla_cat_(3228221937).jpg">写真下 by allen watkin（CC BY-SA 2.0）</a>
 
+
 ---
 
 ### どうすればいいか?
 
 - 埋め込みに語順と文脈の情報を付加してやるとよい
-- <span style="color:red">Transformer</span>（のエンコーダ）
-    - 入力: 潜在表現のベクトルに位置情報を加えたもの
-        - さらに<span style="color:red">注意機構</span>で文脈を考慮
-    - 出力: <span style="color:red">文脈化トークン埋め込み</span>
-        - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
-        - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
-
-![w:1100](./figs/add_context_embedding.png)
+    - 潜在表現のベクトルに位置情報を付加
+    - さらに<span style="color:red">注意機構</span>で文脈を考慮
+- <span style="color:red">Transformer</span>で考案された
 
 
 ---
@@ -439,3 +435,18 @@ $\Rightarrow$どうやって?
     - ある言語$\rightarrow$別の言語
     - 画像$\leftrightarrow$言語
 - 参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
+
+---
+
+### どうすればいいか?
+
+- 埋め込みに語順と文脈の情報を付加してやるとよい
+- <span style="color:red">Transformer</span>（のエンコーダ）
+    - 入力: 潜在表現のベクトルに位置情報を加えたもの
+        - さらに<span style="color:red">注意機構</span>で文脈を考慮
+    - 出力: <span style="color:red">文脈化トークン埋め込み</span>
+        - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
+        - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
+
+![w:1100](./figs/add_context_embedding.png)
+
