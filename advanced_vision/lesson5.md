@@ -208,6 +208,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - 文章: トークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
 - トークンのなかには「文章の始まり」「文の終わり」などの特殊なトークンも
+    - <span style="font-size:70%">ごめんなさい: 学習できそうなトークンもありそうですが、どういうものかは未調査</span>
 
 
 ---
