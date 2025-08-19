@@ -191,7 +191,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - 正体: 右のような構造のANN
     - エンコーダ（左側）とデコーダ（右側）で構成
 - 画像にも応用されている
-    - ViT（Vision Transformer）
+    - Vision Transformer（ViT）
 - その他言葉を扱うもので新しいものは、だいたいこれの応用
 
 ![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
