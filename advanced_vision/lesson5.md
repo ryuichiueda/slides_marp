@@ -181,6 +181,22 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - <span style="color:red">Transformer</span>で考案された
     - これらの仕組みで既存のANNを凌駕
 
+---
+
+### 位置情報の追加
+
+
+- 入力: 文
+    - トークン（単語をより細かく文を区切ったもの）の分散表現でのベクトルを並べたもの
+        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+- 文への位置情報の付加（右図Positional Encoding）
+    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
+       - $D$: ベクトルの次元（正規化のため）
+       - $P$にはトークンが文の何番目にあるかの情報が入る
+           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
+
+<center>とりあえずこれで入力に位置情報が加わる</center>
+
 
 ---
 
@@ -231,24 +247,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
 [<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
-
----
-
-## Transformerのエンコーダ: 入力
-
-
-- 入力: 文
-    - トークン（単語をより細かく文を区切ったもの）の分散表現でのベクトルを並べたもの
-        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
-- 文への位置情報の付加（右図Positional Encoding）
-    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
-       - $D$: ベクトルの次元（正規化のため）
-       - $P$にはトークンが文の何番目にあるかの情報が入る
-           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
-
-<center>とりあえずこれで入力に位置情報が加わる</center>
-
-![bg right:20% 100%](./figs/transformer_pos.png)
 
 
 ---
@@ -450,4 +448,22 @@ $\Rightarrow$どうやって?
         - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
 
 ![w:1100](./figs/add_context_embedding.png)
+
+---
+
+## Transformerのエンコーダ: 入力
+
+
+- 入力: 文
+    - トークン（単語をより細かく文を区切ったもの）の分散表現でのベクトルを並べたもの
+        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+- 文への位置情報の付加（右図Positional Encoding）
+    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
+       - $D$: ベクトルの次元（正規化のため）
+       - $P$にはトークンが文の何番目にあるかの情報が入る
+           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
+
+<center>とりあえずこれで入力に位置情報が加わる</center>
+
+![bg right:20% 100%](./figs/transformer_pos.png)
 
