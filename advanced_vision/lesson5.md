@@ -217,8 +217,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### キー・バリュー・クエリを使った注意機構
 
-- このような
-
+- クエリ: 問い合わせのこと（例: 翻訳の例のIt's me who broke the）
 
 ---
 
