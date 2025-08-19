@@ -207,8 +207,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 - 文章: サブワード単位のトークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
-- トークンのなかには「文章の始まり」「文の終わり」などの特殊なトークンも
-    - <span style="font-size:70%">ごめんなさい: 特殊なトークンも埋め込みの対象のような気がしますが、どうしているかは未調査</span>
+
+![bg right:25% 100%](./figs/sentence.png)
 
 ---
 
