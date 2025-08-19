@@ -191,7 +191,12 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
             - なかには「文章の始まり」「文の終わり」などの特殊なトークンも
 - 文への位置情報の付加（右図Positional Encoding）
     - 行列$H = \sqrt{D}E + P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$を作成
-        - $p_i = ()$
+        - $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
+           - $p_{i,j} = \begin{cases}
+            \sin ( i \beta^{-2j/D})  & (i\%2 = 1) \\
+            \cos ( i \beta^{-2j/D}) & (i\%2 = 0) 
+\end{cases}$
+                - 原著: $\beta = 10000$
 
 <center>とりあえずこれで入力に位置情報が加わる</center>
 
