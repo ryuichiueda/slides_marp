@@ -180,6 +180,31 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - さらに<span style="color:red">注意機構</span>で文脈を考慮
 - <span style="color:red">Transformer</span>で考案された
     - これらの仕組みで既存のANNを凌駕
+        - Transformerの概略と入力を説明してから順に説明していきます
+
+---
+
+### Transformer
+
+- 翻訳のためにGoogleで開発された
+    - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
+- 正体: 右のような構造のニューラルネットワーク（あとから細かく見ていきます）
+    - GPT（Generative Pre-trained Transformer）などはこれの応用
+    - その他言葉を扱うもので新しいものは、だいたいこれの応用
+- 画像にも応用されている
+    - ViT（Vision Transformer）
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
+
+[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
+
+
+---
+
+### Transformerへの入力
+
+（注意: とりあえずエンコーダのもの）
+
 
 ---
 
@@ -234,22 +259,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### キー・バリュー・クエリを使った注意機構
 
 - クエリ: 問い合わせのこと（例: 翻訳の例のIt's me who broke the）
-
----
-
-### Transformer
-
-- 翻訳のためにGoogleで開発された
-    - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
-- 正体: 右のような構造のニューラルネットワーク（あとから細かく見ていきます）
-    - GPT（Generative Pre-trained Transformer）などはこれの応用
-    - その他言葉を扱うもので新しいものは、だいたいこれの応用
-- 画像にも応用されている
-    - ViT（Vision Transformer）
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
-
-[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
 
 ---
