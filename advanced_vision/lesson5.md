@@ -133,7 +133,7 @@ marp: true
 
 - 下図のANNに次の学習をさせる
     - 文のなかの単語を隠して、周辺の$C$個の単語から隠した単語を当てる
-        - 例: "Tokyo Skytree is the ___ tower in Japan."（$C=2$）
+        - 例: "Tokyo Skytree is the __ tower in Japan."（$C=2$）
         $\rightarrow$ is、the、tower、inからtallestを推測させる
 - ANNの入出力
     - 入力: 前後$C$範囲内の単語のone-hotベクトルを平均したもの
@@ -175,14 +175,19 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### どうすればいいか?
 
 - 埋め込みに語順と文脈の情報を付加してやるとよい
-    - 前ページのスライドを逆に考えると、そういうことになる
 - <span style="color:red">Transformer</span>（のエンコーダ）
     - 入力: 潜在表現のベクトルに位置情報を加えたもの
+        - さらに<span style="color:red">注意機構</span>で文脈を考慮
     - 出力: <span style="color:red">文脈化トークン埋め込み</span>
         - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
         - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
 
 ![w:1100](./figs/add_context_embedding.png)
+
+
+---
+
+### 注意機構
 
 ---
 
