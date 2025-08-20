@@ -310,8 +310,6 @@ $\qquad\qquad$![w:700](./figs/position_enc.png)
     - skip-gramなどの学習方法で実用性のある埋め込みが作成可能
     - ViTなどでは画像に対しても作られる
 - Transformer
-    - 埋め込みに文脈を反映させる仕組み
-- 埋め込みを使うと性質の異なるデータを交差注意機構で関連させることが可能
-    - ある言語$\rightarrow$別の言語
-    - 画像$\leftrightarrow$言語
+    - 一言でいうと、埋め込みに注意機構で文脈を反映させる仕組み
+    - <span style="color:red">詳しくは次回</span>
 - 参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
