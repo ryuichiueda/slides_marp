@@ -261,11 +261,11 @@ $\qquad\qquad$![w:750](./figs/position_enc.png)
 - クエリ: 問い合わせのこと（例: 翻訳の例のIt's me who broke the）
     - Transformerの中では$Q= W_\text{Q}H$という行列
         - 以下、$W_\text{X}$は学習で獲得する行列
-- キーとバリュー: 問い合わせに対応させるトークンと、そのときの重みのパターン
-    - 例: キーがbrokeならガラスなどのベクトルが大きくなるようにバリューが設定される、など
-    - Transformerの中では
-        - キー: $K= W_\text{K}H$
-        - バリュー: $V= W_\text{V}H$
+- キー: クエリに反応するトークンを選択
+    - 例: キーがbrokeならガラスなどに対応するベクトルに
+    - $K= W_\text{K}H$
+- バリュー: 重み付けの値
+    - $V= W_\text{V}H$
 - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
 
