@@ -291,8 +291,7 @@ $\qquad\qquad$![w:700](./figs/position_enc.png)
 - クエリ: $Q= W_\text{Q}H$という行列
     - 以下、$W_\text{X}$は学習で獲得する行列
 - キー: クエリに反応するトークンを選択
-    - 例: キーがbrokeならガラスなどに対応するベクトルに
-    - $K= W_\text{K}H$
+    - $K= W_\text{K}H$を用意して$QK^\top$を計算
 - バリュー: 重み付けの値
     - $V= W_\text{V}H$
 - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
