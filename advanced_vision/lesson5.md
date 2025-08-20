@@ -286,6 +286,7 @@ $\qquad\qquad$![w:700](./figs/position_enc.png)
 
 そうしろと人間が言ってるわけではないが、こうやって$W_\text{K}, W_\text{V}, W_\text{Q}$を用意してあげるとそういうふうに学習される
 
+![bg right:35% 95%](./figs/kvq.png)
 
 
 ---
