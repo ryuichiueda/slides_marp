@@ -31,6 +31,7 @@ marp: true
 - エンコーダ、デコーダで構成される
     - 右図の右: エンコーダ
     - 右図の左: デコーダ
+        - [<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
 <center style="padding-top:3em">順に見ていきましょう</center>
 
@@ -38,6 +39,22 @@ marp: true
 
 ---
 
+### エンコーダへの入力前と入力後の最初の層正則化
+
+- サブワード$\rightarrow$分散表現（ベクトル）$\rightarrow$位置情報の付加
+    - 前回の通り
+    - 右図の赤枠部分
+- 層正則化（layer normalization）
+    - 右図の赤枠の上の「Norm」
+    - 各ベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の要素を正規化してベクトルごとの影響力を揃える
+        - どう正規化するか？
+            - 1: $h_{1:D}$の平均値が$0$、標準偏差が$1$に
+            - 2: $h_i$ごとに$\gamma_i, \beta_i$（学習対象）というパラメータを用意して$\gamma_ih_i + \beta_i$に変換
+                - ベクトルの要素ごとに重要度が異なるため
+
+![bg right:20% 100%](./figs/transformer_pos.png)
+
+---
 
 ### Transformerのエンコーダ: 文脈情報の付加1
 
