@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第5回: Word2vecとTransformer
+## 第5回: Word2vecとTransformerの機能
 
 千葉工業大学 上田 隆一
 
