@@ -237,6 +237,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
             \cos ( i \beta^{-(j-1)/D}) & (i\%2 = 1) 
 \end{cases}$
     - 下の例（$\beta=10$。原著では$\beta = 10000$）
+    - おそらく$\sqrt{D}$のおかげで微かな情報の付加に
 
 $\qquad\qquad$![w:700](./figs/position_enc.png)
 
