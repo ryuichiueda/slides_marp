@@ -201,20 +201,18 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
-### Transformerへの入力
-
-（注意: とりあえずエンコーダのもの）
+### Transformer（エンコーダ）への入力
 
 - 文章: サブワード単位のトークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
 
-![bg right:25% 100%](./figs/sentence.png)
+![bg right:30% 95%](./figs/sentence.png)
 
 ---
 
 ### 位置情報の追加
 
-- 文への位置情報の付加（右図Positional Encoding）
+- エンコーダに入力する$E$の各トークンに、文章中での位置情報を付加
     - 行列$H = \sqrt{D}E + P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$を作成
         - $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
            - $p_{i,j} = \begin{cases}
