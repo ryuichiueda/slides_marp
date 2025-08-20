@@ -297,7 +297,7 @@ $\qquad\qquad$![w:700](./figs/position_enc.png)
     - $V= W_\text{V}H_\text{enc}$
 - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
-そうしろと人間が言ってるわけではないが、こういう構造を用意してあげるとそういうふうに学習される
+そうしろと人間が言ってるわけではないが、こういう構造を用意してあげるとそういうふうに学習
 
 ![bg right:35% 95%](./figs/kvq.png)
 
