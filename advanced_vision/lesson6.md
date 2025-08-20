@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第6回: Transformerの構造と使い方
+## 第6回: Transformerの構造と用途
 
 千葉工業大学 上田 隆一
 
@@ -25,6 +25,19 @@ marp: true
 - Transformerの基本的な使い方
 
 ---
+
+## Transformerの構造
+
+- エンコーダ、デコーダで構成される
+    - 右図の右: エンコーダ
+    - 右図の左: デコーダ
+
+<center style="padding-top:3em">順に見ていきましょう</center>
+
+![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
+
+---
+
 
 ### Transformerのエンコーダ: 文脈情報の付加1
 
