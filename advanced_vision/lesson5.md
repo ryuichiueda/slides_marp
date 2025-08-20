@@ -205,6 +205,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 - 文章: サブワード単位のトークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
+    - 右の例では省略されているが`<EOS>`（文の終わり）などの特殊なトークンも入力として並べる
 
 ![bg right:30% 95%](./figs/sentence.png)
 
