@@ -201,13 +201,29 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
-### Transformer（エンコーダ）への入力
+### Transformerへの入力（エンコーダ）
 
 - 文章: サブワード単位のトークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
     - 右の例では省略されているが`<EOS>`（文の終わり）などの特殊なトークンも入力として並べる
 
 ![bg right:30% 95%](./figs/sentence.png)
+
+---
+
+### Transformerへの入力（デコーダ）
+
+- デコーダの場合は途中までの文を入力
+    - `<SOS> I want to eat`など
+        - （`<SOS>`: start of sentence）
+- `<SOS>`から始めて、翻訳したものを次に入力に回す
+    - 最初の入力: `<SOS>`
+    - 次の入力: `<SOS> I`
+    - 次の入力: `<SOS> I want`
+    - ・・・と文ができていく
+    （実際はエンコーダと同じく行列$E$を入力）
+
+![bg right:30% 95%](./figs/translate.png)
 
 ---
 
@@ -267,6 +283,9 @@ $\qquad\qquad$![w:750](./figs/position_enc.png)
 - バリュー: 重み付けの値
     - $V= W_\text{V}H$
 - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+
+そうしろと人間が言ってるわけではないが、こうやって$W_\text{K}, W_\text{V}, W_\text{Q}$を用意してあげるとそういうふうに学習される
+
 
 
 ---
