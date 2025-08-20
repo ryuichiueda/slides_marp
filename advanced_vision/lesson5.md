@@ -178,7 +178,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - 埋め込みに語順と文脈の情報を付加してやるとよい
     - 潜在表現のベクトルに位置情報を付加
     - さらに<span style="color:red">注意機構</span>で文脈を考慮
-- <span style="color:red">Transformer</span>で考案された
+- <span style="color:red">Transformer</span>[[Vaswani2017]](https://arxiv.org/abs/1706.03762)で考案された
     - これらの仕組みで既存のANNを凌駕
         - Transformerの概略と入力を説明してから順に説明していきます
 
