@@ -261,6 +261,8 @@ $\qquad\qquad$![w:750](./figs/position_enc.png)
 - クエリ: 問い合わせのこと（例: 翻訳の例のIt's me who broke the）
     - $Q= W_\text{Q}H$という行列を作る
         - 以下、$W_\text{X}$は学習で獲得する行列
+- キー: 問い合わせに対応させるトークン
+    - $K= W_\text{K}H$という行列を作り$QK^\top$を計算
 
 
 ---
