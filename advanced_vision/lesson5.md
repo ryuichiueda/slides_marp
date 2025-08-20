@@ -312,4 +312,5 @@ $\qquad\qquad$![w:700](./figs/position_enc.png)
 - Transformer
     - 一言でいうと、埋め込みに注意機構で文脈を反映させる仕組み
     - <span style="color:red">詳しくは次回</span>
+- 補足: 位置情報については決め打ちではなく学習させる方法もあり
 - 参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
