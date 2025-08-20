@@ -266,6 +266,7 @@ $\qquad\qquad$![w:750](./figs/position_enc.png)
     - Transformerの中では
         - キー: $K= W_\text{K}H$
         - バリュー: $V= W_\text{V}H$
+- 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
 
 ---
