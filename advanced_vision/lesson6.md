@@ -85,8 +85,8 @@ marp: true
 
 ### マルチヘッド注意機構
 
-- Transformerの実装では複数の注意機構が並列で動く
-- 完全な並列化ではなく$W_\text{K}, W_\text{V}, W_\text{Q}$が分割される
+- Transformerの実装では複数の分割された注意機構が並列で動く
+    - $W_\text{K}, W_\text{V}, W_\text{Q}$が分割される
 
 
 ---
