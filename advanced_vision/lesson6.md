@@ -88,7 +88,7 @@ marp: true
 - 自己注意機構を通った文が通される
     - 右図の2つの点線の枠のうち上のほう
     - ここで非線形な活性化関数を通って特徴のある部分がより強調される
-- 活性化関数GELU（Gaussian Error Linear Unit）
+- 活性化関数: GELU（Gaussian Error Linear Unit）の使用
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
