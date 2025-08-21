@@ -83,14 +83,13 @@ marp: true
 
 ---
 
-### Transformerのエンコーダ: 文脈情報の付加3
+### エンコーダ本体（その他）
 
-- $\boldsymbol{o}_i$をフィードフォワード層に通す
-    - このあと2層のニューラルネットワークを通ってさらに文脈が強化された文脈化トークン埋め込みに
+- 自己注意機構を通った文はフィードフォワード層へ
+    - 上の点線の枠
+    - ここで非線形な活性化関数を通って特徴のある部分がより強調される
 
-- 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列が出力される
-
-![bg right:20% 100%](./figs/transformer_ff.png)
+![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
 
