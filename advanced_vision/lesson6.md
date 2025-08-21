@@ -88,12 +88,13 @@ marp: true
 
 - Transformerの実装では複数の分割された注意機構が並列で動く
     - $W_\text{K}, W_\text{V}, W_\text{Q}$が分割される
-    - 次の定式化の場合、$D\times D$行列を$(D/M) \times D$行列に（行数が減る）
-        - $Q^{(m)}= W_\text{Q}^{(m)}H$
-        - $K^{(m)}= W_\text{K}^{(m)}H$
-        - $V^{(m)}= W_\text{V}^{(m)}H$
-            - $m=1,2,\dots,M$
-    - 出力の$Q^{(m)}, K^{(m)}, V^{(m)}$（$m=1,2,\dots,M$）を結合して元の$D \times D$行列に
+- $D\times D$行列を$(D/M) \times D$行列に（行数が減る）
+    - $Q^{(m)}= W_\text{Q}^{(m)}H$
+    - $K^{(m)}= W_\text{K}^{(m)}H$
+    - $V^{(m)}= W_\text{V}^{(m)}H$
+        - $m=1,2,\dots,M$
+- 出力の$Q^{(m)}, K^{(m)}, V^{(m)}$（$m=1,2,\dots,M$）を結合して元の$D \times D$行列に
+    - $m$ごとに文の解釈の方法が変わる（ように学習されるらしい）
 
 
 ---
