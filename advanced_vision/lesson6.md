@@ -39,8 +39,11 @@ marp: true
 
 ---
 
-### エンコーダの本体
+### エンコーダ
 
+- 濃い黄色の枠が本体
+    - 下からサブワードに区切られ、位置情報を付加された文を入力
+        - $H = \sqrt{D}E + P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$（前回のスライド参照のこと）
 - 「Nx layers」: 何個も連結するということ
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)

@@ -232,16 +232,16 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### 位置情報の追加
 
 - エンコーダに入力する$E$の各トークンに、文章中での位置情報を付加
-    - $H = \sqrt{D}E + P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$を作成
+    - $H = \sqrt{D}E + P$
+        - 位置情報: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
         - $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
            - $p_{i,j} = \begin{cases}
             \sin ( i \beta^{-j/D})  & (i\%2 = 0) \\
             \cos ( i \beta^{-(j-1)/D}) & (i\%2 = 1) 
 \end{cases}$
     - 下の例（$\beta=10$。原著では$\beta = 10000$）
-    - おそらく$\sqrt{D}$のおかげで微かな情報の付加に
 
-$\qquad\qquad$![w:700](./figs/position_enc.png)
+<img width="700" src="./figs/position_enc.png" />
 
 ![bg right:30% 100%](./figs/position_encoding.png)
 
