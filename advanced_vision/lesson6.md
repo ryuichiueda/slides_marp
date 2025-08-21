@@ -39,6 +39,14 @@ marp: true
 
 ---
 
+### エンコーダの本体
+
+- 「Nx layers」: 何個も連結するということ
+
+![bg right:28% 95%](./figs/transformer_encoder.png)
+
+---
+
 ### エンコーダへの入力前と入力後の最初の層正則化
 
 - サブワード$\rightarrow$分散表現（ベクトル）$\rightarrow$位置情報の付加
@@ -53,13 +61,6 @@ marp: true
                 - 要素の位置ごとに重要度が異なるため
 
 ![bg right:20% 100%](./figs/transformer_pos.png)
-
----
-
-### エンコーダの本体
-
-- 「Nx layers」: 何個も連結するということ
-
 
 ---
 
