@@ -46,7 +46,7 @@ marp: true
     - 詳しくは次のページ以降で
 - 入力（図の下方）: $H = \sqrt{D}E + P$
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
-        - 文（$D$次元ベクトルで表現されたサブワードを並べたもの）
+        - 文（$D$次元ベクトルで表現されたトークンを並べたもの）
 - 出力: デコーダでの仕事に応じて重みの変わった$E$
     - 文脈が反映されている
 
@@ -70,15 +70,7 @@ marp: true
 
 ### 自己注意機構
 
-- <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
-    - 行列$W_Q, W_K, W_V$という3つの行列を使う
-        - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
-    - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
-        - $\boldsymbol{k}_i = W_K\boldsymbol{h}_i$（キー埋め込み）
-        - $\boldsymbol{v}_i = W_V\boldsymbol{h}_i$（バリュー埋め込み）
-        - $\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$（クエリ埋め込み）
-    - 3つのベクトルを使う自己注意機構なので特に
-    「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
+- 自分自身の情報でトークンの重みを変える
 
 ![bg right:20% 100%](./figs/transformer_kvq.png)
 
