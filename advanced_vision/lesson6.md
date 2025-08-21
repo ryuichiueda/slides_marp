@@ -55,24 +55,20 @@ marp: true
 
 ---
 
-### エンコーダ本体
+### 層正則化（layer normalization）
+
+- 図中に3つある「Norm」
+- 各ベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の要素を正規化してベクトルごとの影響力を揃える
+    - どう正規化するか？
+        - 1: $h_{1:D}$の平均値が$0$、標準偏差が$1$に
+        - 2: $h_i$ごとに$\gamma_i, \beta_i$（学習対象）というパラメータを用意して$\gamma_ih_i + \beta_i$に変換
+            - 要素の位置ごとに重要度が異なるため
+
+![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
 
-### エンコーダへの入力前と入力後の最初の層正則化
-
-- サブワード$\rightarrow$分散表現（ベクトル）$\rightarrow$位置情報の付加
-    - 前回の通り
-    - 右図の赤枠部分
-- 層正則化（layer normalization）
-    - 右図の赤枠の上の「Norm」
-    - 各ベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の要素を正規化してベクトルごとの影響力を揃える
-        - どう正規化するか？
-            - 1: $h_{1:D}$の平均値が$0$、標準偏差が$1$に
-            - 2: $h_i$ごとに$\gamma_i, \beta_i$（学習対象）というパラメータを用意して$\gamma_ih_i + \beta_i$に変換
-                - 要素の位置ごとに重要度が異なるため
-
-![bg right:20% 100%](./figs/transformer_pos.png)
+### エンコーダ本体
 
 ---
 
