@@ -83,21 +83,6 @@ marp: true
 
 ---
 
-### Transformerのエンコーダ: 文脈情報の付加2
-
-- $\boldsymbol{k}_i, \boldsymbol{v}_i, \boldsymbol{q}_i$から、文脈を考慮した埋め込みベクトルを計算
-    - 手順
-        - $i$番目のトークンと$j$番目のトークンの関連性の強さを次のように計算
-            - $s_{ij} = \boldsymbol{q}_i^\top \boldsymbol{k}_j/\sqrt{D}$（内積）
-        - $s_{ij}$をソフトマックス関数で合計1に正規化
-            - $\alpha_{ij} = e^{s_{ij}}/\sum_{j'=1}^Ne^{s_{ij'}}$
-        - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
-            - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
-
-![bg right:20% 100%](./figs/transformer_kvq.png)
-
----
-
 ### Transformerのエンコーダ: 文脈情報の付加3
 
 - $\boldsymbol{o}_i$をフィードフォワード層に通す
