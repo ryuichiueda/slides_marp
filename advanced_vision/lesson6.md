@@ -109,11 +109,11 @@ marp: true
 
 - 自己注意機構を通った文が通される
     - 右図の2つの点線の枠のうち上のほう
-    - ここで非線形な活性化関数を通って特徴のある部分がより強調される
+    - 非線形な活性化関数を通して特徴をより強調
 - 活性化関数: GELU（Gaussian Error Linear Unit）の使用
     - $h(x) = x\cdot \frac{1}{2}\big\{ 1 + \text{erf}(x/\sqrt{2})\big\}$
         - $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
-![w:250](https://upload.wikimedia.org/wikipedia/commons/4/42/ReLU_and_GELU.svg)<span style="font-size:70%">（[画像by Ringdongdang CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:ReLU_and_GELU.svg)）</span>
+![w:300](https://upload.wikimedia.org/wikipedia/commons/4/42/ReLU_and_GELU.svg)<span style="font-size:50%">（[画像by Ringdongdang CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:ReLU_and_GELU.svg)）</span>
 
 ![bg right:25% 95%](./figs/transformer_encoder.png)
 
