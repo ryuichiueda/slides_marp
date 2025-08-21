@@ -43,6 +43,7 @@ marp: true
 
 - 濃い黄色の枠が本体
     - 「Nx layers」: 何個も連結するということ
+    - 詳しくは次のページ以降で
 - 入力（図の下方）: $H = \sqrt{D}E + P$
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
         - 文（$D$次元ベクトルで表現されたサブワードを並べたもの）
@@ -50,6 +51,11 @@ marp: true
     - 文脈が反映されている
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
+
+
+---
+
+### エンコーダ本体
 
 ---
 
