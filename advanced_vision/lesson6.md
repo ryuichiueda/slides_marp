@@ -26,13 +26,17 @@ marp: true
 
 ---
 
-## Transformerの構造
+## Transformer（翻訳用途）の構造
 
 - エンコーダ、デコーダで構成される
-    - 右図の右: エンコーダ
-    - 右図の左: デコーダ
+    - 右図の左: エンコーダ
+        - 入力: 翻訳前の文
+        （例: これはペンです。）
+    - 右図の右: デコーダ
+        - 入力: 「翻訳開始」を表すトークンあるいは途中まで翻訳した文（例: This is）
+        - 出力: 次の単語（例: a）
 
-<center style="padding-top:3em">順に見ていきましょう</center>
+<center style="padding-top:0.5em">順に見ていきましょう</center>
 
 ![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
@@ -107,6 +111,7 @@ marp: true
     - 右図の2つの点線の枠のうち上のほう
     - ここで非線形な活性化関数を通って特徴のある部分がより強調される
 - 活性化関数: GELU（Gaussian Error Linear Unit）の使用
+    - $h(x) = x\cdot \dfrac{1}{2}\Big\{ 1 + \text{erf}(x/\sqrt{2})\Big\}$
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
