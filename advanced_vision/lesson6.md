@@ -68,7 +68,7 @@ marp: true
 
 ---
 
-### 自己注意機構
+### <span style="color:red">自己注意機構</span>
 
 - 自分自身の情報でトークンの重みを変える
     - 例: 「ガラス窓を割ったのは私です。」ならガラスと私を強調する等の働き
@@ -77,6 +77,7 @@ marp: true
     - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>（同上）
     - バリュー: $V= W_\text{V}H_\text{enc}$
     - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+- 前回の注意機構は<span style="color:red">交差注意機構</span>
 
 ![bg right:20% 100%](./figs/transformer_kvq.png)
 
