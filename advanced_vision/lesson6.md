@@ -112,6 +112,7 @@ marp: true
     - ここで非線形な活性化関数を通って特徴のある部分がより強調される
 - 活性化関数: GELU（Gaussian Error Linear Unit）の使用
     - $h(x) = x\cdot \dfrac{1}{2}\Big\{ 1 + \text{erf}(x/\sqrt{2})\Big\}$
+        - $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
