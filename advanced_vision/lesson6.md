@@ -76,7 +76,7 @@ marp: true
     - クエリ: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span>（前回は$H_\text{dec}$だった）
     - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>（同上）
     - バリュー: $V= W_\text{V}H_\text{enc}$
-    - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
 ![bg right:20% 100%](./figs/transformer_kvq.png)
 
