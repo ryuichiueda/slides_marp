@@ -31,11 +31,12 @@ marp: true
 - エンコーダ、デコーダで構成される
     - 右図の右: エンコーダ
     - 右図の左: デコーダ
-        - [<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
 <center style="padding-top:3em">順に見ていきましょう</center>
 
 ![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
+
+[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
 ---
 
@@ -87,6 +88,12 @@ marp: true
 
 - Transformerの実装では複数の分割された注意機構が並列で動く
     - $W_\text{K}, W_\text{V}, W_\text{Q}$が分割される
+    - 次の定式化の場合、$D\times D$行列を$(D/M) \times D$行列に（行数が減る）
+        - $Q^{(m)}= W_\text{Q}^{(m)}H$
+        - $K^{(m)}= W_\text{K}^{(m)}H$
+        - $V^{(m)}= W_\text{V}^{(m)}H$
+            - $m=1,2,\dots,M$
+    - 出力の$Q^{(m)}, K^{(m)}, V^{(m)}$（$m=1,2,\dots,M$）を結合して元の$D \times D$行列に
 
 
 ---
