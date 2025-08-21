@@ -88,7 +88,7 @@ marp: true
 
 - Transformerの実装では複数の分割された注意機構が並列で動く
     - $W_\text{K}, W_\text{V}, W_\text{Q}$が分割される
-- $D\times D$行列を$(D/M) \times D$行列に（行数が減る）
+- $W_X$（$D\times D$行列）を横に切って$(D/M) \times D$行列に
     - $Q^{(m)}= W_\text{Q}^{(m)}H$
     - $K^{(m)}= W_\text{K}^{(m)}H$
     - $V^{(m)}= W_\text{V}^{(m)}H$
