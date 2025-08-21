@@ -87,11 +87,11 @@ marp: true
 ### マルチヘッド注意機構
 
 - Transformerの実装では注意機構が複数に分割される
-    - $W_\text{K}, W_\text{V}, W_\text{Q}$が分割される
-- $W_X$（$D\times D$行列）を横に切って$(D/M) \times D$行列に
-    - $Q^{(m)}= W_\text{Q}^{(m)}H$
-    - $K^{(m)}= W_\text{K}^{(m)}H$
-    - $V^{(m)}= W_\text{V}^{(m)}H\quad$（$m=1,2,\dots,M$）
+    - $W_\text{K}, W_\text{V}, W_\text{Q}$（$D \times D$行列）が分割される
+        - $Q^{(m)}= W_\text{Q}^{(m)}H$
+        - $K^{(m)}= W_\text{K}^{(m)}H$
+        - $V^{(m)}= W_\text{V}^{(m)}H\quad$（$m=1,2,\dots,M$）
+            - $W_X^{(m)}$: $W_X$を横に切った$(D/M) \times D$行列
     - ANN的には、$m$ごとに結合が切れて独立
         - それぞれが文の解釈方法を変える
         （ように学習されるらしい）
