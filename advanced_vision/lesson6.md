@@ -42,9 +42,12 @@ marp: true
 ### エンコーダ
 
 - 濃い黄色の枠が本体
-    - 下からサブワードに区切られ、位置情報を付加された文を入力
-        - $H = \sqrt{D}E + P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$（前回のスライド参照のこと）
-- 「Nx layers」: 何個も連結するということ
+    - 「Nx layers」: 何個も連結するということ
+- 入力（図の下方）: $H = \sqrt{D}E + P$
+    - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
+        - 文（$D$次元ベクトルで表現されたサブワードを並べたもの）
+- 出力: デコーダでの仕事に応じて重みの変わった$E$
+    - 文脈が反映されている
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
