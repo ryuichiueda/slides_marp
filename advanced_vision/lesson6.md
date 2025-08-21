@@ -73,8 +73,8 @@ marp: true
 - 自分自身の情報でトークンの重みを変える
     - 例: 「ガラス窓を割ったのは私です。」ならガラスと私を強調する等の働き
 - 仕組み: Q、K、Vをすべて自身への入力から作成
-    - クエリ: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span>
-    - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>
+    - クエリ: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span>（前回は$H_\text{dec}$だった）
+    - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>（同上）
     - バリュー: $V= W_\text{V}H_\text{enc}$
     - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
