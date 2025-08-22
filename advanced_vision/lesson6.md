@@ -132,6 +132,20 @@ marp: true
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
+
+---
+
+### デコーダ（とデーコーダの先）
+
+- 本体は緑の枠内
+    - 途中までの作文に対応する行列$H$を受け取り
+- デコーダの先に仕事をするためのANNが接続される
+    - 翻訳の場合は次の単語を予測するための全結合層
+    - デコーダはこの仕事がしやすいように$H$を$H'$に
+
+
+![bg right:50% 100%](./figs/transformer_decoder.png)
+
 ---
 
 ## エンコーダの出力を使った翻訳
@@ -150,15 +164,6 @@ $\Rightarrow$どうやって?
 ![bg right:35% 100%](./figs/transformer_decoder.png)
 
 
----
-
-### デコーダ側の処理1
-
-- 自己注意機構で翻訳途中の文の文脈を埋め込みに反映
-    - 途中の文なので計算のときに少し細工が必要だけど、
-    エンコーダと同じ
-
-![bg right:15% 100%](./figs/transformer_dec_context.png)
 
 
 ---
