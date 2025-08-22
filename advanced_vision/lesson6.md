@@ -117,6 +117,13 @@ marp: true
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
+---
+
+### その他補足
+
+- 注意機構もフィードフォワード層も
+
+![bg right:20% 95%](./figs/transformer_encoder_body.png)
 
 ---
 
@@ -146,25 +153,10 @@ marp: true
 
 ![bg right:50% 100%](./figs/transformer_decoder.png)
 
+
 ---
 
-## エンコーダの出力を使った翻訳
-
-- 問題の定式化: 条件付き確率の問題にする
-（例: 日本語から英語への翻訳）
-    - 問題1: 先頭のトークンを選ぶ
-        - $p(w_1 |$私 は 牛丼 を 食べ ます 。$)$
-    - 問題2: 2番目のトークンを選ぶ
-        - $p(w_2 |$私 は 牛丼 を 食べ ます 。, I$)$
-    - 問題3: 3番目のトークンを選ぶ
-        - $p(w_3 |$私 は 牛丼 を 食べ ます 。, I eat$)$
-- Transformerのデコーダがこれを解く
-$\Rightarrow$どうやって?
-
-![bg right:35% 100%](./figs/transformer_decoder.png)
-
-
-
+### デコーダの注意機構
 
 ---
 
@@ -297,19 +289,19 @@ $\Rightarrow$どうやって?
 
 ---
 
-## Transformerのエンコーダ: 入力
+## エンコーダの出力を使った翻訳
 
+- 問題の定式化: 条件付き確率の問題にする
+（例: 日本語から英語への翻訳）
+    - 問題1: 先頭のトークンを選ぶ
+        - $p(w_1 |$私 は 牛丼 を 食べ ます 。$)$
+    - 問題2: 2番目のトークンを選ぶ
+        - $p(w_2 |$私 は 牛丼 を 食べ ます 。, I$)$
+    - 問題3: 3番目のトークンを選ぶ
+        - $p(w_3 |$私 は 牛丼 を 食べ ます 。, I eat$)$
+- Transformerのデコーダがこれを解く
+$\Rightarrow$どうやって?
 
-- 入力: 文
-    - トークン（単語をより細かく文を区切ったもの）の分散表現でのベクトルを並べたもの
-        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
-- 文への位置情報の付加（右図Positional Encoding）
-    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
-       - $D$: ベクトルの次元（正規化のため）
-       - $P$にはトークンが文の何番目にあるかの情報が入る
-           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
+![bg right:35% 100%](./figs/transformer_decoder.png)
 
-<center>とりあえずこれで入力に位置情報が加わる</center>
-
-![bg right:20% 100%](./figs/transformer_pos.png)
 
