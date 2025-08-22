@@ -170,7 +170,16 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="アドバンストビジョン第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="" data-marpit-pagination-total="24" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="アドバンストビジョン第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:アドバンストビジョン第6回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="24" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/transformer_encoder_body.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="9" data-footer="アドバンストビジョン第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:アドバンストビジョン第6回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="24" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E3%81%9D%E3%81%AE%E4%BB%96%E8%A3%9C%E8%B6%B3">その他補足</h3>
 <ul>
-<li>注意機構もフィードフォワード層も</li>
+<li>注意機構もフィードフォワード層もスキップ接続を使用
+<ul>
+<li>各層で学習/出力されるのは差分</li>
+</ul>
+</li>
+<li>学習初期に各層にわかりやすい入力をするため
+<ul>
+<li>層が深いので必要</li>
+</ul>
+</li>
 </ul>
 <footer>アドバンストビジョン第6回</footer>
 </section>
