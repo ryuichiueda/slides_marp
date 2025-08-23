@@ -214,5 +214,7 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
 - （離散的な場合が足し算で消せるのと同じで）積分で変数を消せる
     - $p(x) = \int_{-\infty}^\infty p(x,y)\text{d}y$（右図下）
     - $p(y) = \int_{-\infty}^\infty p(x,y)\text{d}x$（右図右）
+- 補足
+    - そもそもこの図では最初の実験の$\theta$を省略しているので、もとから周辺化されている
 
 ![bg right:35% 95%](./figs/xy_marginalization.png)
