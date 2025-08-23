@@ -213,3 +213,4 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
 
 - （離散的な場合が足し算で消せるのと同じで）積分で変数を消せる
 
+![bg right:35% 95%](./figs/xy_marginalization.png)
