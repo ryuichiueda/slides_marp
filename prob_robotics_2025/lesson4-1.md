@@ -216,5 +216,6 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
     - $p(y) = \int_{-\infty}^\infty p(x,y)\text{d}x$（右図右）
 - 補足
     - そもそもこの図では最初の実験の$\theta$を省略しているので、もとから周辺化されている
+        - $p(x, y) = \int_{-\pi}^\pi p(x,y,\theta)\text{d}\theta$
 
 ![bg right:35% 95%](./figs/xy_marginalization.png)
