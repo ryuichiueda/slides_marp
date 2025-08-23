@@ -173,7 +173,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
     $\rightarrow$質量を連続値で割ると「密度」
 
 
-![bg right:30% 95%](./figs/density.png)
+![bg right:27% 95%](./figs/density.png)
 
 ---
 
