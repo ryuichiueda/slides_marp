@@ -175,14 +175,17 @@ marp: true
 
 ### デコーダの先
 
-- デーコーダの入力の次の単語を予測
+- 全結合層でデーコーダの入力の次の単語を予測
     - skip-gramのように学習可能
     - 出力は各トークンが次にくる確率
+        - トークンの種類だけ次元がある
 - この部分の誤差を逆伝播することで学習が進行
     - 損失関数: 交差エントロピー
         - $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
+        $= - \log Q(\boldsymbol{e}^*)$
+            - $\boldsymbol{e}^*$: 正解のトークン
 
-![bg right:50% 100%](./figs/transformer_prediction.png)
+![bg right:40% 125%](./figs/transformer_prediction.png)
 
 ---
 
