@@ -219,3 +219,8 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
         - $p(x, y) = \int_{-\pi}^\pi p(x,y,\theta)\text{d}\theta$
 
 ![bg right:35% 95%](./figs/xy_marginalization.png)
+
+---
+
+## まとめ
+
