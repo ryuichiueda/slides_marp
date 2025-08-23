@@ -177,6 +177,7 @@ marp: true
 
 - デーコーダの入力の次の単語を予測
     - skip-gramのように学習可能
+- この部分の誤差を逆伝播することで学習が進行
 
 ![bg right:50% 100%](./figs/transformer_prediction.png)
 
