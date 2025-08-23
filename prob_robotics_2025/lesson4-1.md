@@ -201,7 +201,8 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
 - 3次元の場合: 確率を「体積」で割ったものが密度
     - 3重積分で確率に
 - n次元の場合: n重積分で確率に
-- ルベーグ積分で考える場合
-    - $\int_Dp(\boldsymbol{x})\text{d}\boldsymbol{x}$
+- ルベーグ積分での（的な）表記
+    - $\Pr\{ \boldsymbol{x} \in D \} = \int_Dp(\boldsymbol{x})\text{d}\boldsymbol{x}$
+        - $D$: 空間のある領域（右図の$D$: 2次元の例）
 
 ![bg right:25% 95%](./figs/xy_density.png)
