@@ -159,7 +159,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 - 点に対応する量、確率変数の範囲に対応する関数$f$みたいなものはないのか？
     - それがないと分布の定義が大変難しい
 
-![bg right:30% 95%](./figs/density.png)
+![bg right:30% 95%](./figs/continuous_problem.png)
 
 ---
 
@@ -177,5 +177,5 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ---
 
-### 密度を考えると
+### 確率密度関数
 
