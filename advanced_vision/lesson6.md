@@ -180,7 +180,7 @@ marp: true
     - 出力は各トークンが次にくる確率
 - この部分の誤差を逆伝播することで学習が進行
     - 損失関数: 交差エントロピー
-        - $\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\hat{\boldsymbol{e}})$
+        - $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
 
 ![bg right:50% 100%](./figs/transformer_prediction.png)
 
