@@ -189,3 +189,8 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
     - $p$や$p$の形も「確率分布」と呼ばれる
 
 ![bg right:27% 95%](./figs/density_func.png)
+
+---
+
+### 多次元の確率密度関数
+
