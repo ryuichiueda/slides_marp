@@ -182,6 +182,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 - 連続的な確率変数$x$に密度が導入できたので、
 右図上のような関数$p$が定義可能に
 $\rightarrow$<span style="color:red">確率密度関数</span>
-- 縦軸が密度=横軸を積分すると確率に
+- 確率密度関数の性質
+    - 縦軸が密度=横軸を積分すると確率に
+        - 右図下: $\Pr\{a\le x < b\} = \int_a^b p(x) \text{d}x$
 
 ![bg right:27% 95%](./figs/density_func.png)
