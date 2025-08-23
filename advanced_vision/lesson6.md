@@ -156,7 +156,6 @@ marp: true
 
 ![bg right:50% 100%](./figs/transformer_decoder.png)
 
-
 ---
 
 ### デコーダの本体
@@ -171,6 +170,15 @@ marp: true
     - デコーダの出力$H'_\text{enc}$を反映
 
 ![bg right:15% 100%](./figs/transformer_decoder2.png)
+
+---
+
+### デコーダの先
+
+- デーコーダの入力の次の単語を予測
+    - skip-gramのように学習可能
+
+![bg right:50% 100%](./figs/transformer_prediction.png)
 
 ---
 
