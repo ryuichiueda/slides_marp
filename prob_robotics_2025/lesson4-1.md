@@ -179,6 +179,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ### 確率密度関数
 
+- $x$に密度が対応$\rightarrow$右図上のような関数$p$が定義可能
+$\longrightarrow$<span style="color:red">確率密度関数</span>
 - 縦軸が密度=横軸を積分すると確率に
 
 ![bg right:27% 95%](./figs/density_func.png)
