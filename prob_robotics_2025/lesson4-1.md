@@ -194,3 +194,4 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
 
 ### 多次元の確率密度関数
 
+![bg right:30% 95%](./figs/xy_density.png)
