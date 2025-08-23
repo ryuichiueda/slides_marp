@@ -194,4 +194,14 @@ $\rightarrow$<span style="color:red">確率密度関数</span>
 
 ### 多次元の確率密度関数
 
-![bg right:30% 95%](./figs/xy_density.png)
+- 2次元の場合: 確率を「面積」で割ったものが密度
+    - 2重積分で確率に
+    - 右図: $\Pr\{x_1 \le x < x_2$ かつ $y_1 \le y < y_2 \} =$
+    $\int_{y_1}^{y_2}\int_{x_1}^{x_2}p(x,y)\text{d}x\text{d}y$
+- 3次元の場合: 確率を「体積」で割ったものが密度
+    - 3重積分で確率に
+- n次元の場合: n重積分で確率に
+- ルベーグ積分で考える場合
+    - $\int_Dp(\boldsymbol{x})\text{d}\boldsymbol{x}$
+
+![bg right:25% 95%](./figs/xy_density.png)
