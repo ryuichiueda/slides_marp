@@ -179,3 +179,4 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
 
 ### 確率密度関数
 
+- 縦軸が密度=横軸を積分すると確率に
