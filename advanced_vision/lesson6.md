@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第6回: Transformerの構造とVision Transformer
+## 第6回: Transformerの構造
 
 千葉工業大学 上田 隆一
 
@@ -22,7 +22,7 @@ marp: true
 ## 今日やること
 
 - Transformerの構造
-- Transformerエンコーダによる分類
+- Transformerの簡単な応用
 
 ---
 
