@@ -75,8 +75,8 @@ marp: true
 
 ### <span style="color:red">自己注意機構</span>
 
-- 自分自身の情報でトークンの重みを変える
-    - 例: 「ガラス窓を割ったのは私です。」ならガラスと私を強調する等の働き
+- 自分自身の情報でトークンのベクトルを変える
+    - 文脈が反映される（詳しくは次ページ）
 - 仕組み: Q、K、Vをすべて自身への入力から作成
     - クエリ: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span>（前回は$H_\text{dec}$だった）
     - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>（同上）
@@ -85,6 +85,19 @@ marp: true
 - 前回の注意機構は<span style="color:red">交差注意機構</span>
 
 ![bg right:20% 100%](./figs/transformer_kvq.png)
+
+---
+
+### 自己注意機構の補足
+
+- どういう働きをするか[Google2017](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
+    - 単に代名詞と名詞を関連づけるだけなら
+    次の「it」は「dog」か「street」か分からない
+        - 1: The animal didn't cross the street because it was too tired. 
+            - it: dog
+        - 2: The animal didn't cross the street because it was too wide.
+            - it: street
+
 
 ---
 
