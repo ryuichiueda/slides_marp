@@ -271,8 +271,10 @@ marp: true
 
 ## まとめ
 
-- Transformerのエンコーダ
+- Transformerエンコーダ
     - 埋め込みに文脈を反映
         - 位置情報の付加$\rightarrow$自己注意機構
+- Transformerデコーダ
+    - エンコーダの機能+交差注意機構で別の言語を文脈に反映可能
 - その他の参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
 
