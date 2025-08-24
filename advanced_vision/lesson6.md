@@ -146,10 +146,11 @@ marp: true
 ### その他補足2
 
 
-- 活性化関数: GELU（Gaussian Error Linear Unit）の使用
+- 活性化関数として、ReLUの代わりにGELU（Gaussian Error Linear Unit）が使用されることも
     - $h(x) = x\cdot \frac{1}{2}\big\{ 1 + \text{erf}(x/\sqrt{2})\big\}$
         - $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
 ![w:300](https://upload.wikimedia.org/wikipedia/commons/4/42/ReLU_and_GELU.svg)<span style="font-size:50%">（[画像by Ringdongdang CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:ReLU_and_GELU.svg)）</span>
+    - 素直に微分可能
 
 
 ---
