@@ -88,15 +88,15 @@ marp: true
 
 ---
 
-### 自己注意機構の補足
+### 自己注意機構の補足[[Google2017]](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 
-- どういう働きをするか[Google2017](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
-    - 単に代名詞と名詞を関連づけるだけなら
-    次の「it」は「dog」か「street」か分からない
-        - 1: The animal didn't cross the street because it was too tired. 
-            - it: dog
-        - 2: The animal didn't cross the street because it was too wide.
-            - it: street
+- 単に代名詞と名詞を関連づけるだけなら
+次の「it」は「dog」か「street」か分からない
+    - 1: The animal didn't cross the street because it was too tired. 
+        - it: dog
+    - 2: The animal didn't cross the street because it was too wide.
+        - it: street
+- KVQで、クエリ（it）に対してキー行列から全てのトークンとの
 
 
 ---
