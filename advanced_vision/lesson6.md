@@ -123,24 +123,34 @@ marp: true
 
 - 自己注意機構を通った文が通される
     - 右図の2つの点線の枠のうち上のほう
-    - 非線形な活性化関数を通して特徴をより強調
-- 活性化関数: GELU（Gaussian Error Linear Unit）の使用
-    - $h(x) = x\cdot \frac{1}{2}\big\{ 1 + \text{erf}(x/\sqrt{2})\big\}$
-        - $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
-![w:300](https://upload.wikimedia.org/wikipedia/commons/4/42/ReLU_and_GELU.svg)<span style="font-size:50%">（[画像by Ringdongdang CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:ReLU_and_GELU.svg)）</span>
+    - 非線形な活性化関数（オリジナルはReLU）を通して特徴をより強調
+
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
 
-### その他補足
+### その他補足1
 
 - 注意機構もフィードフォワード層もスキップ接続を使用
     - 各層で学習/出力されるのは差分
-- 学習初期に各層にわかりやすい入力をするため
-    - 層が深いので必要
+    - 学習初期に各層にわかりやすい入力をするため
+        - 層が深いので必要
+- 図に描かれていないがドロップアウト層
+が何ヶ所かに使用されている
 
 ![bg right:20% 95%](./figs/transformer_encoder_body.png)
+
+---
+
+### その他補足2
+
+
+- 活性化関数: GELU（Gaussian Error Linear Unit）の使用
+    - $h(x) = x\cdot \frac{1}{2}\big\{ 1 + \text{erf}(x/\sqrt{2})\big\}$
+        - $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
+![w:300](https://upload.wikimedia.org/wikipedia/commons/4/42/ReLU_and_GELU.svg)<span style="font-size:50%">（[画像by Ringdongdang CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:ReLU_and_GELU.svg)）</span>
+
 
 ---
 
