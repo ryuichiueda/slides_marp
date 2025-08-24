@@ -24,6 +24,8 @@ marp: true
 - Transformerの構造
 - Transformerの簡単な応用
 
+（簡単じゃない応用は次回以降）
+
 ---
 
 ## Transformer（翻訳用途）の構造
