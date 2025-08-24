@@ -97,6 +97,7 @@ marp: true
     - 2: The animal didn't cross the street because it was too wide.
         - it: street
 - KVQ: クエリ（it）に対して、名詞だけではなく行列$K$で全てのトークンを作用させることで、itがどちらに近いかまでを計算可能に
+    - "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)（再掲）
 
 
 ---
