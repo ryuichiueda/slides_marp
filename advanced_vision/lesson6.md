@@ -254,19 +254,18 @@ marp: true
 
 ---
 
-### Vision Transformer (ViT）
+## まとめ
 
-- Transformerを画像に転用
-    - 画像をブロック状に切って単語のように扱う（右図）
-    - 右図のCLS: クラストークン
-        - 文の分類と同じ
-- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
-    - CNNは遠くのブロックの関係性を見るのが苦手
-
-[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
-
+- Transformer
+    - 埋め込みに文脈を反映させる仕組み
+- 埋め込み
+    - 次元の高いベクトルで、単語やトークンの様々な関係性を表現可能
+    - skip-gramなどの学習方法で実用性のある埋め込みが作成可能
+    - ViTなどでは画像に対しても作られる
+- 埋め込みを使うと性質の異なるデータを交差注意機構で関連させることが可能
+    - ある言語$\rightarrow$別の言語
+    - 画像$\leftrightarrow$言語
+- 参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
 
 ---
 
@@ -310,16 +309,17 @@ marp: true
 
 ---
 
-## まとめ
+### Vision Transformer (ViT）
 
-- Transformer
-    - 埋め込みに文脈を反映させる仕組み
-- 埋め込み
-    - 次元の高いベクトルで、単語やトークンの様々な関係性を表現可能
-    - skip-gramなどの学習方法で実用性のある埋め込みが作成可能
-    - ViTなどでは画像に対しても作られる
-- 埋め込みを使うと性質の異なるデータを交差注意機構で関連させることが可能
-    - ある言語$\rightarrow$別の言語
-    - 画像$\leftrightarrow$言語
-- 参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
+- Transformerを画像に転用
+    - 画像をブロック状に切って単語のように扱う（右図）
+    - 右図のCLS: クラストークン
+        - 文の分類と同じ
+- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
+    - CNNは遠くのブロックの関係性を見るのが苦手
+
+[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
+
 
