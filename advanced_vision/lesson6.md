@@ -213,6 +213,7 @@ marp: true
     - 損失関数: 交差エントロピー
         - $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
         $= - \log Q(\boldsymbol{e}^*)$
+            - $P$が正解で$Q$が出力
             - $\boldsymbol{e}^*$: 正解のトークン
 
 ![bg right:40% 125%](./figs/transformer_prediction.png)
