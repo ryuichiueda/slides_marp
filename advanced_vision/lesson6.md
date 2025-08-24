@@ -238,7 +238,6 @@ marp: true
 
 （より高度なものは次回以降）
 
-
 ---
 
 ### Transformerエンコーダによる感情分析
@@ -251,6 +250,14 @@ marp: true
     - 学習すると出力のクラストークンに分析のための情報が集まるように
 
 ![bg right:30% 100%](./figs/sentiment_analysis.png)
+
+---
+
+### Transformerエンコーダによる文章生成
+
+こちらも[[中井2025]](https://gihyo.jp/book/2025/978-4-297-14972-7)から
+
+- aaa
 
 ---
 
