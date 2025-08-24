@@ -96,7 +96,7 @@ marp: true
         - it: dog
     - 2: The animal didn't cross the street because it was too wide.
         - it: street
-- KVQ: クエリ（it）に対して名詞だけではなく行列$K$で全てのトークンを作用させることで、itがどちらに近いかまでを計算可能に
+- KVQ: クエリ（it）に対して、名詞だけではなく行列$K$で全てのトークンを作用させることで、itがどちらに近いかまでを計算可能に
 
 
 ---
