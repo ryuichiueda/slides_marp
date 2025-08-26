@@ -53,6 +53,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $\sigma^2$: 分散
         - 右図の例: $(\mu, \sigma^2) = (5, 1)$
 - 典型的な数式のなかで最も代表的なもの
+    - $x$がばらつく原因がとても多い場合にこういう形に（<span style="color:red">中心極限定理</span>）
 
 ![bg right:35% 95%](./figs/gauss.png)
 
@@ -63,10 +64,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - なにか値$x$を計測（センサ値としましょう）
 - センサ値は多種多様な誤差要因でばらつく
     - 気温、湿度、振動、放射線、・・・
-    - 誤差要因別の誤差$\varepsilon_{i}$を考える
-        - $i=1,2,\dots,n$
+    - 誤差要因別の誤差$\varepsilon_{1:n}$を考える
         - 原因が違うので互いに独立と仮定
 - 誤差のない計測値$x^*$を仮定すると
     - $x = x^* + \sum_{i=1}^n \varepsilon_{i}$
+- $\varepsilon_{1:n}$の各値がすべて正になったり、すべて負になったりする確率は低い
+<span style="color:red">$\rightarrow \sum_{i=1}^n \varepsilon_{i}$の値は$0$に近いほど高頻度</span>
 
 ![bg right:35% 95%](./figs/gauss.png)
