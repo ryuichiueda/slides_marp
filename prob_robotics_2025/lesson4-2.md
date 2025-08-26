@@ -33,4 +33,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 前半のおさらい
 
-- 連続的な変数に対して確率密度関数を
+- 連続的な変数に対して確率密度関数を導入
+- 次に考えること: 連続的な変数の分布が数式で表せないか？
+    - データがなにかの法則にしたがって発生している
+    - その法則は数式で表せる
