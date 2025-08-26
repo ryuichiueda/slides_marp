@@ -84,7 +84,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - $(\mu, \sigma^2) = (11.8, 12.0)$
     - 右図: さらに試行して100回にして当てはめ
         - $(\mu, \sigma^2) = (13.2, 12.8)$
-
 ![w:800](./figs/theta100_gauss.png)
 
 いろいろ考察してみましょう（次ページに例）
