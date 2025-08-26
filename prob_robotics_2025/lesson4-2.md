@@ -63,8 +63,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - なにか値$x$を計測（センサ値としましょう）
 - センサ値は多種多様な誤差要因でばらつく
     - 気温、湿度、振動、放射線、・・・
-- 誤差要因別の誤差$\varepsilon_{i}$を考える
-    - $i=1,2,\dots,n$
+    - 誤差要因別の誤差$\varepsilon_{i}$を考える
+        - $i=1,2,\dots,n$
+        - 原因が違うので互いに独立と仮定
 - 誤差のない計測値$x^*$を仮定すると
     - $x = x^* + \sum_{i=1}^n \varepsilon_{i}$
 
