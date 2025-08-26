@@ -53,7 +53,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $\sigma^2$: 分散
         - 右図の例: $(\mu, \sigma^2) = (5, 1)$
 - 典型的な数式のなかで最も代表的なもの
-    - $x$がばらつく原因がとても多い場合にこういう形に（<span style="color:red">中心極限定理</span>）
+    - $x$がこまかくばらつく原因がとても多い場合にこういう形に（<span style="color:red">中心極限定理</span>）
+
+センサ値や前半にやったロボットの移動距離、向きの誤差は、大きなばらつきの原因がないとガウス分布に従う
 
 ![bg right:35% 95%](./figs/gauss.png)
 
