@@ -28,3 +28,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 --- 
 
 ## ガウス分布
+
+--- 
+
+### 前半のおさらい
+
+- 連続的な変数に対して確率密度関数を
