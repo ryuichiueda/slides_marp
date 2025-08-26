@@ -63,14 +63,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### なんで典型的で代表的になるか？
 
-- なにか値$x$を計測（センサ値としましょう）
-- センサ値は多種多様な誤差要因でばらつく
-    - 気温、湿度、振動、放射線、・・・
+- 測距センサを例にしましょう
+    - 多種多様なばらつき要因: 気温、湿度、振動、外光、回路の電気的な揺らぎ・・・
     - 誤差要因別の誤差$\varepsilon_{1:n}$を考える
         - 原因が違うので互いに独立と仮定
 - 誤差のない計測値$x^*$を仮定すると
     - $x = x^* + \sum_{i=1}^n \varepsilon_{i}$
 - $\varepsilon_{1:n}$の各値がすべて正になったり、すべて負になったりする確率は低い
-<span style="color:red">$\rightarrow \sum_{i=1}^n \varepsilon_{i}$の値は$0$に近いほど高頻度</span>
+<span style="color:red">$\rightarrow \sum_{i=1}^n \varepsilon_{i}$の値は$0$に近いほど高頻度</span>（$x^*$を中心に釣り鐘型の分布に）
 
 ![bg right:35% 95%](./figs/gauss.png)
