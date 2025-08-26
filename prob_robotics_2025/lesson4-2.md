@@ -103,3 +103,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![w:800](./figs/theta100_gauss.png)
 
+
+--- 
+
+### ガウス分布の重ね合わせになる例
+
+- 詳解確率ロボティクスのセンサ値の例
+
