@@ -74,3 +74,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $x$の分布は$x^*$を中心に釣り鐘型の分布に
 
 ![bg right:35% 95%](./figs/gauss.png)
+
+--- 
+
+### データへの当てはめの例
+
