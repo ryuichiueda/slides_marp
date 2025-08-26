@@ -95,6 +95,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 20回くらいの試行では分布の形は分からない
     - 100回と比べると形がかなり異なる
+- 当てはめたガウス分布は20回でも100回でも大きい違いはない
+    - 20回試行でも平均値と分散はおおかた収束（この場合は）
 
 ![w:800](./figs/theta100_gauss.png)
 
