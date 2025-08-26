@@ -48,5 +48,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ガウス分布の導入
 
-- 典型的な数式のなかで最も代表的なもの
-
+- 式: $p(x) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
+    - 典型的な数式のなかで最も代表的なもの
