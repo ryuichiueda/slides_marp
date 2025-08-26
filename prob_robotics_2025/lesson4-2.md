@@ -70,6 +70,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 誤差のない計測値$x^*$を仮定すると
     - $x = x^* + \sum_{i=1}^n \varepsilon_{i}$
 - $\varepsilon_{1:n}$の各値がすべて正になったり、すべて負になったりする確率は低い
-<span style="color:red">$\rightarrow \sum_{i=1}^n \varepsilon_{i}$の値は$0$に近いほど高頻度</span>（$x^*$を中心に釣り鐘型の分布に）
+<span style="color:red">$\rightarrow \sum_{i=1}^n \varepsilon_{i}$の値は$0$に近いほど高頻度</span>
+    - $x$の分布は$x^*$を中心に釣り鐘型の分布に
 
 ![bg right:35% 95%](./figs/gauss.png)
