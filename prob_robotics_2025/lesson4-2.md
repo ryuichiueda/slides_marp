@@ -48,4 +48,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ガウス分布の導入
 
+- 典型的な数式のなかで最も代表的なもの
 
