@@ -83,3 +83,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 20回の試行: $(\mu, \sigma^2) = (11.8, 12.0)$
     - さらに試行して100回に: $(\mu, \sigma^2) = (13.2, 12.8)$
 
+![w:800](./figs/theta100_gauss.png)
