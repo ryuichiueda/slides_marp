@@ -87,3 +87,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ![w:800](./figs/theta100_gauss.png)
 
 いろいろ考察してみましょう（次ページに例）
+
+
+--- 
+
+### データへの当てはめの例（考察）
+
+- 20回くらいの試行では分布の形は分からない
+    - 100回と比べると形がかなり異なる
+
+![w:800](./figs/theta100_gauss.png)
+
