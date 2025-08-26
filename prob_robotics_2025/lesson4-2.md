@@ -79,3 +79,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### データへの当てはめの例
 
+- ロボットの移動の例の$\theta$に対して
+    - 20回の試行: $(\mu, \sigma^2) = (11.8, 12.0)$
+    - さらに試行して100回に: $(\mu, \sigma^2) = (13.2, 12.8)$
+
