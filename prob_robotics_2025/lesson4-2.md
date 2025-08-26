@@ -51,4 +51,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 式: $p(x) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - $\mu$: 平均値
     - $\sigma^2$: 分散
+        - 右図の例: $(\mu, \sigma^2) = (5, 1)$
 - 典型的な数式のなかで最も代表的なもの
+
+![bg right:35% 95%](./figs/gauss.png)
+
+--- 
+
+### なんで典型的で代表的になるか？
+
+- なにかの値$x$を計測した場合
+
+![bg right:35% 95%](./figs/gauss.png)
