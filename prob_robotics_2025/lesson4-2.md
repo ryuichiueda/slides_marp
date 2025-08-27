@@ -276,6 +276,6 @@ $=\eta \exp\left\{
 
 - ガウス分布同士の積は正規化するとガウス分布に
     - このときできるガウス分布の平均値と精度は
-        - $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$
-        - $\Lambda = \Lambda_1 + \Lambda_2$
+        - $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$<span style="color:red">（両分布の平均値の重みつき平均）</span>
+        - $\Lambda = \Lambda_1 + \Lambda_2$<span style="color:red">（精度の単純な和）</span>
 
