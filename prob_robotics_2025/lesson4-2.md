@@ -118,5 +118,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 --- 
 
-### ガウス分布の重ね合わせになる例
+### ガウス分布の表記
 
+- $\mathcal{N}(\mu, \sigma^2)$と表記
+    - 例: $x \sim \mathcal{N}(\mu, \sigma^2)$: $x$がガウス分布$\mathcal{N}(\mu, \sigma^2)$に従う
+- 変数を明示して$\mathcal{N}(x | \mu, \sigma^2)$と表記することも
