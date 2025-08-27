@@ -264,3 +264,13 @@ $=\eta \exp\left\{
 \right\}$
 $=\eta \exp\left\{ 
 -\dfrac{1}{2}(\Lambda_1 + \Lambda_2) x^2 + (\mu_1 \Lambda_1  + \mu_2 \Lambda_2) x \right\}$
+- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + \mu\Lambda x \right\}$と形を比較
+    - $\Lambda = \Lambda_1 + \Lambda_2$
+    - $\mu =(\mu_1 \Lambda_1  + \mu_2 \Lambda_2)/\Lambda = \dfrac{\mu_1 \Lambda_1  + \mu_2 \Lambda_2}{\Lambda_1 + \Lambda_2}$
+        と考えると同じ形に
+        - ただし上の式は積分して$1$にならないので正規化が必要
+
+---
+
+### ガウス分布の積（まとめ）
+
