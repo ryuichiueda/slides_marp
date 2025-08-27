@@ -154,5 +154,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 --- 
 
-### ガウス分布の性質1（続き）
+### ガウス分布の性質1（証明続き）
 
