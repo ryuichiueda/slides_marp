@@ -217,7 +217,8 @@ $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1
 $\rightarrow \eta = 1/\sqrt{2\pi \sigma^2}$として略記することがある
         - $\mathcal{N}(x| \mu, \sigma^2) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - $\eta$は<span style="color:red">正規化定数</span>と呼ばれる
-- 他の分布でも変数と無関係な係数は正規化定数として扱うことがある
+- 正規化定数の使われ方
+    - 最終的に確率分布の積分が$1$になることが分かっているときに使用
     - 式変形の途中で異なる値になっても$\eta$で済まさせることがあるので注意
 
 ---
