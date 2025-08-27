@@ -230,4 +230,6 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
 
 - $d(x) = (x -\mu )/\sigma$とおくと、指数部は関数$d$によって値が決まることが分かる
     - $\mathcal{N}(x| \mu, \sigma^2) = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{1}{2}d(x)^2 \right\}$
-- $d(x)$: 値$x$が、平均値から標準偏差いくつ分離れているかを表す
+    - $d(x)$: 値$x$が、平均値から標準偏差いくつ分離れているかを表す
+- $d(x)$の使い方
+    - <span style="color:red">偏差値</span>: $10 d(x)+50$
