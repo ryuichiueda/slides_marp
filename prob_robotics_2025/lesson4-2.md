@@ -182,3 +182,12 @@ $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{
 	\mathcal{N}\left[x_1 \Big| h(x_3), \dfrac{\sigma_1^2\sigma_2^2}{\sigma'^{2}} \right]
 	\text{d}x_1$
 $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$
+
+--- 
+
+### ガウス分布の性質2
+
+- 問題: $x$がガウス分布にしたがうとき、$y=ax+b$はどんな分布にしたがうか？
+    - $x \sim \mathcal{N}(\mu,\sigma^2)$
+    - $y \sim p \ \leftarrow$どうなる？
+
