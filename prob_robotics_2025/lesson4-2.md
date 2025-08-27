@@ -279,3 +279,10 @@ $=\eta \exp\left\{
         - $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$<span style="color:red">（両分布の平均値の重みつき平均）</span>
         - $\Lambda = \Lambda_1 + \Lambda_2$<span style="color:red">（精度の単純な和）</span>
 
+---
+
+### ガウス分布のまとめ
+
+- あらためてガウス分布の性質
+    - 変数の和の分布の場合: 分散の単純和
+    - 分布の積の場合: 精度の単純和
