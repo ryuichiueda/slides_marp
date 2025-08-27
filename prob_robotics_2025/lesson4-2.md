@@ -170,8 +170,7 @@ $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{
 	 \exp\left\{\dfrac{(x_3-\mu')^2 }{-2\sigma'^2 } \right\} \text{d}x_1$
 	- $\sigma_1^2 + \sigma_2^2 = \sigma'^{2}$
 	- $\mu_2 + \mu_1 = \mu'$
-	- $h(x_3) = \dfrac{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 }
-		            {\sigma_1^2 + \sigma_2^2}$
+	- $h(x_3) = \{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 \}/\sigma'^2$
 	&=
 	\dfrac{1}{2\pi \sigma_1\sigma_2}
 	 \exp\left\{\dfrac{(x_3-\mu')^2 }{-2\sigma'^2 } \right\} 
