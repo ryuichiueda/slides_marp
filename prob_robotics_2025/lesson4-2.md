@@ -191,4 +191,4 @@ $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1
     - $x \sim \mathcal{N}(\mu,\sigma^2)$
     - $y \sim p \ \leftarrow$どうなる？
 - 答え: 
-    - $y \sim \mathcal{N} [ a \mu + b, (a\sigma)^2 ]$
+    * $y \sim \mathcal{N} [ a \mu + b, (a\sigma)^2 ]$
