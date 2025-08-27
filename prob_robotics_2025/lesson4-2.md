@@ -158,7 +158,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $p(x_3) = \int_{-\infty}^\infty \dfrac{1}{\sqrt{2\pi \sigma^2_2}}\exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2}\right\}$
 $\cdot \dfrac{1}{\sqrt{2\pi \sigma^2_1}}\exp\left\{ -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
 $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2} -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
-    - この積分を$x_1$のガウス分布にすると確率$1$で消せるので、そのように変形していく（このスライドでは割愛。結果だけ。）
+    - この積分を$x_1$のガウス分布にすると確率$1$で消せるので、そのように変形していく（このスライドでは割愛。次のスライドに結果だけ。）
 
 --- 
 
