@@ -248,5 +248,27 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - 下準備で次のようにガウス分布を変形しておく
         - $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x -\dfrac{1}{2\sigma^2}\mu^2 \right\}$
         $= \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x \right\}$
+- <span style="color:red">精度</span>（分散の逆数）を導入
+    - $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + \mu\Lambda x \right\}$
 
-計算は次ページ
+<center>計算は次ページ</center>
+
+---
+
+### ガウス分布の積（計算）
+
+$\mathcal{N}(x | \mu_1, \sigma_1^2)\mathcal{N}(x | \mu_2, \sigma_2^2)
+	= \eta \exp\left\{
+		-\dfrac{(x - \mu_1)^2}{2\sigma_1^2}
+		-\dfrac{(x - \mu_2)^2}{2\sigma_2^2}
+	\right\}$
+$= \eta \exp\left\{
+		-\left(\dfrac{1}{2\sigma_1^2} + \dfrac{1}{2\sigma_2^2}\right)x^2 
+		+ \left( \dfrac{\mu_1}{\sigma_1^2} + \dfrac{\mu_2}{\sigma_2^2}\right)x
+		- \left(\dfrac{\mu_1^2}{2\sigma_1^2} + \dfrac{\mu_2^2}{2\sigma_2^2}\right)
+	\right\}$
+$= \eta \exp\left\{
+		-\left(\dfrac{1}{2\sigma_1^2} + \dfrac{1}{2\sigma_2^2}\right)x^2 
+		+ \left( \dfrac{\mu_1}{\sigma_1^2} + \dfrac{\mu_2}{\sigma_2^2}\right)x
+	\right\}$
+
