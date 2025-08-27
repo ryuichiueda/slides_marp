@@ -132,6 +132,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - つまり次のとき、$x_3 = x_1 + x_2$の分布$p(x_3)$は？
         - $x_1 \sim \mathcal{N}(\mu_1, \sigma^2_1)$
         - $x_2 \sim \mathcal{N}(\mu_2, \sigma^2_2)$
+- 答え:
+    * $x_3 \sim \mathcal{N}(\mu_1 + \mu_2, \sigma^2_1 + \sigma^2_2)$
+
+
+--- 
+
+### ガウス分布の性質1（証明）
+
 - 解き方
     * $p(x_3) = \int_{-\infty}^\infty p(x_3, x_1)\text{d}x_1$
     $= \int_{-\infty}^\infty p(x_3 | x_1)p(x_1)\text{d}x_1$
@@ -140,3 +148,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 最後の変形: $x_1$が固定値の$x_3$の分布: $x_2$の分布を$x_1$だけずらしたもの
 
 元気な人は続きを計算してみましょう
+
+--- 
+
+### ガウス分布の性質1（続き）
+
