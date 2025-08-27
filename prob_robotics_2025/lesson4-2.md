@@ -190,4 +190,5 @@ $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1
 - 問題: $x$がガウス分布にしたがうとき、$y=ax+b$はどんな分布にしたがうか？
     - $x \sim \mathcal{N}(\mu,\sigma^2)$
     - $y \sim p \ \leftarrow$どうなる？
-
+- 答え: 
+    - $y \sim \mathcal{N} [ a \mu + b, (a\sigma)^2 ]$
