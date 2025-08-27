@@ -158,7 +158,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $p(x_3) = \int_{-\infty}^\infty \dfrac{1}{\sqrt{2\pi \sigma^2_2}}\exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2}\right\}$
 $\cdot \dfrac{1}{\sqrt{2\pi \sigma^2_1}}\exp\left\{ -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
 $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2} -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
-    - この積分を$x_1$のガウス分布にすると確率$1$で消せるので、そのように変形していく（このスライドでは割愛。次のスライドに結果だけ。）
+    - 解き方: 積分を次のように分解
+        - 積分内に$x_1$のガウス分布を残す（<span style="color:red">積分で$1$になる</span>）
+        - 積分の外に$x_3$の分布を出す
+        - 次のスライドに結果だけ示します（計算は教科書で）
 
 --- 
 
@@ -169,9 +172,10 @@ $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{
 	 \exp\left\{\dfrac{(x_3-\mu')^2 }{-2\sigma'^2 } \right\} 
 	\int_{-\infty}^\infty \exp\left\{\dfrac{-\sigma'^{2}}{2\sigma_1^2\sigma_2^2} \left[ x_1 - h(x_3)  \right]^2 \right\}
 	 \text{d}x_1$
-	- $\sigma_1^2 + \sigma_2^2 = \sigma'^{2}$
-	- $\mu_2 + \mu_1 = \mu'$
-	- $h(x_3) = \{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 \}/\sigma'^2$
+	- ここで
+	    - $\sigma_1^2 + \sigma_2^2 = \sigma'^{2}$
+	    - $\mu_2 + \mu_1 = \mu'$
+	    - $h(x_3) = \{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 \}/\sigma'^2$
 - $p(x_3) =
 	 \mathcal{N}(x_3 | \mu', \sigma'^2)
 	\int_{-\infty}^\infty 
