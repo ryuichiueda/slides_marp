@@ -46,7 +46,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 --- 
 
-### ガウス分布の導入
+### ガウス分布（正規分布）の導入
 
 - 式: $p(x) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - $\mu$: 平均値
@@ -115,3 +115,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - オレンジの分布: 昼の14時台の分布を抜き出したもの
     - 青の分布: 朝の6時台の分布を抜き出したもの
 ![w:400](./figs/sensor_histgram_600.png)![w:400](./figs/sensor600_6h_14h.png)
+
+--- 
+
+### ガウス分布の重ね合わせになる例
+
