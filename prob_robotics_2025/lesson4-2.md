@@ -257,18 +257,10 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
 
 ### ガウス分布の積（計算）
 
-$\mathcal{N}(x | \mu_1, \sigma_1^2)\mathcal{N}(x | \mu_2, \sigma_2^2)
-	= \eta \exp\left\{
-		-\dfrac{(x - \mu_1)^2}{2\sigma_1^2}
-		-\dfrac{(x - \mu_2)^2}{2\sigma_2^2}
-	\right\}$
-$= \eta \exp\left\{
-		-\left(\dfrac{1}{2\sigma_1^2} + \dfrac{1}{2\sigma_2^2}\right)x^2 
-		+ \left( \dfrac{\mu_1}{\sigma_1^2} + \dfrac{\mu_2}{\sigma_2^2}\right)x
-		- \left(\dfrac{\mu_1^2}{2\sigma_1^2} + \dfrac{\mu_2^2}{2\sigma_2^2}\right)
-	\right\}$
-$= \eta \exp\left\{
-		-\left(\dfrac{1}{2\sigma_1^2} + \dfrac{1}{2\sigma_2^2}\right)x^2 
-		+ \left( \dfrac{\mu_1}{\sigma_1^2} + \dfrac{\mu_2}{\sigma_2^2}\right)x
-	\right\}$
-
+- $\mathcal{N}(x | \mu_1, \sigma_1^2)\mathcal{N}(x | \mu_2, \sigma_2^2)$
+$=\eta \exp\left\{ 
+-\dfrac{1}{2}\Lambda_1 x^2 + \mu_1 \Lambda_1 x 
+-\dfrac{1}{2}\Lambda_2 x^2 + \mu_2 \Lambda_2 x 
+\right\}$
+$=\eta \exp\left\{ 
+-\dfrac{1}{2}(\Lambda_1 + \Lambda_2) x^2 + (\mu_1 \Lambda_1  + \mu_2 \Lambda_2) x \right\}$
