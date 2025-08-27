@@ -248,3 +248,5 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - 下準備で次のようにガウス分布を変形しておく
         - $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x -\dfrac{1}{2\sigma^2}\mu^2 \right\}$
         $= \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x \right\}$
+
+計算は次ページ
