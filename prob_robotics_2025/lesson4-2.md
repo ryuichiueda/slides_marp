@@ -275,7 +275,7 @@ $=\eta \exp\left\{
 ### ガウス分布の積（まとめ）
 
 - ガウス分布同士の積は正規化するとガウス分布に
-    - このとき
-        - $\Lambda = \Lambda_1 + \Lambda_2$
+    - このときできるガウス分布の平均値と精度は
         - $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$
+        - $\Lambda = \Lambda_1 + \Lambda_2$
 
