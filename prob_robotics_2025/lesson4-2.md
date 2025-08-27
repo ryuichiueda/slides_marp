@@ -218,7 +218,7 @@ $\rightarrow \eta = 1/\sqrt{2\pi \sigma^2}$として略記することがある
         - $\mathcal{N}(x| \mu, \sigma^2) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - $\eta$は<span style="color:red">正規化定数</span>と呼ばれる
 - 正規化定数の使われ方
-    - 最終的に確率分布の積分が$1$になることが分かっているときに使用
+    - 当該部分の詳細に興味がないときに使用
     - 式変形の途中で異なる値になっても$\eta$で済まさせることがあるので注意
 
 ---
