@@ -210,9 +210,17 @@ $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1
 
 --- 
 
-### ガウス分布の式の解釈
+### 正規化定数
 
-- $p(x) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
-    - 形を決めているのは指数部（$\exp$の中）
+- ガウス分布の形を決めているのは指数部（$\exp$の中）
+$\rightarrow \eta = 1/\sqrt{2\pi \sigma^2}$として略記することがある
+    - $p(x) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
+    - $\eta$は<span style="color:red">正規化定数</span>と呼ばれる
+- 他の分布でも変数と無関係な係数は正規化定数として扱うことがある
+    - 式変形の途中で異なる値になっても$\eta$で済まさせることがあるので注意
+
+---
+
+        - $-\dfrac{(x-\mu)^2}{2\sigma^2} = -\dfrac{1}{2}\left(\dfrac{x-\mu}{\sigma}\right)$
 
 ![bg right:35% 95%](./figs/gauss.png)
