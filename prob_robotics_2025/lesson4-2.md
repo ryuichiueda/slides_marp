@@ -134,6 +134,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - $x_2 \sim \mathcal{N}(\mu_2, \sigma^2_2)$
 - 答え:
     * $x_3 \sim \mathcal{N}(\mu_1 + \mu_2, \sigma^2_1 + \sigma^2_2)$
+        - 再びガウス分布に$\rightarrow$<span style="color:red">再生性</span>と言われる性質
+        - しかも平均値、分散の単純な足し算に
 
 
 --- 
