@@ -137,12 +137,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 再びガウス分布に$\rightarrow$<span style="color:red">再生性</span>と言われる性質
         - しかも平均値、分散の単純な足し算に
 
+元気な人は証明してみましょう（次ページから証明）
 
 --- 
 
 ### ガウス分布の性質1（証明）
 
-- 解き方
+- まず分布$p(x_3)$を$x_1, x_2, \mu_1, \mu_2, \sigma^2_1, \sigma^2_2$で表す
     * $p(x_3) = \int_{-\infty}^\infty p(x_3, x_1)\text{d}x_1$
     $= \int_{-\infty}^\infty p(x_3 | x_1)p(x_1)\text{d}x_1$
     $= \int_{-\infty}^\infty p(x_3 | x_1)\mathcal{N}(x_1| \mu_1, \sigma^2)\text{d}x_1$
