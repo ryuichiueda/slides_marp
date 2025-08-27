@@ -164,3 +164,29 @@ $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{
 
 ### ガウス分布の性質1（証明続き）
 
+- $p(x_3) = 
+	\dfrac{1}{2\pi \sigma_1\sigma_2}
+	\int_{-\infty}^\infty \exp\left\{\dfrac{-\sigma'^{2}}{2\sigma_1^2\sigma_2^2} \left[ x_1 - h(x_3)  \right]^2 \right\}
+	 \exp\left\{\dfrac{(x_3-\mu')^2 }{-2\sigma'^2 } \right\} \text{d}x_1$
+	- $\sigma_1^2 + \sigma_2^2 = \sigma'^{2}$
+	- $\mu_2 + \mu_1 = \mu'$
+	- $h(x_3) = \dfrac{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 }
+		            {\sigma_1^2 + \sigma_2^2}$
+	&=
+	\dfrac{1}{2\pi \sigma_1\sigma_2}
+	 \exp\left\{\dfrac{(x_3-\mu')^2 }{-2\sigma'^2 } \right\} 
+	\int_{-\infty}^\infty \exp\left\{\dfrac{-\sigma'^{2}}{2\sigma_1^2\sigma_2^2} \left[ x_1 - h(x_3)  \right]^2 \right\}
+	 \text{d}x_1
+	\nonumber \\
+	&=
+	\dfrac{\sqrt{2\pi \sigma'^2}}{2\pi \sigma_1\sigma_2} \mathcal{N}(x_3 | \mu', \sigma'^2)
+	\int_{-\infty}^\infty 
+	\sqrt{\dfrac{2\pi \sigma_1^2\sigma_2^2}{\sigma'^{2}}}
+	\mathcal{N}\left[x_1 \Big| h(x_3), \dfrac{\sigma_1^2\sigma_2^2}{\sigma'^{2}} \right]
+	\text{d}x_1
+	\nonumber \\
+	&=
+	\mathcal{N}(x_3 | \mu', \sigma'^2)
+	\int_{-\infty}^\infty 
+	\mathcal{N}\left[x_1 \Big| h(x_3), \dfrac{\sigma_1^2\sigma_2^2}{\sigma'^{2}} \right]
+	\text{d}x_1
