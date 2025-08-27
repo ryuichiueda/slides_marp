@@ -245,3 +245,6 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
 
 - 同じ変数$x$に関するふたつのガウス分布$\mathcal{N}(x|\mu_1, \sigma_1^2)$、$\mathcal{N}(x|\mu_2, \sigma_2^2)$の積を考えてみましょう
     - （深く考えていませんがおそらく）2人の人が別の情報から$x$を推定したので情報を統合したいという状況
+    - 下準備で次のようにガウス分布を変形しておく
+        - $p(x) = \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x -\dfrac{1}{2\sigma^2}\mu^2 \right\}$
+        $= \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x \right\}$
