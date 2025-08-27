@@ -226,8 +226,8 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
 
 --- 
 
-### nシグマ範囲
+### 平均値からのずれと標準偏差の関係
 
-- 指数部に注目
-    - $\mathcal{N}(x| \mu, \sigma^2) = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{1}{2}\left( \dfrac{x-\mu}{\sigma} \right)^2 \right\}$
-
+- $d(x) = (x -\mu )/\sigma$とおくと、指数部は関数$d$によって値が決まることが分かる
+    - $\mathcal{N}(x| \mu, \sigma^2) = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{1}{2}d(x)^2 \right\}$
+- $d(x)$: 値$x$が、平均値から標準偏差いくつ分離れているかを表す
