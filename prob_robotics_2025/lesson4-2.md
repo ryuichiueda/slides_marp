@@ -123,3 +123,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $\mathcal{N}(\mu, \sigma^2)$と表記
     - 例: $x \sim \mathcal{N}(\mu, \sigma^2)$: $x$がガウス分布$\mathcal{N}(\mu, \sigma^2)$に従う
 - 変数を明示して$\mathcal{N}(x | \mu, \sigma^2)$と表記することも
+
+--- 
+
+### ガウス分布の性質1
+
+- 問題: それぞれ異なるガウス分布に従う変数$x_1, x_2$の和の分布は？
+    
+
