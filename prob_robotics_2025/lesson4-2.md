@@ -176,9 +176,5 @@ $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{
 	 \mathcal{N}(x_3 | \mu', \sigma'^2)
 	\int_{-\infty}^\infty 
 	\mathcal{N}\left[x_1 \Big| h(x_3), \dfrac{\sigma_1^2\sigma_2^2}{\sigma'^{2}} \right]
-	\text{d}x_1$
-$=
-	\mathcal{N}(x_3 | \mu', \sigma'^2)
-	\int_{-\infty}^\infty 
-	\mathcal{N}\left[x_1 \Big| h(x_3), \dfrac{\sigma_1^2\sigma_2^2}{\sigma'^{2}} \right]
-	\text{d}x_1$
+	\text{d}x_1
+= \mathcal{N}(x_3 | \mu', \sigma'^2)$
