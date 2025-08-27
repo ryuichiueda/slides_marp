@@ -160,7 +160,7 @@ $\cdot \dfrac{1}{\sqrt{2\pi \sigma^2_1}}\exp\left\{ -\dfrac{(x_1 - \mu_1)^2}{2\s
 $= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2} -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
     - 解き方: 積分を次のように分解
         - 積分内に$x_1$のガウス分布を残す（<span style="color:red">積分で$1$になる</span>）
-        - 積分の外に$x_3$の分布を出す
+        - 積分の外に$x_3$の分布を出す（ガウス分布決め撃ちで）
         - 次のスライドに結果だけ示します（計算は教科書で）
 
 --- 
