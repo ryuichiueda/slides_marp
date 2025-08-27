@@ -192,3 +192,17 @@ $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1
     - $y \sim p \ \leftarrow$どうなる？
 - 答え: 
     * $y \sim \mathcal{N} [ a \mu + b, (a\sigma)^2 ]$
+
+--- 
+
+### ガウス分布の性質2（証明）
+
+- $y < y'$となる確率を考える
+    - $\Pr \{ y \le y' \} = \Pr \{ x  \le (y' -b)/a \}$
+	$\int_{-\infty}^{y'} p(y) \text{d}y = \int_{-\infty}^{(y' -b)/a} \dfrac{1}{\sqrt{2\pi \sigma^2}}\exp \left\{ -\dfrac{(x - \mu)^2}{2\sigma^2} \right\}\text{d}x$
+- $y = ax + b$から$\text{d}x = a^{-1}\text{d}y$を右辺に代入
+	- $\Pr \{ y \le y' \} = \Pr \{ x  \le (y' -b)/a \}$
+	$\int_{-\infty}^{y'} p(y) \text{d}y = \int_{-\infty}^{y'} \dfrac{1}{\sqrt{2\pi \sigma^2}}\exp \left\{ -\dfrac{\{(y - b)/a - \mu\}^2}{2\sigma^2} \right\} \left( \dfrac{1}{a} \text{d}y \right)$
+	$= \int_{-\infty}^{y'} \dfrac{1}{\sqrt{2\pi (a\sigma)^2}}\exp \left\{ -\dfrac{(y - b - a\mu)^2}{2(a\sigma)^2} \right\} \text{d}y$
+	$= \int_{-\infty}^{y'} \mathcal{N}\big[ y | a\mu + b, (a\sigma)^2\big] \text{d}y$
+
