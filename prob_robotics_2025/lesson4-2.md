@@ -427,3 +427,8 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 		0 & \sigma_b^2  \\
 	\end{pmatrix}
 	= \text{diag}(\sigma_a^2, \sigma_b^2)$: 対角行列
+- 計算すると
+	$\begin{pmatrix} 
+		0.016 & -0.029 \\
+		-0.029 & 0.197 \\
+	\end{pmatrix}$
