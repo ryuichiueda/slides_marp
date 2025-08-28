@@ -280,7 +280,7 @@ $=\eta \exp\left\{
             - <span style="color:red">両分布の平均値の重みつき平均。精度の良い方に寄る</span>
         - $\Lambda = \Lambda_1 + \Lambda_2$
             - <span style="color:red">精度の単純な和。必ず増加</span>
-$\qquad$![w:550](./figs/gauss_multi.png)
+$\qquad$![w:600](./figs/gauss_multi.png)
 
 ---
 
