@@ -245,7 +245,8 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - $d(x) \le 2$: 9割5分のデータが収まる
     - $d(x) \le 3$: 1000のうち3つのデータが外れる
 - ついでに
-    - 学力偏差値: $10 d(x) + 50$
+    - 学力偏差値: $10 d'(x) + 50$
+        - $d'(x) = ( x -\mu )/\sigma$
 
 ![bg right:30% 95%](./figs/n-sigma.png)
 
