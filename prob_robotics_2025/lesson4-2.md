@@ -299,6 +299,20 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 ## 多変量ガウス分布
 
 - ガウス分布を多次元に拡張
+- 式をまず見せます
 	- $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
 	\exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
+        - ここで
+	$\boldsymbol{x} = \begin{pmatrix}
+		x_1 \\ x_2 \\ \vdots \\ x_n
+		\end{pmatrix}, \ 
+	\boldsymbol{\mu} = \begin{pmatrix}
+		\mu_1 \\ \mu_2 \\ \vdots \\ \mu_n
+		\end{pmatrix}, \ 
+	\Sigma = \begin{pmatrix}
+		\sigma^2_1 & \sigma_{12} & \dots & \sigma_{1n} \\
+		\sigma_{12} & \sigma^2_2 & \dots & \sigma_{2n}  \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n  \\
+	\end{pmatrix}$
 
