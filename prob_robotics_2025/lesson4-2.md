@@ -382,7 +382,6 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 - $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
 \exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
-    - $\boldsymbol{\mu} = (3.88 \ 0.51)^\top$
     - $\Sigma 
 	= \begin{pmatrix} 
 		0.016 & -0.029 \\
