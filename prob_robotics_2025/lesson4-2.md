@@ -339,6 +339,8 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 		\vdots & \vdots & \ddots & \vdots \\
 		\sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n  \\
 	\end{pmatrix}$
+         - $\sigma_{ij} = \big\langle (x_i - \mu_i )(x_j-\mu_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
+- 普通に話す時は<span style="color:red">共分散行列</span>
 
 ---
 
