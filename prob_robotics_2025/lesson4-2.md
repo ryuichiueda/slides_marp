@@ -467,7 +467,7 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
     - $S = \text{diag}(\sigma_a^2, \sigma_b^2)$
 - したがって
     - マハラノビス距離が$n$になる点の描く図形:
-    $ab$-座標系で$a^2/\sigma_a^2 + b^2 / \sigma_b^2 = n^2$を満たす楕円
+    $ab$-座標系で$\dfrac{a^2}{\sigma_a^2} + \dfrac{b^2}{\sigma_b^2} = n^2$を満たす楕円
 
 
 ---
