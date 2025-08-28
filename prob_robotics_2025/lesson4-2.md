@@ -332,7 +332,7 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 
 ### 多変量ガウス分布が現れるとき
 
-- $\boldsymbol{x}$の各要素がガウス分布にしたがう
+- $\boldsymbol{x}$の各要素がガウス分布にしたがうとき
 
 
 ---
