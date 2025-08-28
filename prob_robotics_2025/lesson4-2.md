@@ -340,7 +340,22 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 		\sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n  \\
 	\end{pmatrix}$
          - $\sigma_{ij} = \big\langle (x_i - \mu_i )(x_j-\mu_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
-- 普通に話す時は<span style="color:red">共分散行列</span>
+- 普通に話す時は「共分散行列」でよい
+
+---
+
+### 例: 移動ロボットの実験
+
+- 下の表: 実験結果から求めた分散と共分散
+	- 共分散の求め方: $s_{ab} = \dfrac{1}{N-1}\sum_{i=1}^n (a_i - \bar{a})(b_i - \bar{b})$
+	    - $N$個のデータのペア$(a,b)_{1:N}$に対して
+
+| | $x$[m] | $y$[m] | $\theta$[deg]|
+|:---:|:---:|:---:|:---:|
+$x$[m] | 0.016 | -0.029 | -0.785 |
+$y$[m] | -0.029 | 0.197 | 4.43 |
+$\theta$[deg] | -0.785 | 4.43 | 143  |
+
 
 ---
 
