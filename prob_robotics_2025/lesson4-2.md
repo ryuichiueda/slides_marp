@@ -316,3 +316,10 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 		\sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n  \\
 	\end{pmatrix}$
 
+
+---
+
+### 多変量ガウス分布の性質
+
+- ベクトル$\boldsymbol{x}$のどの変数もガウス分布にしたがう
+
