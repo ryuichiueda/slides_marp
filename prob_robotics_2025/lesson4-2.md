@@ -472,11 +472,33 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ---
 
+### 座標を戻す
+
+- $ab$-座標系で$\dfrac{a^2}{\sigma_a^2} + \dfrac{b^2}{\sigma_b^2} = n^2$を満たす楕円を$xy$-座標系に
+    - $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$
+- $\theta$だけ回転して$\mu$だけ移動
+
+$\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
+
+---
+
+### 実際の値で描画
+
 - $\Sigma = \begin{pmatrix} 
 		0.016 & -0.029 \\
 		-0.029 & 0.197 \\
-	\end{pmatrix} = R(-8.9$deg$)
+	\end{pmatrix}$
+    $= R(-8.9$deg$)
     \begin{pmatrix}
         0.107^2 & 0 \\
         0 & 0.449^2 \\
     \end{pmatrix}R(-8.9$deg$)$
+	$\boldsymbol{\mu} 
+	= \begin{pmatrix}
+		3.88 \\
+		0.51 
+	\end{pmatrix}$
+- 右図: $n=1,2,3$の楕円を描画
+    - <span style="color:red">誤差楕円</span>と呼ばれる
+
+![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
