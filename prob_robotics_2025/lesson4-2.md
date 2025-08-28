@@ -330,7 +330,7 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 		\sigma_{12} & \sigma^2_2 
 	\end{pmatrix}$
         - $\sigma_{12}$: 共分散
-           - $\sigma_{x_1 x_2} = \big\langle (x_1 - \mu_{x_1} )(x_2-\mu_{x_2}) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
+           - $\sigma_{12} = \big\langle (x_1 - \mu_1 )(x_2-\mu_2) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
 	- $x_1, x_2$で積分（周辺化）すると、それぞれ$x_2, x_1$の分布に
 	    - 証明はお任せします
 
