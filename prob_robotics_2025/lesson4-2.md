@@ -456,13 +456,18 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ### 座標変換
 
-- $D_\text{M}(\boldsymbol{x}) =
+- 前ページ最後の式: $D_\text{M}(\boldsymbol{x}) =
 	 \sqrt{
 		 \{R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})\}^\top 
 			S^{-1} \{ R(-\theta)
 		 (\boldsymbol{x} - \boldsymbol{\mu}) \}
 	 }$
-- $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$とおく
+- 次を代入すると$D_\text{M}(\boldsymbol{x}) = \sqrt{ a^2/\sigma_a^2 + b^2 / \sigma_b^2}$ となる
+    - $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$
+    - $S = \text{diag}(\sigma_a^2, \sigma_b^2)$
+- したがって
+    - マハラノビス距離が$n$になる点の描く図形:
+    $ab$-座標系で$a^2/\sigma_a^2 + b^2 / \sigma_b^2 = n^2$を満たす楕円
 
 
 ---
