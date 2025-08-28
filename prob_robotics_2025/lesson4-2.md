@@ -419,3 +419,6 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ---
 
+### 回転量の算出
+
+- 楕円がどれだけ傾いているかを計算
