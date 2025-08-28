@@ -405,7 +405,7 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 	    - 1次元のものと比較を 
 - 図形は楕円に
     - 楕円の式: $\dfrac{(x - \mu_x)^2}{a^2} + \dfrac{(y - \mu_y)^2}{b^2} = 1$
-	    - $(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})$の部分を多項式にすると同じ形に
+	    - $(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})$の部分を多項式にすると同じ形に（次のページから検証）
 
 ![bg right:30% 95%](./figs/2d_gauss_draw_question.png)
 
