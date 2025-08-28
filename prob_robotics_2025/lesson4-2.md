@@ -454,7 +454,15 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ---
 
-### 回転量の算出
+### 座標変換
+
+- $D_\text{M}(\boldsymbol{x}) =
+	 \sqrt{
+		 \{R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})\}^\top 
+			S^{-1} \{ R(-\theta)
+		 (\boldsymbol{x} - \boldsymbol{\mu}) \}
+	 }$
+- $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$とおく
 
 
 ---
