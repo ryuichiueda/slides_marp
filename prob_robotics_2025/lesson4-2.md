@@ -393,6 +393,7 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 		0.51 
 	\end{pmatrix}$
 
+<center style="padding-top:3em">式はわかったけど解釈は？</center>
 
 ---
 
