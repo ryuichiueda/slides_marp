@@ -231,6 +231,8 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
 - 標準偏差で正規化した距離
     - $d(x) = | x -\mu |/\sigma$
     - 値$x$が標準偏差何個分、平均値から離れているかを表す
+- ガウス分布の指数部の値はマハラノビス距離で決まる
+    - $\mathcal{N}(x| \mu, \sigma^2) = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{1}{2}d(x)^2 \right\}$
 
 --- 
 
@@ -242,8 +244,6 @@ $= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$
     - $|d(x)| \le 1$: 7割弱のデータが収まる
     - $|d(x)| \le 2$: 9割5分のデータが収まる
     - $|d(x)| \le 3$: 1000のうち3つのデータが外れる
-        - ここで$d(x) = (x -\mu )/\sigma$
-        - $\mathcal{N}(x| \mu, \sigma^2)  = \eta \exp\left\{ -\dfrac{1}{2}d(x)^2 \right\}$
 
 ![bg right:30% 95%](./figs/n-sigma.png)
 
