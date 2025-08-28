@@ -330,6 +330,18 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 
 ---
 
+### 分散共分散行列
+
+- 前ページの$\Sigma$: 各変数の分散と共分散を組み合わせた行列
+    - $\Sigma = \begin{pmatrix}
+		\sigma^2_1 & \sigma_{12} & \dots & \sigma_{1n} \\
+		\sigma_{12} & \sigma^2_2 & \dots & \sigma_{2n}  \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n  \\
+	\end{pmatrix}$
+
+---
+
 ### 2変量ガウス分布
 
 - ガウス分布にしたがう2つの変数$x_1$と$x_2$の分布を1つの式にまとめるとこうなる
