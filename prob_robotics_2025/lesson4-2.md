@@ -399,10 +399,13 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ### 2変量ガウス分布の描画
 
-- とりあえず中心からマハラノビス距離の等高線を描いてみましょう
+- とりあえず中心からマハラノビス距離$n$になる箇所を描いてみましょう
 	- マハラノビス距離: $D_\text{M}(\boldsymbol{x}) = \sqrt{
-	(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})
-	}$
+	(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})}$
+	    - 1次元のものと比較を 
+- 図形は楕円に
+
+![bg right:30% 95%](./figs/2d_gauss_draw_question.png)
 
 ---
 
