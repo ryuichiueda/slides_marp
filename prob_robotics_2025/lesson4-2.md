@@ -397,26 +397,7 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ---
 
-### 2変量ガウス分布
-
-- ガウス分布にしたがう2つの変数$x_1$と$x_2$の分布を1つの式にまとめるとこうなる
-	- $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^2 |\Sigma|}}
-	\exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
-        - ここで
-	$\boldsymbol{x} = \begin{pmatrix}
-		x_1 \\ x_2 
-		\end{pmatrix}, \ 
-	\boldsymbol{\mu} = \begin{pmatrix}
-		\mu_1 \\ \mu_2 
-		\end{pmatrix}, \ 
-	\Sigma = \begin{pmatrix}
-		\sigma^2_1 & \sigma_{12} \\
-		\sigma_{12} & \sigma^2_2 
-	\end{pmatrix}$
-        - $\sigma_{12}$: 共分散
-           - $\sigma_{12} = \big\langle (x_1 - \mu_1 )(x_2-\mu_2) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
-	- $x_1, x_2$で積分（周辺化）すると、それぞれ$x_2, x_1$の分布に
-	    - 証明はお任せします
+### 2変量ガウス分布の描画
 
 
 ---
