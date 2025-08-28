@@ -411,9 +411,8 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 ---
 
-### 回転量の算出
+### とりあえず対角化
 
-- 楕円がどれだけ傾いているかを計算
 - 次のように$\Sigma$を分解
     - $\Sigma = R(-\theta)^\top S R(-\theta)$
         - $R(\theta) = 
@@ -427,6 +426,36 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 		0 & \sigma_b^2  \\
 	\end{pmatrix}
 	= \text{diag}(\sigma_a^2, \sigma_b^2)$: 対角行列
+- このとき
+    - $D_\text{M}(\boldsymbol{x}) 
+	= \sqrt{
+		(\boldsymbol{x} - \boldsymbol{\mu})^\top \{
+			R(-\theta)^\top S R(-\theta)
+		\}^{-1} (\boldsymbol{x} - \boldsymbol{\mu})
+	}$
+	$=
+	 \sqrt{
+		(\boldsymbol{x} - \boldsymbol{\mu})^\top 
+			R(-\theta)^{-1} S^{-1} \{R(-\theta)^{\top}\}^{-1}
+		 (\boldsymbol{x} - \boldsymbol{\mu})
+	}$
+	$=
+	 \sqrt{
+		(\boldsymbol{x} - \boldsymbol{\mu})^\top 
+			R(-\theta)^{\top} S^{-1}R(-\theta)
+		 (\boldsymbol{x} - \boldsymbol{\mu})
+	}$
+	$=
+	 \sqrt{
+		 \{R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})\}^\top 
+			S^{-1} \{ R(-\theta)
+		 (\boldsymbol{x} - \boldsymbol{\mu}) \}
+	 }$
+
+---
+
+### 回転量の算出
+
 
 ---
 
