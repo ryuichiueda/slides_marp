@@ -349,7 +349,7 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 - 実験で得られたデータのうち、$x$と$y$について多変量ガウス分布（2次元ガウス分布）に当てはめてみましょう
 - [20試行分のデータ](./misc/xy_data.txt)
     - 1列目: $x$[m]、2列目: $y$[m]
-- とりあえず次の値を計算しましょう
+- 計算すべきパラメータ
     - $x, y$それぞれの平均値と分散
     - $x$と$y$の共分散
         - <span style="color:red">データからの共分散の計算方法</span>: $s_{ab} = \dfrac{1}{N-1}\sum_{i=1}^n (a_i - \bar{a})(b_i - \bar{b})$
@@ -374,6 +374,25 @@ $ cat xy_data.txt | tr ' ' \\t | datamash svar 1 svar 2
 $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 -0.029138231578947
 ```
+- これらの値からガウス分布の式を書きましょう
+
+---
+
+### 答え
+
+- $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
+\exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
+    - $\boldsymbol{\mu} = (3.88 \ 0.51)^\top$
+    - $\Sigma 
+	= \begin{pmatrix} 
+		0.016 & -0.029 \\
+		-0.029 & 0.197 \\
+	\end{pmatrix},
+	\boldsymbol{\mu} 
+	= \begin{pmatrix}
+		3.88 \\
+		0.51 
+	\end{pmatrix}$
 
 
 ---
