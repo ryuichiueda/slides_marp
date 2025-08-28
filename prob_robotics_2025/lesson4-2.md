@@ -430,4 +430,8 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 - $\Sigma = \begin{pmatrix} 
 		0.016 & -0.029 \\
 		-0.029 & 0.197 \\
-	\end{pmatrix}$に対して計算すると
+	\end{pmatrix} = R(-8.9$deg$)
+    \begin{pmatrix}
+        0.107^2 & 0 \\
+        0 & 0.449^2 \\
+    \end{pmatrix}R(-8.9$deg$)$
