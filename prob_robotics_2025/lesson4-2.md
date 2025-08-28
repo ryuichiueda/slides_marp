@@ -416,14 +416,14 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 - 楕円がどれだけ傾いているかを計算
 - 次のように$\Sigma$を分解
     - $\Sigma = R(-\theta)^\top S R(-\theta)$
-	$S =
+        - $R(\theta) = 
+	\begin{pmatrix}
+		\cos\theta & -\sin\theta \\
+		\sin\theta & \cos\theta 
+	\end{pmatrix}$: 回転行列
+        - $S =
 	\begin{pmatrix}
 		\sigma_a^2 & 0 \\
 		0 & \sigma_b^2  \\
 	\end{pmatrix}
-	= \text{diag}(\sigma_a^2, \sigma_b^2), 
-	R(\theta) = 
-	\begin{pmatrix}
-		\cos\theta & -\sin\theta \\
-		\sin\theta & \cos\theta 
-	\end{pmatrix}$
+	= \text{diag}(\sigma_a^2, \sigma_b^2)$: 対角行列
