@@ -309,6 +309,42 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 
 ## 多変量ガウス分布
 
+
+
+---
+
+### 2変量ガウス分布
+
+- ガウス分布にしたがう2つの変数$x_1$と$x_2$の分布を1つの式にまとめるとこうなる
+	- $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
+	\exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
+        - ここで
+	$\boldsymbol{x} = \begin{pmatrix}
+		x_1 \\ x_2 
+		\end{pmatrix}, \ 
+	\boldsymbol{\mu} = \begin{pmatrix}
+		\mu_1 \\ \mu_2 
+		\end{pmatrix}, \ 
+	\Sigma = \begin{pmatrix}
+		\sigma^2_1 & \sigma_{12} \\
+		\sigma_{12} & \sigma^2_2 
+	\end{pmatrix}$
+        - $\sigma_{12}$: 共分散
+           - $\sigma_{x_1 x_2} = \big\langle (x_1 - \mu_{x_1} )(x_2-\mu_{x_2}) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
+	- $x_1, x_2$で積分（周辺化）すると、それぞれ$x_2, x_1$の分布に
+	    - 証明はお任せします
+
+
+---
+
+### 多変量ガウス分布の性質
+
+- 周辺化: ベクトルと行列から消したい変数を消せばよい
+    - ロボットの
+- ベクトル$\boldsymbol{x}$のどの変数もガウス分布にしたがう
+
+---
+
 - ガウス分布を多次元に拡張
 - 式をまず見せます
 	- $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
@@ -326,20 +362,3 @@ $\qquad$![w:600](./figs/gauss_multi.png)
 		\vdots & \vdots & \ddots & \vdots \\
 		\sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n  \\
 	\end{pmatrix}$
-
-
----
-
-### 多変量ガウス分布が現れるとき
-
-- $\boldsymbol{x}$の各要素がガウス分布にしたがうとき
-
-
----
-
-### 多変量ガウス分布の性質
-
-- 周辺化: ベクトルと行列から消したい変数を消せばよい
-    - ロボットの
-- ベクトル$\boldsymbol{x}$のどの変数もガウス分布にしたがう
-
