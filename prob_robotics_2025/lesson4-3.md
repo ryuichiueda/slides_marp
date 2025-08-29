@@ -286,3 +286,5 @@ $\Longrightarrow p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\
 
 - 問題: 
 $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$はどんな分布になるか
+- 講義の後半に出てくる形
+    - 解き方: ひたすら式変形
