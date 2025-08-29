@@ -266,3 +266,24 @@ $= \frac{1}{\sqrt{(2\pi)^n |\Sigma| |A|^2}}
 \cdot\exp\left\{
 		-\frac{1}{2}\left[  A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu} \right]^T \Sigma^{-1} \left[  A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu}\right] 
 		\right\}$
+- 指数部の外にある$|\Sigma| |A|^2$について$|\Sigma||A|^2 = |A| |\Sigma| |A^\top|= |A\Sigma A^\top|$
+- 指数部の括弧内$= -\frac{1}{2}  \left[
+		A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )
+		\right]^\top \Sigma^{-1} A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$
+	$= -\frac{1}{2}
+		( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )^\top 
+		(A^{-1})^\top \Sigma^{-1} A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$
+	$= -\frac{1}{2}
+		( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )^\top 
+		(A \Sigma A^\top )^{-1}
+        ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$
+
+---
+
+### ガウス分布の線形変換（続き）
+
+- したがって
+    - $p(\boldsymbol{y}) = \frac{1}{\sqrt{(2\pi)^n |A\Sigma A^\top |}}\cdot \exp\left\{
+		-\frac{1}{2}  (\boldsymbol{y} - \boldsymbol{b} - A\boldsymbol{\mu} )^T (A\Sigma A^\top)^{-1} (\boldsymbol{y} - \boldsymbol{b} - A\boldsymbol{\mu} )
+		\right\}$
+	$= \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\mu} + \boldsymbol{b}, A\Sigma A^\top)$
