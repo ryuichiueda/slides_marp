@@ -29,7 +29,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 質問: この実験について議論してみましょう
+## 実験結果の信頼性
+
+
+---
+
+### 質問: この実験について議論してみましょう
 
 - C君がロボットをある地点からある地点まで自動で走らせるソフトウェアを改良して、評価するために実験
 - 実験内容: 改良前後のソフトウェアで5回ずつロボットを走行させる
@@ -38,3 +43,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 改良後: すべて完走
 
 <center style="padding-top:2em">改良前後どっちが優れている？その前に実験は妥当？</center>
+
+---
+
+### 実験が足りないような気がするが・・・
+
+- どう足りないのか説明ができますか？
+
