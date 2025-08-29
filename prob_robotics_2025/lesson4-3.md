@@ -289,6 +289,7 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 - 講義の後半に出てくる形
     - 解き方: ひたすら式変形
     - 後半のための要望: $s$は$\eta$に組み入れないで
+    - $s > 0$
 
 ---
 
