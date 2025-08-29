@@ -243,3 +243,8 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
     - 答え（これは次のページで扱います）: 
 	    * $\boldsymbol{y} \sim \mathcal{N}(A\boldsymbol{\mu} +\boldsymbol{b}, A\Sigma A^\top )$
 	        - $A\Sigma A^\top$: この形はよく出てくる
+
+---
+
+### 線形変換の証明
+
