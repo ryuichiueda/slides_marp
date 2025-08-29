@@ -23,6 +23,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今回の内容
 
 - 多変量ガウス分布
+- 多変量ガウス分布の演算
 
 ---
 
@@ -221,3 +222,17 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
     - <span style="color:red">誤差楕円</span>と呼ばれる
 
 ![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
+
+---
+
+## 多変量ガウス分布の演算
+
+- 再生性はあるのか
+
+
+---
+
+### 変数の和の分布
+
+- 1次元のときと同様、再生性がある
+
