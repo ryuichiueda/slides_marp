@@ -333,7 +333,12 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 	$\qquad = ( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) - \boldsymbol{d}^\top D^{-1} \boldsymbol{d} + U'$
 	$\qquad = ( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) + U$
 - $L$を指数部に戻す
-	- $p(\boldsymbol{x}) = \dfrac{\eta}{s}
-	\exp\Big\{ -\dfrac{1}{2s} 
+	- $p(\boldsymbol{x}) = \frac{\eta}{s}
+	\exp\Big\{ -\frac{1}{2s} 
 	( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) 
-    \Big\}\cdot$ 
+    \Big\} \cdot \exp \left( - \frac{1}{2s} U \right)$
+	$= \frac{\eta}{s^{1/2}} \frac{1}{\sqrt{(2\pi)^\ell |sD|}} \exp \left\{
+		-\frac{1}{2s}( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) \right\}
+	\cdot e^{ - U/2s}$
+	$= \eta s^{-1/2}e^{-U/2s}
+	\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
