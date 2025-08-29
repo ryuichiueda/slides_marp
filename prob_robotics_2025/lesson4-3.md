@@ -236,4 +236,6 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 
 - 1次元のときと同様、再生性がある
 - $\boldsymbol{x}_i \sim \mathcal{N}(\boldsymbol{\mu}_i, \Sigma_i)\ (i=1,2)$のとき、$\boldsymbol{x} = \boldsymbol{x}_1 + \boldsymbol{x}_2$の分布は？
+    - 答え（1次元のときから類推して書いてみましょう）: 
+        - $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_1 + \boldsymbol{\mu}_2,  \Sigma_1 + \Sigma_2)$
 
