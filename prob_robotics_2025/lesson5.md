@@ -41,12 +41,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 実験結果: 
     - 改良前: 完走$\rightarrow$失敗$\rightarrow$失敗$\rightarrow$完走$\rightarrow$完走
     - 改良後: すべて完走
+- C君の結論: 改良後のソフトウェアの方が優れている
 
-<center style="padding-top:2em">改良前後どっちが優れている？その前に実験は妥当？</center>
+<center style="padding-top:2em">ほんと？</center>
 
 ---
 
 ### 実験が足りないような気がするが・・・
 
 - どう足りないのか説明ができますか？
-
+    - 今回はこの問題について扱う
