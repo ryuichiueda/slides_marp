@@ -249,6 +249,12 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 ### ガウス分布の線形変換
 
 - $\boldsymbol{x}$の座標系から$\boldsymbol{y} = A \boldsymbol{x} + \boldsymbol{b}$の座標系に変換するとき、空間が$|\det(A)|$だけ引き伸ばされる[[杉浦1985]](https://www.utp.or.jp/book/b302043.html)
+    - $|\det(A)|$: $A$の行列式の絶対値（$||A||$と書くとややこしいのでこう表記）
+
+---
+
+### ガウス分布の線形変換（続き）
+
 
 - $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma ) \big/ |\det(A)|$
 $= \mathcal{N}\big[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) | \boldsymbol{\mu}, \Sigma \big] \big/ |\det(A)|$
