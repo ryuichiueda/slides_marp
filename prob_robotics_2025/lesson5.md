@@ -51,3 +51,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - どう足りないのか説明ができますか？
     - 今回はこの問題について扱う
+- 問題へのアプローチ
+    - 実験を無限回にやったときの完走率の<span style="color:red">確率分布</span>を推定
+        - つまり確率（完走率）自体を確率変数として扱う
