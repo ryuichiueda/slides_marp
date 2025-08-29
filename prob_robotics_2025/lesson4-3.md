@@ -241,4 +241,4 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
     - 詳解確率ロボティクスに導出例あり
 - 例2: $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)$のとき、$\boldsymbol{y} = A\boldsymbol{x} + \boldsymbol{b}$の分布は？
     - 答え（これは次のページで扱います）: 
-
+	    * $\boldsymbol{y} \sim \mathcal{N}(A\boldsymbol{\mu} +\boldsymbol{b}, A\Sigma A^\top )$
