@@ -127,7 +127,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ガウス分布の性質1
 
-- 問題: それぞれ異なるガウス分布に従う変数$x_1, x_2$（互いに独立）の和の分布は？
+- 問題: それぞれ異なるガウス分布に従う変数$x_1, x_2$（独立）の和の分布は？
     - つまり次のとき、$x_3 = x_1 + x_2$の分布$p(x_3)$は？
         - $x_1 \sim \mathcal{N}(\mu_1, \sigma^2_1)$
         - $x_2 \sim \mathcal{N}(\mu_2, \sigma^2_2)$
