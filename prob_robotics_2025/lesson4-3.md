@@ -306,3 +306,13 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 	$= \dfrac{\eta}{s}
 	\exp\Big\{ -\dfrac{1}{2s} L(\boldsymbol{x}) \Big\}$
         - ここで$L(\boldsymbol{x})$は指数部に$-2s$をかけたもの
+
+---
+
+### 多変量ガウス分布の積（解答・つづき）
+
+
+- $L$を整理
+	- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
+	$\qquad\quad - (A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - \boldsymbol{x}^\top C^{-1}\boldsymbol{c}$
+	$\qquad\quad - (\boldsymbol{a}- \boldsymbol{b} )^\top B^{-1} (A\boldsymbol{x}) - \boldsymbol{c}^\top C^{-1} \boldsymbol{x} + U'$
