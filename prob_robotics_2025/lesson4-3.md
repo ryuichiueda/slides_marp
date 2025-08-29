@@ -294,7 +294,8 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 
 ### 多変量ガウス分布の積（解答）
 
-- $p(\boldsymbol{x}) = \eta 
+- まず展開$\mathcal{N}$を数式にして整理
+    - $p(\boldsymbol{x}) = \eta 
 	\dfrac{1}{\sqrt{(2\pi)^k |sB| }}
 	\dfrac{1}{\sqrt{(2\pi)^\ell |sC| }}$
 	$\cdot \exp\Big\{
@@ -303,3 +304,4 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 		\Big\}$ 
 	$= \dfrac{\eta}{s}
 	\exp\Big\{ -\dfrac{1}{2s} L(\boldsymbol{x}) \Big\}$
+        - ここで$L(\boldsymbol{x})$は指数部に$-2s$をかけたもの
