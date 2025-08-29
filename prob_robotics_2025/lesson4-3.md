@@ -288,3 +288,18 @@ $\Longrightarrow p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\
 $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$はどんな分布になるか
 - 講義の後半に出てくる形
     - 解き方: ひたすら式変形
+    - 後半のための要望: $s$は$\eta$に組み入れないで
+
+---
+
+### 多変量ガウス分布の積（解答）
+
+- $p(\boldsymbol{x}) = \eta 
+	\dfrac{1}{\sqrt{(2\pi)^k |sB| }}
+	\dfrac{1}{\sqrt{(2\pi)^\ell |sC| }}$
+	$\cdot \exp\Big\{
+		-\dfrac{1}{2s}(\boldsymbol{a} - A\boldsymbol{x} - \boldsymbol{b})^\top B^{-1} (\boldsymbol{a} - A\boldsymbol{x} - \boldsymbol{b})
+		-\dfrac{1}{2s}(\boldsymbol{x} - \boldsymbol{c})^\top C^{-1}(\boldsymbol{x} - \boldsymbol{c})
+		\Big\}$ 
+	$= \dfrac{\eta}{s}
+	\exp\Big\{ -\dfrac{1}{2s} L(\boldsymbol{x}) \Big\}$
