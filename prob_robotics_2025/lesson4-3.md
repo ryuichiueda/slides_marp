@@ -238,5 +238,6 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 - $\boldsymbol{x}_i \sim \mathcal{N}(\boldsymbol{\mu}_i, \Sigma_i)\ (i=1,2)$のとき、$\boldsymbol{x} = \boldsymbol{x}_1 + \boldsymbol{x}_2$の分布は？
     - $\boldsymbol{x}_1, \boldsymbol{x}_2$は独立
     - 答え（1次元のときから類推して書いてみましょう）: 
-        - $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_1 + \boldsymbol{\mu}_2,  \Sigma_1 + \Sigma_2)$
+        * $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_1 + \boldsymbol{\mu}_2,  \Sigma_1 + \Sigma_2)$
+    - 詳解確率ロボティクスに導出例あり
 
