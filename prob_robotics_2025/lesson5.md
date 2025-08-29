@@ -62,10 +62,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 完走率（確率変数）を$t$とすると、$p(t)$はたぶん下図のようになる
     - (a) 試行前: 一様分布に（なにも情報がない）
-    - (b) 何回か試行
-        - 「完走回数/試行数」のところに分布の山が来るが、
-        まだ怪しいので左右に幅
-    - (c) たくさん試行
-        - 完走率がはっきりして、分布が鋭く
+    - (b) 何回か試行: 「完走回数/試行回数」のところにピークが来るが、まだ曖昧
+    - (c) たくさん試行: 完走率がはっきりして、分布が鋭く
 
-$\qquad\qquad\qquad$![w:600](./figs/prob_t.png)
+$\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
+
+<center>どうやって計算するの？</center>
