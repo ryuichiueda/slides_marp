@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: 確率ロボティクス第5回 -->
 
-# 確率ロボティクス第5回: 
+# 確率ロボティクス第5回: 試行回数と信頼性
 
 千葉工業大学 上田 隆一
 
@@ -22,6 +22,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今回の内容
 
-- 多変量ガウス分布
-- 多変量ガウス分布の演算
+- 実験結果の信頼性
+- ベイズの定理
+- 尤度
 
