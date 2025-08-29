@@ -235,4 +235,5 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 ### 変数の和の分布
 
 - 1次元のときと同様、再生性がある
+- $\boldsymbol{x}_i \sim \mathcal{N}(\boldsymbol{\mu}_i, \Sigma_i)\ (i=1,2)$のとき、$\boldsymbol{x} = \boldsymbol{x}_1 + \boldsymbol{x}_2$の分布は？
 
