@@ -319,5 +319,21 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
         - $U'$は$\boldsymbol{x}$と関係のない項
 - $(XY)^\top = Y^\top X^\top$、共分散行列が対称行列という性質を使うと
 	- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
-	$- 2(A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - 2\boldsymbol{x}^\top C^{-1}\boldsymbol{c} + U'$
-	$= \boldsymbol{x}^\top(A^\top B^{-1} A + C^{-1})\boldsymbol{x}- 2\boldsymbol{x}^\top \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\} + U'$
+	$\qquad\quad - 2(A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - 2\boldsymbol{x}^\top C^{-1}\boldsymbol{c} + U'$
+	$\qquad = \boldsymbol{x}^\top(A^\top B^{-1} A + C^{-1})\boldsymbol{x}- 2\boldsymbol{x}^\top \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\} + U'$
+
+---
+
+### 多変量ガウス分布の積（解答・つづき）
+
+- 前ページ最後の行について、次のようにおく
+    - $D^{-1} = A^\top B^{-1} A + C^{-1}$
+    - $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
+- $L(\boldsymbol{x}) = \boldsymbol{x}^\top D^{-1} \boldsymbol{x} - 2\boldsymbol{x}^\top D^{-1}\boldsymbol{d} +U'$
+	$\qquad = ( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) - \boldsymbol{d}^\top D^{-1} \boldsymbol{d} + U'$
+	$\qquad = ( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) + U$
+- $L$を指数部に戻す
+	- $p(\boldsymbol{x}) = \dfrac{\eta}{s}
+	\exp\Big\{ -\dfrac{1}{2s} 
+	( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) 
+    \Big\}\cdot$ 
