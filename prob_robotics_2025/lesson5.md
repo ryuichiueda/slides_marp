@@ -68,3 +68,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 
 <center>どうやって計算するの？</center>
+
+---
+
+### 事前分布・事後分布
+
