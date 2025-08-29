@@ -232,7 +232,7 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 
 ---
 
-### 再生性
+### 再生性・線形変換
 
 - 例1: $\boldsymbol{x}_i \sim \mathcal{N}(\boldsymbol{\mu}_i, \Sigma_i)\ (i=1,2)$のとき、$\boldsymbol{x} = \boldsymbol{x}_1 + \boldsymbol{x}_2$の分布は？
     - $\boldsymbol{x}_1, \boldsymbol{x}_2$は独立
