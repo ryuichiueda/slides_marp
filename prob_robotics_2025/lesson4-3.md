@@ -350,6 +350,16 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 - 問題: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$はどんな分布になるか
 - 答え: $p(\boldsymbol{x}) = \eta s^{-1/2}e^{-U/2s}
 	\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
-    - ここで $U = (\boldsymbol{a} - \boldsymbol{b})^\top B^{-1}(\boldsymbol{a} - \boldsymbol{b}) + \boldsymbol{c}^\top C^{-1} \boldsymbol{c} - \boldsymbol{d}^\top D^{-1} \boldsymbol{d}$
+    - $D^{-1} = A^\top B^{-1} A + C^{-1}$
+    - $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
+    - $U = (\boldsymbol{a} - \boldsymbol{b})^\top B^{-1}(\boldsymbol{a} - \boldsymbol{b}) + \boldsymbol{c}^\top C^{-1} \boldsymbol{c} - \boldsymbol{d}^\top D^{-1} \boldsymbol{d}$
 
 ということでガウス分布になる（どう使うかは講義の後半に期待）
+
+---
+
+## 多変量ガウス分布のまとめ
+
+- 多変量ガウス分布（多次元ガウス分布）を導入
+    - パラメータは平均と分散共分散行列
+
