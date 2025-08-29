@@ -350,4 +350,6 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 - 問題: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$はどんな分布になるか
 - 答え: $p(\boldsymbol{x}) = \frac{\eta}{s}= \eta s^{-1/2}e^{-U/2s}
 	\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
-        - ということでガウス分布になる（どう使うかは講義の後半に期待）
+        - $U = (\boldsymbol{a} - \boldsymbol{b})^\top B^{-1}(\boldsymbol{a} - \boldsymbol{b}) + \boldsymbol{c}^\top C^{-1} \boldsymbol{c} - \boldsymbol{d}^\top D^{-1} \boldsymbol{d}$
+
+ということでガウス分布になる（どう使うかは講義の後半に期待）
