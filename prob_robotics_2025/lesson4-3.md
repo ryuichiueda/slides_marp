@@ -316,3 +316,8 @@ $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsy
 	- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
 	$\qquad\quad - (A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - \boldsymbol{x}^\top C^{-1}\boldsymbol{c}$
 	$\qquad\quad - (\boldsymbol{a}- \boldsymbol{b} )^\top B^{-1} (A\boldsymbol{x}) - \boldsymbol{c}^\top C^{-1} \boldsymbol{x} + U'$
+        - $U'$は$\boldsymbol{x}$と関係のない項
+- $(XY)^\top = Y^\top X^\top$、共分散行列が対称行列という性質を使うと
+	- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
+	$- 2(A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - 2\boldsymbol{x}^\top C^{-1}\boldsymbol{c} + U'$
+	$= \boldsymbol{x}^\top(A^\top B^{-1} A + C^{-1})\boldsymbol{x}- 2\boldsymbol{x}^\top \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\} + U'$
