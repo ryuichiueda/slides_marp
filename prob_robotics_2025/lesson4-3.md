@@ -249,9 +249,9 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 ### ガウス分布の線形変換
 
 - $\boldsymbol{x}$の座標系から$\boldsymbol{y} = A \boldsymbol{x} + \boldsymbol{b}$の座標系に変換するとき、空間が$|\det(A)|$だけ引き伸ばされる[[杉浦1985]](https://www.utp.or.jp/book/b302043.html)
-    - $|\det(A)|$: $A$の行列式の絶対値（$||A||$と書くとややこしいのでこう表記）
-- 下図の緑色の部分の面積比が$1:|\det(A)|$
-
+    - 下図の緑色の部分の面積比が$1:|\det(A)|$
+        - 補足: $|\det(A)|$は$A$の行列式の絶対値
+        （$||A||$と書くとややこしいのでこう表記）
 ![w:600](https://upload.wikimedia.org/wikipedia/commons/3/34/DeterminantOfMatrix.png)
 <span style="font-size:50%">[（画像: CC0）](https://commons.wikimedia.org/wiki/File:DeterminantOfMatrix.png)</span>
 
@@ -259,9 +259,9 @@ $\qquad\qquad\qquad$![w:700](./figs/ellipse.png)
 
 ### ガウス分布の線形変換（続き）
 
+- 空間が$|\det(A)|$引き伸ばされると密度は$1/|\det(A)|$だけ薄まる
+    - $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma ) \big/ |\det(A)|= \mathcal{N}\big[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) | \boldsymbol{\mu}, \Sigma \big] \big/ |\det(A)|$
 
-- $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma ) \big/ |\det(A)|$
-$= \mathcal{N}\big[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) | \boldsymbol{\mu}, \Sigma \big] \big/ |\det(A)|$
 $= \dfrac{1}{\sqrt{(2\pi)^n |\Sigma| |A|^2}}
 \cdot\exp\left\{
 		-\dfrac{1}{2}\left[  A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu} \right]^T \Sigma^{-1} \left[  A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu}\right] 
