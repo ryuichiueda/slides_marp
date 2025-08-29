@@ -51,6 +51,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - どう足りないのか説明ができますか？
     - 今回はこの問題について扱う
-- 問題へのアプローチ
-    - 実験を無限回にやったときの完走率の<span style="color:red">確率分布</span>を推定
-        - つまり確率（完走率）自体を確率変数として扱う
+- 問題へのアプローチ: <span style="color:red">完走率の確率分布を推定する</span>
+    - つまり確率（完走率）自体を確率変数として扱う
+    - 背景となる考え: 無限回の試行をしないと完走率はそもそも不確か
+    $\rightarrow$完走率は確率的
