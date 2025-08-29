@@ -49,7 +49,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 実験が足りないような気がするが・・・
 
-- どう足りないのか説明ができますか？
+- このあと試行を重ねると結果が逆転するかもしれない
     - 今回はこの問題について扱う
 - 問題へのアプローチ: <span style="color:red">完走率の確率分布を推定する</span>
     - つまり確率（完走率）自体を確率変数として扱う
