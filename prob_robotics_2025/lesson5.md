@@ -126,6 +126,8 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
 
 ---
 
+### 事後分布の導出（完了）
+
 - したがって次が成立
     - $p_{i-1}(t|x_i)= \eta \ t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
     - 意味: $x_i$が成功だと事前分布に$t$、失敗だと$t-1$をかけて
@@ -134,3 +136,12 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
     - $p_{a+b}(t) = \eta \ t^a (1-t)^b p_0(t)$
 - $p_0$が一様分布だとすると
     - <span style="color:red">$p(t) = \eta \ t^a (1-t)^b$</span> が、$a+b$回試行したあとの完走率の分布
+
+---
+
+### 事後分布の描画
+
+- 改良前のソフトウェアの試行での分布の推移を描いてみましょう
+    - 完走$\rightarrow$失敗$\rightarrow$失敗$\rightarrow$完走$\rightarrow$完走
+    * こうなる
+    $\qquad\qquad\qquad$![w:800](./figs/post_prob.png)
