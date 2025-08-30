@@ -191,5 +191,8 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
     - 条件
         - 改良前の完走率: $t^*_\text{before} = 0.6$（固定）
         - 改良後の完走率: $t^*_\text{after} = 1.0, 0.9, 0.8, 0.7$のいずれか
+- 無意味な確率が5\%以下になる試行回数
+    - $t^*_\text{after} = 0.8$だと30回程度
+    - $t^*_\text{after} = 0.7$だと100回以上
 
 ![bg right:30% 100%](./figs/false_prob_reduction.png)
