@@ -194,5 +194,8 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 - 無意味な確率が5\%以下になる試行回数
     - $t^*_\text{after} = 0.8$だと30回程度
     - $t^*_\text{after} = 0.7$だと100回以上
+        - 100回で10\%は下回る
+- （学科の学生の感覚よりも）かなり試行回数が必要
 
 ![bg right:30% 100%](./figs/false_prob_reduction.png)
+
