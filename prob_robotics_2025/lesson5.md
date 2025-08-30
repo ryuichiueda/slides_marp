@@ -199,3 +199,11 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 
 ![bg right:30% 100%](./figs/false_prob_reduction.png)
 
+
+---
+
+### ここまでのまとめ
+
+- 試行での比較については、その信頼性が確率の計算で求められる
+    - 完走率等の確率に対して、さらに確率分布を考える
+
