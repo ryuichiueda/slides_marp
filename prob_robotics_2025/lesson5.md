@@ -101,7 +101,12 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 ### さらに計算
 
 - $p_{i-1}(t|x_i)= \dfrac{p_{i-1}(x_i|t)}{p_{i-1}(x_i)}\cdot p_{i-1}(t)$の各要素を見ていきましょう
-    - $p_{i-1}(x_i|t)$: 完走率が$t$のときに、$x_i$が完走である確率$\rightarrow$値は$t$
-    - $p_{i-1}(x_i) = \int_{t=0}^1 p_{i-1}(x_i,t)\text{d}t$
-    $= \int_{t=0}^1 p_{i-1}(x_i|t)p_{i-1}(t)\text{d}t$
-    $= \int_{t=0}^1 t p_{i-1}(t)\text{d}t$
+    - $p_{i-1}(x_i|t)$: 完走率が$t$のときに、$x_i$となる確率
+        - $x_i$が完走: $t$
+        - $x_i$が失敗: $1-t$
+        - 上記をまとめると <span style="color:red">$p_{i-1}(x_i|t) = t^{x_i}(1-t)^{1-x_i}$</span>
+    - $p_{i-1}(x_i) = \int_{t=0}^1 p_{i-1}(x_i,t)\text{d}t= \int_{t=0}^1 p_{i-1}(x_i|t)p_{i-1}(t)\text{d}t$
+    <span style="color:red">$= \int_{t=0}^1 t p_{i-1}(t)\text{d}t$</span>
+- したがって
+    - $p_{i-1}(t|x_i)= \dfrac{t^{x_i}(1-t)^{1-x_i}}{\int_{t'=0}^1 t' p_{i-1}(t')\text{d}t'}\cdot p_{i-1}(t) = \eta t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
+        - 補足: 積分のなかの$t'$の「$'$」は、他の$t$と違う扱いをするという意味
