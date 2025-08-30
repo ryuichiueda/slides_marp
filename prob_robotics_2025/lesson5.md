@@ -146,3 +146,12 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
     - $p(t) = \eta \ t^a (1-t)^b$
     * こうなる
     $\qquad\qquad\qquad$![w:700](./figs/post_prob.png)
+
+---
+
+### 分布の比較
+
+- 5回ずつ試行が終わった時点での改良前後での分布の比較
+    - これも余裕があれば描いてみましょう
+    * こうなる
+    $\qquad\qquad\qquad$![w:400](./figs/prob_comp.png)
