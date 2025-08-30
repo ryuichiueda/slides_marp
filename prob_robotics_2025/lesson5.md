@@ -169,5 +169,6 @@ $= \int_0^1 p(t_\text{after})\int_{t_\text{after}}^1 p(t_\text{before})\text{d}t
 $= \int_0^1 p_\text{after}(t)\int_{t}^1 p_\text{before}(t')\text{d}t'\text{d}t$
 $= \int_0^1 6t^5 [ 10t'^6 -24t'^5 + 15t'^4 ]_{t'}^1 \text{d}t$
 $= \int_0^1 6t^5 (1 - 10 t^6 + 24 t^5 - 15t^4)\text{d}t$
-$= 1/11$
+<span style="color:red">$= 1/11$</span>
+$\Longrightarrow$ 9\%の確率で改良前のほうが完走率が高い
 
