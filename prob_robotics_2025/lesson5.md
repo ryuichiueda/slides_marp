@@ -89,7 +89,7 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 - $p(t, x)$という分布を考える
     - $t, x$がなんなのかはとりあえず考えない
 - 乗法定理で2通りの等式を作成
-    - $p(t, b) = p(t|b)p(b)$
-    - $p(t, b) = p(b|t)p(t)$
-- 右辺どうしで等式を作り、$p(b)$で割る
-    - $p(t|b)= \dfrac{p(b|t)p(t)}{b(b)}$
+    - $p(t, x) = p(t|x)p(x)$
+    - $p(t, x) = p(x|t)p(t)$
+- 右辺どうしで等式を作り、$p(x)$で割る$\Longrightarrow p(t|x)= \dfrac{p(x|t)p(t)}{p(x)}$
+    - $p(x|t), p(x)$がなんなのかは置いておくと完走率の分布$p(t)$に、試行の成否$x$の情報が入ったときに成立する等式になっている
