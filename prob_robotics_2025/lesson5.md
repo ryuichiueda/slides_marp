@@ -67,6 +67,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 
+<center>この分布で改良前後の結果を比較してみましょう
+<br />（どうこの分布を計算するかはさておき）</center>
+
+---
+
 <center>どうやって計算するの？</center>
 
 ---
@@ -119,4 +124,4 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 - これまでに$a$回成功、$b$回失敗したとすると
     - $p_{a+b}(t) = \eta \ t^a (1-t)^b p_0(t)$
 - $p_0$が一様分布だとすると
-    - <span style="color:red">$p(t) = \eta \ t^a (1-t)^b$</span>が、$a+b$回試行したあとの完走率の分布
+    - <span style="color:red">$p(t) = \eta \ t^a (1-t)^b$</span> が、$a+b$回試行したあとの完走率の分布
