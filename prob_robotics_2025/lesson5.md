@@ -77,8 +77,9 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 - たくさん試行すると(c)のように改良前後の完走率の分布が（ほぼ）重ならない
     - どちらが優れているか（ほぼ）分かる
 - 試行が5回ずつ程度だと(b)のように分布が重なっていそう
+    - 改良前後の完走率が逆転している可能性が無視できないほどある
 
-$\qquad\qquad\qquad$![w:1000](./figs/prob_t_compare.png)
+$\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
 
 <center>どうやって計算するの？</center>
 
