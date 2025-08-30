@@ -156,4 +156,11 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
     * こうなる
     $\qquad\qquad\qquad$![w:400](./figs/prob_comp.png)
         - 改良前の完走率のほうが高い可能性はある
-        （どれくらい？計算してみましょう）
+
+---
+
+### 改良前の完走率のほうが高い確率
+
+- $p_\text{before}(t) = \eta t^3(1-t)^2 = 60 t^3(1-t)^2$
+- $p_\text{after}(t) = \eta t^5 = 6t^6$
+
