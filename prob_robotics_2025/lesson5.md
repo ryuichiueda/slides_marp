@@ -72,6 +72,10 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 
 ---
 
+### 完走率の確率分布を考えると比較ができる
+
+
+
 <center>どうやって計算するの？</center>
 
 ---
