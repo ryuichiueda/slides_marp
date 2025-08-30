@@ -173,3 +173,12 @@ $= \int_0^1 6t^5 (1 - 10 t^6 + 24 t^5 - 15t^4)\text{d}t$
 <span style="color:red">$= 1/11$</span>
 $\Longrightarrow$ 9\%の確率で改良前のほうが完走率が高い
 
+
+---
+
+### もし改良後の試行で1回失敗があったら
+
+- $p_\text{after}(t) = \eta t^4(1-t)$
+- 同様に計算すると$\Pr\{ t_\text{before} > t_\text{after} \} = 0.28$
+$\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
+- （試行回数は実験前に決めないといけないので）試行回数は全然足りない
