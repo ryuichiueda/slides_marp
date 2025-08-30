@@ -106,7 +106,7 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
         - $x_i$が失敗: $1-t$
         - 上記をまとめると <span style="color:red">$p_{i-1}(x_i|t) = t^{x_i}(1-t)^{1-x_i}$</span>
     - $p_{i-1}(x_i) = \int_{t=0}^1 p_{i-1}(x_i,t)\text{d}t= \int_{t=0}^1 p_{i-1}(x_i|t)p_{i-1}(t)\text{d}t$
-    $=\int_{t=0}^1 t p_{i-1}(t)\text{d}t=$<span style="color:red">$\langle t \rangle_{p_{i-1}(t)}$</span>
+    $=\int_{t=0}^1 t p_{i-1}(t)\text{d}t=$<span style="color:red">$\langle t \rangle_{p_{i-1}(t)}$（事前分布での完走率の期待値）</span>
 - したがって
-    - $p_{i-1}(t|x_i)= \dfrac{t^{x_i}(1-t)^{1-x_i}}{\int_{t'=0}^1 t' p_{i-1}(t')\text{d}t'}\cdot p_{i-1}(t) = \eta t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
-        - 補足: 積分のなかの$t'$の「$'$」は、他の$t$と違う扱いをするという意味
+    - $p_{i-1}(t|x_i)= \dfrac{t^{x_i}(1-t)^{1-x_i}}{\langle t' \rangle_{p_{i-1}(t')}}\cdot p_{i-1}(t) = \eta t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
+        - 補足: $t'$の「$'$」は、他の$t$と違う扱いをするという意味
