@@ -155,3 +155,5 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
     - これも余裕があれば描いてみましょう
     * こうなる
     $\qquad\qquad\qquad$![w:400](./figs/prob_comp.png)
+        - 改良前の完走率のほうが高い可能性はある
+        （どれくらい？計算してみましょう）
