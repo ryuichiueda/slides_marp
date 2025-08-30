@@ -94,10 +94,14 @@ $\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
 - 右辺どうしで等式を作り、$p(x)$で割る$\Longrightarrow p(t|x)= \dfrac{p(x|t)}{p(x)}\cdot p(t)$
     - $p(x|t), p(x)$がなんなのかは置いておくと完走率の分布$p(t)$に、試行の成否$x$の情報が入ったときに成立する等式になっている
 - 添字をつける
-    - $p_{i-1}(t|x_i)= \dfrac{p_{i-1}(x_i|t)}{p_{i-1}(x)}\cdot p_{i-1}(t)$
+    - $p_{i-1}(t|x_i)= \dfrac{p_{i-1}(x_i|t)}{p_{i-1}(x_i)}\cdot p_{i-1}(t)$
 
 ---
 
 ### さらに計算
 
-- $p_{i-1}(t|x_i)= \dfrac{p_{i-1}(x_i|t)}{p_{i-1}(x)}\cdot p_{i-1}(t)$
+- $p_{i-1}(t|x_i)= \dfrac{p_{i-1}(x_i|t)}{p_{i-1}(x_i)}\cdot p_{i-1}(t)$の各要素を見ていきましょう
+    - $p_{i-1}(x_i|t)$: 完走率が$t$のときに、$x_i$が完走である確率$\rightarrow$値は$t$
+    - $p_{i-1}(x_i) = \int_{t=0}^1 p_{i-1}(x_i,t)\text{d}t$
+    $= \int_{t=0}^1 p_{i-1}(x_i|t)p_{i-1}(t)\text{d}t$
+    $= \int_{t=0}^1 t p_{i-1}(t)\text{d}t$
