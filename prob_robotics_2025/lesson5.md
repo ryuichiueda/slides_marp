@@ -252,4 +252,11 @@ $p(a|b)= \eta p(b|a)p(a)$の意味は？
 ### 周辺尤度
 
 - $p(a|b)= p(b|a)p(a)/p(b)$の$p(b)$の値のこと
+- 意味: 事前分布$p(a)$を信じる時に、観測された情報$b$がどれだけ妥当かを表す数値
+    - 変形すると（少し）分かる
+        - $p(b) = \int_{-\infty}^\infty p(b|a)p(a)\text{d}a = \langle p(b|a) \rangle_{p(a)}$
+            - $a$が起こりやすい時に$p(b|a)$が大きいと周辺尤度は大きく
+    - 実例（条件付きの分布の場合）
+        - $p(x_i | x_{1:i-1}) = \int_{0}^1 p(t, x_i| x_{1:i-1}) \text{d}t = \int_{0}^1 p(x_i|t)p_{i-1}(t) \text{d}t$
+    $=\langle p(x_i|t) \rangle_{p_{i-1}(t)}=\langle t^{x_i}(1-t)^{1-x_i} \rangle_{p_{i-1}(t)}$
 
