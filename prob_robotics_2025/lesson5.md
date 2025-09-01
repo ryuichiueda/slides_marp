@@ -225,7 +225,8 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 $p(a|b)= \eta p(b|a)p(a)$の意味は？
 
 - 新たな情報を分布に反映する式
-    - $p(a)$の分布があるとき、そこに新たな情報$b$を加えると、分布が$p(a|b)$に変化
-    - この文脈での用語
-        - $p(a)$: <span style="color:red">事前分布</span>
-        - $p(a|b)$: <span style="color:red">事後分布</span>
+    - $p(a)$に新たな情報$b$を加えると、分布が$p(a|b)$に変化
+        - 例: 試行$x_i$の結果を観測すると、$p_{i-1}$が$p_i$に変化
+- この文脈での用語
+    - $p(a)$: <span style="color:red">事前分布</span>
+    - $p(a|b)$: <span style="color:red">事後分布</span>
