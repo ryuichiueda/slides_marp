@@ -129,7 +129,7 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
 
 ---
 
-### 事後分布の描画
+### 完走率の分布の描画
 
 - 改良前のソフトウェアの試行での分布の推移を描いてみましょう
     - 完走$\rightarrow$失敗$\rightarrow$失敗$\rightarrow$完走$\rightarrow$完走
