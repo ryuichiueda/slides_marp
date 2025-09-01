@@ -281,3 +281,10 @@ $p(a|b)= \eta p(b|a)p(a)$の意味は？
 ![bg right:30% 95%](https://upload.wikimedia.org/wikipedia/commons/f/f3/Beta_distribution_pdf.svg?uselang=ja)
 
 <span style="font-size:50%">[図: パブリックドメイン](https://commons.wikimedia.org/wiki/File:Beta_distribution_pdf.svg)</span>
+
+--- 
+
+### ベータ分布とベルヌーイ試行
+
+- ベルヌーイ試行: 完走/失敗、（コインの）表/裏、という2値の確率変数で結果が表せる試行
+
