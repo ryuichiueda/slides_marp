@@ -116,7 +116,7 @@ $\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
 
 ---
 
-### $p_i$の導出（完了）
+### 完走率の分布の導出（完了）
 
 - したがって次が成立
     - $p_i(t)= \eta \ t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
