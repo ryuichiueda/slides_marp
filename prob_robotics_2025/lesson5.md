@@ -230,3 +230,11 @@ $p(a|b)= \eta p(b|a)p(a)$の意味は？
 - この文脈での用語
     - $p(a)$: <span style="color:red">事前分布</span>
     - $p(a|b)$: <span style="color:red">事後分布</span>
+
+![bg right:25% 95%](./figs/bayes_add_info.png)
+
+---
+
+### 尤度、周辺尤度
+
+$p(a|b)= p(b|a)p(a)/p(b)$の$p(b|a)$と$p(b)$の意味は？
