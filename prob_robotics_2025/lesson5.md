@@ -217,3 +217,7 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 
 ## ベイズの定理
 
+- さっき使ったこの式変形は実はとても重要
+    - $p(t, x) = p(t|x)p(x) = p(x|t)p(t)$
+    $\Longrightarrow p(t|x)= \dfrac{p(x|t)p(t)}{p(x)}$
+- （乗法定理の変形であることはさておき）<span style="color:red">ベイズの定理</span>と呼ばれる
