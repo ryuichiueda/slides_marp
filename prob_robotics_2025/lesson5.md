@@ -222,3 +222,6 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 
 ### ベイズの定理の意味
 
+$p(a|b)= \eta p(b|a)p(a)$の意味は？
+
+- $p(a)$の分布があるとき、そこに新たな情報$b$を加えると、分布が$p(a|b)$に変化
