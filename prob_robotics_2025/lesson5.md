@@ -24,7 +24,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 実験結果の信頼性
 - ベイズの定理
-- 尤度
+- 共役性
 
 
 ---
@@ -262,3 +262,9 @@ $p(a|b)= \eta p(b|a)p(a)$の意味は？
 - 生物的な意味: $p(b)$がとても小さいと、経験を裏切られてとてもびっくりする
     - $-\log p(b)$: シャノンサプライズ
     - e.g. 自由エネルギー原理
+
+---
+
+## 共役性
+
+--- 
