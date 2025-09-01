@@ -206,11 +206,19 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 
 ## ベイズの定理
 
-- さっき使ったこの式変形は実はとても重要
-    - $p(a, b) = p(a|b)p(b) = p(b|a)p(a)$
+---
+
+### さっき使ったこの式変形は実はとても重要
+
+- $p(a, b) = p(a|b)p(b) = p(b|a)p(a)$
     $\Longrightarrow p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \dfrac{p(b|a)p(a)}{\int_{-\infty}^\infty p(b|a')p(a') \text{d}a'}$
     - （乗法定理の変形であることはさておき）<span style="color:red">ベイズの定理</span>と呼ばれる
 - ベイズの定理の様々な表記
     - $p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \eta p(b|a)p(a) = \dfrac{p(b|a)p(a)}{\langle p(b|a') \rangle_{p(a')}}$
         - $a,b$が連続、離散どちらでも成立
     - $\Pr \{A|B \} = \dfrac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}$
+
+---
+
+### ベイズの定理の意味
+
