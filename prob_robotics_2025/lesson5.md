@@ -273,4 +273,11 @@ $p(a|b)= \eta p(b|a)p(a)$の意味は？
 
 - 実験の話で求めた事後分布の形
     - $p(t) = \eta \ t^a (1-t)^b$
-- 一般的には$p(x|\alpha, \beta) = \eta x^{\alpha-1}(1-x)^{\beta-1}$と表す
+- 一般的な表記
+    - $p(x|\alpha, \beta) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
+    - $= \dfrac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}$
+        - $B(\alpha, \beta) = \int_0^1 x^{\alpha-1}(1-x)^{\beta-1}\text{d}x$（ベータ関数）
+
+![bg right:30% 95%](https://upload.wikimedia.org/wikipedia/commons/f/f3/Beta_distribution_pdf.svg?uselang=ja)
+
+<span style="font-size:50%">[図: パブリックドメイン](https://commons.wikimedia.org/wiki/File:Beta_distribution_pdf.svg)</span>
