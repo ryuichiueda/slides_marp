@@ -24,7 +24,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 実験結果の信頼性
 - ベイズの定理
-- 共役性
+- 補足
 
 
 ---
@@ -265,6 +265,11 @@ $p(a|b)= \eta p(b|a)p(a)$の意味は？
 
 ---
 
-## 共役性
+## その他補足
 
 --- 
+
+### ベータ分布
+
+- 実験の話で求めた事後分布
+    - $p(t) = \eta \ t^a (1-t)^b$
