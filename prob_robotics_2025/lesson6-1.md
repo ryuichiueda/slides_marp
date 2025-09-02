@@ -59,6 +59,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - ロボットの位置の表現（下図）
     - $\boldsymbol{x}_0, \boldsymbol{x}_1, \boldsymbol{x}_2, \dots$
 - 位置・向き（あわせて「姿勢」）の分布
-    - $p_0, p_1, p_2, \dots$
+    - $p_0, p_1, p_2, \dots$ <span style="color:red">$\Longleftarrow$これを計算したい</span>
 
 ![bg right:20% 95%](./figs/trajectory.png)
