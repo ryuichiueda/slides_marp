@@ -31,7 +31,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - おさらい
     - 4章ではロボットが動いたあとの位置、向きの確率分布を考えた
-    - <span style="color:red">この確率分布はロボットと一緒に動いてきたと考えられる</span>
+- 今回考えること
+    - この確率分布はロボットと一緒に動いてきたと考えられる
+    $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだろう？</span>
 
 ![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
 
