@@ -29,6 +29,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 動く物体と確率
 
+- おさらい
+    - 4章ではロボットが動いたあとの位置、向きの確率分布を考えた
+    - <span style="color:red">この確率分布はロボットと一緒に動いてきたと考えられる</span>
+
+![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
 
 ---
 
+### 離散時間系の導入
+
+- 
