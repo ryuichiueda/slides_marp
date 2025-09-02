@@ -62,3 +62,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $p_0, p_1, p_2, \dots$ <span style="color:red">$\Longleftarrow$これを計算したい</span>
 
 ![bg right:20% 95%](./figs/trajectory.png)
+
+---
+
+### ロボットの移動のモデル化
