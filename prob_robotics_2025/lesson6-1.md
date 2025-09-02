@@ -68,5 +68,8 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### 準備2: ロボットの移動のモデル化
 
 - 離散時刻ごとに、ロボットはモータに送る制御指令を変えると仮定
-    - 制御指令: 直進の速度$\nu$と角速度$\omega$の2値
+- 制御指令: 直進の速度$\nu$と角速度$\omega$の2値（右図）
+    - 注意: その場で回転できるロボットを仮定（乗用車とは違います）
 - 時刻$t$の制御指令を$\boldsymbol{u}_t = (\nu \ \omega)^\top$と表現
+
+![bg right:30% 95%](./figs/control_output.png)
