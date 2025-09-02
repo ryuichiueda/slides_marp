@@ -32,8 +32,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - おさらい
     - 4章ではロボットが動いたあとの位置、向きの確率分布を考えた
 - 今回考えること
-    - この確率分布はロボットと一緒に動いてきたと考えられる
-    $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだろう？</span>
+    - この確率分布はロボットと一緒に動いてきた
+        - ロボットが動けば中心も動く
+        - ロボットの動きには雑音があるので分布が広がる
+
+
+$\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだろう？</span>
 
 ![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
 
@@ -41,4 +45,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 離散時間系の導入
 
-- 
+- 連続的な時間で確率分布を考えるのは
