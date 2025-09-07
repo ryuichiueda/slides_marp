@@ -150,20 +150,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - ロボットを人間が操作してロボットのセンサでセンシング
 - ずれないようにつなげていく
     （コンピュータに計算させて自動で）
+    - 右図: できた地図
         <iframe width="560" height="315" src="https://www.youtube.com/embed/b2kYQ11PUSI?si=3VsJxUuX92oP6DZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-- 右図: できた地図
 
 ![bg right:40% 98%](map1.png)
-
----
-
-## 地図づくり（おまけ）
-
-- 地図が歪んで作られて、修正される様子
-    - [ずれている: 12:49ごろ](https://youtu.be/jS5_a9BW2zI?si=0JT8wF6IS8fOH1Yw&t=769)
-    - [なおっている: 13:16ごろ](https://www.youtube.com/watch?v=jS5_a9BW2zI&t=796s)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jS5_a9BW2zI?si=0JT8wF6IS8fOH1Yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -173,20 +163,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 左: 2次元のLiDARで作成
     - 右: 3次元のLiDARで作成
         - いずれもロボットを手動で走らせて作成、200m×300m
+- 理屈は難しい$\rightarrow$[大学の講義資料1](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_1.html)、[大学の講義資料2](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_2.html)
 
-<img width="50%" src="tsudanuma.png" /><img width="50%" src="3dmap.png" />
-
----
-
-## 地図作成の方法
-
-1. ロボットを円軌道で動かして、センサで見つけた星の位置を記録（左図）
-（桃色の線分の先端）
-    - <span style="color:red">実際にはロボットの経路は歪む</span>ので先端が揃わない
-2. 星の位置が揃う軌道を推定$\rightarrow$改めて星の位置を記録（右図）
-- 言葉で説明すると簡単だけど数学は難しい$\rightarrow$[大学の講義資料1](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_1.html)、[大学の講義資料2](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_2.html)
-<center>　　　<img width="33%" src="draw_graphslam_log.png" /><img width="33%" src="graphslam.png" />
-</center>
+<img width="40%" src="tsudanuma.png" /><img width="40%" src="3dmap.png" />
 
 ---
 
