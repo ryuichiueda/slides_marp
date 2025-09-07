@@ -78,7 +78,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 俯瞰ができていない（疑惑）
     - 猫の頭の中に<span style="color:red">地図</span>はあるだろうか？
-    - 自分の見ている風景が地図のどこに相当するか理解できてる？
+    - 自分の見ている風景が<span style="color:red">地図のどこ</span>に相当するか理解できてる？
 - 計画ができていない（これは確実）
     - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでない
 
@@ -149,11 +149,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - ロボットを人間が操作してロボットのセンサでセンシング
 - ずれないようにつなげていく
-    （コンピュータに計算させて自動で）
+    - つなげかた（[大学の講義資料](https://ryuichiueda.github.io/slides_marp/prob_robotics_2024/lesson10.html)）
     - 右図: できた地図
         <iframe width="560" height="315" src="https://www.youtube.com/embed/b2kYQ11PUSI?si=3VsJxUuX92oP6DZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-![bg right:40% 98%](map1.png)
+![bg right:35% 98%](map1.png)
 
 ---
 
@@ -163,7 +163,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 左: 2次元のLiDARで作成
     - 右: 3次元のLiDARで作成
         - いずれもロボットを手動で走らせて作成、200m×300m
-- 理屈は難しい$\rightarrow$[大学の講義資料1](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_1.html)、[大学の講義資料2](https://ryuichiueda.github.io/LNPR_SLIDES/chap9_2.html)
 
 <img width="40%" src="tsudanuma.png" /><img width="40%" src="3dmap.png" />
 
