@@ -111,6 +111,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 自身の現在地を知る必要がある
         - 手順を考える必要がある
 
+![bg right:40% 90%](jinsei.png)
 
 ---
 
