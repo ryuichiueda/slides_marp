@@ -21,20 +21,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 自己紹介
 
 - 上田隆一という名前です
-- ロボットの研究者です
-- 長くなるので[続きはウェブで](https://ja.wikipedia.org/wiki/上田隆一)
-
----
-
-## 宣伝: 本買って
-
-- 左から順に
-    - Linuxの本
-    - ロボットの本（今日話する内容）
-    - ロボットで使う数学の本
-
-
-<img width="20%" src="shellgei160.jpg" />  <img width="20%" src="lnpr.jpg" />  <img width="20%" src="robot_stats.png" />
+- プログラマー兼ロボットの研究者です
+    - 長くなるので続きはウェブで（https://ja.wikipedia.org/wiki/上田隆一 ）
+- みなさまとの接点
+    - YouTube（https://www.youtube.com/c/ryuichiueda ）
+    - 書籍・雑誌
+<img width="15%" src="shellgei160.jpg" />  <img width="15%" src="lnpr.jpg" />  <img width="15%" src="robot_stats.png" /> <img width="15%" src="gihyosd.jpg" />
 
 ---
 
