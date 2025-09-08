@@ -110,6 +110,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - なにがあるかを知る
         - 自身の現在地を知る
         - 手順を考える
+- なんのため？
+    - 今回は扱えないがこちらも重要
 
 ![bg right:40% 90%](jinsei.png)
 
