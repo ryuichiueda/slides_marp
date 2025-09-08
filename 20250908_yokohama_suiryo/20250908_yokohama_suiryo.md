@@ -177,8 +177,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 動画の見かた
     - 緑が「分身」、赤が推定位置を基準に地図に描いたLiDARのデータ
     - 経路は人間が与えている
-- 動画のみどころ: ウェイポイント26〜27間で分身が広がる
-    - 坂道 + 十字路のはずが工事中で地図とセンサからのデータに不整合
+- 動画のみどころ: センサの雑音がすごい
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dgd2tOCEYno?si=f7AvpZpB1w-TfSS_&amp;start=2211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
