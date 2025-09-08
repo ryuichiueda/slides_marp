@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: 2025翠陵1 day Campus -->
 
-# 移動ロボット入門
+# 知能ってなんだろう
 
 千葉工業大学 上田 隆一
 
@@ -81,6 +81,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 自分の見ている風景が<span style="color:red">地図のどこ</span>に相当するか理解できてる？
 - 計画ができていない（これは確実）
     - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでない
+- 補足
+    - 猫は数キロ先から家に戻ってくる能力がある
 
 ![bg right:44% 100%](map.png)
 
@@ -126,7 +128,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 移動ロボットの話
 
-- 本題です
+- 仕事: 指定された場所に移動
+   - さっき猫ができなかった問題
 - とりあえず次のような問題を考える
    - ロボットがどこかに置かれる
        - 右図のようなやつ
