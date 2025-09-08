@@ -102,27 +102,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 無駄話はこれまで
+## ここまでのまとめ
 
-- 今の話をふまえると自分で考えるロボットをどう作ればよいでしょう？どうしたらロボットが自分で仕事ができるようになる？
-- 具体性もない（達成までの計画もない）のに「将来は環境問題を解決したいです！！」とか目を輝かせて無責任に言ってませんか？
+- 今の話をふまえると、知能はこういうことをやる（移動に限らず）
+    - 目標
 
 <center style="font-size:200%">いっしょに考えていきましょう</center>
 
----
-
-## ・・・といいつつ最後の無駄話
-
-- 「地図」を頭に持っている動物がいる
-    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
-       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
-- 他，移動や環境の形状に反応する脳細胞が存在
-
-
-
-<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
-
-![bg right:44% 100%](brain.png)
 
 ---
 
@@ -300,3 +286,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - ロボットが移動するための仕組みを勉強
     - 何をしているかは分かったはず
     - でも、自分で作れますか？（作るためのプランニングと実行が必要）
+
+---
+
+---
+
+## ・・・といいつつ最後の無駄話
+
+- 「地図」を頭に持っている動物がいる
+    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
+       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
+- 他，移動や環境の形状に反応する脳細胞が存在
+
+
+
+<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
+
+![bg right:44% 100%](brain.png)
