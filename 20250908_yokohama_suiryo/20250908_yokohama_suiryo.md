@@ -25,6 +25,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 長くなるので続きはウェブで（https://ja.wikipedia.org/wiki/上田隆一 ）
 - みなさまとの接点
     - YouTube（https://www.youtube.com/c/ryuichiueda ）
+        - https://www.youtube.com/watch?v=xqd9UoAft2Q
     - 書籍・雑誌
 <img width="15%" src="shellgei160.jpg" />  <img width="15%" src="lnpr.jpg" />  <img width="15%" src="robot_stats.png" /> <img width="15%" src="gihyosd.jpg" />
 
