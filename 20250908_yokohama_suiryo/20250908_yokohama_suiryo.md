@@ -107,9 +107,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 今の話をふまえると、知能はこういうことをやる（移動に限らず）
     - 目標を把握する
     - 目標までの道のりを計画する
-        - なにがあるかを知る必要がある
-        - 自身の現在地を知る必要がある
-        - 手順を考える必要がある
+        - なにがあるかを知る
+        - 自身の現在地を知る
+        - 手順を考える
 
 ![bg right:40% 90%](jinsei.png)
 
