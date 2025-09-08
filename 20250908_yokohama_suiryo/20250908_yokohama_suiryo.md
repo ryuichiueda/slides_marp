@@ -41,6 +41,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今日のテーマ
 
 - 知能ってなんだろ？
+- 移動ロボットの場合
+- 最新の話
 
 ---
 
@@ -94,7 +96,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 迷路でなく人生だと？
     - 俯瞰できないから遊んでしまう
     - 俯瞰している親や先生の言うことを素直に聞かない
-- 注意
+- 注意: 結局は自分次第
     - 息抜きは大事・聞きすぎも問題
     - 親も先生も完全には俯瞰できてない
 
