@@ -105,9 +105,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## ここまでのまとめ
 
 - 今の話をふまえると、知能はこういうことをやる（移動に限らず）
-    - 目標
-
-<center style="font-size:200%">いっしょに考えていきましょう</center>
+    - 目標を把握する
+    - 目標までの道のりを計画する
+        - なにがあるかを知る必要がある
+        - 手順を考える必要がある
 
 
 ---
