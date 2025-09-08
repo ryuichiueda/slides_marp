@@ -77,7 +77,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 答えあわせ
 
 - 俯瞰ができていない（疑惑）
-    - 猫の頭の中に<span style="color:red">地図</span>はあるだろうか？
+    - 猫の頭の中に<span style="color:red">地図</span>はある？
     - 自分の見ている風景が<span style="color:red">地図のどこ</span>に相当するか理解できてる？
 - 計画ができていない（これは確実）
     - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでない
@@ -88,7 +88,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 問題を難しくすると<br />人間にも難しい
+## 問題を難しくすると人間にも難しい
 
 - 複雑な迷路だと人間にも大変
 - 迷路でなく人生だと？
@@ -108,6 +108,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 目標を把握する
     - 目標までの道のりを計画する
         - なにがあるかを知る必要がある
+        - 自身の現在地を知る必要がある
         - 手順を考える必要がある
 
 
