@@ -81,7 +81,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 自分の見ている風景が<span style="color:red">地図のどこ</span>に相当するか理解できてる？
 - 計画ができていない（これは確実）
     - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでない
-- 補足
+- 猫の名誉のための補足
     - 猫は数キロ先から家に戻ってくる能力がある
 
 ![bg right:44% 100%](map.png)
