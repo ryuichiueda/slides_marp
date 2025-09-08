@@ -199,7 +199,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## **r**apidly exploring **r**andom **t**ree（RRT）[LaValle1998]
 
 - スタートあるいはゴール地点から枝をのばしていき、スタートとゴール地点を結ぶ経路を見つける手法
-    - 移動ロボットではあまり使わないが、ロボットの腕のようにもっと複雑な制御対象によく使われる
+    - [腕型ロボットのようにもっと複雑な制御対象によく使われる](https://www.dropbox.com/scl/fi/3edqfiv14o4wzysiv3iox/edit_watergun.mp4?rlkey=2mptj709dbg1935ce0619jbex&e=1&dl=0)
 - 右の例: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成
     - 障害物<span style="color:blue">$\circ$</span>のなかにある2つの<span style="color:red">x</span>の間を緑の枝で接続
 
