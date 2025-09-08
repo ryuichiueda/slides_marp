@@ -42,7 +42,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 知能ってなんだろ？
 - 移動ロボットの場合
-- 最新の話
+- より高度な話
 
 ---
 
@@ -250,7 +250,26 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 最近の研究での話題1: end-to-end学習
+## より高度な話
+
+---
+
+## 場所細胞
+
+- 「地図」を頭に持っている動物がいる
+    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
+       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
+- 他，移動や環境の形状に反応する脳細胞が存在
+
+
+
+<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
+
+![bg right:44% 100%](brain.png)
+
+---
+
+## end-to-end学習
 
 - カメラやLiDARで何かを見せて人工ニューラルネットワークに決めさせる
     - 人工ニューラルネットワーク: 脳の回路や計算方法をコンピュータで再現したもの
@@ -261,7 +280,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 最近の研究での話題2: 自由エネルギー原理（最近ではないけど）
+## 自由エネルギー原理（最近ではないけど）
 
 - 動物はこの式の値を最小にするように動いているのではないか？
     - $F= D_\text{KL}[q(\boldsymbol{w}) || p(\boldsymbol{w} | \boldsymbol{z})] + \{ - \log_e p(\boldsymbol{z}) \}$
@@ -290,19 +309,3 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 何をしているかは分かったはず
     - 自分で作れそうですか？（作るためのプランニングと実行が必要）
 
----
-
----
-
-## ・・・といいつつ最後の無駄話
-
-- 「地図」を頭に持っている動物がいる
-    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
-       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
-- 他，移動や環境の形状に反応する脳細胞が存在
-
-
-
-<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
-
-![bg right:44% 100%](brain.png)
