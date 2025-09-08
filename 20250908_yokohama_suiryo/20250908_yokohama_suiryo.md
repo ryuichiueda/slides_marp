@@ -283,7 +283,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 潜在空間
 
 - end-to-end学習のキモの部分
-- 超多次元空間を圧縮して引き伸ばす
+- 使い方の例
+    - 画像を超多次元空間の点と考え、小さい次元の空間に配置していく
+    <span style="color:red">$\Rightarrow$潜在空間中で点を指定すると、画像が出てくる</span>
 
 ![bg right:50% 95%](./autoenc_prob.png)
 
