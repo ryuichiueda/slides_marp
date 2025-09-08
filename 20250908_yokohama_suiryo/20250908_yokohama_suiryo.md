@@ -280,7 +280,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 自由エネルギー原理（最近ではないけど）
+## 潜在空間
+
+- end-to-end学習のキモの部分
+- 超多次元空間を圧縮して引き伸ばす
+
+![bg right:50% 95%](./autoenc_prob.png)
+
+---
+
+## 自由エネルギー原理
 
 - 動物はこの式の値を最小にするように動いているのではないか？
     - $F= D_\text{KL}[q(\boldsymbol{w}) || p(\boldsymbol{w} | \boldsymbol{z})] + \{ - \log_e p(\boldsymbol{z}) \}$
