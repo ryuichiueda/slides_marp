@@ -151,3 +151,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - $p_{t-1}$から$p_t$を導出してみましょう
 
 ![bg right:25% 100%](./figs/linear_motion.png)
+
+---
+
+### aaa
