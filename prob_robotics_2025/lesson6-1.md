@@ -94,4 +94,10 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ### ロボットの動きの確率的な表現
 
-- $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+- $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$と表現
+    - このほうが確率で考えやすい
+- 下図: 状態遷移
+
+
+![w:800](./figs/motion_error_representation.png)
+
