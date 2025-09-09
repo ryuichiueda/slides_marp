@@ -141,3 +141,12 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 <span style="color:red">上式を実装$\Rightarrow$ロボットの動きが予測できる（でもどうやって？）</span>
 
 ![bg right:20% 90%](./figs/distribution_motion.png)
+
+---
+
+## 線形なロボットの位置予測
+
+- 右図のように向きがなくて$xy$平面を動き回るロボットを考える
+    - 実際のロボットよりかなり簡略化
+
+![bg right:25% 100%](./figs/linear_motion.png)
