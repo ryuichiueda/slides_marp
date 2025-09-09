@@ -102,3 +102,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
     - いずれの表現方法でも$\boldsymbol{x}_{t-2}$や$\boldsymbol{u}_{t-1}$が式中にない
     $\Longrightarrow$つぎの姿勢は$\boldsymbol{x}_{t-1}$と$\boldsymbol{u}_t$だけで決まる（<span style="color:red">あくまで仮定</span>）
+- 注意: ロボットでは必ずしも成り立たない
+    - 長時間動かしてきたロボットは熱で動きが悪くなる
+    - 止まっていたロボットを急に動かすのと移動中のロボットを動かすのでは挙動がかなり違う
+    （無視できない場合: 温度や状況などの変数を状態に組み入れる）
