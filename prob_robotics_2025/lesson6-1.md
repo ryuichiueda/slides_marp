@@ -191,4 +191,4 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 	    - $\boldsymbol{\mu}_t  = \boldsymbol{\mu}_0 + \sum_{i=1}^t \overline{\Delta\boldsymbol{x}}_i$ 
 	    - $\Sigma_t = \Sigma_0 + \sum_{i=1}^t S_i$ 
 
-![bg right:28% 100%](./figs/linear_motion2.png)
+![bg right:35% 100%](./figs/linear_motion2.png)
