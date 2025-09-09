@@ -188,6 +188,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $p_0$: ロボットの$t=0$のときの位置の分布
 - 答え
    * 単に平均移動量と共分散行列を足すだけ
-	    - $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-2} + \overline{\Delta\boldsymbol{x}}_{t-1}+ \overline{\Delta\boldsymbol{x}}_t  = \cdots = \boldsymbol{\mu}_0 + \sum_{i=1}^t \overline{\Delta\boldsymbol{x}}_i$ 
-	    - $\Sigma_t = \Sigma_{t-2} + S_{t-1} + S_t = \cdots = \Sigma_0 + \sum_{i=1}^t S_i$ 
+	    - $\boldsymbol{\mu}_t  = \boldsymbol{\mu}_0 + \sum_{i=1}^t \overline{\Delta\boldsymbol{x}}_i$ 
+	    - $\Sigma_t = \Sigma_0 + \sum_{i=1}^t S_i$ 
 
+![bg right:28% 100%](./figs/linear_motion2.png)
