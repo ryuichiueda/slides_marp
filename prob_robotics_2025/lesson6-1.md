@@ -154,6 +154,12 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ---
 
-### aaa
+### 計算に必要なガウス分布の定義
 
-![w:800](./figs/gauss_expectation.png)
+- 移動量の分布: $p(\Delta \boldsymbol{x} | \boldsymbol{u}_t) = \mathcal{N}(\Delta\boldsymbol{x} | \overline{\Delta\boldsymbol{x}}_t, S_t)$
+    - $\overline{\Delta\boldsymbol{x}}_t$: $\boldsymbol{u}_t$で動いたときの平均移動量
+    - $S_t$: ある点から$\boldsymbol{u}_t$で動いた時の位置のばらつきの共分散行列
+    （$\boldsymbol{u}_t$は以後、使わないでおきましょう）
+- 移動前の位置の分布: $p_{t-1} = \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+
+![bg right:28% 100%](./figs/gauss_expectation.png)
