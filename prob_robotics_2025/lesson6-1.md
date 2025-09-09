@@ -81,16 +81,30 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### $\boldsymbol{x}$と$\boldsymbol{u}$の関係性の表現
 
 - 本講義では2つの表現方法を使い分け
-- その1: <span style="color:red">状態方程式</span>（現代制御的）
+- その1: <span style="color:red">状態方程式</span>
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
         - $\boldsymbol{\varepsilon}$: 移動量の想定と実際とのズレ（雑音）
-- その2: 確率分布による表現（<span style="color:red">確率ロボティクス</span>）
+- その2: 確率分布による表現
     - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
         - $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">状態遷移分布</span>
-- 前者で済む場合は前者で済ますが、後者のほうが抽象的で扱える範囲が広い
-    - 雑音が大きくてもよい/遷移後の分布が分裂してもよい/$\boldsymbol{\varepsilon}$と$\boldsymbol{f}$が独立していなくてもよい・・・
 
 ![bg right:30% 100%](./figs/motion_error_representation.png)
+
+---
+
+### $\boldsymbol{x}$と$\boldsymbol{u}$の関係性の表現（続き）
+
+- 前者で済む場合は前者で済ませるが、後者のほうが抽象的で扱える範囲が広い
+    - 前者（現代制御的）: $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+    - 後者（確率ロボティクス的）: $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+        - 後者の利点
+            - 雑音が大きくてもよい
+            - 遷移後の分布が分裂してもよい
+            - $\boldsymbol{\varepsilon}$と$\boldsymbol{f}$が独立していなくてもよい
+            - ・・・
+- 講師の見解: 確率ロボティクスとは現代制御の一般化
+
+![bg right:25% 100%](./figs/motion_error_representation.png)
 
 ---
 
