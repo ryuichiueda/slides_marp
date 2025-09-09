@@ -77,12 +77,12 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ---
 
-### $\boldsymbol{x}$と$\boldsymbol{u}$の関係性
+### $\boldsymbol{x}$と$\boldsymbol{u}$の関係性の表現
 
 - 本講義では2つの表現方法を使い分け
 - その1: <span style="color:red">状態方程式</span>（現代制御的）
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
-        - $\boldsymbol{\varepsilon}$は$\boldsymbol{u}_t$で想定される移動量と実際の移動量のズレ（雑音）
+        - $\boldsymbol{\varepsilon}$: 移動量の想定と実際とのズレ（雑音）
 - その2: 確率分布による表現（<span style="color:red">確率ロボティクス</span>）
     - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
         - $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">状態遷移分布</span>
@@ -91,3 +91,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ![bg right:30% 100%](./figs/motion_error_representation.png)
 
+---
+
+### aaa
