@@ -138,4 +138,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     $= \int_{X} p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) p_{t-1}(\boldsymbol{x}_{t-1}) \text{d}\boldsymbol{x}_{t-1}$
     $= \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1}) }$
 
+<span style="color:red">上式を実装$\Rightarrow$ロボットの動きが予測できる（でもどうやって？）</span>
+
 ![bg right:20% 90%](./figs/distribution_motion.png)
