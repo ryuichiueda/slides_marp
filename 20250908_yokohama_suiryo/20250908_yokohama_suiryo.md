@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: 2025翠陵1 day Campus -->
 
-# 移動ロボット入門
+# 知能ってなんだろう
 
 千葉工業大学 上田 隆一
 
@@ -21,26 +21,21 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 自己紹介
 
 - 上田隆一という名前です
-- ロボットの研究者です
-- 長くなるので[続きはウェブで](https://ja.wikipedia.org/wiki/上田隆一)
-
----
-
-## 宣伝: 本買って
-
-- 左から順に
-    - Linuxの本
-    - ロボットの本（今日話する内容）
-    - ロボットで使う数学の本
-
-
-<img width="20%" src="shellgei160.jpg" />  <img width="20%" src="lnpr.jpg" />  <img width="20%" src="robot_stats.png" />
+- プログラマー兼ロボットの研究者です
+    - 長くなるので続きはウェブで（https://ja.wikipedia.org/wiki/上田隆一 ）
+- みなさまとの接点
+    - YouTube（https://www.youtube.com/c/ryuichiueda ）
+        - https://www.youtube.com/watch?v=xqd9UoAft2Q
+    - 書籍・雑誌
+<img width="15%" src="shellgei160.jpg" />  <img width="15%" src="lnpr.jpg" />  <img width="15%" src="robot_stats.png" /> <img width="15%" src="gihyosd.jpg" />
 
 ---
 
 ## 今日のテーマ
 
 - 知能ってなんだろ？
+- 移動ロボットの場合
+- より高度な話
 
 ---
 
@@ -77,22 +72,24 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 答えあわせ
 
 - 俯瞰ができていない（疑惑）
-    - 猫の頭の中に<span style="color:red">地図</span>はあるだろうか？
+    - 猫の頭の中に<span style="color:red">地図</span>はある？
     - 自分の見ている風景が<span style="color:red">地図のどこ</span>に相当するか理解できてる？
 - 計画ができていない（これは確実）
     - 頭の中でおやつの場所に行くまでの<span style="color:red">手順</span>が思い浮んでない
+- 猫の名誉のための補足
+    - 猫は数キロ先から家に戻ってくる能力がある
 
 ![bg right:44% 100%](map.png)
 
 ---
 
-## 問題を難しくすると<br />人間にも難しい
+## 問題を難しくすると人間にも難しい
 
 - 複雑な迷路だと人間にも大変
 - 迷路でなく人生だと？
     - 俯瞰できないから遊んでしまう
     - 俯瞰している親や先生の言うことを素直に聞かない
-- 注意
+- 注意: 結局は自分次第
     - 息抜きは大事・聞きすぎも問題
     - 親も先生も完全には俯瞰できてない
 
@@ -100,38 +97,27 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 無駄話はこれまで
+## ここまでのまとめ
 
-- 今の話をふまえると自分で考えるロボットをどう作ればよいでしょう？どうしたらロボットが自分で仕事ができるようになる？
-- 具体性もない（達成までの計画もない）のに「将来は環境問題を解決したいです！！」とか目を輝かせて無責任に言ってませんか？
+- 今の話をふまえると、知能はこういうことをやる（移動に限らず）
+    - 目標を把握する
+    - 目標までの道のりを計画する
+        - なにがあるかを知る
+        - 自身の現在地を知る
+        - 手順を考える
+- なんのため？
+    - 今回は扱えないがこちらも重要
 
-<center style="font-size:200%">いっしょに考えていきましょう</center>
-
----
-
-## ・・・といいつつ最後の無駄話
-
-- 「地図」を頭に持っている動物がいる
-    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
-       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
-- 他，移動や環境の形状に反応する脳細胞が存在
-
-
-
-<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
-
-![bg right:44% 100%](brain.png)
+![bg right:40% 90%](jinsei.png)
 
 ---
 
 ## 移動ロボットの話
 
-- 本題です
-- とりあえず次のような問題を考える
-   - ロボットがどこかに置かれる
-       - 右図のようなやつ
-   - ゴールがどこかロボットに教えられる
-   - ロボットが自分でゴールまで行く
+- 仕事: 指定された場所に移動
+   - さっき猫ができなかった問題
+- 単に便利だから研究するわけではなく、知能を考えるために研究している
+   - どういうハードウェア、ソフトウェアを与えると確実、安全に目的地まで移動できるか？
 
 ![bg right:40% 100%](robot.png)
 
@@ -186,8 +172,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 動画の見かた
     - 緑が「分身」、赤が推定位置を基準に地図に描いたLiDARのデータ
     - 経路は人間が与えている
-- 動画のみどころ: ウェイポイント26〜27間で分身が広がる
-    - 坂道 + 十字路のはずが工事中で地図とセンサからのデータに不整合
+- 動画のみどころ: センサの雑音がすごい
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dgd2tOCEYno?si=f7AvpZpB1w-TfSS_&amp;start=2211" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -207,7 +192,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## **r**apidly exploring **r**andom **t**ree（RRT）[LaValle1998]
 
 - スタートあるいはゴール地点から枝をのばしていき、スタートとゴール地点を結ぶ経路を見つける手法
-    - 移動ロボットではあまり使わないが、ロボットの腕のようにもっと複雑な制御対象によく使われる
+    - [腕型ロボットのようにもっと複雑な制御対象によく使われる](https://www.dropbox.com/scl/fi/3edqfiv14o4wzysiv3iox/edit_watergun.mp4?rlkey=2mptj709dbg1935ce0619jbex&e=1&dl=0)
 - 右の例: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成
     - 障害物<span style="color:blue">$\circ$</span>のなかにある2つの<span style="color:red">x</span>の間を緑の枝で接続
 
@@ -258,7 +243,26 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 最近の研究での話題1: end-to-end学習
+## より高度な話
+
+---
+
+## 場所細胞
+
+- 「地図」を頭に持っている動物がいる
+    - 特定のところに行くと反応するようになる<span style="color:red">場所細胞</span>
+       - 自分の見ているものや動きの感覚（主観）を「場所」という客観的なものに変換
+- 他，移動や環境の形状に反応する脳細胞が存在
+
+
+
+<p style="font-size:50%;padding:0px">出典: 場所細胞: Stuartlayton at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png. 格子細胞: Khardcastle, CC BY-SA 4.0, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Autocorrelation_image.jpg. ボーダー細胞: Tom Hartley, Colin Lever, Sarah Stewart, CC BY-SA, via Wikimedia Commons, https://commons.wikimedia.org/wiki/File:Boundary_cell.png</p>
+
+![bg right:44% 100%](brain.png)
+
+---
+
+## end-to-end学習
 
 - カメラやLiDARで何かを見せて人工ニューラルネットワークに決めさせる
     - 人工ニューラルネットワーク: 脳の回路や計算方法をコンピュータで再現したもの
@@ -269,7 +273,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 最近の研究での話題2: 自由エネルギー原理（最近ではないけど）
+## 潜在空間
+
+- end-to-end学習のキモの部分
+- 使い方の例
+    - 画像を超多次元空間の点と考え、小さい次元の空間に配置していく
+    <span style="color:red">$\Rightarrow$潜在空間中で間の点を指定すると、別の画像が出てくる</span>
+
+![bg right:50% 95%](./autoenc_prob.png)
+
+---
+
+## 自由エネルギー原理
 
 - 動物はこの式の値を最小にするように動いているのではないか？
     - $F= D_\text{KL}[q(\boldsymbol{w}) || p(\boldsymbol{w} | \boldsymbol{z})] + \{ - \log_e p(\boldsymbol{z}) \}$
@@ -296,4 +311,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 問題を人生のプランニングにまで拡張すると人間でも難しい
 - ロボットが移動するための仕組みを勉強
     - 何をしているかは分かったはず
-    - でも、自分で作れますか？（作るためのプランニングと実行が必要）
+    - 自分で作れそうですか？（作るためのプランニングと実行が必要）
+
