@@ -80,35 +80,14 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### $\boldsymbol{x}$と$\boldsymbol{u}$の関係性
 
 - 本講義では2つの表現方法を使い分け
-- その1: <span style="color:red">状態方程式</span>
+- その1: <span style="color:red">状態方程式</span>（現代制御的）
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
         - $\boldsymbol{\varepsilon}$は$\boldsymbol{u}_t$で想定される移動量と実際の移動量のズレ（雑音）
-- その2: 確率分布による表現
+- その2: 確率分布による表現（<span style="color:red">確率ロボティクス</span>）
     - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
         - $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">状態遷移分布</span>
+- 前者で済む場合は前者で済ますが、後者のほうが抽象的で扱える範囲が広い
+    - 雑音が大きくてもよい/遷移後の分布が分裂してもよい/$\boldsymbol{\varepsilon}$と$\boldsymbol{f}$が独立していなくてもよい・・・
 
 ![bg right:30% 100%](./figs/motion_error_representation.png)
-
----
-
-### 雑音の扱いはこれでいいのか？
-
-- $\boldsymbol{\varepsilon}$: 従来の制御工学ではガウス分布に従うと仮定されがち
-- ガウス分布として扱う場合の問題
-    - ガウス分布でないかもしれない
-    - $\boldsymbol{f}$と独立して考えていいのか？
-    - $\boldsymbol{u}$がひねくれていると困る
-        - 50\%の確率で出力が2倍になる、など
-<span style="color:red">$\Longrightarrow$状態遷移自体を確率的に扱う方がより表現力が高い</span>
-
----
-
-### ロボットの動きの確率的な表現
-
-- $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$と表現
-    - このほうが確率で考えやすい
-- 下図: 状態遷移の2通りの考え方
-    - 左: 従来での状態方程式での考え方（$\varepsilon$が小さいことが前提）
-    - 右: 確率ロボティクスでの考え方
-        - たとえ分布が分裂しても式の上では大丈夫（あくまで式の上では）
 
