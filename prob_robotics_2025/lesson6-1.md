@@ -84,7 +84,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - その1: <span style="color:red">状態方程式</span>
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
         - $\boldsymbol{\varepsilon}$: 移動量の想定と実際とのズレ（雑音）
-    - $\boldsymbol{f}$: <span style="color:red">状態遷移関数</span>
+        - $\boldsymbol{f}$: <span style="color:red">状態遷移関数</span>
 - その2: 確率分布による表現
     - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
         - $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">状態遷移分布</span>
