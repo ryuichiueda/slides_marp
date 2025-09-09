@@ -79,11 +79,15 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ### $\boldsymbol{x}$と$\boldsymbol{u}$の関係性
 
-- 重要: <span style="color:red">状態方程式</span>で$\boldsymbol{x}$と$\boldsymbol{u}$の関係性を考える
+- 本講義では2つの表現方法を使い分け
+- その1: <span style="color:red">状態方程式</span>
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
         - $\boldsymbol{\varepsilon}$は$\boldsymbol{u}_t$で想定される移動量と実際の移動量のズレ（雑音）
+- その2: 確率分布による表現
+    - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+        - $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">状態遷移分布</span>
 
-![bg right:30% 95%](./figs/control_input.png)
+![bg right:30% 100%](./figs/motion_error_representation.png)
 
 ---
 
@@ -107,5 +111,4 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - 左: 従来での状態方程式での考え方（$\varepsilon$が小さいことが前提）
     - 右: 確率ロボティクスでの考え方
         - たとえ分布が分裂しても式の上では大丈夫（あくまで式の上では）
-![w:800](./figs/motion_error_representation.png)
 
