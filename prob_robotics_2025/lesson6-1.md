@@ -58,8 +58,9 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
         - $t=0,1,2,\dots$
 - ロボットの位置の表現（下図）
     - $\boldsymbol{x}_0, \boldsymbol{x}_1, \boldsymbol{x}_2, \dots$
-- 位置・向き（あわせて「姿勢」）の分布
+- 位置・向き（あわせて「<span style="color:red">姿勢</span>」あるいは「<span style="color:red">状態</span>」）の分布
     - $p_0, p_1, p_2, \dots$ <span style="color:red">$\Longleftarrow$これを計算したい</span>
+    - 補足: 「姿勢」はロボティクス用語、「状態」は制御用語
 
 ![bg right:20% 95%](./figs/trajectory.png)
 
@@ -98,3 +99,4 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - いずれの表現方法でも$\boldsymbol{x}_{t-2}$や$\boldsymbol{u}_{t-1}$が式中にない
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
     - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+    $\Longrightarrow$つぎの位置は
