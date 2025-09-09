@@ -129,6 +129,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 - $p_{t-1}$と$p_{t}$の関係は？
     - 状態遷移分布$p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$を使って表現してみましょう
+    - 期待値を使った表現にできます
 - 答え
     * $p_t(\boldsymbol{x}) = p(\boldsymbol{x} | \boldsymbol{u}_{1:t}, p_0)$
     $= \int_{X} p(\boldsymbol{x}, \boldsymbol{x}_{t-1} | \boldsymbol{u}_{1:t}, p_0)\text{d}\boldsymbol{x}_{t-1}$
