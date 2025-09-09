@@ -155,3 +155,5 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ---
 
 ### aaa
+
+![w:800](./figs/gauss_expectation.png)
