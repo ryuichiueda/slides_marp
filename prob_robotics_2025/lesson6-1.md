@@ -97,9 +97,8 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$と表現
     - このほうが確率で考えやすい
 - 下図: 状態遷移の2通りの考え方
-    - 左: 従来での状態方程式での考え方
-    - 右: 確率ロボティクスでの考え方
-
+    - 左: 従来での状態方程式での考え方（$\varepsilon$が小さいことが前提）
+    - 右: 確率ロボティクスでの考え方（分布が分裂しても式の上では大丈夫）
 
 ![w:800](./figs/motion_error_representation.png)
 
