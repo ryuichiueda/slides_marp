@@ -175,7 +175,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $\Delta \boldsymbol{x}_t \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}}_t, S_t)$
     - $\boldsymbol{x}_{t-1}$と$\Delta \boldsymbol{x}_t$が独立
 - 答え
-    * ガウス分布の再生性を利用
+    * ガウス分布の再生性を利用$\Rightarrow$<span style="color:red">単に平均値と共分散行列を足し合わせるだけ</span>
          - $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t,  \Sigma_t)$
 	        - $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta\boldsymbol{x}}_t$
 	        - $\Sigma_t = \Sigma_{t-1} + S_t$
