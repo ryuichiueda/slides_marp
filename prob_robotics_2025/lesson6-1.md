@@ -70,7 +70,8 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - 離散時刻ごとに、ロボットはモータに送る制御指令を変えると仮定
     - 時刻$t$の制御指令を$\boldsymbol{u}_{t+1}$と表現（添え字がずれるので注意）
         - 「時刻$t+1$までの制御指令」と解釈
-- $\boldsymbol{u}_{t+1}$の具体的中身はあとで
+- $\boldsymbol{u}_{t+1}$の具体例はあとで
+    - しばらく一般化して考えましょう
 - 重要
     - ロボットは$\boldsymbol{u}_{t+1}$で、姿勢を$\boldsymbol{x}_t$から$\boldsymbol{x}_{t+1}$に変化させる
 
