@@ -74,6 +74,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - しばらく一般化して考えましょう
 - 重要: <span style="color:red">状態方程式</span>で$\boldsymbol{x}$と$\boldsymbol{u}$の関係性を考える
     - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+        - $\boldsymbol{\varepsilon}$は$\boldsymbol{u}_t$で想定される移動量と実際の移動量のズレ
 
 ![bg right:30% 95%](./figs/control_input.png)
 
