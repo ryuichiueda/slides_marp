@@ -165,3 +165,17 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $p_{t-1} = \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
 
 ![bg right:28% 100%](./figs/gauss_expectation.png)
+
+---
+
+### こういう問題になる$\rightarrow$解く
+
+- 次のとき、$\boldsymbol{x}_t = \boldsymbol{x}_{t-1} + \Delta \boldsymbol{x}_t$の分布を求めよ
+    - $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+    - $\Delta \boldsymbol{x}_t \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}}_t, S_t)$
+    - $\boldsymbol{x}_{t-1}$と$\Delta \boldsymbol{x}_t$が独立
+- 答え
+    * ガウス分布の再生性を利用
+         - $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t,  \Sigma_t)$
+	        - $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta\boldsymbol{x}}_t$
+	        - $\Sigma_t = \Sigma_{t-1} + S_t$
