@@ -89,3 +89,4 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $\boldsymbol{f}$と独立して考えていいのか？
     - $\boldsymbol{u}$がひねくれていると困る
         - 50\%の確率で出力が2倍になる、など
+<span style="color:red">$\Longrightarrow$状態遷移自体を確率的に扱う方がより表現力が高い</span>
