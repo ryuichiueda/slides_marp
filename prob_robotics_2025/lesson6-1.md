@@ -99,6 +99,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - 下図: 状態遷移の2通りの考え方
     - 左: 従来での状態方程式での考え方（$\varepsilon$が小さいことが前提）
     - 右: 確率ロボティクスでの考え方
-        - たとえ分布が分裂しても式の上では大丈夫
+        - たとえ分布が分裂しても式の上では大丈夫（あくまで式の上では）
 ![w:800](./figs/motion_error_representation.png)
 
