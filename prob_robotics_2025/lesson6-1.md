@@ -94,3 +94,4 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ### ロボットの動きの確率的な表現
 
+- $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
