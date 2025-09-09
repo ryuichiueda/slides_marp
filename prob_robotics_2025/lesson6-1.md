@@ -72,8 +72,10 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
         - 「時刻$t+1$までの制御指令」と解釈
 - $\boldsymbol{u}_{t+1}$の具体例はあとで
     - しばらく一般化して考えましょう
-- 重要
-    - ロボットは$\boldsymbol{u}_{t+1}$で、姿勢を$\boldsymbol{x}_t$から$\boldsymbol{x}_{t+1}$に変化させる
+- 重要: <span style="color:red">状態方程式</span>で$\boldsymbol{x}$と$\boldsymbol{u}$の関係性を考える
+    - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+
+![bg right:30% 95%](./figs/control_input.png)
 
 ---
 
@@ -83,4 +85,3 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - 時刻$t$の制御指令を$\boldsymbol{u}_t$と表現
     - 右の例の場合は$\boldsymbol{u}_t = (\nu_t \ \omega_t)^\top$
 
-![bg right:30% 95%](./figs/control_output.png)
