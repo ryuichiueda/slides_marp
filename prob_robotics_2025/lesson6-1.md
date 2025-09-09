@@ -102,7 +102,8 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
             - 遷移後の分布が分裂してもよい
             - $\boldsymbol{\varepsilon}$と$\boldsymbol{f}$が独立していなくてもよい
             - ・・・
-- 講師の見解: 確率ロボティクスとは現代制御の一般化
+- 講師の個人的な見解:
+確率ロボティクスとは現代制御の一般化
 
 ![bg right:25% 100%](./figs/motion_error_representation.png)
 
