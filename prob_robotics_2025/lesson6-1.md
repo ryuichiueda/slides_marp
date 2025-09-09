@@ -82,8 +82,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ### 雑音の扱い
 
-- $\boldsymbol{\varepsilon}$は確率分布になる
-    - 従来の制御工学ではガウス分布として扱われることが多い
+- $\boldsymbol{\varepsilon}$: 従来の制御工学ではガウス分布に従うと仮定されがち
 - ガウス分布として扱う場合の問題
     - ガウス分布でないかもしれない
     - $\boldsymbol{f}$と独立して考えていいのか？
