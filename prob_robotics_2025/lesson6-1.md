@@ -84,6 +84,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 - $\boldsymbol{\varepsilon}$は確率分布になる
     - 従来の制御工学ではガウス分布として扱われることが多い
-- あああ
-- 従来の制御では
-- $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+- ガウス分布として扱う場合の問題
+    - ガウス分布でないかもしれない
+    - $\boldsymbol{f}$と独立して考えていいのか？
