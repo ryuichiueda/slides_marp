@@ -220,5 +220,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - 例: 右の図のようなロボットの場合
     （制御指令は速度と角速度）
         - <span style="font-size:90%">$\begin{pmatrix} x_t \\ y_t \\ \theta_t \end{pmatrix} = \begin{pmatrix} x_{t-1}  \\ y_{t-1} \\ \theta_{t-1} \end{pmatrix} + \nu_t\omega_t^{-1} \begin{pmatrix} \sin( \theta_{t-1} + \omega_t \Delta t ) - \sin\theta_{t-1} \\ -\cos( \theta_{t-1} + \omega_t \Delta t ) + \cos\theta_{t-1} \\ \omega_t \Delta t\end{pmatrix}$</span><br />　
+            - $\Delta t$: $t$と$t-1$の間の（離散でない連続の）時間
 
 ![bg right:20% 95%](./figs/control_output.png)
