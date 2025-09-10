@@ -232,6 +232,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ガウス分布でなくなる
     - 右図: 4章の実験を100回繰り返したもの
         - 向きが雑音でずれるほど$x$軸方向の進みが悪く
+        $\Longrightarrow$バナナ型の分布に
 
 
 ![bg right:25% 95%](./figs/simulated_on.png)
