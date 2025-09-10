@@ -228,7 +228,10 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ### 非線形な場合の難しさ
 
-- ロボットが動くと確率分布がガウス分布でなくなる
+- ロボットが動くと予測の確率分布がガウス分布でなくなる
+    - 右図: $p_{t-1}$から3つロボットの姿勢を
+    ドローしてまっすぐ走らせる
+        - 互いに向きが違うと
 
 
-![bg right:25% 95%](./figs/nonlinear_motion.png)
+![bg right:25% 95%](./figs/simulated_on.png)
