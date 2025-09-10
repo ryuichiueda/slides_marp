@@ -144,7 +144,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ---
 
-## 線形なロボットの位置予測
+## 「線形なロボット」の位置予測
 
 - 右図のように向きがなくて$xy$平面を動き回るロボットを考える
 - $\boldsymbol{u}$に対する移動量の分布$p(\Delta \boldsymbol{x} | \boldsymbol{u})$が既知でガウス分布
@@ -192,3 +192,8 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 	    - $\Sigma_t = \Sigma_0 + \sum_{i=1}^t S_i$ 
 
 ![bg right:35% 100%](./figs/linear_motion2.png)
+
+---
+
+### 「線形なロボット」の位置予測
+
