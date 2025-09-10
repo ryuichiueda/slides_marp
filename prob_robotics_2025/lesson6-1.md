@@ -212,5 +212,9 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ---
 
-### 「非線形」
+### 「線形」と「非線形」
+
+- 線形な状態方程式
+    - $\boldsymbol{x}_t = A \boldsymbol{x}_{t-1} + B \boldsymbol{u}_t + \boldsymbol{\varepsilon}$ 
+- ロボットには向きがあるので
 
