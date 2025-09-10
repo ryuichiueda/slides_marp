@@ -223,3 +223,12 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
             - $\Delta t$: $t$と$t-1$の間の（離散でない連続の）時間
 
 ![bg right:17% 95%](./figs/control_output.png)
+
+---
+
+### 非線形な場合の難しさ
+
+- ロボットが動くと確率分布がガウス分布でなくなる
+
+
+![bg right:25% 95%](./figs/nonlinear_motion.png)
