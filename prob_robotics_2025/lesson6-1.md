@@ -242,11 +242,15 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ### ロボットの移動量の計算
 
-- 次の移動量の関係は？
-    - ロボット座標系$\Sigma_\text{robot}$: $\Delta\boldsymbol{x}_t' = (\Delta x_t' \ \  \Delta y_t' \ \  \Delta \theta_t')^\top$
-        - $\Sigma_\text{robot}$は移動前の姿勢が基準
-    - 世界座標系$\Sigma_\text{world}$: $\Delta \boldsymbol{x}_t = (\Delta x_t \ \  \Delta y_t \ \  \Delta \theta_t)^\top$
-        - ロボットの位置: $\boldsymbol{x}_{t-1}= (x_{t-1} \ \  y_{t-1} \ \  \theta_{t-1})^\top$
+- ロボット座標系$\Sigma_\text{robot}$での移動量$\Delta\boldsymbol{x}_t'$を制御指令とみなして状態方程式をたてましょう
+    - $\Delta\boldsymbol{x}_t' = (\Delta x_t' \ \  \Delta y_t' \ \  \Delta \theta_t')^\top$
+    - $\Sigma_\text{robot}$は移動前の姿勢が基準
+- 方針
+    - 世界座標系$\Sigma_\text{world}$での移動量$\Delta \boldsymbol{x}_t$を考える
+        - $\Delta \boldsymbol{x}_t = (\Delta x_t \ \  \Delta y_t \ \  \Delta \theta_t)^\top$
+    - $\Delta\boldsymbol{x}_t'$と$\Delta\boldsymbol{x}_t$の関係の式$\boldsymbol{x}_t = \boldsymbol{f}(\Delta \boldsymbol{x}'_t)$をたてる
+    - $\boldsymbol{x}_t =\Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}= \boldsymbol{f}(\Delta \boldsymbol{x}'_t) + \boldsymbol{x}_{t-1}$
+    を状態方程式とする
 
 答えは次のページ
 
@@ -274,9 +278,9 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 ---
 
-### 非線形性の確認
+### 非線形性の確認と対策
 	
-- $\boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t' + \boldsymbol{x}_{t-1} = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}$
-	- 線形な式$\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1} = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$にはならない
-	    - $A$のなかに$\boldsymbol{x}'_t$中の$\theta'_t$が紛れ込む
+- 状態方程式: $\boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t' + \boldsymbol{x}_{t-1}$
+- 線形な式$\boldsymbol{x}_t = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$にはならない
+   - $A$のなかに$\boldsymbol{x}'_t$中の$\theta'_t$が紛れ込む
 
