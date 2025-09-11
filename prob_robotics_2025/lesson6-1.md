@@ -382,9 +382,15 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 - $\boldsymbol{x}_t = \left\{ \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})  \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
 （前ページ求めた近似式）を次のように分解
     - $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
-         - $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$: <span style="color:red">$p_{t-1}$の変形に関する項</span>
-         - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$: <span style="color:red">移動と雑音の項</span>
-    - $\boldsymbol{a}$による$p_{t-1}$の移動と、$\boldsymbol{b}$により$p_t$に加わる雑音の分布を考え、あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える
+         - $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+         - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
+    - $\boldsymbol{a}$、$\boldsymbol{b}$それぞれの分布を考え、あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える（意味は後で）
 
 
-![bg right:30% 95%](./figs/linerlized_problem.png)
+
+---
+
+### $\boldsymbol{a}$の分布
+
+
+
