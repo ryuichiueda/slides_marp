@@ -410,3 +410,8 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 - $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
 	- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
     - $\Sigma_t =  F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
+- 共分散行列の意味
+    - $\boldsymbol{a}$のばらつき（上図）: $\theta$の向きが違うことによる誤差の拡大
+    - $\boldsymbol{b}$のばらつき（下図）: 動き自体の雑音
+
+![bg right:25% 95%](./figs/kalman_motion.png)
