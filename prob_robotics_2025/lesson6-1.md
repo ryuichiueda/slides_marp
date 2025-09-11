@@ -307,6 +307,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - $G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$: 近似によるズレの補正
         - 中心から離れるほど大きく補正が必要に
 
-$G$をどう求めるか？
+<span style="color:red">$G$をどう求めるか？</span>
 
 ![bg right:30% 95%](./figs/linearlization.png)
