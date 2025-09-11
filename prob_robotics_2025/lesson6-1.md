@@ -322,16 +322,36 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 	- $G = \dfrac{\partial \{ T(\boldsymbol{x}_{t-1})\Delta \boldsymbol{x}_t' - T(\boldsymbol{\mu}_{t-1})\Delta \boldsymbol{x}_t' \}}{\partial \boldsymbol{x}_{t-1}}{\huge{|}}_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}
 	= \dfrac{\partial T(\boldsymbol{x}_{t-1})\Delta \boldsymbol{x}_t' }{\partial \boldsymbol{x}_{t-1}}{\huge{|}}_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
 	    - 分母がズレに相当
+- $\boldsymbol{g} = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$とおきましょう
+    - $\boldsymbol{g} = \begin{pmatrix}
+		\Delta x_t' \cos \theta_{t-1}  - \Delta y_t' \sin \theta_{t-1}  \\
+		\Delta x_t'\sin \theta_{t-1} + \Delta y_t' \cos \theta_{t-1}  \\
+		\Delta \theta_t'
+	\end{pmatrix}$
 	
 
 ---
 
 ### $G$の算出（続き）
 
-- $\boldsymbol{g} = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$とおきましょう
-- $\boldsymbol{g} = \begin{pmatrix}
-		\Delta x_t' \cos \theta_{t-1}  - \Delta y_t' \sin \theta_{t-1}  \\
-		\Delta x_t'\sin \theta_{t-1} + \Delta y_t' \cos \theta_{t-1}  \\
-		\Delta \theta_t'
+- $G= \left.
+	\dfrac{\partial \boldsymbol{g} }{\partial \boldsymbol{x}_{t-1}} \right|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}} = 
+	\left.
+	\begin{pmatrix}
+		\frac{\partial g_x}{\partial x_{t-1}} & 
+		\frac{\partial g_x}{\partial y_{t-1}} &
+		\frac{\partial g_x}{\partial \theta_{t-1}} \\
+		\frac{\partial g_y}{\partial x_{t-1}} & 
+		\frac{\partial g_y}{\partial y_{t-1}} &
+		\frac{\partial g_y}{\partial \theta_{t-1}} \\
+		\frac{\partial g_\theta}{\partial x_{t-1}} & 
+		\frac{\partial g_\theta}{\partial y_{t-1}} &
+		\frac{\partial g_\theta}{\partial \theta_{t-1}} \\
+\end{pmatrix} \right|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
+$= \left.  \begin{pmatrix} 0 & 0 & - \Delta x_t' \sin \theta_{t-1} - \Delta y_t' \cos \theta_{t-1} \\ 0 & 0 & \Delta x_t' \cos \theta_{t-1} - \Delta y_t' \sin \theta_{t-1} \\ 0 & 0 &  0 \end{pmatrix} \right|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
+	$= \begin{pmatrix}
+		0 & 0 & - \Delta x_t' \sin \bar\theta_{t-1} - \Delta y_t' \cos \bar\theta_{t-1} \\
+		0 & 0 & \Delta x_t' \cos \bar\theta_{t-1} - \Delta y_t' \sin \bar\theta_{t-1} \\
+		0 & 0 &  0
 	\end{pmatrix}$
-
+    - $\bar\theta_{t-1}$は$\boldsymbol{\mu}_{t-1}$の$\theta$成分
