@@ -287,3 +287,10 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
    - 再生性を使わない（あとで）
    - <span style="color:red">線形近似</span>する
 
+---
+
+### 線形近似
+	
+- $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'\simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+    と近似
+
