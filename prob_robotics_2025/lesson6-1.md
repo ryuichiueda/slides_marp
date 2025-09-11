@@ -382,6 +382,7 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 - 今求めた$\boldsymbol{x}_t = \left\{ F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1} \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$を次のように分解
     - $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
          - $\boldsymbol{a} = F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1}$
-             - $\boldsymbol{x}_{t-1}$が$\boldsymbol{x}_t$に移動するときの
+             - ロボットの移動に関する項
          - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
-    - $\boldsymbol{a}$と$\boldsymbol{b}$の分布を考え、
+             - 移動に加える雑音の項
+    - $\boldsymbol{a}$と$\boldsymbol{b}$の分布を考え、あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える
