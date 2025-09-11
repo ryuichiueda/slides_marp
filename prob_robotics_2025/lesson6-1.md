@@ -370,4 +370,4 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 		0 & 1 & \Delta x_t' \cos \bar\theta_{t-1} - \Delta y_t' \sin \bar\theta_{t-1} \\
 		0 & 0 &  1
 	\end{pmatrix}$
-       - $T_{t-1} = T(\boldsymbol{\mu}_{t-1})\qquad$（単なる略記）
+       - $T_{t-1} = T(\boldsymbol{\mu}_{t-1})$（単なる略記）
