@@ -234,5 +234,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
     - 向きが雑音でずれるほど$x$軸方向の進みが悪く
         $\Longrightarrow$バナナ型の分布に
 
+とりあえずいけるところまで$p_t$を計算してみましょう
 
 ![bg right:25% 95%](./figs/simulated_on.png)
