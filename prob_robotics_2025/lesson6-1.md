@@ -362,3 +362,12 @@ $= \left.  \begin{pmatrix} 0 & 0 & - \Delta x_t' \sin \theta_{t-1} - \Delta y_t'
 
 - 状態方程式$\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}$に
 $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$を代入
+- $\boldsymbol{x}_t = T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) + \boldsymbol{x}_{t-1}$
+	$= \left\{ F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1} \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
+    - ここで
+       - $F_{t-1} = I + G = \begin{pmatrix}
+		1 & 0 & - \Delta x_t' \sin \bar\theta_{t-1} - \Delta y_t' \cos \bar\theta_{t-1} \\
+		0 & 1 & \Delta x_t' \cos \bar\theta_{t-1} - \Delta y_t' \sin \bar\theta_{t-1} \\
+		0 & 0 &  1
+	\end{pmatrix}$
+       - $T_{t-1} = T(\boldsymbol{\mu}_{t-1})\qquad$（単なる略記）
