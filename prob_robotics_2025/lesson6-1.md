@@ -317,5 +317,5 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 - 再掲: $\Delta \boldsymbol{x}_t \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
 - $G$とはなにか？
-    - $\boldsymbol{x}_{t-1}$が$\boldsymbol{\mu}_{t-1}$
+    - $\boldsymbol{x}_{t-1}$が$\boldsymbol{\mu}_{t-1}$からズレたときの$\Delta \boldsymbol{x}_t$のズレの割合
 	
