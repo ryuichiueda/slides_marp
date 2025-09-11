@@ -363,7 +363,7 @@ $= \left.  \begin{pmatrix} 0 & 0 & - \Delta x_t' \sin \theta_{t-1} - \Delta y_t'
 - 状態方程式$\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}$に
 $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$を代入
 - $\boldsymbol{x}_t = T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) + \boldsymbol{x}_{t-1}$
-	$= \left\{ F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1} \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
+	$= \left\{\boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
     - ここで
        - $F_{t-1} = I + G = \begin{pmatrix}
 		1 & 0 & - \Delta x_t' \sin \bar\theta_{t-1} - \Delta y_t' \cos \bar\theta_{t-1} \\
@@ -379,9 +379,12 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 - 移動前の分布と移動による雑音の分布
 	- $p_{t-1}(\boldsymbol{x}) \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
 	- $\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
-- 今求めた$\boldsymbol{x}_t = \left\{ F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1} \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$を次のように分解
+- $\boldsymbol{x}_t = \left\{ \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})  \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
+（前ページ求めた近似式）を次のように分解
     - $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
-         - $\boldsymbol{a} = F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1}$: <span style="color:red">ロボットの移動に関する項</span>
-         - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$: <span style="color:red">移動に加わる雑音の項</span>
-    - $\boldsymbol{a}$による$p_{t-1}$の移動と、$\boldsymbol{b}$により$p_t$に加わる雑音の分布を考え、
-    あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える
+         - $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$: <span style="color:red">$p_{t-1}$の変形に関する項</span>
+         - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$: <span style="color:red">移動と雑音の項</span>
+    - $\boldsymbol{a}$による$p_{t-1}$の移動と、$\boldsymbol{b}$により$p_t$に加わる雑音の分布を考え、あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える
+
+
+![bg right:30% 95%](./figs/linerlized_problem.png)
