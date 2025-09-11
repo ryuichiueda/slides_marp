@@ -303,7 +303,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 		R(\theta_{t-1})& \boldsymbol{0} \\
 		\boldsymbol{0} & 1
 	\end{pmatrix}$
-        なので、$\theta_{t-1}$を$\boldsymbol{\mu}_{t-1}$の$\theta$成分（$\bar\theta_{t-1}$としましょう）で代用
+        なので、$\theta_{t-1}$を$\boldsymbol{\mu}_{t-1}$の$\theta$成分で代用
     - $G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$: 近似によるズレの補正
         - 中心から離れるほど大きく補正が必要に
 
