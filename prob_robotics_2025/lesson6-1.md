@@ -379,7 +379,7 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 - 移動前の分布と移動による雑音の分布
 	- $p_{t-1}(\boldsymbol{x}) \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
 	- $\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
-- $\boldsymbol{x}_t = \left\{ F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1} \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$を次のように分解
+- 今求めた$\boldsymbol{x}_t = \left\{ F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1} \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$を次のように分解
     - $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
          - $\boldsymbol{a} = F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1}$
              - $\boldsymbol{x}_{t-1}$が$\boldsymbol{x}_t$に移動するときの
