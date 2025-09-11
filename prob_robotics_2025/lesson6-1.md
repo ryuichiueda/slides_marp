@@ -387,7 +387,6 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
     - $\boldsymbol{a}$、$\boldsymbol{b}$それぞれの分布を考え、あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える（意味は後で）
 
 
-
 ---
 
 ### $\boldsymbol{a}$、$\boldsymbol{b}$の分布
@@ -401,5 +400,13 @@ $= \mathcal{N}(F_{t-1}\bar{\boldsymbol{x}}_{t-1} + \boldsymbol{\mu}_{t-1} -F_{t-
 $= \mathcal{N}(\boldsymbol{\mu}_{t-1}, F_{t-1}\Sigma_{t-1} F_{t-1}^\top)$
 - $\boldsymbol{b}$の分布
     - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$は$\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$の線形変換
-$\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsymbol{x}'_{t}}, T_{t-1}S_{t-1} T_{t-1}^\top)$
-$=\mathcal{N}(\overline{\Delta\boldsymbol{x}_{t}}, T_{t-1}S_{t-1} T_{t-1}^\top)$
+$\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsymbol{x}'_{t}}, T_{t-1}S_{t-1} T_{t-1}^\top)=\mathcal{N}(\overline{\Delta\boldsymbol{x}_{t}}, T_{t-1}S_{t-1} T_{t-1}^\top)$
+
+---
+
+### $\boldsymbol{x}_t = \boldsymbol{a}+\boldsymbol{b}$の分布
+
+- ガウス分布にしたがう2変数の和の分布はガウス分布
+- $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
+	- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
+    - $\Sigma_t =  F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
