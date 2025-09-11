@@ -237,3 +237,14 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 とりあえずいけるところまで$p_t$を計算してみましょう
 
 ![bg right:25% 95%](./figs/simulated_on.png)
+
+---
+
+### ロボットの移動量の計算
+
+- ロボット座標系で考えてみましょう
+    - 次の移動量の関係は？
+    - ロボット座標系: $\Delta\boldsymbol{x}_t' = (\Delta x_t', \Delta y_t', \Delta \theta_t')$
+    - 世界座標系: $\Delta \boldsymbol{x}_t = (\Delta x_t, \Delta y_t, \Delta \theta_t)$
+
+![bg right:50% 95%](./figs/robot_coordinate2.png)
