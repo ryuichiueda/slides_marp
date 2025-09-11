@@ -277,5 +277,6 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### 非線形性の確認
 	
 - $\boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t' + \boldsymbol{x}_{t-1} = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}$
-	- $\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1} = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$という形にはならない
+	- 線形な式$\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1} = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$にはならない
+	    - $A$のなかに$\boldsymbol{x}'_t$中の$\theta'_t$が紛れ込む
 
