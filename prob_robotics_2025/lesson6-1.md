@@ -243,10 +243,20 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### ロボットの移動量の計算
 
 - 次の移動量の関係は？
-    - （移動前の）ロボット座標系: $\Delta\boldsymbol{x}_t' = (\Delta x_t', \Delta y_t', \Delta \theta_t')$
-    - 世界座標系: $\Delta \boldsymbol{x}_t = (\Delta x_t, \Delta y_t, \Delta \theta_t)$
-        - ロボットの位置: $\boldsymbol{x}_{t-1}= (x_{t-1}, y_{t-1}, \theta_{t-1})$
+    - ロボット座標系$\Sigma_\text{robot}$: $\Delta\boldsymbol{x}_t' = (\Delta x_t' \ \  \Delta y_t' \ \  \Delta \theta_t')^\top$
+        - $\Sigma_\text{robot}$は移動前の姿勢が基準
+    - 世界座標系$\Sigma_\text{world}$: $\Delta \boldsymbol{x}_t = (\Delta x_t \ \  \Delta y_t \ \  \Delta \theta_t)^\top$
+        - ロボットの位置: $\boldsymbol{x}_{t-1}= (x_{t-1} \ \  y_{t-1} \ \  \theta_{t-1})^\top$
 
 答えは次のページ
+
+![bg right:45% 95%](./figs/robot_coordinate2.png)
+
+---
+
+### ロボットの移動量の計算（答え）
+
+- $x, y$座標の関係は回転行列で表現できる
+    - $\begin{pmatrix} \Delta x_t \\ \Delta y_t \end{pmatrix} = R(\theta_{t-1}) \begin{pmatrix} \Delta x'_t \\ \Delta y'_t \end{pmatrix}$
 
 ![bg right:45% 95%](./figs/robot_coordinate2.png)
