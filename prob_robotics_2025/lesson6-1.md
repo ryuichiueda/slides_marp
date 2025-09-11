@@ -384,3 +384,4 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
          - $\boldsymbol{a} = F_{t-1} \boldsymbol{x}_{t-1} + (I - F_{t-1}) \boldsymbol{\mu}_{t-1}$
              - $\boldsymbol{x}_{t-1}$が$\boldsymbol{x}_t$に移動するときの
          - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
+    - $\boldsymbol{a}$と$\boldsymbol{b}$の分布を考え、
