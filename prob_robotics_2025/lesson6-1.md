@@ -250,7 +250,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 答えは次のページ
 
-![bg right:45% 95%](./figs/robot_coordinate2.png)
+![bg right:22% 95%](./figs/robot_coordinate2.png)
 
 ---
 
@@ -258,5 +258,16 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 
 - $x, y$座標の関係は回転行列で表現できる
     - $\begin{pmatrix} \Delta x_t \\ \Delta y_t \end{pmatrix} = R(\theta_{t-1}) \begin{pmatrix} \Delta x'_t \\ \Delta y'_t \end{pmatrix}$
+- $\theta$の変化量は両座標系で同じ
+	$\Delta \theta_t = \Delta \theta_t'$
+- まとめると
+	- $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$
+        - ここで$T(\boldsymbol{x}_{t-1}) = 
+	\begin{pmatrix}
+		\cos \theta_{t-1} & -\sin \theta_{t-1} & 0 \\
+		\sin \theta_{t-1} & \cos \theta_{t-1} & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}$
+    （同次変換行列）
 
-![bg right:45% 95%](./figs/robot_coordinate2.png)
+![bg right:22% 95%](./figs/robot_coordinate2.png)
