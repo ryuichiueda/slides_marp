@@ -282,5 +282,5 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 	
 - 状態方程式: $\boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t' + \boldsymbol{x}_{t-1}$
 - 線形な式$\boldsymbol{x}_t = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$にはならない
-   - $A$のなかに$\boldsymbol{x}'_t$中の$\theta'_t$が紛れ込む
+   - $A$のなかに$\boldsymbol{x}_t$中の$\theta_t$が紛れ込む
 
