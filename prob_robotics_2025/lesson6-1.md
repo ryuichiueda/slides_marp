@@ -283,6 +283,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - 状態方程式: $\boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t' + \boldsymbol{x}_{t-1}$
 - 線形な式$\boldsymbol{x}_t = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$にはならない
    - $A$のなかに$\boldsymbol{x}_t$中の$\theta_t$が紛れ込む
+- $p_{t-1}(\boldsymbol{x})$（ガウス分布と想定）から$p_t(\boldsymbol{x})$を求めるときに、$p_{t-1}$の分布内の$\boldsymbol{x}$を動かすと$p_t$が歪んでガウス分布にならない
 - どうやって$p_t$を求めるか？
    - 再生性を使わない（あとで）
    - <span style="color:red">線形近似</span>する
@@ -293,4 +294,5 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 	
 - $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'\simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
     と近似
+    - $T(\boldsymbol{x}_{t-1})$を$T(\boldsymbol{\mu}_{t-1})$で代用
 
