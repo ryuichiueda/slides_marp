@@ -319,4 +319,5 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 - $G$とはなにか？
     - $\boldsymbol{x}_{t-1}$が$\boldsymbol{\mu}_{t-1}$からズレたときの$\Delta \boldsymbol{x}_t$のズレの割合
     <span style="color:red">$\Longrightarrow$ヤコビ行列</span>
+	$G = \dfrac{\partial T(\boldsymbol{x}_{t-1})\Delta \boldsymbol{x}_t' - T(\boldsymbol{\mu}_{t-1})\Delta \boldsymbol{x}_t'}{\partial \boldsymbol{x}}|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
 	
