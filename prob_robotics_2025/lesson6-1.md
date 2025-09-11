@@ -355,3 +355,10 @@ $= \left.  \begin{pmatrix} 0 & 0 & - \Delta x_t' \sin \theta_{t-1} - \Delta y_t'
 		0 & 0 &  0
 	\end{pmatrix}$
     - $\bar\theta_{t-1}$は$\boldsymbol{\mu}_{t-1}$の$\theta$成分
+
+---
+
+### 近似式
+
+- 状態方程式$\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}$に
+$\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$を代入
