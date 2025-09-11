@@ -243,7 +243,10 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### ロボットの移動量の計算
 
 - 次の移動量の関係は？
-    - ロボット座標系: $\Delta\boldsymbol{x}_t' = (\Delta x_t', \Delta y_t', \Delta \theta_t')$
+    - （移動前の）ロボット座標系: $\Delta\boldsymbol{x}_t' = (\Delta x_t', \Delta y_t', \Delta \theta_t')$
     - 世界座標系: $\Delta \boldsymbol{x}_t = (\Delta x_t, \Delta y_t, \Delta \theta_t)$
+        - ロボットの位置: $\boldsymbol{x}_{t-1}= (x_{t-1}, y_{t-1}, \theta_{t-1})$
 
-![bg right:50% 95%](./figs/robot_coordinate2.png)
+答えは次のページ
+
+![bg right:45% 95%](./figs/robot_coordinate2.png)
