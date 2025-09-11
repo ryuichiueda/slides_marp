@@ -310,3 +310,12 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 <span style="color:red">$G$をどう求めるか？</span>
 
 ![bg right:30% 95%](./figs/linearlization.png)
+
+---
+
+### $G$の算出
+
+- 再掲: $\Delta \boldsymbol{x}_t \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+- $G$とはなにか？
+    - $\boldsymbol{x}_{t-1}$が$\boldsymbol{\mu}_{t-1}$
+	
