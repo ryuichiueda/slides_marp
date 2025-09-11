@@ -385,4 +385,5 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
              - ロボットの移動に関する項
          - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
              - 移動に加える雑音の項
-    - $\boldsymbol{a}$と$\boldsymbol{b}$の分布を考え、あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える
+    - $\boldsymbol{a}$による$p_{t-1}$の移動と、$\boldsymbol{b}$により$p_t$に加わる雑音の分布を考え、
+    あとで$\boldsymbol{a}+\boldsymbol{b}$の分布を考える
