@@ -323,3 +323,15 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 	= \dfrac{\partial T(\boldsymbol{x}_{t-1})\Delta \boldsymbol{x}_t' }{\partial \boldsymbol{x}_{t-1}}{\huge{|}}_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
 	    - 分母がズレに相当
 	
+
+---
+
+### $G$の算出（続き）
+
+- $\boldsymbol{g} = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$とおきましょう
+- $\boldsymbol{g} = \begin{pmatrix}
+		\Delta x_t' \cos \theta_{t-1}  - \Delta y_t' \sin \theta_{t-1}  \\
+		\Delta x_t'\sin \theta_{t-1} + \Delta y_t' \cos \theta_{t-1}  \\
+		\Delta \theta_t'
+	\end{pmatrix}$
+
