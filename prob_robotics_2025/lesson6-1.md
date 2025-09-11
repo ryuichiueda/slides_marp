@@ -377,7 +377,7 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 ### 線形化された式からの分布の移動の計算
 
 - 移動前の分布と移動による雑音の分布
-	- $p_{t-1}(\boldsymbol{x}) \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+	- $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
 	- $\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
 - $\boldsymbol{x}_t = \left\{ \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})  \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
 （前ページ求めた近似式）を次のように分解
@@ -392,5 +392,10 @@ $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x
 
 ### $\boldsymbol{a}$の分布
 
-
+- $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) = F_{t-1} \boldsymbol{x}_{t-1} + \boldsymbol{\mu}_{t-1} - F_{t-1}\boldsymbol{\mu}_{t-1}$
+は$\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$の線形変換
+    - 線形変換の式$p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\mu} + \boldsymbol{b}, A\Sigma A^\top)$を使って変換
+- $\Longrightarrow \boldsymbol{a} \sim \mathcal{N}(A\boldsymbol{\mu} + \boldsymbol{b}, A\Sigma A^\top)$
+$= \mathcal{N}(F_{t-1}\bar{\boldsymbol{x}}_{t-1} + \boldsymbol{\mu}_{t-1} -F_{t-1}\boldsymbol{\mu}_{t-1}, F_{t-1}\Sigma_{t-1} F_{t-1}^\top)$
+$= \mathcal{N}(\boldsymbol{\mu}_{t-1}, F_{t-1}\Sigma_{t-1} F_{t-1}^\top)$
 
