@@ -25,6 +25,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 動く物体と確率
     - 台風の予報円のようなものを考える
     - ロボットも同様に予測ができないと危なくて移動できないのでなんとかする 
+    - とりあえず簡単な例で考える
 
 
 ![bg right:30% 95%](https://upload.wikimedia.org/wikipedia/commons/d/d1/2022%E5%B9%B4%E5%8F%B0%E9%A2%A814%E5%8F%B7%E3%81%AE%E4%BA%88%E5%A0%B1%E5%86%86_%28%E6%B0%97%E8%B1%A1%E5%BA%81%29.jpg)
