@@ -289,3 +289,12 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 ![w:300](./figs/histgram_filter.png)
 
 ![bg right:25% 95%](./figs/discretization.png)
+
+---
+
+## まとめ
+
+- ロボットの動きの予測
+    - 後半（その2）でやったように非線形
+    - 線形化か数値計算による近似が必要
+
