@@ -273,3 +273,8 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 
 ![bg right:30% 95%](./figs/motion_update_particles.png)
+
+---
+
+### ヒストグラム状の離散化を用いた予測
+
