@@ -268,6 +268,7 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
         - $\boldsymbol{x}_t^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{x}_{t-1}^{(i)}, \boldsymbol{u}_t)$
 - 線形化する方法との違い
     - 任意の分布を表現できる
+        - <span style="color:red">とくに状態遷移が分岐する場合（下図）</span>
     - 計算量は行列の計算より大きく
 
 
