@@ -283,7 +283,7 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
     - 実際は3次元の格子
 - ロボットが移動したあとのある区画$s$にロボットがいる確率: 
 	- $P_t(s) = \int_s \big\langle p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1})}\text{d}\boldsymbol{x}$
-	    - 計算できないのでモンテカルロ法を使う
-![w:400](./figs/histgram_filter.png)
+	    - 計算できないのでモンテカルロ法などの近似を使用
+![w:300](./figs/histgram_filter.png)
 
 ![bg right:30% 95%](./figs/discretization.png)
