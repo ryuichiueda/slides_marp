@@ -278,3 +278,6 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### ヒストグラムを用いた予測
 
+- 右図（4章のものの再掲）
+
+![bg right:30% 95%](./figs/discretization.png)
