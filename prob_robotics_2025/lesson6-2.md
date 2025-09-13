@@ -276,15 +276,16 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ---
 
-### ヒストグラムを用いた予測
+### ヒストグラム状の格子を用いた予測
 
 - 右下図の分布をロボットの動きに合わせて動かす
     - 右図は4章のものの再掲
     - 実際は3次元の格子
 - ロボットが移動したあと、区画$s$にロボットがいる確率: 
 	- $P_t(s) = \int_s \big\langle p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1})}\text{d}\boldsymbol{x}$
+	    - $p_{t-1}$移動前の格子中の確率から計算される密度
 	    - 移動後の分布$p_t$を$s$の中で積分したもの
 	    - 計算できない$\rightarrow$モンテカルロ法などの近似
-![w:380](./figs/histgram_filter.png)
+![w:300](./figs/histgram_filter.png)
 
 ![bg right:25% 95%](./figs/discretization.png)
