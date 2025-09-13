@@ -276,5 +276,5 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ---
 
-### ヒストグラム状の離散化を用いた予測
+### ヒストグラムを用いた予測
 
