@@ -261,3 +261,7 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### モンテカルロ法
 
+- こういう方法
+    - ロボットの分身をたくさん用意
+        - $\boldsymbol{x}_t^{(i)} = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}) \quad (i=1,2,\dots,N)$
+
