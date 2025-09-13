@@ -267,3 +267,5 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
     - それぞれの分身を状態遷移分布を使って動かす
         - $\boldsymbol{x}_t^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{x}_{t-1}^{(i)}, \boldsymbol{u}_t)$
 
+
+![bg right:30% 95%](./figs/motion_update_particles.png)
