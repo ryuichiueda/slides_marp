@@ -261,11 +261,14 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### モンテカルロ法
 
-- こういう方法
+- こうすると$\boldsymbol{x}_t^{(i)}$の集団は$p_t$からサンプリングされたデータに
     - ロボットの分身をたくさん用意
         - $\boldsymbol{x}_t^{(i)} = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}) \quad (i=1,2,\dots,N)$
     - それぞれの分身を状態遷移分布を使って動かす
         - $\boldsymbol{x}_t^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{x}_{t-1}^{(i)}, \boldsymbol{u}_t)$
+- 線形化する方法との違い
+    - 任意の分布を表現できる
+    - 計算量は行列の計算より大きく
 
 
 ![bg right:30% 95%](./figs/motion_update_particles.png)
