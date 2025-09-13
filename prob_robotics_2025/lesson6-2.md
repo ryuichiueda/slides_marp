@@ -278,6 +278,12 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### ヒストグラムを用いた予測
 
-- 右図（4章のものの再掲）
+- 右下図の分布をロボットの動きに合わせて動かす
+    - 右図は4章のものの再掲
+    - 実際は3次元の格子
+- ロボットが移動したあとのある区画$s$にロボットがいる確率: 
+	- $P_t(s) = \int_s \big\langle p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1})}\text{d}\boldsymbol{x}$
 
 ![bg right:30% 95%](./figs/discretization.png)
+
+![w:400](./figs/histgram_filter.png)
