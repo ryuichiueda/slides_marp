@@ -38,9 +38,15 @@
 <li>双方向タスク: Transformerのエンコーダに文章の穴埋め問題を解かせる
 <ul>
 <li>例: I went to Doutonbori <code>[MASK]</code> bus.</li>
+<li>エンコーダの先に各単語の確率を出力する全結合層をくっつけて学習</li>
 </ul>
 </li>
-<li>次文予測: 2つの文を与えて、続きの文かそうでないかを当てさせる</li>
+<li>次文予測: 2つの文を与えて、続きの文かそうでないかを当てさせる
+<ul>
+<li>訓練データの50%を続きの文、50%を別の文にして学習</li>
+<li>エンコーダの先に続いているかそうでないかを確率で出す全結合層をくっつけて学習</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -48,9 +54,6 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="アドバンストビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:アドバンストビジョン第7回;--paginate:true;" data-marpit-pagination-total="7">
 <h3 id="bert%E3%81%AE%E6%A7%8B%E9%80%A0">BERTの構造</h3>
-<ul>
-<li>エンコーダの頭に<code>[MASK]</code>の</li>
-</ul>
 <footer>アドバンストビジョン第7回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="アドバンストビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:アドバンストビジョン第7回;--paginate:true;" data-marpit-pagination-total="7">
