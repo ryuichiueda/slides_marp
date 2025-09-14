@@ -29,6 +29,7 @@ marp: true
 ## [BERT](https://arxiv.org/abs/1810.04805)（Bidirectional Encoder Representations from Transformers）
 
 - Transformerのエンコーダを用いたモデル
+    - 応用: Google検索
 
 ---
 
