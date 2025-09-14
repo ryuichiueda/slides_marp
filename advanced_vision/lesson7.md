@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第7回: Vision Transformer（ViT）とCLIP
+## 第7回: Transformerの応用
 
 千葉工業大学 上田 隆一
 
@@ -21,30 +21,31 @@ marp: true
 
 ## 今日やること
 
-- Vision Transformer
-- CLIP
+- BERT
+- GPT
 
 ---
 
-### Vision Transformer（ViT）
+## BERT
 
-- Transformerを画像に転用
-    - 画像をブロック状に切って単語のように扱う（右図）
-    - 右図のCLS: クラストークン
-        - 文の分類と同じ
-- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
-    - CNNは遠くのブロックの関係性を見るのが苦手
+---
 
-[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
+## GPT（Generative Pre-trained Transformer）
 
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
+- 途中の文から次の単語を予測
+    - デコーダだけで構成
+- ChatGPTの一部に使われる
 
+[<span style="font-size:70%">画像: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
+
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
 
 
 ---
 
-### ViT（補足）
+### ChatGPT
 
-- 位置の埋め込みのパラメータは学習対象
-- 位置の埋め込みは学習対象
+- GPTを使ってテキスト（人の質問や発言）に答える
+    - （構造に関する決定的な文献なし）
 
