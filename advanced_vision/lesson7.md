@@ -26,7 +26,7 @@ marp: true
 
 ---
 
-## [BERT](https://arxiv.org/abs/1810.04805)（Bidirectional Encoder Representations from Transformers）
+## [BERT](https://aclanthology.org/N19-1423/)（Bidirectional Encoder Representations from Transformers）
 
 - Transformerのエンコーダを用いたモデル
     - 応用: Google検索
@@ -36,7 +36,7 @@ marp: true
        - エンコーダの先に各単語の確率を出力する全結合層をくっつけて学習
     - 次文予測: 2つの文を与えて、続きの文かそうでないかを当てさせる
        - 訓練データの50%を続きの文、50%を別の文にして学習
-       - エンコーダの先に続いているかそうでないかを確率で出す全結合層をくっつけて学習
+       - 出力のクラストークンの先に続いているかそうでないかを確率で出す全結合層をくっつけて学習
 
 ---
 
