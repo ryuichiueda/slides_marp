@@ -40,3 +40,11 @@ marp: true
 ![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
 
 
+
+---
+
+### ViT（補足）
+
+- 位置の埋め込みのパラメータは学習対象
+- 位置の埋め込みは学習対象
+
