@@ -45,7 +45,7 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="アドバンストビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:アドバンストビジョン第7回;--paginate:true;" data-marpit-pagination-total="7">
 <h3 id="%E4%BA%8B%E5%89%8D%E5%AD%A6%E7%BF%92">事前学習</h3>
 <ul>
-<li>双方向タスク: Transformerのエンコーダに文章の穴埋め問題を解かせる
+<li>masked LM（双方向タスクとも）: Transformerのエンコーダに文章の穴埋め問題を解かせる
 <ul>
 <li>例: I went to Doutonbori <code>[MASK]</code> bus.</li>
 <li>エンコーダの先に各単語の確率を出力する全結合層をくっつけて学習</li>
@@ -54,7 +54,7 @@
 <li>次文予測: 2つの文を与えて、続きの文かそうでないかを当てさせる
 <ul>
 <li>訓練データの50%を続きの文、50%を別の文にして学習</li>
-<li>出力のクラストークンの先に続いているかそうでないかを確率で出す全結合層をくっつけて学習</li>
+<li>出力のクラストークンの先に連続/不連続を確率で出す全結合層をくっつけて学習</li>
 </ul>
 </li>
 </ul>
