@@ -30,6 +30,8 @@ marp: true
 
 - Transformerのエンコーダを用いたモデル
     - 応用: Google検索
+- Transformerのエンコーダに文章の穴埋め問題を解かせる
+    - 例: I went to Doutonbori `[MASK]` bus. 
 
 ---
 
