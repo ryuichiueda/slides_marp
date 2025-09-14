@@ -26,7 +26,7 @@ marp: true
 
 ---
 
-### Vision Transformer (ViT）
+### Vision Transformer（ViT）
 
 - Transformerを画像に転用
     - 画像をブロック状に切って単語のように扱う（右図）
