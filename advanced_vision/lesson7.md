@@ -30,8 +30,17 @@ marp: true
 
 - Transformerのエンコーダを用いたモデル
     - 応用: Google検索
-- Transformerのエンコーダに文章の穴埋め問題を解かせる
-    - 例: I went to Doutonbori `[MASK]` bus. 
+- 訓練方法
+    - 双方向タスク: Transformerのエンコーダに文章の穴埋め問題を解かせる
+       - 例: I went to Doutonbori `[MASK]` bus. 
+    - 次文予測: 2つの文を与えて、続きの文かそうでないかを当てさせる
+
+---
+
+### BERTの構造
+
+- エンコーダの頭に`[MASK]`の
+
 
 ---
 
