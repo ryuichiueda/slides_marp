@@ -30,7 +30,7 @@ marp: true
 
 - Transformerのエンコーダを用いたモデル
     - 応用: Google検索
-- 訓練方法（図: [原著のFig.1](https://aclanthology.org/N19-1423/)）
+- 訓練方法（ANNの構成: [原著のFig.1](https://aclanthology.org/N19-1423.pdf)）
     - 事前学習: 文章の穴埋め（masked LM、MLM）タスクと次文予測タスク
     - ファインチューニング: 各用途に応じたタスク
 
