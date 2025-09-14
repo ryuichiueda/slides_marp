@@ -44,6 +44,16 @@ marp: true
 
 ---
 
+### BERTの使い方
+
+- 分類
+    - クラストークンを頭につける
+- 質問への回答
+    - 質問の文を入力すると、回答となる続きの文を出力
+
+
+---
+
 ## GPT（Generative Pre-trained Transformer）
 
 - 途中の文から次の単語を予測
