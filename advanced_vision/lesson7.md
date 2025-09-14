@@ -2,7 +2,7 @@
 marp: true
 ---
 
-<!-- footer: "アドバンストビジョン第6回" -->
+<!-- footer: "アドバンストビジョン第7回" -->
 
 # アドバンストビジョン
 
@@ -26,7 +26,9 @@ marp: true
 
 ---
 
-## BERT
+## [BERT](https://arxiv.org/abs/1810.04805)（Bidirectional Encoder Representations from Transformers）
+
+- Transformerのエンコーダを用いたモデル
 
 ---
 
