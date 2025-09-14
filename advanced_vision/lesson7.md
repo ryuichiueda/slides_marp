@@ -51,6 +51,7 @@ marp: true
 - 質問への回答
     - 質問の文を入力すると、回答となる続きの文を出力
 
+- https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1
 
 ---
 
