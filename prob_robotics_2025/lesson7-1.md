@@ -42,4 +42,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 消去法？
     - 講師の意図は考えましたか？
     - 脳みそのどこを使いましたか？
+- ロボットに実装するには？
+    - たぶん今だとGPTだと思いますが、
+    GPTも間接的に使っているある方法で
 
