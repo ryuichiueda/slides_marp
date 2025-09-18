@@ -155,12 +155,12 @@ marp: true
 - 内容（メモ: 資料を書いてれば13回分にのびるはず）
     - 第1回: イントロダクションと人工ニューラルネットワークのおさらい
     - 第2回: 人工ニューラルネットワークの学習
-    - 第3回: CNN、GAN
-    - 第4回: オートエンコーダ・変分オートエンコーダ
-    - 第5回: Transformer
-    - 第6回: Vision Transformer、CLIP、SAM
-    - 第7回: 拡散モデル、画像生成
-    - 第8回: NeRF / 3D Gaussian Splatting
+    - 第3回: 画像の識別と生成の基礎I
+    - 第4回: 画像の識別と生成の基礎II
+    - 第5回: 埋め込みと文脈の付加
+    - 第6回: Transformerの構造
+    - 第7回: Transformerの応用
+    - 以後: NeRF / 3D Gaussian Splattingなど（未定）
 
 ---
 

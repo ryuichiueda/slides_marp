@@ -26,7 +26,7 @@ marp: true
 
 ---
 
-## [BERT](https://aclanthology.org/N19-1423/)（Bidirectional Encoder Representations from Transformers）
+## [BERT](https://aclanthology.org/N19-1423/)（Bidirectional Encoder Representations from Transformers）[Devlin2019]
 
 - Transformerのエンコーダを用いたモデル
     - 応用: Google検索
