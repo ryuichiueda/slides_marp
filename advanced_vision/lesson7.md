@@ -55,7 +55,7 @@ marp: true
 ### BERTの使い方
 
 様々で、用途にあわせて<span style="color:red">ファインチューニング</span>される（[参考](https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1)）
-- 分類
+- 分類、感情分析
     - クラストークンの出力を分類器へ
 - 質問応答
     - 最初に答えの含まれる文を読み込ませ、その後1単語でこたえられるクイズを出して答えさせる
