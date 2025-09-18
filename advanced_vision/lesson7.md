@@ -32,6 +32,7 @@ marp: true
     - 応用: Google検索
 - $\text{BERT}_\text{BASE}$、$\text{BERT}_\text{LARGE}$がある
     - エンコーダの数: 前者が12、後者が24
+    - パラメータの数: 前者が110M、後者が340M
 - 訓練方法（ANNの構成: [原著のFig.1](https://aclanthology.org/N19-1423.pdf)）
     - 事前学習: 文章の穴埋め（masked LM、MLM）タスクと次文予測タスク
     - ファインチューニング: 各用途に応じたタスク
