@@ -51,8 +51,7 @@ marp: true
 
 ### BERTの使い方
 
-- 様々で、用途にあわせて<span style="color:red">ファインチューニング</span>される
-    - [参考](https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1)
+様々で、用途にあわせて<span style="color:red">ファインチューニング</span>される（[参考](https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1)）
 - 分類
     - クラストークンの出力を分類器へ
 - 質問応答
@@ -61,6 +60,9 @@ marp: true
 - 固有表現抽出（named entity recognition）
     - 未知の単語を「人名」、「地名」、「組織名」・・・などに分類
 
+---
+
+### BERTの使い方（続き）
 
 ---
 
