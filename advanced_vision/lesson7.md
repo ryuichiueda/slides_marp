@@ -51,10 +51,12 @@ marp: true
 
 ### BERTの使い方
 
+- 様々で、用途にあわせて<span style="color:red">ファインチューニング</span>される
 - 分類
-    - クラストークンを頭につける
-- 質問への回答
-    - 質問の文を入力すると、回答となる続きの文を出力
+    - クラストークンの出力を分類器へ
+- 質問応答
+    - 最初に答えの含まれる文を読み込ませ、その後1単語でこたえられるクイズを出して答えさせる
+        - クイズの続きになる単語を予測する問題に
 
 - https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1
 
