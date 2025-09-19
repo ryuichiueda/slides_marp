@@ -55,7 +55,18 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="アドバンストビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:アドバンストビジョン第7回;--paginate:true;" data-marpit-pagination-total="9">
 <h3 id="%E5%85%A5%E5%8A%9B%E3%81%AE%E5%BD%A2%E5%BC%8F">入力の形式</h3>
 <ul>
-<li>通常の位置埋め込みの他に、何文目かを表すセグメント埋め込みを各トークンに付与</li>
+<li>通常の位置埋め込みの他に、何文目かを表すセグメント埋め込みを各トークンに付与
+<ul>
+<li>後発の<a href="https://arxiv.org/abs/1907.11692">RoBERTa</a>ではセグメント埋め込みは使われない</li>
+</ul>
+</li>
+<li>特殊トークン
+<ul>
+<li><code>[CLS]</code>: クラストークン（先頭につける）</li>
+<li><code>[SEP]</code>: 文の区切り</li>
+<li><code>[MASK]</code>: 訓練のときにトークンを隠すマスク</li>
+</ul>
+</li>
 </ul>
 <footer>アドバンストビジョン第7回</footer>
 </section>
@@ -64,7 +75,7 @@
 <ul>
 <li>masked LM（双方向タスクとも）: Transformerのエンコーダに文章の穴埋め問題を解かせる
 <ul>
-<li>例: I went to Doutonbori <code>[MASK]</code> bus.</li>
+<li>例: <code>[CLS]</code> I went to Doutonbori <code>[MASK]</code> bus. <code>[SEP]</code></li>
 <li>エンコーダが出力する埋め込みの先に各単語の確率を出力する全結合層がくっついていてそれが学習</li>
 </ul>
 </li>
