@@ -91,6 +91,29 @@ marp: true
 
 ## GPT（Generative Pre-trained Transformer）
 
+- GPT-1
+- GPT-2
+- GPT-3, 4
+
+---
+
+### [GPT-1 [Radford2018]](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+
+- TransformerのデコーダにBERTのように仕事をさせる
+    - この場合のデコーダ: 交差注意機構は用いず、マスクつきの自己注意機構を用いる
+        - マスク: つまり次の単語の予測で事前学習
+
+---
+
+### GPT-2
+
+- ゼロショット学習
+
+
+---
+
+## GPT（Generative Pre-trained Transformer）
+
 - 途中の文から次の単語を予測
     - デコーダだけで構成
 - ChatGPTの一部に使われる
