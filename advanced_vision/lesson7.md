@@ -104,25 +104,25 @@ marp: true
     - この場合のデコーダ: 交差注意機構は用いず、マスクつきの自己注意機構を持つTransformerデコーダ
         - マスク: つまり次の単語の予測で事前学習
 
+[<span style="font-size:70%">画像: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
+
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
+
+---
+
+### GPT-1の学習方法
+
+- 事前学習
+    - 特殊トークン: 文章の始まりに`start`、終わりに`extract`
+    - `extract`に対応する出力を分類等に用いる
+
 ---
 
 ### GPT-2
 
 - ゼロショット学習
 
-
----
-
-## GPT（Generative Pre-trained Transformer）
-
-- 途中の文から次の単語を予測
-    - デコーダだけで構成
-- ChatGPTの一部に使われる
-
-[<span style="font-size:70%">画像: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
-
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
 
 
 ---
