@@ -100,7 +100,8 @@ marp: true
 ### [GPT-1 [Radford2018]](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
 - TransformerのデコーダにBERTのように仕事をさせる
-    - この場合のデコーダ: 交差注意機構は用いず、マスクつきの自己注意機構を用いる
+    - （BERTはエンコーダだった）
+    - この場合のデコーダ: 交差注意機構は用いず、マスクつきの自己注意機構を持つTransformerデコーダ
         - マスク: つまり次の単語の予測で事前学習
 
 ---
