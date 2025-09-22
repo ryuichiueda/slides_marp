@@ -156,9 +156,11 @@ marp: true
 
 ---
 
-### GPT-2
+### [GPT-2 [Radford2019]](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
 
-- ゼロショット学習
+- GPT-1をスケールアップ
+    - パラメータ数、学習の量を10倍に
+- 論文ではゼロショット学習を追求
 
 
 
