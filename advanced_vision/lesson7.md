@@ -115,9 +115,12 @@ marp: true
 
 - マスクのかかっていない部分から次の単語を予測
     - 前ページで書いたとおり
-    - 損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = -\sum_i \log P(w_i | w_{{i-K}:{i-1}}, \boldsymbol{\Theta})$
+    - 損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = -\sum_i \log P(w_i | w_{{i-k}:{i-1}}, \boldsymbol{\Theta})$
+        - $w_i$: 予測したいトークン
+        - $w_{i-k:i-1}$: 予測に使うトークン
+        - $k$: 過去のトークンを読ませる範囲（打ち切りの閾値）
+    - `<e>`に対応する出力に全結合層をつないで、全単語に対して出現確率を算出
 - 特殊トークン: 文章の始まりに`<s>`、終わりに`<e>`
-- `<e>`に対応する出力に全結合層をつないで、全単語に対して出現確率を算出
 - データ: 様々なジャンルの7000冊の未発表書籍からの4.5GBのテキスト（[BookCorpus](https://github.com/soskek/bookcorpus)）
 
 ---
