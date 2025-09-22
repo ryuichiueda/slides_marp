@@ -100,7 +100,7 @@ marp: true
 ### [GPT-1 [Radford2018]](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
 - TransformerのデコーダにBERTのように仕事をさせる
-    - （BERTはエンコーダだった）
+    - （BERTはエンコーダ）
     - この場合のデコーダ: 交差注意機構は用いず、マスクつきの自己注意機構を持つTransformerデコーダ
         - マスク: つまり次の単語の予測で事前学習
 
@@ -111,17 +111,26 @@ marp: true
 
 ---
 
-### GPT-1の学習方法（事前学習）
+### GPT-1の学習方法（事前学習その1）
 
-- データ: 様々なジャンルの7000冊の未発表書籍からの4.5GBのテキスト（[BookCorpus](https://github.com/soskek/bookcorpus)）
+- 事前学習のデータ: 様々なジャンルの7000冊の未発表書籍からの4.5GBのテキスト（[BookCorpus](https://github.com/soskek/bookcorpus)）
 - マスクのかかっていない部分から次の単語を予測
     - 前ページで書いたとおり
     - 損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = -\sum_i \log P(w_i | w_{{i-k}:{i-1}}, \boldsymbol{\Theta})$
         - $w_i$: 予測したいトークン
         - $w_{i-k:i-1}$: 予測に使うトークン
         - $k$: 過去のトークンを読ませる範囲（打ち切りの閾値）
-    - 特殊トークンの付加: 文章の始まりに`<s>`、終わりに`<e>`
-        - `<e>`に対応する出力に全結合層をつないで、全単語に対して出現確率を算出
+
+---
+
+### GPT-1の学習方法（事前学習その2）
+
+- 特殊トークンの付加: 文章の始まりに`<s>`、終わりに`<e>`
+- `<e>`に対応する出力$\boldsymbol{h}_\text{<e>}$に全結合層をつないで、
+    全単語に対して出現確率を算出
+    - $P(w_i) =$softmax$(W\boldsymbol{h}_\text{<e>})$
+    - クラストークンのように`<e>`の部分に読み込んだ文章の意味が
+    集約されているという考え
 
 ---
 
