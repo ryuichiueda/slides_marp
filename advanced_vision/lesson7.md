@@ -144,7 +144,7 @@ marp: true
 
 ---
 
-### ゼロショットでの使用
+### <span style="color:red">ゼロショット</span>での使用
 
 ---
 
