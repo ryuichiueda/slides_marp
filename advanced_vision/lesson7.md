@@ -144,7 +144,7 @@ marp: true
 
 ---
 
-### <span style="color:red">ゼロショット</span>での使用
+### <span style="color:red">ゼロショット</span>での使用の検討
 
 - ファインチューニングなしでGPTを利用
 
