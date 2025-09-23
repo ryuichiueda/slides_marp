@@ -348,6 +348,6 @@ x & (x \ge 0)
 ## Summary
 
 - Artificial Neurons and Artificial Neural Networks
-- Programmable
-- Attempts to express arbitrary functions using simple linear algebra and activation functions
-- How do we learn parameters? (Next time)
+    - Programmable
+    - Attempts to express arbitrary functions using simple linear algebra and activation functions
+    - How do we learn their parameters? (Next time)
