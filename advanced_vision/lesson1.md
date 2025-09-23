@@ -152,15 +152,15 @@ marp: true
 
 - 本講義では機械学習に基づいた画像処理を扱います
 - 途中言語も扱います
-- 内容（メモ: 資料を書いてれば13回分にのびるはず）
+- 内容
     - 第1回: イントロダクションと人工ニューラルネットワークのおさらい
     - 第2回: 人工ニューラルネットワークの学習
-    - 第3回: CNN、GAN
-    - 第4回: オートエンコーダ・変分オートエンコーダ
-    - 第5回: Transformer
-    - 第6回: Vision Transformer、CLIP、SAM
-    - 第7回: 拡散モデル、画像生成
-    - 第8回: NeRF / 3D Gaussian Splatting
+    - 第3回: 画像の識別と生成の基礎I
+    - 第4回: 画像の識別と生成の基礎II
+    - 第5回: 埋め込みと文脈の付加
+    - 第6回: Transformerの構造
+    - 第7回: Transformerの応用
+    - 以後: NeRF / 3D Gaussian Splattingなど（未定）
 
 ---
 
@@ -278,7 +278,7 @@ marp: true
 
 - やってることは単なる行列の演算
 - 先ほどの例の一番左の「層」
-    - 入力: $\boldsymbol{x} = (z_1 \ z_2)$と表現
+    - 入力: $\boldsymbol{x} = (x_1 \ x_2)$と表現
     - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
         - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
     - 出力の計算: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
@@ -291,12 +291,12 @@ marp: true
 
 ### あとは繰り返し
 
-- 1層目の出力: $\boldsymbol{x}^{(1)} = \boldsymbol{h}(\boldsymbol{x}W^{(1)} + \boldsymbol{b}^{(1)})$
+- 1層目の出力: $\boldsymbol{x}^{(1)} = \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)})$
     - $W^{(1)} = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$、$\boldsymbol{b}^{(1)} = (0 \ 0)$
     - 入力: $\boldsymbol{x} = (x_1 \ x_2)$
-- 2層目の出力: $\boldsymbol{x}^{(2)} = \boldsymbol{h}(\boldsymbol{x}^{(1)}W^{(2)} + \boldsymbol{b}^{(2)})$
+- 2層目の出力: $\boldsymbol{x}^{(2)} = \boldsymbol{h}(\boldsymbol{x}^{(1)}W^{(2)} - \boldsymbol{b}^{(2)})$
     - $W^{(2)} = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$、$\boldsymbol{b}^{(2)} = (1.1 \ -0.9)$
-- 3層目の出力: $y = \boldsymbol{h}(\boldsymbol{x}^{(2)}W^{(3)} + \boldsymbol{b}^{(3)})$
+- 3層目の出力: $y = \boldsymbol{h}(\boldsymbol{x}^{(2)}W^{(3)} - \boldsymbol{b}^{(3)})$
     - $W^{(3)} = \begin{pmatrix}1 \\ 1 \end{pmatrix}$、$\boldsymbol{b}^{(3)} = (0.9)$
 
 ![bg right:40% 100%](./figs/first_neural_network.png)
