@@ -110,18 +110,18 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### Frivolous answers are the key to intelligence
+### Not serious answers are the key to intelligence
 
-- Overthinking...
-- It takes energy and time (perhaps infinitely)
-- It makes it difficult to communicate with others
-- You can't "I don't know, but let's try anyway"
+- If you think seirously everything around you, 
+    - it takes energy and time (perhaps infinitely)
+    - it makes it difficult to communicate with others
+    - you can't say "I don't know, but let's try anyway"
 - "Everyone's on board, after all."
-- Because you can do this, you don't need to study airplanes from the ground up.
-- <span style="font-size:50%">The Constitution guarantees it, so you can live without studying.</span>
+    - Because you can say this, you don't need to study airplanes.
+    - <span style="font-size:50%">The Constitution guarantees it, so you can live without studying.</span>
 - "Cats are cats."
-- Everyone distinguishes them from dogs, and they're called cats, so they're cats.
-- They're called cats in other countries, and they might not even be distinguished.
+    - Everyone distinguishes them from dogs, and they're called cats, so they're cats.
+        - They never called "cats" in other languages, and they might not even be distinguished.
 
 ---
 
