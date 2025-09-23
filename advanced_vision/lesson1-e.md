@@ -85,7 +85,7 @@ Ryuichi Ueda, Chiba Institute of Technology
     - Because of this ability, we can take self-benefiting actions, such as eating, running away, or talking to others.
 - Questions
     - How do we acquire these "abilities"?
-    - How can we achieve similar capabilities in a computer?
+    - How can we create similar capabilities in a computer?
 
 ---
 
