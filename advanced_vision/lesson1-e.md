@@ -175,13 +175,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - Cells that transmit signals
 - How signals are transmitted
-1. When a certain amount of chemicals reach the dendrites, a voltage is generated.
-(<span style="color:red">Firing</span>)
-- Some neurons, like photoreceptors, fire in response to other stimuli.
-2. Voltage travels down the axon, releasing chemicals from the synapse.
-3. Other cells fire.
+    1. When a certain amount of chemicals reach the dendrites, a voltage is generated. (<span style="color:red">firing</span>)
+        - Some neurons, like photoreceptors, fire in response to other stimuli.
+    2. Voltage travels down the axon and urges synapses to release chemicals.
+    3. Other cells fire.
 
-![bg right:50% 100%](./figs/neuron.png)
+![bg right:40% 100%](./figs/neuron.png)
 
 <center style="font-size:50%">(Figure: public domain)</center>
 
