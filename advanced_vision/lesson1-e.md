@@ -48,7 +48,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Further Question 1 (Regarding Shape and Size)
+### Further Question 1 (about Shape and Size)
 
 - We can tell the shape even if it's in a different location.
 - We can tell the shape even if it's rotated.
@@ -62,7 +62,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Further Question 2 (Regarding Object Identification and Naming)
+### Further Question 2 (about Object Identification and Naming)
 
 - Why do we consider dots to be real objects in the first place?
 - In the discussion on page 4, no one (unless they're extremely cynical like me) would have questioned anything.
