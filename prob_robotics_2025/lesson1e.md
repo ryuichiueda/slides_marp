@@ -127,12 +127,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### Good tools for dealing with frivolousness: Probability and statistics
 
-- Probability and statistics: Mathematics that puts aside causes and deals with the patterns of the data.
-- Airplane accident "rates": Statistics can be obtained even without understanding the mechanisms.
-- $\rightarrow$ probability is used when new information is acquired and statistical predictions are revised.
-- It allows us to consider causes from results.
-- "Everyone calls it a cat" is also a statistical statement.
-- <span style="color:red">This is what artificial neural networks have learned</span>
+- Probability and statistics puts aside causes and deals with the patterns of any data.
+    - Airplane accident "rates": Statistics can be obtained even without understanding the mechanisms.
+        - When new information is acquired and statistical predictions are revised, the calculation of probability is used.
+        - It allows us to consider causes from results.
+    - "Everyone calls it a cat" is also a statistical statement.
+        - <span style="color:red">This is what artificial neural networks have learned.</span>
 
 As long as they can collect statistics, robots may not need to be physicists. In fact, we who are not physicists can go about our daily lives and work.
 
