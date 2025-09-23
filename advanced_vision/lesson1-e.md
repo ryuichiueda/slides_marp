@@ -42,7 +42,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 ![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">(https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0)</span>
 - Light enters from the left and is received by the photoreceptor cells (two types, 130 million) on the right, converting them into electrical signals.
 - The electrical signals are processed to the right and sent to the brain via the downward red line in the diagram.
-- The red lines in each part of the retina form a bundle of "optic nerves (1 million)" that travel to the brain.
+    - The red lines in each part of the retina form a bundle of "optic nerves (1 million)" that travel to the brain.
 
 <center style="color:red">Why can we tell the shape from independent 130 million signals?</center>
 
@@ -64,28 +64,28 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Further Question 2 (about Object Identification and Naming)
 
-- Why do we consider dots to be real objects in the first place?
-- In the discussion on page 4, no one (unless they're extremely cynical like me) would have questioned anything.
+- Why do we consider dots to be real objects?
+    - On page 4, no one (unless they're extremely cynical like me) would have questioned anything.
 - Would a mouse dislike a cat in a drawing?
-- What you see in a picture or mirror is not real.
+    - What you see in a picture or mirror is not real.
 - How do vision and language interact?
-- Associating the name of an object from what you see.
-- Associating a scene from a sentence.
+    - Associating the name of an object from what you see.
+    - Associating a scene from a sentence.
 
 ---
 
 ### Summary
 
 - The brain apparently receives stimuli through numerous switches.
-- In addition to the eyes, the ears, nose, and tongue also function.
-- It's surprisingly digital.
+    - In addition to the eyes, the ears, nose, and tongue also function.
+    - It's surprisingly digital.
 - The brain appears to interpret digital signals in some way.
 - <span style="color:red">Finding patterns in disparate stimulus signals</span>
-- <span style="color:red">Identifying patterns (putting them into words)</span>
-- Because of this ability, we can take self-benefiting actions, such as eating, running away, or talking to others.
+    - <span style="color:red">Identifying patterns (putting them into words)</span>
+    - Because of this ability, we can take self-benefiting actions, such as eating, running away, or talking to others.
 - Questions
-- How do we acquire these "abilities"?
-- How can we achieve similar capabilities in a computer?
+    - How do we acquire these "abilities"?
+    - How can we achieve similar capabilities in a computer?
 
 ---
 
