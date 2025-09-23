@@ -316,21 +316,21 @@ $\qquad\qquad\qquad$![w:400](./figs/ann_layer_notation2.png)
 
 ### Variations of Activation Function Layers
 
-- For the simple example above, a step function is sufficient for $\boldsymbol{h}$.
-- It is insufficient for more complex functions that require learning.
-- It can only output $0$ and $1$ (poor expressiveness).
-- It cannot be differentiated.
+- For the previous example, a step function is sufficient.
+- It is insufficient for more complex functions.
+    - It can only output $0$ and $1$ (poor expressiveness).
+    - It cannot be differentiated.
 - The basic function used as $\boldsymbol{h}$.
-- Sigmoid function (blue line in the right figure)
-- $h(x) = \dfrac{1}{1 + e^{-x}}$
-- ReLU (Rectified Linear Unit; red line in the right figure)
-- $h(x) = \begin{cases}
+    - Sigmoid function (blue line in the right figure)
+        - $h(x) = \dfrac{1}{1 + e^{-x}}$
+    - ReLU (Rectified Linear Unit; red)
+        - $h(x) = \begin{cases}
 0 & (x<0) \\
 x & (x \ge 0)
 \end{cases}$
-- The differential value at $x=0$ is appropriately approximated, such as $0$.
+            - The differential value at $x=0$ is appropriately approximated, such as $0$.
 
-![bg right:30% 95%](./figs/relu.png)
+![bg right:25% 95%](./figs/relu.png)
 
 ---
 
