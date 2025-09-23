@@ -82,7 +82,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 - The brain appears to interpret digital signals in some way.
 - <span style="color:red">Finding patterns in disparate stimulus signals</span>
     - <span style="color:red">Identifying patterns (putting them into words)</span>
-    - Because of this ability, we can take self-benefiting actions, such as eating, running away, or talking to others.
+        - Because of this ability, we can take self-benefiting actions, such as eating, running away, or talking to others.
 - Questions
     - How do we acquire these "abilities"?
     - How can we create similar capabilities in a computer?
