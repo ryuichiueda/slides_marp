@@ -162,11 +162,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### What is an artificial neural network?
 
-- Revisiting the original question
 - Why can we recognize cats and dogs?
-- We know that the brain does this.
-- We know that the brain has nerves.
-- <span style="color:red">What exactly are the brain and nerves structured like?</span>
+   - We know that the brain does this.
+   - We know that the brain has nerves.
+- <span style="color:red">What is the structure of the brain and nerves?</span>
 
 ![bg right:26% 100%](./figs/cat_and_dog.png)
 
