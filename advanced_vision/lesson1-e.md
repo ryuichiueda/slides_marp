@@ -241,9 +241,115 @@ Ryuichi Ueda, Chiba Institute of Technology
 <img width="700" src="./figs/first_neural_network.png" />
 
 ---
-
 ### (Artificial) Neural Network
 
 - Neurons can be combined and programmed as shown on the previous page.
-- If NAND circuits can be created, they can be equivalent to computers.
-- [The human brain contains 86 billion neurons](https://www.riken.jp/press/2018/20180326_1/index.html
+    - If NAND circuits can be created, they can be equivalent to a computer.
+- [The human brain has 86 billion neurons](https://www.riken.jp/press/2018/20180326_1/index.html)
+    - 86 billion neurons make each person act. 
+        - If you see a cat, you shout "Cat!" (Eyes → Brain → Mouth muscles)
+        - You move your hands to grab a snack in front of you
+        (Eyes → Brain → Arm and Hand muscles)
+        - The smell of curry makes you drool
+        (Nose → Brain → Salivary glands)
+- If a computer can perform calculations using artificial neurons, brain-like calculations can be realized. $\Longrightarrow$<span style="color:red">Artificial Neural Network</span>
+
+---
+
+### The True Nature of Artificial Neural Networks
+
+- All it does is perform simple matrix operations
+- The leftmost "layer" in the previous example
+- Input: Expressed as $\boldsymbol{x} = (x_1 \ x_2)$
+- Weight: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
+- This means that the upper and lower neurons only use $z_1 and z_2$, respectively.
+- Output calculation: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
+- $\boldsymbol{b}$ is the threshold: $\boldsymbol{b} = (0 \ 0)$
+- $\boldsymbol{h}$ is the thresholding process (activation function).
+
+![bg right:40% 100%](./figs/first_neural_network.png)
+
+---
+
+### Repeat
+
+- 1st layer output: $\boldsymbol{x}^{(1)} = \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)})$
+- $W^{(1)} = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, $\boldsymbol{b}^{(1)} = (0 \ 0)$
+- Input: $\boldsymbol{x} = (x_1 \ x_2)$
+- 2nd layer output: $\boldsymbol{x}^{(2)} = \boldsymbol{h}(\boldsymbol{x}^{(1)}W^{(2)} - \boldsymbol{b}^{(2)})$
+- $W^{(2)} = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$, $\boldsymbol{b}^{(2)} = (1.1 \ -0.9)$
+- Third layer output: $y = \boldsymbol{h}(\boldsymbol{x}^{(2)}W^{(3)} - \boldsymbol{b}^{(3)})$
+- $W^{(3)} = \begin{pmatrix}1 \\ 1 \end{pmatrix}$, $\boldsymbol{b}^{(3)} = (0.9)$
+
+![bg right:40% 100%](./figs/first_neural_network.png)
+
+---
+
+### Layer Representation
+
+- Inputs and outputs are connected by lines, and operations are represented by boxes.
+- In the previous examples, one layer becomes two layers.
+- One layer is created by weight reflection (and threshold subtraction).
+- <span style="color:red">Affine Layer (Fully Connected Layer)</span>
+- One layer is created by thresholding.
+- <span style="color:red">Activation Function Layer</span>
+- Note: While the number of inputs and outputs does not change significantly in the diagram on the right, it actually changes before and after the affine layer.
+
+![bg right:40% 90%](./figs/ann_layer_notation.png)
+
+---
+
+### What an Artificial Neural Network Represents
+
+- Example on the previous page: The following function is created for $\boldsymbol{x}$.
+- $\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{h} \{ \boldsymbol{h} [ \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)}) W^{(2)} - \boldsymbol{b}^{(2)} ]W^{(3)} - \boldsymbol{b}^{(3)} \}$
+$\qquad\qquad\qquad$![w:460](./figs/ann_layer_notation2.png)
+- General notation
+- $\boldsymbol{f}(\boldsymbol{x}) =
+\boldsymbol{f}^{(n)}\circ
+\boldsymbol{f}^{(n-1)}\circ\dots\circ
+\boldsymbol{f}^{(1)}(\boldsymbol{x})$
+- $\boldsymbol{f}^{(i)}$: The function corresponding to the i-th affine layer and activation function layer pair
+- Note: The affine layer can be replaced by another one.
+- This allows any function to be expressed.
+- Without activation functions, $\Longrightarrow$ nonlinear functions cannot be expressed using matrix multiplication alone.
+
+---
+
+### Variations of Activation Function Layers
+
+- For the simple example above, a step function is sufficient for $\boldsymbol{h}$.
+- It is insufficient for more complex functions that require learning.
+- It can only output $0$ and $1$ (poor expressiveness).
+- It cannot be differentiated.
+- The basic function used as $\boldsymbol{h}$.
+- Sigmoid function (blue line in the right figure)
+- $h(x) = \dfrac{1}{1 + e^{-x}}$
+- ReLU (Rectified Linear Unit; red line in the right figure)
+- $h(x) = \begin{cases}
+0 & (x<0) \\
+x & (x \ge 0)
+\end{cases}$
+- The differential value at $x=0$ is appropriately approximated, such as $0$.
+
+![bg right:30% 95%](./figs/relu.png)
+
+---
+
+### Remaining Problem: How Do We Learn?
+
+- Animals are born with a certain degree of programming, but...
+- Neurons generally do not increase as they grow.
+- To identify cats, we need to modify the neural network.
+- We can't open their heads and wire them.
+
+<center style="color:red">How do we do it? What do you usually do? (Let's discuss)</center>
+
+---
+
+## Summary
+
+- Artificial Neurons and Artificial Neural Networks
+- Programmable
+- Attempts to express arbitrary functions using simple linear algebra and activation functions
+- How do we learn parameters? (Next time)
