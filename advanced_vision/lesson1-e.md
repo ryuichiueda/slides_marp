@@ -334,12 +334,12 @@ x & (x \ge 0)
 
 ---
 
-### Remaining Problem: How Do We Learn?
+### Remaining Problem: How ot Learn
 
 - Animals are born with a certain degree of programming, but...
-- Neurons generally do not increase as they grow.
-- To identify cats, we need to modify the neural network.
-- We can't open their heads and wire them.
+    - Neurons generally do not increase as they grow.
+    - To identify cats, we need to modify the neural network.
+    - We can't open our heads and wire them.
 
 <center style="color:red">How do we do it? What do you usually do? (Let's discuss)</center>
 
