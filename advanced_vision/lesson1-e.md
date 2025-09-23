@@ -252,36 +252,36 @@ Ryuichi Ueda, Chiba Institute of Technology
         (Eyes → Brain → Arm and Hand muscles)
         - The smell of curry makes you drool
         (Nose → Brain → Salivary glands)
-- If a computer can perform calculations using artificial neurons, brain-like calculations can be realized. $\Longrightarrow$<span style="color:red">Artificial Neural Network</span>
+- If a computer can perform calculations using artificial neurons, brain-like calculations can be realized. $\Longrightarrow$<span style="color:red">Artificial Neural Networks</span>
 
 ---
 
-### The True Nature of Artificial Neural Networks
+### Identity of Artificial Neural Networks
 
-- All it does is perform simple matrix operations
-- The leftmost "layer" in the previous example
-- Input: Expressed as $\boldsymbol{x} = (x_1 \ x_2)$
-- Weight: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
-- This means that the upper and lower neurons only use $z_1 and z_2$, respectively.
+- They are simple matrix operations.
+- The leftmost layer in the previous example
+    - Input: Expressed as $\boldsymbol{x} = (x_1 \ x_2)$
+    - Weight: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
+         - This means that the upper and lower neurons only use $x_1$ and $x_2$, respectively.
 - Output calculation: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
-- $\boldsymbol{b}$ is the threshold: $\boldsymbol{b} = (0 \ 0)$
-- $\boldsymbol{h}$ is the thresholding process (activation function).
+     - $\boldsymbol{b}$ is the threshold: $\boldsymbol{b} = (0 \ 0)$
+     - $\boldsymbol{h}$ is the thresholding process (<span style="color:red">activation function</span>).
 
-![bg right:40% 100%](./figs/first_neural_network.png)
+![bg right:35% 100%](./figs/first_neural_network.png)
 
 ---
 
-### Repeat
+### Repeat of Calculations
 
 - 1st layer output: $\boldsymbol{x}^{(1)} = \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)})$
-- $W^{(1)} = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, $\boldsymbol{b}^{(1)} = (0 \ 0)$
-- Input: $\boldsymbol{x} = (x_1 \ x_2)$
+    - $W^{(1)} = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$, $\boldsymbol{b}^{(1)} = (0 \ 0)$
+    - Input: $\boldsymbol{x} = (x_1 \ x_2)$
 - 2nd layer output: $\boldsymbol{x}^{(2)} = \boldsymbol{h}(\boldsymbol{x}^{(1)}W^{(2)} - \boldsymbol{b}^{(2)})$
-- $W^{(2)} = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$, $\boldsymbol{b}^{(2)} = (1.1 \ -0.9)$
+    - $W^{(2)} = \begin{pmatrix}1 & -1 \\ 1 & -1 \end{pmatrix}$, $\boldsymbol{b}^{(2)} = (1.1 \ -0.9)$
 - Third layer output: $y = \boldsymbol{h}(\boldsymbol{x}^{(2)}W^{(3)} - \boldsymbol{b}^{(3)})$
-- $W^{(3)} = \begin{pmatrix}1 \\ 1 \end{pmatrix}$, $\boldsymbol{b}^{(3)} = (0.9)$
+    - $W^{(3)} = \begin{pmatrix}1 \\ 1 \end{pmatrix}$, $\boldsymbol{b}^{(3)} = (0.9)$
 
-![bg right:40% 100%](./figs/first_neural_network.png)
+![bg right:35% 100%](./figs/first_neural_network.png)
 
 ---
 
@@ -289,30 +289,28 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - Inputs and outputs are connected by lines, and operations are represented by boxes.
 - In the previous examples, one layer becomes two layers.
-- One layer is created by weight reflection (and threshold subtraction).
-- <span style="color:red">Affine Layer (Fully Connected Layer)</span>
-- One layer is created by thresholding.
-- <span style="color:red">Activation Function Layer</span>
-- Note: While the number of inputs and outputs does not change significantly in the diagram on the right, it actually changes before and after the affine layer.
+    - One layer is created by weight reflection (and threshold subtraction).
+        - <span style="color:red">Affine Layer (Fully Connected Layer)</span>
+    - One layer is created by thresholding.
+        - <span style="color:red">Activation Function Layer</span>
 
-![bg right:40% 90%](./figs/ann_layer_notation.png)
+![bg right:35% 90%](./figs/ann_layer_notation.png)
 
 ---
 
-### What an Artificial Neural Network Represents
+### Whole Calculations of an ANN
 
 - Example on the previous page: The following function is created for $\boldsymbol{x}$.
 - $\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{h} \{ \boldsymbol{h} [ \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)}) W^{(2)} - \boldsymbol{b}^{(2)} ]W^{(3)} - \boldsymbol{b}^{(3)} \}$
-$\qquad\qquad\qquad$![w:460](./figs/ann_layer_notation2.png)
-- General notation
-- $\boldsymbol{f}(\boldsymbol{x}) =
+$\qquad\qquad\qquad$![w:400](./figs/ann_layer_notation2.png)
+- General notation: $\boldsymbol{f}(\boldsymbol{x}) =
 \boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
 \boldsymbol{f}^{(1)}(\boldsymbol{x})$
-- $\boldsymbol{f}^{(i)}$: The function corresponding to the i-th affine layer and activation function layer pair
-- Note: The affine layer can be replaced by another one.
+    - $\boldsymbol{f}^{(i)}$: The function corresponding to the i-th affine layer and activation function layer pair
+        - Note: The affine layer can be replaced by another one.
 - This allows any function to be expressed.
-- Without activation functions, $\Longrightarrow$ nonlinear functions cannot be expressed using matrix multiplication alone.
+    - Without activation functions, $\Longrightarrow$ nonlinear functions cannot be expressed using matrix multiplication alone.
 
 ---
 
