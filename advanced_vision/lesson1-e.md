@@ -189,11 +189,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### (Non-artificial) Neural Network
 
 - Brain: Neurons gather to form circuits
-- <span style="color:red">Perform calculations</span> (see below)
-- This is what we mean by a neural network
+     - <span style="color:red">Perform calculations</span> (see below)
+     - This is what we mean by a neural network
 - Spinal cord: Nerves travel down the spine to every corner of the body
-- This is not the brain, but the main body
-- Calculations such as reflexes occur here
+     - Calculations such as reflexes occur here
 - Periphery: The end of the circuit is connected to the muscle and acts as a switch
 
 <center style="font-size:50%"> (Right image: CC BY-NC-SA 4.0, from the Neuroscience Dictionary)</center>
