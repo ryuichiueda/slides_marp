@@ -80,9 +80,9 @@ Ryuichi Ueda, Chiba Institute of Technology
     - In addition to the eyes, the ears, nose, and tongue also function.
     - It's surprisingly digital.
 - The brain appears to interpret digital signals in some way.
-- <span style="color:red">Finding patterns in disparate stimulus signals</span>
+    - <span style="color:red">Finding patterns in disparate stimulus signals</span>
     - <span style="color:red">Identifying patterns (putting them into words)</span>
-        - Because of this ability, we can take self-benefiting actions, such as eating, running away, or talking to others.
+        - Because of this ability, we can take actions for survival, such as eating, running away, or talking to others.
 - Questions
     - How do we acquire these "abilities"?
     - How can we create similar capabilities in a computer?
@@ -92,25 +92,26 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Past Attempts
 
 - Considering the characteristics and definitions of objects in order to recognize them.
-- What is the range of colors?
-- What are features?
-- Cat example: Face size, ear shape...
-- Problem: Endless
-- Example: Cats come in a variety of colors, and they change depending on the lighting.
-- In addition to color, there are many other feature parameters, such as fur length and posture.
+    - What is the range of colors?
+    - What are features?
+        - face size, ear shape, ...
+- Problem: endless
+    - What's the shape of a cat?
 
 ![bg right:26% 100%](../prob_robotics_2025/figs/cat.png)
 
 ---
 
-### Good Tool 1: Statistics
+### Good Tool for Solving 1: Statistics
 
-- Statistics sets aside the causes for the moment and deals with the resulting data.
-- Example: If you show the picture on the right, 99 out of 100 people will answer "dumplings,"
-and 1 person will answer "birds flying in flocks." → 99% probability of finding a dumpling.
-- "What exactly is a dumpling?" can be figured out later.
+- Statistics sets aside the causes for the moment. 
+    - Example: what are shown in the right picture?
+        - 99 out of 100 people answered "dumplings"
+        - one person answered "birds flying in flocks."
+        → 99% probability of "dumplings"
+           - "What exactly is a dumpling?" can be discussed later or never discussed.
 
-![bg right:28% 90%](./figs/dumplings.jpg)
+![bg right:28% 90%](./figs/餃子.jpg)
 
 ---
 
