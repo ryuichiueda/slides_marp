@@ -129,33 +129,33 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - Theoretical Background of Machine Learning
 - The method and principle are simple.
-- Just solve $\arg\!\min_{w_{1:N}} \mathcal{L}(w_{1:N} | d_{1:M})$ (it's hard, though).
-- $\mathcal{L}$: <span style="color:red">Loss Function</span>
-- A function that quantifies how much the actual output deviates from the desired output.
-- $w_{1:N} = w_1, w_2, \dots, w_N$: Parameters
-- $d_{1:M} = d_1, d_2, \dots, d_M$: Data
-- Parameters
-- Linear slope and intercept $y = w_1x + w_0$ (least squares method)
-- Artificial neural network weights
-- Probability distribution parameters (Bayesian inference)
+    - Just solve $\arg\!\min_{w_{1:N}} \mathcal{L}(w_{1:N} | d_{1:M})$ (it's hard, though).
+        - $\mathcal{L}$: <span style="color:red">Loss Function</span>
+            - A function that quantifies how much the actual output deviates from the desired output.
+        - $w_{1:N} = w_1, w_2, \dots, w_N$: Parameters
+        - $d_{1:M} = d_1, d_2, \dots, d_M$: Data
+    - Parameters
+        - $w_0$ and $w_1$ in $y = w_1x + w_0$ (least squares method) 
+        - weights of artificial neural networks
+        - parameters of probability distributions (Bayesian inference)
 
 ---
 
-### So,
+### So, this lecture covers image processing based on machine learning.
 
-- This lecture covers image processing based on machine learning
-- We will also cover intermediate languages
-- Contents (Note: If I had written the materials, this would have stretched to 13 lectures)
-- Lesson 1: Introduction and review of artificial neural networks
-- Lesson 2: Artificial neural network training
-- Lesson 3: CNN, GAN
-- Lesson 4: Autoencoders and variational autoencoders
-- Lesson 5: Transformers
-- Lesson 6: Vision Transformer, CLIP, SAM
-- Lesson 7: Diffusion models, image generation
-- Lesson 8: NeRF / 3D Gaussian splatting
+- We will also study languages
+- Contents 
+    - Lesson 1: Introduction and Review of Artificial Neural Networks
+    - Lesson 2: Training of Artificial Neural Networks
+    - Lesson 3: The Basic of Image Classification and Generation I
+    - Lesson 4: The Basic of Image Classification and Generation II
+    - Lesson 5: Embedding and Context Addition for LLM
+    - Lesson 6: Transformer Structure
+    - Lesson 7: Transformer Applications
+    - Further Topics: NeRF / 3D Gaussian Splatting, etc. (TBD)
 
 ---
+
 ## Review of artificial neural networks
 
 ---
