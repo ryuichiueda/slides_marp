@@ -204,31 +204,30 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ## Neuronal "Calculations"
 
-- The Role of the Switch
-- Receives signals from multiple cells
-- When the total signal exceeds a certain value, a voltage is generated
-- Voltage: axon$\rightarrow$synapse
-$\rightarrow$multiple other cells
+- They work as switches.
+    - Receives signals from multiple cells
+    - When the total signal exceeds a certain value, a voltage is generated
+    - Voltage: axon$\rightarrow$synapse
+    $\rightarrow$multiple other cells
 - How can this calculation be performed?
-- Is there anything similar?
-- Let's discuss.
+    - Is there anything similar?
+    - Let's discuss.
 
-![bg right:50% 100%](./figs/neuron.png)
+![bg right:40% 100%](./figs/neuron.png)
 
 ---
 
 ### Simplified model of a neuron
 
 - Simplified to the structure shown on the right (artificial neuron)
-- Receives signals from $n$ other cells
-- $x_{1:n}$: Signal strength from other cells
-- $w_{1:n}$: "Weight" applied to the received signal
-- <span style="color:red">Emits only one value of signal $y$</span>
-- $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n \ge b$
-then $1$
-- $b$: Threshold (also known as bias)
-- Multiple connections, but the same value is transmitted.
-- If other cells are modeled in the same way, $x_{1:n}$ also becomes $0, 1$, creating a digital circuit.
+    - Receives signals from $n$ other cells
+        - $x_{1:n}$: Signal strength from other cells
+        - $w_{1:n}$: "Weight" applied to the received signal
+    - <span style="color:red">Emits only one value of signal $y$</span>
+        - $x = w_1 x_1 + w_2 x_2 + \dots + w_n x_n \ge b \Rightarrow 1$
+            - $b$: Threshold (also known as bias)
+        - Multiple connections, but the same value is transmitted.
+- If other cells are modeled in the same way, $x_{1:n}$ also becomes $0, 1$ $\rightarrow$ creating a digital circuit.
 
 ![bg right:25% 100%](./figs/artificial_neuron.png)
 
@@ -237,8 +236,8 @@ then $1$
 ### Building a Circuit with Artificial Neurons
 
 - Problem: Check whether the signs of two numbers $x_1$ and $x_2$ are the same.
-- If the value is 0, consider it positive.
-* Answer
+    - If the value is 0, consider it positive.
+    * Answer
 <img width="700" src="./figs/first_neural_network.png" />
 
 ---
