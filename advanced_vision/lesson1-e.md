@@ -198,8 +198,8 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 <center style="font-size:50%"> (Right image: CC BY-NC-SA 4.0, from the Neuroscience Dictionary)</center>
 
-![bg right:30% 100%](./figs/CorticalLocalNeuralCircuit_Figure1.png)
-![bg right:40% 100%](./figs/CorticalLocalNeuralCircuit_Figure2.png)
+![bg right:30% 100%](./figs/皮質局所神経回路_図1.png)
+![bg right:40% 100%](./figs/皮質局所神経回路_図2.png)
 
 ---
 
