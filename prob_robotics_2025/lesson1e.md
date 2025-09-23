@@ -34,53 +34,52 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - "Probabilistic Robotics"
     - A field that aims to make robots smarter using probability and statistics
-    - Robots are needed as they move out of factories and into human living spaces
+    - Robots are needed as they move out of factories and into human living spaces.
 - Why Probability and Statistics?
-    - From a dynamic perspective: Conventional control cannot cope with the complexity of our living space.
-    - From an intellectual perspective: It is necessary to deal with the complexity of our living space in a somewhat "casual" manner.
+    - Viewpoint from cotnrol theory: Conventional control cannot cope with the complexity of our living space.
+    - Viewpoint from artificial intelligence: It is necessary to deal with the complexity of our living space in a somewhat "casual" manner.
 
 ---
 
-### From a dynamic perspective: Control and probability
+### Viewpoint from control theory: Control and probability
 
 - So-called modern control
-- State estimation and control of machines and plants based on state equations and observation equations.
-- State equation: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
-- When a control command $\boldsymbol{u}_t$ is issued to the controlled object, state $\boldsymbol{x}_{t-1}$ changes to state $\boldsymbol{x}_t$.
-- However, Due to noise, $\boldsymbol{x}_t$ deviates by $\boldsymbol{\varepsilon}$.
-- Observation (output) equation: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
-- If the state at time $t$ is $\boldsymbol{x}$, then $\boldsymbol{z}_t$ is observed.
-- However, due to noise, $\boldsymbol{z}_t$ deviates by $\boldsymbol{\varepsilon}'$.
-- Since noise is modeled probabilistically, we are actually dealing with probability.
+    - State estimation and control of machines and plants based on state equations and observation equations.
+         - State equation: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+             - When a control command $\boldsymbol{u}_t$ is issued to the controlled object, state $\boldsymbol{x}_{t-1}$ changes to state $\boldsymbol{x}_t$.
+             - However, Due to noise, $\boldsymbol{x}_t$ deviates by $\boldsymbol{\varepsilon}$.
+         - Observation (output) equation: $\boldsymbol{z}_t = \boldsymbol{h}_t (\boldsymbol{x}) + \boldsymbol{\varepsilon}'$
+             - If the state at time $t$ is $\boldsymbol{x}$, then $\boldsymbol{z}_t$ is observed.
+             - However, due to noise, $\boldsymbol{z}_t$ deviates by $\boldsymbol{\varepsilon}'$.
+    - Since noise is modeled probabilistically, we are actually dealing with probability.
 
 ---
 
 ### Probabilities handled in the state equation and observation equation
 
-- The assumed noise variability is usually a normal (Gaussian) distribution.
-- Considering a stable and efficient control method based on a certain level of variability.
-- Limitations of this idea.
-- When noise becomes more general, it becomes difficult to handle using state/observation equations.
-- "The robot got stuck on a step and shifted direction by 90 degrees (the state warped)."
-- "A person blocked the sensor (an error too large to be considered variability)."
+- The assumed noise variability is usually a <span style="color:red">normal (Gaussian) distribution</span>.
+    - Considering a stable and efficient control method based on a certain level of variability.
+- Limitations of this idea
+    - When noise becomes more general, it becomes difficult to handle using state/observation equations.
+        - "The robot got stuck on a step and shifted direction by 90 degrees (the state warped)."
+        - "A person blocked the sensor (an error too large to be handled by a Gaussian distribution)."
 
 <center style="color:red">⇒⇒⇒A new tool (mathematical formula) is needed.</center>
 
 ---
 
-### Intelligence reasons: We want robots to have human-level recognition and judgment capabilities.
+### Viewpoint from Artificial Intelligence: We want robots to have human-level recognition and judgment capabilities.
 
 - Sudden question: Why would you ride a vehicle where an accident could occur?
-- Airplanes, cars, roller coasters
-- The problem of robots becoming human-level is one we need to consider.
+    - Airplanes, cars, roller coasters
+    - The problem of robots becoming human-level is one we need to consider.
 * Serious answer
-- It's safe because of ◯◯
-- I don't ride it because of ◯◯
-- For a living (But what about roller coasters?)
-* Frivolous answer
-* Because everyone rides them</span>
-* I don't know (I just want to be released from this pointless lecture soon)
-* Shut up (Where should we go after this lecture?)
+    - It's safe because of ◯◯
+    - I don't ride it because of ◯◯
+    - For surviving (But what about roller coasters?)
+* Not serious answer
+    * <span style="color:red">Because everyone rides them</span>
+    * I don't know (I just want to be released from this pointless lecture soon)
 
 ---
 
@@ -88,12 +87,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - Why do people call cats that? What exactly are cats?
 - Serious answer
-- The word "cat" comes from the word "sleeping child"...
-- Cats are felines...
-* Serious answer
-* Because everyone calls them cats
-* Because they're not dogs, raccoons, cows, or horses
-* <span style="color:red">$\Rightarrow$In fact, modern computers/robots use the Serious Method</span>
+    - The word "cat" comes from the word "sleeping child"... (in Japanese)
+    - Cats are felines...
+* Not serious answer
+    * Because everyone calls them cats
+    * Because they're not dogs, raccoons, cows, or horses
+* <span style="color:red">$\Rightarrow$In fact, modern computers/robots use the latter one (NOT SERIOUS).</span>
 
 ![bg right:23% 100%](./figs/simple_cat.png)
 
@@ -102,11 +101,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### What many researchers previously thought
 
 - "If you provide the correct information to a computer and install it in a robot, it should function correctly."
-- By using the correct information, it should be possible to use logic to recognize and act correctly.
-- Keywords: expert system,
-predicate logic, fifth-generation computer
+    - By using the correct information, it should be possible to use logic to recognize and act correctly.
+        - Keywords: expert system, predicate logic, fifth-generation computer
 - It seems really smart, but is it really?
-- Can a cat be recognized simply by the logic that "it's a mammal with four legs..."
+    - Can a cat be recognized simply by the logic that "it's a mammal with four legs..."
 
 ![bg right:26% 100%](./figs/cat.png)
 
