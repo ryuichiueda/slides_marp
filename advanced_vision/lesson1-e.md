@@ -117,12 +117,11 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Good Tool 2: Machine Learning
 
-- Tool
-- 2-1: Artificial Neural Networks
-- 2-2: Bayesian Inference
-- What's Good About It?
-- Everyone can interpret the features of gyoza in their own way.
-- Automatically discover patterns through statistics, rather than relying on logic.
+- Tool 2-1: Artificial Neural Networks
+- Tool 2-2: Bayesian Inference
+- Why are they good?
+    - They interpret the features of dumplings by themselves.
+    - Automatically discover patterns through statistics, rather than logic.
 
 ---
 
