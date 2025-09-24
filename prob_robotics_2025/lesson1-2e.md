@@ -95,14 +95,14 @@ how do we compare or analyze the results? (Let's think about it.)
 ### What can be said
 
 - Superiority or inferiority relative to a certain representative value
-- B's average value is better
-- A's maximum value is better, but A's robot has three more trials
-- Hints for analysis and improvement (this is the most important)
-- A's robot can complete multiple laps with a maximum value of 7, but its average and minimum values ​​are small, making it prone to early retirement. It is important to investigate the cause.
-- B's robot appears stable in terms of its average and minimum values, but it is important to investigate why it cannot complete more than 5 or 6 laps.
+    - B's average value is better
+    - A's maximum value is better, but A's robot has three more trials
+- Hints for improvement (this is the most important)
+    - A's robot can complete multiple laps with a maximum value of 7, but its average and minimum values are small. It is important to investigate the cause of early retirement.
+    - B's robot appears stable in terms of its average and minimum values, but it is important to investigate why it cannot complete more than 5 or 6 laps.
 - <span style="color:red">What not to say (misuse of representative values)</span>
-- B's robot is better because its average value is better
-- A's robot is better because its maximum value is better
+    - B's robot is better because its average value is better
+    - A's robot is better because its maximum value is better
 
 ---
 
