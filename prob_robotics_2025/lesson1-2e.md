@@ -269,10 +269,10 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ### Robots and Outliers
 
-- Like bias, this is inherent in robots.
-- The unmaintained environment mentioned earlier = an environment where outliers occur.
-- A person or cat crosses in front of the sensor.
-- The cart gets caught on something, causing an abnormal amount of movement relative to the motor output.
+- Like bias, this is inevitable in robots.
+    - An actual environment = an environment where outliers occur.
+        - A person or cat crosses in front of the sensor.
+        - The cart gets caught on something and suffers from an abnormal amount of movement relative to the motor output.
 - Like bias, rather than eliminating the cause, developing a mechanism to respond appropriately will make the robot smarter.
 
 ---
