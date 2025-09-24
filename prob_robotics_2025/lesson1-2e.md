@@ -212,10 +212,10 @@ how do we compare or analyze the results? (Let's think about it.)
 ### Bias and Calibration
 
 - The deviation of $0.17$ in the mean value of Z is called <span style="color:red">bias</span>.
-- It's not "variability" because it's the same deviation each time.
+    - It's not "variability" because it's the same deviation each time.
 - <span style="color:red">Calibration</span>
-- Measuring bias and correcting the values.
-- Variability is unavoidable, but bias can be corrected.
+    - Measuring bias and correcting the values.
+    - Variability is unavoidable, but bias can be corrected.
 - Table below: Z measurements minus $0.17$ and recalculated.
 
 <div style="font-size:80%">
@@ -231,14 +231,13 @@ how do we compare or analyze the results? (Let's think about it.)
 ### Robots and Calibration
 
 - Calibration is required in many situations related to robots.
-- Correcting sensor values, such as in the current example.
-- Correcting camera distortion.
-- Adjusting the gyro origin (failure to do so will result in a wobbly robot).
-- Correcting left-right balance when a cart doesn't travel in a straight line.
+     - Correcting sensor values, such as in the current example.
+     - Correcting camera distortion.
+     - Adjusting the gyro origin (failure to do so will result in a wobbly robot).
+     - Correcting left-right balance when a cart doesn't travel in a straight line.
 - Limitations of calibration: Robots move around a lot...
-- In the case of a cart: Bias trends change with road surface.
-- In the case of sensors: Bias trends change with temperature, humidity, brightness, etc.
-
+    - In the case of a cart: Bias trends change with road surface.
+    - In the case of sensors: Bias trends change with temperature, humidity, brightness, etc.
 <span style="color:red">$\Rightarrow$Very Troublesome</span>
 
 ---
