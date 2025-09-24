@@ -106,17 +106,17 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ---
 
-### Using representative values ​​is difficult
+### Using representative values is difficult
 
-- Representative values ​​are a degraded representation of the original data
-- In information theory, this is equivalent to "lossy data compression"
-- Replacing a large amount of data with one reduces the amount of information
-- Representative values ​​are meaningful when used as a basis for judgment.
-- Rather than representative values, it's more important to consider the causes that can be inferred from them.
-- As I mentioned in the first half of the lecture, statistics are not serious.
+- Representative values are a degraded representation of the original data
+    - In information theory, this is equivalent to "lossy data compression"
+    - Replacing a large amount of data with one reduces the amount of information
+- Representative values are meaningful when used as a basis for judgment.
+    - Rather than representative values, it's more important to consider the causes that can be inferred from them.
+    - As I mentioned in the first half of the lecture, statistics are not serious.
 - To determine superiority or inferiority, rules and experimental conditions must be established.
-- Even so, statistics do not provide the answer to the question of what constitutes superiority.
-- While it's often used to undermine opponents, it's often inappropriate.
+    - Even so, statistics never provides the answer to the discussion of superiority.
+    - While it's often used to attack opponents, it's often inappropriate.
 
 ---
 
