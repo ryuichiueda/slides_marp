@@ -127,11 +127,11 @@ how do we compare or analyze the results? (Let's think about it.)
 ### From the previous discussion of the results of A and B
 
 - It was pointed out that there was a large difference between A's maximum and minimum values.
-- Indeed, A's number of laps differs more significantly from B's (<span style="color:red">variable</span>) than their respective values.
-- $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
-- $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
-- The problem here: Can we quantify "variability" using the entire data set, not just the maximum-minimum values?
-- Maximum-minimum values ​​are easily affected by one or two extreme values.
+- Indeed, A's number of laps differs each other more significantly than B's (<span style="color:red">varying</span>)
+    - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
+    - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
+- The problem here: Can we quantify "statistical variability" using the entire data set, not just the maximum-minimum values?
+    - Maximum-minimum values are easily affected by one or two extreme values.
 
 ---
 
