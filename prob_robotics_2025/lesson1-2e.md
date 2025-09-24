@@ -144,7 +144,7 @@ how do we compare or analyze the results? (Let's think about it.)
         - "Variances" in papers are usually unbiased variances.
 - Why $N-1$?
     - The mean value $\bar{x}$ is also variable and uncertain, so the value is larger accordingly (Section 3.3.4 of "Robot Probability and Statistics").
-- Why square it?
+- Why square the errors?
     - It's convenient for various calculations (it follows a kind of natural law).
 
 ---
