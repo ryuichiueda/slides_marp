@@ -280,10 +280,11 @@ how do we compare or analyze the results? (Let's think about it.)
 ## Summary
 
 - Representative Values
-    - <span style="color:red">Summary Statistics</span> are simply summaries. They are not universal tools.
+    - a type of <span style="color:red">Summary Statistics</span> 
+        - They are not universal tools.
     - Easy to calculate, but difficult to use.
 - Data Variability
-- Use unbiased variance (and the standard deviation calculated from unbiased variance) in papers.
+    - Use unbiased variance (and the standard deviation calculated from unbiased variance) in papers.
 - Bias and outliers
-- This is what autonomous robot research is fighting.
-- When participating in a competition, rather than focusing on rankings, it's better to solve problems that are slightly more difficult than the prescribed ones, which will help your research.
+    - This is what autonomous robot research is fighting.
+    - When participating in a competition, it's better to solve problems that are slightly more difficult than the prescribed ones rather than focusing on rankings. It will help your research.
