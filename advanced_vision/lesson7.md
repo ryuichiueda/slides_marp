@@ -180,11 +180,12 @@ marp: true
 
 ---
 
-### [GPT-3 [Brown 2020]](Language Models are few-shotarxiv.org/abs/2005.14165)
+### [GPT-3 [Brown 2020]](https://arxiv.org/abs/2005.14165)
 
 - モデルを大きく、学習量をさらに増やす
-- 文脈内学習
+- 文脈内学習（in context learning）
     - 事前学習中に、四則演算の例など特定のタスクに関係のある訓練データを混ぜる
+    - GPT-2でも同様の方法がとられていた
 
 ---
 
