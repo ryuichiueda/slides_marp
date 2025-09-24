@@ -163,16 +163,11 @@ As long as they can collect statistics, robots may not need to be physicists. In
 ### Textbook Used in the Lecture
 
 - Ueda: "Probability and Statistics for Robots," Corona Publishing, 2024.
-- Changed from "Detailed Explanation of Probabilistic Robotics" published before 2024.
-- Reason
-- Please buy the book.
-- 20 years after the publication of "Probabilistic Robotics,"
-Robotics has further developed.
-- Probability and statistics are being used beyond the original scope.
-- I want to teach probability and statistics from the basics.
-- The main points differ from those in general lectures.
-- Some people say that "Detailed Probabilistic Robotics is difficult."
-- It is written so that students can learn on their own once they have mastered the basics.
+    - Changed from "Detailed Explanation of Probabilistic Robotics" published before 2024.
+- Reason of this change
+    - <del>I want to make you buy the book.</del>
+    - 20 years after the publication of "Probabilistic Robotics," Robotics has further developed.
+        - Probability and statistics are being used beyond the original scope.
 
 ![bg right:20% 80%](./figs/books.png)
 
@@ -180,8 +175,8 @@ Robotics has further developed.
 
 ## Lecture Outline
 
-- What to Do in Each Session
-- How to Score
+- What to do in each session
+- How to score
 
 ---
 
@@ -212,7 +207,7 @@ Robotics has further developed.
 
 - Test: 60 points
 - Assignment: 40 points
-- Deadline is around the end of the year, but is negotiable
+    - Deadline is around the end of the year, but is negotiable
 
 ---
 
