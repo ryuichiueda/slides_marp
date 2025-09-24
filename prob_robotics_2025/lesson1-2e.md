@@ -245,30 +245,25 @@ how do we compare or analyze the results? (Let's think about it.)
 ### Overcalibration can be problematic.
 
 - Time-consuming (and sometimes unrewarding).
-- Have you ever continued calibrating even when it wasn't clear that bias was the cause?
+    - Have you ever continued calibrating even when it wasn't clear that bias was the cause?
 - It's more productive to think about ways to avoid calibration (automate it).
-- Demonstrations are important, but researchers need to focus on this.
+    - Demonstrations are important, but researchers need to focus on this.
 
 ---
 
-### Outliers.
+### Outliers
 
-- Data with significantly different values ​​from others is included.
-- Example: When collecting sensor value X, the 10th time I got a value of $5$[m].
-- Should I treat this value on the same level as other values?
-How should I summarize and communicate these results? (Let's think about it.)
+- Data with significantly different values from others is included.
+    - Example: When collecting sensor value X, the 10th time I got $5$[m].
+        - Should I treat this value on the same level as other values? How should I summarize and communicate these results? (Let's think about it.)
 
-<div style="font-size:80%">
-
-|Trials | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Mean | Standard Deviation |
-|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--:|
+|Trials | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Mean | StdDev |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|
 |X | 0.90 | 0.75 | 0.83 | 1.20 | 1.12 | 1.15 | 1.07 | 1.21 | 0.93 | <span style="color:red">5.00</span> | <span style="color:red">1.42</span> | <span style="color:red">1.27</span>|
 
-</div>
-
-- Concept (just one example)
-* It's better to exclude this data as an outlier, calculate the mean, and standard deviation, and then add a disclaimer that "significantly outlying values ​​may occur." This will better convey the characteristics of the data.
-- It's better to consider errors with clearly different causes separately.
+- Answer (just one example)
+    * It's better to exclude this data as <span style="color:red">an outlier</span>, calculate the mean, and standard deviation, and then add a disclaimer that "significantly outlying values may occur." This will better convey the characteristics of the data.
+       * It's better to consider errors with clearly different causes separately.
 
 ---
 
