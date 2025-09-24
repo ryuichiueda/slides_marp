@@ -280,8 +280,8 @@ how do we compare or analyze the results? (Let's think about it.)
 ## Summary
 
 - Representative Values
-- Summary Statistics are simply summaries (<span style="color:red">summary statistics</span>), not universal tools.
-- Easy to calculate, but difficult to use.
+    - <span style="color:red">Summary Statistics</span> are simply summaries. They are not universal tools.
+    - Easy to calculate, but difficult to use.
 - Data Variability
 - Use unbiased variance (and the standard deviation calculated from unbiased variance) in papers.
 - Bias and outliers
