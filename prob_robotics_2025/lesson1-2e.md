@@ -64,17 +64,17 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ---
 
-### Representative value: A single numerical representation of the data.
+### Representative value: A single numerical representation of the data
 
 - Representative representative value:
-- Mean: The sum of all data points divided by the number of data points.
-- $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
-- Maximum and minimum values: The maximum and minimum values ​​in the data (although this is a tautology).
-- Denoted as $\max{x}_{1:N} and \min{x}_{1:N}$, respectively.
-- Median: The value in the middle when sorting data by numerical size.
-- If the number of data points is even, add the two middle values ​​and divide by 2.
-- <span style="color:red">Mode</span>: The most frequently occurring value in the data column.
-- If there are multiple data points, all of them are the mode.
+    - <span style="color:red">Mean</span>: The sum of all values divided by the number of data.
+        - $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
+    - <span style="color:red">Maximum and minimum values</span>: The maximum and minimum values in the data (although this is a tautology).
+        - Denoted as $\max{x}_{1:N} and \min{x}_{1:N}$, respectively.
+    - <span style="color:red">Median</span>: The value in the middle when sorting data by numerical size.
+        - If the number of data is even, add the two middle values and divide by 2.
+    - <span style="color:red">Mode</span>: The most frequently occurring value in the data column.
+        - If there are multiple data points, all of them are the mode.
 
 ---
 
