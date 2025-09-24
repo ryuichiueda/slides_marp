@@ -56,8 +56,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Problem
 
 - Which result is better in the example on the previous page?
-- $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
-- $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
+    - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
+    - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
 - Putting aside the argument that "we won't know until we try more,"
 how do we compare or analyze the results? (Let's think about it.)
 * Using the representative value is the first step.
