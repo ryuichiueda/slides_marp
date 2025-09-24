@@ -174,7 +174,7 @@ marp: true
 
 - 先述のように、「◯◯:」とタスクの指示を入力として受け取って応答
     - ファインチューニングなしでタスクをこなす汎用性を獲得
-- 架空の記事を書く（論文へのリンク）
+- 架空の記事を書く[[Radford2019]](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)のTable 13
 
 ---
 
