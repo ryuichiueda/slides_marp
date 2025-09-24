@@ -80,15 +80,15 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ### Question
 
-- Let's find these values ​​for the data of Person A and Person B on the previous page.
-- $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
-- $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
+- Let's find these values for the data of Person A and Person B on the previous page.
+    - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
+    - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
 * Answer
-| |Average|Maximum|Minimum|Median|Mode|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|Person A|2.8|**7**|0|2.5|1, 2, 3|
-|Person B|**4.1**|6|**2**|**4**|4, 5|
-- <span style="color:red">The math is simple, but what can we say from this? </span> (Let's think about it)
+    ||Average|Maximum|Minimum|Median|Mode|
+    |:--:|:--:|:--:|:--:|:--:|:--:|
+    |Person A|2.8|**7**|0|2.5|1, 2, 3|
+    |Person B|**4.1**|6|**2**|**4**|4, 5|
+    - <span style="color:red">The math is simple, but what can we say from this? </span> (Let's think about it)
 
 ---
 
