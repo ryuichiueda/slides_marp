@@ -34,9 +34,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### What are representative values?
 
 - First things first: mean, median, mode
-- Anyone who's ever taken a statistics class knows them
+    - Anyone who's ever taken a statistics class knows them
 - Don't go to sleep too soon
-- Are you using them properly?
+    - Are you using them properly?
 
 ---
 
