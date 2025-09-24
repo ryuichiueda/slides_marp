@@ -219,4 +219,85 @@ Just answer in standard deviation
 
 ### Bias and Calibration
 
-- The deviation of $0.17$ in the mean value of Z is due to
+- The deviation of $0.17$ in the mean value of Z is called <span style="color:red">bias</span>.
+- It's not "variability" because it's the same deviation each time.
+- <span style="color:red">Calibration</span>
+- Measuring bias and correcting the values.
+- Variability is unavoidable, but bias can be corrected.
+- Table below: Z measurements minus $0.17$ and recalculated.
+
+<div style="font-size:80%">
+
+|Trials | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Mean | Standard Deviation |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--:|:--:|
+|Z'| 1.04 | 0.92 | 1.06 | 0.97 | 1.02 | 1.05 | 1.03 | 0.92 | 0.96 | 1.06 | 1.00 | 0.06|
+
+</div>
+
+---
+
+### Robots and Calibration
+
+- Calibration is required in many situations related to robots.
+- Correcting sensor values, such as in the current example.
+- Correcting camera distortion.
+- Adjusting the gyro origin (failure to do so will result in a wobbly robot).
+- Correcting left-right balance when a cart doesn't travel in a straight line.
+- Limitations of calibration: Robots move around a lot...
+- In the case of a cart: Bias trends change with road surface.
+- In the case of sensors: Bias trends change with temperature, humidity, brightness, etc.
+
+<span style="color:red">$\Rightarrow$Very Troublesome</span>
+
+---
+
+### Overcalibration can be problematic.
+
+- Time-consuming (and sometimes unrewarding).
+- Have you ever continued calibrating even when it wasn't clear that bias was the cause?
+- It's more productive to think about ways to avoid calibration (automate it).
+- Demonstrations are important, but researchers need to focus on this.
+
+---
+
+### Outliers.
+
+- Data with significantly different values ​​from others is included.
+- Example: When collecting sensor value X, the 10th time I got a value of $5$[m].
+- Should I treat this value on the same level as other values?
+How should I summarize and communicate these results? (Let's think about it.)
+
+<div style="font-size:80%">
+
+|Trials | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Mean | Standard Deviation |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--:|
+|X | 0.90 | 0.75 | 0.83 | 1.20 | 1.12 | 1.15 | 1.07 | 1.21 | 0.93 | <span style="color:red">5.00</span> | <span style="color:red">1.42</span> | <span style="color:red">1.27</span>|
+
+</div>
+
+- Concept (just one example)
+* It's better to exclude this data as an outlier, calculate the mean, and standard deviation, and then add a disclaimer that "significantly outlying values ​​may occur." This will better convey the characteristics of the data.
+- It's better to consider errors with clearly different causes separately.
+
+---
+
+### Robots and Outliers
+
+- Like bias, this is inherent in robots.
+- The unmaintained environment mentioned earlier = an environment where outliers occur.
+- A person or cat crosses in front of the sensor.
+- The cart gets caught on something, causing an abnormal amount of movement relative to the motor output.
+- Like bias, rather than eliminating the cause, developing a mechanism to respond appropriately will make the robot smarter.
+
+---
+
+## Summary
+
+- Representative Values
+- Summary Statistics are simply summaries (<span style="color:red">summary statistics</span>), not universal tools.
+- Easy to calculate, but difficult to use.
+- Data Variability
+- Use unbiased variance (and the standard deviation calculated from unbiased variance) in papers.
+- Bias and outliers
+- This is what autonomous robot research is fighting.
+- When participating in a competition, rather than focusing on rankings, it's better to solve problems that are slightly more difficult than the prescribed ones, which will help your research.
