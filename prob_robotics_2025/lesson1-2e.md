@@ -205,7 +205,7 @@ how do we compare or analyze the results? (Let's think about it.)
 
 * Answer
     - It might be possible to subtract $0.17$ from the measured value of Z.
-        - It's also possible that there might be some problem with Z, so this isn't absolute.
+        - It's also possible that there might be some problem with Z, so this isn't always true.
 
 ---
 
