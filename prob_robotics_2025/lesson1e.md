@@ -222,4 +222,4 @@ As long as they can collect statistics, robots may not need to be physicists. In
 - Probabilistic ROBOTICS
     - Read it someday to get a sense of what it was like back then.
 
-![bg right:25% 85%](./figs/prob_robotics.jpg)
+![bg right:20% 85%](./figs/prob_robotics.jpg)
