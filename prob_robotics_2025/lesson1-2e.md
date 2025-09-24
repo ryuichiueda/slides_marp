@@ -152,14 +152,14 @@ how do we compare or analyze the results? (Let's think about it.)
 ### Question
 
 - Let's find the unbiased variance of the data for Person A and Person B.
-- Which is larger?
-- $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
-- $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
-- Use any tools you like: hand calculations, spreadsheets, or shell programs.
-- Formula (reprinted): $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
+    - Which is larger?
+        - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
+        - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
+    - Use any tools you like: hand calculations, spreadsheets, or shell programs.
+    - Formula (reprinted): $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
 - Answer
-* Person A: $4.4$
-* Person B: $1.8$
+    * Person A: $4.4$
+    * Person B: $1.8$
 
 ---
 
