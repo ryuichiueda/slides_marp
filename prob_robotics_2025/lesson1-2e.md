@@ -177,15 +177,13 @@ how do we compare or analyze the results? (Let's think about it.)
 ### Reasons for introducing standard deviation
 
 - Units are consistent with the original data
-- The unit of variance is mysteriously "circle $^2$,"
-but standard deviation is "circle"
-- Can be plotted on graphs
+    - The unit of variance is mysteriously [circle$^2$], but standard deviation is [circle]
+    - Can be plotted on graphs
 - Use standard deviation when communicating with others
-- When asked, "How much variance is there?"
-Just answer in standard deviation
+    - When asked, "How variable is the data?" Just answer in standard deviation
 - Mean $\pm$ Standard deviation: Common notation
-- Person A: $2.8 \pm 2.1$circle
-- Person B: $4.1 \pm 1.3$circle
+    - Person A: $2.8 \pm 2.1$circle
+    - Person B: $4.1 \pm 1.3$circle
 
 ![bg right:35% 95%](./figs/stddev.png)
 
