@@ -140,22 +140,19 @@ As long as they can collect statistics, robots may not need to be physicists. In
 
 ### Recent topics in artificial neural networks
 
-- Translation using Transformer [Vaswani2017] and
-GPT (Generative Pre-trained Transformer) [Radford2018]
-- Selects and outputs the most appropriate next word at the beginning/midpoint of a sentence.
-- "Appropriate word": Taking into account the question from the person, the sentence before translation, and the sentences you have output so far, each word has the highest probability of appearing next.
+- Transformer [Vaswani2017] and GPT (Generative Pre-trained Transformer) [Radford2018]: Selects and outputs the most appropriate next word at the beginning/midpoint of a sentence.
+    - "Appropriate word": the word that has <span style="color:red">the highest probability</span> of appearing next
+        - taking into account the question from a person, the sentence before translation, and the sentences it has output so far...
 - Diffusion models (such as Stable Diffusion [Rombach2021])
-- <span style="color:red"> Learn how to remove noise from images containing noise that follows a certain probability distribution.
-$\rightarrow$ Generate images by arbitrarily interpreting images containing only noise.
+    - Learn how to remove noise from images with an assumption that the noise that follows <span style="color:red">a certain probability distribution</span>.  $\rightarrow$ Generate images from white noise images.
 
 <center>Not simply learning statistical laws, but evolving through probabilistic structures and problem formulation.</center>
 
 ---
 
-### In other words (Summary of the Introduction)
+### Summary of the Introduction
 
-- Probability and statistics have become extremely important in both motor and intelligence,
-and this will likely continue for some time to come.
+- Probability and statistics have become extremely important in both motor and intelligence, and this will likely continue for some time to come.
 
 ---
 
