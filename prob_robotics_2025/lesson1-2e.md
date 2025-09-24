@@ -193,23 +193,19 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ---
 
-### Problem
+### Question
 
 - I bought two sensors, X and Z, to measure the distance to the wall and installed them on my robot. I measured a distance of 1m 10 times and got the following results.
-- Which one would you like to install?
+    - Which one would you like to install?
 
-<div style="font-size:80%">
-
-|Trials | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Mean | Standard Deviation |
-|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--:|
+|Trials | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Mean | stdev |
+|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|:--|
 |X | 0.90 | 0.75 | 0.83 | 1.20 | 1.12 | 1.15 | 1.07 | 1.21 | 0.93 | 1.21 | 1.04 | 0.17 |
 |Z | 1.21 | 1.09 | 1.23 | 1.14 | 1.19 | 1.22 | 1.20 | 1.09 | 1.13 | 1.23 | 1.17 | 0.06 |
 
-</div>
-
 * Answer
-- It might be possible to subtract $0.17$ from the measured value of Z.
-- It's also possible that there might be some problem with Z, so this isn't absolute.
+    - It might be possible to subtract $0.17$ from the measured value of Z.
+        - It's also possible that there might be some problem with Z, so this isn't absolute.
 
 ---
 
