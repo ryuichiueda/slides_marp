@@ -149,7 +149,7 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ---
 
-### Problem
+### Question
 
 - Let's find the unbiased variance of the data for Person A and Person B.
 - Which is larger?
