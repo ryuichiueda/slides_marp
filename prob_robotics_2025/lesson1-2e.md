@@ -139,14 +139,13 @@ how do we compare or analyze the results? (Let's think about it.)
 
 - The most common measure of variability
 - (A value slightly larger than) the average of the squared differences between the mean and each data point.
-- $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
-- This value is called the unbiased variance (when the denominator is $N$, it is the sample variance).
-- The experimental results in papers are listed as "variance" using the unbiased variance.
+    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
+        - called the unbiased variance (when the denominator is $N$, it is the sample variance).
+        - "Variances" in papers are usually unbiased variances.
 - Why $N-1$?
-- The mean value $\bar{x}$ is also variable and uncertain,
-so the value is larger accordingly (Section 3.3.4 of "Robot Probability and Statistics").
+    - The mean value $\bar{x}$ is also variable and uncertain, so the value is larger accordingly (Section 3.3.4 of "Robot Probability and Statistics").
 - Why square it?
-- It's convenient for various calculations (it has some inherent value).
+    - It's convenient for various calculations (it follows a kind of natural law).
 
 ---
 
