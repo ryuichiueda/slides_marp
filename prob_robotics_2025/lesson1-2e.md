@@ -279,9 +279,8 @@ how do we compare or analyze the results? (Let's think about it.)
 
 ## Summary
 
-- Representative Values
-    - a type of <span style="color:red">Summary Statistics</span> 
-        - They are not universal tools.
+- Representative Values: a type of <span style="color:red">Summary Statistics</span> 
+    - They are not universal tools.
     - Easy to calculate, but difficult to use.
 - Data Variability
     - Use unbiased variance (and the standard deviation calculated from unbiased variance) in papers.
