@@ -42,15 +42,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### Data Representation
 
-- Let's say we have some data.
-- Let's represent the data column as $x_{1:N} = \{x_1, x_2, x_3, \dots, x_N\}$.
-- Let's assume the data is numerical.
-- Example (from a textbook): A and B challenged each other to see how many laps they could complete on a course with their homemade robot.
-- $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
-- $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
+- Let's represent the data series as $x_{1:N} = \{x_1, x_2, x_3, \dots, x_N\}$.
+   - assumed that the data is numerical tenmporary.
+- Example (from the textbook): A and B challenged each other to see how many laps they could complete on a course with their homemade robot.
+    - $a_{1:10} = \{2, 3, 1, 5, 0, 3, 7, 2, 4, 1\}$
+    - $b_{1:7} = \{5, 3, 6, 4, 2, 5, 4\}$
 - Terminology
-- Trying something to obtain one data point: <span style="color:red">Trial</span>
-- The phenomenon observed in a trial: <span style="color:red">Event</span> (Note: This does not necessarily have to be a numerical value.)
+    - <span style="color:red">Trial</span>: Trying something to obtain one data point
+   - <span style="color:red">Event</span>: The phenomenon observed in a trial (Note: This does not necessarily have to be a numerical value.)
 
 ---
 
