@@ -174,12 +174,13 @@ marp: true
 
 - 先述のように、「◯◯:」とタスクの指示を入力として受け取って応答
     - ファインチューニングなしでタスクをこなす汎用性を獲得
+    - ただし、タスクによっては依然ファインチューニングが必要
 - 架空の記事を書く[[Radford2019]](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)のTable 13
 - <span style="color:red">論文ではまだ学習の余地があることを示唆</span>
 
 ---
 
-### GPT-3
+### [GPT-3 [Brown 2020]](Language Models are few-shotarxiv.org/abs/2005.14165)
 
 - モデルを大きく、学習量をさらに増やす
 - 文脈内学習
