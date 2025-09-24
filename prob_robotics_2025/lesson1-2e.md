@@ -166,10 +166,10 @@ how do we compare or analyze the results? (Let's think about it.)
 ### Standard deviation
 
 - Positive square root of variance
-- Formula (just overlaying the variance formula with $\sqrt{\quad}$)
-- $s = \sqrt{\dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2}$
-- Question: If Person A's variance is $4.4$ and Person B's variance is $1.8$, what is the standard deviation?
-* Person A: $2.1$, Person B: $1.3$
+    - Formula (just overlaying the variance formula with $\sqrt{\quad}$)
+        - $s = \sqrt{\dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2}$
+    - Question: If Person A's variance is $4.4$ and Person B's variance is $1.8$, what is the standard deviation?
+        * Person A: $2.1$, Person B: $1.3$
 - Why introduce standard deviation even though there is variance? (Let's think about this on the next page.)
 
 ---
