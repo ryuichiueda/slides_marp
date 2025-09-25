@@ -206,10 +206,10 @@ $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 ## Supplement: Skip (Residual) Connections
 
 - A connection method in which the output of one layer is input not only to the next layer but also to other layers.
-- Layers sandwiched between inputs learn the difference between the input and output.
-- Presence or absence of skip connections: Affects the ease of initial learning.
-- Without skip connections: Initially, $\boldsymbol{y}$ is random.
-- With skip connections: (If the output of an intermediate layer is initially zero) Initially, $\boldsymbol{y}=\boldsymbol{x}$.
+    - Layers sandwiched between inputs learn the difference between the input and output.
+- This connections affect the ease of initial learning.
+    - Without skip connections: Initially, $\boldsymbol{y}$ is random.
+    - With skip connections: (If the output of an intermediate layer is initially zero) Initially, $\boldsymbol{y}=\boldsymbol{x}$.
 - ResNet (2015)
 
 ![bg right:30% 90%](./figs/skip.png)
