@@ -120,9 +120,9 @@ $\rightarrow$ The error in $y$ is $1/3$.
 ### Sigmoid layer with $n$ inputs
 
 - $\boldsymbol{y} = \text{Sigmoid}(\boldsymbol{x}) = \left[ h(x_1) \quad h(x_2) \quad \dots \quad h(x_n) \right]$
-- $h(x) = (1 + e^{-x})^{-1}$
+    - $h(x) = (1 + e^{-x})^{-1}$
 - Let's (partially) differentiate the sigmoid function $h$.
-* $\dfrac{\text{d} h}{\text{d} x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
+    * $\dfrac{\text{d} h}{\text{d} x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
 $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 - Specific values ​​of each element: $h$ is the output value $y_i = h(x_i)$, so...
 - $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left[ y_1(1-y_1) \quad y_2(1-y_2) \quad \dots \quad y_n(1-y_n) \right]$
