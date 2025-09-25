@@ -175,13 +175,12 @@ $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 ### Answer
 
 - Calculation (reprinted)
-- $w_i \leftarrow w_i- \alpha$ input value $\cdot$ error
-- $b \leftarrow b + \alpha$ error
-
+    - $w_i \leftarrow w_i- \alpha$ input value $\cdot$ error
+    - $b \leftarrow b + \alpha$ error
 - Input $(x_1, x_2, x_3) = (1, 0, 0)$. $\rightarrow$ output $1$, error $1$
-- $w_1 = 2 - 1/2 \cdot 1 \cdot 1 = 1.5$ (approaching $1$)
-- $w_2 = w_3 = 2$ (remaining the same)
-- $b = 2 + \alpha1 = 2.5$ (approaching $3$)
+    - $w_1 = 2 - 1/2 \cdot 1 \cdot 1 = 1.5$ (approaching $1$)
+    - $w_2 = w_3 = 2$ (remaining the same)
+    - $b = 2 + \alpha1 = 2.5$ (approaching $3$)
 - Next, what happens if $(x_1, x_2, x_3) = (0, 0, 1)$ is input?
 
 ![bg right:30% 90%](./figs/simple_ann_learning_modify.png)
