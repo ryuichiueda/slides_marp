@@ -133,12 +133,12 @@ $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 
 - Update to minimize the error transmitted from downstream
 - Update equation for one parameter
-- $w \longleftarrow w - \alpha \dfrac{\partial \mathcal{L}}{\partial w} = w - \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial w}$
-- $\alpha$ is the discount rate (avoid adjusting parameters all at once based on a single result)
+    - $w \longleftarrow w - \alpha \dfrac{\partial \mathcal{L}}{\partial w} = w - \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial w}$
+        - $\alpha$ is the discount rate (avoid adjusting parameters all at once based on a single result)
 - Simple example (right figure. $y=wx-b$, $\alpha = 0.1$)
-- $\partial \boldsymbol{y}/ \partial w = x = 9/10$, $\partial \boldsymbol{y}/ \partial b = -1$
-- $w \longleftarrow 2 - 1/10 \cdot 1/3 \cdot 9/10 = 1.97$ (decreased)
-- $b \longleftarrow 1/10 - 1/10 \cdot 1/3 \cdot (-1) = 0.13$ (increase)
+    - $\partial \boldsymbol{y}/ \partial w = x = 9/10$, $\partial \boldsymbol{y}/ \partial b = -1$
+    - $w \longleftarrow 2 - 1/10 \cdot 1/3 \cdot 9/10 = 1.97$ (decreased)
+    - $b \longleftarrow 1/10 - 1/10 \cdot 1/3 \cdot (-1) = 0.13$ (increase)
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
