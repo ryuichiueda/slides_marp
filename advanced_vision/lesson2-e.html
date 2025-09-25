@@ -152,10 +152,16 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision Session 2" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="" data-marpit-pagination-total="13" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="Advanced Vision Session 2" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:Advanced Vision Session 2;--paginate:true;" data-marpit-pagination-total="13">
 <h3 id="summary-of-backpropagation">Summary of Backpropagation</h3>
 <ul>
-<li>Upstream layers (regardless of layer type) can calculate the error using the chain rule.</li>
-<li>However, differentiation is required.</li>
-<li>The error of a given layer can be calculated based on the error propagated from downstream layers.</li>
+<li>Upstream layers (regardless of layer type) can calculate the error using the chain rule.
+<ul>
+<li>However, they should be differentiable.</li>
+</ul>
+</li>
+<li>The error of a given layer can be calculated based on the error propagated from downstream layers.
+<ul>
 <li>Each layer can calculate the error using only its own partial derivative.</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Session 2</footer>
 </section>

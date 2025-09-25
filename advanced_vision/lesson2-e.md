@@ -111,9 +111,9 @@ $\rightarrow$ The error in $y$ is $1/3$.
 ### Summary of Backpropagation
 
 - Upstream layers (regardless of layer type) can calculate the error using the chain rule.
-- However, differentiation is required.
+    - However, they should be differentiable. 
 - The error of a given layer can be calculated based on the error propagated from downstream layers.
-- Each layer can calculate the error using only its own partial derivative.
+    - Each layer can calculate the error using only its own partial derivative.
 
 ---
 
