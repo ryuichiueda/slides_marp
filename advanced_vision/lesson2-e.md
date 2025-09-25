@@ -190,15 +190,14 @@ $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 ### Answer
 
 - Calculation (Reposted)
-- $w_i \leftarrow w_i- \alpha$ Input value $\cdot$ Error
-- $b \leftarrow b+ \alpha$ Error
-
+    - $w_i \leftarrow w_i- \alpha \cdot$ input value $\cdot$ error
+    - $b \leftarrow b+ \alpha \cdot$ error
 - $(x_1, x_2, x_3) = (0, 0, 1)$ Input $\rightarrow$ Output $0$, Error $-1$
-- $w_1 and w_2$ remain unchanged
-- $w_3 = 2 - 0.5 \cdot 1 \cdot (-1) = 2.5$ (approaching $3$)
-- $b = 2.5 + 0.5 (-1) = 2$
-- $b$ moves away from $3$. This can happen.
-- Those who can do so should also calculate the error sent to the previous neuron.
+    - $w_1$ and $w_2$ remain unchanged
+    - $w_3 = 2 - 0.5 \cdot 1 \cdot (-1) = 2.5$ (approaching $3$)
+    - $b = 2.5 + 0.5 (-1) = 2$
+        - $b$ moves away from $3$. This can happen.
+- Let's calculate the error sent to the previous neuron if you can.
 
 ![bg right:30% 90%](./figs/simple_ann_learning_modify2.png)
 
