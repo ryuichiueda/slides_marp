@@ -56,11 +56,11 @@ Do this for all neurons (hereafter referred to as layers).
 
 - Option 1: If the output is incorrect, just change it randomly.
 $\rightarrow$With many parameters, it's impossible to get the correct answer.
-- Option 2: Change the parameters to minimize the discrepancy.
-- There are a lot of neurons.
-- How? ?
+- Option 2: Change the parameters to minimize the difference.
+    - How??
+        - There are a lot of neurons.
 
-<center>Let's discuss what to do</center>
+<center>Let's discuss.</center>
 
 ![bg right:30% 100%](./figs/gradient_lost.png)
 
