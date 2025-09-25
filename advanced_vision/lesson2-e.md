@@ -68,12 +68,12 @@ $\rightarrow$With many parameters, it's impossible to get the correct answer.
 
 ## Backpropagation
 
-- The output error (loss function value) is sent continuously to the input.
-- The magnitude of the value is adjusted taking into account the influence of the neuron (layer).
-- "Consider the influence."
-- Example: A layer doubles the input and outputs it.
-$\rightarrow$The upstream value has twice the influence on the result.
-- After that: Change the parameters so that the error decreases at a constant rate.
+- The output error (loss function value) is sent from the output side to the input side.
+    - The magnitude of the value is adjusted based on the influence of each layer.
+        - "Consider the influence."
+            - Example: A layer doubles the input and outputs it.
+            $\rightarrow$The upstream value has twice the influence on the result.
+- After that: Change the parameters so that the error decreases.
 
 $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
