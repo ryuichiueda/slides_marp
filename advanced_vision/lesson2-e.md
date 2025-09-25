@@ -82,13 +82,13 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 ### Simple Example
 
 - Top right: A simple layer with one input and one output.
-- $9/10$ is input and $17/10$ is output.
-$\rightarrow The error in y$ is $1/3$.
+    - $9/10$ is input and $17/10$ is output.
+$\rightarrow$ The error in $y$ is $1/3$.
 (The output $17/10$ should be smaller.)
-- Since $w=2$, multiply it by $2$ and send the error (returning $2/3$).
-- Theory: Partial differentiation (the change in $y$ when $x$ changes slightly).
-- $y=2x-1/10$
-- $\dfrac{\partial y}{\partial x}=2$
+        - Since $w=2$, multiply it by $2$ and send the error (returning $2/3$).
+- Theortical background: Partial differentiation (the change in $y$ when $x$ changes slightly).
+    - $y=2x-1/10$
+    - $\dfrac{\partial y}{\partial x}=2$
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
