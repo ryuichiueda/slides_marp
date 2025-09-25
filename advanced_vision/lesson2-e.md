@@ -39,12 +39,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Learning Method: Varying Parameters
 
 - Example: An artificial neuron that outputs $1$ if $x_1 + 2 x_2 + 3 x_3 \ge 3$, and $0$ otherwise.
-- Initially, the parameters are randomly chosen (top right).
+    - Initially, the parameters are randomly chosen (top right).
 - Basic Method
-1. Input something and observe the "deviation" between the output and the correct answer.
-- For example, if $(x_1, x_2, x_3) = (1, 0, 0)$ is input to the neuron above, $1$ is output (whereas $0$ is desired).
-2. Vary the parameters to reduce the deviation.
-- In this case, for example, $w_1 = If we set it to 1.9$, it becomes $0$.
+    1. Input something and observe the "difference" between the output and the correct answer.
+        - Example: if $(x_1, x_2, x_3) = (1, 0, 0)$ is input to the neuron above, $1$ is output (whereas $0$ is desired).
+    2. Vary the parameters to reduce the difference.
+        - In this case, for example, it becomes $0$ when $w_1 = 1.9$
 
 Do this for all neurons (hereafter referred to as layers).
 
