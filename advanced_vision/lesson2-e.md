@@ -97,14 +97,14 @@ $\rightarrow$ The error in $y$ is $1/3$.
 ### For affine layers
 
 - Growth rate of the output loss function: $\partial \mathcal{L} / \partial \boldsymbol{y}$
-- The influence of $\boldsymbol{y}$ on the increase in $\mathcal{L}$
+    - The influence of $\boldsymbol{y}$ on the increase in $\mathcal{L}$
 - Growth rate of the error in the input loss function: $\partial \mathcal{L} / \partial \boldsymbol{x}$
-- <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
-- Chain rule of partial derivatives
-- The influence increases by the weight $W$
-- The value of $\partial \mathcal{L} / \partial \boldsymbol{y}$ is determined based on the error in $\mathcal{L}$.$\rightarrow$The magnitude of the error is determined by a specific value at each layer.
+    - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
+        - Chain rule of partial derivatives
+        - The influence increases by the weight $W$
+        - The value of $\partial \mathcal{L} / \partial \boldsymbol{y}$ is determined based on the error in $\mathcal{L}$.$\rightarrow$The magnitude of the error is determined by a specific value at each layer.
 
-![bg right:35% 90%](./figs/back_propagation_affine.png)
+![bg right:30% 90%](./figs/back_propagation_affine.png)
 
 ---
 
