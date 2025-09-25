@@ -219,6 +219,6 @@ $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 ## Summary
 
 - Artificial Neural Networks
-- Can be programmed by combining neurons.
-- Backpropagation can be used for learning.
+    - Can be programmed by combining neurons.
+    - Backpropagation can be used for learning.
 - We'll look at applications in future lectures.
