@@ -90,6 +90,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
     - $y=2x-1/10$
     - $\dfrac{\partial y}{\partial x}=2$
 
+質問: じゃあアフィンレイヤーはどうなる？
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
