@@ -58,3 +58,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
             - $L(\boldsymbol{x}|Z) = \Pr\{Z | \boldsymbol{x}\}$
 - 事前分布$p(\boldsymbol{x})$が情報$Z$で事後分布$p(\boldsymbol{x}|Z)$に
     - 式をよく読むと確かにそういう形になっている
+
+---
+
+### 尤度関数の例（さきほどのクイズの例）
+
