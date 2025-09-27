@@ -211,7 +211,6 @@ marp: true
 
 ---
 
-
 ### GPT-3の成果
 
 - 少数ショットで4則演算ができるように
@@ -231,6 +230,11 @@ marp: true
     - パラメータ: GPT-3の数倍〜数十倍？（単位が兆の可能性）
 - <span style="color:red">画像も入力可能に</span>
     - 画像+テキストについては次回
+
+
+---
+
+### Reinforcement Learning from Human Feedback (RLHF)
 
 ---
 
