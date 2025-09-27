@@ -217,6 +217,7 @@ marp: true
 - 学習量をさらに増やしても性能が上がりそうという見通し
 - <span style="color:red">ChatGPT</span>
     - GPTを使って<span style="color:red">プロンプト</span>（人のテキスト入力）に答えるサービス
+        - 前のページのタスク説明、例示、プロンプトをまとめて「プロンプト」と呼称
 
 ---
 
