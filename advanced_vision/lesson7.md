@@ -214,6 +214,7 @@ marp: true
 
 ### GPT-3の成果
 
+- 少数ショットで4則演算ができるように
 - 出力した架空の記事が、人間の書いたものと区別がつかない
 - <span style="color:red">ChatGPT</span>
     - GPTを使って<span style="color:red">プロンプト</span>（人のテキスト入力）に答えるサービス
