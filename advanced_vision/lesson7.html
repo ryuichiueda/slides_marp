@@ -298,17 +298,27 @@
 <footer>アドバンストビジョン第7回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-footer="アドバンストビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="17" style="--footer:アドバンストビジョン第7回;--paginate:true;" data-marpit-pagination-total="20">
-<h3 id="%E6%96%87%E8%84%88%E5%86%85%E5%AD%A6%E7%BF%92in-context-learning">文脈内学習（in context learning）</h3>
+<h3 id="%E8%B3%AA%E5%95%8F%E3%81%AE%E6%96%B9%E6%B3%95%E3%81%AE%E8%80%83%E6%A1%88">質問の方法の考案</h3>
 <ul>
-<li>GPT-3の論文内で導入</li>
-<li>四則演算の例など特定のタスクに関係のある事例をいくつか入力してから問題を解かせる
+<li>論文ではGPT-3へ質問を次のように分けて入力
 <ul>
-<li>例: 翻訳のときに「sea otter =&gt; loutre de mer」のような例を与える</li>
-<li>ファインチューニングの代わり</li>
+<li>タスク説明: （例）「Translate English to French」</li>
+<li>例示: （例）「sea otter =&gt; loutre de mer」
+<ul>
+<li>例示がひとつ: <span style="color:red">ワンショット</span></li>
+<li>例示が数個: <span style="color:red">少数（few）ショット</span></li>
 </ul>
 </li>
+<li>プロンプト:（例）「答えて =&gt;」（論文だと「cheese =&gt;」）</li>
+</ul>
+</li>
+<li><span style="color:red">文脈内学習</span>
+<ul>
+<li>上記のような例示で出力を調整</li>
+<li>ファインチューニングの代わり</li>
 <li>重みの更新はしない（問題を解き終わったら忘れる）</li>
-<li>ワン/少数ショット: ひとつ/いくつか事例を入力</li>
+</ul>
+</li>
 </ul>
 <footer>アドバンストビジョン第7回</footer>
 </section>

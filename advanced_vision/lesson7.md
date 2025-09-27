@@ -195,14 +195,18 @@ marp: true
 
 ---
 
-### 文脈内学習（in context learning）
+### 質問の方法の考案
 
-- GPT-3の論文内で導入
-- 四則演算の例など特定のタスクに関係のある事例をいくつか入力してから問題を解かせる
-    - 例: 翻訳のときに「sea otter => loutre de mer」のような例を与える
+- 論文ではGPT-3へ質問を次のように分けて入力
+    - タスク説明: （例）「Translate English to French」
+    - 例示: （例）「sea otter => loutre de mer」
+        - 例示がひとつ: <span style="color:red">ワンショット</span>
+        - 例示が数個: <span style="color:red">少数（few）ショット</span>
+    - プロンプト:（例）「答えて =>」（論文だと「cheese =>」）
+- <span style="color:red">文脈内学習</span>
+    - 上記のような例示で出力を調整
     - ファインチューニングの代わり
-- 重みの更新はしない（問題を解き終わったら忘れる）
-- ワン/少数ショット: ひとつ/いくつか事例を入力
+    - 重みの更新はしない（問題を解き終わったら忘れる）
 
 ---
 
