@@ -54,4 +54,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $p(\boldsymbol{x} | Z) = \eta L(\boldsymbol{x}| Z)p(\boldsymbol{x})$
 	    - $\boldsymbol{x}$: 推定対象
 	    - $Z$: ヒント
-	    - $L$: <span style="color:red">尤度関数</span>（$L(\boldsymbol{x}|Z) = \Pr\{Z | \boldsymbol{x}\}$）
+	    - $L$: <span style="color:red">尤度関数</span>
+            - $L(\boldsymbol{x}|Z) = \Pr\{Z | \boldsymbol{x}\}$
