@@ -236,6 +236,9 @@ marp: true
 
 ### Reinforcement Learning from Human Feedback (RLHF)
 
+- GPT-4で導入された仕組み
+    - 人間からのフィードバックで強化学習
+
 ---
 
 ### 「ハルシネーション（幻覚）」
