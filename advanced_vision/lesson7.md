@@ -236,7 +236,7 @@ marp: true
 
 ### Reinforcement Learning from Human Feedback (RLHF) [[Christiano 2017]](https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf)
 
-- GPT-4で導入された仕組み[（[Ouyang 2022]？）](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf)
+- GPT-4で導入された[（[Ouyang 2022]？）](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf)仕組み
     - 人間からのフィードバックで強化学習
 - ロボットの複雑な動き（料理や片付け）を生成するときに報酬関数が分からないので、人に様々な動きを提示して比較してもらい、人に状態遷移の点数をつけてもらうことで報酬を設計
     - 絶対評価でなく比較だと人は点数がつけやすいらしい
