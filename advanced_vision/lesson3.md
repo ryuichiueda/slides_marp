@@ -56,6 +56,7 @@ marp: true
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
     - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
     - $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
+        - 要素が1つだけ1になるので「<span style="color:red">ワンホットベクトル</span>」と呼ばれる
 
 ---
 
