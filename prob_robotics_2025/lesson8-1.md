@@ -32,3 +32,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - ベイズフィルタだけでなくて、もっと有効に活用できないか？
 $\rightarrow$できる
 
+
+---
+
+## 関数を自在に生成する（人工ニューラルネットワーク）
+
+- 問題: デジタル画像の犬と猫（とそれ以外）を識別する「関数」はどう数式で書けるでしょうか？
+    - 引数（入力）は？
+    - 答え（出力）は？
+
+![bg right:35% 100%](./figs/cat_and_dog.svg)
