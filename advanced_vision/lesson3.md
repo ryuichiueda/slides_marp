@@ -39,11 +39,15 @@ marp: true
 
 ### 答えの例
 
-- $y = f(\boldsymbol{x} | \boldsymbol{w})$
+- 例1: $y = f(\boldsymbol{x} | \boldsymbol{w})$
     - $\boldsymbol{x}$: 画素の値を並べたベクトル（すごく多次元）
         - 次元: 縦の画素数$\times$横の画素数$\times$色のチャンネル（RGB: 3、RGBD: 4）
     - $y = 0$: 犬、$y=1$: 猫、$y=2$: それ以外
-    - $y = f_\boldsymbol{w}(\boldsymbol{x})$と表記するときも（ANN界隈）
+    - $\boldsymbol{w}$: パラメータを並べたベクトル（これも多次元）
+        - $y = f_\boldsymbol{w}(\boldsymbol{x})$と表記するときも（ANN界隈）
+- 例2: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
+    - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
+    - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
 
 ---
 
