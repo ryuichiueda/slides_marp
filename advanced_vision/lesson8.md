@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第7回: 画像とTransformer
+## 第8回: 画像とTransformer
 
 千葉工業大学 上田 隆一
 
