@@ -26,9 +26,9 @@ marp: true
 
 ---
 
-### Vision Transformer（ViT）
+### Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
-- Transformerを画像に転用
+- Transformerのエンコーダを画像に転用
     - 画像をブロック状に切って単語のように扱う（右図）
     - 右図のCLS: クラストークン
         - 文の分類と同じ
@@ -38,7 +38,6 @@ marp: true
 [<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
 
 ![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
-
 
 
 ---
