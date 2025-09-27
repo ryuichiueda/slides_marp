@@ -45,7 +45,17 @@ marp: true
     - $y = 0$: 犬、$y=1$: 猫、$y=2$: それ以外
     - $\boldsymbol{w}$: パラメータを並べたベクトル（これも多次元）
         - $y = f_\boldsymbol{w}(\boldsymbol{x})$と表記するときも（ANN界隈）
+        - $y = f(\boldsymbol{x} ; \boldsymbol{w})$と表記するときも（伝統的）
 
+問題: ニューラルネットワークの先から$0, 1, 2$というアナログ値が出せるか？
+
+---
+
+### 答えの例2
+
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
+    - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
+    - $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
 
 ---
 
