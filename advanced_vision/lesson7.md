@@ -228,6 +228,7 @@ marp: true
 ### [GPT-4 [OpenAI]](https://arxiv.org/abs/2303.08774)
 
 - 社会的な影響から構造が非公開に
+    - パラメータ: GPT-3の数倍〜数十倍？（単位が兆の可能性）
 - <span style="color:red">画像も入力可能に</span>
     - 画像+テキストについては次回
 
