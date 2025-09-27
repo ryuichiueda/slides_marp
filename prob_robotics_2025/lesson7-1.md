@@ -53,6 +53,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 実はベイズの定理で（アナログに）扱える
 	- $p(\boldsymbol{x} | Z) = \eta L(\boldsymbol{x}| Z)p(\boldsymbol{x})$
 	    - $\boldsymbol{x}$: 推定対象
-	    - $Z$: ヒント
+	    - $Z$: ヒント（条件付き確率の「条件」）
 	    - $L$: <span style="color:red">尤度関数</span>
             - $L(\boldsymbol{x}|Z) = \Pr\{Z | \boldsymbol{x}\}$
+- 事前分布$p(\boldsymbol{x})$が情報$Z$で事後分布$p(\boldsymbol{x}|Z)$に
+    - 式をよく読むと確かにそういう形になっている
