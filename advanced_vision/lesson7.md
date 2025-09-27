@@ -234,7 +234,7 @@ marp: true
 
 ---
 
-### Reinforcement Learning from Human Feedback (RLHF)
+### Reinforcement Learning from Human Feedback (RLHF) [[Christiano 2017]](https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf)
 
 - GPT-4で導入された仕組み
     - 人間からのフィードバックで強化学習
