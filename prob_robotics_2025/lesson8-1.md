@@ -33,5 +33,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 右図のものが猫と分かる場合、たぶんこういうこともヒントになっている
         - 背景（絨毯など）
         - 講師のプライベートに関する知識（黒猫を飼っているとか）
+- でも我々は分かるし、最近はコンピュータも分かる
+    - なんでか？
 
 ![bg right:30% 95%](./figs/cat_back.png)
