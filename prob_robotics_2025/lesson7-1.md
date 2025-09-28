@@ -77,6 +77,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 式: $p(\boldsymbol{x} | Z_{1:n}) = \eta L(\boldsymbol{x}| Z_1)L(\boldsymbol{x} | Z_2)\cdots L(\boldsymbol{x}| Z_n) p(\boldsymbol{x})$
     $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
     - 情報$Z_{1:n}$は互いに独立（独立同分布）
+    - ベイズの定理から導出してみましょう
     - 事前分布は任意（なにも情報がないなら一様分布が妥当）
 
 
