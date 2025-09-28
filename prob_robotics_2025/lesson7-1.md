@@ -95,3 +95,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - ロボットが動く
     - 考えるのはロボット（ちゃんとプログラムしないといけない）
 
+
+---
+
+### ロボットの主観の定義（信念）
+
