@@ -100,3 +100,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ロボットの主観の定義（信念）
 
+- ロボットに確率分布で
