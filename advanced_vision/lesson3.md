@@ -70,8 +70,8 @@ marp: true
     - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
     - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
         - $\boldsymbol{y}$は確率分布
-
-<center>この形式が一般的</center>
+- 識別用のANNの出力はこの形式が一般的
+    - ひとつに決めたければ確率最大のものを選択
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
