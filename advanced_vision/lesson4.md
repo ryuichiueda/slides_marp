@@ -197,7 +197,7 @@ $\rightarrow$精緻な画像
     - 何度も同じガウス分布状の雑音を何度も足していくと
     最終的にガウス分布$Q$に
 <span style="color:red">$\Longrightarrow$逆（逆拡散過程）をすれば$P$が復元できる（ほんとか？）</span>
-<span style="color:red">$\Longrightarrow Q$からノイズをドローして逆に拡散をすると$P$からドローしたことに</span>
+<span style="color:red">$\Longrightarrow Q$からノイズをドローして逆に拡散$\rightarrow$$P$から新たな絵がドローできる</span>
  
 
 ![w:900](./figs/ddpm.svg)
