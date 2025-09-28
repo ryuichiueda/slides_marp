@@ -73,6 +73,8 @@ marp: true
 
 <center>この形式が一般的</center>
 
+![bg right:30% 100%](./figs/prob_output.svg)
+
 ---
 
 ### 以前から触れていた話題
