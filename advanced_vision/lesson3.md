@@ -58,13 +58,20 @@ marp: true
     - $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
         - 要素が1つだけ1になるので「<span style="color:red">ワンホットベクトル</span>」と呼ばれる
 
+![bg right:30% 100%](./figs/one_hot.svg)
+
+問題: 微妙なときに言い切っちゃっていいの？
+
 ---
 
-### 答えの例2
+### 答えの例3
 
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
     - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
     - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
+        - $\boldsymbol{y}$は確率分布
+
+<center>この形式が一般的</center>
 
 ---
 
