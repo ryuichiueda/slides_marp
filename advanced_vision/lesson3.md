@@ -88,6 +88,7 @@ marp: true
     * <span style="color:red">交差エントロピー</span>を使用
         - $\mathcal{L}(\boldsymbol{w}) = H(\boldsymbol{y}^*, \boldsymbol{y}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
             - $\log$は自然対数（底が$e$）
+        - 数学好きな人への補足: カルバック・ライブラー情報量を最小化するのと等価に
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
