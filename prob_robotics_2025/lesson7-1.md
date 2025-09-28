@@ -63,3 +63,23 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 尤度関数の例（さきほどのクイズの例）
 
+- 黒いところ or ピンの刺さっているところが高い尤度
+- 講師が考えた適当なものだが機能する
+    - ベイズの定理で尤度関数をかけていくと北海道の時計台の場所が高確率に
+
+![w:800](./figs/likelihoods.svg)
+
+
+---
+
+### 情報が複数得られた時の事後分布
+
+- 式: $p(\boldsymbol{x} | Z_{1:n}) = \eta L(\boldsymbol{x}| Z_1)L(\boldsymbol{x} | Z_2)\cdots L(\boldsymbol{x}| Z_n) p(\boldsymbol{x})$
+    $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
+    - 情報$Z_{1:n}$は互いに独立（独立同分布）
+    - 事前分布は任意
+         - なにも情報がないなら一様分布が妥当
+
+
+![w:500](./figs/prior_posterior.svg)<span style="font-size:70%">（注意: 厳密に計算したものではありません）</span>
+
