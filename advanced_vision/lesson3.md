@@ -27,7 +27,7 @@ marp: true
 
 ---
 
-### そのまえに補足というか問題
+## そのまえに補足というか問題
 
 - 問題: デジタル画像の犬と猫（とそれ以外）を識別する人工ニューラルネットワークはどう数式で書けるでしょうか？
     - 人工ニューラルネットワークを関数とみなす
@@ -72,6 +72,19 @@ marp: true
         - $\boldsymbol{y}$は確率分布
 - 識別用のANNの出力はこの形式が一般的
     - ひとつに決めたければ確率最大のものを選択
+
+![bg right:30% 100%](./figs/prob_output.svg)
+
+---
+
+## もうひとつ問題
+
+- 学習のときの損失関数はどうする？
+    - 前ページの例3で考えてみましょう
+    - $\boldsymbol{y} = (P_1, P_2, \dots, P_N)$
+- 一般的な答え
+    * <span style="color:red">交差エントロピー</span>を使用
+        - $\mathcal{L}(\boldsymbol{w}) = -\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
