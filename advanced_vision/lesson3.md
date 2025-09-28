@@ -86,7 +86,8 @@ marp: true
         - 正解については、正解に対応する要素$=1$のワンホットベクトルになることが多い
 - 一般的な答え
     * <span style="color:red">交差エントロピー</span>を使用
-        - $\mathcal{L}(\boldsymbol{w}) = -\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
+        - $\mathcal{L}(\boldsymbol{w}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
+            - $\log$は自然対数（底が$e$）
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
