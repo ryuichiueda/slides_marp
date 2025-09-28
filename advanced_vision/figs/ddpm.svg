@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590.98 146.46">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: red;
+      }
+
+      .cls-1, .cls-4, .cls-5, .cls-6, .cls-7, .cls-3, .cls-8 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-1, .cls-6, .cls-7 {
+        font-size: 10px;
+      }
+
+      .cls-9, .cls-6 {
+        fill: #1f17ff;
+      }
+
+      .cls-10, .cls-11, .cls-12 {
+        fill: none;
+      }
+
+      .cls-10, .cls-12 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-13 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        stroke: #279a3a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.24px;
+      }
+
+      .cls-12 {
+        stroke-width: 2px;
+      }
+
+      .cls-18 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-4, .cls-3 {
+        font-size: 14px;
+      }
+
+      .cls-20 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        font-size: 18px;
+      }
+
+      .cls-21 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-7, .cls-23 {
+        fill: #cf00e7;
+      }
+
+      .cls-24 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-8 {
+        font-size: 12px;
+      }
+
+      .cls-26 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.48em;
+      }
+    </style>
+  </defs>
+  <text class="cls-8" transform="translate(404.6 135.23)"><tspan class="cls-26" x="0" y="0">同</tspan><tspan class="cls-25" x="10.8" y="0">じ</tspan><tspan x="22.32" y="0">次元の超多次</tspan><tspan class="cls-13" x="94.32" y="0">元</tspan><tspan class="cls-18" x="105.96" y="0">ガ</tspan><tspan class="cls-14" x="117.36" y="0">ウ</tspan><tspan class="cls-20" x="128.16" y="0">ス</tspan><tspan x="139.92" y="0">分布Q</tspan></text>
+  <text class="cls-4" transform="translate(61.73 120.43)"><tspan x="0" y="0">画像の画素の超多次元分布P</tspan></text>
+  <g>
+    <line class="cls-10" x1="0" y1="128.31" x2="249.55" y2="128.32"/>
+    <polygon points="248.09 133.3 256.72 128.32 248.09 123.33 248.09 133.3"/>
+  </g>
+  <g>
+    <line class="cls-10" x1="15.64" y1="141.02" x2="15.64" y2="50.33"/>
+    <polygon points="20.63 51.79 15.65 43.15 10.66 51.79 20.63 51.79"/>
+  </g>
+  <g>
+    <line class="cls-10" x1="9.55" y1="140.89" x2="42.05" y2="64.63"/>
+    <polygon points="46.07 67.93 44.87 58.03 36.89 64.02 46.07 67.93"/>
+  </g>
+  <circle class="cls-9" cx="140.61" cy="73.09" r="1.48"/>
+  <text class="cls-6" transform="translate(150.48 83.72)"><tspan x="0" y="0">犬の画像の集団</tspan></text>
+  <circle class="cls-9" cx="150.83" cy="71.61" r="1.48"/>
+  <circle class="cls-9" cx="149.35" cy="62.92" r="1.48"/>
+  <circle class="cls-9" cx="136.23" cy="64.39" r="1.48"/>
+  <circle class="cls-2" cx="77.77" cy="46.63" r="1.48"/>
+  <text class="cls-1" transform="translate(49.87 33.07)"><tspan x="0" y="0">猫の画像の集団</tspan></text>
+  <circle class="cls-2" cx="67.46" cy="45.15" r="1.48"/>
+  <circle class="cls-2" cx="79.25" cy="40.03" r="1.48"/>
+  <circle class="cls-2" cx="91.04" cy="45.11" r="1.48"/>
+  <circle class="cls-2" cx="81.84" cy="50.83" r="1.48"/>
+  <circle class="cls-23" cx="185.16" cy="32.09" r="1.48"/>
+  <text class="cls-7" transform="translate(157.26 18.53)"><tspan x="0" y="0">狸の画像の集団</tspan></text>
+  <circle class="cls-23" cx="174.85" cy="30.62" r="1.48"/>
+  <circle class="cls-23" cx="186.64" cy="25.5" r="1.48"/>
+  <circle class="cls-23" cx="198.44" cy="30.57" r="1.48"/>
+  <circle class="cls-23" cx="189.24" cy="36.3" r="1.48"/>
+  <g>
+    <line class="cls-12" x1="273.11" y1="39.43" x2="363.16" y2="39.43"/>
+    <path d="M354.96,45.19c-.18-.28-.09-.65.19-.83l7.74-4.93-7.74-4.93c-.28-.18-.36-.55-.19-.83.18-.28.55-.36.83-.18l8.54,5.44c.17.11.28.3.28.51s-.11.4-.28.51l-8.54,5.44c-.1.06-.21.09-.32.09-.2,0-.39-.1-.51-.28Z"/>
+  </g>
+  <text class="cls-4" transform="translate(283.71 12.32)"><tspan class="cls-21" x="0" y="0">エン</tspan><tspan class="cls-24" x="26.32" y="0">コ</tspan><tspan class="cls-16" x="39.9" y="0">ー</tspan><tspan class="cls-17" x="52.08" y="0">ド</tspan><tspan class="cls-20" x="-6.58" y="16.8">（</tspan><tspan x="7.14" y="16.8">拡散過</tspan><tspan class="cls-17" x="49.14" y="16.8">程</tspan><tspan class="cls-27" x="62.86" y="16.8">）</tspan></text>
+  <polyline class="cls-11" points="410.58 108.57 412.82 108.5 415.05 108.5 417.28 108.5 419.51 108.42 421.82 108.35 424.05 108.28 426.28 108.21 428.51 108.06 430.74 107.85 432.98 107.56 435.21 107.27 437.44 106.84 439.74 106.26 441.98 105.54 444.21 104.68 446.44 103.6 448.67 102.23 450.9 100.65 453.14 98.78 455.37 96.54 457.67 93.95 459.9 91 462.14 87.62 464.37 83.87 466.6 79.7 468.83 75.23 471.06 70.41 473.3 65.3 475.6 60.04 477.83 54.64 480.06 49.24 482.3 43.98 484.53 38.94 486.76 34.34 488.99 30.09 491.22 26.49 493.46 23.54 495.76 21.45 497.99 20.08 500.22 19.65 502.46 20.08 504.69 21.45 506.92 23.54 509.15 26.49 511.38 30.09 513.69 34.34 515.92 38.94 518.15 43.98 520.38 49.24 522.62 54.64 524.85 60.04 527.08 65.3 529.31 70.41 531.62 75.23 533.85 79.7 536.08 83.87 538.31 87.62 540.54 91 542.78 93.95 545.01 96.54 547.24 98.78 549.54 100.65 551.78 102.23 554.01 103.6 556.24 104.68 558.47 105.54 560.7 106.26 562.94 106.84 565.17 107.27 567.4 107.56 569.7 107.85 571.94 108.06 574.17 108.21 576.4 108.28 578.63 108.35 580.86 108.42 583.1 108.5 585.33 108.5 587.63 108.5 589.86 108.57"/>
+  <text class="cls-5" transform="translate(256.72 45.11)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-5" transform="translate(371.83 43.68)"><tspan x="0" y="0">Q</tspan></text>
+  <g>
+    <line class="cls-12" x1="364.6" y1="90.64" x2="274.55" y2="90.64"/>
+    <path d="M282.75,84.88c.18.28.09.65-.19.83l-7.74,4.93,7.74,4.93c.28.18.36.55.19.83-.18.28-.55.36-.83.18l-8.54-5.44c-.17-.11-.28-.3-.28-.51s.11-.4.28-.51l8.54-5.44c.1-.06.21-.09.32-.09.2,0,.39.1.51.28Z"/>
+  </g>
+  <text class="cls-3" transform="translate(292.25 108.11)"><tspan class="cls-15" x="0" y="0">デ</tspan><tspan class="cls-24" x="13.44" y="0">コ</tspan><tspan class="cls-16" x="27.02" y="0">ー</tspan><tspan class="cls-20" x="39.2" y="0">ド</tspan><tspan class="cls-20" x="-22.12" y="16.8">（</tspan><tspan x="-8.4" y="16.8">逆拡散過</tspan><tspan class="cls-17" x="47.6" y="16.8">程</tspan><tspan class="cls-27" x="61.32" y="16.8">）</tspan><tspan class="cls-19" x="-14" y="33.6">↑</tspan><tspan class="cls-22" x="-.98" y="33.6">こ</tspan><tspan class="cls-17" x="11.76" y="33.6">れを</tspan><tspan x="39.2" y="33.6">学習</tspan></text>
+  <text class="cls-5" transform="translate(256.79 96.32)"><tspan x="0" y="0">P</tspan></text>
+  <text class="cls-5" transform="translate(371.89 94.89)"><tspan x="0" y="0">Q</tspan></text>
+</svg>
