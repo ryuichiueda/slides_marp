@@ -23,11 +23,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 今回の内容
 
 - 情報のフィルタとしてのベイズの定理
-- ベイズの定理を使ったセンサデータの処理
+- ベイズフィルタ
 
 ---
 
-### 情報のフィルタとしてのベイズの定理
+## 情報のフィルタとしてのベイズの定理
 
 - 次のようなヒントから，どこのことを言っているのか考えてみましょう
 	* (a) 日本では寒い場所です。
@@ -83,4 +83,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 
 ![w:500](./figs/prior_posterior.svg)<span style="font-size:70%">（注意: 厳密に計算したものではありません）</span>
+
+
+---
+
+## ベイズフィルタ
 
