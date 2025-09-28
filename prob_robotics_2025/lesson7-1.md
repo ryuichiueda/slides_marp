@@ -89,6 +89,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## ベイズフィルタと自己位置推定
 
-- ロボットにいまの連想ゲームを適用すると、複数の情報から
+- ロボットにいまの話を適用すると、複数の情報から
 ロボットの位置が推定可能$\Rightarrow$<span style="color:red">ベイズフィルタ</span>による<span style="color:red">自己位置推定</span>の原理
+- 今の話と異なること: ロボットが動く
 
