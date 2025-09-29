@@ -22,6 +22,7 @@ marp: true
 ## 今日やること
 
 - Vision Transformer
+- Diffusion Transformer
 - CLIP
 
 ---
