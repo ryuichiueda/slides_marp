@@ -64,7 +64,7 @@ marp: true
 
 ---
 
-## Diffusion Transformer（DiT）
+## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
 
 - 拡散モデル+Transformer
     - さらに潜在空間に情報を圧縮する潜在拡散モデルも使用
