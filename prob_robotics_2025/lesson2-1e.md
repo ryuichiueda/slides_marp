@@ -64,13 +64,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - Notation: The probability of event X occurring is expressed as $\Pr\{$X$\}$
 (Event X can be anything.)
     - Example from the previous page: $\Pr\{$A stands up correctly$\}=0.9$
-- Difference between $P(x)$ and $P(\boldsymbol{x})$ (in this book)
+- Difference from $P(x)$ and $P(\boldsymbol{x})$ (in this book)
     - In this notation, $x$ and $\boldsymbol{x}$ are scalars and vectors, respectively.
         - $P$ is a function whose domain is strictly determined on a number line or vector space.
     - Example: Dice
-        - Although we can write $P(1) = 1/6$, we cannot write $P(any number other than 5$)$.
+        - Although we can write $P(1) = 1/6$, we cannot write $P( x\ge 5)$.
 - Since X in $\Pr\{$X$\}$ is an event, it can be written as anything.
-    - Example: $\Pr\{any number other than 5$\}$
+    - Example: $\Pr\{$any number other than 5$\}$
     - It is a function over a set of events.
 
 ---
