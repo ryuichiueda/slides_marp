@@ -49,12 +49,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### Definition of Probability
+### Definition of Probability (rough definition)
 
-- Mathematically rigorous methods are difficult, so for now, let's think about it this way.
-- When predicting whether an event will occur,
-we run statistics under the same circumstances and calculate the probability of occurrence.
-- Example: Let's consider the probability that robot part A has started up successfully only 90 times out of 100 times so far: $\Rightarrow$$90/100 = 0.9$.
+- When predicting whether an event will occur or not, we repeat the identical event many times under the same circumstances and calculate the rate of occurrence.
+    - The rate is regarded as a probability. 
+- Example: Let's consider the probability that robot part A has started up successfully only 90 times out of 100 times so far $\Rightarrow$$90/100 = 0.9$.
 
 <center>This is a bit naive, but for now, let's use this for our discussion.</center>
 
