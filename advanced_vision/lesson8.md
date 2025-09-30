@@ -27,7 +27,7 @@ marp: true
 
 ---
 
-### Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
+## Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
 - Transformerのエンコーダを画像に転用
     - 画像をブロック状に切って単語のように扱う（右図）
@@ -61,3 +61,10 @@ marp: true
 - 教師あり学習で分類問題を解く
     - 言語と違って教師なし（BERTのような穴埋め）はあまり効果がない
 
+
+---
+
+## Diffusion Transformer（DiT）
+
+- 拡散モデル+Transformer
+    - さらに潜在空間に情報を圧縮する潜在拡散モデルも使用
