@@ -84,14 +84,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Example Problem
 
 - Consider the following simplified case.
-- A robot is carrying 10 parts A$_1$, Assume that the robot is composed of A$_2$, $\dots$, and A$_{10}$.
-- After the robot's main power is turned on, A$_{1:10}$ becomes available for use shortly.
-- Each component is referred to as "starting up."
-- If any of A$_{1:10}$ is not started up, the robot will not start up correctly.
-- The success or failure of one component does not affect the success or failure of the other components.
+    - Assume that the robot is composed of ten parts: A$_{1:10}$.
+    - After the robot's main power is turned on, A$_{1:10}$ become available.
+    - If any of A$_{1:10}$ is not started up, the robot will not start up correctly.
+    - The success or failure of one part does not affect the success/failure of the other parts.
 - First Problem
-- If the probability of A$_1$ starting up correctly (startup rate) is $0.8$, and the startup rates of the other components are $0.95$, what is the probability that the robot will start up correctly?
-- I won't explain how to calculate it, but for now, please use your current knowledge.
+    - If the probability of A$_1$ starting up correctly (startup rate) is $0.8$, and the startup rates of the other components are $0.95$, what is the probability that the robot will start up correctly?
+    - I won't explain how to calculate it, but for now, please use your current knowledge.
 
 ---
 
