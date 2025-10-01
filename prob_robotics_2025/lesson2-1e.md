@@ -113,7 +113,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - The team operating the robot mentioned earlier was concerned about the low activation rate of part A$_1$. So they identified the cause and reduced the activation rate to $1.0$. What is the robot's activation rate?
     - The activation rate of other components remains at $0.95$.
 - - Answer: $\Pr\{$A$_{1:10}$ is activated$\}=$ (omitted)$=1.0\cdot 0.95^9 = 0.63$ (<span style="color:red">Not much improvement</span>)
-    * Improvement of A$_1$ is necessary. However, other components also need to be improved.
+    * Improvement of A$_1$ is necessary. However, other components also.
 - Something I often see in students.
     * They only look what they're interested in and don't see the whole picture.
     * When they run the robot, problems occur in parts they're not interested in. In the worst cases, they put it off. $\Rightarrow$ They retire every year.
