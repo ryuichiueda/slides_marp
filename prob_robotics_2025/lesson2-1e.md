@@ -217,16 +217,16 @@ $\Pr\{$A$_{1:10}$ are OK$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is OK$\}$
 ### Summary of Probability Calculation Methods
 
 - Important: In fact, the only theorems are the multiplication theorem and the addition theorem.
-- Fewer rules than ordinary arithmetic.
+    - Fewer rules than ordinary arithmetic.
 - Multiplication theorem
-- $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$|$Y$\}\text{Pr}\{$Y$\}$
-- Independent case: $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$\}\text{Pr}\{$Y$\}$
-- For mutually independent X$_{1:n}$: $\text{Pr}\{\bigcap_{i=1}^n$X$\} = \prod_{i=1}^n\text{Pr}\{$X$_i\}$
+    - $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$|$Y$\}\text{Pr}\{$Y$\}$
+    - Independent case: $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$\}\text{Pr}\{$Y$\}$
+    - For mutually independent X$_{1:n}$: $\text{Pr}\{\bigcap_{i=1}^n$X$\} = \prod_{i=1}^n\text{Pr}\{$X$_i\}$
 - Addition theorem
-- $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
-- $\cup$ is the operator used to merge the left and right sets.
-- Disjoint case: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
-- For mutually exclusive X$_{1:n}$: $\text{Pr}\{\bigcup_{i=1}^n$X$\} = \sum_{i=1}^n\text{Pr}\{$X$_i\}$
+    - $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
+        - $\cup$ is the operator used to merge the left and right sets.
+    - Disjoint case: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
+    - For mutually exclusive X$_{1:n}$: $\text{Pr}\{\bigcup_{i=1}^n$X$\} = \sum_{i=1}^n\text{Pr}\{$X$_i\}$
 
 ---
 
@@ -234,14 +234,13 @@ $\Pr\{$A$_{1:10}$ are OK$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is OK$\}$
 
 - Let's assume that the activation rate of a$_{1:3}$ is $0.8$.
 - Calculate the probability that at least one a$_{1:3}$ will be activated, excluding a$_4$.
-- Separate "at least one activation" into mutually exclusive events.
-- a$_1$ activates.
-- Probability $0.8$.
-- a$_1$ does not activate, and a$_{2}$ activates.
-- Probability: $0.2\cdot 0.8 = 0.16$.
-- a$_{1:2}$ does not activate, and a$_{3}$ activates.
-- Probability $0.2^2 \cdot 0.8 = 0.032$.
-- Total probability $\Rightarrow$: $0.992$.
+    - Separate "at least one activation" into mutually exclusive events.
+        - a$_1$ is OK.: Probability is $0.8$.
+    - a$_1$ is NG, and a$_{2}$ is OK.:
+    Probability is $0.2\cdot 0.8 = 0.16$.
+    - a$_{1:2}$ are NG, and a$_{3}$ is OK.:
+    Probability is $0.2^2 \cdot 0.8 = 0.032$.
+$\Rightarrow$ Total probability: $0.992$.
 
 ![bg right:30% 100%](./figs/redundant_a1_2.png)
 
