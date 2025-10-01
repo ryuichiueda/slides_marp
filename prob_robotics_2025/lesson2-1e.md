@@ -135,9 +135,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - When calculating activation rates, you sometimes get an answer that differs from what you had in mind.
 - Humans are driven by their own interests and see reality in a distorted way.
-- People who cannot calmly consider failures will make the same mistakes again.
-- If we can calculate probabilities, the distortion will be somewhat reduced.
-<br />
+    - People who cannot calmly consider failures will make the same mistakes again.
+    - If we can calculate probabilities, the distortion will be somewhat reduced.
 <center>So, let's get better at calculating probabilities.</center>
 
 ---
@@ -148,9 +147,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Why is the activation rate of a series system multiplied?
 
 - Earlier, we calculated the activation rate of a serial system using multiplication.
-- Why multiplication?
-- Let's assume the theorem for probability calculation is correct and think about it mechanically.
-- We'll use the theorem called the <span style="color:red">multiplication theorem</span>.
+    - Why multiplication?
+    - Let's assume the theorem for probability calculation is correct and think about it mechanically.
+        - We'll use the theorem called the <span style="color:red">multiplication theorem</span>.
 
 ---
 
