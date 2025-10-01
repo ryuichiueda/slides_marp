@@ -191,16 +191,10 @@ $\Pr\{$A$_{1:10}$ are OK$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is OK$\}$
 
 ---
 
-### Another example: Redundant system
+### Redundant system
 
-- To increase the activation rate of component A$_1$, we replaced it with multiple components a$_{1:3}$ as shown below,
-so that it doesn't matter if any of them breaks. a$_{1:3}$ is connected to hub a$_4$.
+- To increase the activation rate of component A$_1$, the team replaced it with multiple components a$_{1:3}$ as shown below.
+    - a$_{1:3}$ is connected to hub a$_4$.
 ![w:700](./figs/redundant_a1.gif)
 - How do we calculate the activation rate? (This time it's not multiplication.)
 
----
-
-### Addition Theorem
-
-- Probability Addition Theorem
-- $\Pr\{$A, B, or both occur$\} = \Pr\{
