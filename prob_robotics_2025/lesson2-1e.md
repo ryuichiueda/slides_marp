@@ -198,3 +198,188 @@ $\Pr\{$A$_{1:10}$ are OK$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is OK$\}$
 ![w:700](./figs/redundant_a1.gif)
 - How do we calculate the activation rate? (This time it's not multiplication.)
 
+---
+
+### Addition Theorem
+
+- Theorem on probability addition
+    - $\Pr\{$one of A or B occurs, or both occur$\}$
+    $= \Pr\{$A occurs$\} + \Pr\{$B occurs$\} - \Pr\{$A and B occur$\}$
+- In particular, when A and B cannot occur simultaneously
+    - $\Pr\{$A or B occurs$\} = \Pr\{$A occurs$\} + \Pr\{$B occurs$\}$
+    - A and B cannot occur simultaneously $\Longrightarrow$ expressed as <span style="color:red">mutually exclusive</span>.
+        - Example: "Even die roll" and "odd die roll" are mutually exclusive.
+        - In the case of exclusive pairs, $A \cap B = \varnothing$
+            - $\varnothing$ (or $\phi$): <span style="color:red">null event</span> (an event that cannot occur)
+
+---
+
+### Summary of Probability Calculation Methods
+
+- Important: In fact, the only theorems are the multiplication theorem and the addition theorem.
+- Fewer rules than ordinary arithmetic.
+- Multiplication theorem
+- $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$|$Y$\}\text{Pr}\{$Y$\}$
+- Independent case: $\text{Pr}\{$X$\cap$Y$\} = \text{Pr}\{$X$\}\text{Pr}\{$Y$\}$
+- For mutually independent X$_{1:n}$: $\text{Pr}\{\bigcap_{i=1}^n$X$\} = \prod_{i=1}^n\text{Pr}\{$X$_i\}$
+- Addition theorem
+- $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\} - \Pr\{$X$\cap$Y$\}$
+- $\cup$ is the operator used to merge the left and right sets.
+- Disjoint case: $\Pr\{$X$\cup$Y$\} = \Pr\{$X$\} + \Pr\{$Y$\}$
+- For mutually exclusive X$_{1:n}$: $\text{Pr}\{\bigcup_{i=1}^n$X$\} = \sum_{i=1}^n\text{Pr}\{$X$_i\}$
+
+---
+
+### Startup rate of a redundant system
+
+- Let's assume that the activation rate of a$_{1:3}$ is $0.8$.
+- Calculate the probability that at least one a$_{1:3}$ will be activated, excluding a$_4$.
+- Separate "at least one activation" into mutually exclusive events.
+- a$_1$ activates.
+- Probability $0.8$.
+- a$_1$ does not activate, and a$_{2}$ activates.
+- Probability: $0.2\cdot 0.8 = 0.16$.
+- a$_{1:2}$ does not activate, and a$_{3}$ activates.
+- Probability $0.2^2 \cdot 0.8 = 0.032$.
+- Total probability $\Rightarrow$: $0.992$.
+
+![bg right:30% 100%](./figs/redundant_a1_2.png)
+
+---
+
+### Continuing the Calculation (Single Point of Failure)
+
+- If a$_4$ does not start, the redundant A$_1$ will not start.
+- This is called a single point of failure.
+- Calculation results for redundant A$_1$
+- Because the entire a$_{1:3}$ and a$_4$ are in series, multiply the result on the previous page by the activation rate of a$_4$ (let's call it $\alpha$).
+- Example 1: $\alpha = 0.95$
+- Activation rate: $0.992\cdot 0.95 = 0.94$ (> A$_1$ activation rate)
+- Example 2: $\alpha = 0.8$
+- Activation rate: $0.992\cdot 0.8 = 0.79$ (< (Activation rate of A$_1$)
+
+<span style="color:red">In the end, unless the reliability of a$_4$ is extremely high, the effect of redundancy is minimal.</span>
+
+![bg right:25% 100%](./figs/redundant_a1_2.png)
+
+---
+
+### Another calculation method: Using complementary events
+
+- <span style="color:red">Complementary Events</span>
+- For an event X, the complement is the total events (all possible events) excluding X.
+- For an event X, the complement is denoted as X$^c$.
+- Dice example: The complement of "rolling an even number" is "rolling an odd number."
+- Calculation using complementary events
+- The complement of "at least one a$_{1:3}$ is activated" is "none of a$_{1:3}$ is activated."
+- $\Pr\{$a$_{1:3}$ activates at least one time$\} = 1 - (0.2)^3 = 0.992$
+
+---
+
+### When components affect each other
+
+- Now, let's consider the following case.
+- A$_{10}$ is a power supply circuit. A certain team uses two, one made by X and one made by Y.
+- X's circuit has a high activation rate and slightly unstable current.
+- Y's circuit has a low activation rate and stable current.
+- The activation rate of A$_{1:5}$ differs between X's and Y's A$_{10}$.
+(Table on the bottom right)
+
+<center>Which should I use? </center>
+
+![bg right:35% 95%](./figs/dependency.png)
+
+---
+
+### Solution
+
+- Set up the equation
+- $\Pr\{$Robot activates$|$Whose A$_{10}$ is$\}$
+- Abbreviated because it's tedious
+- $\Pr\{$A$_{1:10}|$Z$\}$
+- "A$_{1:10}$ activates" is simply "A$_{1:10}$"
+- Let's simply write Z as the A$_{10}$ (Z is either X or Y).
+- Use the multiplication theorem when there are conditions
+- $\Pr\{X \cap Y | Z \} = \Pr\{X | Y \cap Z \} \Pr\{Y | Z \}$
+- Ignore the conditions and use the multiplication theorem, then just add the conditions at the end.
+- The derivation is in "Robot Probability and Statistics."
+
+---
+
+### Formula Expansion
+
+- $\Pr\{$A$_{1:10}|$Z$\}=\Pr\{$A$_{1:5}\cap$A$_{10}|$A$_{6:9}\cap$Z$\}\Pr\{$A$_{6:9}|$Z$\}$ (Move part A$_{6:9}$ to the condition)
+$=\Pr\{$A$_{1:5}\cap$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\quad\qquad\qquad\quad$ (Delete unnecessary conditions)
+$=\Pr\{$A$_{1:5}|$A$_{10}\cap$Z$\}\Pr\{$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\qquad$ (Move to condition A$_{10}$)
+$=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$ (Decomposition from independence)
+
+<center style="color:red">Decomposition using the multiplication theorem and independence<br /> (Basics of deriving algorithms for probabilistic robotics and machine learning)</center>
+
+---
+
+### Value substitution
+
+- Final equation
+- $\Pr\{$Robot launches$|$Z$\}$
+$= \big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)$
+$\quad\cdot\Pr\{$A$_{10}|$Z$\}\cdot\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
+- Substitute the values ​​in the table.
+- When Z=X: $0.9^5\cdot 0.99 \cdot 0.95^4 \simeq 0.48$
+- When Z=Y: $0.95^5\cdot 0.9 \cdot 0.95^4 \simeq 0.57$
+
+<center style="color:red">It's better to use Y's.</center><center> (They're both the same, though.)</center>
+
+![bg right:35% 95%](./figs/dependency.png)
+
+---
+
+### Adding hidden conditions after the fact
+
+- Let's try another type of problem that comes up in algorithm derivation.
+- Problem
+- Team X and Team Y were keeping statistics on the startup rate of their robots over a certain period of time.
+- $\Pr\{$Robot Started$\} = 0.5$
+- The robots used either X's or Y's power supply circuit.
+- What percentage of the time did they use X's power supply circuit?
+- Additional information: The startup rate of the robots when using X's or Y's power supply circuit.
+- X: $0.48$
+- Y: $0.57$
+
+<center>How do we solve this? </span>
+
+---
+
+### Solution
+
+- Do the inverse of the addition theorem
+- $\Pr\{$Robot starts$\} =\sum_{Z = \text{X}, \text{Y}} \Pr\{$Robot starts$\cap Z\}$
+- "The power supply circuit is made by Mr. X" and "The power supply circuit is made by Mr. Y" are mutually exclusive, and
+together they form the complete set of events, so this holds.
+- Apply the multiplication theorem
+- $\cdots =\sum_{Z = \text{X}, \text{Y}} \Pr\{$Robot starts$| Z\}\Pr\{Z\}$
+$=\Pr\{$Robot starts$|$X$\}\Pr\{$X$\} + \Pr\{$Robot starts$|$Y$\}\Pr\{$Y$\}$
+
+---
+
+### Solution (continued)
+
+- The equations obtained so far
+- $\Pr\{$Robot Starts Up$\}$
+$=\Pr\{$Robot Starts Up$|$X$\}\Pr\{$X$\} + \Pr\{$Robot Starts Up$|$Y$\}\Pr\{$Y$\}$
+- Organizing the Substituted Values
+- Let $x$ be the desired value (the percentage of X's power circuit used)
+- Y's percentage is $1-x$
+- The robot's startup rate when using X's power circuit: $0.48$
+- Y's (same as above): $0.57$
+- Substituting
+- $0.5 = 0.48x + 0.57(1-x) \ \Longrightarrow\quad\!\!$<span style="color:red">$x=7/9$</span>
+
+---
+
+### Key Points of the Problem
+
+- You can add conditions you didn't originally consider later.
+- $\Pr\{$Robot Starts Up$\}$
+$=\Pr\{$Robot is activated$|$X$\}\Pr\{$X$\} + \Pr\{$Robot is activated$|$Y$\}\Pr\{$Y$\}$
+- X and Y appear, even though they weren't originally present.
+- Even if the conditions aren't written, they actually exist.
