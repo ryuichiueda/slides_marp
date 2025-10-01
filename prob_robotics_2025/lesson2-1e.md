@@ -335,13 +335,13 @@ $\quad\cdot\Pr\{$A$_{10}|$Z$\}\cdot\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
 
 - Let's try another type of problem that comes up in algorithm derivation.
 - Problem
-- Team X and Team Y were keeping statistics on the startup rate of their robots over a certain period of time.
-- $\Pr\{$Robot Started$\} = 0.5$
-- The robots used either X's or Y's power supply circuit.
-- What percentage of the time did they use X's power supply circuit?
+    - The team has been recording statistics on the startup rate of their robots over a certain period of time.
+        - $\Pr\{$Robot Started$\} = 0.5$
+    - The robots used either X's or Y's power supply circuit.
+    - What percentage of the time did they use X's power supply circuit?
 - Additional information: The startup rate of the robots when using X's or Y's power supply circuit.
-- X: $0.48$
-- Y: $0.57$
+    - X: $0.48$
+    - Y: $0.57$
 
 <center>How do we solve this? </span>
 
