@@ -249,13 +249,13 @@ $\Rightarrow$ Total probability: $0.992$.
 ### Continuing the Calculation (Single Point of Failure)
 
 - If a$_4$ does not start, the redundant A$_1$ will not start.
-- This is called a single point of failure.
+    - This is called <span style="color:red">a single point of failure</span>.
 - Calculation results for redundant A$_1$
-- Because the entire a$_{1:3}$ and a$_4$ are in series, multiply the result on the previous page by the activation rate of a$_4$ (let's call it $\alpha$).
+    - Because the entire a$_{1:3}$ and a$_4$ are in series, multiply the result on the previous page by the activation rate of a$_4$ (let's call it $\alpha$).
 - Example 1: $\alpha = 0.95$
-- Activation rate: $0.992\cdot 0.95 = 0.94$ (> A$_1$ activation rate)
+    - answer: $0.992\cdot 0.95 = 0.94$ (> A$_1$ activation rate)
 - Example 2: $\alpha = 0.8$
-- Activation rate: $0.992\cdot 0.8 = 0.79$ (< (Activation rate of A$_1$)
+    - answer: $0.992\cdot 0.8 = 0.79$ (< A$_1$ activation rate)
 
 <span style="color:red">In the end, unless the reliability of a$_4$ is extremely high, the effect of redundancy is minimal.</span>
 
