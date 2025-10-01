@@ -159,24 +159,24 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $\text{Pr}\{$A occurs|B occurs$\}$: The probability that A occurs when we know that B will occur (<span style="color:red">conditional probability</span>).
         - The right side of $|$ is the "<span style="color:red">condition</span>."
     - When applied to a serial system, this is what happens.
-        - $\Pr\{$A$_{1:10}$ activates$\} = \Pr\{$A$_{2:10}$ is activated|A$_1$ is activated$\}\Pr\{$A$_1$ is activated$\}$
-- Let's consider $\Pr\{$A$_{2:10}$ is activated|A$_1$ is activated$\}$.
+        - $\Pr\{$A$_{1:10}$ are OK$\} = \Pr\{$A$_{2:10}$ is OK|A$_1$ is OK$\}\Pr\{$A$_1$ is OK$\}$
+- Let's consider $\Pr\{$A$_{2:10}$ are OK|A$_1$ is OK$\}$.
 
 ---
 
 ### Independence
 
-- $\Pr\{$A$_{2:10}$ is activated|A$_1$ is activated$\}$
-- The condition was that the activation of one component does not affect the activation of other components.
-<span style="color:red">The $\Rightarrow$ condition can be removed</span>
+- $\Pr\{$A$_{2:10}$ are OK|A$_1$ is OK$\}$
+   - The condition "A$_1$ is OK" does not affect the activation of others.
+   <span style="color:red">$\Rightarrow$ The condition can be removed</span>
 - This unrelatedness of events is called <span style="color:red">independence</span>.
 - The relationship between independent events $X$ and $Y$:
-- $\Pr\{X \cap Y\} = \Pr\{X | Y\}\Pr\{Y\} = \Pr\{X\}\Pr\{Y\}$
-- $\Pr\{X \cap Y\} = \Pr\{Y | X\}\Pr\{X\} = \Pr\{X\}\Pr\{Y\}$
-- $\cap$ is the set intersection operator.
-- Notation: $X\perp\!\!\!\!\perp Y$
+    - $\Pr\{X \cap Y\} = \Pr\{X | Y\}\Pr\{Y\} = \Pr\{X\}\Pr\{Y\}$
+    - $\Pr\{X \cap Y\} = \Pr\{Y | X\}\Pr\{X\} = \Pr\{X\}\Pr\{Y\}$
+         - $\cap$ is the set intersection operator.
+    - Notation: $X\perp\!\!\!\!\perp Y$
 - If they are not independent, they are said to be <span style="color:red">dependent</span>.
-- Notation: $X\not\perp\!\!\!\!\perp Y$
+    - Notation: $X\not\perp\!\!\!\!\!\perp Y$
 
 ---
 
