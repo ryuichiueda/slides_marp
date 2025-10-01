@@ -266,7 +266,7 @@ $\Rightarrow$ Total probability: $0.992$.
 ### Another calculation method: Using complementary events
 
 - <span style="color:red">Complementary Event</span>
-   - For an event X, it is the <span style="color:red">total events</span> (all possible events) excluding X.
+   - For an event X, it is the <span style="color:red">all events</span> (all possible events) excluding X.
    - For an event X, it is denoted as X$^c$.
    - Dice example: The complement of "rolling an even number" is "rolling an odd number."
 - Calculation using complementary events
@@ -391,10 +391,10 @@ $= \Pr\{$Robot activates$|$Everything related to the robot$\}$
 
 ## Summary
 
-- Introduction to Probability
-- The Symbol $\Pr\{\quad\}$
-- Multiplication theorem, addition theorem
-- Independence, disjoint
-- Null events, all events
+- Introduction to probability
+    - The Symbol $\Pr\{\quad\}$
+    - Multiplication theorem, addition theorem
+    - Independence, disjoint
+    - Null events, all events, complementary events
 - Calculations using two theorems
-- There are only two theorems, but you need to think carefully about how to handle events
+    - There are only two theorems, but you need to think carefully about how to handle events
