@@ -372,12 +372,29 @@ $=\Pr\{$Robot activates$|$X$\}\Pr\{$X$\} + \Pr\{$Robot activates$|$Y$\}\Pr\{$Y$\
 - Substituting
     - $0.5 = 0.48x + 0.57(1-x) \ \Longrightarrow\quad\!\!$<span style="color:red">$x=7/9$</span>
 
+
 ---
 
 ### Key Points of the Problem
 
-- You can add conditions you didn't originally consider later.
-- $\Pr\{$Robot Starts Up$\}$
-$=\Pr\{$Robot is activated$|$X$\}\Pr\{$X$\} + \Pr\{$Robot is activated$|$Y$\}\Pr\{$Y$\}$
-- X and Y appear, even though they weren't originally present.
-- Even if the conditions aren't written, they actually exist.
+- Conditions not originally considered can be added later.
+    - $\Pr\{$Robot activates$\}$
+$=\Pr\{$Robot activates$|$X$\}\Pr\{$X$\} + \Pr\{$Robot activates$|$Y$\}\Pr\{$Y$\}$
+        - X and Y that were not originally present appear.
+- Even if no conditions are specified, everything is actually a condition.
+    - $\Pr\{$Robot activates$\}=\Pr\{$Robot activates$|$Everything in the world$\}$
+    - If we remove events independent of the robot's startup...
+$= \Pr\{$Robot activates$|$Everything related to the robot$\}$
+- Appears in the derivation of FastSLAM [Montemerlo 2003], etc.
+
+---
+
+## Summary
+
+- Introduction to Probability
+- The Symbol $\Pr\{\quad\}$
+- Multiplication theorem, addition theorem
+- Independence, disjoint
+- Null events, all events
+- Calculations using two theorems
+- There are only two theorems, but you need to think carefully about how to handle events
