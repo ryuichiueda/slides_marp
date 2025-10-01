@@ -114,13 +114,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ロボットの位置の定義（信念）
+### ロボットの位置の分布
 
 - 時刻$t$におけるロボットの位置$\boldsymbol{x}$の分布: $p_t(\boldsymbol{x}|$条件$)$と書く
     - 問題: 「条件」には何が入る？（既知の情報）
         - 時刻$t=0$の$\boldsymbol{x}$の分布は$p_0$としましょう
         - 答え
             * $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
-- ロボットに確率分布で「自分の位置の確率分布$b_t$」を持たせる
+
 
 ![bg right:25% 100%](./figs/sensor_data.svg)
+
+### 信念分布
+
+- ロボットに確率分布で「自分の位置の確率分布$b_t$」を持たせる
