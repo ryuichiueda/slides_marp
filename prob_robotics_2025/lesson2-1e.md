@@ -309,7 +309,7 @@ $\Rightarrow$ Total probability: $0.992$.
 - $\Pr\{$A$_{1:10}|$Z$\}=\Pr\{$A$_{1:5}\cap$A$_{10}|$A$_{6:9}\cap$Z$\}\Pr\{$A$_{6:9}|$Z$\}$ (Move part A$_{6:9}$ to the condition)
 $=\Pr\{$A$_{1:5}\cap$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\quad\qquad\qquad\quad$ (Delete unnecessary conditions)
 $=\Pr\{$A$_{1:5}|$A$_{10}\cap$Z$\}\Pr\{$A$_{10}|$Z$\}\Pr\{$A$_{6:9}\}\qquad\qquad$ (Move to condition A$_{10}$)
-$=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$ (Decomposition from independence)
+$=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$ (Decomposition based on independence)
 
 <center style="color:red">Decomposition using the multiplication theorem and independence<br /> (Basics of deriving algorithms for probabilistic robotics and machine learning)</center>
 
@@ -318,14 +318,14 @@ $=\big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)\Pr\{$A$_{10}|$Z$\}\big(\pr
 ### Value substitution
 
 - Final equation
-- $\Pr\{$Robot launches$|$Z$\}$
+    - $\Pr\{$Robot launches$|$Z$\}$
 $= \big(\prod_{i=1}^5\Pr\{$A$_i|$A$_{10}\cap$Z$\}\big)$
 $\quad\cdot\Pr\{$A$_{10}|$Z$\}\cdot\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
-- Substitute the values ​​in the table.
-- When Z=X: $0.9^5\cdot 0.99 \cdot 0.95^4 \simeq 0.48$
-- When Z=Y: $0.95^5\cdot 0.9 \cdot 0.95^4 \simeq 0.57$
+- Apply the values in the table.
+    - When Z=X: $0.9^5\cdot 0.99 \cdot 0.95^4 \simeq 0.48$
+    - When Z=Y: $0.95^5\cdot 0.9 \cdot 0.95^4 \simeq 0.57$
 
-<center style="color:red">It's better to use Y's.</center><center> (They're both the same, though.)</center>
+<center style="color:red">It's better to use Y's.</center><center> (They're not so different, though.)</center>
 
 ![bg right:35% 95%](./figs/dependency.png)
 
