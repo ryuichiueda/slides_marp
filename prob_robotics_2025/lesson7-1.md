@@ -135,4 +135,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 自己位置推定しているロボットの頭の中はどうなっているか？
     - 自身の真の位置は分かっていない（人間がよく勘違いすること）
     - センサの値はベイズの定理を通さないと意味をなさない
+    <span style="color:red">$\Longrightarrow$実は人間も同じだが自身が高性能すぎて気付いていない</span>
 - ロボットに確率分布で「自分の位置の確率分布$b_t$」を持たせる
