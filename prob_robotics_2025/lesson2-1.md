@@ -299,14 +299,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 今度は次のようなケースを考えてみましょう
     - A$_{10}$は電源回路で，某チームは
     X君作とY君作の2つのものを使用
-        - X君のもの高起動率/電流が少し不安定
-        - Y君のものて低起動率/電流は安定
+        - X君のもの: 高起動率/電流が少し不安定
+        - Y君のもの: 低起動率/電流は安定
     - A$_{1:5}$の起動率がX君，Y君のA$_{10}$で違う
     （右下の表）
 
 <center>どっちを使ったほうがいい？</center>
 
-![bg right:35% 95%](./figs/dependency.png)
+![bg right:40% 95%](./figs/dependency.png)
 
 ---
 
