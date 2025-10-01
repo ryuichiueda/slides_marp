@@ -100,7 +100,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 情報のモデル化
 
 - ロボットは離散時刻ごとに位置に関して
-（しばしば間接的な）情報$Z_t$を得る
+（しばしば間接的な）情報$Z_t$を得る: <span style="color:red">観測</span>
     - $t=1,2,\dots$
     - 「間接的な」: 直接「お前はここにいる」という
     情報でない情報
