@@ -97,9 +97,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Answer
 
 - $\Pr\{$A$_{1:10}$ is activated$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is activated$\} = 0.8\cdot 0.95^9 = 0.50$
-This results in multiplication.
-- Looking at the answer, we can see that it will not activate once in every two attempts.
-- If you participate in something under these conditions, you will retire once in every two attempts.
+     - We can see it will not activate once in every two attempts.
+     - If you participate in something under these conditions, you will retire once in every two attempts.
 - Trivia
 - Robots and machines that cannot function unless even one component is working,
 factory and logistics systems, are called <span style="color:red">serial systems</span>.
