@@ -118,6 +118,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 時刻$t$におけるロボットの位置$\boldsymbol{x}$の分布: $p_t(\boldsymbol{x}|$条件$)$と書く
     - 問題: 「条件」には何が入る？（既知の情報）
+        - 時刻$t=0$の$\boldsymbol{x}$の分布は$p_0$としましょう
 - ロボットに確率分布で「自分の位置の確率分布$b_t$」を持たせる
 
 
