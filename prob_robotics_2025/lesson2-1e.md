@@ -156,10 +156,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Multiplication Theorem
 
 - $\text{Pr}\{$A and B occur$\} = \text{Pr}\{$A occurs|B occurs$\}\text{Pr}\{$B occurs$\}$
-- $\text{Pr}\{$A occurs|B occurs$\}$: The probability that A occurs when we know that B will occur (<span style="color:red">conditional probability</span>).
-- The right side of $|$ is the "<span style="color:red">condition</span>."
-- When applied to a serial system, this is what happens.
-- $\Pr\{$A$_{1:10}$ activates$\} = \Pr\{$A$_{2:10}$ is activated|A$_1$ is activated$\}\Pr\{$A$_1$ is activated$\}$
+    - $\text{Pr}\{$A occurs|B occurs$\}$: The probability that A occurs when we know that B will occur (<span style="color:red">conditional probability</span>).
+        - The right side of $|$ is the "<span style="color:red">condition</span>."
+    - When applied to a serial system, this is what happens.
+        - $\Pr\{$A$_{1:10}$ activates$\} = \Pr\{$A$_{2:10}$ is activated|A$_1$ is activated$\}\Pr\{$A$_1$ is activated$\}$
 - Let's consider $\Pr\{$A$_{2:10}$ is activated|A$_1$ is activated$\}$.
 
 ---
