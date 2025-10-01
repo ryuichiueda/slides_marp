@@ -265,13 +265,13 @@ $\Rightarrow$ Total probability: $0.992$.
 
 ### Another calculation method: Using complementary events
 
-- <span style="color:red">Complementary Events</span>
-- For an event X, the complement is the total events (all possible events) excluding X.
-- For an event X, the complement is denoted as X$^c$.
-- Dice example: The complement of "rolling an even number" is "rolling an odd number."
+- <span style="color:red">Complementary Event</span>
+   - For an event X, it is the <span style="color:red">total events</span> (all possible events) excluding X.
+   - For an event X, it is denoted as X$^c$.
+   - Dice example: The complement of "rolling an even number" is "rolling an odd number."
 - Calculation using complementary events
-- The complement of "at least one a$_{1:3}$ is activated" is "none of a$_{1:3}$ is activated."
-- $\Pr\{$a$_{1:3}$ activates at least one time$\} = 1 - (0.2)^3 = 0.992$
+    - The complement of "at least one a$_{1:3}$ is OK" is "none of a$_{1:3}$ is OK."
+    - $\Pr\{$a$_{1:3}$ activates at least one time$\} = 1 - (0.2)^3 = 0.992$
 
 ---
 
