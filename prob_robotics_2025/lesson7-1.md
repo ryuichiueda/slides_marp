@@ -116,6 +116,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### ロボットの位置の定義（信念）
 
-- ロボットが時刻$t$に持っている知識を下の確率分布の条件に書き出してみましょう
-    - $p_t(\boldsymbol{x}|$条件$)$
+- 時刻$t$におけるロボットの位置$\boldsymbol{x}$の分布: $p_t(\boldsymbol{x}|$条件$)$と書く
+    - 問題: 「条件」には何が入る？（既知の情報）
 - ロボットに確率分布で「自分の位置の確率分布$b_t$」を持たせる
+
+
+![bg right:25% 100%](./figs/sensor_data.svg)
