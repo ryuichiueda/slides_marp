@@ -107,6 +107,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 例
             - 東京タワーや東京スカイツリーや富士山や時計台が見える
             - LiDARのセンサ値（絶対位置は与えない）
+        - <span style="color:red">ベイズの定理で位置情報に変換可能</span>
 - $Z_t$: 事象でも確率変数でもよい
 
 ![bg right:25% 100%](./figs/sensor_data.svg)
@@ -131,4 +132,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 信念分布
 
+- 自己位置推定しているロボットの頭の中はどうなっているか？
+    - 自身の真の位置は分かっていない（人間がよく勘違いすること）
+    - センサの値はベイズの定理を通さないと意味をなさない
 - ロボットに確率分布で「自分の位置の確率分布$b_t$」を持たせる
