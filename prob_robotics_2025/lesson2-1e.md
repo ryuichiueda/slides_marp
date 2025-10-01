@@ -121,13 +121,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### Another problem
+### One more problem
 
 - To raise the robot's activation rate to $0.9$, how much do the activation rates of each component need to be improved? If all components are raised to the same activation rate $\alpha$, what is the value of $\alpha$?
 - Answer
-* $\alpha^{10} = 0.9$
-* $\alpha = 0.99$
-* <span style="color:red">Components that "occasionally don't work, but that's okay" should generally not be used.</span>
+    * $\alpha^{10} = 0.9$
+    * $\alpha = 0.99$
+    * <span style="color:red">Components that "occasionally don't work, but that's okay" should not be used.</span>
 
 ---
 
