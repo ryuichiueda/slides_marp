@@ -98,13 +98,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - $\Pr\{$A$_{1:10}$ is activated$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is activated$\} = 0.8\cdot 0.95^9 = 0.50$
      - We can see it will not activate once in every two attempts.
-     - If you participate in something under these conditions, you will retire once in every two attempts.
-- Trivia
-- Robots and machines that cannot function unless even one component is working,
-factory and logistics systems, are called <span style="color:red">serial systems</span>.
-- The probability that a serial system will operate correctly:
-- Multiplication of the probabilities that each component will operate correctly.
-- <span style="color:red">The probability of correct operation decreases due to multiplication.</span>
+     - If you participate in something under these conditions, you will retire once in every two.
+- Serial systems
+    - Robots and machines that cannot function unless every component is working are called <span style="color:red">serial systems</span>.
+        - critical in factories or logistics systems
+    - The probability that a serial system will operate correctly:
+        - Multiplication of the probabilities that each component will operate correctly.
+        - <span style="color:red">The probability of correct operation decreases due to multiplication.</span>
 
 ---
 
