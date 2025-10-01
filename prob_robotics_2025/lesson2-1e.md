@@ -350,27 +350,27 @@ $\quad\cdot\Pr\{$A$_{10}|$Z$\}\cdot\big(\prod_{j=6}^9\Pr\{$A$_j\}\big)$
 ### Solution
 
 - Do the inverse of the addition theorem
-- $\Pr\{$Robot starts$\} =\sum_{Z = \text{X}, \text{Y}} \Pr\{$Robot starts$\cap Z\}$
-- "The power supply circuit is made by Mr. X" and "The power supply circuit is made by Mr. Y" are mutually exclusive, and
+    - $\Pr\{$Robot activates$\} =\sum_{Z = \text{X}, \text{Y}} \Pr\{$Robot activates$\cap Z\}$
+        - "The power supply circuit is made by X" and "The power supply circuit is made by Y" are mutually exclusive, and
 together they form the complete set of events, so this holds.
 - Apply the multiplication theorem
-- $\cdots =\sum_{Z = \text{X}, \text{Y}} \Pr\{$Robot starts$| Z\}\Pr\{Z\}$
-$=\Pr\{$Robot starts$|$X$\}\Pr\{$X$\} + \Pr\{$Robot starts$|$Y$\}\Pr\{$Y$\}$
+    - $\cdots =\sum_{Z = \text{X}, \text{Y}} \Pr\{$Robot activates$| Z\}\Pr\{Z\}$
+$=\Pr\{$Robot activates$|$X$\}\Pr\{$X$\} + \Pr\{$Robot activates$|$Y$\}\Pr\{$Y$\}$
 
 ---
 
 ### Solution (continued)
 
 - The equations obtained so far
-- $\Pr\{$Robot Starts Up$\}$
-$=\Pr\{$Robot Starts Up$|$X$\}\Pr\{$X$\} + \Pr\{$Robot Starts Up$|$Y$\}\Pr\{$Y$\}$
-- Organizing the Substituted Values
-- Let $x$ be the desired value (the percentage of X's power circuit used)
-- Y's percentage is $1-x$
-- The robot's startup rate when using X's power circuit: $0.48$
-- Y's (same as above): $0.57$
+    - $\Pr\{$Robot activates$\}$
+$=\Pr\{$Robot activates$|$X$\}\Pr\{$X$\} + \Pr\{$Robot activates$|$Y$\}\Pr\{$Y$\}$
+- Organizing the substituted values
+    - Let $x$ be the desired value (the percentage of X's power circuit used)
+        - Y's percentage is $1-x$
+    - The robot's startup rate when using X's power circuit: $0.48$
+    - Y's (same as above): $0.57$
 - Substituting
-- $0.5 = 0.48x + 0.57(1-x) \ \Longrightarrow\quad\!\!$<span style="color:red">$x=7/9$</span>
+    - $0.5 = 0.48x + 0.57(1-x) \ \Longrightarrow\quad\!\!$<span style="color:red">$x=7/9$</span>
 
 ---
 
