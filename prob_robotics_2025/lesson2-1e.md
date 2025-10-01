@@ -292,16 +292,15 @@ $\Rightarrow$ Total probability: $0.992$.
 
 ### Solution
 
-- Set up the equation
-- $\Pr\{$Robot activates$|$Whose A$_{10}$ is$\}$
+- Set up the equation: $\Pr\{$Robot activates$|$Whose A$_{10}$ is$\}$
 - Abbreviated because it's tedious
-- $\Pr\{$A$_{1:10}|$Z$\}$
-- "A$_{1:10}$ activates" is simply "A$_{1:10}$"
-- Let's simply write Z as the A$_{10}$ (Z is either X or Y).
+    - $\Pr\{$A$_{1:10}|$Z$\}$
+        - "A$_{1:10}$ activates" is simply "A$_{1:10}$"
+        - Let's simply write Z as the A$_{10}$ (Z is either X or Y).
 - Use the multiplication theorem when there are conditions
-- $\Pr\{X \cap Y | Z \} = \Pr\{X | Y \cap Z \} \Pr\{Y | Z \}$
-- Ignore the conditions and use the multiplication theorem, then just add the conditions at the end.
-- The derivation is in "Robot Probability and Statistics."
+    - $\Pr\{X \cap Y | Z \} = \Pr\{X | Y \cap Z \} \Pr\{Y | Z \}$
+        - Ignore the conditions and use the multiplication theorem, then just add the conditions at the end.
+        - The derivation is in the textbook.
 
 ---
 
