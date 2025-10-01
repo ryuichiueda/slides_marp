@@ -183,11 +183,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Activation rate of a series system
 
 - Therefore
-- $\Pr\{$A$_{1:10}$ is activated$\}$
-$= \Pr\{$A$_{2:10}$ is activated|<del>A$_1$ is activated</del>$\}\Pr\{$A$_1$ is activated$\}$
-$= \Pr\{$A$_{2:10}$ is activated$\}\Pr\{$A$_1$ is activated$\}$
+    - $\Pr\{$A$_{1:10}$ are OK$\}$
+$= \Pr\{$A$_{2:10}$ are OK|<del>A$_1$ is OK</del>$\}\Pr\{$A$_1$ is OK$\}$
+$= \Pr\{$A$_{2:10}$ are OK$\}\Pr\{$A$_1$ is OK$\}$
 - Similarly, by using the multiplication theorem to remove A$_2$, A$_3$, etc., and eliminating them from the condition, we obtain:
-$\Pr\{$A$_{1:10}$ is activated$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is activated$\}$
+$\Pr\{$A$_{1:10}$ are OK$\} = \prod_{i=1}^{10} \Pr\{$A$_i$ is OK$\}$
 
 ---
 
