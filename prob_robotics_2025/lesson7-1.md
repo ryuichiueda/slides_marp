@@ -121,7 +121,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 時刻$t=0$の$\boldsymbol{x}$の分布は$p_0$としましょう
         - 答え
             * $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
-- ロボット自身がこの分布を求める=自己位置推定
+- ロボット自身がこの条件付き分布を求める=自己位置推定
 
 
 ![bg right:25% 100%](./figs/sensor_data.svg)
