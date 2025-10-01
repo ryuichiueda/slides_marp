@@ -278,10 +278,10 @@ $\Rightarrow$ Total probability: $0.992$.
 ### When components affect each other
 
 - Now, let's consider the following case.
-- A$_{10}$ is a power supply circuit. A certain team uses two, one made by X and one made by Y.
-- X's circuit has a high activation rate and slightly unstable current.
-- Y's circuit has a low activation rate and stable current.
-- The activation rate of A$_{1:5}$ differs between X's and Y's A$_{10}$.
+    - A$_{10}$ is a power supply circuit. The team uses two, one made by X and one made by Y.
+        - X's circuit has a high activation rate and slightly unstable current.
+        - Y's circuit has a low activation rate and stable current.
+    - The activation rates of A$_{1:5}$ differ between X's and Y's A$_{10}$.
 (Table on the bottom right)
 
 <center>Which should I use? </center>
