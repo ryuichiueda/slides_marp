@@ -80,10 +80,10 @@ Question: Is it okay to be definitive when it's subtle?
 ## Another Question
 
 - What should the loss function be during training?
-- Consider Example 3 on the previous page.
-- Output: $\boldsymbol{y} = (\hat{P}_1, \hat{P}_2, \dots, \hat{P}_N)$
-- Correct answer: $\boldsymbol{y}^* = (P_1, P_2, \dots, P_N)$
-- The correct answer is often a one-hot vector with the correct element $=1$.
+    - Consider Example 3 on the previous page.
+    - Output: $\boldsymbol{y} = (\hat{P}_1, \hat{P}_2, \dots, \hat{P}_N)$
+    - Correct answer: $\boldsymbol{y}^* = (P_1, P_2, \dots, P_N)$
+        - The correct answer is often a one-hot vector with the correct element $=1$.
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
@@ -92,11 +92,11 @@ Question: Is it okay to be definitive when it's subtle?
 ### Common answer
 
 - Use <span style="color:red">cross entropy</span>
-- $\mathcal{L}(\boldsymbol{w}) = H(\boldsymbol{y}^*, \boldsymbol{y}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
-- $\log$ is the natural logarithm (base $e$)
-- A side note for math buffs: This is equivalent to minimizing the Kullback-Leibler divergence.
+    - $\mathcal{L}(\boldsymbol{w}) = H(\boldsymbol{y}^*, \boldsymbol{y}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
+        - $\log$ is the natural logarithm (base $e$)
+    - A side note for math buffs: This is equivalent to minimizing the Kullback-Leibler divergence.
 - Let's calculate the probability of the correct answer when it's high (e.g., $0.9$) and low (e.g., $0.1$).
-- Answer omitted.
+    - Answer omitted.
 - The essence of ANN learning is adjusting $\boldsymbol{w}$ so that the value of $\mathcal{L}$ (loss) approaches $0$.
 
 ![bg right:30% 100%](./figs/prob_output.svg)
@@ -110,7 +110,7 @@ Question: Is it okay to be definitive when it's subtle?
 
 ![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">(https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0)</span>
 
-Can this be done with an artificial neural network (ANN)? $\rightarrow$ Yes.
+Can this be done with artificial neural networks (ANNs)? $\rightarrow$ Yes.
 
 ---
 
