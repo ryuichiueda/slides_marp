@@ -194,3 +194,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 動きと情報を信念分布に変換
 - どうやって実装するの？
     - 動きは第6回でやったので情報のほうを考えましょう
+
+---
+
+## ベイズフィルタの実装
+
+
+- カルマンフィルタ
+- パーティクルフィルタ
+
+---
+
+### カルマンフィルタ
+
