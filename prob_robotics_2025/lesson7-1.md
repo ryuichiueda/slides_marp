@@ -200,7 +200,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## ベイズフィルタの実装
 
 
-- カルマンフィルタ
+- カルマンフィルタ（線形な場合）
+- カルマンフィルタ（非線形な場合。拡張カルマンフィルタと呼ばれる）
 - パーティクルフィルタ
 
 ---
