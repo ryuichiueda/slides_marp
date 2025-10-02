@@ -143,3 +143,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $\Longrightarrow$構築した分布は<span style="color:red">信念分布</span>と呼ばれる
      - ちゃんとした用語です
 
+
+---
+
+### 信念 = 主観
+
+- 動物の場合
+    - 尤度関数は個体によって異なる$\Longrightarrow$信念分布も異なる
+        - 実は正解がない
