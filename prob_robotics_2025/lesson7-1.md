@@ -152,3 +152,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 尤度関数は個体によって異なる$\Longrightarrow$信念分布も異なる
         - 実は正解がない
         - 信念分布が現実と合っていて、正しい行動の判断ができればよい
+- ロボットの場合
+    - 基本的には動物と同じ
+    - 条件がきっちり定まっていれば「正解」は存在するが、条件から外れたことが起こった場合は必ずしもそうではない
