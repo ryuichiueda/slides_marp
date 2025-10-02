@@ -149,12 +149,11 @@ Can this be done with artificial neural networks (ANNs)? $\rightarrow$ Yes.
 ### CNN (Convolutional Neural Network)
 
 - This is not a TV station.
-- convolutional: "convolutional"
 - It uses many neurons that input and output pixel values ​​from nearby areas of the image (right image).
-- Nearby areas of the image: a square region of $n\times n$ pixels.
-- It outputs pixel characteristics and changes in the small region.
-- Further convolutions are used in lower layers to capture overall features.
-- Image processing using a combination of "convolutional layers" and other layers
+    - Nearby areas of the image: a square region of $n\times n$ pixels.
+    - It outputs pixel characteristics and changes in the small region.
+    - Further convolutions are used in lower layers to capture overall features.
+- It recognizes images using a combination of "convolutional layers" and other layers.
 
 ![bg right:30% 90%](./figs/convolution_neuron.png)
 
