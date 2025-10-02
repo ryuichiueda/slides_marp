@@ -182,3 +182,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $Z_t$は関係なく、すでに求まっている$b_{t-1}$と、動き$\boldsymbol{u}_t$と、
     状態遷移分布で決まる
 
+
+---
+
+### 計算のまとめ
+
+- $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
+- $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
