@@ -56,7 +56,7 @@ Problem: Integer values like $0, 1, 2$ can't be output from the end of a neural 
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
     - $\boldsymbol{x}$ and $\boldsymbol{w}$: Same
     - $\boldsymbol{y} = (1$ if cat,1 if dog, 1 otherwise$)$
-        - Since only one element is 1, it's called a "one-hot vector."
+        - Since only one element is 1, it's called a "<span style="color:red">one-hot vector</span>."
 
 ![bg right:30% 100%](./figs/one_hot.svg)
 
