@@ -206,5 +206,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### カルマンフィルタ
+### カルマンフィルタ（線形な場合）
+
+- 線形: 観測方程式が線形な形で書けること
+    - $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c}$
 
