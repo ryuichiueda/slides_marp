@@ -156,3 +156,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 基本的には動物と同じ
     - 条件がきっちり定まっていれば「正解」は存在するが、条件から外れたことが起こった場合は必ずしもそうではない
     $\rightarrow$精度を追及してもあまり意味がなくて、どこまで実世界の理不尽さに耐えられるかが重要
+    $\rightarrow$尤度関数の設計にはかなりの自由度
