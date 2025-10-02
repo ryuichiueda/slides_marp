@@ -190,3 +190,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $b_0$から次の計算の繰り返しで$b_t$が求まる
     - ロボットが動いたとき: $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
     - 情報が得られた時: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
+- 上記の2つの式: <span style="color:red">ベイズフィルタ</span>
+    - 動きと情報を信念分布に変換
