@@ -210,4 +210,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 線形: 観測方程式が線形な形で書けること
     - $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c}$
+        - $\boldsymbol{z}$: 情報（ベクトルになっていることが必要）
 
