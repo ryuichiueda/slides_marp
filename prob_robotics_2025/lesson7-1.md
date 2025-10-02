@@ -129,7 +129,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-
 ### 信念分布
 
 - 自己位置推定しているロボットの頭の中はどうなっているか？
@@ -137,7 +136,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - 自身の真の位置は分かっていない
         - センサの値はベイズの定理を通さないと意味をなさない
     <span style="color:red">$\Longrightarrow$実は人間も同じだが自身が高性能すぎて気付いていない</span>
-- 手がかり: $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$の条件の部分（しかない）
-    - 条件から自身の分布$p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$を頭の中に構築
+- 手がかり
+    - $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$の条件の部分
+    - ベイズの定理の尤度関数
+- 条件と尤度関数から自身の分布$p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$を頭の中に構築
     $\Longrightarrow$構築した分布は<span style="color:red">信念分布</span>と呼ばれる
+     - ちゃんとした用語です
 
