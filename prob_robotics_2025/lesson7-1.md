@@ -143,7 +143,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $\Longrightarrow$構築した分布は<span style="color:red">信念分布</span>と呼ばれる
      - ちゃんとした用語です
 
-
 ---
 
 ### 信念 = 主観
@@ -157,3 +156,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 条件がきっちり定まっていれば「正解」は存在するが、条件から外れたことが起こった場合は必ずしもそうではない
     $\rightarrow$精度を追及してもあまり意味がなくて、どこまで実世界の理不尽さに耐えられるかが重要
     $\rightarrow$尤度関数の設計にはかなりの自由度
+
+---
+
+### 信念分布の計算
+
+- 準備
+    - $b_t(\boldsymbol{x}) = p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$と表記
+- ベイズの定理により
+	- $b_t(\boldsymbol{x}) = p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
+	$= \eta p(Z_t | \boldsymbol{x}, p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )$
+	$= \eta p(Z_t | \boldsymbol{x} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )$
