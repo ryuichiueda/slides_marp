@@ -123,16 +123,15 @@ Can this be done with artificial neural networks (ANNs)? $\rightarrow$ Yes.
 
 ## Vision, Images, and ANNs (CNNs)
 
-- ANNs specialize in the characteristics of video and images.
-- Image Characteristics
-- 2-D (3-D with depth, and 3-D with video if a time axis is added).
-- Similar pixels are present around a certain pixel.
+- ANNs specialize in images and video.
+    - Image Characteristics
+        - 2-D (3-D with depth, and 3-D with video if a time axis is added).
+        - Similar pixels are present around a certain pixel.
 - Recap: Digital Images
-- A plane is divided into a grid, and the color intensity is represented by the number.
-(Example: See the image on the right. The numbers are arbitrary.)
-- For color, the data is a grid of numerical data for R, G, and B.
+    - A plane is divided into a grid, and the color intensity is represented by the number. (e.g. right figure)
+    - In the case of color images, the data is a grid of numerical data for R, G, and B.
 
-![bg right:40% 90%](./figs/cat_mono.png)
+![bg right:25% 90%](./figs/cat_mono.png)
 
 ---
 
