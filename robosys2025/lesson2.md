@@ -65,12 +65,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 文字列、数字（<span style="color:red">リテラル</span>）
     - 文字列は`""`や`''`で囲む
         ```python
-        "hello", 'hello', "That's a pen."
+        "hello", 'hello', "That's a pen."                                                
         ```
     - 数字はそのまま記述
         ```python
         3.14, -1, 5
-        1.23e+100 #1.23かける10の100乗
+        1.23e+100 #1.23かける10の100乗                                             
         ```
 - 関数の使用: 「`名前(引数, 引数, ...)`」と記述
     - 例: 前ページに出てきた関数: `print`関数
@@ -86,17 +86,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 値（数字や文字列、その他のもの）に名前を付与できる
         - 「値を変数に代入」というより「値を名前で参照」
     - 型は書かなくてよい
-- コードの例
     ```python
+    ### コードの例 ###
     name = "上田"   #「上田」という文字列にnameという名前を付ける
     money = 5       #5という数字にmoneyという名前をつける
-    print("{}の所持金: {}円".format(name, money) ) #文字列に対してformatメソッドを呼び出し
+    print("{}の所持金: {}円".format(name, money) ) #文字列に対してformatメソッドを呼び出し                          
     ```
     - 「メソッド」: いまのところ値や変数に対してなにか操作するための関数のようなものと理解しておく
     - 実行（`var.py`というファイル名で）
         ```bash
         $ python3 var.py
-        上田の所持金: 5円
+        上田の所持金: 5円                                                          
         ```
 
 ---
