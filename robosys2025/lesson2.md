@@ -109,8 +109,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
        - for文の中身は右側に余白（<span style="color:red">インデント</span>）
         ```python
         ### コードの例 ###
-        fruits = ["apple", "banana", "cherry" ]  #文字列3つのリストをfruitsと命名
-        
+        fruits = ["apple", "banana", "cherry" ]  #文字列3つのリストをfruitsと命名                   
+
         for f in fruits:
             print(f + "はおいしい")             # + で文字列を連結できる
         #↑インデントは半角空白4文字が標準（講義では厳密に守ること）
@@ -240,7 +240,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         bash: ./hello.py: 許可がありません      #できない
         $ ls -l hello.py                        #ls -lで確認
         -rw-r--r-- 1 ueda ueda 47 11月 30 06:50 hello.py
-        $ ls -l a.out                           #gccで作ったa.outには最初から存在
+        $ ls -l a.out                           #gccで作ったa.outには最初から存在                  
         -rwxr-xr-x 1 ueda ueda 16464 11月 30 07:16 a.out
         ```
 - 付与の方法: <span style="color:red">`chmod`</span>を使用
@@ -250,7 +250,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     hello
     3.14
     $ ls -l hello.py
-    -rwxrwxr-x 1 ueda ueda 144 11月 30 18:31 hello.py
+    -rwxrwxr-x 1 ueda ueda 144 11月 30 18:31 hello.py                             
     ```
 
 
@@ -278,7 +278,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $ ./hello.py
     hello
     3.14
-    ### 拡張子を除去してもよい（拡張子をつけるかどうかは場合による） ###
+    ### 拡張子を除去してもよい（拡張子をつけるかどうかは場合による） ###               
     $ mv hello.py hello
     $ ./hello
     （略）
@@ -290,7 +290,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         $ PATH=$PATH:/home/ueda  #PATHの値に「:今いるディレクトリ」と文字列を追加
         $ hello
         （略）
-        $ exit                   #シェルを終了すると追加した文字列は消える
+        $ exit                   #シェルを終了すると追加した文字列は消える               
         ```
 
 ---

@@ -138,7 +138,7 @@ money = <span class="hljs-number">5</span>       <span class="hljs-comment">#5�
 <li>for文の中身は右側に余白（<span style="color:red">インデント</span>）</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-python"><span class="hljs-comment">### コードの例 ###</span>
-fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>, <span class="hljs-string">&quot;cherry&quot;</span> ]  <span class="hljs-comment">#文字列3つのリストをfruitsと命名</span>
+fruits = [<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>, <span class="hljs-string">&quot;cherry&quot;</span> ]  <span class="hljs-comment">#文字列3つのリストをfruitsと命名                   </span>
 
 <span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> fruits:
     <span class="hljs-built_in">print</span>(f + <span class="hljs-string">&quot;はおいしい&quot;</span>)             <span class="hljs-comment"># + で文字列を連結できる</span>
@@ -306,7 +306,7 @@ $ ./a.out       <span class="hljs-comment">#できたa.outを実行</span>
 bash: ./hello.py: 許可がありません      <span class="hljs-comment">#できない</span>
 $ <span class="hljs-built_in">ls</span> -l hello.py                        <span class="hljs-comment">#ls -lで確認</span>
 -rw-r--r-- 1 ueda ueda 47 11月 30 06:50 hello.py
-$ <span class="hljs-built_in">ls</span> -l a.out                           <span class="hljs-comment">#gccで作ったa.outには最初から存在</span>
+$ <span class="hljs-built_in">ls</span> -l a.out                           <span class="hljs-comment">#gccで作ったa.outには最初から存在                  </span>
 -rwxr-xr-x 1 ueda ueda 16464 11月 30 07:16 a.out
 </code></pre>
 </li>
@@ -317,7 +317,7 @@ $ ./hello.py                            <span class="hljs-comment">#実行でき
 hello
 3.14
 $ <span class="hljs-built_in">ls</span> -l hello.py
--rwxrwxr-x 1 ueda ueda 144 11月 30 18:31 hello.py
+-rwxrwxr-x 1 ueda ueda 144 11月 30 18:31 hello.py                             
 </code></pre>
 </li>
 </ul>
@@ -350,7 +350,7 @@ $ <span class="hljs-built_in">ls</span> -l hello.py
 <li>こうなればOK<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ./hello.py
 hello
 3.14
-<span class="hljs-comment">### 拡張子を除去してもよい（拡張子をつけるかどうかは場合による） ###</span>
+<span class="hljs-comment">### 拡張子を除去してもよい（拡張子をつけるかどうかは場合による） ###               </span>
 $ <span class="hljs-built_in">mv</span> hello.py hello
 $ ./hello
 （略）
@@ -364,7 +364,7 @@ $ ./hello
 <li>「パスの通った」コマンドとして呼び出せる<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ PATH=<span class="hljs-variable">$PATH</span>:/home/ueda  <span class="hljs-comment">#PATHの値に「:今いるディレクトリ」と文字列を追加</span>
 $ hello
 （略）
-$ <span class="hljs-built_in">exit</span>                   <span class="hljs-comment">#シェルを終了すると追加した文字列は消える</span>
+$ <span class="hljs-built_in">exit</span>                   <span class="hljs-comment">#シェルを終了すると追加した文字列は消える               </span>
 </code></pre>
 </li>
 </ul>
