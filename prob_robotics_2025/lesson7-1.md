@@ -95,9 +95,123 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - ロボットが動く
     - 考えるのはロボット（ちゃんとプログラムしないといけない）
 
+---
+
+### 情報のモデル化
+
+- ロボットは離散時刻ごとに位置に関して
+（しばしば間接的な）情報$Z_t$を得る: <span style="color:red">観測</span>
+    - $t=1,2,\dots$
+    - 「間接的な」: 直接「お前はここにいる」という
+    情報でない情報
+        - 例
+            - 東京タワーや東京スカイツリーや富士山や時計台が見える
+            - LiDARのセンサ値（絶対位置は与えない）
+        - <span style="color:red">ベイズの定理で位置情報に変換可能</span>
+- $Z_t$: 事象でも確率変数でもよい
+
+![bg right:25% 100%](./figs/sensor_data.svg)
+
 
 ---
 
-### ロボットの主観の定義（信念）
+### ロボットの位置の分布
 
-- ロボットに確率分布で
+- 時刻$t$におけるロボットの位置$\boldsymbol{x}$の分布: $p_t(\boldsymbol{x}|$条件$)$と書く
+    - 問題: 「条件」には何が入る？（既知の情報）
+        - 時刻$t=0$の$\boldsymbol{x}$の分布は$p_0$としましょう
+        - 答え
+            * $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
+- ロボット自身がこの条件付き分布を求める=自己位置推定
+
+
+![bg right:25% 100%](./figs/sensor_data.svg)
+
+---
+
+### 信念分布
+
+- 自己位置推定しているロボットの頭の中はどうなっているか？
+    - 暗闇（←↑比喩多めでよくないですが）
+        - 自身の真の位置は分かっていない
+        - センサの値はベイズの定理を通さないと意味をなさない
+    <span style="color:red">$\Longrightarrow$実は人間も同じだが自身が高性能すぎて気付いていない</span>
+- 手がかり
+    - $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$の条件の部分
+    - ベイズの定理の尤度関数
+- 条件と尤度関数から自身の分布$p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$を頭の中に構築
+    $\Longrightarrow$構築した分布は<span style="color:red">信念分布</span>と呼ばれる
+     - ちゃんとした用語です
+
+---
+
+### 信念 = 主観
+
+- 動物の場合
+    - 尤度関数は個体によって異なる$\Longrightarrow$信念分布も異なる
+        - 実は正解がない
+        - 信念分布が現実と合っていて、正しい行動の判断ができればよい
+- ロボットの場合
+    - 基本的には動物と同じ
+    - 条件がきっちり定まっていれば「正解」は存在するが、条件から外れたことが起こった場合は必ずしもそうではない
+    $\rightarrow$精度を追及してもあまり意味がなくて、どこまで実世界の理不尽さに耐えられるかが重要
+    $\rightarrow$尤度関数の設計にはかなりの自由度
+
+---
+
+### 信念分布の計算1
+
+- 準備
+    - $b_t(\boldsymbol{x}) = p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$と表記
+- ベイズの定理により
+	- $b_t(\boldsymbol{x}) = p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
+	$= \eta p(Z_t | \boldsymbol{x}, p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )$
+	$= \eta p(Z_t | \boldsymbol{x} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )\qquad$（$Z_t$の分布は$\boldsymbol{x}$だけで決まる）
+	<span style="color:red">$= \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$</span>
+        - $L$: 尤度関数
+        - $\hat{b}_t$: 時刻$t$において、ロボットが$Z_t$を知る直前の信念分布
+
+---
+
+### 信念分布の計算2
+
+- $\hat{b}_t$を$b_{t-1}$から求めてみましょう
+    - 第6回（その1）で求めた式がそのまま成立
+        - $p_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1}) }$
+        <span style="color:red">$\Longrightarrow \hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$</span>
+    - $Z_t$は関係なく、すでに求まっている$b_{t-1}$と、動き$\boldsymbol{u}_t$と、
+    状態遷移分布で決まる
+
+
+---
+
+### 計算のまとめ
+
+- $b_0$から次の計算の繰り返しで$b_t$が求まる
+    - ロボットが動いたとき: $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
+    - 情報が得られた時: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
+- 上記の2つの式: <span style="color:red">ベイズフィルタ</span>
+    - 動きと情報を信念分布に変換
+- どうやって実装するの？
+    - 動きは第6回でやったので情報のほうを考えましょう
+
+---
+
+## ベイズフィルタの実装
+
+
+- カルマンフィルタ（線形な場合）
+- カルマンフィルタ（非線形な場合。拡張カルマンフィルタと呼ばれる）
+- パーティクルフィルタ
+
+---
+
+### カルマンフィルタ（線形な場合）
+
+- 線形: 観測方程式が線形な形で書けること
+    - $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c}$
+        - 時刻の添え字は省略
+        - $\boldsymbol{z}$: 情報（ベクトルになっていることが必要）
+        - $\boldsymbol{c}$: 定数項
+        - $H$: （$\boldsymbol{c}$といっしょに）位置$\boldsymbol{x}$でどんなセンサ値が得られるかをモデル化した行列
+
