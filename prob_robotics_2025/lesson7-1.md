@@ -159,7 +159,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 信念分布の計算
+### 信念分布の計算1
 
 - 準備
     - $b_t(\boldsymbol{x}) = p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$と表記
@@ -170,3 +170,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	<span style="color:red">$= \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$</span>
         - $L$: 尤度関数
         - $\hat{b}_t$: 時刻$t$において、ロボットが$Z_t$を知る直前の信念分布
+
+---
+
+### 信念分布の計算2
+
+- $\hat{b}_t$を$b_{t-1}$から求めてみましょう
+
