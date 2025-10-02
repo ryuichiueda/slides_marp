@@ -151,3 +151,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 動物の場合
     - 尤度関数は個体によって異なる$\Longrightarrow$信念分布も異なる
         - 実は正解がない
+        - 信念分布が現実と合っていて、正しい行動の判断ができればよい
