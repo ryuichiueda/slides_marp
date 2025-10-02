@@ -114,7 +114,7 @@ Can this be done with artificial neural networks (ANNs)? $\rightarrow$ Yes.
 
 ---
 
-### Another topic: Someone has appeared who can automatically draw pictures.
+### Another topic: Someone has appeared that can automatically draw pictures.
 
 - Examples are everywhere, so please do your own research.
 - How do they work?
