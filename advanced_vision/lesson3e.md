@@ -67,11 +67,11 @@ Question: Is it okay to be definitive when it's subtle?
 ### Example Answer 3
 
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
-- $\boldsymbol{x}$ and $\boldsymbol{w}$ are the same
-- $\boldsymbol{y} = (P_\text{cat}, P_\text{dog}, P_\text{other})$
-- $\boldsymbol{y}$ is a probability distribution
+    - $\boldsymbol{x}$ and $\boldsymbol{w}$ are the same
+    - $\boldsymbol{y} = (P_\text{cat}, P_\text{dog}, P_\text{other})$
+        - $\boldsymbol{y}$ is a probability distribution
 - This format is commonly used for the output of ANNs for classification
-- To settle on one, select the one with the highest probability
+    - To settle on one, select the one with the highest probability
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
