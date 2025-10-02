@@ -40,27 +40,27 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Example Answer 1
 
 - $y = f(\boldsymbol{x} | \boldsymbol{w})$
-    - $\boldsymbol{x}$: A vector of pixel values ​​(highly multidimensional)
+    - $\boldsymbol{x}$: A vector of pixel values (highly multidimensional)
         - Dimensions: Number of vertical pixels $\times$ Number of horizontal pixels $\times$ Color channels (RGB: 3, RGBD: 4)
     - $y = 0$: Dog, $y=1$: Cat, $y=2$: Other
         - $\boldsymbol{w}$: A vector of parameters (also multidimensional)
         - Sometimes written as $y = f_\boldsymbol{w}(\boldsymbol{x})$ (in ANN circles)
-- $y = f(\boldsymbol{x} ; It can also be written as \boldsymbol{w})$ (traditional).
+       - It can also be written as $y = f(\boldsymbol{x} ; \boldsymbol{w})$ (traditional).
 
-Question: Can we output analog values ​​like $0, 1, 2$ from the end of a neural network?
+Problem: Integer values like $0, 1, 2$ can't be output from the end of a neural network.
 
---
+---
 
 ### Example Answer 2
 
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
-- $\boldsymbol{x}$ and $\boldsymbol{w}$: Same
-- $\boldsymbol{y} = ($1 if cat$,$1 if dog$,$1 otherwise$)$
-- Since only one element is 1, it's called a "one-hot vector."
+    - $\boldsymbol{x}$ and $\boldsymbol{w}$: Same
+    - $\boldsymbol{y} = (1$ if cat,1 if dog, 1 otherwise$)$
+        - Since only one element is 1, it's called a "one-hot vector."
 
 ![bg right:30% 100%](./figs/one_hot.svg)
 
-Question: Is it okay to be definitive when it's a delicate matter?
+Question: Is it okay to be definitive when it's subtle?
 
 ---
 
