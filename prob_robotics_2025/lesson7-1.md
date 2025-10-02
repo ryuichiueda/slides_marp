@@ -192,3 +192,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 情報が得られた時: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
 - 上記の2つの式: <span style="color:red">ベイズフィルタ</span>
     - 動きと情報を信念分布に変換
+- どうやって実装するの？
+    - 動きは第6回でやったので情報のほうを考えましょう
