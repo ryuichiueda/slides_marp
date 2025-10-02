@@ -167,6 +167,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $b_t(\boldsymbol{x}) = p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
 	$= \eta p(Z_t | \boldsymbol{x}, p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )$
 	$= \eta p(Z_t | \boldsymbol{x} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )\qquad$（$Z_t$の分布は$\boldsymbol{x}$だけで決まる）
-	$= \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
+	<span style="color:red">$= \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$</span>
         - $L$: 尤度関数
         - $\hat{b}_t$: 時刻$t$において、ロボットが$Z_t$を知る直前の信念分布
