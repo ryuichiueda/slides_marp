@@ -176,6 +176,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 信念分布の計算2
 
 - $\hat{b}_t$を$b_{t-1}$から求めてみましょう
-    - 第6回（その1）で既出
+    - 第6回（その1）で求めた式がそのまま成立
         - $p_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1}) }$
+        <span style="color:red">$\Longrightarrow \hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$</span>
 
