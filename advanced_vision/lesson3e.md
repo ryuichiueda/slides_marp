@@ -160,14 +160,17 @@ Can this be done with artificial neural networks (ANNs)? $\rightarrow$ Yes.
 ---
 ### CNN component 1: Convolutional layer
 
-- Apply a filter to a portion of the image (a "window" of n$\times$n pixels), add the output, replace it with a single value, and send it downstream (upper right).
+- Apply a <span style="color:red">filter</span> to a portion of the image (a "window" of n$\times$n pixels), add the output, replace it with a single value, and send it downstream (upper right).
 - Apply the filter by shifting it one pixel at a time (lower right). $\rightarrow$ Downstream also applies to the image.
-- To maintain the number of downstream pixels, pad the edges $\rightarrow$.
-- Shifting by more than two pixels is also possible (the amount of shift is called the stride).
-- Convolution operation (lower).
-- $\odot$: Hadamard product (element-wise multiplication).
+    - To maintain the number of downstream pixels $\rightarrow$ pad the edges
+    - Shifting by more than two pixels is also possible (the amount of shift is called the stride).
 
 ![bg right:20% 90%](./figs/cnn_conv.png)
+
+---
+
+- Convolution operation (lower).
+    - $\odot$: Hadamard product (element-wise multiplication).
 
 $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
@@ -176,8 +179,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### Meaning of Filter
 
 - Filter: Same as those used in traditional image processing
-- Detect local features (edges, etc.)
-- Convolutional layer training = Filter training
+    - Detect local features (edges, etc.)
+    - Convolutional layer training = Filter training
 ![w:700](./figs/cnn_filter.png)
 
 ---
@@ -185,14 +188,14 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### Filter calculation formula
 
 - $y = \sum_{i=1}^n\sum_{j=1}^n w_{(i,j)}x_{(i,j)} + b$
-- $(i,j)$: Pixel position in the filter coordinate system
-- $x_{(i,j)}$: Pixel value
-- $w_{(i,j)}$: Weight (<span style="color:red">Learning target</span>)
-- $b$: Bias (<span style="color:red">Learning target</span>)
-- Previously, it was $-b$, but it's the same thing.
+    - $(i,j)$: Pixel position in the filter coordinate system
+    - $x_{(i,j)}$: Pixel value
+    - $w_{(i,j)}$: Weight (<span style="color:red">Learning target</span>)
+    - $b$: Bias (<span style="color:red">Learning target</span>)
+        - Previously, it was $-b$, but it's the same thing.
 - It's the same as before, just in 2D.
-- However, it's not "fully connected."
-- An affine layer (plus activation function layer) is sometimes called a "fully connected layer."
+    - However, it's not "fully connected."
+    - An affine layer (plus activation function layer) is sometimes called a "fully connected layer."
 
 ---
 
