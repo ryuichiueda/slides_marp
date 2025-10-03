@@ -262,18 +262,17 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - Extracting pattern features using convolutional layers
 - LeNet, AlexNet: Identifying objects from images
-- Further uses of CNNs
+   - Further uses of CNNs
 
 ---
 
 ## U-Net and Latent Space
 
 - U-Net: A reversed CNN added to a CNN
-- Original use: Segmentation
-- Dividing image regions into regions based on the objects in the image
-(Right: [[Mikami et al. 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja))
+    - Original use: Segmentation
+        - Dividing image regions into regions based on the objects in the image (Right: [[Mikami et al. 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja))
 - "Reverse CNN"
-- Enlarge the image using an operation called "transposed convolution" (explained later) (structure shown on the next page)
+    - Enlarge the image using an operation called "transposed convolution" (explained later) (structure shown on the next page)
 
 ![bg right:25% 90%](https://github.com/ryuichiueda/jrsj_color_figs/blob/main/vol_40_no_2/fig_11.png?raw=true)
 
