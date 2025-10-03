@@ -230,3 +230,144 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### Channels
 
 - When working with color (RGB) images
+    - There are three "channels."
+       - Each pixel can be thought of as a three-dimensional vector
+    - If a filter is prepared for each RGB, the output will be three channels
+- Multiple filters can also be applied to a single channel
+    - The structure of [LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code) shown below <span style="font-size:70%">(Image: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/))</span>
+        - CNN for identifying handwritten digits from images (1 channel $\rightarrow$ 6 channels $\rightarrow$ 16 channels)
+![w:720](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
+
+---
+
+### Representative CNNs
+
+- LeNet: Handwritten character recognition using the configuration shown on the previous page
+- Convolutional pooling $\rightarrow$ fully connected layer
+- Sigmoid activation function
+- AlexNet: Five deep convolutional layers
+- Right: Comparison of LeNet (left) and AlexNet (right)
+- LeRU activation function
+- Classification of 1,000 types
+- [AlexNet paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+- View the trained intermediate layers and recognition results
+
+![bg right:33% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
+
+<a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:AlexNet_block_diagram.svg">Right: Zhang et al., CC BY-SA 4.0</a>
+
+---
+
+### Summary of CNNs
+
+- Extracting pattern features using convolutional layers
+- LeNet, AlexNet: Identifying objects from images
+- Further uses of CNNs
+
+---
+
+## U-Net and Latent Space
+
+- U-Net: A reversed CNN added to a CNN
+- Original use: Segmentation
+- Dividing image regions into regions based on the objects in the image
+(Right: [[Mikami et al. 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja))
+- "Reverse CNN"
+- Enlarge the image using an operation called "transposed convolution" (explained later) (structure shown on the next page)
+
+![bg right:25% 90%](https://github.com/ryuichiueda/jrsj_color_figs/blob/main/vol_40_no_2/fig_11.png?raw=true)
+
+---
+
+### U-Net Structure
+
+- Left half: CNN (processing such as object identification)
+- Right half: Reverse CNN (construction of an image from the identification results)
+- Uses skip connections
+- Dimensionality is lost along the way, making it more than just differential learning
+
+<img width="700" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png" />
+<a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png">Image: Mehrdad Yazdani, CC BY-SA 4.0</a>
+
+---
+
+### Transpose convolution
+
+- Image resolution increase operation
+- Image enlargement by padding and applying a filter $\rightarrow$ Image enlargement
+- Segmentation is performed using the information from the original image obtained through this operation and skip connections.
+- This concludes the explanation of U-Net, but this structure is important for more than just segmentation.
+
+![bg right:25% 95%](./figs/trans_conv.png)
+
+---
+
+## Autoencoder and Latent Space
+
+---
+
+### Autoencoder
+
+- ANN trained to match input and output [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+- Loss function: Mean square error (MSE) of input and output
+- No labeling required for training (unsupervised)
+- The structure can be either CNN or fully connected, but the intermediate dimension is reduced like U-Net.
+- Input side: Information is gradually removed.
+- Output side: Information is gradually added.
+- Question: What does it mean?
+![w:900](./figs/autoenc.png)
+
+---
+
+### What the Input Side (<span style="color:red">Encoder</span>) Does
+
+- Classifies input data
+- (If training is successful) Similar images produce similar outputs
+- Adding a fully connected layer (and softmax layer) to the end and training it further turns it into a classifier
+- Example on the right: Example of output distribution when output is reduced to 2 dimensions
+(Note: Practical implementations are higher dimensional)
+- The space in which the distribution occurs is called the <span style="color:red">latent space</span>
+
+![bg right:35% 95%](./figs/encoder.png)
+
+---
+
+### What the Output Side (<span style="color:red">Decoder</span>) Does
+
+- Reconstructs data from vectors in the latent space
+- Example: If a "dog" vector is received, draw a photo or drawing of a dog
+- Learns how to restore (draw) pictures
+- Parameters for transposed convolution filters, etc.
+- The encoder is trained to facilitate restoration
+- The distribution of vectors in the latent space is determined
+
+![w:800](./figs/decoder.png)
+
+---
+
+### Using an Autoencoder
+
+- Separate the Encoder and Decoder
+- Encoder
+- Attach a pre-connected layer first to create a classifier
+- Attaching a different decoder first will generate a different result
+- Decoder
+- Attaching an encoder other than the one used for training will create a converter
+- Example: Input "dog" $\rightarrow$ Generate a picture of a dog
+
+<center>The prototype of what is commonly referred to as <span style="color:red">generative AI</span></center>
+
+![bg right:30% 95%](./figs/autoenc2.png)
+
+---
+
+## Summary
+
+- Learning from CNN to autoencoder
+- We've looked at the process from image classification to generation.
+- Object classification using CNN: Encoder + classifier
+- Segmentation using U-Net: A structure similar to an autoencoder
+- Several applications will be covered in future articles.
+- Trapezoid diagrams appear frequently.
+
+![bg right:30% 95%](./figs/autoenc2.png)
