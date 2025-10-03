@@ -293,8 +293,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### Transpose convolution
 
 - Image resolution increase operation
-- Image enlargement by padding and applying a filter $\rightarrow$ Image enlargement
-- Segmentation is performed using the information from the original image obtained through this operation and skip connections.
+   - padding and applying a filter
+   - Segmentation is performed using the information from the original image obtained through this operation and skip connections.
 - This concludes the explanation of U-Net, but this structure is important for more than just segmentation.
 
 ![bg right:25% 95%](./figs/trans_conv.png)
