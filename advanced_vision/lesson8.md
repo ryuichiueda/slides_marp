@@ -103,3 +103,5 @@ marp: true
     - 層正則化のあとの出力に注入（AdaLN機構）
         - 時刻
         - ラベル
+
+### Adaptive Instance Normalization（AdaIN）
