@@ -343,19 +343,19 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### Using an Autoencoder
+### Use of an Autoencoder
 
 - Separate the Encoder and Decoder
 - Encoder
-- Attach a pre-connected layer first to create a classifier
-- Attaching a different decoder first will generate a different result
+    - Attaching a pre-connected layer will create a classifier
+    - Attaching a different decoder will <span style="color:red">generate</span> a different result
 - Decoder
-- Attaching an encoder other than the one used for training will create a converter
-- Example: Input "dog" $\rightarrow$ Generate a picture of a dog
+    - Attaching an encoder other than the one used for training will create a converter
+        - Example: Input a word "dog" $\rightarrow$ Generate a picture of a dog
 
-<center>The prototype of what is commonly referred to as <span style="color:red">generative AI</span></center>
+<center>The prototype of what is referred to as <span style="color:red">generative AI</span></center>
 
-![bg right:30% 95%](./figs/autoenc2.png)
+![bg right:25% 95%](./figs/autoenc2.png)
 
 ---
 
