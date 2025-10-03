@@ -362,10 +362,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ## Summary
 
 - Learning from CNN to autoencoder
-- We've looked at the process from image classification to generation.
-- Object classification using CNN: Encoder + classifier
-- Segmentation using U-Net: A structure similar to an autoencoder
-- Several applications will be covered in future articles.
-- Trapezoid diagrams appear frequently.
+    - We've looked at the process from image classification to generation.
+        - Object classification using CNN: Encoder + classifier
+        - Segmentation using U-Net: A structure similar to an autoencoder
+    - Several applications will be covered in future slides.
+        - Trapezoid diagrams will appear frequently.
 
 ![bg right:30% 95%](./figs/autoenc2.png)
