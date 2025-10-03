@@ -217,11 +217,11 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - Softmax (soft maximum): Not settling on a single answer
 - Example: Identifying objects in an image
-- Outputting a probability without a definitive answer (e.g., 90% dog, 9% cat, 1% other)
-- Because the real world is full of ambiguous situations, it is more convenient to output an ambiguous answer without a single answer.
+    - Outputting a probability without a definitive answer (e.g., 90% dog, 9% cat, 1% other)
+    - Because the real world is full of ambiguous situations, it is more convenient to output an ambiguous answer without a single answer.
 - Mathematical formula
-- For input $\boldsymbol{x} = (x_1, x_2, \dots, x_n)$, output <span style="color:red">$y_i = \eta e^{x_i}$</span>
-- $\eta$ is a normalization constant
+    - For input $\boldsymbol{x} = (x_1, x_2, \dots, x_n)$, output <span style="color:red">$y_i = \eta e^{x_i}$</span>
+        - $\eta$ is a normalization constant
 
 ![bg right:20% 95%](./figs/softmax_layer.png)
 
