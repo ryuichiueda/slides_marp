@@ -333,11 +333,11 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### What the Output Side (<span style="color:red">Decoder</span>) Does
 
 - Reconstructs data from vectors in the latent space
-- Example: If a "dog" vector is received, draw a photo or drawing of a dog
-- Learns how to restore (draw) pictures
-- Parameters for transposed convolution filters, etc.
-- The encoder is trained to facilitate restoration
-- The distribution of vectors in the latent space is determined
+    - Example: If a "dog" vector is received, draw a photo or drawing of a dog
+    - Learns how to restore (draw) pictures
+        - Parameters for transposed convolution filters, etc.
+    - The encoder is trained to facilitate restoration
+        - The distribution of vectors in the latent space is determined
 
 ![w:800](./figs/decoder.png)
 
