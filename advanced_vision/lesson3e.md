@@ -308,13 +308,13 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### Autoencoder
 
 - ANN trained to match input and output [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
-- Loss function: Mean square error (MSE) of input and output
-- No labeling required for training (unsupervised)
-- The structure can be either CNN or fully connected, but the intermediate dimension is reduced like U-Net.
-- Input side: Information is gradually removed.
-- Output side: Information is gradually added.
-- Question: What does it mean?
-![w:900](./figs/autoenc.png)
+    - Loss function: Mean square error (MSE) of input and output
+        - No labeling required for training (unsupervised)
+    - The structure can be either CNN or fully connected, but the intermediate dimension is reduced like U-Net.
+        - Input side: Information is gradually removed.
+        - Output side: Information is gradually added.
+    - Question: What does it mean?
+![w:800](./figs/autoenc.png)
 
 ---
 

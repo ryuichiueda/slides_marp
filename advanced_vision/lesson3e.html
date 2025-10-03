@@ -424,14 +424,23 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="27" style="--footer:Advanced Vision Session 3;--paginate:true;" data-marpit-pagination-total="31">
 <h3 id="autoencoder">Autoencoder</h3>
 <ul>
-<li>ANN trained to match input and output <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf">[Hinton 2006]</a></li>
-<li>Loss function: Mean square error (MSE) of input and output</li>
+<li>ANN trained to match input and output <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf">[Hinton 2006]</a>
+<ul>
+<li>Loss function: Mean square error (MSE) of input and output
+<ul>
 <li>No labeling required for training (unsupervised)</li>
-<li>The structure can be either CNN or fully connected, but the intermediate dimension is reduced like U-Net.</li>
+</ul>
+</li>
+<li>The structure can be either CNN or fully connected, but the intermediate dimension is reduced like U-Net.
+<ul>
 <li>Input side: Information is gradually removed.</li>
 <li>Output side: Information is gradually added.</li>
+</ul>
+</li>
 <li>Question: What does it mean?<br />
-<img src="./figs/autoenc.png" alt="" style="width:900px;" /></li>
+<img src="./figs/autoenc.png" alt="" style="width:800px;" /></li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Session 3</footer>
 </section>
