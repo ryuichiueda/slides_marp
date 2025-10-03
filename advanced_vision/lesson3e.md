@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: "Advanced Vision Session 3" -->
 
-# Advice on Vision
+# Advanced Vision
 
 ## Lesson 3: Fundamentals of Image Classification and Generation I
 
