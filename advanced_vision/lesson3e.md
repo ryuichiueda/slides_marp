@@ -250,7 +250,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - LeRU activation function
     - Classification of 1,000 types
     - [paper of AlexNet](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-    - View the trained intermediate layers and recognition results
+    - We can see the trained intermediate layers and recognition results
 
 ![bg right:20% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
