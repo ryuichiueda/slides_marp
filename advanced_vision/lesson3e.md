@@ -368,4 +368,4 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - Several applications will be covered in future slides.
         - Trapezoid diagrams will appear frequently.
 
-![bg right:30% 95%](./figs/autoenc2.png)
+![bg right:25% 95%](./figs/autoenc2.png)
