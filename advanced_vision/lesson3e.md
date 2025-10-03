@@ -321,11 +321,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### What the Input Side (<span style="color:red">Encoder</span>) Does
 
 - Classifies input data
-- (If training is successful) Similar images produce similar outputs
-- Adding a fully connected layer (and softmax layer) to the end and training it further turns it into a classifier
-- Example on the right: Example of output distribution when output is reduced to 2 dimensions
-(Note: Practical implementations are higher dimensional)
-- The space in which the distribution occurs is called the <span style="color:red">latent space</span>
+    - (If training is successful) Similar images produce similar outputs
+    - Adding a fully connected layer (and softmax layer) to the end and training it further turns it into a classifier
+- Example on the right: Example of output distribution when output is reduced to 2 dimensions (Note: Practical implementations are higher dimensional)
+   - The space in which the distribution occurs is called the <span style="color:red">latent space</span>
 
 ![bg right:35% 95%](./figs/encoder.png)
 

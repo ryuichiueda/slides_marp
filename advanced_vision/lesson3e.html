@@ -447,12 +447,17 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="28" style="--footer:Advanced Vision Session 3;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="31" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/encoder.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="28" data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="28" style="--footer:Advanced Vision Session 3;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="31" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="what-the-input-side-span-stylecolorredencoderspan-does">What the Input Side (<span style="color:red">Encoder</span>) Does</h3>
 <ul>
-<li>Classifies input data</li>
+<li>Classifies input data
+<ul>
 <li>(If training is successful) Similar images produce similar outputs</li>
 <li>Adding a fully connected layer (and softmax layer) to the end and training it further turns it into a classifier</li>
-<li>Example on the right: Example of output distribution when output is reduced to 2 dimensions<br />
-(Note: Practical implementations are higher dimensional)</li>
+</ul>
+</li>
+<li>Example on the right: Example of output distribution when output is reduced to 2 dimensions (Note: Practical implementations are higher dimensional)
+<ul>
 <li>The space in which the distribution occurs is called the <span style="color:red">latent space</span></li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Session 3</footer>
 </section>
