@@ -283,9 +283,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - Left half: CNN (processing such as object identification)
 - Right half: Reverse CNN (construction of an image from the identification results)
 - Uses skip connections
-- Dimensionality is lost along the way, making it more than just differential learning
+    - Dimensionality is lost along the way, making it more than just differential learning
 
-<img width="700" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png" />
+<img width="500" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png" />
 <a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png">Image: Mehrdad Yazdani, CC BY-SA 4.0</a>
 
 ---
