@@ -202,13 +202,13 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### CNN Component 2: Pooling Layer (Subsampling Layer)
 
 - A layer that reduces the number of pixels within a window, retaining only the most distinctive pixels.
-- "Max pooling," which retains the maximum value, is mainly used.
+    - "Max pooling," which retains the maximum value, is mainly used.
 - No learning is performed.
 - The reduced number of pixels makes it easier for the subsequent stage (the object classification network) to learn.
-- It becomes slightly more tolerant to misalignment of the objects in the image.
-- CNNs do not fully address the "difficulties" mentioned at the beginning, so images of various sizes, positions, and orientations are used for training.
+- It becomes slightly more tolerant to shift of the objects in the image.
+    - CNNs do not fully address the "difficulties" mentioned at the beginning, so images of various sizes, positions, and orientations are used for training.
 
-![bg right:23% 90%](./figs/cnn_pooling.png)
+![bg right:20% 90%](./figs/cnn_pooling.png)
 
 ---
 

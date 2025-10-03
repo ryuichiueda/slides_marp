@@ -264,15 +264,21 @@
 </ul>
 <footer>Advanced Vision Session 3</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Session 3;--paginate:true;--marpit-advanced-background-split:23%;" data-marpit-pagination-total="20" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/cnn_pooling.png&quot;);background-size:90%;"></figure></div></section></foreignObject><foreignObject width="77%" height="720"><section id="18" data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Session 3;--paginate:true;--marpit-advanced-background-split:23%;" data-marpit-pagination-total="20" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Session 3;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="20" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/cnn_pooling.png&quot;);background-size:90%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="18" data-footer="Advanced Vision Session 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Session 3;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="20" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="cnn-component-2-pooling-layer-subsampling-layer">CNN Component 2: Pooling Layer (Subsampling Layer)</h3>
 <ul>
-<li>A layer that reduces the number of pixels within a window, retaining only the most distinctive pixels.</li>
+<li>A layer that reduces the number of pixels within a window, retaining only the most distinctive pixels.
+<ul>
 <li>&quot;Max pooling,&quot; which retains the maximum value, is mainly used.</li>
+</ul>
+</li>
 <li>No learning is performed.</li>
 <li>The reduced number of pixels makes it easier for the subsequent stage (the object classification network) to learn.</li>
-<li>It becomes slightly more tolerant to misalignment of the objects in the image.</li>
+<li>It becomes slightly more tolerant to shift of the objects in the image.
+<ul>
 <li>CNNs do not fully address the &quot;difficulties&quot; mentioned at the beginning, so images of various sizes, positions, and orientations are used for training.</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Session 3</footer>
 </section>
