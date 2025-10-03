@@ -243,16 +243,16 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### Representative CNNs
 
 - LeNet: Handwritten character recognition using the configuration shown on the previous page
-- Convolutional pooling $\rightarrow$ fully connected layer
-- Sigmoid activation function
+    - Convolutional pooling $\rightarrow$ fully connected layer
+        - Sigmoid activation function
 - AlexNet: Five deep convolutional layers
-- Right: Comparison of LeNet (left) and AlexNet (right)
-- LeRU activation function
-- Classification of 1,000 types
-- [AlexNet paper](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-- View the trained intermediate layers and recognition results
+    - Right: Comparison of LeNet (left) and AlexNet (right)
+    - LeRU activation function
+    - Classification of 1,000 types
+    - [paper of AlexNet](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+    - View the trained intermediate layers and recognition results
 
-![bg right:33% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
+![bg right:20% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
 <a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:AlexNet_block_diagram.svg">Right: Zhang et al., CC BY-SA 4.0</a>
 
