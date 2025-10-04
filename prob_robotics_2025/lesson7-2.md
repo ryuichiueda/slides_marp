@@ -342,7 +342,10 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 - $\xi_t^{(1:N)}$に制御指令$\boldsymbol{u}_t$を反映して$\hat{\xi}_{t+1}^{(1:N)}$に
 - 単に各パーティクルを動かすのではなく、<span style="color:red">リサンプリング</span>する
     - 重みが偏っていくのを防ぎ、重みの大きいパーティクルを増殖
-
+- 例
+    - 左: リサンプリングなし（重みに尤度をかけていく）
+    - 右: リサンプリングあり
+![w:300](./figs/mcl_sensor_update.gif)![w:300](./figs/mcl_sys_resampling.gif)
 
 ---
 
