@@ -282,3 +282,13 @@ $\begin{pmatrix}
 - 例: $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2,  \sigma_\psi^2 )$
     - $\sigma_\ell$: 距離によって値を大きくする（例: $\sigma_\ell = \sigma_\ell' \ell(\hat{\boldsymbol{\mu}}_t)$）
     - $\sigma_\varphi, \sigma_\psi$は定数
+
+---
+
+### 例（詳解確率ロボティクスから）
+
+- 左: 観測なし。右: 観測あり。
+- $\psi$は無い
+    - $H_t$や$Q_t$は$2\times 2$行列になるが問題ない
+
+![w:400](./figs/kalman_no_obs.gif)![w:400](./figs/kalman_filter.gif)
