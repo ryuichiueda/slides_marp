@@ -162,9 +162,11 @@ $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念�
 
 - 以上の結果と第6回の動きの式のまとめ
     - ロボットが移動したとき
-        - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}_t}$
-        - $\hat{\Sigma}_{t-1} = \Sigma_t + S_t$
+        - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}_t}$（おさらい: 元の平均位置に変位の平均値を足す）
+        - $\hat{\Sigma}_{t-1} = \Sigma_t + S_t$（おさらい: 変位の不確かさを足す）
     - ロボットが観測したとき
 		- $K_t = \hat\Sigma_t H^\top ( H \hat\Sigma_t H^\top +  Q )^{-1}$
         - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
 		- $\Sigma_t = (I - K_t H)\hat\Sigma_t$
+- 上記の更新式を<span style="color:red">カルマンフィルタ</span>と呼ぶ
+    - ガウス分布の演算によるベイズフィルタの実装
