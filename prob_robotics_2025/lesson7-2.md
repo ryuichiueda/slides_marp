@@ -233,3 +233,13 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
     - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
     - $\Sigma_t = (I - K_t H_t)\hat\Sigma_t$
 
+
+---
+
+### 例題への適用
+
+- $\varphi = \arctan \{(m_y - y_t)/(m_x - x_t)\} - \theta_t$
+- $\ell = \{(m_x - x_t)^2 + (m_y - y_t)^2 \}^{1/2}$
+- $\psi = \pi - \theta_t  - (2\pi - m_\psi) = m_\psi - \theta_t - \pi$
+
+![bg right:35% 100%](./figs/camera_landmark.svg)
