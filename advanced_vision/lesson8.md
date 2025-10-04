@@ -108,7 +108,7 @@ marp: true
 
 ---
 
-### Adaptive Layer/Instance Normalization（AdaLN/AdaIN）
+### Adaptive Instance/Layer Normalization（AdaIN/AdaLN）
 
 ---
 
