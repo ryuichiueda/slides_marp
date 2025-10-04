@@ -352,8 +352,19 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 ### リサンプリングの手続き（素朴なもの）
 
 - 以下を繰り返して$\hat{\xi}_{t+1}^{(i)} \  (i=1,2,\dots,N)$を作成
-    - 1: $\xi_t^{(1:N)}$の重みの違うパーティクルから重みに比例する確率でひとつパーティクル$\xi_t = (\boldsymbol{x}_t, w_t)$を選択
-    - 2: $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}_t)$
+    - 1: $\xi_t^{(1:N)}$から重みに比例する確率でひとつパーティクル$\xi' = (\boldsymbol{x}', w')$を選択
+    - 2: $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
     - 3: $\hat{w}_{t+1}^{(i)} = 1/N$
 - 上記の方法は計算量が大きく、選択に偏りが発生するので、実装ではもっとよい方法（系統サンプリング）が使用される
+
+
+---
+
+### パーティクルフィルタのまとめ
+
+- センサ情報の反映: 
+	- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+- 移動の反映: 
+    - $\xi' \sim \xi_t^{(1:N)}$（重みを選択される確率に）
+    - $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
 
