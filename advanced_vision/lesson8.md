@@ -106,4 +106,6 @@ marp: true
         - 時刻
         - ラベル
 
+---
+
 ### Adaptive Instance Normalization（AdaIN）
