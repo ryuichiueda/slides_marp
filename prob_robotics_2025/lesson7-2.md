@@ -193,9 +193,9 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
         - 要素は$\ell, \varphi, \psi$（$\boldsymbol{z}_t$はセンサ値の空間のベクトルとなる）
     - $Q_t(\boldsymbol{x}_t)$: $\boldsymbol{x}_t$での雑音の共分散行列
         - 下準備として$Q_t(\boldsymbol{x}_t)$の近似: $\hat{b}_t$の中心$\hat{\boldsymbol{\mu}}_t$での共分散行列に近似
-            - $Q_t(\boldsymbol{x}_t)\approx Q_t(\hat{\boldsymbol{\mu}}_t)$
+            - $Q_t(\boldsymbol{x}_t)\simeq Q_t(\hat{\boldsymbol{\mu}}_t)$
             - $Q_t(\hat{\boldsymbol{\mu}}_t)$は以後、単に$Q_t$と表記
-- 尤度関数: $L(\boldsymbol{x}_t |\boldsymbol{z}_t) = \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right] \approx \mathcal{N}(\boldsymbol{h}(\boldsymbol{x}_t), Q_t)$
+- 尤度関数: $L(\boldsymbol{x}_t |\boldsymbol{z}_t) = \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right] \simeq \mathcal{N}(\boldsymbol{h}(\boldsymbol{x}_t), Q_t)$
     - 線形化が必要に
         - $\boldsymbol{h}$を$\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$のような線形な式に近似
 
@@ -207,3 +207,13 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
     - 分布の中心での値 + 中心からのズレによる変化量
 	- $H_t = \dfrac{\partial \boldsymbol{h}}{\partial \boldsymbol{x}}\Big|_{\boldsymbol{x} = \hat{\boldsymbol{\mu}}_t}$
 	    - 例題で具体的に$H_t$がどうなるかは、あとから考えましょう
+- 近似した式の整理
+	- $\boldsymbol{h}(\boldsymbol{x}) \simeq H_t \boldsymbol{x} + \boldsymbol{c}_t$
+        - $\boldsymbol{c}_t = \boldsymbol{h}(\hat{\boldsymbol{\mu}}_t) - H_t \hat{\boldsymbol{\mu}}_t = \hat{\boldsymbol{z}}_t - H_t \hat{\boldsymbol{\mu}}_t$
+
+---
+
+### 拡張カルマンフィルタの導出
+
+- $b_t(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{z}_t | H_t\boldsymbol{x} + \boldsymbol{c}_t, Q_t) \mathcal{N}(\boldsymbol{x} | \hat{\boldsymbol{\mu}}_t, \hat\Sigma_t)$
+
