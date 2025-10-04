@@ -149,3 +149,22 @@ $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念�
 	    - $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$を代入
         - ウッドベリーの公式を利用
             - $(A + BDC)^{-1} = A^{-1} - A^{-1}B(D^{-1} + CA^{-1} B)^{-1} CA^{-1}$
+- 答え
+    * $K_t = \{ \hat{\Sigma}_t - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} H\hat{\Sigma}_t \} H^\top Q^{-1}$
+	$= \hat{\Sigma}_t H^\top Q^{-1}  - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} H\hat{\Sigma}_t H^\top Q^{-1}$
+	$= \hat{\Sigma}_t H^\top Q^{-1}  - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} (Q + H\hat{\Sigma}_t H^\top ) Q^{-1}$ 
+	$+ \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1}QQ^{-1}$
+	$= \hat\Sigma_t H^\top (Q + H \hat\Sigma_t H^\top)^{-1}$
+
+---
+
+### カルマンフィルタ
+
+- 以上の結果と第6回の動きの式のまとめ
+    - ロボットが移動したとき
+        - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}_t}$
+        - $\hat{\Sigma}_{t-1} = \Sigma_t + S_t$
+    - ロボットが観測したとき
+		- $K_t = \hat\Sigma_t H^\top ( H \hat\Sigma_t H^\top +  Q )^{-1}$
+        - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
+		- $\Sigma_t = (I - K_t H)\hat\Sigma_t$
