@@ -192,4 +192,5 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
     - $\boldsymbol{h}(\boldsymbol{x}_t)$: $\boldsymbol{x}_t$で得られるセンサ値のベクトルの平均値
         - 要素は$\ell, \varphi, \psi$（$\boldsymbol{z}_t$はセンサ値の空間のベクトルとなる）
     - $Q_t$: 雑音の共分散行列
+- この場合の線形化: $\boldsymbol{h}$を$\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$のような線形な式に近似すること
 
