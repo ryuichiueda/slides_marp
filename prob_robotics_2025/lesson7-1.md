@@ -225,6 +225,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 線形なカルマンフィルタの適用例
 
 - 次のような場合を想定
+    - $\boldsymbol{x} = (x, y, \theta)$
     - GNSSから直接位置情報をもらえる（誤差あり）
     - ジャイロから方角の情報をもらえる（誤差あり）
 
