@@ -216,4 +216,20 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
 ### 拡張カルマンフィルタの導出
 
 - $b_t(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{z}_t | H_t\boldsymbol{x} + \boldsymbol{c}_t, Q_t) \mathcal{N}(\boldsymbol{x} | \hat{\boldsymbol{\mu}}_t, \hat\Sigma_t)$
+    - （再掲）線形な場合のときの式: $b_t(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{z}_t | H\boldsymbol{x} + \boldsymbol{c}, Q) \mathcal{N}(\boldsymbol{x} | \hat{\boldsymbol{\mu}}_t, \hat\Sigma_t)$
+        - ほぼ同じなので以後省略
+
+---
+
+### 拡張カルマンフィルタ
+
+第6回の移動の式と合わせると
+
+- ロボットが移動したとき
+    - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
+    - $\hat\Sigma_t =  F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
+- ロボットが観測したとき
+    - $K_t = \hat\Sigma_t H_t^\top ( H_t \hat\Sigma_t H_t^\top +  Q_t )^{-1}$
+    - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
+    - $\Sigma_t = (I - K_t H_t)\hat\Sigma_t$
 
