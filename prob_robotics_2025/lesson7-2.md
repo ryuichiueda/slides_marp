@@ -177,10 +177,9 @@ $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念�
 
 - 非線形な場合にどうカルマンフィルタを適用するか？
     - 第6回と同様、線形化する
-- 例題: カメラで<span style="color:red">点ランドマーク</span>を観測
-    - カメラの位置=ロボットの位置
+- 例題: カメラで<span style="color:red">点ランドマーク</span>を観測（カメラの位置=ロボットの位置）
     - ランドマークまでの距離$\ell$、ロボットからのランドマークの方角$\varphi$が計測可能
     - ランドマーク自身の方角$\psi$も計測可能
     - ランドマークの位置、方角: $(m_x \ m_y \ m_\psi)^\top$
 
-![w:400](./figs/camera_landmark.svg)
+$\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
