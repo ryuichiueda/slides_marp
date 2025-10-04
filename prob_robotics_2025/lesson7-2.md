@@ -139,3 +139,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	    - 得られた情報の分だけ共分散行列を小さく
 
 $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念分布に与える影響力の強さ</span>
+
+---
+
+### カルマンゲインの変形
+
+- $K_t = \Sigma_t H^\top Q^{-1}$は右辺に$\Sigma_t$があるので計算できない
+    - $\Sigma_t$を除去しましょう
