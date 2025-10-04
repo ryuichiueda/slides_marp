@@ -120,3 +120,22 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	$= K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
 
 
+---
+
+### カルマンゲインの導入（続き）
+
+
+- $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$を整理（これもやってみましょう）
+	* $I = \Sigma_t H^\top Q^{-1} H +\Sigma_t \hat\Sigma_t^{-1}  \Longrightarrow
+	I = K_t H +\Sigma_t \hat\Sigma_t^{-1}$
+	$\Longrightarrow
+	\hat\Sigma_t = K_t H\hat\Sigma_t +\Sigma_t   \Longrightarrow
+	\Sigma_t = (I - K_t H)\hat\Sigma_t$
+- まとめ
+    - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
+	   - 新たな推定姿勢 $= K_t$(実際の情報 $-$ 元の推定姿勢で期待された情報)
+       $\qquad\qquad\qquad\qquad+$ 元の推定姿勢
+	- $\Sigma_t = (I - K_t H)\hat\Sigma_t$
+	    - 得られた情報の分だけ共分散行列を小さく
+
+$\Longrightarrow$<span style="color:red">カルマンゲイン: 観測がどれだけ信念分布に影響を与えるかを決める値</span>
