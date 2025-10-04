@@ -271,3 +271,13 @@ $\begin{pmatrix}
 	\end{pmatrix}$
         - $\hat{\boldsymbol{\mu}}_t = (\hat\mu_{xt},\hat\mu_{yt},\hat\mu_{\theta t})$
 	    - $\ell(\boldsymbol{x}) = \{(m_x - x)^2 + (m_y - y)^2 \}^{1/2}$
+
+---
+
+### 例題への適用: $Q_t$の決定
+
+（教科書には記述が抜けている模様）
+
+- $\ell, \varphi, \psi$ごとに分散を測定or見積もって作成
+- 例
+	- $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2,  \sigma_\psi^2 )$
