@@ -105,6 +105,11 @@ marp: true
     - 他、サイズを落とすためにVAEを使用
         - 図中にlatentとあるのはVAEで潜在空間での表現になっているから
 
+
+---
+
+### Adaptive Layer/Instance Normalization（AdaLN/AdaIN）
+
 ---
 
 - 入力
@@ -113,7 +118,3 @@ marp: true
     - 層正則化のあとの出力に注入（AdaLN機構）
         - 時刻
         - ラベル
-
----
-
-### Adaptive Instance Normalization（AdaIN）
