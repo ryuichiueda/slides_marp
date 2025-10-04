@@ -236,8 +236,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 --- 
 
-### 観測方程式
-
+### 観測方程式（尤度関数）はこうなる
 
 - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
     - $\boldsymbol{z} = (p_\text{la}, p_\text{lo},\varphi)$
