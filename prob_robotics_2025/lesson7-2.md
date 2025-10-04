@@ -179,3 +179,4 @@ $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念�
     - 第6回と同様、線形化する
 - 例題
 
+![w:600](./figs/camera_landmark.svg)
