@@ -186,10 +186,10 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
 
 ---
 
-### 観測方程式・尤度関数
+### 観測モデル・尤度関数
 
-- 観測方程式: $\boldsymbol{z}_t \sim \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right]$
-    - $\boldsymbol{h}(\boldsymbol{x}_t)$: $\boldsymbol{x}_t$で得られるセンサ値のベクトルの平均値
+- 観測モデル: $\boldsymbol{z}_t \sim \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right]$
+    - 観測方程式$\boldsymbol{h}(\boldsymbol{x}_t)$: $\boldsymbol{x}_t$で得られるセンサ値のベクトルの平均値
         - 要素は$\ell, \varphi, \psi$（$\boldsymbol{z}_t$はセンサ値の空間のベクトルとなる）
     - $Q_t(\boldsymbol{x}_t)$: $\boldsymbol{x}_t$での雑音の共分散行列
         - 下準備として$Q_t(\boldsymbol{x}_t)$の近似: $\hat{b}_t$の中心$\hat{\boldsymbol{\mu}}_t$での共分散行列に近似
@@ -198,3 +198,7 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
 - 尤度関数: $L(\boldsymbol{x}_t |\boldsymbol{z}_t) = \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right] \approx \mathcal{N}(\boldsymbol{h}(\boldsymbol{x}_t), Q_t)$
     - 線形化が必要に
         - まずは$\boldsymbol{h}$を$\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$のような線形な式に近似
+
+---
+
+### 観測方程式の線形近似
