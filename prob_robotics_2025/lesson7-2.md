@@ -193,4 +193,8 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
         - 要素は$\ell, \varphi, \psi$（$\boldsymbol{z}_t$はセンサ値の空間のベクトルとなる）
     - $Q_t$: 雑音の共分散行列
 - この場合の線形化: $\boldsymbol{h}$を$\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$のような線形な式に近似すること
+- 準備
+    - $Q_t(\boldsymbol{x}_t)$の近似: $\hat{b}_t$の中心$\hat{\boldsymbol{\mu}}_t$での共分散行列に近似しましょう
+        - $Q_t(\boldsymbol{x}_t)\approx Q_t(\hat{\boldsymbol{\mu}}_t)$
+        - $Q_t(\hat{\boldsymbol{\mu}}_t)$は以後、単に$Q_t$と表記
 
