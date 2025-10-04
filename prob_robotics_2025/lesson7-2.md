@@ -223,7 +223,7 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
 
 ### 拡張カルマンフィルタ
 
-第6回の移動の式と合わせると
+第6回の移動の式と合わせると次のように
 
 - ロボットが移動したとき
     - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
