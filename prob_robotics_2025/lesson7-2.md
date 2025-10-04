@@ -347,5 +347,5 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
             - 1: $\xi_t^{(1:N)}$の重みの違うパーティクルから重みに比例する確率でひとつパーティクル$\xi_t = (\boldsymbol{x}_t, w_t)$を選択
             - 2: $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}_t)$
             - 3: $\hat{w}_{t+1}^{(i)} = 1/N$
-    - 上記の方法は計算量が大きく、選択に偏りが発生するので、実装ではもっとよい方法が使用される（系統サンプリング）
+    - 上記の方法は計算量が大きく、選択に偏りが発生するので、実装ではもっとよい方法（系統サンプリング）が使用される
 
