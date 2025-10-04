@@ -224,9 +224,24 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 線形なカルマンフィルタの適用例
 
-- 次のような場合を想定
-    - $\boldsymbol{x} = (x, y, \theta)$
-    - GNSSから直接位置情報をもらえる（誤差あり）
-    - ジャイロから方角の情報をもらえる（誤差あり）
+次のような場合を想定
+
+- 状態（位置・向き）: $\boldsymbol{x} = (x \  y \  \theta)^\top$
+- 観測
+    - GNSSから直接、緯度$p_\text{la}$と経度$p_\text{lo}$をもらえる（誤差あり）
+    - ジャイロから方角$\varphi$の情報をもらえる（誤差あり）
+
+![bg right:25% 100%](./figs/gnss.svg)
+
+--- 
+
+- 観測方程式
+	- $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
+        - $\boldsymbol{z} = (p_\text{la}, p_\text{lo},\theta)$
+	$H = \begin{pmatrix}
+		\alpha_\text{la} & 0 & 0 \\
+		0 & \alpha_\text{lo} & 0 \\
+		0 & 0 & 1
+	\end{pmatrix}$
 
 ![bg right:25% 100%](./figs/gnss.svg)
