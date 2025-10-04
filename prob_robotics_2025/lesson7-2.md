@@ -306,3 +306,13 @@ $\begin{pmatrix}
         - LiDARのデータ: 物体までの距離を遠く測ることは少ないが、人が横切って短く計測することは多い
 
 $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
+
+---
+
+### パーティクル（再定義）
+
+- 第6回のパーティクルに「重み」という変数を追加
+	- $\xi_t^{(i)} = (\boldsymbol{x}_t^{(i)}, w_t^{(i)}) = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}, w_t^{(i)}) \quad (i=1,2,\dots,N)$
+- 真の姿勢$\boldsymbol{x}^*$が$X$内にある確率の近似方法を定義
+	- $\text{Pr}\{ \boldsymbol{x}^* \in X \} \simeq \sum_{i=1}^N w_t^{(i)} \delta(\boldsymbol{x}_t^{(i)} \in X)$
+	    - $\delta(\cdot)$: かっこの中がtrueなら1、falseなら0
