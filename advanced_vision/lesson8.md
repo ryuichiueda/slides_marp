@@ -100,6 +100,8 @@ marp: true
     - ラベルを入力して出力をコントロール
 - 構造
     - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
+        - 途中で出力にラベルや時刻を混ぜる
+            - 「DiT Block with adaLN-Zero」の図
     - 他、サイズを落とすためにVAEを使用
         - 図中にlatentとあるのはVAEで潜在空間での表現になっているから
 
