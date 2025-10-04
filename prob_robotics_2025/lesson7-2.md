@@ -280,3 +280,5 @@ $\begin{pmatrix}
 
 - $\ell, \varphi, \psi$ごとに分散を測定or見積もって作成
 - 例: $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2,  \sigma_\psi^2 )$
+    - $\sigma_\ell$: 距離によって値を大きくする（例: $\sigma_\ell = \sigma_\ell' \ell(\hat{\boldsymbol{\mu}}_t)$）
+    - $\sigma_\varphi, \sigma_\psi$は定数
