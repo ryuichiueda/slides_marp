@@ -101,6 +101,8 @@ marp: true
 - 構造
     - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
         - 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークンを1つ加えて入力
+        - "DiT Block with adaLN-Zero"
+            - @@@TODO@@@
     - 他、サイズを落とすためにVAEを使用
         - 図中にlatentとあるのはVAEで潜在空間での表現になっているから
 
