@@ -290,5 +290,6 @@ $\begin{pmatrix}
 - 左: 観測なし。右: 観測あり。
 - $\psi$は無い
     - $H_t$や$Q_t$は$2\times 2$行列になるが問題ない
+    - なんでそれで$(x, y, \theta)$を推定できるか考えてみましょう
 
-![w:400](./figs/kalman_no_obs.gif)![w:400](./figs/kalman_filter.gif)
+![w:350](./figs/kalman_no_obs.gif)![w:350](./figs/kalman_filter.gif)
