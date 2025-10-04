@@ -209,9 +209,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### カルマンフィルタ（線形な場合）
 
 - 線形: 観測方程式が線形な形で書けること
-    - $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c}$
+    - $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c} + \boldsymbol{\varepsilon}$
         - 時刻の添え字は省略
         - $\boldsymbol{z}$: 情報（ベクトルになっていることが必要）
         - $\boldsymbol{c}$: 定数項
+        - $\boldsymbol{\varepsilon}$: 雑音
         - $H$: （$\boldsymbol{c}$といっしょに）位置$\boldsymbol{x}$でどんなセンサ値が得られるかをモデル化した行列
+- 確率的な表記（$\boldsymbol{\varepsilon}$がガウス分布に従うと仮定）
+	- $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
+	    - $Q$: 雑音の共分散行列
 
