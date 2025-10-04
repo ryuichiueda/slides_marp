@@ -227,7 +227,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 次のような場合を想定
 
 - 状態（位置・向き）: $\boldsymbol{x} = (x \  y \  \theta)^\top$
-- 観測
+    - $x$軸、$y$軸はそれぞれ緯度、経度の方向とあわせる
+- 観測: $\boldsymbol{z} = (p_\text{la} \  p_\text{lo} \  \varphi)^\top$
     - GNSSから直接、緯度$p_\text{la}$と経度$p_\text{lo}$をもらえる（誤差あり）
     - ジャイロから方角$\varphi$の情報をもらえる（誤差あり）
 
@@ -235,13 +236,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 --- 
 
-- 観測方程式
-	- $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
-        - $\boldsymbol{z} = (p_\text{la}, p_\text{lo},\theta)$
-	$H = \begin{pmatrix}
+### 観測方程式
+
+
+- $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
+    - $\boldsymbol{z} = (p_\text{la}, p_\text{lo},\varphi)$
+	- $H = \begin{pmatrix}
 		\alpha_\text{la} & 0 & 0 \\
 		0 & \alpha_\text{lo} & 0 \\
 		0 & 0 & 1
 	\end{pmatrix}$
+        - $\alpha_\text{la}, \alpha_\text{lo}$: 1mあたりの緯度、経度
+     - $\boldsymbol{c} = (p_\text{la} \ p_\text{lo} \ \varphi_0)^\top$
+	    - いずれも原点調整の変数
+     - $Q$: 誤差の大きさを測って共分散行列にしたもの
+         - この場合は対角成分（分散）にだけ数値を置けばよさそう
 
 ![bg right:25% 100%](./figs/gnss.svg)
