@@ -183,3 +183,13 @@ $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念�
     - ランドマークの位置、方角: $(m_x \ m_y \ m_\psi)^\top$
 
 $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
+
+---
+
+### 観測方程式・尤度関数
+
+- $\boldsymbol{z}_t \sim \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right]$
+    - $\boldsymbol{h}(\boldsymbol{x}_t)$: $\boldsymbol{x}_t$で得られるセンサ値のベクトルの平均値
+        - 要素は$\ell, \varphi, \psi$（$\boldsymbol{z}_t$はセンサ値の空間のベクトルとなる）
+    - $Q_t$: 雑音の共分散行列
+
