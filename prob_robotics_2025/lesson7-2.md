@@ -202,3 +202,8 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
 ---
 
 ### 観測方程式の線形近似
+
+- $\boldsymbol{h}(\boldsymbol{x}) \simeq \boldsymbol{h}(\hat{\boldsymbol{\mu}}_t) + H_t (\boldsymbol{x} - \hat{\boldsymbol{\mu}}_t)$
+    - 分布の中心での値 + 中心からのズレによる変化量
+	- $H_t = \dfrac{\partial \boldsymbol{h}}{\partial \boldsymbol{x}}\Big|_{\boldsymbol{x} = \hat{\boldsymbol{\mu}}_t}$
+	    - 例題で具体的に$H_t$がどうなるかは、あとから考えましょう
