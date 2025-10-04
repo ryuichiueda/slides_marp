@@ -147,4 +147,5 @@ $\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念�
 - $K_t = \Sigma_t H^\top Q^{-1}$は右辺に$\Sigma_t$があるので計算できない
     - $\Sigma_t$を除去しましょう
 	    - $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$を代入
-        - ウッドベリーの公式: $(A + BDC)^{-1} = A^{-1} - A^{-1}B(D^{-1} + CA^{-1} B)^{-1} CA^{-1}$を利用
+        - ウッドベリーの公式を利用
+            - $(A + BDC)^{-1} = A^{-1} - A^{-1}B(D^{-1} + CA^{-1} B)^{-1} CA^{-1}$
