@@ -331,6 +331,7 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 - $\hat{\xi}_t^{(1:N)}$に情報$Z_t$を反映して$\xi_t^{(1:N)}$に
 - 尤度関数の値を重みにする
 	- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+	- 姿勢はそのまま（$\hat{\boldsymbol{x}}_t^{(i)} \rightarrow \boldsymbol{x}_t^{(i)}$）
 - $w_t^{(i)}$がモンテカルロ法で受け持つ確率に
 
 ---
