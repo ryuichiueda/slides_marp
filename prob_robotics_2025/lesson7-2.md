@@ -197,4 +197,4 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
             - $Q_t(\hat{\boldsymbol{\mu}}_t)$は以後、単に$Q_t$と表記
 - 尤度関数: $L(\boldsymbol{x}_t |\boldsymbol{z}_t) = \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right] \approx \mathcal{N}(\boldsymbol{h}(\boldsymbol{x}_t), Q_t)$
     - 線形化が必要に
-        - まずは$\boldsymbol{h}$を$\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$のような線形な式に近似すること
+        - まずは$\boldsymbol{h}$を$\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$のような線形な式に近似
