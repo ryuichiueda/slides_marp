@@ -279,5 +279,4 @@ $\begin{pmatrix}
 （教科書には記述が抜けている模様）
 
 - $\ell, \varphi, \psi$ごとに分散を測定or見積もって作成
-- 例
-	- $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2,  \sigma_\psi^2 )$
+- 例: $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2,  \sigma_\psi^2 )$
