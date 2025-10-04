@@ -90,5 +90,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 --- 
 
-### 観測方程式（尤度関数）はこうなる
+### 情報が得られたときのベイズフィルタの式への代入
 
+- $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
+$= \eta \mathcal{N}(\boldsymbol{z}_t | H\boldsymbol{x} + \boldsymbol{c}, Q) \mathcal{N}(\boldsymbol{x} | \hat{\boldsymbol{\mu}}_t, \hat\Sigma_t)$
+    - $\hat{\boldsymbol{\mu}}_t, \hat{\Sigma}_t$は、それぞれ$\hat{b}_t$の平均値、共分散行列
