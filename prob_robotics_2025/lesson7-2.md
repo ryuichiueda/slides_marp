@@ -138,4 +138,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $\Sigma_t = (I - K_t H)\hat\Sigma_t$
 	    - 得られた情報の分だけ共分散行列を小さく
 
-$\Longrightarrow$<span style="color:red">カルマンゲイン: 観測がどれだけ信念分布に影響を与えるかを決める値</span>
+$\Longrightarrow$<span style="color:red">カルマンゲイン: 観測が信念分布に与える影響力の強さ</span>
