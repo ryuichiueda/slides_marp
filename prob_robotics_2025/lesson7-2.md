@@ -311,13 +311,18 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 
 ### パーティクル（再定義）
 
+- 右図: おさらい
 - 第6回のパーティクルに「重み」という変数を追加
-	- $\xi_t^{(i)} = (\boldsymbol{x}_t^{(i)}, w_t^{(i)}) = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}, w_t^{(i)}) \quad (i=1,2,\dots,N)$
+	- $\xi_t^{(i)} = (\boldsymbol{x}_t^{(i)}, w_t^{(i)}) = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}, w_t^{(i)})$
+    $(i=1,2,\dots,N)$
+        - 右図の矢印がそれぞれ重みを持つ
+    - 集合: $\xi_t^{(1:N)} = \{\xi_t^{(1)}, \xi_t^{(2)}, \dots, \xi_t^{(N)}\}$
 - 真の姿勢$\boldsymbol{x}^*$が$X$内にある確率の近似方法を定義
 	- $\text{Pr}\{ \boldsymbol{x}^* \in X \} \simeq \sum_{i=1}^N w_t^{(i)} \delta(\boldsymbol{x}_t^{(i)} \in X)$
 	    - $\delta(\cdot)$: かっこの中がtrueなら1、falseなら0
-- 時刻$t$のパーティクルの集合: $\xi_t^{(1:N)} = \{\xi_t^{(1)}, \xi_t^{(2)}, \dots, \xi_t^{(N)}\}$
-- センサ情報を反映する前の時刻$t$のパーティクルの集合: $\hat{\xi}_t^{(1:N)}$
+- センサ情報を反映する前のパーティクルの集合: $\hat{\xi}_t^{(1:N)}$
+
+![bg right:25% 100%](./figs/motion_update_particles.png)
 
 ---
 
