@@ -236,11 +236,22 @@ $\qquad\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
 
 ---
 
-### 例題への適用
+### 例題への適用: 観測方程式を立てる
 
-- 得られるセンサ値を計算
+- 得られるセンサ値を計算（詳細は省略）
     - $\varphi = \arctan \{(m_y - y_t)/(m_x - x_t)\} - \theta_t$
     - $\ell = \{(m_x - x_t)^2 + (m_y - y_t)^2 \}^{1/2}$
     - $\psi = m_\psi - \theta_t - \pi$
+- 観測方程式: $\boldsymbol{h}(\boldsymbol{x}_t) =$
+$\begin{pmatrix}
+		\arctan \{ (m_y - y_t)/(m_x - x_t) \} - \theta_t \\
+		\{(m_x - x_t)^2 + (m_y - y_t)^2 \}^{1/2} \\
+		m_\psi - \theta_t - \pi
+	\end{pmatrix}$
 
 ![bg right:35% 100%](./figs/camera_landmark.svg)
+
+---
+
+### 例題への適用: ヤコビ行列$H_t$の算出
+
