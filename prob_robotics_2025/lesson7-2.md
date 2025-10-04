@@ -316,3 +316,13 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 - 真の姿勢$\boldsymbol{x}^*$が$X$内にある確率の近似方法を定義
 	- $\text{Pr}\{ \boldsymbol{x}^* \in X \} \simeq \sum_{i=1}^N w_t^{(i)} \delta(\boldsymbol{x}_t^{(i)} \in X)$
 	    - $\delta(\cdot)$: かっこの中がtrueなら1、falseなら0
+- 時刻$t$のパーティクルの集合: $\xi_t^{(1:N)} = \{\xi_t^{(1)}, \xi_t^{(2)}, \dots, \xi_t^{(N)}\}$
+- センサ情報を反映する前の時刻$t$のパーティクルの集合: $\hat{\xi}_t^{(1:N)}$
+
+---
+
+### ロボットが動いた時のパーティクルの処理
+
+- 単に各パーティクルを動かすのではなく、<span style="color:red">リサンプリング</span>する
+    - aaa
+
