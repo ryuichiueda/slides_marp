@@ -363,8 +363,10 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 ### パーティクルフィルタのまとめ
 
 - センサ情報の反映: 
-	- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+    - $i=1,2,\dots,N$に対し
+	    - $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
 - 移動の反映: 
-    - $\xi' \sim \xi_t^{(1:N)}$（重みを選択される確率に）
-    - $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
-
+    - $i=1,2,\dots,N$に対し
+        - $\xi' = (\boldsymbol{x}', w') \sim \xi_t^{(1:N)}$（重みを選択される確率に）
+        - $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
+- これでベイズフィルタの近似になっている
