@@ -250,5 +250,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	    - いずれも原点調整の変数
      - $Q$: 誤差の大きさを測って共分散行列にしたもの
          - この場合は対角成分（分散）にだけ数値を置けばよさそう
+- 右辺が尤度関数に（計測された$\boldsymbol{z}\rightarrow \boldsymbol{x}$の尤もらしさ）
 
 ![bg right:25% 100%](./figs/gnss.svg)
