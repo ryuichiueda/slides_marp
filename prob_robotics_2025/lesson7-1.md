@@ -219,3 +219,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
 	    - $Q$: 雑音の共分散行列
 
+
+---
+
+### 線形なカルマンフィルタの適用例
+
+- 次のような場合を想定
+    - GNSSから直接位置情報をもらえる（誤差あり）
+    - ジャイロから方角の情報をもらえる（誤差あり）
+
+![bg right:25% 100%](./figs/gnss.svg)
