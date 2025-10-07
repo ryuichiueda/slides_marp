@@ -148,13 +148,13 @@ there is no relationship between the values beyond the fact that they follow $P$
 
 - Distribution for two or more random variables
 - Example: Let $a$ be the number rolled on a blue die and $b$ be the number rolled on a red die
-- Probability distribution of the number rolls: $P_{a,b}$
-- Probability that $a=x, b=y$: $P_{a,b}(x,y)$
-- $P_{a,b}$ is called the joint probability mass function (distribution)
+    - Probability distribution of the number rolls: $P_{a,b}$
+    - Probability that $a=x, b=y$: $P_{a,b}(x,y)$
+        - $P_{a,b}$ is called the joint probability mass function (distribution)
 - When the distribution is known, the subscripts of $P_{a,b}$ are often omitted
-- $P$, $P(x,y)$
-- Some people get confused when they see this in textbooks.
-- ...But subscripts are also hard to read (and annoying).
+    - $P$, $P(x,y)$
+    - Students get confused when they see this in textbooks.
+    - ...but subscripts are also annoying.
 
 ---
 
