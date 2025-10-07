@@ -58,14 +58,14 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 ### Definition of expected value
 
 - Expected value = $\text{Pr}\{$A$\}f($A$) + \text{Pr}\{$B$\}f($B$) + \cdots \text{Pr}\{$E$\}f($E$)$
-- Events A, B, C, ..., E are mutually exclusive, and the probability of any event other than A through E is 0.
-- $f$: A function that determines a numerical value, such as money, for an event.
+    - Events A, B, C, ..., E are mutually exclusive, and the probability of any event other than A through E is 0.
+        - $f$: A function that determines a numerical value, such as money, for an event.
 - Notation using random variables
-- $\langle f \rangle_P = \sum_{x=-\infty}^{x=\infty}f(x)P(x)$
-- $\langle f(x) It can also be written as \rangle_{P(x)}$
-- When it is inconvenient if the variables are unknown
-- Notations such as $\text{E}_P(f)$ are also used
-- Note that $P$ is omitted, which can be confusing.
+    - $\langle f \rangle_P = \sum_{x=-\infty}^{x=\infty}f(x)P(x)$
+        - It can also be written as $\langle f(x) \rangle_{P(x)}$ 
+            - When it is inconvenient if the variables are unknown
+    - Notations such as $\text{E}_P(f)$ are also used
+        - Note: $P$ is sometimes omitted, which can be confusing.
 
 ---
 
