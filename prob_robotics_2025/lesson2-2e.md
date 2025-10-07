@@ -138,7 +138,7 @@ there is no relationship between the values beyond the fact that they follow $P$
     - Roulette wheel operated by a dealer
     - <span style="color:red">Sensor output</span>
         - Noise factors persist for a certain period of time
-        - There is no such thing as "independent and identically distributed" (adjective)
+        - There is no such thing as "independent and identically distributed" (I.i.d. is an adjective.)
 
 ![bg right:20% 90%](./figs/iid.png)
 
