@@ -113,19 +113,18 @@ we won't consider that for now
 
 ---
 
-## Draw
+## Draw (drawing)
 
-- Randomly selecting values ​​of variables that follow $P$
+- Randomly selecting values of the variable that follow $P$
 - This is also written as $x \sim P$
-- If you draw values ​​infinitely to create a frequency distribution, the shape will match $P$
+- If you draw values infinitely to create a frequency distribution, the shape will match $P$
 - Uses
-- Simulation
-- Numerical calculation
-(Monte Carlo integration and sampling)
+    - Simulation
+    - Numerical calculation (Monte Carlo integration and sampling)
 - Similar but different: Sampling
-- Sampling: Taking a certain number of samples from a subject when calculating statistics
+    - Sampling: Taking a certain number of samples from a subject when calculating statistics
 
-![bg right:30% 90%](./figs/draw.png)
+![bg right:25% 90%](./figs/draw.png)
 
 ---
 
