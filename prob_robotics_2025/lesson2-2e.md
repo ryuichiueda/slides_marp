@@ -69,32 +69,32 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## Probability Mass Function
 
-- A function that returns the probability corresponding to a variable value
-- Notation: $P(x)$ (strictly speaking, $P$)
-- Essentially, this is a function that determines the shape of the probability distribution graph
-- <span style="color:red">This is also called a probability distribution</span>
+- A function that returns the probability corresponding to a value
+    - Notation: $P(x)$ (strictly speaking, $P$)
+    - Essentially, this is a function that determines the shape of the probability distribution graph
+    - <span style="color:red">This is also called a probability distribution</span>
 - A clearer definition than $\Pr\{$ $\}$
-- The variable is a scalar
+    - The variable is a scalar
 - Additional information
-- The symbol "$P$" is actually either $f$ or $g$, or whatever it is
-- When $x$ is a real number, it becomes a density function, but
+    - The symbol "$P$" is actually either $f$ or $g$, or whatever it is
+    - When $x$ is a real number, it becomes a density function, but
 we won't consider that for now
 
-![bg right:35% 90%](./figs/prob_dist.png)
+![bg right:15% 90%](./figs/prob_dist.png)
 
 ---
 
 ### Probability Mass Function and Addition Theorem
 
-- For random variables, different values ​​automatically result in disjoint pairs.
-- $\Pr\{a=x_1 \text{\ or\ } x_2 \} = P_a(x_1) + P_a(x_2)$
-- However, when $x_1 and x_2$ are different,
-- Example on the right: $P(0) + P(3) = 0.3$
-- $\Pr\{x_0 \le x \le x_1\} = \sum_{x=x_0}^{x_1} P(x)$
-- Example on the right
-- $\Pr\{1 \le x \le 3\} = 0.2\times 3 = 0.6$
-- $\Pr\{x \ge 3\} = 0.2 + 0.1\times 3 = 0.5$
-- What is being calculated: Area of ​​a probability distribution
+- For random variables, different values automatically result in exclusive events.
+    - $\Pr\{a=x_1 \text{\ or\ } x_2 \} = P_a(x_1) + P_a(x_2)$
+        - when $x_1$ and $x_2$ are different,
+        - Example on the right: $P(0) + P(3) = 0.3$
+    - $\Pr\{x_0 \le x \le x_1\} = \sum_{x=x_0}^{x_1} P(x)$
+        - Example on the right
+            - $\Pr\{1 \le x \le 3\} = 0.2\times 3 = 0.6$
+            - $\Pr\{x \ge 3\} = 0.2 + 0.1\times 3 = 0.5$
+    - What is being calculated: Area of a probability distribution
 
 ![bg right:25% 90%](./figs/prob_dist_calc.png)
 
