@@ -130,18 +130,17 @@ we won't consider that for now
 
 ## Independent and identically distributed (i.i.d.)
 
-- When values ​​$x_1, x_2, \dots, x_n$ are drawn from $P$,
-there is no relationship between the values ​​beyond the fact that they follow $P$
-- Notation: $x_{1:n} \overset{\text{iid}}{\sim} P$
-- Examples of distributions that do not result in independent and identical distributions
-- Right image
-- Roulette wheel operated by a dealer
-- Sensor output
-- Noise factors persist for a certain period of time
-- Outputs before and after $\rightarrow$ show the same trend
-- There is no such thing as "independent and identically distributed" (adjective)
+- When values $x_1, x_2, \dots, x_n$ are drawn from $P$,
+there is no relationship between the values beyond the fact that they follow $P$
+    - Notation: $x_{1:n} \overset{\text{iid}}{\sim} P$
+- Examples of distributions that are not independent and identical distributions
+    - Right image
+    - Roulette wheel operated by a dealer
+    - <span style="color:red">Sensor output</span>
+        - Noise factors persist for a certain period of time
+        - There is no such thing as "independent and identically distributed" (adjective)
 
-![bg right:30% 90%](./figs/iid.png)
+![bg right:20% 90%](./figs/iid.png)
 
 ---
 
