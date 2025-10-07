@@ -37,9 +37,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - Rolling a die assigns $n$ to the event of rolling $n$.
     - Example 3 (An example where this happens naturally + continuous variables)
         - Assigning $x$ to the event that a person's height is $x$ [mm].
-- Usually, a number is associated with a <span style="color:red">primitive event</span>.
-    - Prime event: Events that cannot be further divided (such as dice rolls)
-    - The domain of a random variable must encompass all elementary events.
+- Usually, a number is associated with a <span style="color:red">elementary event</span>.
+    - Elementary event: an events that cannot be further divided (such as dice rolls)
+    - The domain of a random variable must contain all elementary events.
 
 ---
 
