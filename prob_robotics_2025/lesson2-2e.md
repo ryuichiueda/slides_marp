@@ -172,22 +172,22 @@ there is no relationship between the values beyond the fact that they follow $P$
 ### Adding and Removing Variables from a Joint Distribution
 
 - Adding Variables
-- Given $P(x)$, consider a new variable $y$.
-- <span style="color:red">$P(x) = \sum_{y \in Y}P(x, y)$</span>
-- Here, $Y = \{y_0, y_1, \dots, y_n\}$
-- Example: The power circuit discussion of X and Y from the first half.
-- $\Pr\{$Robot starts up$\}$
-$=\Pr\{$Robot starts up$|$X$\}\Pr\{$X$\} + \Pr\{$Robot starts up$|$Y$\}\Pr\{$Y$\}$
+    - Add a new variable $y$ to a given $P(x)$
+        - <span style="color:red">$P(x) = \sum_{y \in Y}P(x, y)$</span>
+            - Here, $Y = \{y_0, y_1, \dots, y_n\}$
+    - Example: The power circuit discussion of X and Y from the first half.
+        - $\Pr\{$Robot starts up$\}$
+        $=\Pr\{$Robot starts up$|$X$\}\Pr\{$X$\} + \Pr\{$Robot starts up$|$Y$\}\Pr\{$Y$\}$
 - Eliminate specific variables from the joint distribution.
-- The inverse of the above equation is $\sum_{y \in Y}P(x, y) = P(x)$
-- This is called <span style="color:red">marginalization</span> and is often used in algorithm derivations.
+    - The inverse of the above equation is $\sum_{y \in Y}P(x, y) = P(x)$
+    - This is called <span style="color:red">marginalization</span> and is often used in algorithm derivations.
 
 ---
 
 ## Summary
 
 - Introduction to random variables and probability distributions
-- Mathematically easy to handle
+    - Mathematically easy to handle
 - Multivariate probability distributions
-- Joint distributions and conditional distributions
-- Familiarizing yourself with calculations such as the multiplication theorem and marginalization will enable you to read machine learning textbooks
+    - Joint distributions and conditional distributions
+    - Familiarizing yourself with calculations such as the multiplication theorem and marginalization will enable you to read machine learning textbooks
