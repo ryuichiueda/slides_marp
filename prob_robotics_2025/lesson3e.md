@@ -39,12 +39,11 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 ### The Significance of Expected Value in Everyday Life
 
-- Think numerically, not intuition, about the return you'll get from making a decision.
-- Especially for probabilistic events.
+- It enables us to think numerically, not intuition about the return you'll get from making a decision for probabilistic events.
 - (Just to be clear) Don't oversimplify things and think in terms of expected value.
-- Example
-- The expected value of a lottery ticket is half the amount you bet, but people have actually won hundreds of millions of yen.
-- If you just aim to get credits for a lecture that says "Live by maximizing expected value," you won't learn anything.
+    - Example
+        - The expected value of a lottery ticket is half the amount you bet, but people have actually won hundreds of millions of yen.
+        - If you just aim to get credits for a lecture that says "Live by maximizing expected value," you won't learn anything.
 
 ---
 
