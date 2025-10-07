@@ -161,11 +161,11 @@ there is no relationship between the values beyond the fact that they follow $P$
 ### Joint Distribution and the Multiplication Theorem
 
 - Multiplication Theorem (holds as is)
-- $P(x, y) = P(x|y)P(y)$
-- Actually, $P_{a,b}(x, y) = P_{a|b}(x|y)P_{b}(y)$
-- $P(x|y)$ is called the conditional probability mass function (distribution).
-- Independent case: $P(x, y) = P(x)P(y)$
-- For mutually independent variables $x_{1:n}$: $P(x_1,x_2,\dots,x_n) = \prod_{i=1}^nP(x_i)$
+    - $P(x, y) = P(x|y)P(y)$
+        - Actually, $P_{a,b}(x, y) = P_{a|b}(x|y)P_{b}(y)$
+        - $P(x|y)$ is called the conditional probability mass function (distribution).
+    - Independent case: $P(x, y) = P(x)P(y)$
+    - For mutually independent variables $x_{1:n}$: $P(x_1,x_2,\dots,x_n) = \prod_{i=1}^nP(x_i)$
 
 ---
 
