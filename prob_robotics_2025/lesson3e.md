@@ -43,7 +43,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 - (Just to be clear) Don't oversimplify things and think in terms of expected value.
     - Example
         - The expected value of a lottery ticket is half the amount you bet, but people have actually won hundreds of millions of yen.
-        - If you just aim to get credits for a lecture that says "Live by maximizing expected value," you won't learn anything.
+        - If you just aim to get credits for lectures with a profession "I live by maximizing expected value," you won't learn anything.
 
 ---
 
