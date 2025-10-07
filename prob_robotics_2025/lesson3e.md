@@ -50,7 +50,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 ### The significance of expected value in robotics
 
 - Appears in calculations when deciding on an action
-- Only one action can be chosen at a given time $\rightarrow$. All possibilities are aggregated into a single numerical value.
+   - Only one action can be chosen at a given time. $\rightarrow$ All possibilities are aggregated into a single numerical value.
 - Many other examples appear in the calculation process (we'll do this today).
 
 ---
