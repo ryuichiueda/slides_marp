@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: Probabilistic Robotics, Lecture 2 (Part 1) -->
 
-# Probabilistic Robotics, Part 2 (Part 1): Probability and Reliability Engineering
+# Probabilistic Robotics, Lesson 2 (1/2): Probability and Reliability Engineering
 
 Ryuichi Ueda, Chiba Institute of Technology
 
