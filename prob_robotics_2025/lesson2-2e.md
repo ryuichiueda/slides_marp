@@ -102,14 +102,12 @@ we won't consider that for now
 
 ## "Follows a probability distribution"
 
-- When a variable $x$ is distributed according to $P$,
-we say "<span style="color:red">$x$ follows $P$</span>"
-- The idea is that $P$ represents some kind of law,
-and $x$ occurs according to that law.
+- When a variable $x$ is distributed according to $P$, we say "<span style="color:red">$x$ follows $P$</span>"
+    - The idea is that $P$ represents some kind of law, and $x$ occurs according to that law.
 - Mathematical notation: <span style="color:red">$x \sim P$</span>
-- Additional notation information
-- $P(x)$ is the probability that the variable takes the value $x$
-- $P$ is the probability distribution itself
+    - Additional notation information
+        - $P(x)$ is the probability that the variable takes the value $x$
+        - $P$ is the probability distribution itself
 
 ![bg right:35% 90%](./figs/prob_dist_dice.png)
 
