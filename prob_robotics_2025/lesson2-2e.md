@@ -61,7 +61,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - <span style="color:red">Bernoulli Distribution</span> (Example: (a))
         - Only two kinds of values
     - <span style="color:red">Uniform distribution</span> (e.g., (b))
-        - The probability is constant over a range of variables
+        - The probability is constant over the range of a variable
 
 ![bg right:40% 90%](./figs/prob_dist.png)
 
