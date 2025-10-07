@@ -43,27 +43,27 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### Why consider random variables?
+### Why do we consider random variables?
 
-- To consider probability distributions (see below).
-- For other calculations (such as expected value, see next time).
+- To consider probability distributions (see later).
+- For calculations (such as expected value, see next time).
 - Handling events is tedious.
-- It's tedious to keep saying "an event $\circ\circ$ occurred."
-- It's tedious to mix elementary and non-elementary events.
+    - It's tedious to keep saying "an event $\circ\circ$ occurred."
+    - It's tedious to mix elementary and non-elementary events.
 - Note: From now on, when the distinction is unnecessary, I will simply refer to random variables as "variables."
 
 ---
 ## Probability Distribution
 
 - You can graph probability by plotting a random variable on the horizontal axis.
-- You can see the "distribution" of probability on a number line. $\Longrightarrow$<span style="color:red">Probability Distribution</span>
-- Names for typical distributions.
-- <span style="color:red">Bernoulli Distribution</span> (Example: (a))
-- Only two variables
-- <span style="color:red">Uniform distribution</span> (e.g., (b))
-- The probability is constant over a range of variables
+    - You can see the "distribution" of probability on a number line. $\Longrightarrow$<span style="color:red">Probability Distribution</span>
+- Names for typical distributions
+    - <span style="color:red">Bernoulli Distribution</span> (Example: (a))
+        - Only two kinds of values
+    - <span style="color:red">Uniform distribution</span> (e.g., (b))
+        - The probability is constant over a range of variables
 
-![bg right:50% 90%](./figs/prob_dist.png)
+![bg right:40% 90%](./figs/prob_dist.png)
 
 ---
 
