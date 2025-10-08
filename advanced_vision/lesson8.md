@@ -180,7 +180,10 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
     - クラストークンを出力として使う（数百次元のベクトル）
 - text encoder: Transformerのデコーダから交差注意機構を除いたもの
     - 入力は画像のキャプション
-    - 出力をimage encoderに合わせる
+    - <span style="color:red">出力をimage encoderに合わせる</span>
+-  数理的に重要な点
+    - <span style="color:red">マルチモーダル</span>
+        - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
 
 ---
 
@@ -203,8 +206,5 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ---
 
-### 数理的に重要な点
 
-- <span style="color:red">マルチモーダル</span>
-    - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
 
