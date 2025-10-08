@@ -181,9 +181,8 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 - text encoder: Transformerのデコーダから交差注意機構を除いたもの
     - 入力は画像のキャプション
     - <span style="color:red">出力をimage encoderに合わせる</span>
--  数理的に重要な点
-    - <span style="color:red">マルチモーダル</span>
-        - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
+-  数理的に重要な点: <span style="color:red">マルチモーダル</span>であること
+    - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
 
 ---
 
@@ -206,5 +205,4 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ---
 
-
-
+### CLIPの使い方
