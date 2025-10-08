@@ -124,7 +124,7 @@ marp: true
 
 ---
 
-## CLIP（Contrastive Language-Image Pre-training）
+## CLIP（Contrastive Language-Image Pre-training）[[Radford 2021]](https://arxiv.org/abs/2103.00020)
 
 - contrastive: 「対照的な」という意味
     - 対照学習（あとで説明）でテキストと画像を結びつけ
