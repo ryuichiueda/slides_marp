@@ -184,7 +184,7 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ---
 
-### 評価方法
+### 評価方法（対照学習）
 
 - $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
     - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
