@@ -124,13 +124,8 @@ marp: true
 
 ---
 
-### Adaptive Instance/Layer Normalization（AdaIN/AdaLN）
+## CLIP（Contrastive Language-Image Pre-training）
 
----
+- contrastive: 「対照的な」という意味
+    - 対照学習（あとで説明）でテキストと画像を結びつけ
 
-- 入力
-    - 自己注意機構への入力
-        - ノイズを載せた訓練画像（VAEで圧縮されているもの）
-    - 層正則化のあとの出力に注入（AdaLN機構）
-        - 時刻
-        - ラベル
