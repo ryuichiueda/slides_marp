@@ -200,3 +200,10 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 {e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}}
 {\sum_{j=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}}$ 
     - $T$は「温度」で学習が進むにつれて下げていく
+
+---
+
+### 数理的に重要な点
+
+- text encoderとimage encoderの出力が同じ潜在空間にプロットされる
+
