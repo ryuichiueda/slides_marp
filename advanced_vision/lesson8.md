@@ -186,7 +186,7 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ---
 
-### 評価方法（対照学習）
+### 評価方法（対照学習、contrastive learning）
 
 - $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
     - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
@@ -196,13 +196,12 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
         - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
 - ペアでない画像とキャプションのベクトルを違うものにしたい
     - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
-- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\dfrac
-{e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}}
-{\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}} -\dfrac{1}{N} \sum_{k=1}^N \ln\dfrac
-{e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}}
-{\sum_{j=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}}$ 
+- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\mu_{j,k}
+e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}
+-\dfrac{1}{N} \sum_{k=1}^N \ln\mu_{j,k}
+e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$ 
+    - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
     - $T$は「温度」で学習が進むにつれて下げていく
-
 ---
 
 ### CLIPの使い方
