@@ -205,5 +205,6 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
 
 ### 数理的に重要な点
 
-- text encoderとimage encoderの出力が同じ潜在空間にプロットされる
+- <span style="color:red">マルチモーダル</span>
+    - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
 
