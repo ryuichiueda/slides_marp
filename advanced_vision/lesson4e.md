@@ -2,7 +2,7 @@
 marp: true
 ---
 
-<!-- footer: "Advanced Vision, Part 3" -->
+<!-- footer: "Advanced Vision, Lesson 4" -->
 
 # Advanced Vision
 
