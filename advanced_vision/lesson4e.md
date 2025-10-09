@@ -154,16 +154,21 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Probabilistic Interpretation of AE and VAE Learning
 
 - Learning to compress and recover the probability distribution $p$.
-- What distribution? $\boldsymbol{x}$: A vector of data or image values.
-- The training data or image $\boldsymbol{x}$ is selected according to $p$ ($\boldsymbol{x} \sim p$).
-- $p$: Determined by human interest.
-- Example: If you want to generate pictures of cats, you will only get images of cats.
-- Encoder: Converts $p$ into a latent space distribution $q$.
-- In the case of AE, maps points from $p$ to the latent space.
-- Decoder: Learns the inverse transformation of the encoder.
-- Output distribution: $p$ (with error).
+    - What distribution? $\boldsymbol{x}$: A vector of data or image values.
+    - The training data or image $\boldsymbol{x}$ is selected according to $p$ ($\boldsymbol{x} \sim p$).
+        - $p$: Determined by human interest.
+            - Example: If you want to generate pictures of cats, you will only get images of cats.
 
-![bg right:38% 95%](./figs/autoenc_prob.png)
+![bg right:30% 95%](./figs/autoenc_prob.png)
+
+---
+
+- Encoder: Converts $p$ into a latent space distribution $q$.
+    - In the case of AE, maps points from $p$ to the latent space.
+- Decoder: Learns the inverse transformation of the encoder.
+    - Output distribution: $p$ (with error).
+
+![bg right:30% 95%](./figs/autoenc_prob.png)
 
 ---
 
@@ -171,8 +176,8 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - What is commonly called a "diffusion model" (in the context of machine learning)
 - Diffusion model (diffusion process)
-- A formulation of the process by which a collection of objects or patterns gradually disperses.
-- Example below: Repeatedly adding noise with the same Gaussian distribution to each pixel.
+    - A formulation of the process by which a collection of objects or patterns gradually disperses.
+    - Example below: Repeatedly adding noise with the same Gaussian distribution to each pixel.
 ![w:800](./figs/noising.png)
 
 <center>How does this relate to generation? </center>
