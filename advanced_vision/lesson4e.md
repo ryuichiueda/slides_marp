@@ -115,18 +115,18 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Handling the Latent Space in Variational Autoencoders
+### Latent Space Handling in Variational Autoenc.
 
 - Assumptions
-- The distribution of the latent space vector $\boldsymbol{z}$ follows a standard normal distribution.
-- Because the space is infinite, we impose constraints to prevent data clutter.
-- For the encoder input $\boldsymbol{x}$, the distribution of $P(\boldsymbol{z}|\boldsymbol{x})$ also follows a normal distribution.
-- This is an assumption for learning.
+    - The distribution of the latent space vector $\boldsymbol{z}$ follows a standard normal distribution.
+        - Because the space is infinite, we impose constraints to prevent data clutter.
+    - For the encoder input $\boldsymbol{x}$, the distribution of $P(\boldsymbol{z}|\boldsymbol{x})$ also follows a normal distribution.
+        - This is an assumption for learning.
 - When learning based on this assumption,
-- There are no gaps in $\boldsymbol{z}$, and they cluster near the origin.
-- A distribution like $P(\boldsymbol{z}|$type of object$)$ appears in the distribution of $P(\boldsymbol{z})$.
+    - There are no gaps in $\boldsymbol{z}$, and they cluster near the origin.
+    - A distribution like $P(\boldsymbol{z}|$type of object$)$ appears in the distribution of $P(\boldsymbol{z})$.
 
-![bg right:40% 100%](./figs/latent_space_dist.png)
+![bg right:30% 100%](./figs/latent_space_dist.png)
 
 ---
 
