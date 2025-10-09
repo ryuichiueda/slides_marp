@@ -183,6 +183,7 @@ $\Longrightarrow$画像から文、文から画像などの変換が可能なANN
     - <span style="color:red">出力をimage encoderに合わせる</span>
 -  数理的に重要な点: <span style="color:red">マルチモーダル</span>であること
     - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
+        - キャプション（文、句）と画像が同じ空間に配置され、似たものが近くに配置される
 
 ---
 
@@ -202,6 +203,8 @@ e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}
 e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$ 
     - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
     - $T$は「温度」で学習が進むにつれて下げていく
+
+
 ---
 
 ### CLIPの使い方
