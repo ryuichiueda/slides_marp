@@ -184,14 +184,118 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Concept of generation using a diffusion model
+### Idea of generation using a diffusion model
 
 - Image: Drawn from the distribution $P$ of images that humans perceive as meaningful
-- $\boldsymbol{x} \sim P$ ($\boldsymbol{x}$: vector of pixels)
+    - $\boldsymbol{x} \sim P$ ($\boldsymbol{x}$: vector of pixels)
 - Diffusion of $P$
-- Adding the same Gaussian-distributed noise repeatedly
-will eventually result in a Gaussian distribution $Q$.
+    - Adding the same Gaussian-distributed noise repeatedly will eventually result in a Gaussian distribution $Q$.
 <span style="color:red">$\Longrightarrow$ By inverting (de-diffusion process), $P$ can be reconstructed (how?)</span>
-<span style="color:red">By drawing noise from $\Longrightarrow Q$, we can inversely draw a new image from the diffusion $\rightarrow$$P$</span>
+<span style="color:red">$\Longrightarrow$ By drawing noise from $Q$, we can inversely draw a new image from the diffusion $P$</span>
+![w:700](./figs/ddpm.svg)
 
-![w:900](./figs/ddpm.
+---
+
+### Theoretical Backing
+
+- The diffusion process used above: Applying the same Gaussian distribution $T$ times
+- If the noise is small, repeating the same noise removal process $T$ times can restore it (rewind time)
+- Based on knowledge of non-equilibrium thermodynamics
+- DDPM
+- <span style="color:red">Training an ANN to perform "noise removal"</span>
+$\rightarrow$ Passing noise through this ANN $T$ times generates an image
+(High-quality, such as used in stable diffusion)
+- Training the noise removal process using collected images
+
+---
+
+### DDPM Training Method (Preparing Training Data)
+
+- Training Data: Various images $\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ Prepare (j=1,2,\dots,N)$
+- Define the diffusion method
+- Add noise according to a Gaussian distribution to each pixel
+- $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_i}x_{i}^{(j)}, \beta_i)$
+- $x_{i+1}^{(j)}$: Any pixel in $\boldsymbol{x}_{i+1}^{(j)}$
+- $\beta_i$: Diffusion coefficient (in the original paper, it increases linearly from $0.0001$ to $0.02$ by $T=1000$)
+- Create a program that can generate images at any stage
+- $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
+- ​​$\alpha_i = 1-\beta_i$, $\bar\alpha_i = \prod_{k=1}^i \alpha_k$
+- $\varepsilon \sim \mathcal{N}(0, 1)$
+
+![bg right:32% 100%](./figs/ddpm_training_data.png)
+
+---
+
+### DDPM Training Method (ANN)
+
+- Prepare an extended U-Net
+(We'll explain the Transformer version later.)
+- Allows input of the amount of diffusion (time) from the original image
+- Other tricks
+- Loss function and training
+- Train to output the previous step of the noisy image
+- Compare the noisy image created in the program on the previous page with the above (squared error)
+- Subtracting the values ​​of $\boldsymbol{x}_0^{(j)}$ from each other allows for comparison of noise.
+- Squared error is derived from the complex Bayesian inference formula.
+
+![bg right:28% 100%](./figs/ddpm_training.png)
+
+---
+
+- ​​[Implementation Example](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
+- Example Output
+- Figure 14 in [[Ho2020]](https://arxiv.org/abs/2006.11239)
+- https://learnopencv.com/denoising-diffusion-probabilistic-models/
+
+---
+## Applications of GANs and VAEs
+
+- CGAN
+- pix2pix
+- cVAE
+
+---
+
+### Conditional GAN ​​(CGAN) [[Mirza2014]](https://arxiv.org/abs/1411.1784)
+
+- The GAN's generative network simply outputs random data.
+- We want to control what is output.
+- Conditional GAN ​​[Figure](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
+- We use labels to tell the generative network what to create.
+- We input the label $\boldsymbol{y}$ along with the vector $\boldsymbol{z}$ that serves as the source of the data.
+- We also input $\boldsymbol{y}$ along with the output of the generative network to the discriminator network.
+- We determine whether the generated data meets the condition $\boldsymbol{y}$.
+- Supplement: Label Representation
+- The one-hot vector $\boldsymbol{y}=(0,0,\dots,1,\dots,0,0,0)$ is often used.
+- Associates the position of $1$ with a specific object.
+- For example, the first is a cat, the second is a dog, etc.
+- Commonly used in other ANNs.
+
+---
+
+### pix2pix
+
+- Can be considered a type of CGAN.
+- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004) (The structure is shown in Figure 2 in the paper.)
+- Generative network: Inputs an image instead of noise and outputs an image.
+- Let's call the input X and the output Y.
+- Discriminative network: Inputs a pair of X and Y, or a pair of X and the corresponding training image Y', and discriminates between authentic and counterfeit.
+$\rightarrow$ Learns to transform images.
+- What can it do?
+- Turning line drawings into color pictures or photographs (Figure: [[Isora 2016]](https://arxiv.org/abs/1611.07004))
+- Connecting hidden branches to leaves [[Mikami 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
+
+![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
+
+---
+
+### Conditional Variational Autoencoder<br /> (Conditional VAE, CVAE)
+
+- As with CGAN, labels are also input to the encoder and decoder.
+- The decoder can generate data based on the labels.
+- <span style="color:red">Input discriminative information is no longer needed in the latent space.</span>
+- [Example of VAE vs. CVAE distribution comparison](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
+- In the case of image generation, information about how the image is drawn is distributed in the latent space.
+$\rightarrow$ leads to more variation in the output.
+
+![bg right:35% 100%](./figs/cvae.png)
