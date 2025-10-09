@@ -24,7 +24,7 @@ marp: true
 - Vision Transformer
 - Diffusion Transformer
 - CLIP
-- unCLIP
+- unCLIP（DALL-E 2）
 
 ---
 
@@ -218,7 +218,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)
+## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL-E 2）
 
 - テキストから画像を生成
 - 基本的なアイデア
@@ -231,6 +231,9 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ### 構造
 
+- 点線の上: CLIP（学習のときに使う）
+- 点線の下: 生成の部分
+    - 「prior」とデコーダで構成
 
 <span style="font-size:70%">[画像: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
 ![](./figs/unclip.png)
