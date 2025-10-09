@@ -74,7 +74,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Compete between generative and discriminative networks
+### Competition between generator and discriminator
 
 - Loss function (details on the next page)
 - If the discriminative network is correct, the generative network's loss
