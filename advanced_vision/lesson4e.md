@@ -64,9 +64,9 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### DCGAN discriminative network
 
-- Structure: Similar to an encoder, but with a 1-bit output
-- Input: Image from the generative network or an image prepared for training
-- Output: Probability of being "real" (the image prepared for training)
+- Structure: Similar to an encoder, but with only one output
+    - Input: Image from the generator or an image prepared for training
+    - Output: Probability of being "real" (the image prepared for training)
 - Fake: Output from the generative network
 - The output is random at first
 - Guessing

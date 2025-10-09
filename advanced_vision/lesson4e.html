@@ -86,9 +86,12 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="" data-marpit-pagination-total="15" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:Advanced Vision, Part 3;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="15" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/dcgan-cc-by-4.0-by_zhang.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="6" data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:Advanced Vision, Part 3;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="15" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="dcgan-discriminative-network">DCGAN discriminative network</h3>
 <ul>
-<li>Structure: Similar to an encoder, but with a 1-bit output</li>
-<li>Input: Image from the generative network or an image prepared for training</li>
+<li>Structure: Similar to an encoder, but with only one output
+<ul>
+<li>Input: Image from the generator or an image prepared for training</li>
 <li>Output: Probability of being &quot;real&quot; (the image prepared for training)</li>
+</ul>
+</li>
 <li>Fake: Output from the generative network</li>
 <li>The output is random at first</li>
 <li>Guessing</li>
