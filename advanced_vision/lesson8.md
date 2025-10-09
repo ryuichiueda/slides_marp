@@ -207,4 +207,4 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-### CLIPの使い方
+### 学習したモデルの使い方
