@@ -67,9 +67,8 @@ Ryuichi Ueda, Chiba Institute of Technology
 - Structure: Similar to an encoder, but with only one output
     - Input: Image from the generator or an image prepared for training
     - Output: Probability of being "real" (the image prepared for training)
-- Fake: Output from the generative network
+        - Fake: Output from the generative network
 - The output is random at first
-- Guessing
 
 ![bg right:40% 100%](./figs/dcgan-cc-by-4.0-by_zhang.png)
 
