@@ -218,6 +218,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## unCLIP
+## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)
 
 - テキストから画像を生成
