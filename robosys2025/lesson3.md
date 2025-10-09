@@ -84,7 +84,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         #!/usr/bin/python3
         import sys
         
-        x = 0.0                    #xを定義して初期化
+        x = 0.0                    #xを定義して初期化                                            
         for n in sys.argv[1:]:     #スライスを使う
             x += float(n)          #+=で足し込む
         
@@ -119,7 +119,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 次のように書く
     ```python
-    if 条件1:   #条件1が成り立つと、下の処理が実行される。elif以下の処理はスキップ。
+    if 条件1:   #条件1が成り立つと、下の処理が実行される。elif以下の処理はスキップ。                 
         処理    #処理はインデントのレベルをひとつ上げて記述
         ・・・
     elif 条件2: #条件1に合わない場合は条件2が調べられる。
