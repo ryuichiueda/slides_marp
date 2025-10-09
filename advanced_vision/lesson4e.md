@@ -234,14 +234,12 @@ $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 ### DDPM Training Method (ANN)
 
 - Prepare an extended U-Net
-(We'll explain the Transformer version later.)
-- Allows input of the amount of diffusion (time) from the original image
-- Other tricks
+    - Allows input of the amount of diffusion (time) from the original image
 - Loss function and training
-- Train to output the previous step of the noisy image
-- Compare the noisy image created in the program on the previous page with the above (squared error)
-- Subtracting the values ​​of $\boldsymbol{x}_0^{(j)}$ from each other allows for comparison of noise.
-- Squared error is derived from the complex Bayesian inference formula.
+    - Train to output the previous step of the image
+    - Compare the noisy image created in the program on the previous page with the above (squared error)
+        - Subtracting the values of $\boldsymbol{x}_0^{(j)}$ from each other allows for comparison of noise.
+        - Squared error is derived from the complex Bayesian inference formula.
 
 ![bg right:28% 100%](./figs/ddpm_training.png)
 
