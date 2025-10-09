@@ -199,13 +199,13 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Theoretical Backing
 
 - The diffusion process used above: Applying the same Gaussian distribution $T$ times
-- If the noise is small, repeating the same noise removal process $T$ times can restore it (rewind time)
-- Based on knowledge of non-equilibrium thermodynamics
+    - If the noise is small, repeating the same noise removal process $T$ times can restore it (rewind time)
+        - Based on knowledge of non-equilibrium thermodynamics
 - DDPM
-- <span style="color:red">Training an ANN to perform "noise removal"</span>
+    - <span style="color:red">Training an ANN to perform "noise removal (denoising)"</span>
 $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 (High-quality, such as used in stable diffusion)
-- Training the noise removal process using collected images
+    - Training the noise removal process using collected images
 
 ---
 
