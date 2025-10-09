@@ -226,3 +226,11 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - テキストと画像が同じ潜在空間にいるので、
     潜在空間のベクトル$\rightarrow$画像でテキストも画像に変換可能
         - ただし、整った画像を出力するためにいろいろ工夫
+
+---
+
+### 構造
+
+
+<span style="font-size:70%">[画像: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
+![](./figs/unclip.png)
