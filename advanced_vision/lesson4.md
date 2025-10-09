@@ -255,6 +255,8 @@ $\rightarrow$精緻な画像
 
 ---
 
+### 例
+
 - [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
     - 出力例
         - [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
