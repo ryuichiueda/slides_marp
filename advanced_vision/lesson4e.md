@@ -90,11 +90,11 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### GAN loss function
 
-- Evaluation function for the generative network (loss function multiplied by $-1$)
+- Evaluation function for the generator (loss function multiplied by $-1$)
     - $V_D(G) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
         - $G(\boldsymbol{z}^{(i)})$: Data from the generator ($m$ pieces prepared)
         - $D(\boldsymbol{x})$: Classification result (probability) of the discriminator
-- Evaluation function for the discriminative network
+- Evaluation function for the discriminator
     - $V_G(D)= \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
         - $\boldsymbol{x}^{(i)}$: Training data (also prepare $m$ pieces)
         - Add a term for the classification performance on the training data to $V_D(G)$
@@ -103,16 +103,15 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ## Variational Autoencoder [[Kingma 2013]](https://arxiv.org/abs/1312.6114)
 
-- How to make autoencoders more expressive
+- Made autoencoders more expressive
 - The properties of the autoencoder we want to improve
-- Gaps in the distribution of vectors in the latent space
-- Between vectors corresponding to the training data
-- The gap problem
-- Passing gap vectors to the decoder results in an output that looks more like a superposition than an intermediate image
-- Example: From a vector that is halfway between a dog and a cat, we want to output an image of an animal that is halfway between them
-$\rightarrow$ This results in an unnatural result, like simply adding them and dividing by two
+    - Gaps in the distribution of vectors in the latent space
+        - between vectors corresponding to the training data
+    - The gap problem
+        - Passing gap vectors to the decoder results in an output that looks more like a superposition than an original image
+            - Example: From a vector halfway between a dog and a cat, we want to output an image of an animal that is halfway between them
 
-![bg right:30% 100%](./figs/latent_space_problem.png)
+![bg right:20% 100%](./figs/latent_space_problem.png)
 
 ---
 
