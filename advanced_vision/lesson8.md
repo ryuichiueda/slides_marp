@@ -24,7 +24,7 @@ marp: true
 - Vision Transformer
 - Diffusion Transformer
 - CLIP
-- unCLIP（DALL-E 2）
+- unCLIP（DALL・E 2）
 
 ---
 
@@ -218,7 +218,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL-E 2）
+## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL・E 2）
 
 - テキストから画像を生成
 - 基本的なアイデア
