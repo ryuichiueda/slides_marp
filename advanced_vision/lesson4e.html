@@ -48,23 +48,38 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:Advanced Vision, Part 3;--paginate:true;" data-marpit-pagination-total="15">
 <h3 id="example-of-network-architecture-dcgan">Example of Network Architecture (DCGAN)</h3>
 <ul>
-<li>Deep Convolutional GAN ​​(DCGAN) <a href="https://arxiv.org/pdf/1511.06434">[Radford 2015]</a> <a href="https://www.researchgate.net/figure/The-architecture-of-the-generator-and-the-discriminator-in-a-DCGAN-model-FSC-is-the_fig4_343597759"><span style="font-size:70%">Image: Zhang et al. CC-BY 4.0</span></a></li>
+<li>Deep Convolutional GAN ​​(DCGAN) <a href="https://arxiv.org/pdf/1511.06434">[Radford 2015]</a> <a href="https://www.researchgate.net/figure/The-architecture-of-the-generator-and-the-discriminator-in-a-DCGAN-model-FSC-is-the_fig4_343597759"><span style="font-size:70%">Image: Zhang et al. CC-BY 4.0</span></a>
+<ul>
 <li>Top: Generative network (FSC: fractionally-strided convolution)</span></li>
 <li>Bottom: Discriminative network<br />
 <img src="./figs/dcgan-cc-by-4.0-by_zhang.png" alt="" style="width:800px;" /></li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision, Part 3</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:Advanced Vision, Part 3;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="15" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/dcgan-cc-by-4.0-by_zhang.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="5" data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:Advanced Vision, Part 3;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="15" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="dcgan-generative-network">DCGAN generative network</h3>
 <ul>
-<li>Structure: Autoencoder decoder</li>
-<li>Input: Random vector (100 dimensions)</li>
-<li><span style="color:red">Equivalent to a vector in the latent space</span></li>
-<li>↑If you don't understand, go back to the previous autoencoder</li>
+<li>Structure: Autoencoder decoder
+<ul>
+<li>Input: Random vector (100 dimensions)
+<ul>
+<li><span style="color:red">Equivalent to a vector in the latent space</span>
+<ul>
+<li>↑If you don't understand, go back to Lesson 3</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Output: Image</li>
-<li>The output image is random at first</li>
+</ul>
+</li>
+<li>The output image is random at first
+<ul>
 <li>After some training, images are generated</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision, Part 3</footer>
 </section>

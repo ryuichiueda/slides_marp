@@ -42,8 +42,8 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Example of Network Architecture (DCGAN)
 
 - Deep Convolutional GAN ​​(DCGAN) [[Radford 2015]](https://arxiv.org/pdf/1511.06434) <a href="https://www.researchgate.net/figure/The-architecture-of-the-generator-and-the-discriminator-in-a-DCGAN-model-FSC-is-the_fig4_343597759"><span style="font-size:70%">Image: Zhang et al. CC-BY 4.0</span></a>
-- Top: Generative network (FSC: fractionally-strided convolution)</span>
-- Bottom: Discriminative network
+    - Top: Generative network (FSC: fractionally-strided convolution)</span>
+    - Bottom: Discriminative network
 ![w:800](./figs/dcgan-cc-by-4.0-by_zhang.png)
 
 ---
@@ -51,12 +51,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### DCGAN generative network
 
 - Structure: Autoencoder decoder
-- Input: Random vector (100 dimensions)
-- <span style="color:red">Equivalent to a vector in the latent space</span>
-- ↑If you don't understand, go back to the previous autoencoder
-- Output: Image
+    - Input: Random vector (100 dimensions)
+        - <span style="color:red">Equivalent to a vector in the latent space</span>
+            - ↑If you don't understand, go back to Lesson 3
+    - Output: Image
 - The output image is random at first
-- After some training, images are generated
+    - After some training, images are generated
 
 ![bg right:40% 100%](./figs/dcgan-cc-by-4.0-by_zhang.png)
 
