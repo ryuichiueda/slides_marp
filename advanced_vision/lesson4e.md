@@ -142,10 +142,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Structure of Variational Autoencoder
 
 - Right
-- Add a noise layer after the encoder.
-- Add a term to the loss function to restrict $P(\boldsymbol{z})$ to a standard normal distribution.
-- Simple to implement, but based on the theory of Bayesian inference.
-- Partially explained in a lecture on probabilistic robotics.
+    - Add a noise layer after the encoder.
+    - Add a term to the loss function to restrict $P(\boldsymbol{z})$ to a standard normal distribution.
+    - Simple to implement, but based on the theory of Bayesian inference.
+        - Partially explained in a lecture on probabilistic robotics.
 
 ![bg right:35% 100%](./figs/vae.png)
 
