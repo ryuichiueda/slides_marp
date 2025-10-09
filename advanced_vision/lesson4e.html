@@ -103,16 +103,21 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="" data-marpit-pagination-total="15" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:Advanced Vision, Part 3;--paginate:true;" data-marpit-pagination-total="15">
 <h3 id="competition-between-generator-and-discriminator">Competition between generator and discriminator</h3>
 <ul>
-<li>Loss function (details on the next page)</li>
-<li>If the discriminative network is correct, the generative network's loss</li>
-<li>If the discriminative network is incorrect, the discriminative network's loss</li>
-<li>Training progress</li>
-<li>Generative network: Generates a pattern that reduces the probability of the discriminative network being affected by a noisy image <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container><br />
-<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> Detailed image</li>
-<li>Discriminative network: Attempts to achieve discrimination performance that is not affected by the pattern</li>
+<li>Loss function (details on the next page)
+<ul>
+<li>If the discriminator is correct, the generator's loss</li>
+<li>If the discriminator is incorrect, the discriminator's loss</li>
+</ul>
+</li>
+<li>Training progression
+<ul>
+<li>Generatior: Generates a pattern that reduces the probability of the discriminator's correct answer <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> Detailed image</li>
+<li>Discriminator: Attempts to achieve discrimination performance that is not affected by the pattern</li>
 <li><a href="https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5">Learning progress</a></li>
 </ul>
-<center>The generative network will now be able to output images. <a href="https://arxiv.org/pdf/1511.06434">Example</a></center>
+</li>
+</ul>
+<center>The generator is able to output images. <a href="https://arxiv.org/pdf/1511.06434">Example</a></center>
 <footer>Advanced Vision, Part 3</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="Advanced Vision, Part 3" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:Advanced Vision, Part 3;--paginate:true;" data-marpit-pagination-total="15">

@@ -77,15 +77,14 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Competition between generator and discriminator
 
 - Loss function (details on the next page)
-- If the discriminative network is correct, the generative network's loss
-- If the discriminative network is incorrect, the discriminative network's loss
-- Training progress
-- Generative network: Generates a pattern that reduces the probability of the discriminative network being affected by a noisy image $\rightarrow$
-$\rightarrow$ Detailed image
-- Discriminative network: Attempts to achieve discrimination performance that is not affected by the pattern
-- [Learning progress](https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5)
+    - If the discriminator is correct, the generator's loss
+    - If the discriminator is incorrect, the discriminator's loss
+- Training progression
+    - Generatior: Generates a pattern that reduces the probability of the discriminator's correct answer $\rightarrow$ Detailed image
+   - Discriminator: Attempts to achieve discrimination performance that is not affected by the pattern
+   - [Learning progress](https://qiita.com/miya_ppp/items/f1348e9e73dd25ca6fb5)
 
-<center>The generative network will now be able to output images. <a href="https://arxiv.org/pdf/1511.06434">Example</a></center>
+<center>The generator is able to output images. <a href="https://arxiv.org/pdf/1511.06434">Example</a></center>
 
 ---
 
