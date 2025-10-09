@@ -24,6 +24,7 @@ marp: true
 - Vision Transformer
 - Diffusion Transformer
 - CLIP
+- unCLIP
 
 ---
 
@@ -205,7 +206,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
     - $T$は「温度」で学習が進むにつれて下げていく
 
-
 ---
 
 ### 学習したモデルの使い方
@@ -215,3 +215,8 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 「a photo of <ラベル>」という句を$N$通り作って、それぞれをtext encoderに通して特徴ベクトル$T_{1:N}$を得る
     - 画像をimage encoderに通して特徴ベクトル$I$を得る
     - $I$と$T_i (i=1,2,\dots,N)$それぞれを比較し、最もコサイン類似度が高い$T_i$を選択
+
+---
+
+## unCLIP
+
