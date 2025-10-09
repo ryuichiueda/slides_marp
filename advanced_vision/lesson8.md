@@ -221,3 +221,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)
 
 - テキストから画像を生成
+    - 基本的なアイデア
+        - CLIPを使う
+        - テキストと画像が同じ潜在空間にいるので、潜在空間のベクトル$\rightarrow$画像でテキストも画像に変換可能
