@@ -211,16 +211,21 @@ $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 
 ### DDPM Training Method (Preparing Training Data)
 
-- Training Data: Various images $\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ Prepare (j=1,2,\dots,N)$
+- Training Data: Various images $\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$(j=1,2,\dots,N)$
 - Define the diffusion method
-- Add noise according to a Gaussian distribution to each pixel
-- $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_i}x_{i}^{(j)}, \beta_i)$
-- $x_{i+1}^{(j)}$: Any pixel in $\boldsymbol{x}_{i+1}^{(j)}$
-- $\beta_i$: Diffusion coefficient (in the original paper, it increases linearly from $0.0001$ to $0.02$ by $T=1000$)
+    - Add noise according to a Gaussian distribution to each pixel
+        - $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_i}x_{i}^{(j)}, \beta_i)$
+            - $x_{i+1}^{(j)}$: Any pixel in $\boldsymbol{x}_{i+1}^{(j)}$
+            - $\beta_i$: Diffusion coefficient (in the original paper, it increases linearly from $0.0001$ to $0.02$ by $T=1000$)
+
+![bg right:32% 100%](./figs/ddpm_training_data.png)
+
+---
+
 - Create a program that can generate images at any stage
-- $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
-- ​​$\alpha_i = 1-\beta_i$, $\bar\alpha_i = \prod_{k=1}^i \alpha_k$
-- $\varepsilon \sim \mathcal{N}(0, 1)$
+    - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
+        - $\alpha_i = 1-\beta_i$, $\bar\alpha_i = \prod_{k=1}^i \alpha_k$
+        - $\varepsilon \sim \mathcal{N}(0, 1)$
 
 ![bg right:32% 100%](./figs/ddpm_training_data.png)
 
