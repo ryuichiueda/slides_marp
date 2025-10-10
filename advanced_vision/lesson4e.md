@@ -312,5 +312,5 @@ $\rightarrow$ leads to variation in the output.
     - Generative adversarial networks (GANs)
     - Variational autoencoders and diffusion models$\rightarrow$ using probability distributions
 - Applications of GANs and VAEs
-    - Labeling
+    - Control of outputs using labeling
     - Image-to-image translation
