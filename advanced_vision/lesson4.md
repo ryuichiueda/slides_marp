@@ -23,6 +23,7 @@ marp: true
 
 - 敵対的生成ネットワーク（GAN）
 - 変分オートエンコーダ（VAE）
+- 拡散モデル（DDPM）
 - GAN、VAEの応用
 
 ---
@@ -316,3 +317,11 @@ $\rightarrow$精緻な画像
     $\rightarrow$より出力にバリエーション
 
 ![bg right:35% 100%](./figs/cvae.png)
+
+---
+
+## まとめ
+
+- 敵対的生成ネットワーク（GAN）
+- 変分オートエンコーダ（VAE）
+- GAN、VAEの応用
