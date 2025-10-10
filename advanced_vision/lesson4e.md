@@ -281,13 +281,13 @@ $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 ### pix2pix
 
 - Can be considered a type of CGAN
-- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004) (The structure is shown in Figure 2 of the paper)
-- Generative network: Inputs an image instead of noise as input and outputs an image.
-- Let's say the input is X and the output is Y.
-- Discriminative network: Inputs a pair of X and Y, or a pair of X and the corresponding training image Y', and discriminates between authentic and counterfeit. $\rightarrow$ Learns to transform images.
+- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004) (The structure is shown in Figure 2)
+    - Generator: Inputs an image instead of noise as input and outputs an image.
+        - Let's say the input is X and the output is Y.
+    - Discriminator: Inputs a pair of X and Y, or a pair of X and the corresponding training image Y', and discriminates whether fake or not. $\rightarrow$ Learns to transform images.
 - What it can do
-- Turns line drawings into color paintings or photographs (Figure: [[Isora 2016]](https://arxiv.org/abs/1611.07004))
-- Connecting hidden branches to leaves [[Mikami 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
+    - Turns line drawings into color paintings or photographs (Figure: [[Isora 2016]](https://arxiv.org/abs/1611.07004))
+    - Connecting hidden branches to leaves [[三上 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
 
 ![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
 
