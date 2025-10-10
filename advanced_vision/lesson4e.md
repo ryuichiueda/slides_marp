@@ -309,8 +309,8 @@ $\rightarrow$ leads to variation in the output.
 ## Summary
 
 - Various generation methods
-- Generative adversarial networks (GANs)
-- Using variational autoencoders and diffusion models$\rightarrow$ probability distributions
+    - Generative adversarial networks (GANs)
+    - Variational autoencoders and diffusion models$\rightarrow$ using probability distributions
 - Applications of GANs and VAEs
-- Labeling
-- Image-to-image translation
+    - Labeling
+    - Image-to-image translation
