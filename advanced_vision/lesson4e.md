@@ -296,11 +296,10 @@ $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 ### Conditional Variational Autoencoder<br /> (Conditional VAE, CVAE)
 
 - As with CGAN, labels are also input to the encoder and decoder.
-- The decoder can generate data based on the labels.
+    - The decoder can generate data based on the labels.
 - <span style="color:red">Input discriminative information is no longer needed in the latent space.</span>
-- [Example of a comparison of VAE and CVAE distributions](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
-- In the case of image generation, information about how an image is drawn is distributed within a latent space.
-
+    - [Example of a comparison of VAE and CVAE distributions](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
+    - In the case of image generation, information about how an image is drawn is distributed within a latent space.
 $\rightarrow$ leads to variation in the output.
 
 ![bg right:35% 100%](./figs/cvae.png)

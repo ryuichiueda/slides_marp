@@ -461,13 +461,19 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision, Lesson 4" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="" data-marpit-pagination-total="26" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision, Lesson 4" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:Advanced Vision, Lesson 4;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="26" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/cvae.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="25" data-footer="Advanced Vision, Lesson 4" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:Advanced Vision, Lesson 4;--paginate:true;--marpit-advanced-background-split:35%;" data-marpit-pagination-total="26" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="conditional-variational-autoencoderbr--conditional-vae-cvae">Conditional Variational Autoencoder<br /> (Conditional VAE, CVAE)</h3>
 <ul>
-<li>As with CGAN, labels are also input to the encoder and decoder.</li>
+<li>As with CGAN, labels are also input to the encoder and decoder.
+<ul>
 <li>The decoder can generate data based on the labels.</li>
-<li><span style="color:red">Input discriminative information is no longer needed in the latent space.</span></li>
-<li><a href="https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/">Example of a comparison of VAE and CVAE distributions</a></li>
-<li>In the case of image generation, information about how an image is drawn is distributed within a latent space.</li>
 </ul>
-<p><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> leads to variation in the output.</p>
+</li>
+<li><span style="color:red">Input discriminative information is no longer needed in the latent space.</span>
+<ul>
+<li><a href="https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/">Example of a comparison of VAE and CVAE distributions</a></li>
+<li>In the case of image generation, information about how an image is drawn is distributed within a latent space.<br />
+<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> leads to variation in the output.</li>
+</ul>
+</li>
+</ul>
 <footer>Advanced Vision, Lesson 4</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision, Lesson 4" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="" data-marpit-pagination-total="26" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer="Advanced Vision, Lesson 4" data-paginate="true" lang="ja-JP" data-marpit-pagination="26" style="--footer:Advanced Vision, Lesson 4;--paginate:true;" data-marpit-pagination-total="26">
