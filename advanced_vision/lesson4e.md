@@ -245,13 +245,15 @@ $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 
 ---
 
-- ​​[Implementation Example](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
+### Example
+
+- [Implementation Example](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
 - Example Output
 - Figure 14 in [[Ho2020]](https://arxiv.org/abs/2006.11239)
 - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
 ---
-## Applications of GANs and VAEs
+## Applications of GAN and VAE
 
 - CGAN
 - pix2pix
@@ -259,33 +261,32 @@ $\rightarrow$ Passing noise through this ANN $T$ times generates an image
 
 ---
 
-### Conditional GAN ​​(CGAN) [[Mirza2014]](https://arxiv.org/abs/1411.1784)
+### Conditional GAN (CGAN) [[Mirza2014]](https://arxiv.org/abs/1411.1784)
 
-- The GAN's generative network simply outputs random data.
-- We want to control what is output.
-- Conditional GAN ​​[Figure](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
-- We use labels to tell the generative network what to create.
-- We input the label $\boldsymbol{y}$ along with the vector $\boldsymbol{z}$ that serves as the source of the data.
-- We also input $\boldsymbol{y}$ along with the output of the generative network to the discriminator network.
-- We determine whether the generated data meets the condition $\boldsymbol{y}$.
+- GAN generative networks simply output random data
+    - We want to control what gets output.
+- Conditional GAN [Figure](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
+    - Tell the generative network what to create using labels.
+        - Input the label $\boldsymbol{y}$ along with the source vector $\boldsymbol{z}$.
+    - Input $\boldsymbol{y}$ along with the output of the generator to the discriminator.
+        - Determine whether the generated data meets the condition $\boldsymbol{y}$.
 - Supplement: Label Representation
-- The one-hot vector $\boldsymbol{y}=(0,0,\dots,1,\dots,0,0,0)$ is often used.
-- Associates the position of $1$ with a specific object.
-- For example, the first is a cat, the second is a dog, etc.
-- Commonly used in other ANNs.
+    - A one-hot vector such as $\boldsymbol{y}=(0,0,\dots,1,\dots,0,0,0)$ is often used.
+        - Associate the location of $1$ with a specific object.
+            - Example: 1 is a cat, 2 is a dog, etc.
+    - Commonly used in other ANNs.
 
 ---
 
 ### pix2pix
 
-- Can be considered a type of CGAN.
-- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004) (The structure is shown in Figure 2 in the paper.)
-- Generative network: Inputs an image instead of noise and outputs an image.
-- Let's call the input X and the output Y.
-- Discriminative network: Inputs a pair of X and Y, or a pair of X and the corresponding training image Y', and discriminates between authentic and counterfeit.
-$\rightarrow$ Learns to transform images.
-- What can it do?
-- Turning line drawings into color pictures or photographs (Figure: [[Isora 2016]](https://arxiv.org/abs/1611.07004))
+- Can be considered a type of CGAN
+- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004) (The structure is shown in Figure 2 of the paper)
+- Generative network: Inputs an image instead of noise as input and outputs an image.
+- Let's say the input is X and the output is Y.
+- Discriminative network: Inputs a pair of X and Y, or a pair of X and the corresponding training image Y', and discriminates between authentic and counterfeit. $\rightarrow$ Learns to transform images.
+- What it can do
+- Turns line drawings into color paintings or photographs (Figure: [[Isora 2016]](https://arxiv.org/abs/1611.07004))
 - Connecting hidden branches to leaves [[Mikami 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
 
 ![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
@@ -297,8 +298,20 @@ $\rightarrow$ Learns to transform images.
 - As with CGAN, labels are also input to the encoder and decoder.
 - The decoder can generate data based on the labels.
 - <span style="color:red">Input discriminative information is no longer needed in the latent space.</span>
-- [Example of VAE vs. CVAE distribution comparison](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
-- In the case of image generation, information about how the image is drawn is distributed in the latent space.
-$\rightarrow$ leads to more variation in the output.
+- [Example of a comparison of VAE and CVAE distributions](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
+- In the case of image generation, information about how an image is drawn is distributed within a latent space.
+
+$\rightarrow$ leads to variation in the output.
 
 ![bg right:35% 100%](./figs/cvae.png)
+
+---
+
+## Summary
+
+- Various generation methods
+- Generative adversarial networks (GANs)
+- Using variational autoencoders and diffusion models$\rightarrow$ probability distributions
+- Applications of GANs and VAEs
+- Labeling
+- Image-to-image translation
