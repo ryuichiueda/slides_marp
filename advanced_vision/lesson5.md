@@ -30,10 +30,12 @@ marp: true
 ## PixelCNN[[Oord 2016]](https://arxiv.org/abs/1601.06759)
 
 - 途中までの画像から次のピクセルを推定
-    - 例: 上記論文の図1（ただしPixelRNNの出力）
+    - 利用例: 上記論文の図1（ただしPixelRNNの出力）
 - 自己回帰モデルをCNNで実現
     - 自己回帰モデル: 株価の予測などに使われてきたもの
         - いままでの時系列データ$y=f(t)$から次の時刻の値を予測
+
+![bg right:25% 90%](./figs/autoregression.svg)
 
 ---
 
