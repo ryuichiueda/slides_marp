@@ -50,6 +50,8 @@ marp: true
     - 最初の畳み込み層のフィルタに上のようなマスク
     - あとの複数の畳み込み層（残差接続）のフィルタで下のようなマスク
 
+![bg right:10% 90%](./figs/pixel_cnn_filters.svg)
+
 ---
 
 ### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
