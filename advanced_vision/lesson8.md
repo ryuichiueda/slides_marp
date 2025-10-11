@@ -132,7 +132,7 @@ marp: true
 - Transformerに、文章の続きとして画像を考えさせる
 - 使うもの
     - Transformer（デコーダ）
-    - VQ-VAE（ベクトル量子化変分オートエンコーダ）
+    - VQ-VAE
 
 ---
 
