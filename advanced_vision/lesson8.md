@@ -132,7 +132,7 @@ marp: true
 - Transformerに、文章の続きとして画像を考えさせる
 - 使うもの
     - Transformer（デコーダ）
-    - VQ-VAE
+    - VQ-VAE（dVAE）
 
 ---
 
@@ -140,6 +140,7 @@ marp: true
 
 - ステップ1: 集めてきた画像を使ってVQ-VAEに学習させる
     - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
+- ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
 
 
 ---
