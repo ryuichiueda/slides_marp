@@ -129,6 +129,7 @@ marp: true
 ## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
 
 - 句や文から画像を生成
+- 構造
 
 ---
 
