@@ -129,7 +129,17 @@ marp: true
 ## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
 
 - 句や文から画像を生成
-- Transformer（デコーダ）に、文章の続きとして画像を考えさせる
+- Transformerに、文章の続きとして画像を考えさせる
+- 使うもの
+    - Transformer（デコーダ）
+    - VQ-VAE（ベクトル量子化変分オートエンコーダ）
+
+---
+
+### DALL·Eの学習
+
+- 1. VQ-VAEの学習
+
 
 ---
 
