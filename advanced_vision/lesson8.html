@@ -380,11 +380,21 @@
 <footer>アドバンストビジョン第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="アドバンストビジョン第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="19" style="--footer:アドバンストビジョン第8回;--paginate:true;" data-marpit-pagination-total="19">
-<h3 id="%E4%BA%8B%E5%89%8D%E3%83%A2%E3%83%87%E3%83%AB">事前モデル</h3>
+<h3 id="%E4%BA%8B%E5%89%8D%E3%83%A2%E3%83%87%E3%83%AB%E3%81%A8%E3%83%87%E3%82%B3%E3%83%BC%E3%83%80">事前モデルとデコーダ</h3>
+<ul>
+<li>事前モデル
 <ul>
 <li>テキストのベクトル（潜在空間にある）を拡散モデルに使うベクトルに
 <ul>
 <li>テキストのベクトルはCLIPの潜在空間（テキストと画像が混在）にあるので、そのまま画像が作れそうだが、それだと性能が出ない（らしい）</li>
+</ul>
+</li>
+<li>構成: 拡散モデル+Transformerデコーダ</li>
+</ul>
+</li>
+<li>デコーダ
+<ul>
+<li>事前モデルの出力と、テキスト</li>
 </ul>
 </li>
 </ul>
