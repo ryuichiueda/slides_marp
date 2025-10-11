@@ -23,7 +23,22 @@ marp: true
 ## ・・・の前に追加
 
 - PixelCNN 
-- 
+- VQ-VAE
+
+---
+
+## PixelCNN[[Oord 2016]](https://arxiv.org/abs/1601.06759)
+
+---
+
+### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
+
+- 構造
+    - VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
+- 潜在空間: 符号列の空間
+    - 潜在ベクトルの分布: 
+- コードブックに相当するものはCNNで作成
+
 
 ---
 
@@ -42,16 +57,6 @@ marp: true
 <span style="font-size:70%">図: [上田博論2007]から</span>
 
 ![bg right:40% 100%](./figs/vq_map2.svg)
-
----
-
-### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
-
-- 構造
-    - VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
-- 潜在空間: 符号列の空間
-    - 潜在ベクトルの分布: 
-- コードブックに相当するものはCNNで作成
 
 
 ---
