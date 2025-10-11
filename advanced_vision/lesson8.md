@@ -139,6 +139,7 @@ marp: true
 ### DALL·Eの学習
 
 - ステップ1: 集めてきた画像を使ってVQ-VAEに学習させる
+    - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
 
 
 ---
