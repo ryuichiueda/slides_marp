@@ -29,6 +29,10 @@ marp: true
 
 ## PixelCNN[[Oord 2016]](https://arxiv.org/abs/1601.06759)
 
+- 途中までの画像から次のピクセルを推定
+    - 例: 上記論文の図1（ただしPixelRNNの出力）
+- 自己回帰型の生成モデル
+
 ---
 
 ### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
