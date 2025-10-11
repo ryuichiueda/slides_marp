@@ -235,7 +235,14 @@ https://www.youtube.com/watch?v=qTgPSKKjfVg&t=104s
 
 - 点線の上: CLIP（学習のときに使う）
 - 点線の下: 生成の部分
-    - 「prior」とデコーダで構成
+    - 事前モデル（prior）とデコーダで構成
 
 <span style="font-size:70%">[画像: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
 ![](./figs/unclip.png)
+
+---
+
+### 事前モデル
+
+- テキストのベクトル（潜在空間にある）を拡散モデルに使うベクトルに
+    - テキストのベクトルはCLIPの潜在空間（テキストと画像が混在）にあるので、そのまま画像が作れそうだが、それだと性能が出ない（らしい）
