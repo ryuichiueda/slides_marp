@@ -23,6 +23,7 @@ marp: true
 
 - Vision Transformer
 - Diffusion Transformer
+- DALL·E
 - CLIP
 - unCLIP（DALL・E 2）
 
@@ -122,6 +123,12 @@ marp: true
         - $\lambda = 0$: 画像をランダムに生成
         - $\lambda = 1$: ラベルに対応する画像を生成
         - $0 < \lambda < 1$: 中間的な画像を生成
+
+---
+
+## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
+
+- 句や文から画像を生成
 
 ---
 
@@ -249,5 +256,9 @@ https://www.youtube.com/watch?v=qTgPSKKjfVg&t=104s
         - 画像の種: 拡散モデルに使うベクトル
         - テキストのベクトルはCLIPの潜在空間（テキストと画像が混在）にあるので、そのまま画像が作れそうだが、それだと性能が出ない（らしい）
     - 構成: 拡散モデル+Transformerデコーダ
+        - 入力はテキストのベクトルだがテキストも入力
 - デコーダ
     - 事前モデルの出力と、テキスト
+    - 構成: 拡散モデル
+
+<center>テキストを何度も入力</center>
