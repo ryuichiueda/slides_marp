@@ -129,6 +129,7 @@ marp: true
 ## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
 
 - 句や文から画像を生成
+    - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
 - Transformerに、文章の続きとして画像を考えさせる
 - 使うもの
     - Transformer（デコーダ）
