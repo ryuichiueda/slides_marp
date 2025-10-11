@@ -136,7 +136,6 @@ marp: true
 
 ---
 
-
 ### ベクトル量子化
 
 - 画像をパッチワーク状に区切って似たものをまとめて圧縮する方法
@@ -152,6 +151,12 @@ marp: true
 <span style="font-size:70%">図: [上田博論2007]から</span>
 
 ![bg right:40% 100%](./figs/vq_map2.svg)
+
+---
+
+### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
+
+- 潜在空間: 符号列の空間
 
 ---
 
