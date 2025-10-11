@@ -133,8 +133,8 @@ marp: true
 - Transformerに、文章の続きとして画像を考えさせる
 - 使うもの
     - Transformer（デコーダ）
-    - discrete VAE（dVAE）: [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#5)の亜種
-        - コードブックのベクトルを
+    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#5)の亜種
+        - discrete VAE（dVAE）と呼んでいる（言葉の意味を考えるとVQ-VAEがdiscrete VAEの一種？）
 
 ---
 
