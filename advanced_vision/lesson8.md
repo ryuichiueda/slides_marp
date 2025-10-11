@@ -157,6 +157,7 @@ marp: true
 ### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
 
 - 潜在空間: 符号列の空間
+    - コードブックに相当するものはCNNで作成
 
 ---
 
