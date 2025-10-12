@@ -58,10 +58,12 @@ marp: true
 
 ---
 
-- 潜在空間の構成
-    - ベクトルがone-hot-vectorに
-        - $\boldsymbol{z} = (0 \ 0 \ 0 \dots 1 \dots 0)$
-            - $k$番目の要素が1に
+### 潜在空間の構成
+
+
+- 潜在空間のベクトル$\boldsymbol{z}$がone-hot-vectorに
+    - $\boldsymbol{z} = (0 \ 0 \ 0 \dots 1 \dots 0)$
+       - $k$番目の要素が1に
 
 
 
