@@ -33,16 +33,27 @@ marp: true
 
 現在の画像生成技術に使用される
 
-- 動機: VAEの出力はぼやけやすい
-  $\rightarrow$そもそも1つのガウス分布にするのが悪いのではないか？
+- 動機: VAEの出力はぼやけやすい$\rightarrow$そもそも1つのガウス分布にするのが悪いのではないか？
 - <span style="color:red">混合分布</span>を使う
     - 分布が$K$個ある（$p_{1:K}$）
-    - 入力は$K$個ある分布のどれかから生成されたもの
-- 上記の数式上の表現
-    - $k \sim \text{Cat}(\textbf{w}_\text{cat})$
-    - $\boldsymbol{x} \sim p_k$
-        - $\text{Cat}$: カテゴリカル分布（ベルヌーイ分布の多値版）
+        - 右図の場合: 5個の分布
+    - 入力は$K$個ある分布のどれかから発生
 
+
+![bg right:30% 90%](./figs/d_vae.svg)
+
+---
+
+### 数理モデル
+
+- 画像$\boldsymbol{x}$が訓練データに選ばれるという事象の数式上の表現
+    - $k \sim \text{Cat}(\textbf{w}_\text{cat})$
+        - $\text{Cat}$: カテゴリカル分布
+            - ベルヌーイ分布の多値版
+            - 要は出目の確率が全部違うサイコロ
+    - $\boldsymbol{x} \sim p_k$
+
+![bg right:30% 90%](./figs/d_vae.svg)
 
 
 ---

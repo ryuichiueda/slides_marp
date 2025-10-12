@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.72 200.73">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #1f17ff;
+      }
+
+      .cls-3 {
+        stroke: #000;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-8, .cls-9, .cls-10, .cls-11 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-2, .cls-8, .cls-9, .cls-11 {
+        font-size: 12px;
+      }
+
+      .cls-12, .cls-9 {
+        fill: red;
+      }
+
+      .cls-8, .cls-13 {
+        fill: #cf00e7;
+      }
+
+      .cls-10 {
+        font-size: 14px;
+      }
+
+      .cls-14 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-4 {
+        stroke: #e60012;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-width: .5px;
+      }
+
+      .cls-16 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-5 {
+        stroke: blue;
+      }
+
+      .cls-6 {
+        stroke: #f0f;
+      }
+
+      .cls-7 {
+        stroke: #231815;
+      }
+    </style>
+  </defs>
+  <text class="cls-10" transform="translate(28.96 184.2)"><tspan x="0" y="0">画像の画素の超多次元分布</tspan></text>
+  <g>
+    <line class="cls-3" x1="0" y1="188.34" x2="249.55" y2="188.34"/>
+    <polygon points="248.09 193.33 256.72 188.34 248.09 183.36 248.09 193.33"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="15.64" y1="200.73" x2="15.64" y2="57.36"/>
+    <polygon points="20.63 58.82 15.64 50.18 10.66 58.82 20.63 58.82"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="13.78" y1="194.78" x2="43.19" y2="72.04"/>
+    <polygon points="47.7 74.62 44.87 65.06 38.01 72.3 47.7 74.62"/>
+  </g>
+  <circle class="cls-1" cx="140.61" cy="65.12" r="1.48"/>
+  <text class="cls-2" transform="translate(153.54 79.02)"><tspan x="0" y="0">犬の画像の分布</tspan></text>
+  <circle class="cls-1" cx="150.83" cy="63.64" r="1.48"/>
+  <circle class="cls-1" cx="149.35" cy="54.94" r="1.48"/>
+  <circle class="cls-1" cx="136.23" cy="56.42" r="1.48"/>
+  <circle class="cls-12" cx="77.77" cy="38.66" r="1.48"/>
+  <text class="cls-9" transform="translate(49.87 25.1)"><tspan x="0" y="0">猫の画像の分布</tspan></text>
+  <circle class="cls-12" cx="67.46" cy="37.18" r="1.48"/>
+  <circle class="cls-12" cx="79.25" cy="32.06" r="1.48"/>
+  <circle class="cls-12" cx="91.04" cy="37.13" r="1.48"/>
+  <circle class="cls-12" cx="81.84" cy="42.86" r="1.48"/>
+  <circle class="cls-13" cx="185.16" cy="24.12" r="1.48"/>
+  <text class="cls-8" transform="translate(157.26 10.56)"><tspan x="0" y="0">狸の画像の分布</tspan></text>
+  <circle class="cls-13" cx="174.85" cy="22.64" r="1.48"/>
+  <circle class="cls-13" cx="186.64" cy="17.52" r="1.48"/>
+  <circle class="cls-13" cx="198.44" cy="22.6" r="1.48"/>
+  <circle class="cls-13" cx="189.24" cy="28.32" r="1.48"/>
+  <polygon class="cls-3" points="103.36 126.24 101.78 126.58 100.69 125.38 101.19 123.84 102.77 123.5 103.86 124.7 103.36 126.24"/>
+  <text class="cls-11" transform="translate(87.02 109.83)"><tspan class="cls-17" x="0" y="0">ゴ</tspan><tspan class="cls-16" x="11.04" y="0">ッ</tspan><tspan x="21.96" y="0">ホの絵の分布</tspan></text>
+  <polygon class="cls-3" points="108.98 122.44 107.4 122.78 106.31 121.58 106.81 120.04 108.39 119.7 109.48 120.9 108.98 122.44"/>
+  <polygon class="cls-3" points="101.78 120.12 100.2 120.46 99.11 119.26 99.61 117.72 101.19 117.38 102.27 118.58 101.78 120.12"/>
+  <polygon class="cls-3" points="163.08 141.37 161.5 141.71 160.42 140.51 160.91 138.97 162.5 138.63 163.58 139.83 163.08 141.37"/>
+  <text class="cls-11" transform="translate(146 156.42)"><tspan class="cls-14" x="0" y="0">ム</tspan><tspan class="cls-15" x="11.16" y="0">ン</tspan><tspan class="cls-17" x="21.84" y="0">ク</tspan><tspan x="32.88" y="0">の絵の分布</tspan></text>
+  <polygon class="cls-3" points="170.29 132.75 168.71 133.09 167.62 131.89 168.12 130.35 169.7 130.01 170.79 131.21 170.29 132.75"/>
+  <polygon class="cls-3" points="161.5 135.24 159.92 135.58 158.84 134.39 159.33 132.85 160.91 132.5 162 133.7 161.5 135.24"/>
+  <ellipse class="cls-7" cx="103.36" cy="121.24" rx="12.79" ry="8.18" transform="translate(-51.73 84.79) rotate(-36.33)"/>
+  <ellipse class="cls-4" cx="80.66" cy="37.6" rx="8.18" ry="21.36" transform="translate(38.74 116.1) rotate(-86.89)"/>
+  <ellipse class="cls-6" cx="186.77" cy="23.26" rx="18.03" ry="10.28"/>
+  <ellipse class="cls-5" cx="145.05" cy="58.65" rx="12.49" ry="11.53" transform="translate(-6.55 97.33) rotate(-36.33)"/>
+  <ellipse class="cls-7" cx="164.94" cy="135.5" rx="12.79" ry="8.18" transform="translate(-48.21 124.04) rotate(-36.33)"/>
+</svg>
