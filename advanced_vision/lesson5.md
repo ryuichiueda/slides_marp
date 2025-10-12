@@ -22,8 +22,25 @@ marp: true
 
 ## ・・・の前に追加
 
+- discrete VAE
 - PixelCNN 
 - VQ-VAE
+
+
+---
+
+## discrete VAE[[Rolfe 2017]](https://arxiv.org/abs/1609.02200)
+
+- 動機: VAEの出力はぼやけやすい$\rightarrow$そもそも1つのガウス分布にするのが悪いのではないか？
+- <span style="color:red">混合分布</span>を使う
+    - 分布が$K$個ある（$p_{1:K}$）
+    - 入力は$K$個ある分布のどれかから生成されたもの
+- 上記の数式上の表現
+    - $k \sim \text{Cat}(\textbf{w}_\text{cat})$
+    - $\boldsymbol{x} \sim p_k$
+        - $\text{Cat}$: カテゴリカル分布（ベルヌーイ分布の多値版）
+
+
 
 ---
 
