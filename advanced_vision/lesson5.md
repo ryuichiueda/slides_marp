@@ -31,7 +31,10 @@ marp: true
 
 ## discrete VAE[[Rolfe 2017]](https://arxiv.org/abs/1609.02200)
 
-- 動機: VAEの出力はぼやけやすい$\rightarrow$そもそも1つのガウス分布にするのが悪いのではないか？
+現在の画像生成技術に使用される
+
+- 動機: VAEの出力はぼやけやすい
+  $\rightarrow$そもそも1つのガウス分布にするのが悪いのではないか？
 - <span style="color:red">混合分布</span>を使う
     - 分布が$K$個ある（$p_{1:K}$）
     - 入力は$K$個ある分布のどれかから生成されたもの
