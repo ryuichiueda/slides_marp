@@ -239,12 +239,20 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - キャプションと画像がペアになったものを訓練データに
     - 次のCLIPのところ参照
-- ステップ1: 集めてきた画像を使ってdVAEに学習させる
+- Stage 1: 集めてきた画像を使ってdVAEに学習させる
     - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
-- ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
-    - 生成も同じ構成で（任意の文を入力）
+- Stage 2: 入力文の後ろに符号列を生成するようにTransformerを学習
 
 ![bg right:45% 100%](./figs/dall-e.svg)
+
+
+---
+
+### DALL·Eによる画像の生成
+
+
+- 前ページステージ2の構成で
+- 多数の画像を生成して、CLIPでランク付けして上位のいくつかを出力
 
 ---
 
