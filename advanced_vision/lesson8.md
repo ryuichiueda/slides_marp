@@ -229,6 +229,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 - 使うもの
     - Transformer（デコーダ）
         - GPT-3の改造版
+        - 画像も埋め込みベクトルにして入力できるように
     - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
         - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
 
