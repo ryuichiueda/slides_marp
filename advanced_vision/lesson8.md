@@ -133,6 +133,7 @@ marp: true
 - Transformerに、文章の続きとして画像を考えさせる
 - 使うもの
     - Transformer（デコーダ）
+        - GPT-3の改造版
     - [discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)
 
 ---
