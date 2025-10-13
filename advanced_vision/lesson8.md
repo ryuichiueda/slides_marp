@@ -23,8 +23,8 @@ marp: true
 
 - Vision Transformer
 - Diffusion Transformer
-- DALL·E
 - CLIP
+- DALL·E
 - unCLIP（DALL・E 2）
 
 ---
@@ -124,32 +124,6 @@ marp: true
         - $\lambda = 1$: ラベルに対応する画像を生成
         - $0 < \lambda < 1$: 中間的な画像を生成
 
----
-
-## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
-
-- 句や文から画像を生成
-    - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
-- Transformerに、文章の続きとして画像を考えさせる
-- 使うもの
-    - Transformer（デコーダ）
-        - GPT-3の改造版
-    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
-        - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
-
-
----
-
-### DALL·Eの学習
-
-- キャプションと画像がペアになったものを訓練データに
-    - 次のCLIPのところ参照
-- ステップ1: 集めてきた画像を使ってdVAEに学習させる
-    - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
-- ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
-    - 生成も同じ構成で（任意の文を入力）
-
-![bg right:45% 100%](./figs/dall-e.svg)
 
 ---
 
@@ -157,7 +131,6 @@ marp: true
 
 - contrastive: 「対照的な」という意味
     - 対照学習（あとで説明）でテキストと画像を結びつけ
-    - DALL·Eと同時に開発
 - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
 - CLIPでできること
     - 画像に何が写っているかを認識（ある意味ではラベルの数に制限がない）
@@ -244,6 +217,33 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 「a photo of <ラベル>」という句を$N$通り作って、それぞれをtext encoderに通して特徴ベクトル$T_{1:N}$を得る
     - 画像をimage encoderに通して特徴ベクトル$I$を得る
     - $I$と$T_i (i=1,2,\dots,N)$それぞれを比較し、最もコサイン類似度が高い$T_i$を選択
+
+---
+
+## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
+
+- 句や文から画像を生成
+    - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
+- Transformerに、文章の続きとして画像を考えさせる
+- 使うもの
+    - Transformer（デコーダ）
+        - GPT-3の改造版
+    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
+        - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
+
+
+---
+
+### DALL·Eの学習
+
+- キャプションと画像がペアになったものを訓練データに
+    - 次のCLIPのところ参照
+- ステップ1: 集めてきた画像を使ってdVAEに学習させる
+    - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
+- ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
+    - 生成も同じ構成で（任意の文を入力）
+
+![bg right:45% 100%](./figs/dall-e.svg)
 
 ---
 
