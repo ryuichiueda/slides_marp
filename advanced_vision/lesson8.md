@@ -104,6 +104,7 @@ marp: true
     - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
 - 埋め込みに相当するベクトル
     - 画像の解像度を下げて並べたベクトル
+        - 32x32 or 48x48 or 64x64
 
 ---
 
