@@ -100,8 +100,14 @@ marp: true
 
 - GPTの画像版
     - GPT-2の構造を使用
+    - パラメータ数: iGPT-Lというモデルで$13.6$億
 - 画像を途中まで入力して、次の画素を当てさせる
     - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
+
+---
+
+### Image GPTの学習
+
 - 埋め込みに相当するベクトル
     - 画像の解像度を下げて1列に並べたベクトル
         - サイト: $32^2$, $48^2$ or $64^2$pixel
