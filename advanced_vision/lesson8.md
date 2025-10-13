@@ -96,11 +96,13 @@ marp: true
 
 ---
 
-## Image GPT
+## Image GPT[[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html)
 
 - GPTの画像版
 - 画像を途中まで入力して、次の画素を当てさせる
-    - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ
+    - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
+- 埋め込みに相当するベクトル
+    - 画像の解像度を下げて並べたベクトル
 
 ---
 
