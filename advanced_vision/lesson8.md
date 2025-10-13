@@ -147,6 +147,7 @@ marp: true
 - ステップ1: 集めてきた画像を使ってdVAEに学習させる
     - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
 - ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
+    - 生成も同じ構成で（任意の文を入力）
 
 ![bg right:45% 100%](./figs/dall-e.svg)
 
