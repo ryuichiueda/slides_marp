@@ -259,7 +259,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL・E 2）
+## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL·E 2） 
 
 https://www.youtube.com/watch?v=qTgPSKKjfVg&t=104s
 
