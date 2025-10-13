@@ -22,6 +22,7 @@ marp: true
 ## 今日やること
 
 - Vision Transformer
+- Image GPT
 - Diffusion Transformer
 - CLIP
 - DALL·E
@@ -92,6 +93,10 @@ marp: true
     - 自己注意機構のヘッド（マルチヘッド注意機構のヘッド）には、入力に近い層ですでに大域的なものとローカルなものなどバリエーションが出る
         - 大域的なものはCNNの入力に近い方のたたみ込み層に類似
     - 入力から遠ざかるとより大域的に
+
+---
+
+## Image GPT
 
 ---
 
