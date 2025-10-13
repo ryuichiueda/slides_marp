@@ -287,6 +287,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ## GLIDE[[Nichol 2021]](https://arxiv.org/abs/2112.10741)
 
+- Guided Language to Image Diffusion for generation and Editingの頭文字
+    - generationがかわいそう
+    - 「言語で誘導された画像の生成、編集のための拡散モデル」
+
 ---
 
 ## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL·E 2） 
