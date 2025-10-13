@@ -108,6 +108,7 @@ marp: true
 ### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)（Vector Quantizatized Variational Autoencoder）
 
 - 構造: VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
+    - discrete VAEの一種
 - ベクトル量子化（Vector Quantization、VQ）を利用
 - 出力の画像をぼやけさせずシャープに
     - 例: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図2
