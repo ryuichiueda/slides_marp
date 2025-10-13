@@ -105,7 +105,8 @@ marp: true
 - 埋め込みに相当するベクトル
     - 画像の解像度を下げて並べたベクトル
         - サイト: $32 \times 32$ or $48 \times 48$ or $64 \times 64$pixel
-        - 論文: $32 \times 32$ or $96 \times 96$ or $192 \times 192$pixel
+        - 論文: $32 \times 32$, $48 \times 48$, $96 \times 96$ or $192 \times 192$pixel
+            - $96 \times 96$, $192 \times 192$pixelのときはVQ-VAEで圧縮
         - 色をRGBからカラーパレットに（昔の計算機の方式）
 
 ---
