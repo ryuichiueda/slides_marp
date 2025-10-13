@@ -99,6 +99,7 @@ marp: true
 ## Image GPT[[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html)（[サイト](https://openai.com/ja-JP/index/image-gpt/)）（[動画](https://www.youtube.com/watch?v=7rFLnQdl22c)）
 
 - GPTの画像版
+    - GPT-2の構造を使用
 - 画像を途中まで入力して、次の画素を当てさせる
     - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
 - 埋め込みに相当するベクトル
