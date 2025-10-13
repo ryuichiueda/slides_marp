@@ -104,7 +104,8 @@ marp: true
     - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
 - 埋め込みに相当するベクトル
     - 画像の解像度を下げて並べたベクトル
-        - $32 \times 32$ or $48 \times 48$ or $64 \times 64$pixel
+        - サイト: $32 \times 32$ or $48 \times 48$ or $64 \times 64$pixel
+        - 論文: $32 \times 32$ or $96 \times 96$ or $192 \times 192$pixel
         - 色をRGBからカラーパレットに（昔の計算機の方式）
 
 ---
