@@ -26,7 +26,7 @@ marp: true
 - Diffusion Transformer
 - CLIP
 - DALL·E
-- unCLIP（DALL・E 2）
+- unCLIP（DALL·E 2）
 
 ---
 
