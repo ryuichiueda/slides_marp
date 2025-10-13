@@ -135,7 +135,6 @@ marp: true
     - Transformer（デコーダ）
         - GPT-3の改造版
     - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
-    
         - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
 
 
@@ -149,7 +148,7 @@ marp: true
     - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
 - ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
 
-![bg right:50% 100%](./figs/dall-e.svg)
+![bg right:45% 100%](./figs/dall-e.svg)
 
 ---
 
