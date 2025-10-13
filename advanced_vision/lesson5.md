@@ -65,6 +65,7 @@ marp: true
     - $\boldsymbol{z} = (0 \ 0 \ 0 \dots 1 \dots 0)$
        - $k$番目の要素が1に
 
+![bg right:30% 90%](./figs/d_vae_latent.svg)
 
 
 ---
