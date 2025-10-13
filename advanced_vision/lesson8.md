@@ -276,6 +276,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 - Guided Language to Image Diffusion for generation and Editingの頭文字
     - generationがかわいそう
     - 「言語で誘導された画像の生成、編集のための拡散モデル」
+- 自然言語+分類器なしガイダンスで拡散モデルに画像を生成させる
 
 ---
 
