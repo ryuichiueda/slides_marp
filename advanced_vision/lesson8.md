@@ -98,6 +98,10 @@ marp: true
 
 ## Image GPT
 
+- GPTの画像版
+- 画像を途中まで入力して、次の画素を当てさせる
+    - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ
+
 ---
 
 ## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
