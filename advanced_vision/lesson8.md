@@ -285,7 +285,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## GLIDE
+## GLIDE[[Nichol 2021]](https://arxiv.org/abs/2112.10741)
 
 ---
 
