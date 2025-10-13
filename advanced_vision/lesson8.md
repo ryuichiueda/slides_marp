@@ -252,7 +252,9 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 
 - 前ページステージ2の構成で
-- 多数の画像を生成して、CLIPでランク付けして上位のいくつかを出力
+    - https://openai.com/ja-JP/index/dall-e/ のサイト
+       - 512枚の画像を生成して、CLIPでランク付けして上位32枚を出力
+       - 遊んでみましょう
 
 ---
 
