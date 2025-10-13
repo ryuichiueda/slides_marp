@@ -224,6 +224,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - 句や文から画像を生成
     - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
+    - https://openai.com/ja-JP/index/dall-e/
 - Transformerに、文章の続きとして画像を考えさせる
 - 使うもの
     - Transformer（デコーダ）
