@@ -134,7 +134,9 @@ marp: true
 - 使うもの
     - Transformer（デコーダ）
         - GPT-3の改造版
-    - [discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)
+    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
+    
+        - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
 
 ---
 
