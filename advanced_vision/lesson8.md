@@ -103,11 +103,11 @@ marp: true
 - 画像を途中まで入力して、次の画素を当てさせる
     - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
 - 埋め込みに相当するベクトル
-    - 画像の解像度を下げて並べたベクトル
-        - サイト: $32 \times 32$ or $48 \times 48$ or $64 \times 64$pixel
-        - 論文: $32 \times 32$, $48 \times 48$, $96 \times 96$ or $192 \times 192$pixel
-            - $32 \times 32$ or $48 \times 48$の時は色をRGBからカラーパレットに（昔の計算機の方式）
-            - $96 \times 96$, $192 \times 192$pixelのときはVQ-VAEで圧縮
+    - 画像の解像度を下げて1列に並べたベクトル
+        - サイト: $32^2$, $48^2$ or $64^2$pixel
+        - 論文: $32^2$, $48^2$, $96^2$ or $192^2$pixel
+            - $32^2$ or $48^2$の時は色をRGBからカラーパレットに（昔の計算機の方式）
+            - $96^2$, $192^2$pixelのときはVQ-VAEで圧縮（それぞれ$16^2, 34^2$の符号列に）
 
 ---
 
