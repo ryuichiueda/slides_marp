@@ -65,6 +65,8 @@ marp: true
 - 潜在空間のベクトル$\boldsymbol{z}$がone-hot-vectorに
     - $\boldsymbol{z} = (0 \ 0 \ 0 \dots 1 \dots 0)$
        - $k$番目の要素が1に
+- デコーダには$\boldsymbol{z}$と分布ぜんぶ（のパラメータ）を入力
+    - 学習方法については未調査（ごめんなさい）
 
 ![bg right:50% 90%](./figs/d_vae_latent.svg)
 
