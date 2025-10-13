@@ -26,6 +26,7 @@ marp: true
 - Diffusion Transformer
 - CLIP
 - DALL·E
+- GLIDE
 - unCLIP（DALL·E 2）
 
 ---
@@ -281,6 +282,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - https://openai.com/ja-JP/index/dall-e/ のサイト
        - 512枚の画像を生成して、CLIPでランク付けして上位32枚を出力
        - 遊んでみましょう
+
+---
+
+## GLIDE
 
 ---
 
