@@ -163,9 +163,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 - Think of it this way: Assign a value to a random variable by dividing the probability by the range width.
 - Example: For $\theta = 20.111...$, assign the following value:
-- Probability/range width$=0.3/(25-20)=0.06$
+    - Probability/range width$=0.3/(25-20)=0.06$
 - This value is called <span style="color:red">density</span>
-- Think of a probability distribution as something with a mass of $1$, as in the "probability**mass**function."
+    - Think of a probability distribution as something with a mass of $1$, like "probability **mass** function."
 $\rightarrow$ Dividing mass by a continuous value gives "density."
 
 ![bg right:27% 95%](./figs/density.png)
