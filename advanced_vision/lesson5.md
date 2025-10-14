@@ -35,6 +35,7 @@ marp: true
 - 生成したいものが生成されるようにノイズを誘導
     - 分類器あり
     - 分類器なし
+- （[講師が参考というかカンニングした動画](https://www.youtube.com/watch?v=90GlJcpMrm8) ）
 
 ---
 
