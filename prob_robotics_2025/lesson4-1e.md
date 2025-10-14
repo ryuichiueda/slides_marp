@@ -42,10 +42,10 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 ### Problems
 
-- Problem 1: $x, y, and \theta$ are "continuous."
-- Statistics are always just points, so I can't plot a graph like the one on the previous page.
-- Problem 2: There are three random variables: $x, y, and \theta$.
-- This issue was addressed last time, but the shape of the distribution wasn't discussed.
+- Problem 1: $x, y,$ and $\theta$ are "continuous."
+    - Statistics are just points. I can't plot a graph like the one on the previous page.
+- Problem 2: There are three random variables: $x, y,$ and $\theta$.
+    - This issue was addressed last time, but the shape of the distribution wasn't discussed.
 
 <center style="padding-top:100px;font-size:120%">What should I do? </center>
 
