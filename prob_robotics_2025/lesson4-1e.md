@@ -101,18 +101,18 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 ---
 
-## How to Calculate Probability by Enclosing Space (Monte Carlo Method)
+## Calculation of Probability by Enclosing Space (Monte Carlo Method)
 
 - Probability can be calculated from data without determining the discretization method in advance.
-- Example (right figure)
-- $\Pr\{ (x,y) \in A \} = 3/20$
-- $\Pr\{ (x,y) \in B \} = 6/20$
-- $\Pr\{ y > 3 \} = 17/20$
-- $\Pr\{ x > 3 \} = 1\qquad\qquad$, etc.
+    - Example (right figure)
+        - $\Pr\{ (x,y) \in A \} = 3/20$
+        - $\Pr\{ (x,y) \in B \} = 6/20$
+        - $\Pr\{ y > 3 \} = 17/20$
+        - $\Pr\{ x > 3 \} = 1\qquad\qquad$, etc.
 - While it cannot create a distribution, it can indirectly calculate probability.
-- For example, it can quantify a robot's tendency to veer left.
+    - For example, it can quantify a robot's tendency to veer left.
 
-![bg right:35% 95%](./figs/montecarlo.png)
+![bg right:30% 95%](./figs/montecarlo.png)
 
 ---
 
