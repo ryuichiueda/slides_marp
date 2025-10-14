@@ -118,15 +118,14 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 ### Monte Carlo Method
 
-- Calculation Method Using the Method on the Previous Page
-- Applications (Quite Important)
-- Numerical Integration (<span style="color:red">Monte Carlo Integration</span>)
-- Mobile Robot Localization
-
+- Calculation method using the method on the previous page
+- Applications (quite important)
+    - Numerical Integration (<span style="color:red">Monte Carlo Integration</span>)
+    - Mobile Robot Localization
 (Monte Carlo Localization) [[Fox1999]](https://cdn.aaai.org/AAAI/1999/AAAI99-050.pdf), [[Dellaert1999]](https://ieeexplore.ieee.org/document/772544))
 - Numerical calculation example (right)
-- Randomly (uniformly distributed) piercing a board with arrows
-- Pi$=4\cdot \frac{\Pr\{Probability of an arrow landing in a circle\}}{\Pr\{Probability of an arrow landing in a square\}}$
+    - Randomly (uniformly distributed) piercing a board with arrows
+    - Pi$=4\cdot \frac{\Pr\{\text{Probability of an arrow landing in a circle}\}}{\Pr\{\text{Probability of an arrow landing in a square}\}}$
 
 ![bg right:20% 95%](./figs/montecarlo_int.png)
 
