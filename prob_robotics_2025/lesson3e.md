@@ -212,9 +212,9 @@ between $x$ and $y$.
 
 ### Simplifying the Covariance Formula
 
-- Break down and streamline $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
+- Break down $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
 - Answer
-* $\sigma_{xy} = \big\langle xy - x\mu_y - y\mu_x + \mu_x \mu_y \big\rangle_{P(x,y)}$
+    * $\sigma_{xy} = \big\langle xy - x\mu_y - y\mu_x + \mu_x \mu_y \big\rangle_{P(x,y)}$
 $= \big\langle xy \big\rangle_{P(x,y)} - \big\langle x \big\rangle_{P(x,y)}\mu_y - \big\langle y \big\rangle_{P(x,y)}\mu_x + \mu_x \mu_y$
 $= \big\langle xy \big\rangle_{P(x,y)} - \big\langle x \big\rangle_{P(x)}\mu_y - \big\langle y \big\rangle_{P(y)}\mu_x + \mu_x \mu_y$
 $= \big\langle xy \big\rangle_{P(x,y)} - \mu_x\mu_y - \mu_y\mu_x + \mu_x \mu_y$
