@@ -237,18 +237,17 @@ $\Longrightarrow$<span style="color:red">If $x$ and $y$ are independent, the cov
 
 ---
 
-### The relationship between unbiased variance and the variance of probability distributions (Today's final boss)
+### The relationship between unbiased variance and the variance of probability distributions (Today's final problem)
 
 - When $x_{1:N} \overset{\text{iid}}{\sim} P$, do these two coincide?
-- $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$ (expected value)
-- $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
+    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$ (expected value)
+    - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
 - Let's check.
-- Let the expected value of $s^2$ be $\langle s^2 \rangle_{Q(x_{1:N})} = \left\langle \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2 \right\rangle_{Q(x_{1:N})}$.
-- Here,
-- $Q(x_{1:N})=P(x_1)P(x_2)\dots P(x_N)$
-- $\bar{x} = (\sum_{i=1}^N x_i)/N$
-- Let's transform $\langle s^2 \rangle_{Q(x_{1:N})}$ (next page)
-- Hint: Make good use of the average value $\mu$ of $P(x)$
+    - Let the expected value of $s^2$ be $\langle s^2 \rangle_{Q(x_{1:N})} = \left\langle \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2 \right\rangle_{Q(x_{1:N})}$.
+        - Here,$Q(x_{1:N})=P(x_1)P(x_2)\dots P(x_N)$
+        and $\bar{x} = (\sum_{i=1}^N x_i)/N$
+    - Let's transform $\langle s^2 \rangle_{Q(x_{1:N})}$ (next page)
+        - Hint: Make good use of the average value $\mu$ of $P(x)$
 
 ---
 
