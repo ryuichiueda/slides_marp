@@ -269,14 +269,14 @@ $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - N \left\la
 
 - $(N-1)\langle s^2 \rangle_{Q(x_{1:N})} = \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - \dfrac{1}{N}
 \left\langle \Big( \sum_{i=1}^{N} x_i - N\mu \Big)^2 \right\rangle_{Q(x_{1:N})}$
-- First term on the right-hand side: The sum of the variances of $x_1, x_2, \dots, and x_N$
-- Second term on the right-hand side: The variance of $x_1 + x_2 + \dots + x_N$ divided by $N$
+    - First term on the right-hand side: The sum of the variances of $x_1, x_2, \dots, x_N$
+    - Second term on the right-hand side: The variance of $x_1 + x_2 + \dots + x_N$ divided by $N$
 (The property on p. 20 can be used.)
 - Therefore
-- $(N-1)\langle s^2 \rangle_{Q(x_{1:N})} = N\sigma^2 - N\sigma^2/N = (N-1)\sigma^2$
+    - $(N-1)\langle s^2 \rangle_{Q(x_{1:N})} = N\sigma^2 - N\sigma^2/N = (N-1)\sigma^2$
 $\Longrightarrow$ <span style="color:red">$\langle s^2 \rangle_{Q(x_{1:N})} = \sigma^2$</span>
-- The expected value of the unbiased variance and the expected value of the distribution are the same.
-- Dividing by $N-1$ is appropriate.
+        - The expected value of the unbiased variance and the expected value of the distribution are the same.
+        - Dividing by $N-1$ is appropriate.
 
 ---
 
