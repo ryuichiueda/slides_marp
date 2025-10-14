@@ -276,9 +276,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 - Guided Language to Image Diffusion for generation and Editingの頭文字
     - generationがかわいそう
     - 「言語で誘導された画像の生成、編集のための拡散モデル」
-- 自然言語+分類器なしガイダンスで拡散モデルに画像を生成させる
+- 自然言語+[分類器なしガイダンス](lesson4-2.html#5)で拡散モデルに画像を生成させる
     - （他、「CLIPガイダンス」も試されたが分類器なしのほうが結果がよかった）
     - 自然言語をエンコードしたものを分類器なしガイダンスのラベルに利用
+    - 構造はU-Net
 - 生成される画像: 論文の図1
 - ファインチューニングで画像の一部をテキストで改変できる（image inpainting）: 論文の図2, 3, 4
 
