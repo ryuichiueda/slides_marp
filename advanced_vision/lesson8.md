@@ -317,3 +317,11 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 構成: 拡散モデル+Transformerデコーダ
         - 学習: テキストの埋め込みと共に雑音画像の埋め込みを入力して雑音除去した画像の埋め込みを出力
 - デコーダ: ほぼGLIDEのデコーダ
+
+---
+
+### その先
+
+- Stable Diffusion
+    - DALL·Eシリーズのライバル
+    - 使いやすくて一気に普及
