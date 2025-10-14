@@ -186,15 +186,15 @@ $= \big\langle f(x) \big\rangle_{P(x)} \big\langle g(y) \big\rangle_{P(y)}$ (the
 ### Variance of the sum of two variables
 
 - Let's calculate the variance of $(x+y)$, the sum of random variables $x$ and $y$.
-- <span style="color:red">Covariance</span> $\Sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) Simplify using \big\rangle_{P(x,y)}$
-- See the next page for information on covariance.
+    - Simplifying using <span style="color:red">Covariance</span> $\Sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
+        - See the next page later for understanding what is covariance.
 - Answer
-* $\sigma_{x+y}^2 = \left\langle \left\{ (x+y) - (\mu_x + \mu_y )\right\}^2 \right\rangle_{P(x,y)}$
+    * $\sigma_{x+y}^2 = \left\langle \left\{ (x+y) - (\mu_x + \mu_y )\right\}^2 \right\rangle_{P(x,y)}$
 $= \langle (x- \mu_x )^2 \rangle_{P(x,y)} + \langle (y- \mu_y )^2 \rangle_{P(x,y)} + 2 \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
 $= \langle (x- \mu_x )^2 \rangle_{P(x)} + \langle (y- \mu_y )^2 \rangle_{P(y)} + 2 \sigma_{xy}$
 (From $\uparrow$p.12)
 $= \sigma_x^2 + \sigma_y^2 + 2 \sigma_{xy}$
-- Add the variances and then add the $2\times$ covariance.
+- Added the variances and then added the $2\times$ covariance.
 
 ---
 
