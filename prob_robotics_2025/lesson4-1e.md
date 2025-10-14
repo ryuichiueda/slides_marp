@@ -56,9 +56,9 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 ## Handling Continuous and Multivariate Random Variables
 
 - Let's look at each approach one by one.
-- Approximating to Discrete Values ​​to Obtain Probability Distributions
-- Enclosing Space to Calculate Probability
-- Introduction to Density and Probability Density Functions
+    - Approximating to discrete values to obtain probability distributions
+    - Enclosing space to calculate probability
+    - Introduction to density and probability density functions (pdf)
 
 ---
 
