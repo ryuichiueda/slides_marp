@@ -131,13 +131,13 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 ---
 
-### Problems with the enclosure method
+### Problem with the enclosure method
 
 - Problem: This method may also result in insufficient data
-- $\Pr\{ (x,y) \in C \} = 0$, but this is probably not the case
-- There is simply insufficient data
-- This is also problematic, especially when the dimensions are large.
-- Monte Carlo localization, as is, is difficult to use for drone self-localization.
+    - $\Pr\{ (x,y) \in C \} = 0$, but this is probably not right
+        - Simply, data is insufficient.
+    - This is also problematic, especially when the dimensions are large.
+        - Monte Carlo localization is difficult to use for drone self-localization if there is not modification.
 
 ![bg right:20% 75%](./figs/montecarlo_error.png)
 
