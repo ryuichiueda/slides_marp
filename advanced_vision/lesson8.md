@@ -251,7 +251,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ### DALL·Eの学習
 
 - キャプションと画像がペアになったものを訓練データに
-    - 次のCLIPのところ参照
+    - CLIPと同じ
 - Stage 1: 集めてきた画像を使ってdVAEに学習させる
     - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
 - Stage 2: 入力文の後ろに符号列を生成するようにTransformerを学習
