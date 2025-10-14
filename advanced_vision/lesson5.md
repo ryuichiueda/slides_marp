@@ -58,7 +58,8 @@ marp: true
 - 方法
     1. ラベルを入力できる拡散モデルを用意
     2. ラベルがない（ゼロベクトルを入れる）場合とある場合を学習
-    <span style="color:red">$\Rightarrow$ラベルがある場合とない場合の雑音除去量の差$\times$係数で、ラベルの影響を制御可能</span>
+    <span style="color:red">$\Rightarrow$ラベルがある/ない場合の雑音除去量の差$\times$係数で、
+    ラベルの影響を制御可能</span>
 - 係数を$\lambda$としましょう（$0 \le \lambda \le 1$）
     - $\lambda = 0$: 画像をランダムに生成
     - $\lambda = 1$: ラベルに対応する画像を生成
