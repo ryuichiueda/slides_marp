@@ -20,7 +20,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <!-- paginate: true -->
 
-## What we learned
+## Contents
 
 - How to define probability distributions for continuous values
 - Multivariate probability distributions
