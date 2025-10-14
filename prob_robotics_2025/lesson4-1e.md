@@ -25,7 +25,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - How to define probability distributions for continuous values
 - Multivariate probability distributions
 
-Textbooks often cover a bit of mathematical detail, but in this lecture, we'll focus on practical aspects.
+The textbook covers a bit of mathematical detail. In this lecture, we'll focus on practical aspects.
 
 ---
 
