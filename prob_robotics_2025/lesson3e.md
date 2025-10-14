@@ -201,10 +201,11 @@ $= \sigma_x^2 + \sigma_y^2 + 2 \sigma_{xy}$
 ### Covariance
 
 - $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
-- Inside $\langle\ \rangle$
-- Positive if $x$ and $y$ exceed their respective means.
-- Negative if one is above and the other below.
-$\rightarrow$The positive and negative values ​​indicate the correlation between $x$ and $y$.
+    - Inside $\langle\ \rangle$
+        - Positive if $x$ and $y$ exceed their respective means.
+        - Negative if one is above and the other below.
+$\rightarrow$The positive and negative values indicate the correlation 
+between $x$ and $y$.
 - Note that this is different from the correlation coefficient (please investigate this yourself).
 
 ---
