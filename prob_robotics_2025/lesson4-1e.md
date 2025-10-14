@@ -67,10 +67,10 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 - By mapping real numbers to discrete values, we can draw probability distributions from point-like data.
 - This is also known as discretization or quantization.
 - Method
-- Rounding real numbers to the nearest digit
-- Dividing real numbers into ranges
+    - Rounding real numbers to a digit
+    - Dividing real numbers into ranges
 - Example: The $\theta$ values ​​(units are degrees) in the first example
-- -9.5, -9.5, -4.6, -4.0, -0.3, 4.1, 6.2, 9.0, 11.1, 18.2, 18.3, 19.3, 19.9, 19.9, 21.1, 21.8, 22.5, 23.9, 24.3, 24.7
+    - -9.5, -9.5, -4.6, -4.0, -0.3, 4.1, 6.2, 9.0, 11.1, 18.2, 18.3, 19.3, 19.9, 19.9, 21.1, 21.8, 22.5, 23.9, 24.3, 24.7
 
 ![bg right:30% 95%](./figs/theta_hist.png)
 
@@ -79,11 +79,11 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 ### Approximating to Discrete Values ​​(Multidimensional Case)
 
 - 2-D Case: Partition the plane, count the number of data points, and create a distribution.
-- Right: This process is performed for the $(x,y)$ coordinates in the first example.
+    - Right: This process is performed for the $(x,y)$ coordinates in the example.
 - Higher Dimensions
-- Partition 3-D space, 4-D space, etc. in the same way.
-- Dimensions above 4 are difficult to imagine, so it may be better to think in terms of lists or formulas.
-- Example: Calculate the probability $P(h,i,j,k)$ for the combination of 4-axis partitions $(h,i,j,k)$.
+    - Partition 3-D space, 4-D space, etc. in the same way.
+    - Dimensions above 4 are difficult to imagine, so it may be better to think in terms of lists or formulas.
+        - Example: Calculate the probability $P(h,i,j,k)$ for the combination of 4-axis partitions $(h,i,j,k)$.
 
 ![bg right:30% 95%](./figs/discretization.png)
 
