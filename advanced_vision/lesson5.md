@@ -46,7 +46,7 @@ marp: true
     - ラベルに対応する画像が生成されやすくなる（ように学習）
 - ADM-G[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
     - ADM: ablated diffusion model; G: with classifier guidance
-    - 生成の例: 論文の図3, 6, 9
+    - 生成の例: 論文の図3, 6
     - U-Netを大きくしたり各部分を改良したりして
     当時のGANより良い画像を生成
 
