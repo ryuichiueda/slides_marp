@@ -119,17 +119,17 @@ $= \sum_{x=-\infty}^\infty \{ w_0P(x) + w_1P(x)g_1(x) + \cdots + w_nP(x)g_n(x) \
 $= w_0 \sum_{x=-\infty}^\infty P(x) + w_1 \sum_{x=-\infty}^\infty P(x)g_1(x) + \cdots + w_n\sum_{x=-\infty}^\infty P(x)g_n(x)$
 $= w_0 \langle 1 \rangle_P + w_1 \langle g_1 \rangle_P+ \cdots + w_n \langle g_n \rangle_P$
 * <span style="color:red">The expected value of a function $f$ = the sum of the expected values ​​of each term in $f$</span>
-- This is called "linearity of expectation."
+    - This is called "linearity of expectation."
 
 ---
 
 ### Example of using linearity: Calculating variance
 
 - Simplifying the variance formula for probability distribution $P$
-- $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
-- Let's decompose it using linearity.
+    - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
+        - Let's decompose it using linearity.
 - Answer
-* $\sigma^2 = \langle x^2 -2 x\mu + \mu^2\rangle_{P(x)}$
+    * $\sigma^2 = \langle x^2 -2 x\mu + \mu^2\rangle_{P(x)}$
 $= \langle x^2 \rangle_{P(x)} -2 \mu \langle x\rangle_{P(x)} + \mu^2 \langle 1 \rangle_{P(x)}$ 
 $= \langle x^2 \rangle_{P(x)} -2 \mu \mu + \mu^2$ 
 $= \langle x^2 \rangle_{P(x)} - \mu^2$
