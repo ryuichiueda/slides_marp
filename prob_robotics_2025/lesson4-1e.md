@@ -206,11 +206,11 @@ $\int_{y_1}^{y_2}\int_{x_1}^{x_2}p(x,y)\text{d}x\text{d}y$
 ### Probability density function and marginalization
 
 - Variables can be eliminated by integration (just as they can be eliminated by addition in the discrete case).
-- $p(x) = \int_{-\infty}^\infty p(x,y)\text{d}y$ (bottom right figure)
-- $p(y) = \int_{-\infty}^\infty p(x,y)\text{d}x$ (right right figure)
+    - $p(x) = \int_{-\infty}^\infty p(x,y)\text{d}y$ (bottom right figure)
+    - $p(y) = \int_{-\infty}^\infty p(x,y)\text{d}x$ (right right figure)
 - Additional information
-- Since this figure omits the $\theta$ from the first experiment, it is already marginalized.
-- $p(x, y) = \int_{-\pi}^\pi p(x,y,\theta)\text{d}\theta$
+    - Since this figure omits the $\theta$ from the first experiment, it is already marginalized.
+      - $p(x, y) = \int_{-\pi}^\pi p(x,y,\theta)\text{d}\theta$
 
 ![bg right:35% 95%](./figs/xy_marginalization.png)
 
@@ -219,12 +219,13 @@ $\int_{y_1}^{y_2}\int_{x_1}^{x_2}p(x,y)\text{d}x\text{d}y$
 ## Summary so far
 
 - We have dealt with continuous and multidimensional random variables.
-- Data are taken at points in space.
-- Various approximation methods for creating probability distributions from data
+    - Data are taken at points in space.
+    - Various approximation methods for creating probability distributions from data
 - Introduction of density
-- Definition for continuous, multidimensional random variables (vectors)
-- Consider the probability density function $p$
-- Integration leads to probability
+    - Definition for continuous, multidimensional random variables (vectors)
+    - Considered the probability density function $p$
+    - Integration leads to probability
 - What to consider next
-- Up until now, we've been doing the drastic thing of creating distributions from data
-- Especially with multidimensional variables, there's not enough data
+    - Up until now, we've been creating distributions from data. But it's naive.
+        - Especially with multidimensional variables, there's not enough data
+    - Now that we can define $p$ mathematically, let's consider another approach.
