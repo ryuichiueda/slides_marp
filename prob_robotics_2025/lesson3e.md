@@ -72,23 +72,23 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 ### Probability Distributions and Expected Values
 
 - The mean and variance of a probability distribution can be expressed as expected values.
-- First, a quick refresher: The mean and variance of data $x_{1:N}$
-- $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
-- $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
-- If $x_{1:n} \sim P$, then
-- Mean value: Expected value when an infinite number of values ​​are drawn from $P$
-- $\mu = \langle x \rangle_{P(x)}$
-- Variance: Expected value of the squared difference from the mean when an infinite number of values ​​are drawn from $P$
-- $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
-- Note: We'll discuss later whether dividing by $N-1$ is necessary.
+- The mean and variance of data $x_{1:N}$
+    - $\bar{x}_{1:N} = \dfrac{x_1 + x_2 + \dots + x_N}{N} = \dfrac{1}{N} \sum_{i=1}^N x_i$
+    - $s^2 = \dfrac{1}{N-1}\sum_{i=1}^{N} ( x_i - \bar{x})^2$
+- If $x \sim P$, then
+    - Mean value: Expected value of $x$
+        - $\mu = \langle x \rangle_{P(x)}$
+    - Variance: Expected value of the squared difference from the mean
+        - $\sigma^2 = \langle (x - \mu)^2\rangle_{P(x)}$
+            - Note: We'll discuss later the problem of $N-1$
 
 ---
 
 ### Linearity of expected value
 
 - Problem: After paying 100 yen, you roll a dice. Let's consider the expected value if A and B give (or take) money as follows:
-- Person A rolls $\times 100$ yen
-- Person B rolls $(10 - $squared of the roll$)\times 100$ yen
+- Person A: roll $\times 100$ yen
+- Person B: $(10 -$square of the roll$)\times 100$ yen
 
 <center>After calculations, please go to the next page</center>
 
