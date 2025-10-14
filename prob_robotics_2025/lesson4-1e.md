@@ -76,7 +76,7 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 ---
 
-### Approximating to Discrete Values ​​(Multidimensional Case)
+### Approximating to Discrete Values (Multidimensional Case)
 
 - 2-D Case: Partition the plane, count the number of data points, and create a distribution.
     - Right: This process is performed for the $(x,y)$ coordinates in the example.
@@ -89,13 +89,13 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
 ---
 
-### Approximating to Discrete Values ​​(Points to Note and Issues)
+### Approximating to Discrete Values (Points to Note and Issues)
 
 - Appropriate resolution is required depending on the amount of data and the intended use.
-- As shown in the right figure, the distribution may not represent the original data or its properties.
+    - As shown in the right figure, the distribution may not represent its properties.
 - The more dimensions there are, the less data there is.
-- If $1000$ data points are needed in one dimension, $1000^n$ data points are needed in n dimensions.
-- If there is insufficient data, considering the background and causes of the data may lead to a better distribution.
+    - If $1000$ data points are needed in one dimension, $1000^n$ data points are needed in $n$ dimensions.
+    - If there is insufficient data, considering the background and causes of the data may lead to a better distribution.
 
 ![bg right:25% 95%](./figs/discretization_resolution.png)
 
