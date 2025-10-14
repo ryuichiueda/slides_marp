@@ -29,14 +29,14 @@ The textbook covers a bit of mathematical detail. In this lecture, we'll focus o
 
 ---
 
-## An Experiment
+## An experiment
 
 - A robot was repeatedly driven 4 meters forward from a certain position, and statistics were taken of the actual position $(x,y)$ and orientation $\theta$.
 - What we want to know: What is the distribution of the coordinates $(x,y,\theta)$ reached by the robot?
-- I want to plot a distribution like the one on the right.
-$\qquad\qquad\qquad\qquad$![w:600](./figs/robot_final_pos.png)
+    - I want to plot a distribution like the one on the right.
+$\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 
-![bg right:30% 95%](./figs/prob_dist.png)
+![bg right:25% 95%](./figs/prob_dist.png)
 
 ---
 
