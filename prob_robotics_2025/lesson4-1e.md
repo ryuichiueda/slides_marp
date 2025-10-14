@@ -150,10 +150,10 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/robot_final_pos.png)
 ### "Probability" for Continuous Random Variables
 
 - Probability in the two methods mentioned above: assigned to a plot or enclosed area.
-- Not the probability for a single point within the plot (i.e., the actual random variable).
-- The probability of a "point" such as $\theta = 20.111...$ is zero.
-- Is there a quantity corresponding to a point, something like $f$, that corresponds to the range of a random variable?
-- Without it, it would be very difficult to define a distribution.
+    - Not the probability for a single point within the plot (i.e., the actual random variable).
+       - The probability of a "point" such as $\theta = 20.111...$ is zero.
+- Is there a quantity corresponding to a point?
+    - Without it, it would be very difficult to define a distribution.
 
 ![bg right:30% 95%](./figs/continuous_problem.png)
 
