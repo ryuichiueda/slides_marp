@@ -98,9 +98,9 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 - Probability distribution of the roll: $P(x) = 1/6$
 - Function of the amount of money received when the dice are $x$
-- $f(x) = -100 + 100x + 100(10-x^2) = 900 + 100x - 100x^2$
+    - $f(x) = -100 + 100x + 100(10-x^2) = 900 + 100x - 100x^2$
 - Calculation
-- $\langle f \rangle_P = \sum_{x=1}^6 (900 + 100x - 100x^2)/6$
+    - $\langle f \rangle_P = \sum_{x=1}^6 (900 + 100x - 100x^2)/6$
 <span style="color:red">$= 900 + 100 \cdot \dfrac{1}{6}\sum_{x=1}^6 x - 100 \cdot \dfrac{1}{6}\sum_{x=1}^6 x^2$</span>
 $= 900 + 100 \cdot 3.5 - 100 \cdot (1+4+9+16+25+36)/6$
 $= 900 + 350 - 100 \cdot 91/6 \approx -267$ yen
