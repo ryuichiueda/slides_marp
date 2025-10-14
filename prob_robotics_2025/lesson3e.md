@@ -227,13 +227,13 @@ $= \big\langle xy \big\rangle_{P(x,y)} - \mu_x\mu_y$
 
 - $\sigma_{xy} = \big\langle xy \big\rangle_{P(x,y)} - \mu_x\mu_y$ is further simplified.
 - Calculation
-* $= \big\langle xy \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$
+    * $= \big\langle xy \big\rangle_{P(x)P(y)} - \mu_x\mu_y= \langle x \rangle_{P(x)} \langle y \rangle_{P(y)} - \mu_x\mu_y = 0$
 (Using the property on p.14)
 $\Longrightarrow$<span style="color:red">If $x$ and $y$ are independent, the covariance is $0$</span>
 - Formula derived from the above property
-- $\sigma^2_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
+    - $\sigma^2_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
 - For independent variables, variances are additive (a convenient property)
-- $\sigma^2_{x_1+x_2+\dots+x_n} = \sum_{i=1}^n \sigma^2_i\quad$ ($x_{1:n}$ are mutually independent or identically distributed)
+    - $\sigma^2_{x_1+x_2+\dots+x_n} = \sum_{i=1}^n \sigma^2_i\quad$ ($x_{1:n}$ are mutually independent or identically distributed)
 
 ---
 
