@@ -46,6 +46,7 @@ marp: true
 - ADM-G[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
     - ADM: ablated diffusion model; G: with classifier guidance
     - 生成の例: 論文の図3, 6
+        - ラベルをどれだけ反映するかをパラメータで指定可能
     - U-Netを大きくしたり各部分を改良したりして
     当時のGANより良い画像を生成
 
