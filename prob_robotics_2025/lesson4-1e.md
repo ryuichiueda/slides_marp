@@ -175,12 +175,12 @@ $\rightarrow$ Dividing mass by a continuous value gives "density."
 ### Probability density function
 
 - Now that we've introduced density to the continuous random variable $x$, we can define a function $p$ like the one shown in the top right figure.
-$\rightarrow$<span style="color:red">Probability Density Function</span>
+$\rightarrow$<span style="color:red">Probability Density Function (pdf)</span>
 - Properties of probability density functions
-- The vertical axis is density = integrating the horizontal axis gives the probability.
-- Bottom right figure: $\Pr\{a\le x < b\} = \int_a^b p(x) \text{d}x$
+    - The vertical axis is density $\rightarrow$ integrating the horizontal axis gives the probability.
+       - Bottom right figure: $\Pr\{a\le x < b\} = \int_a^b p(x) \text{d}x$
 - Other important points
-- The shapes of $p$ and $p$ are also called "probability distributions."
+    - The shapes of $p$ and $p$ are also called "probability distributions."
 
 ![bg right:27% 95%](./figs/density_func.png)
 
