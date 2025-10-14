@@ -141,9 +141,9 @@ $= \langle x^2 \rangle_{P(x)} - \mu^2$
 
 
 - $\big\langle f(x) \big\rangle_{P(x,y)} = \big\langle f(x) \big\rangle_{P(x)}$ 
-- Why?
+    - Why?
 - Answer (from the marginalization formula)
-* $\big\langle f(x) \big\rangle_{P(x,y)}= \sum_{x=-\infty}^\infty \sum_{y=-\infty}^\infty f(x) P(x,y)$
+    * $\big\langle f(x) \big\rangle_{P(x,y)}= \sum_{x=-\infty}^\infty \sum_{y=-\infty}^\infty f(x) P(x,y)$
 $= \sum_{x=-\infty}^\infty f(x) \sum_{y=-\infty}^\infty P(x,y)$
 $= \sum_{x=-\infty}^\infty f(x) P(x)$
 $= \big\langle f(x) \big\rangle_{P(x)}$
