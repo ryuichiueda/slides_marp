@@ -153,9 +153,9 @@ $= \big\langle f(x) \big\rangle_{P(x)}$
 ### Other properties of expected value 2
 
 - $\big\langle \langle h(x,y) \rangle_{P(y)} \big\rangle_{P(x)} = \big\langle h(x,y) \big\rangle_{P(x)P(y)}$
-- Why?
+    - Why?
 - Answer
-* $\sum_{x=-\infty}^\infty P(x) \sum_{y=-\infty}^\infty h(x,y) P(y)$
+    * $\sum_{x=-\infty}^\infty P(x) \sum_{y=-\infty}^\infty h(x,y) P(y)$
 $= \sum_{x=-\infty}^\infty \sum_{y=-\infty}^\infty h(x,y) P(x)P(y)$
 
 ---
@@ -163,7 +163,7 @@ $= \sum_{x=-\infty}^\infty \sum_{y=-\infty}^\infty h(x,y) P(x)P(y)$
 ### Other Properties of Expected Values ​​3
 
 - $\big\langle f(x)g(y) \big\rangle_{P(x)P(y)} = \big\langle f(x) \big\rangle_{P(x)} \big\langle g(y) \big\rangle_{P(y)}$
-- Let's derive it without using $\Sigma$
+    - Let's derive it without using $\Sigma$
 * Left-hand side $=\big\langle \langle f(x)g(y)\rangle_{P(x)} \big\rangle_{P(y)}$ (from Property 2)
 $= \big\langle \langle f(x)\rangle_{P(x)}g(y) \big\rangle_{P(y)}$ (the part unrelated to $x$ is outside the inner $\langle\rangle$)
 $= \big\langle f(x) \big\rangle_{P(x)} \big\langle g(y) \big\rangle_{P(y)}$ (the part unrelated to $y$ is outside the outer $\langle\rangle$)
