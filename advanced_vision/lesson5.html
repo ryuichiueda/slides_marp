@@ -69,14 +69,11 @@
 <ul>
 <li>前ページの分類器を使わない（不要にする）</li>
 <li>方法
-<ul>
-<li>画像の雑音除去をするANNのどこかに、ラベルを反映する機構を入れる
-<ul>
-<li>ラベルがない（ゼロベクトルを入れる）と通常の雑音除去をする</li>
-</ul>
-</li>
-<li>ラベルがある場合とない場合の差で、ノイズをどれくらいいじれば良いかが分かる</li>
-</ul>
+<ol>
+<li>ラベルを入力できる拡散モデルを用意</li>
+<li>ラベルがない（ゼロベクトルを入れる）場合とある場合を学習<br />
+<span style="color:red"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.054ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.242ex" role="img" focusable="false" viewBox="0 -525 1000 549"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="21D2" d="M580 514Q580 525 596 525Q601 525 604 525T609 525T613 524T615 523T617 520T619 517T622 512Q659 438 720 381T831 300T927 263Q944 258 944 250T935 239T898 228T840 204Q696 134 622 -12Q618 -21 615 -22T600 -24Q580 -24 580 -17Q580 -13 585 0Q620 69 671 123L681 133H70Q56 140 56 153Q56 168 72 173H725L735 181Q774 211 852 250Q851 251 834 259T789 283T735 319L725 327H72Q56 332 56 347Q56 360 70 367H681L671 377Q638 412 609 458T580 514Z"></path></g></g></g></svg></mjx-container>ラベルがある場合とない場合の雑音除去量の差<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.02ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.09ex" role="img" focusable="false" viewBox="0 -491 778 482"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g></g></g></svg></mjx-container>係数で、ラベルの影響を制御可能</span></li>
+</ol>
 </li>
 <li>使い方: ラベルの影響を調節して出力を制御（論文の図1）
 <ul>
