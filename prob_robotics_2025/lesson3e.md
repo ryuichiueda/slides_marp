@@ -283,5 +283,5 @@ $\Longrightarrow$ <span style="color:red">$\langle s^2 \rangle_{Q(x_{1:N})} = \s
 ## Summary
 
 - Expected value
-- Useful for profit and loss calculations
-- Also useful for calculating probability (thanks for your hard work)
+    - Useful for profit and loss calculations
+    - Also useful for calculating probability (thanks for your hard work)
