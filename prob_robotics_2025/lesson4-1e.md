@@ -188,18 +188,18 @@ $\rightarrow$<span style="color:red">Probability Density Function (pdf)</span>
 
 ### Multidimensional probability density functions
 
-- In the two-dimensional case: Probability divided by "area" gives the density.
-- Probability is obtained by double integration.
-- Right figure: $\Pr\{x_1 \le x < x_2$ and $y_1 \le y < y_2 \} =$
+- In the two-dimensional case: a probability divided by "area" gives the density.
+    - Probability is obtained by double integration.
+    - Right figure: $\Pr\{x_1 \le x < x_2$ and $y_1 \le y < y_2 \} =$
 $\int_{y_1}^{y_2}\int_{x_1}^{x_2}p(x,y)\text{d}x\text{d}y$
-- 3-dimensional case: Probability divided by "volume" is density
-- Probability calculated using a triple integral
-- n-dimensional case: Probability calculated using an n-fold integral
-- Lebesgue integral (likely abbreviated)
-- $\Pr\{ \boldsymbol{x} \in D \} = \int_Dp(\boldsymbol{x})\text{d}\boldsymbol{x}$
-- $D$: A region of space ($D$ in the right figure: 2-dimensional example)
+- 3D case: a probability divided by "volume" gives the density
+   - Probability calculated using a triple integral
+- n-dimensional case: Probability calculated using an n-multiple integral
+- Lebesgue integral
+    - $\Pr\{ \boldsymbol{x} \in D \} = \int_Dp(\boldsymbol{x})\text{d}\boldsymbol{x}$
+        - $D$: A region of space ($D$ in the right figure: 2D example)
 
-![bg right:25% 95%](./figs/xy_density.png)
+![bg right:20% 95%](./figs/xy_density.png)
 
 ---
 
