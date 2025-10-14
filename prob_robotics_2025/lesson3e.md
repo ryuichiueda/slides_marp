@@ -261,7 +261,7 @@ $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{Q(x_{1:N})} - N \lef
 (\bar{x} - \mu)^2 \right\rangle_{Q(x_{1:N})}$
 $= \sum_{i=1}^{N} \left\langle (x_i - \mu)^2 \right\rangle_{P(x_i)} - N \left\langle
 \Big( \dfrac{\sum_{i=1}^{N} x_i}{N} - \mu \Big)^2 \right\rangle_{Q(x_{1:N})}$
-($\uparrow$ Term 1: Eliminate unnecessary variables based on the property on p.12)
+($\uparrow$ Term 1: Eliminated unnecessary variables based on the property on p.12)
 
 ---
 
