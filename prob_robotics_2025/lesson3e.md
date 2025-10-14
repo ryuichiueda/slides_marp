@@ -232,7 +232,7 @@ $= \big\langle xy \big\rangle_{P(x,y)} - \mu_x\mu_y$
 $\Longrightarrow$<span style="color:red">If $x$ and $y$ are independent, the covariance is $0$</span>
 - Formula derived from the above property
     - $\sigma^2_{x+y}= \sigma_x^2 + \sigma_y^2 \quad (x \bot\!\!\!\!\bot y)$
-- For independent variables, variances are additive (a convenient property)
+        - For independent variables, variances are additive (a convenient property)
     - $\sigma^2_{x_1+x_2+\dots+x_n} = \sum_{i=1}^n \sigma^2_i\quad$ ($x_{1:n}$ are mutually independent or identically distributed)
 
 ---
