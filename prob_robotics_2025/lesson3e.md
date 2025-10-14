@@ -110,11 +110,11 @@ $= 900 + 350 - 100 \cdot 91/6 \approx -267$ yen
 ### Generalization of the example on the previous page
 
 - What is the expected value of $f(x) = w_0 + w_1 g_1(x) + \dots + w_n g_n(x)$ when $x \sim P$?
-- Example from the previous page:
-- $g_1(x)=x, g_2(x)=x^2$
-- $w_0=w_1=100, w_2=-100$
+    - Example from the previous page:
+        - $g_1(x)=x, g_2(x)=x^2$
+        - $w_0=w_1=100, w_2=-100$
 - Answer
-* $\langle f \rangle_P = \sum_{x=-\infty}^\infty P(x)f(x)$
+    * $\langle f \rangle_P = \sum_{x=-\infty}^\infty P(x)f(x)$
 $= \sum_{x=-\infty}^\infty \{ w_0P(x) + w_1P(x)g_1(x) + \cdots + w_nP(x)g_n(x) \}$
 $= w_0 \sum_{x=-\infty}^\infty P(x) + w_1 \sum_{x=-\infty}^\infty P(x)g_1(x) + \cdots + w_n\sum_{x=-\infty}^\infty P(x)g_n(x)$
 $= w_0 \langle 1 \rangle_P + w_1 \langle g_1 \rangle_P+ \cdots + w_n \langle g_n \rangle_P$
