@@ -186,12 +186,21 @@
 <h3 id="pixelcnn-configuration">PixelCNN Configuration</h3>
 <ul>
 <li>Several implementation examples available</li>
-<li>Basic configuration (image size remains unchanged)</li>
-<li>Applying a mask like the one above to the filter in the first convolutional layer</li>
-<li>Predict the pixel value of the center pixel from the pixels above and to the left.</li>
-<li>Mask the image using the filters in subsequent convolutional layers (residual connections) as shown below.</li>
+<li>Basic configuration (image size remains unchanged)
+<ul>
+<li>Applying the mask like the one above to the filter in the first convolutional layer
+<ul>
+<li>Predict the pixel value of the center pixel from the pixels above and left.</li>
+</ul>
+</li>
+<li>Applying the mask like the one bottom to the filter to subsequent layers.
+<ul>
 <li>Reconstruct the image using the predicted pixel values.</li>
-<li>Output: Pixel values ​​or distributions of pixel values.</li>
+</ul>
+</li>
+<li>Output: Pixel values or distributions of pixel values.</li>
+</ul>
+</li>
 <li>Training: Compare the output with the original image.</li>
 <li>Usage: Output pixel by pixel from the top left.</li>
 </ul>

@@ -127,11 +127,11 @@ $y=f(t)$ (right figure)
 
 - Several implementation examples available
 - Basic configuration (image size remains unchanged)
-- Applying a mask like the one above to the filter in the first convolutional layer
-- Predict the pixel value of the center pixel from the pixels above and to the left.
-- Mask the image using the filters in subsequent convolutional layers (residual connections) as shown below.
-- Reconstruct the image using the predicted pixel values.
-- Output: Pixel values ​​or distributions of pixel values.
+    - Applying the mask like the one above to the filter in the first convolutional layer
+       - Predict the pixel value of the center pixel from the pixels above and left.
+    - Applying the mask like the one bottom to the filter to subsequent layers. 
+        - Reconstruct the image using the predicted pixel values.
+    - Output: Pixel values or distributions of pixel values.
 - Training: Compare the output with the original image.
 - Usage: Output pixel by pixel from the top left.
 
