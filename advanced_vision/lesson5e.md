@@ -19,9 +19,9 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 <!-- paginate: true -->
 
-## What to do today
+## Contents
 
-- Why are we using words (natural language) in vision lectures?
+- Why should we handle language models in vision lectures?
 - Word2vec
 - Transformer
 - Applications of the Transformer
