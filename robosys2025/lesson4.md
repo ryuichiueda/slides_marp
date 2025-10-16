@@ -468,7 +468,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         To github.com:ryuichiueda/robosys202x
          ! [rejected]        main -> main (non-fast-forward)
         error: failed to push some refs to 'git@github.com:ryuichiueda/robosys202x'
-        hint: Updates were rejected because the tip of your current branch is behind
+        hint: Updates were rejected because the tip of your current branch is behind             
         hint: its remote counterpart. Integrate the remote changes (e.g.
         hint: 'git pull ...') before pushing again.
         hint: See the 'Note about fast-forwards' in 'git push --help' for details.
@@ -497,7 +497,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
             =======                     #Aの内容
             
             def tonum(s):
-            >>>>>>> a4936f439aed64b3234d533c6e7a3abc7b5d744d
+            >>>>>>> a4936f439aed64b3234d533c6e7a3abc7b5d744d                        
             （以下略）
             ```
 
