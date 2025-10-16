@@ -169,10 +169,10 @@ $y=f(t)$ (right figure)
 ### Latent Space and Codebook
 
 - Latent Space: The space of code sequences
-- The image-like array in the upper right corner is considered to be the vector $\boldsymbol{z}$
+    - The image-like array in the upper right corner is considered to be the vector $\boldsymbol{z}$
 - The equivalent of a codebook is created using PixelCNN
-- From the convolutional layer, the parameters of the pixels corresponding to each patch region are collected into a vector (bottom right bar)
-- In other words, a vector is constructed using the parameters of the distribution that predicts the pixels of that patch.
+    - From the convolutional layer, the parameters of the pixels corresponding to each patch region are collected into a vector (bottom right bar)
+        - In other words, a vector is constructed using the parameters of the distribution that predicts the pixels of that patch.
 
 ![bg right:20% 100%](./figs/vq_latent.svg)
 
