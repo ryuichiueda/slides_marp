@@ -315,7 +315,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 数式上は冗長だが学習のときにヒントが増えて質が向上
 - 最後の項: $p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
     - 後ろの確率分布: 事前モデル
+        - 質の高い画像の特徴ベクトルを出力
+        - 単にテキストの特徴ベクトルを出力するのではなく、テキストも入力して強化
     - 前の確率分布: デコーダ
+        - こちらもテキストを再度入力
 
 ---
 
