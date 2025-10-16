@@ -112,13 +112,13 @@ Used in current image generation application
 ## PixelCNN (PixelRNN) [[Oord 2016]](https://arxiv.org/abs/1601.06759)
 
 - Estimating the next pixel from an intermediate image
-- Usage example
-- Image completion: Figure 1 in the above paper
-- Image generation: Figures 7 and 8 in the same paper
+    - Usage example
+        - Image completion: Figure 1 in the paper
+        - Image generation: Figures 7 and 8 in the paper
 - Implementing an autoregressive model using CNN/RNN
-- Autoregressive model: Predicting the next value from previous time series data
+    - Autoregressive model: Predicting the next value from previous time series data
 $y=f(t)$ (right figure)
-- Used for stock price prediction, etc.
+        - Used for stock price prediction, etc.
 
 ![bg right:30% 90%](./figs/autoregression.svg)
 
