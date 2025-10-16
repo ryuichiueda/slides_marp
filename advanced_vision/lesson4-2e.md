@@ -69,17 +69,17 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-## Discrete VAE [[Rolfe 2017]] (https://arxiv.org/abs/1609.02200)
+## Discrete VAE [[Rolfe 2017]](https://arxiv.org/abs/1609.02200)
 
-Used in current image generation technology
+Used in current image generation application
 
-- Motivation: The output of VAEs is prone to blurring.$\rightarrow$ Isn't it bad to use a single Gaussian distribution in the first place?
+- Motivation: The output of VAEs is prone to blurring.$\rightarrow$ Isn't it bad to use a single Gaussian distribution?
 - Uses a <span style="color:red">mixture distribution</span>
-- There are $K$ distributions
-- In the case of the right figure: 5 distributions
-- The input is generated from one of the $K$ distributions
+    - There are $K$ distributions
+        - In the case of the right figure: 5 distributions
+    - The input is generated from one of the $K$ distributions
 - Example output (Figure 5 in [[Rolfe 2017]](https://arxiv.org/abs/1609.02200))
-- Classification without inputting labels
+    - Classification without inputting labels
 
 ![bg right:30% 90%](./figs/d_vae.svg)
 
