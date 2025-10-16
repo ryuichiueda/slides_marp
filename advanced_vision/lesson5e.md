@@ -28,17 +28,16 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-## Why do we teach natural language in vision courses?
+## Why do we learn natural language in vision courses?
 
-- Existence of image and language applications
-- Image description generation
-- Image generation and object recognition in response to prompts
-- Stable diffusion
-- Segment Anything Model
+- Existence of image $\leftrightarrow$ language applications
+    - Image generation and object recognition in response to prompts
+        - Stable diffusion
+        - Segment Anything Model
 ↑ All of these use the Transformer discussed here.
 - Applying language processing techniques to image processing
-- Transformer$\rightarrow$Vision Transformer
-- The only difference is the type of data, with few essential differences (?)
+    - Transformer$\rightarrow$Vision Transformer
+    - The only difference is the type of data, with few essential differences (?)
 - The popularity of the Transformer: Used in a variety of places, as mentioned above
 
 <center>We have no choice</center>
