@@ -310,7 +310,12 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ### 事前モデル+デコーダ（unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)）
 
 - テキスト$\boldsymbol{y}$からの画像$\boldsymbol{x}$の推定（生成）の問題を冗長化
-    - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y})$
+    - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
+    - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストの潜在空間のベクトル
+
+
+---
+
 - 事前モデル（diffusion prior）
     - テキストの埋め込みベクトルを画像の埋め込みベクトルに変換
         - テキストのベクトルはCLIPの潜在空間（テキストと画像が混在）にあるので、そのまま画像の埋め込みベクトルと見做して使ってよさそうだが、それだと性能が出ない（らしい）
