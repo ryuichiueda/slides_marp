@@ -311,8 +311,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - テキスト$\boldsymbol{y}$からの画像$\boldsymbol{x}$の推定（生成）の問題を冗長化
     - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
-    - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストの潜在空間のベクトル
-
+    - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストのCLIPでの特徴ベクトル
+- 最後の項: $p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
+    - 後ろの確率分布: 事前モデル
+    - 前の確率分布: デコーダ
 
 ---
 
