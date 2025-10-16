@@ -54,17 +54,17 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Guidance without classifiers [[Ho 2022]](https://arxiv.org/abs/2207.12598)
+### Classifier-free guidance [[Ho 2022]](https://arxiv.org/abs/2207.12598)
 
 - Do not use (or make unnecessary) the classifier from the previous page.
 - Method
-1. Prepare a diffusion model that accepts labels as input.
-2. Train on cases with and without labels (by inputting a zero vector).
-<span style="color:red">$\Rightarrow$The difference in noise removal amount between cases with and without labels, $\times$, can be used to control the influence of labels (and can be derived from Bayes' theorem).
+    1. Prepare a diffusion model that accepts labels as input.
+    2. Train on cases with and without labels (by inputting a zero vector).
+<span style="color:red">$\Rightarrow$The difference in noise removal amount between cases with and without labels can be calculated. (derived from Bayes' theorem).
 - Let the coefficient be $\lambda$ ($0 \le \lambda \le 1$).
-- $\lambda = 0$: Randomly generate an image
-- $\lambda = 1$: Generate an image corresponding to the label
-- $0 < \lambda < 1$: Generate an intermediate image
+    - $\lambda = 0$: Randomly generate an image
+    - $\lambda = 1$: Generate an image corresponding to the label
+    - $0 < \lambda < 1$: Generate an intermediate image
 - Output: Figure 1 in the paper
 
 ---
