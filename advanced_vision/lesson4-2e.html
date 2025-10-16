@@ -209,28 +209,48 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="" data-marpit-pagination-total="14" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="11" style="--footer:Advanced Vision, Part 4.5;--paginate:true;" data-marpit-pagination-total="14">
 <h3 id="vq-vaeoord-2017-vector-quantizatized-variational-autoencoder">VQ-VAE<a href="https://arxiv.org/abs/1711.00937">[Oord 2017]</a> (Vector Quantizatized Variational Autoencoder)</h3>
 <ul>
-<li>Structure: Figure 1 of VQ-VAE<a href="https://arxiv.org/abs/1711.00937">[Oord 2017]</a></li>
+<li>Structure: Figure 1 of VQ-VAE<a href="https://arxiv.org/abs/1711.00937">[Oord 2017]</a>
+<ul>
 <li>A type of discrete VAE</li>
+</ul>
+</li>
 <li>Vector quantization (Vector Vector Quantization (VQ) is used.</li>
-<li>Sharpens the output image without blurring.</li>
+<li>Sharpens the output image without blurring.
+<ul>
 <li>Example: Figure 2 in <a href="https://arxiv.org/abs/1711.00937">[Oord 2017]</a></li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision, Part 4.5</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:Advanced Vision, Part 4.5;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="14" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/vq_map2.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="12" data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:Advanced Vision, Part 4.5;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="14" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:Advanced Vision, Part 4.5;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="14" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/vq_map2.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="12" data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:Advanced Vision, Part 4.5;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="14" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="vector-quantization">Vector Quantization</h3>
 <ul>
-<li>A method for dividing an image into patchworks and compressing similar images together.</li>
-<li>Used in my instructor's doctoral thesis.</li>
-<li>An image is represented by the following two pieces of data:</li>
-<li>Codebook</li>
-<li>Data recording all patches</li>
-<li>Colored square and bar-shaped image fragments in the second row of the figure</li>
-<li>Code sequence</li>
-<li>Array indicating which patch is assigned where</li>
-<li>Table of numbers in the second row (left) of the figure</li>
+<li>A method for dividing an image into patchworks and compressing similar patches together.
+<ul>
+<li>Used in my doctoral thesis.</li>
 </ul>
-<p><span style="font-size:70%">Figure: From [Hiroshi Ueda's Theory 2007]</span></p>
+</li>
+<li>An image is represented by the following two pieces of data:
+<ul>
+<li>Codebook: data recording all patches
+<ul>
+<li>Square or bar-shaped image fragments in 2nd row of the figure</li>
+</ul>
+</li>
+<li>Code sequence
+<ul>
+<li>Array indicating which patch is assigned where
+<ul>
+<li>Number tables in 2nd row (left) of the figure</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><span style="font-size:70%">Figure: From [上田2007]</span></p>
 <footer>Advanced Vision, Part 4.5</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="" data-marpit-pagination-total="14" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="13" style="--footer:Advanced Vision, Part 4.5;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="14" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/vq_latent.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="13" data-footer="Advanced Vision, Part 4.5" data-paginate="true" lang="ja-JP" data-marpit-pagination="13" style="--footer:Advanced Vision, Part 4.5;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="14" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">

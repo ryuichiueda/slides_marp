@@ -142,28 +142,27 @@ $y=f(t)$ (right figure)
 ### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937) (Vector Quantizatized Variational Autoencoder)
 
 - Structure: Figure 1 of VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)
-- A type of discrete VAE
+    - A type of discrete VAE
 - Vector quantization (Vector Vector Quantization (VQ) is used.
 - Sharpens the output image without blurring.
-- Example: Figure 2 in [[Oord 2017]](https://arxiv.org/abs/1711.00937)
+    - Example: Figure 2 in [[Oord 2017]](https://arxiv.org/abs/1711.00937)
 
 ---
 
 ### Vector Quantization
 
-- A method for dividing an image into patchworks and compressing similar images together.
-- Used in my instructor's doctoral thesis.
+- A method for dividing an image into patchworks and compressing similar patches together.
+    - Used in my doctoral thesis.
 - An image is represented by the following two pieces of data:
-- Codebook
-- Data recording all patches
-- Colored square and bar-shaped image fragments in the second row of the figure
-- Code sequence
-- Array indicating which patch is assigned where
-- Table of numbers in the second row (left) of the figure
+    - Codebook: data recording all patches
+        - Square or bar-shaped image fragments in 2nd row of the figure
+    - Code sequence
+        - Array indicating which patch is assigned where
+            - Number tables in 2nd row (left) of the figure
 
-<span style="font-size:70%">Figure: From [Hiroshi Ueda's Theory 2007]</span>
+<span style="font-size:70%">Figure: From [上田2007]</span>
 
-![bg right:40% 100%](./figs/vq_map2.svg)
+![bg right:30% 100%](./figs/vq_map2.svg)
 
 ---
 
