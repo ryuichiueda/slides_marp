@@ -180,5 +180,5 @@ $y=f(t)$ (right figure)
 
 ## Summary
 
-- A quick look at diffusion model derivation, discrete VAE, PixelCNN, and VQ-VAE
+- A quick look at the guidance methods of diffusion model, discrete VAE, PixelCNN, and VQ-VAE
 - Continued in Part 8
