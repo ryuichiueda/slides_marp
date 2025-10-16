@@ -88,12 +88,11 @@ Used in current image generation application
 ### Mathematical model of the event that image $\boldsymbol{x}$ is selected as training data
 
 - $K$ distributions: $p_{1:K}$
-- The event that image $\boldsymbol{x}$ is selected as training data:
-- $\boldsymbol{x} \sim p_k$
-- Here, $k \sim \text{Cat}(\textbf{w}_\text{cat})$
+- The event that image $\boldsymbol{x}$ is selected as training data: $\boldsymbol{x} \sim p_k$
+    - Here, $k \sim \text{Cat}(\textbf{w}_\text{cat})$
 - $\text{Cat}$: Categorical distribution
-- A multivalued version of the Bernoulli distribution
-- Basically, it's a die with different probabilities for each roll.
+    - The multivalued version of the Bernoulli distribution
+    - Basically, it's a die with different probabilities for each roll.
 
 ![bg right:30% 90%](./figs/d_vae.svg)
 
@@ -102,10 +101,10 @@ Used in current image generation application
 ### Latent space construction
 
 - The latent space vector $\boldsymbol{z}$ is converted to a one-hot vector.
-- $\boldsymbol{z} = (0 \ 0 \ 0 \dots 1 \dots 0)$
-- The $k$th element is set to 1.
+    - $\boldsymbol{z} = (0 \ 0 \ 0 \dots 1 \dots 0)$
+        - The $k$th element is set to 1.
 - The decoder is fed $\boldsymbol{z}$ and all the distribution parameters.
-- The training method has not yet been investigated (sorry).
+    - The training method has not yet been investigated (sorry).
 
 ![bg right:50% 90%](./figs/d_vae_latent.svg)
 
