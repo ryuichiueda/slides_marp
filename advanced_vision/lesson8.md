@@ -127,7 +127,7 @@ marp: true
 
 - 拡散モデル+Transformer
     - さらに潜在空間に情報を圧縮する潜在拡散モデルも使用
-    - ラベルを入力して出力をコントロール（分類器なしガイダンス）
+    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
 - 構造
     - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
         - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
@@ -285,11 +285,9 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL·E 2） 
+## DALL·E 2（[公式の動画](https://www.youtube.com/watch?v=qTgPSKKjfVg)）
 
-[公式の動画](https://www.youtube.com/watch?v=qTgPSKKjfVg)
-
-- テキストから画像を生成
+- DALL·Eの後継
 - 基本的なアイデア
     - CLIPを使う
     - テキストと画像が同じ潜在空間にいるので、
@@ -309,8 +307,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-### 事前モデル+デコーダ（unCLIP）
-
+### 事前モデル+デコーダ（unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)）
 - 事前モデル（diffusion prior）
     - テキストの埋め込みベクトルを画像の埋め込みベクトルに変換
         - テキストのベクトルはCLIPの潜在空間（テキストと画像が混在）にあるので、そのまま画像の埋め込みベクトルと見做して使ってよさそうだが、それだと性能が出ない（らしい）
