@@ -206,14 +206,13 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### Input to the Transformer (Decoder)
 
 - For the decoder, input a partial sentence.
-- For example, `<SOS> I want to eat`
-- (`<SOS>`: start of sentence)
+    - For example, `<SOS> I want to eat`
+        - (`<SOS>`: start of sentence)
 - Start with `<SOS>` and pass the translated string to the next input.
-- First input: `<SOS>`
-- Next input: `<SOS> I`
-- Next input: `<SOS> I want`
-- ...and so on. The sentence is created.
-(In reality, the matrix $E$ is input, just like the encoder.)
+    - First input: `<SOS>`
+    - Next input: `<SOS> I`
+    - Next input: `<SOS> I want`
+    - ...and so on. The sentence is created.
 
 ![bg right:30% 95%](./figs/translate.png)
 
@@ -222,11 +221,11 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### Adding Location Information
 
 - Add location information (location code) within the sentence to each token of $E$ input to the encoder.
-- $H = \sqrt{D}E + P$
-- Location information: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
+    - $H = \sqrt{D}E + P$
+        - Location information: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
 - How to add position information
-- Original Transformer: Fixed values ​​(next page)
-- Training method
+    - Original Transformer: Fixed values (next page)
+    - Training
 
 ![bg right:30% 100%](./figs/position_encoding.png)
 
