@@ -172,21 +172,145 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
     - Adding location information to the latent representation vector.
     - Further, considers context using an <span style="color:red">attention mechanism</span>.
 - Transformer [[Vaswani2017]](https://arxiv.org/abs/1706.03762)
-    - These mechanisms surpass existing ANNs.
-    - I will explain the Transformer in detail, starting with an overview and input.
+    - includes these mechanisms
 
 ---
 
 ### Transformer
 
 - Developed by Google for translation.
-- [Let's try it](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
+    - [Let's try it](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
 - What it is: An ANN with the structure shown on the right.
-- Consists of an encoder (left) and a decoder (right).
+    - Consists of an encoder (left) and a decoder (right).
 - It has also been applied to images.
-- Vision Transformer (ViT)
-- Most other new language-related concepts are applications of this.
+    - Vision Transformer (ViT), ...
+- Most other new language or image models are applications of this.
 
 ![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
-[<span style="font-size:70%">Image: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_a
+[<span style="font-size:70%">Image: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
+
+---
+
+### Input to Transformer (Encoder)
+
+- Sentence: Vectors representing the distributed representation of subword tokens
+    - tokens: subwords
+    - Matrix $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
+    - Although omitted in the example on the right, special tokens such as `<EOS>` (end of sentence) are also included as input.
+
+![bg right:30% 95%](./figs/sentence.png)
+
+---
+
+### Input to the Transformer (Decoder)
+
+- For the decoder, input a partial sentence.
+- For example, `<SOS> I want to eat`
+- (`<SOS>`: start of sentence)
+- Start with `<SOS>` and pass the translated string to the next input.
+- First input: `<SOS>`
+- Next input: `<SOS> I`
+- Next input: `<SOS> I want`
+- ...and so on. The sentence is created.
+(In reality, the matrix $E$ is input, just like the encoder.)
+
+![bg right:30% 95%](./figs/translate.png)
+
+---
+
+### Adding Location Information
+
+- Add location information (location code) within the sentence to each token of $E$ input to the encoder.
+- $H = \sqrt{D}E + P$
+- Location information: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
+- How to add position information
+- Original Transformer: Fixed values ​​(next page)
+- Training method
+
+![bg right:30% 100%](./figs/position_encoding.png)
+
+---
+
+### Original Transformer position encoding
+
+- Position information: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
+- $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
+- $p_{i,j} = \begin{cases}
+\sin ( i \beta^{-j/D}) & (i\%2 = 0) \\
+\cos ( i \beta^{-(j-1)/D}) & (i\%2 = 1)
+\end{cases}$
+- example
+<img width="700" src="./figs/position_enc.png" />
+- $\beta=10$. In the original paper, $\beta = 10000$
+- The closer the dot product, the larger the value. [[Yamada 2023]](https://gihyo.jp/book/2023/978-4-297-13633-8)
+
+---
+
+### The Need to Consider Context
+
+- Required Examples
+- Example 1: Translating "It's me who broke the glass window" into English
+- After translating "It's me who broke the...", the next thing to focus on is the thing that breaks (= glass)
+- Example 2: Recognizing the circle in the upper right corner as the moon
+- Existing ANNs that handle time series data and images are not good at this
+- Because "close proximity = strong relevance" is perceived
+- Difficult because word order is different between Japanese and English
+- Difficult because the circle is far from other cues
+
+![bg right:20% 95%](./figs/tsukimi.png)
+
+---
+
+### Attention Mechanism
+
+- A mechanism that decides (and is trained to decide) which part of the input to focus on in the context when outputting something.
+- When outputting "glass," it focuses on "broke" and "the."
+- Since it doesn't know what a circle is, it also pays attention to other features of the image.
+- What the attention layer does
+- It changes the embedding depending on the context and transmits it to subsequent layers.
+- ↑How? (Next page)
+
+---
+
+### Attention Mechanism Using Key-Value Queries
+
+- Query: A query
+- Example: "It's me who broke the" in the translation example
+- Key-Value: Database terminology
+- An example of a key-value database where a value is attached to a key
+- In cases where a decoder is present, it is created from the pre-translation language embedding (there are also cases where this is not the case, so we will explain this in more detail next time).
+- The key reacts to the query, and the vector position changes due to the corresponding value.
+- Example: A Japanese word closely related to "broke" in the query reacts, changing the weight of "broke."
+
+![bg right:35% 95%](./figs/kvq.png)
+
+---
+
+### Specific Calculation
+
+- Query: A matrix $Q = W_\text{Q}H_\text{dec}$
+- Below, $W_\text{X}$ is a matrix acquired through training.
+- Key: Selects the token that responds to the query.
+- $K= Prepare W_\text{K}H_\text{enc}$ and calculate $QK^\top$
+- Value: Weighting value
+- $V= W_\text{V}H_\text{enc}$
+- Output: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+
+No human being is telling us to do this, but providing this structure will help it learn in this way.
+
+![bg right:35% 95%](./figs/kvq.png)
+
+---
+
+## Summary
+
+- Embedding
+- High-dimensional vectors can represent various relationships between words and tokens.
+- Practical embeddings can be created using learning methods such as skip-grams.
+- Applications such as ViT can also create embeddings for images.
+- Transformer
+- In short, it is a mechanism that incorporates context into the embedding using an attention mechanism.
+- <span style="color:red">More details next time</span>
+- Note: Location information can also be learned rather than hard-coded.
+- Reference: [[Kikuta 2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
