@@ -275,14 +275,14 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### Attention Mechanism Using Key-Value Queries
 
 - Query: A query
-- Example: "It's me who broke the" in the translation example
+    - Example: "It's me who broke the" in the translation example
 - Key-Value: Database terminology
-- An example of a key-value database where a value is attached to a key
-- In cases where a decoder is present, it is created from the pre-translation language embedding (there are also cases where this is not the case, so we will explain this in more detail next time).
+    - An example of a key-value database where a value is attached to a key
+    - They are created from the pre-translation language embedding (there are also cases where this is not the case, so we will explain this in more detail next time).
 - The key reacts to the query, and the vector position changes due to the corresponding value.
-- Example: A Japanese word closely related to "broke" in the query reacts, changing the weight of "broke."
+    - Example: A Japanese word closely related to "broke" in the query reacts, changing the weight of "broke."
 
-![bg right:35% 95%](./figs/kvq.png)
+![bg right:20% 95%](./figs/kvq.png)
 
 ---
 
