@@ -296,7 +296,7 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
     - $V= W_\text{V}H_\text{enc}$
 - Output: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
-No human being is telling the model to do this, but providing this structure will help it learn in this way.
+No human being is telling the ANN to do this, but providing this structure will help it learn in this way.
 
 ![bg right:30% 95%](./figs/kvq.png)
 
