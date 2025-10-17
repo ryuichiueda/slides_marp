@@ -114,7 +114,6 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Skip-gram training
 
 - Given a one-hot vector $\boldsymbol{v}_{w}$ for a given word $w$, learn the probability that another word $\boldsymbol{w}'$ exists within a certain range
-- <span style="font-size:60%">Apologies: I'm not sure whether "within range" or a specific location is specified, so I need to read the code, but I haven't done it yet.</span>
 - Create training data from a large amount of literature.
 - Embedding that reflects the relationships between words is possible.
 - <span style="color:red">Each row of $X$ is a distributed representation.</span>
