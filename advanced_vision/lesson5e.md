@@ -249,15 +249,15 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### The Need to Consider Context
 
 - Required Examples
-- Example 1: Translating "It's me who broke the glass window" into English
-- After translating "It's me who broke the...", the next thing to focus on is the thing that breaks (= glass)
-- Example 2: Recognizing the circle in the upper right corner as the moon
+   - Example 1: Translating "It's me who broke the glass window" into English
+       - After translating "It's me who broke the...", the next thing to focus on is the thing that breaks (= glass)
+    - Example 2: Recognizing the circle in the upper right corner as the moon
 - Existing ANNs that handle time series data and images are not good at this
-- Because "close proximity = strong relevance" is perceived
-- Difficult because word order is different between Japanese and English
-- Difficult because the circle is far from other cues
+    - Because "close proximity = strong relevance" is perceived
+        - Difficult because word order is different between Japanese and English
+        - Difficult because the circle is far from other cues
 
-![bg right:20% 95%](./figs/tsukimi.png)
+![bg right:15% 95%](./figs/tsukimi.png)
 
 ---
 
