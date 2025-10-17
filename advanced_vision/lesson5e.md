@@ -168,12 +168,12 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 
 ### What should I do?
 
-- Adding word order and context information to the embedding is recommended.
-- Adding location information to the latent representation vector.
-- Further, <span Considers context using an attention mechanism.
-- Transformer, developed in [[Vaswani2017]](https://arxiv.org/abs/1706.03762)
-- These mechanisms surpass existing ANNs.
-- I will explain the Transformer in detail, starting with an overview and input.
+- Adding word order and context information to the embedding
+    - Adding location information to the latent representation vector.
+    - Further, considers context using an <span style="color:red">attention mechanism</span>.
+- Transformer [[Vaswani2017]](https://arxiv.org/abs/1706.03762)
+    - These mechanisms surpass existing ANNs.
+    - I will explain the Transformer in detail, starting with an overview and input.
 
 ---
 
