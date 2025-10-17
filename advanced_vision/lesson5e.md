@@ -158,7 +158,7 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 
 <center>What should we do? </center>
 
-![bg right:20% 100%](./figs/Chinchilla.jpg)
+![bg right:10% 100%](./figs/Chinchilla.jpg)
 
 <span style="font-size:70%">
 <a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">Top photo by Guérin Nicolas (CC BY-SA 3.0)</a>
