@@ -264,11 +264,11 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### Attention Mechanism
 
 - A mechanism that decides (and is trained to decide) which part of the input to focus on in the context when outputting something.
-- When outputting "glass," it focuses on "broke" and "the."
-- Since it doesn't know what a circle is, it also pays attention to other features of the image.
+    - When outputting "glass," it focuses on "broke" and "the."
+    - Since it doesn't know what a circle is, it also pays attention to other features of the image.
 - What the attention layer does
-- It changes the embedding depending on the context and transmits it to subsequent layers.
-- ↑How? (Next page)
+    - It changes the embedding depending on the context and transmits it to subsequent layers.
+        - ↑How? (Next page)
 
 ---
 
