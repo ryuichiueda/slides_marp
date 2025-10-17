@@ -305,11 +305,10 @@ No human being is telling the ANN to do this, but providing this structure will 
 ## Summary
 
 - Embedding
-- High-dimensional vectors can represent various relationships between words and tokens.
-- Practical embeddings can be created using learning methods such as skip-grams.
-- Applications such as ViT can also create embeddings for images.
+    - High-dimensional vectors can represent various relationships between words and tokens.
+    - Practical embeddings can be created using learning methods such as skip-grams.
+    - Embeddings for images are used for image applications.
 - Transformer
-- In short, it is a mechanism that incorporates context into the embedding using an attention mechanism.
-- <span style="color:red">More details next time</span>
-- Note: Location information can also be learned rather than hard-coded.
+    - In short, it is a mechanism that incorporates context into the embedding using an attention mechanism.
+    - <span style="color:red">More details next time</span>
 - Reference: [[Kikuta 2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
