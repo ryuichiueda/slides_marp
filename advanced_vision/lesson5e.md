@@ -97,17 +97,17 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Embedding Method 1: Skip-gram
 
-- Prepare an ANN with the structure shown on the right.
-- Two affine layers and a softmax layer
+- Prepare an ANN shown on the right.
+    - Two affine layers and a softmax layer
 - Accepted input: $\boldsymbol{v} = (0\ 0\ \cdots\ 1\ 0\ \cdots\ 0)$
-- For a given word, a one-hot vector with the corresponding element set to $1$
-- Dimensions equal to the number of words
+    - For a given word, a one-hot vector with the corresponding element set to $1$
+    - Dimensions equal to the number of words
 - Vector $\boldsymbol{x}$ between affine layers: Hundreds to Thousands of dimensions
-- <span style="color:red">This is the distributed representation</span>
+    - <span style="color:red">This becomes the distributed representation</span>
 - Output: Vector of the same dimensions as the input
-- Probability corresponding to each word
+    - Probability corresponding to each word
 
-![bg right:35% 100%](./figs/skip_gram.png)
+![bg right:30% 100%](./figs/skip_gram.png)
 
 ---
 
