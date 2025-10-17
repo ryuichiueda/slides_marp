@@ -51,21 +51,19 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Word Vector Representation (Word Embedding, Distributed Representation)
+### Word Embedding, Distributed Representation
 
 - Similar words are represented by similar vectors.
-- Example (argumentary; more dimensions are needed as shown above)
-- Uncle$ = (0.9, 0.32, 0.07)$
-- Aunt$ = (0.7, 0.55, 0.08)$
-- Real Estate$ = (0.1, 0.05, 0.88)$
-- Similarity can be calculated using the dot product.
-- Uncle$\cdot$Aunt$ = 0.77$
-- Uncle$\cdot$Real Estate$ = 0.07$
-- Increasing the dimension allows for calculation of similarity from various perspectives.
+    - Example (more dimensions are needed)
+        - Uncle$= (0.9, 0.32, 0.07)$, Aunt$= (0.7, 0.55, 0.08)$, Estate$= (0.1, 0.05, 0.88)$
+    - Similarity can be calculated using the dot product.
+        - Uncle$\cdot$Aunt$= 0.77$
+        - Uncle$\cdot$Estate$= 0.07$
+    - Increasing the dimension allows for calculation of similarity from various perspectives.
 - <span style="color:red">Distributed Representation (Embedding)</span>: A vector representation of words like the one above.
 - <span style="color:red">Embedding</span>: Creating a distributed representation.
 
-![bg right:20% 100%](./figs/embedding.png)
+![bg right:15% 100%](./figs/embedding.png)
 
 ---
 
