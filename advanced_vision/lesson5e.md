@@ -70,15 +70,15 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Relationship between embeddings and what we've discussed so far
 
 - Space of distributed representations = latent space
-- The input is mapped to a different space using an encoder
-- (Probability is not considered in the case of Word2vec)
+    - The input is mapped to a different space using an encoder
+    - (Probability is not considered in the case of Word2vec)
 - Question
-- How do we create similarity between words in the latent space?
-- What is the encoder's structure?
-- What is the decoder's structure?
-- What should we train?
+    - How do we create similarity between words in the latent space?
+        - What is the encoder's structure?
+        - What is the decoder's structure?
+        - What should we train?
 
-![bg right:40% 100%](./figs/word_latent.png)
+![bg right:30% 100%](./figs/word_latent.png)
 
 ---
 
