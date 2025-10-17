@@ -85,12 +85,11 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Distributional Hypothesis
 
 - "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
-- ![](./figs/ass.png)
-- "ass" is an exaggeration.
-- The meaning of a word is carried by the surrounding words.
-- In other words, the vector value of a word can be determined from the words before and after it in a sentence.
-(If the hypothesis is correct.)
-- [Mikolov2013] presents two methods for creating distributed representations that take advantage of this property.
+    - ![](./figs/ass.png)
+        - The author seems to like "ass."
+    - The meaning of a word is carried by the surrounding words.
+- In other words, the vector value of a word can be determined from the words before and after it in a sentence. (If the hypothesis is correct.)
+    - [Mikolov2013] presents two methods for creating distributed representations that utilizes this property.
 
 <center>Let's go through them one by one</center>
 
