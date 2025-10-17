@@ -289,16 +289,16 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### Specific Calculation
 
 - Query: A matrix $Q = W_\text{Q}H_\text{dec}$
-- Below, $W_\text{X}$ is a matrix acquired through training.
+    - $W_\text{?}$ is a matrix acquired through training.
 - Key: Selects the token that responds to the query.
-- $K= Prepare W_\text{K}H_\text{enc}$ and calculate $QK^\top$
+    - Prepare $K=  W_\text{K}H_\text{enc}$ and calculate $QK^\top$
 - Value: Weighting value
-- $V= W_\text{V}H_\text{enc}$
+    - $V= W_\text{V}H_\text{enc}$
 - Output: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
-No human being is telling us to do this, but providing this structure will help it learn in this way.
+No human being is telling the model to do this, but providing this structure will help it learn in this way.
 
-![bg right:35% 95%](./figs/kvq.png)
+![bg right:30% 95%](./figs/kvq.png)
 
 ---
 
