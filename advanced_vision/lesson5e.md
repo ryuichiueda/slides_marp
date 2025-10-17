@@ -114,29 +114,29 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Skip-gram training
 
 - Given a one-hot vector $\boldsymbol{v}_{w}$ for a given word $w$, learn the probability that another word $\boldsymbol{w}'$ exists within a certain range
-- Create training data from a large amount of literature.
-- Embedding that reflects the relationships between words is possible.
+    - Create training data from a large amount of literature.
+    - Embedding that reflects the relationships between words can be made.
 - <span style="color:red">Each row of $X$ is a distributed representation.</span>
-- $X = [\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$
-- $\boldsymbol{x}_{w_i} = \boldsymbol{v}_{w_i}X$
-- Input the one-hot vector $\boldsymbol{v}_{w_i}$ for a given word $w_i$, and you get $\boldsymbol{x}_{w_i}$.
+    - $X = [\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$
+    - $\boldsymbol{x}_{w_i} = \boldsymbol{v}_{w_i}X$
+        - Input the one-hot vector $\boldsymbol{v}_{w_i}$ for a given word $w_i$, and you get $\boldsymbol{x}_{w_i}$.
 
-![bg right:35% 100%](./figs/skip_gram.png)
+![bg right:30% 100%](./figs/skip_gram.png)
 
 ---
 ### Embedding Method 2: Continuous Bag-of-Words (CBoW)
 
 - Train the ANN shown below as follows:
-- Hide a word in a sentence and guess the hidden word from $C$ surrounding words.
-- Example: "Tokyo Skytree is the __ tower in Japan." ($C=2$)
+    - Hide a word in a sentence and guess the hidden word from $C$ surrounding words.
+        - Example: "Tokyo Skytree is the __ tower in Japan." ($C=2$)
 $\rightarrow$ Infer "tallest" from "is," "the," "tower," and "in."
 - ANN Input/Output
-- Input: Average of the one-hot vectors of words within $C$ surrounding words.
-- Output: Record the probability that each word is the hidden character.
-- Like skip-gram, the dimension is the number of different words.
-- Like skip-gram, <span style="color:red">Each row of $X$ corresponds to a vector of latent representations</span>
+    - Input: Mean of the one-hot vectors of words within $C$ surrounding words.
+    - Output: Record the probability that each word is the hidden character.
+        - Like skip-gram, the dimension is the number of different words.
+- Like skip-gram, <span style="color:red">Each row of $X$: a vector of latent representations</span>
 
-$\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
+$\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 
 ---
 
