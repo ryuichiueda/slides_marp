@@ -148,13 +148,13 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 
 ...can't
 
-- Predicting the most likely words using skip-grams and arranging them can create sentences that look like they belong, but they'll probably end up being nonsensical.
-- Something like a [Markov chain generator](https://lorem.sabigara.com/?source=ginga-tetsudo&format=plain&sentence_count=5)
+- Predicting the most likely words using skip-grams and arranging them can create sentences, but they'll probably end up being nonsensical.
+    - Something like a [Markov chain generator](https://lorem.sabigara.com/?source=ginga-tetsudo&format=plain&sentence_count=5)
 - Simple embeddings have limitations
-- No complete information about word order
-- No context-dependent information
-- No distinction between homonyms using a single vector $\rightarrow$
-- Example: chinchilla (both rodents and cats)
+    - No complete information about word order
+    - No context-dependent information
+        - No distinction between homonyms using a single vector $\rightarrow$
+            - Example: chinchilla (both rodents and cats)
 
 <center>What should we do? </center>
 
