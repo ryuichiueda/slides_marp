@@ -234,15 +234,15 @@ $\qquad\qquad\qquad\qquad$![w:400](./figs/cbow.png)
 ### Original Transformer position encoding
 
 - Position information: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
-- $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
-- $p_{i,j} = \begin{cases}
+    - $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
+        - $p_{i,j} = \begin{cases}
 \sin ( i \beta^{-j/D}) & (i\%2 = 0) \\
 \cos ( i \beta^{-(j-1)/D}) & (i\%2 = 1)
 \end{cases}$
 - example
 <img width="700" src="./figs/position_enc.png" />
-- $\beta=10$. In the original paper, $\beta = 10000$
-- The closer the dot product, the larger the value. [[Yamada 2023]](https://gihyo.jp/book/2023/978-4-297-13633-8)
+    - $\beta=10$. In the original paper, $\beta = 10000$
+- The closer the dot product, the larger the value. [[山田2023]](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
 ---
 
