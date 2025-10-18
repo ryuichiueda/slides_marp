@@ -328,7 +328,9 @@ $\qquad$<span style="color:red">原因$f$や$P$をデータから逆算する問
 
 ---
 
-- 実際に左辺はガウス-ガンマ分布となり、事後分布のパラメータはこうなる
+### 回帰の方法（計算結果）
+
+- 左辺はガウス-ガンマ分布となり、事後分布のパラメータはこうなる
     - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$（ここで$\phi(x) = (1 \ \  x)^\top$）
     - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1\phi(x_1) + \Lambda_0 \boldsymbol{\mu}_0 \}$
     - $a_1 = 1/2 + a_0$
