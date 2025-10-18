@@ -148,6 +148,7 @@ $\qquad$<span style="color:red">原因$f$や$P$をデータから逆算する問
 \dfrac{\overline{x^2}\bar{y} - \overline{xy}\bar{x}}{\overline{x^2} - \bar{x}^2},
 \dfrac{\overline{xy} - \bar{x}\bar{y}}{\overline{x^2} - \bar{x}^2}
 \right)$</span>
+- 問題が数式の変形で解けてしまうのでANNを使う必要がない
 
 ---
 
