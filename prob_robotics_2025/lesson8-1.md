@@ -319,6 +319,11 @@ $\qquad$<span style="color:red">原因$f$や$P$をデータから逆算する問
 - 左辺の事後分布が同じ形だとすると、こういう等式ができる
     - $\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda| a_1, b_1)$
     $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+        - ガウス分布の積が第4回で出てきた式: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$と同じ形
+            - $\boldsymbol{a} = y_1$，$\boldsymbol{x} = (w_0 \ w_1)^\top$, $A = (1 \ x)$，$\boldsymbol{b} = 0$，$s=\lambda^{-1}$，$B=I$，$\boldsymbol{c} = \boldsymbol{\mu}_0$，$C = \Lambda_0^{-1}$
+
+
+---
 
 - 実際に左辺はガウス-ガンマ分布となり、事後分布のパラメータはこうなる
     - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$（ここで$\phi(x) = (1 \ \  x)^\top$）
