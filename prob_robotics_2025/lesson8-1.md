@@ -47,9 +47,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - データはなにか原因があって発生している
     - 目の前にピンクの服を着た夫妻がいるので視細胞にピンク色の信号が多く入るなど
-- <span style="color:red">原因を数理モデルにすると、そこからデータがサンプリングされると考えられる</span>
+- <span style="color:red">原因を数理モデルにすると、そこから観測されるデータが発生すると考えられる</span>
     - 例1: 原因が関数$\boldsymbol{y} = f(\boldsymbol{x})$
+        - データ$(\boldsymbol{x}, \boldsymbol{y})_1, (\boldsymbol{x}, \boldsymbol{y})_2,\dots,(\boldsymbol{x}, \boldsymbol{y})_N$が観測される
     - 例2: 原因が確率分布$\boldsymbol{x} \sim P$
+        - データ$\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_N$が観測される（なんらかの特徴ある分布を作る）
 
 ---
 
