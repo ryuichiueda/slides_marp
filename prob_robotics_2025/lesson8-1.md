@@ -45,8 +45,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 考える手掛かり
 
-- アドバンストビジョン: CNNなどニューラルネットワークからこの問題を考えた
+- アドバンストビジョン: 人工ニューラルネットワークからこの問題を考えた
+    - CNNなど
 - 確率ロボティクスでは・・・
+    - 数学からアプローチしてみましょう
+    - <span style="color:red">たくさんのデータからどう法則性を見つけるか</span>
 
 ---
 
