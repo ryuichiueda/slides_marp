@@ -203,9 +203,8 @@ $\qquad$<span style="color:red">原因$f$や$P$をデータから逆算する問
 - 変化量の計算
     - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
 - わかること
-    - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは
-    <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>のとき
-        - 内積が最小になる
+    - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは内積が最小になる<span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>のとき
+        - $\nabla \mathcal{L}(w_{1:n})$: <span style="color:red">勾配ベクトル</span>
     - 上記の赤字の式にしたがってパラメータを更新すればよい
         - これがANNのやっていること
 
