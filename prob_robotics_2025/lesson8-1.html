@@ -22,8 +22,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="2" style="--footer:確率ロボティクス第8回;--paginate:true;" data-marpit-pagination-total="17">
 <h2 id="%E4%BB%8A%E5%9B%9E%E3%81%AE%E5%86%85%E5%AE%B9">今回の内容</h2>
 <ul>
-<li>回帰</li>
-<li>最小二乗法</li>
+<li>最小二乗法・損失関数</li>
 <li>最小二乗法が解析的に解けない場合について</li>
 <li>ベイズ線形回帰</li>
 </ul>
@@ -277,20 +276,23 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <li>内積が最小になる</li>
 </ul>
 </li>
-<li>上記の赤字の式にしたがってパラメータを更新すればよい</li>
+<li>上記の赤字の式にしたがってパラメータを更新すればよい
+<ul>
+<li>これがANNのやっていること</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <footer>確率ロボティクス第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="16" style="--footer:確率ロボティクス第8回;--paginate:true;" data-marpit-pagination-total="17">
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+<h3 id="%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95%E3%81%A8%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%BE%E3%81%A8%E3%82%81">最小二乗法と損失関数に関するまとめ</h3>
 <ul>
-<li>最小二乗法を題材にして回帰を勉強</li>
 <li>損失関数を偏微分して連立方程式を解ければ、任意の式に最小二乗法（と、その他さまざまな最適化手法）を適用可能</li>
 <li>連立方程式が解けない場合は偏微分した値にしたがって少しずつパラメータを変更していけば良いパラメータが見つかる
 <ul>
-<li>具体例は人工ニューラルネットワークのところで</li>
+<li>具体例はアドバンストビジョンに</li>
 </ul>
 </li>
 <li>しかし、なにか足りないんじゃないでしょうか?
@@ -304,7 +306,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="17" style="--footer:確率ロボティクス第8回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="17" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/lms_overfit.png&quot;);background-size:90%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="17" data-footer="確率ロボティクス第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="17" style="--footer:確率ロボティクス第8回;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="17" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="%E6%AE%8B%E3%81%A3%E3%81%9F%E5%95%8F%E9%A1%8C">残った問題</h3>
 <ul>
-<li>1つの答えしか出さない
+<li>最小二乗法は1つの答えしか出さない
 <ul>
 <li>「自信のなさ」が表現できない</li>
 <li>データ4つで右上図のように当てはめしてよい?</li>
