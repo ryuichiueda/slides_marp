@@ -45,8 +45,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 基本的な考え方
 
-- データはなにか理由があって発生している
+- データはなにか原因があって発生している
     - 目の前にピンクの服を着た夫妻がいるので視細胞にピンク色の信号が多く入るなど
+- <span style="color:red">原因を数理モデルにすると、そこからデータがサンプリングされると考えられる</span>
+    - 例1: 原因が関数$\boldsymbol{y} = f(\boldsymbol{x})$
+    - 例2: 原因が確率分布$\boldsymbol{x} \sim P$
 
 ---
 
