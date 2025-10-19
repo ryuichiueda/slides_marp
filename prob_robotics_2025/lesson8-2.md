@@ -234,7 +234,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - もっと確率的であってもよい
         - パラメータにも分布がある（混合ガウス分布も確率的にばらつく）
     - ガウス分布の個数が決まっている
-        - 不要な個数の分布が消えるまでは性能が高くない
+        - 不要な個数の分布が消えるほどの性能はない
 
 ---
 
