@@ -276,7 +276,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### できた式
 
 - $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{KL}(q || p)$
-- $ = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+- $= \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
     - $q$（$q(Z)$）: 潜在変数の分布
     - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
         - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
@@ -300,44 +300,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
     - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
         - $\mathcal{L}$が最大になるように（対数尤度も大きくなってより良い結果に）
----
-marp: true
----
-
-<!-- footer: "機械学習（と統計）第10回" -->
-
-# 機械学習
-
-## 第10回: クラスタリングとベイズ推論
-
-千葉工業大学 上田 隆一
-
-<br />
-
-<span style="font-size:70%">This work is licensed under a </span>[<span style="font-size:70%">Creative Commons Attribution-ShareAlike 4.0 International License</span>](https://creativecommons.org/licenses/by-sa/4.0/).
-![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
 
 ---
 
-<!-- paginate: true -->
-
-## 今日やること
-
-- 前回つっぱしり過ぎたのでおさらいテストの解説
-- 変分推論
-
----
-
-## 前回のおさらい
-
-- k-means、EM法をやった
-    - EM法は確率の考えを導入していたが、第6回でやったような「分布の分布」までは考えられていない
-
-<center>「分布の分布」は考えられるのか?→できる（ただしかなりややこしい）</center>
-
----
-
-## 第6回のおさらい
+## 第5回のおさらい
 
 - 実験の成功、失敗の結果から、「成功率の分布」を考えた
     - ベータ分布: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
@@ -542,7 +508,8 @@ marp: true
 
 ## 変分推論の具体的な計算
 
-- 導出は難しすぎるので、MステップとEステップでの作業だけ示します
+- 導出は難しすぎるので（教科書に解説あり）、
+MステップとEステップでの作業だけ示します
     - $q_1, q_3, q_4$の事後分布をベイズの定理で導出
     - 導出された式に当てはめるだけで使用可能
 
@@ -580,7 +547,9 @@ marp: true
 
 ## まとめ
 
-- 変分推論
+- k-means、EM法をまず勉強
+    - 確率的な考えのないものと、ベイズ未満の確率的なもの
+- 変分推論（変分ベイズ）
     - 混合分布の分布を考える
     - EM法とおなじく繰り返しでクラスタを形成していく
         - 計算方法が（扱わなかったけど）ベイズの定理に基づいている
