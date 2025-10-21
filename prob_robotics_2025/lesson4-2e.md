@@ -289,9 +289,9 @@ $\qquad$![w:400](./figs/gauss_multi.png)
 ## Summary of Gaussian Distribution
 
 - Various types of noise $\rightarrow$ are Gaussian distributed in variables
-- Universal
-- Reproducible
-- Useful for $\rightarrow$ programs where calculations often require only exponential calculations
+    - Universal
+- Reproductive property
+    - useful for programs
 - Properties of variance and precision
-- For the distribution of a sum of variables: Simple sum of variances
-- For the product of distributions: Simple sum of precisions
+    - For the distribution of a sum of variables: Simple sum of variances
+    - For the product of distributions: Simple sum of precisions
