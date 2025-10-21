@@ -105,12 +105,12 @@ Let's consider various aspects (example on the next page)
 
 ### Example of a superposition of Gaussian distributions
 
-- Example of a sensor value distribution from "Detailed Explanation of Probabilistic Robotics" (left)
-- The average sensor value changes during the day and after sunset.
-- The distribution separates, dominating errors due to other error factors.
+- Example of a sensor value distribution from the orange book (left)
+    - The average sensor value changes during the day and after sunset.
+    - The distribution separates, dominating errors due to other error factors.
 - Right
-- Orange distribution: Distribution extracted from 2:00 PM
-- Blue distribution: Distribution extracted from 6:00 AM
+    - Orange distribution: Distribution extracted from 2:00 PM
+    - Blue distribution: Distribution extracted from 6:00 AM
 ![w:400](./figs/sensor_histgram_600.png)![w:400](./figs/sensor600_6h_14h.png)
 
 ---
