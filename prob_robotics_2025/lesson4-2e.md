@@ -118,60 +118,60 @@ Let's consider various aspects (example on the next page)
 ### Notation for Gaussian distribution
 
 - Notated as $\mathcal{N}(\mu, \sigma^2)$
-- Example: $x \sim \mathcal{N}(\mu, \sigma^2)$: $x$ follows the Gaussian distribution $\mathcal{N}(\mu, \sigma^2)$
+    - Example: $x \sim \mathcal{N}(\mu, \sigma^2)$: $x$ follows the Gaussian distribution $\mathcal{N}(\mu, \sigma^2)$
 - You can also explicitly state the variables and write $\mathcal{N}(x | \mu, \sigma^2)$
 
 ---
 
 ### Properties of the Gaussian Distribution 1
 
-- Problem: What is the distribution of the sum of two independent variables $x_1 and x_2$ that follow different Gaussian distributions?
-- In other words, what is the distribution $p(x_3)$ of $x_3 = x_1 + x_2$ in the following case?
-- $x_1 \sim \mathcal{N}(\mu_1, \sigma^2_1)$
-- $x_2 \sim \mathcal{N}(\mu_2, \sigma^2_2)$
+- Problem: What is the distribution of the sum of two independent variables $x_1$ and $x_2$ that follow different Gaussian distributions?
+    - In other words, what is the distribution $p(x_3)$ of $x_3 = x_1 + x_2$ in the following case?
+        - $x_1 \sim \mathcal{N}(\mu_1, \sigma^2_1)$
+        - $x_2 \sim \mathcal{N}(\mu_2, \sigma^2_2)$
 - Answer:
-* $x_3 \sim \mathcal{N}(\mu_1 + \mu_2, \sigma^2_1 + \sigma^2_2)$
-- Again, the Gaussian distribution has a property known as $\rightarrow$<span style="color:red">regenerative</span>.
-- Moreover, it is a simple addition of the mean and variance.
+    * $x_3 \sim \mathcal{N}(\mu_1 + \mu_2, \sigma^2_1 + \sigma^2_2)$
+        - Again, the Gaussian distribution has a property known as $\rightarrow$<span style="color:red">regenerative</span>.
+        - Moreover, it is a simple addition of the mean and variance.
 
 If you're feeling energetic, try proving it (proof starts on the next page).
 
 ---
 
-### Property 1 of the Gaussian Distribution (Proof)
+### Property 1 of the Gaussian distribution (proof)
 
 - First, express the distribution $p(x_3)$ in terms of $x_1, x_2, \mu_1, \mu_2, \sigma^2_1, \sigma^2_2$.
-- $p(x_3) = \int_{-\infty}^\infty p(x_3, x_1)\text{d}x_1$ 
+    - $p(x_3) = \int_{-\infty}^\infty p(x_3, x_1)\text{d}x_1$ 
 $= \int_{-\infty}^\infty p(x_3 | x_1)p(x_1)\text{d}x_1$ 
 $= \int_{-\infty}^\infty p(x_3 | x_1)\mathcal{N}(x_1| \mu_1, \sigma^2)\text{d}x_1$ 
 $= \int_{-\infty}^\infty \mathcal{N}(x_3|x_1 + \mu_2, \sigma^2_2)\mathcal{N}(x_1| \mu_1, \sigma^2_1)\text{d}x_1$ 
-- Last variant: Distribution of $x_3$ with fixed $x_1$: Distribution of $x_2$ shifted by $x_1$
+    - Last: Distribution of $x_3$ with fixed $x_1$: distribution of $x_2$ shifted by $x_1$
 
 ---
 
-### Property 1 of the Gaussian Distribution (Proof Continued)
+### Property 1 of the Gaussian distribution (proof continued)
 
-- $p(x_3) = \int_{-\infty}^\infty \dfrac{1}{\sqrt{2\pi \sigma^2_2}}\exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2}\right\}$
+- <span style="font-size:75%">$p(x_3) = \int_{-\infty}^\infty \dfrac{1}{\sqrt{2\pi \sigma^2_2}}\exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2}\right\}$
 $\cdot \dfrac{1}{\sqrt{2\pi \sigma^2_1}}\exp\left\{ -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
-$= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2} -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$
-- Solution: Decompose the integral as follows:
-- Leave the Gaussian distribution of $x_1$ within the integral (<span style="color:red">integrate to $1$</span>).
-- Remove the distribution of $x_3$ outside the integral (use the Gaussian distribution).
-- The next slide shows the results (see the textbook for the calculations).
+$= \dfrac{1}{2\pi \sigma_1\sigma_2} \int_{-\infty}^\infty \exp\left\{ -\dfrac{\{x_3 - (\mu_2 + x_1)\}^2}{2\sigma^2_2} -\dfrac{(x_1 - \mu_1)^2}{2\sigma^2_1}\right\} \text{d}x_1$</span>
+    - Solution: Decompose the integral as follows:
+        - Leave the Gaussian distribution of $x_1$ within the integral (<span style="color:red">integrate to $1$</span>).
+        - Remove the distribution of $x_3$ outside the integral (use the Gaussian distribution).
+        - The next slide shows the results (see the textbook for the calculations).
 
 ---
 
-### Property of the Gaussian Distribution 1 (Proof Continued)
+### Property of the Gaussian distribution 1 (proof continued)
 
 - $p(x_3) =
 \dfrac{1}{2\pi \sigma_1\sigma_2} 
 \exp\left\{\dfrac{(x_3-\mu')^2 }{-2\sigma'^2 } \right\} 
 \int_{-\infty}^\infty \exp\left\{\dfrac{-\sigma'^{2}}{2\sigma_1^2\sigma_2^2} \left[ x_1 - h(x_3) \right]^2 \right\} 
 \text{d}x_1$ 
-- here 
-- $\sigma_1^2 + \sigma_2^2 = \sigma'^{2}$ 
-- $\mu_2 + \mu_1 = \mu'$ 
-- $h(x_3) = \{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 \}/\sigma'^2$
+    - here 
+        - $\sigma_1^2 + \sigma_2^2 = \sigma'^{2}$ 
+        - $\mu_2 + \mu_1 = \mu'$ 
+        - $h(x_3) = \{ \sigma_1^2 (x_3 - \mu_2) + \sigma_2^2\mu_1 \}/\sigma'^2$
 - $p(x_3) = 
 \mathcal{N}(x_3 | \mu', \sigma'^2) 
 \int_{-\infty}^\infty 
