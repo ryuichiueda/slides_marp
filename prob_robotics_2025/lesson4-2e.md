@@ -243,15 +243,15 @@ $= \int_{-\infty}^{y'} \mathcal{N}\big[ y | a\mu + b, (a\sigma)^2\big] \text{d}y
 
 ---
 
-### Product of Gaussian Distributions
+### Product of Gaussian distributions
 
 - Consider the product of two Gaussian distributions $\mathcal{N}(x|\mu_1, \sigma_1^2)$ and $\mathcal{N}(x|\mu_2, \sigma_2^2)$ for the same variable $x$.
-- (I haven't thought about it deeply, but I think) Two people have estimated $x$ from different information, and we want to combine the information.
-- As a preliminary step, we transform the Gaussian distribution as follows:
-- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x -\dfrac{1}{2\sigma^2}\mu^2 \right\}$
+    - (I haven't thought about it deeply, but I think) two people have estimated $x$ from different information, and we want to combine the information.
+    - As a preliminary step, we transform the Gaussian distribution as follows:
+        - $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x -\dfrac{1}{2\sigma^2}\mu^2 \right\}$
 $= \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x \right\}$
-- Introducing precision (the inverse of variance)
-- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + \mu\Lambda x \right\}$
+- Introducing the <span style="color:red">precision</span> (the inverse of variance)
+    - $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + \mu\Lambda x \right\}$
 
 <center>Calculations on the next page</center>
 
