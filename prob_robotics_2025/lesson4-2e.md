@@ -181,7 +181,118 @@ $= \mathcal{N}(x_3 | \mu', \sigma'^2)= \mathcal{N}(x_3 | \mu_1 + \mu_2, \sigma_1
 
 ---
 
-### Properties of Gaussian distribution 2
+### Properties of the Gaussian Distribution 2
 
 - Problem: If $x$ follows a Gaussian distribution, what distribution does $y=ax+b$ follow?
-- $x \sim \mathcal{N}(\mu,\sigma^2)$
+    - $x \sim \mathcal{N}(\mu,\sigma^2)$
+    - What about $y \sim p$?
+- Answer:
+    * $y \sim \mathcal{N} [ a \mu + b, (a\sigma)^2 ]$
+
+---
+
+### Property 2 of the Gaussian Distribution (proof)
+
+- Consider the probability that $y < y'$.
+    - $\Pr \{ y \le y' \} = \Pr \{ x \le (y' -b)/a \}$
+$\int_{-\infty}^{y'} p(y) \text{d}y = \int_{-\infty}^{(y' -b)/a} \dfrac{1}{\sqrt{2\pi \sigma^2}}\exp \left\{ -\dfrac{(x - \mu)^2}{2\sigma^2} \right\}\text{d}x$
+- From $y = ax + b$, assign $\text{d}x = a^{-1}\text{d}y$ to the right side 
+    - $\Pr \{ y \le y' \} = \Pr \{ x \le (y' -b)/a \}$ 
+$\int_{-\infty}^{y'} p(y) \text{d}y = \int_{-\infty}^{y'} \dfrac{1}{\sqrt{2\pi \sigma^2}}\exp \left\{ -\dfrac{\{(y - b)/a - \mu\}^2}{2\sigma^2} \right\} \left( \dfrac{1}{a} \text{d}y \right)$ 
+$= \int_{-\infty}^{y'} \dfrac{1}{\sqrt{2\pi (a\sigma)^2}}\exp \left\{ -\dfrac{(y - b - a\mu)^2}{2(a\sigma)^2} \right\} \text{d}y$
+$= \int_{-\infty}^{y'} \mathcal{N}\big[ y | a\mu + b, (a\sigma)^2\big] \text{d}y$
+        - From the integrals on both sides, $p(y) = \mathcal{N}\big[ y | a\mu + b, (a\sigma)^2\big]$
+
+---
+
+### Introducing a normalization constant
+
+- Expressing coefficients unrelated to the shape of the distribution with $\eta$
+    - Example: The exponent determines the shape of the Gaussian distribution (Inside $\exp$) The part outside $\rightarrow$ is sometimes abbreviated as $\eta$
+         - <span style="font-size:70%">$\mathcal{N}(x| \mu, \sigma^2) = \dfrac{1}{\sqrt{2\pi \sigma^2 }} \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}= \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\}$</span>
+    - $\eta$ is called the <span style="color:red">normalization constant</span>
+- How the normalization constant is used
+    - Used when the details of the part are not of interest
+    - Note that even if the value changes during the transformation, $\eta$ may still be used.
+
+![bg right:25% 95%](./figs/gauss.png)
+
+---
+
+### Mahalanobis distance
+
+- Distance normalized by standard deviation
+    - $d(x) = | x -\mu |/\sigma$
+    - It represents the number of standard deviations away from the mean value $x$.
+- The exponent of the Gaussian distribution is determined by the Mahalanobis distance.
+    - $\mathcal{N}(x| \mu, \sigma^2) = \eta \exp\left\{ -\dfrac{(x-\mu)^2}{2\sigma^2} \right\} = \eta \exp\left\{ -\dfrac{1}{2}d(x)^2 \right\}$
+
+---
+
+### $n$ Sigma Range
+
+- This represents how much of the data falls within the Mahalanobis distance $n$. (useful)
+- For a Gaussian distribution, the following holds:
+    - $d(x) \le 1$: Just under 70% of the data falls within the range.
+    - $d(x) \le 2$: 95% of the data falls within the range.
+    - $d(x) \le 3$: Three out of 1000 data points are incorrect.
+- Incidentally: academic ability deviation score: $10 d'(x) + 50$
+    - $d'(x) = ( x -\mu )/\sigma$
+
+![bg right:30% 95%](./figs/n-sigma.png)
+
+---
+
+### Product of Gaussian Distributions
+
+- Consider the product of two Gaussian distributions $\mathcal{N}(x|\mu_1, \sigma_1^2)$ and $\mathcal{N}(x|\mu_2, \sigma_2^2)$ for the same variable $x$.
+- (I haven't thought about it deeply, but I think) Two people have estimated $x$ from different information, and we want to combine the information.
+- As a preliminary step, we transform the Gaussian distribution as follows:
+- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x -\dfrac{1}{2\sigma^2}\mu^2 \right\}$
+$= \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x \right\}$
+- Introducing precision (the inverse of variance)
+- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + \mu\Lambda x \right\}$
+
+<center>Calculations on the next page</center>
+
+---
+
+### Product of Gaussian Distributions (Calculation)
+
+- $\mathcal{N}(x | \mu_1, \sigma_1^2)\mathcal{N}(x | \mu_2, \sigma_2^2)$
+$=\eta \exp\left\{
+-\dfrac{1}{2}\Lambda_1 x^2 + \mu_1 \Lambda_1 x
+-\dfrac{1}{2}\Lambda_2 x^2 + \mu_2 \Lambda_2 x
+\right\}$
+$=\eta \exp\left\{
+-\dfrac{1}{2}(\Lambda_1 + \Lambda_2) x^2 + (\mu_1 \Lambda_1 + \mu_2 \Lambda_2) x \right\}$
+- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + Compare the shape with \mu\Lambda x \right\}$
+- $\Lambda = \Lambda_1 + \Lambda_2$
+- $\mu =(\mu_1 \Lambda_1 + \mu_2 \Lambda_2)/\Lambda = \dfrac{\mu_1 \Lambda_1 + \mu_2 \Lambda_2}{\Lambda_1 + \Lambda_2}$
+
+The same shape results.
+- However, the above equation does not integrate to $1$, so normalization is required.
+
+---
+
+### Product of Gaussian Distributions (Summary)
+
+- The product of two Gaussian distributions becomes a Gaussian distribution when normalized.
+- The mean and precision of the resulting Gaussian distribution are:
+- $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$
+- <span style="color:red">Weighted average of the means of both distributions. Leaning toward the more accurate side</span>
+- $\Lambda = \Lambda_1 + \Lambda_2$
+- <span style="color:red">Simple sum of precisions. Always increasing</span>
+$\qquad$![w:600](./figs/gauss_multi.png)
+
+---
+
+## Summary of Gaussian Distribution
+
+- Various types of noise $\rightarrow$ are Gaussian distributed in variables
+- Universal
+- Reproducible
+- Useful for $\rightarrow$ programs where calculations often require only exponential calculations
+- Properties of variance and precision
+- For the distribution of a sum of variables: Simple sum of variances
+- For the product of distributions: Simple sum of precisions
