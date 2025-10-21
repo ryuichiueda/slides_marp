@@ -63,26 +63,26 @@ Sensor values and the robot's travel distance and direction errors shown in the 
 ### Why is it typical and representative?
 
 - Let's take a distance sensor as an example.
-- A wide variety of variability factors: temperature, humidity, vibration, external light, electrical fluctuations in the circuit, etc.
-- Consider the error $\varepsilon_{1:n}$ for each error factor.
-- Assume that the factors are independent of each other.
+    - A wide variety of variability factors: temperature, humidity, vibration, external light, electrical fluctuations in the circuit, etc.
+    - Consider the error $\varepsilon_{1:n}$ for each error factor.
+         - Assume that they are independent of each other.
 - Assume an error-free measurement value $x^*$.
-- $x = x^* + \sum_{i=1}^n \varepsilon_{i}$
-- The probability that all the values ​​of $\varepsilon_{1:n}$ are positive or negative is low.
-<span style="color:red">The closer the value of $\rightarrow \sum_{i=1}^n \varepsilon_{i}$ is to $0$, the higher the frequency.</span>
-- The distribution of $x$ follows a bell-shaped distribution centered on $x^*$.
+    - $x = x^* + \sum_{i=1}^n \varepsilon_{i}$
+- The probability that all the values of $\varepsilon_{1:n}$ are positive or negative is low.
+<span style="color:red">$\rightarrow$ The closer the value of $\sum_{i=1}^n \varepsilon_{i}$ is to $0$, the higher the frequency.</span>
+    - The distribution of $x$ follows a bell-shaped distribution centered on $x^*$.
 
-![bg right:35% 95%](./figs/gauss.png)
+![bg right:20% 95%](./figs/gauss.png)
 
 ---
 
-### Example of Data Fitting
+### Example of data fitting
 
 - For $\theta$ in the robot movement example (units are degrees)
-- Left: Fitting a Gaussian distribution to 20 trials
-- $(\mu, \sigma^2) = (11.8, 12.0)$
-- Right: Fitting after 100 more trials
-- $(\mu, \sigma^2) = (13.2, 12.8)$
+    - Left: Fitting a Gaussian distribution to 20 trials
+        - $(\mu, \sigma^2) = (11.8, 12.0)$
+    - Right: Fitting after 100 more trials
+        - $(\mu, \sigma^2) = (13.2, 12.8)$
 ![w:800](./figs/theta100_gauss.png)
 
 Let's consider various aspects (example on the next page)
@@ -92,14 +92,14 @@ Let's consider various aspects (example on the next page)
 ### Example of Data Fitting (Discussion)
 
 - The shape of the distribution cannot be determined from around 20 trials
-- The shape is quite different compared to 100 trials
+    - The shape is quite different compared to 100 trials
 - There is no significant difference between the fitted Gaussian distributions for 20 and 100 trials
-- Even after 20 trials, the mean and variance largely converge (in this case).
+    - Even after 20 trials, the mean and variance largely converge (in this case).
 - Will further trials result in a Gaussian distribution?
-- There may be significant error factors that prevent this.
-- This results in a superposition of two or more Gaussian distributions.
+    - There may be significant error factors that prevent this.
+        - This results in a superposition of two or more Gaussian distributions.
 
-![w:800](./figs/theta100_gauss.png)
+![w:600](./figs/theta100_gauss.png)
 
 ---
 
