@@ -195,11 +195,11 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
         - 共分散がなんなのかについては次ページ以降
 - 答え
     * $\sigma_{x+y}^2 = \left\langle \left\{ (x+y) - (\mu_x + \mu_y )\right\}^2 \right\rangle_{P(x,y)}$
-	$= \langle (x- \mu_x )^2 \rangle_{P(x,y)} + \langle (y- \mu_y )^2 \rangle_{P(x,y)} + 2 \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
-	$= \langle (x- \mu_x )^2 \rangle_{P(x)} + \langle (y- \mu_y )^2 \rangle_{P(y)} + 2 \sigma_{xy}$
+	$= \langle (x- \mu_x )^2 \rangle_{P(x,y)} + \langle (y- \mu_y )^2 \rangle_{P(x,y)} - 2 \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
+	$= \langle (x- \mu_x )^2 \rangle_{P(x)} + \langle (y- \mu_y )^2 \rangle_{P(y)} - 2 \sigma_{xy}$
 	（$\uparrow$p.12から）
-	$= \sigma_x^2 + \sigma_y^2 + 2 \sigma_{xy}$
-- それぞれの分散を足して、さらに$2\times$共分散を足す
+	$= \sigma_x^2 + \sigma_y^2 - 2 \sigma_{xy}$
+- それぞれの分散を足して、$2\times$共分散を引く
 
 ---
 
@@ -207,7 +207,7 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
 
 - $\sigma_{xy} = \big\langle (x- \mu_x )(y-\mu_y) \big\rangle_{P(x,y)}$
     - $\langle\  \rangle$の中
-        - $x$と$y$がそれぞれの平均を上回ると正
+        - $x$と$y$が両方それぞれの平均を上回るor下回ると正
         - 片方が上回って片方が下回ると負
     $\rightarrow$正負で$x$と$y$の相関関係が分かる
 - 相関係数（各自調査を）とは異なるので注意

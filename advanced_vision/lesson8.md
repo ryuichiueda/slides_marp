@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第8回: 画像とTransformer
+## 第8回: 画像処理と言語処理の融合
 
 千葉工業大学 上田 隆一
 
@@ -27,7 +27,8 @@ marp: true
 - CLIP
 - DALL·E
 - GLIDE
-- unCLIP（DALL·E 2）
+- DALL·E 2（unCLIP）
+- Stable Diffusion
 
 ---
 
@@ -322,8 +323,17 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-### その先
+### Stable Diffusion（v1）
 
 - Stable Diffusion
     - DALL·Eシリーズのライバル
     - 使いやすくて一気に普及
+
+--- 
+
+## まとめ
+
+- 言語処理の技術の画像への転用や画像処理との組み合わせを勉強
+- この間にもどんどん最新のサービスがリリースされている
+    - 新しい技術も開発されている
+- 扱っていないもの: 動画の理解や動画の生成
