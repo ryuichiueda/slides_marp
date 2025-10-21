@@ -257,7 +257,7 @@ $= \eta \exp\left\{ -\dfrac{1}{2\sigma^2}x^2 + \dfrac{\mu}{\sigma^2} x \right\}$
 
 ---
 
-### Product of Gaussian Distributions (Calculation)
+### Product of Gaussian distributions (calculation)
 
 - $\mathcal{N}(x | \mu_1, \sigma_1^2)\mathcal{N}(x | \mu_2, \sigma_2^2)$
 $=\eta \exp\left\{
@@ -266,24 +266,23 @@ $=\eta \exp\left\{
 \right\}$
 $=\eta \exp\left\{
 -\dfrac{1}{2}(\Lambda_1 + \Lambda_2) x^2 + (\mu_1 \Lambda_1 + \mu_2 \Lambda_2) x \right\}$
-- $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + Compare the shape with \mu\Lambda x \right\}$
-- $\Lambda = \Lambda_1 + \Lambda_2$
-- $\mu =(\mu_1 \Lambda_1 + \mu_2 \Lambda_2)/\Lambda = \dfrac{\mu_1 \Lambda_1 + \mu_2 \Lambda_2}{\Lambda_1 + \Lambda_2}$
-
-The same shape results.
-- However, the above equation does not integrate to $1$, so normalization is required.
+- Compare the shape with $\mathcal{N}(x|\mu, \sigma^2) = \eta \exp\left\{ -\dfrac{1}{2}\Lambda x^2 + \mu\Lambda x \right\}$
+    - $\Lambda = \Lambda_1 + \Lambda_2$
+    - $\mu =(\mu_1 \Lambda_1 + \mu_2 \Lambda_2)/\Lambda = \dfrac{\mu_1 \Lambda_1 + \mu_2 \Lambda_2}{\Lambda_1 + \Lambda_2}$
+(the same shape)
+        - The above equation does not integrate to $1$. Normalization is required.
 
 ---
 
-### Product of Gaussian Distributions (Summary)
+### Product of Gaussian distributions (summary)
 
 - The product of two Gaussian distributions becomes a Gaussian distribution when normalized.
-- The mean and precision of the resulting Gaussian distribution are:
-- $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$
-- <span style="color:red">Weighted average of the means of both distributions. Leaning toward the more accurate side</span>
-- $\Lambda = \Lambda_1 + \Lambda_2$
-- <span style="color:red">Simple sum of precisions. Always increasing</span>
-$\qquad$![w:600](./figs/gauss_multi.png)
+    - The mean and precision of the resulting Gaussian distribution are:
+        - $\mu = \dfrac{\Lambda_1}{\Lambda_1 + \Lambda_2}\mu_1 + \dfrac{\Lambda_2}{\Lambda_1 + \Lambda_2}\mu_2$
+            - <span style="color:red">Weighted average of the means of both distributions. Leaning toward the more accurate side</span>
+        - $\Lambda = \Lambda_1 + \Lambda_2$
+            - <span style="color:red">Simple sum of precisions. Always increasing</span>
+$\qquad$![w:400](./figs/gauss_multi.png)
 
 ---
 
