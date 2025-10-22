@@ -1,1 +1,26 @@
-- lesson1: https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1.html
+スライド（全9回を12週でこなします）
+
+- lesson1
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1-2.html
+- lesson2
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson2-1.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson2-2.html
+- lesson3: https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson3.html
+- lesson4:
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-1.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-2.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html
+- lesson5: https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson5.html
+- lesson6
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson6-1.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson6-2.html
+- lesson7
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson7-1.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson7-2.html
+- lesson8
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-1.html
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-2.html
+- lesson9
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson9-1.html
+    - （未完）
