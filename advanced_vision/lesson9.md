@@ -43,5 +43,7 @@ marp: true
 
 - 任意の時刻のノイズ画像が生成できない
     - 下図（再掲）
+    - 各時刻の学習に支障
+- FMはこれをなんとかした
 
 ![bg right:32% 100%](./figs/ddpm_training_data.png)
