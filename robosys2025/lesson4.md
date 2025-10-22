@@ -134,29 +134,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## ファイアウォール回避の設定
-
-今年からやらなくてよくなりました！！
-
-- ホーム下の`.ssh/config`というファイルに次のように記述
-    ```bash
-    $ cat ~/.ssh/config
-    ・・・
-    
-    Host github.com
-          Hostname ssh.github.com
-          User git
-          Port 443
-          IdentityFile ~/.ssh/id_rsa
-    
-    ・・・
-    ```
-    - SSHでデフォルトの22番ポートではなくHTTPSの443番ポートを使う設定
-        - 参考: https://docs.github.com/ja/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
-
-
----
-
 ## 2. GitHubへのコードの保存
 
 - やること
@@ -342,7 +319,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
             ans = 0　 #もともと0.0だったのを0に変更
             for line in sys.stdin:
                 try: 
-                    ans += int(line)   #intは文字列を整数に（失敗すると例外発生）
+                    ans += int(line)   #intは文字列を整数に（失敗すると例外発生）            
                 except:　
                     ans += float(line)
                        　 
@@ -371,7 +348,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
     [dev f02a202] Support integer calculation
      1 file changed, 5 insertions(+), 2 deletions(-)
     ###不要だけどGitHubにもプッシュしてみましょう###
-    $ git push --set-upstream origin dev   #origin: GitHubにあるリポジトリのこと
+    $ git push --set-upstream origin dev   #origin: GitHubにあるリポジトリのこと           
 	（略）
      - [new branch]      dev -> dev
     Branch 'dev' set up to track remote branch 'dev' from 'origin'.
@@ -387,7 +364,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
     - commit f02a20237590c9e4650f100928c6c2f969c111c3 (HEAD -> dev, origin/dev)
     |     Support integer calculation
     |
-    - commit fa8aab8a2ade8cd33823f488fbb1bbec6d981260 (origin/main, origin/HEAD, main)
+    - commit fa8aab8a2ade8cd33823f488fbb1bbec6d981260 (origin/main, origin/HEAD, main)                  
     |     Add a command
     |
     - commit 68d342fbb7a9b65e402d0b6f5a7763e56f248937
@@ -407,7 +384,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
 - mainへの<span style="color:red">マージ</span>とGitHubへのプッシュ
     - まずmainブランチに戻って変更内容の確認
         ```bash
-        $ git switch main        # git checkout mainでも可
+        $ git switch main        # git checkout mainでも可                                
         Switched to branch 'main'
         Your branch is up to date with 'origin/main'.
         $ git diff main dev
@@ -416,7 +393,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
     - mainにdevの中身をマージ（併合）してGitHubに反映
         ```bash
         $ git merge dev #下の出力には省略あり
-         1 file changed, 5 insertions(+), 2 deletions(-)
+         1 file changed, 5 insertions(+), 2 deletions(-)                               
         $ cat plus_stdin 
         （略．try...exceptの入ったコードが表示される）
         $ git push
@@ -458,7 +435,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         ```python
         #!/usr/bin/python3
         import sys
-        　   #スライドの関係で1行だけど、本来、関数の前後は2行空白をあける
+        　   #スライドの関係で1行だけど、本来、関数の前後は2行空白をあける                
         def tonum(s):   #def 関数の名前(引数)で関数を定義
             try:
                 return int(s)
@@ -472,7 +449,6 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         print(ans)
         ```
         - <span style="color:red">忘れずpushを</span>
-
 
 ---
 
@@ -492,7 +468,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
         To github.com:ryuichiueda/robosys202x
          ! [rejected]        main -> main (non-fast-forward)
         error: failed to push some refs to 'git@github.com:ryuichiueda/robosys202x'
-        hint: Updates were rejected because the tip of your current branch is behind
+        hint: Updates were rejected because the tip of your current branch is behind             
         hint: its remote counterpart. Integrate the remote changes (e.g.
         hint: 'git pull ...') before pushing again.
         hint: See the 'Note about fast-forwards' in 'git push --help' for details.
@@ -521,7 +497,7 @@ $\Longrightarrow$`README.md`がひとつ存在したリポジトリができる
             =======                     #Aの内容
             
             def tonum(s):
-            >>>>>>> a4936f439aed64b3234d533c6e7a3abc7b5d744d
+            >>>>>>> a4936f439aed64b3234d533c6e7a3abc7b5d744d                        
             （以下略）
             ```
 

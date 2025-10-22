@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第8回: 画像とTransformer
+## 第8回: 画像処理と言語処理の融合
 
 千葉工業大学 上田 隆一
 
@@ -22,10 +22,13 @@ marp: true
 ## 今日やること
 
 - Vision Transformer
+- Image GPT
 - Diffusion Transformer
-- DALL·E
 - CLIP
-- unCLIP（DALL・E 2）
+- DALL·E
+- GLIDE
+- DALL·E 2（unCLIP）
+- Stable Diffusion
 
 ---
 
@@ -95,11 +98,37 @@ marp: true
 
 ---
 
+## Image GPT[[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html)（[サイト](https://openai.com/ja-JP/index/image-gpt/)）（[動画](https://www.youtube.com/watch?v=7rFLnQdl22c)）
+
+- GPTの画像版
+    - GPT-2の構造を使用
+    - パラメータ数: iGPT-Lというモデルで$13.6$億
+- 画像を途中まで入力して、次の画素を当てさせる
+    - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)と同じ問題
+- GPT同様、ヘッドをつけてファインチューニングすると他のタスクに利用可能
+
+---
+
+### Image GPTの学習
+
+- 2種類の訓練方法
+    - 次の画素の予測（GPT的）
+    - 穴埋め問題（BERT的）
+- 埋め込みに相当するベクトル: 画像の解像度を下げて1列に並べたもの
+    - サイト: $32^2$, $48^2$ or $64^2$pixel
+    - 論文: $32^2$, $48^2$, $96^2$ or $192^2$pixel
+        - $32^2$ or $48^2$の時は色をRGBからカラーパレットに（昔の計算機の方式）
+        - $96^2$, $192^2$pixelのときはVQ-VAEで圧縮（それぞれ$16^2, 34^2$の符号列に）
+
+
+
+---
+
 ## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
 
 - 拡散モデル+Transformer
     - さらに潜在空間に情報を圧縮する潜在拡散モデルも使用
-    - ラベルを入力して出力をコントロール（分類器なしガイダンス）
+    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
 - 構造
     - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
         - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
@@ -107,42 +136,6 @@ marp: true
                 - 層正則化のラベルつきバージョン（？）
         - 出力: 画素ごとのノイズの平均値と分散
     - 画像のサイズを落とすためにVAEを使用
-
----
-
-### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598)
-
-- ラベルにしたがった画像が生成されるようにノイズのパターンを誘導
-- 方法
-    - 画像の雑音除去をするANNのどこかに、
-    ラベルによって雑音除去のパターンを層を入れる
-        - ラベルがないと通常の雑音除去をする
-    - ラベルがある場合とない場合の両方の訓練データで学習
-- 使い方: ラベルの影響を調節して出力を制御
-    - $\lambda$としましょう（$0 \le \lambda \le 1$）
-        - $\lambda = 0$: 画像をランダムに生成
-        - $\lambda = 1$: ラベルに対応する画像を生成
-        - $0 < \lambda < 1$: 中間的な画像を生成
-
----
-
-## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
-
-- 句や文から画像を生成
-    - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
-- Transformerに、文章の続きとして画像を考えさせる
-- 使うもの
-    - Transformer（デコーダ）
-    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#5)の亜種
-        - discrete VAE（dVAE）と呼んでいる（言葉の意味を考えるとVQ-VAEがdiscrete VAEの一種？）
-
----
-
-### DALL·Eの学習
-
-- ステップ1: 集めてきた画像を使ってVQ-VAEに学習させる
-    - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
-- ステップ2: 入力文の後ろに符号列を生成するようにTransformerを学習
 
 
 ---
@@ -240,11 +233,62 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-## unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)（DALL・E 2）
+## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
 
-https://www.youtube.com/watch?v=qTgPSKKjfVg&t=104s
+- 句や文から画像を生成
+    - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
+    - https://openai.com/ja-JP/index/dall-e/
+- Transformerに、文章の続きとして画像を考えさせる
+- 使うもの
+    - Transformer（デコーダ）
+        - GPT-3の改造版
+        - 画像も埋め込みベクトルにして入力できるように
+    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
+        - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
 
-- テキストから画像を生成
+
+---
+
+### DALL·Eの学習
+
+- キャプションと画像がペアになったものを訓練データに
+    - CLIPと同じ
+- Stage 1: 集めてきた画像を使ってdVAEに学習させる
+    - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
+- Stage 2: 入力文の後ろに符号列を生成するようにTransformerを学習
+
+![bg right:45% 100%](./figs/dall-e.svg)
+
+
+---
+
+### DALL·Eによる画像の生成
+
+
+- 前ページステージ2の構成で
+    - https://openai.com/ja-JP/index/dall-e/ のサイト
+       - 512枚の画像を生成して、CLIPでランク付けして上位32枚を出力
+       - 遊んでみましょう
+
+---
+
+## GLIDE[[Nichol 2021]](https://arxiv.org/abs/2112.10741)
+
+- Guided Language to Image Diffusion for generation and Editingの頭文字
+    - generationがかわいそう
+    - 「言語で誘導された画像の生成、編集のための拡散モデル」
+- 自然言語+[分類器なしガイダンス](lesson4-2.html#5)で拡散モデルに画像を生成させる
+    - （他、「CLIPガイダンス」も試されたが分類器なしのほうが結果がよかった）
+    - 自然言語をエンコードしたものを分類器なしガイダンスのラベルに利用
+    - 構造はU-Net
+- 生成される画像: 論文の図1
+- ファインチューニングで画像の一部をテキストで改変できる（image inpainting）: 論文の図2, 3, 4
+
+---
+
+## DALL·E 2（[公式の動画](https://www.youtube.com/watch?v=qTgPSKKjfVg)）
+
+- DALL·Eの後継
 - 基本的なアイデア
     - CLIPを使う
     - テキストと画像が同じ潜在空間にいるので、
@@ -257,23 +301,55 @@ https://www.youtube.com/watch?v=qTgPSKKjfVg&t=104s
 
 - 点線の上: CLIP（学習のときに使う）
 - 点線の下: 生成の部分
-    - 事前モデル（prior）とデコーダで構成
+    - 事前モデル（prior）とデコーダ（ほぼGLIDE）で構成
 
 <span style="font-size:70%">[画像: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
 ![](./figs/unclip.png)
 
 ---
 
-### 事前モデルとデコーダ
+### 事前モデル+デコーダ（unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)）
 
-- 事前モデル
-    - テキストのベクトル（潜在空間にある）を画像の種に変換
-        - 画像の種: 拡散モデルに使うベクトル
-        - テキストのベクトルはCLIPの潜在空間（テキストと画像が混在）にあるので、そのまま画像が作れそうだが、それだと性能が出ない（らしい）
-    - 構成: 拡散モデル+Transformerデコーダ
-        - 入力はテキストのベクトルだがテキストも入力
-- デコーダ
-    - 事前モデルの出力と、テキスト
-    - 構成: 拡散モデル
+- テキスト$\boldsymbol{y}$からの画像$\boldsymbol{x}$の推定（生成）の問題を冗長化
+    - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
+    - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストのCLIPでの特徴ベクトル
+    - 数式上は冗長だが学習のときにヒントが増えて質が向上
+- 最後の項: $p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
+    - 後ろの確率分布: 事前モデル
+        - 質の高い画像の特徴ベクトルを出力
+        - 単にテキストの特徴ベクトルを出力するのではなく、テキストも入力して強化
+    - 前の確率分布: デコーダ
+        - こちらもテキストを再度入力
 
-<center>テキストを何度も入力</center>
+---
+
+### Stable Diffusion
+
+- サービスのサイト: https://stablediffusionweb.com/ja
+- DALL·Eシリーズのライバル
+- 使いやすくて一気に普及
+- 50億枚の画像を訓練に使用
+
+---
+
+### Stable Diffusion（v1）の構造（Latent Diffusion Models、LDM）[[Rombach 2021]](https://arxiv.org/abs/2112.10752)
+
+- [[Rombach 2021]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+    - 上部の$x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$の部分は訓練用
+        - 訓練画像を潜在空間のベクトルに変換してからDDPMで拡散
+            - 潜在空間: [[Esser 2020]](https://arxiv.org/abs/2012.09841)で提案された<span style="color:red">VQGAN</span>のもの
+                - 要はVQ-VAEのGAN版
+                - 図中のピンク色の部分がVQGAN（の変種）
+    - 下部の$\tilde{x}\leftarrow z_T$の部分が画像の生成部分
+        - ノイズを潜在空間のベクトル$z$に戻す（U-Net）
+        - テキストや画像の埋め込み（図の白枠内で生成）によるガイダンスを交差注意機構で行う
+            - 基本、行列の計算なのでU-Net内にも組み込める
+
+--- 
+
+## まとめ
+
+- 言語処理の技術の画像への転用や画像処理との組み合わせを勉強
+- この間にもどんどん最新のサービスがリリースされている
+    - 新しい技術も開発されている
+- 扱っていないもの: 動画の理解や動画の生成
