@@ -35,5 +35,13 @@ marp: true
         - 変換にはノイズを乗せていく方法が取られた
 - FL: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
 
-
 ![w:900](./figs/ddpm.svg)
+
+---
+
+### 前ページのアイデアの問題
+
+- 任意の時刻のノイズ画像が生成できない
+    - 下図（再掲）
+
+![bg right:32% 100%](./figs/ddpm_training_data.png)
