@@ -1,26 +1,16 @@
-スライド（全9回を12週でこなします）
-
-- lesson1
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1-2.html
-- lesson2
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson2-1.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson2-2.html
-- lesson3: https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson3.html
-- lesson4:
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-1.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-2.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html
-- lesson5: https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson5.html
-- lesson6
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson6-1.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson6-2.html
-- lesson7
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson7-1.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson7-2.html
-- lesson8
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-1.html
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-2.html
-- lesson9
-    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson9-1.html
-    - （未完）
+[確率ロボティクス第1回（その2）: 統計の基礎と代表値](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1-2.html)
+[確率ロボティクス第1回（その1）: イントロダクション](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson1.html)
+[確率ロボティクス第2回（その1）: 確率と信頼性工学](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson2-1.html)
+[確率ロボティクス第2回（その2）: 確率変数，確率質量関数と確率分布](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson2-2.html)
+[確率ロボティクス第3回: 期待値](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson3.html)
+[確率ロボティクス第4回: 連続値と多変量（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-1.html)
+[確率ロボティクス第4回: 連続値と多変量（その2）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-2.html)
+[確率ロボティクス第4回: 連続値と多変量（その3）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html)
+[確率ロボティクス第5回: 試行回数と信頼性](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson5.html)
+[確率ロボティクス第6回: 動く確率分布（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson6-1.html)
+[確率ロボティクス第6回: 動く確率分布（その2）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson6-2.html)
+[確率ロボティクス第7回: センシングと推定（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson7-1.html)
+[確率ロボティクス第7回: センシングと推定（その2）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson7-2.html)
+[確率ロボティクス第8回: 機械学習（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-1.html)
+[確率ロボティクス第8回: 機械学習（その2）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-2.html)
+[確率ロボティクス第9回: 行動決定（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson9-1.html)
