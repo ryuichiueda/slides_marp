@@ -94,8 +94,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 補足（多い）
         - 実は書いていなくても権利は守られるが最低でも自分の名前は記述
             - <span style="color:red">ベルヌ条約</span>
-            - 「Copyright: 2022 Ryuichi Ueda, all right reserved」等，多少違って書いても大丈夫
-        - コードのように手を入れるものの公開年は，2020-2022などと範囲指定
+            - 「Copyright: 2025 Ryuichi Ueda, all right reserved」等，多少違って書いても大丈夫
+        - コードのように手を入れるものの公開年は，2020-2025などと範囲指定
 
 <center style="color:red">大切なこと: いつ，誰が作ったものかを明記！</center>
 
@@ -120,7 +120,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - `plus_stdin`の冒頭に公開年と名前を表記
     ```python
     #!/usr/bin/python3
-	# SPDX-FileCopyrightText: 2024 Ryuichi Ueda <付けたければメールアドレス>
+	# SPDX-FileCopyrightText: 2025 Ryuichi Ueda <付けたければメールアドレス>
     
     import sys
     ・・・
@@ -287,7 +287,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - GPL 3.0の場合
     ```python
     #!/usr/bin/python3
-    # SPDX-FileCopyrightText: 2022 Ryuichi Ueda 　　　　　
+    # SPDX-FileCopyrightText: 2025 Ryuichi Ueda 　　　　　
     # SPDX-License-Identifier: GPL-3.0-only
     
     import sys
@@ -296,7 +296,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 3条項BSDの場合
     ```python
     #!/usr/bin/python3
-    # SPDX-FileCopyrightText: 2022 Ryuichi Ueda 　　　　　
+    # SPDX-FileCopyrightText: 2025 Ryuichi Ueda 　　　　　
     # SPDX-License-Identifier: BSD-3-Clause
     
     import sys
@@ -311,16 +311,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 最低限，次のように書いておくとよいでしょう．
         ```python
         - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-        - © 2022 Ryuichi Ueda
+        - © 2025 Ryuichi Ueda
         ```
 - 利用しているライブラリやコード，ドキュメントの著作権のリストも記述
     - ライセンスに縛られてなくても，書いておくのがよいでしょう
         ```python
         - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
-        - このパッケージは，aaa由来のコード（© 2022 Hoge Fuge）を利用しています．
+        - このパッケージは，aaa由来のコード（© 2025 Hoge Fuge）を利用しています．
         - このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
-            - [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
-        - © 2022 Ryuichi Ueda
+            - [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2025)
+        - © 2025 Ryuichi Ueda
         ```
     - このスライドにちょくちょく出てる「CC-BY-SA 4.0」とかって何？
         - 昨年度までの動画をご覧ください（クリエイティブ・コモンズのパート）
