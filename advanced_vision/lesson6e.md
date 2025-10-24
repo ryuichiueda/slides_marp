@@ -194,27 +194,27 @@ Ryuichi Ueda, Chiba Institute of Technology
 - Predicts the next word after the decoder input with a fully connected layer
     - Can be trained like a skip-gram
     - Output is the probability that each token will appear next
-        - Dimension: the number of the token types.
+        - Dimension: number of the token types
 - Learning progresses by backpropagating the error in this area.
     - Loss function: Cross entropy
         - $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
 $= - \log Q(\boldsymbol{e}^*)$
-            - $P$ is the correct answer, and $Q$ is the output.
+            - $P$: the correct answer. $Q$: the output.
             - $\boldsymbol{e}^*$: The correct token.
 
-![bg right:20% 125%](./figs/transformer_prediction.png)
+![bg right:30% 125%](./figs/transformer_prediction.png)
 
 ---
 
 ### Summary of the Transformer (for translation) architecture
 
 - What kind of problem was it solving? $\rightarrow$Probability problems like this
-- $\Pr\{$next word$|$original sentence$,\quad\!\!\!\!$original sentence$\}$
+    - $\Pr\{$next word$|$original sentence$,\quad\!\!\!\!$original sentence$\}$
 - Transformer innovations
-- Adding location information to the original and original sentences
-- Considering context
-- Using a self-attention mechanism to identify notable points from the original sentence and incorporate them into the embedding (encoder)
-- Using a self-attention mechanism to consider context in the original sentence, and then incorporating the context from the encoder using a cross-attention mechanism
+    - Adding location information to the original and original sentences
+    - Considering context
+        - Using the self-attention mechanism to identify notable points from the original sentence and incorporate them into the embedding (encoder)
+        - Using the self-attention mechanism to consider context in the original sentence, and then incorporating the context from the encoder using the cross-attention mechanism
 
 ---
 ## Applications of Transformer
