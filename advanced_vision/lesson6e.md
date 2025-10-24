@@ -162,6 +162,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
+
 ### Decoder (and Head)
 
 - The main body is in the green box.
@@ -174,11 +175,89 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### The Decoder Body
+### Structure of Decoder
 
 - (Self-Attention + Cross-Attention + Feedforward Layer) $\times N$
 - Self-Attention
-- $H_\text{dec}$ is manipulated by taking into account the context of the sentence being translated.
-- "Masked" in the diagram means: A mechanism for masking the latter half of a sentence.
-- During training, completed translation examples are input, so it is necessary to mask the latter half.
-- Example: When training to think of what comes after "This is," the input is "This is a pen.", so the corresponding "a pen" in $W_X$ is used.
+    - Manipulates $H_\text{dec}$ by considering the context of the sentence during translation
+    - "Masked" in the diagram means: A mechanism for masking the latter half of a sentence
+        - During training, completed translation examples are input, so this is necessary
+        - Example: When training to think what comes next after "This is," the input is "This is a pen.", so the element corresponding to "a pen" in $W_X$ is masked.
+- Cross-Attention: Reflects the decoder output $H'_\text{enc}$
+
+![bg right:15% 100%](./figs/transformer_decoder2.png)
+
+---
+
+### Beyond the Decoder
+
+- Predicts the next word after the decoder input with a fully connected layer
+- Can be trained like a skip-gram
+- Output is the probability that each token will appear next
+- There are as many dimensions as there are token types.
+- Learning progresses by backpropagating the error in this area.
+- Loss function: Cross entropy
+- $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
+$= - \log Q(\boldsymbol{e}^*)$
+- $P$ is the correct answer, and $Q$ is the output.
+- $\boldsymbol{e}^*$: The correct token.
+
+![bg right:40% 125%](./figs/transformer_prediction.png)
+
+---
+
+### Summary of the Transformer (for translation) architecture
+
+- What kind of problem was it solving? $\rightarrow$Probability problems like this
+- $\Pr\{$next word$|$original sentence$,\quad\!\!\!\!$original sentence$\}$
+- Transformer innovations
+- Adding location information to the original and original sentences
+- Considering context
+- Using a self-attention mechanism to identify notable points from the original sentence and incorporate them into the embedding (encoder)
+- Using a self-attention mechanism to consider context in the original sentence, and then incorporating the context from the encoder using a cross-attention mechanism
+
+---
+## Applications of Transformer
+
+- Sentiment analysis
+- Sentence generation
+
+(More advanced topics will be covered next time.)
+
+---
+
+### Sentiment analysis using a Transformer encoder
+
+- Considering applying Transformer to classification tasks
+- Input: Sentence (e.g., "I found a 100 yen coin today.")
+- Output: Emotion (happy, happy, sad, etc.)
+- Can be configured with an encoder [[Nakai 2025]](https://gihyo.jp/book/2025/978-4-297-14972-7)
+- Add a token (class token) called `[CLS]` to the beginning of a sentence for training.
+- After training, the output class token gathers information for analysis.
+- This basic structure can be used as is for object recognition using the Vision Transformer (next time).
+
+![bg right:30% 100%](./figs/sentiment_analysis.png)
+
+---
+
+### Sentence generation using a Transformer encoder
+
+Also from [[Nakai 2025]](https://gihyo.jp/book/2025/978-4-297-14972-7) (Section 4.3.2)
+
+- Training with the configuration shown on the right allows for random sentence generation.
+- Because context is taken into account, the output is fairly natural (though there is no guarantee that the content is correct).
+- GPT uses a decoder (we will do this in the next post or later).
+
+![bg right:20% 90%](./figs/transformer_encoder_generator.png)
+
+---
+
+## Summary
+
+- Transformer Encoder
+- Reflecting context in embedding
+- Adding location information ($\rightarrow$) and self-attention
+- Transformer Decoder
+- Encoder functionality plus cross-attention allows for other languages ​​to be reflected in the context.
+- Masking during training
+- Other References: [[Kikuta 2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
