@@ -229,14 +229,14 @@ $= - \log Q(\boldsymbol{e}^*)$
 ### Sentiment analysis using a Transformer encoder
 
 - Considering applying Transformer to classification tasks
-- Input: Sentence (e.g., "I found a 100 yen coin today.")
-- Output: Emotion (happy, happy, sad, etc.)
+    - Input: Sentence (e.g., "I found a 100 yen coin today.")
+    - Output: Emotion (happy, happy, sad, etc.)
 - Can be configured with an encoder [[Nakai 2025]](https://gihyo.jp/book/2025/978-4-297-14972-7)
-- Add a token (class token) called `[CLS]` to the beginning of a sentence for training.
-- After training, the output class token gathers information for analysis.
+    - Add a token (class token) called `[CLS]` to the beginning of a sentence for training.
+    - After training, the output class token gathers information for analysis.
 - This basic structure can be used as is for object recognition using the Vision Transformer (next time).
 
-![bg right:30% 100%](./figs/sentiment_analysis.png)
+![bg right:20% 100%](./figs/sentiment_analysis.png)
 
 ---
 

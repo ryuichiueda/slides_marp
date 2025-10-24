@@ -339,15 +339,21 @@
 <p>(More advanced topics will be covered next time.)</p>
 <footer>Advanced Vision Lesson 6</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="20" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/sentiment_analysis.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="18" data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="20" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="20" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/sentiment_analysis.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="18" data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="20" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="sentiment-analysis-using-a-transformer-encoder">Sentiment analysis using a Transformer encoder</h3>
 <ul>
-<li>Considering applying Transformer to classification tasks</li>
+<li>Considering applying Transformer to classification tasks
+<ul>
 <li>Input: Sentence (e.g., &quot;I found a 100 yen coin today.&quot;)</li>
 <li>Output: Emotion (happy, happy, sad, etc.)</li>
-<li>Can be configured with an encoder <a href="https://gihyo.jp/book/2025/978-4-297-14972-7">[Nakai 2025]</a></li>
+</ul>
+</li>
+<li>Can be configured with an encoder <a href="https://gihyo.jp/book/2025/978-4-297-14972-7">[Nakai 2025]</a>
+<ul>
 <li>Add a token (class token) called <code>[CLS]</code> to the beginning of a sentence for training.</li>
 <li>After training, the output class token gathers information for analysis.</li>
+</ul>
+</li>
 <li>This basic structure can be used as is for object recognition using the Vision Transformer (next time).</li>
 </ul>
 <footer>Advanced Vision Lesson 6</footer>
