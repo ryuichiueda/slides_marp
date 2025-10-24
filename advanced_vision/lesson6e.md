@@ -47,14 +47,14 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Encoder
 
-- The dark yellow frame is the main body.
-- "Nx layers": Concatenating multiple layers.
-- See the next page for details.
+- Main part: in the dark yellow frame
+    - "Nx layers": Concatenating multiple layers.
+    - See the next page for details.
 - Input (bottom of the figure): $H_\text{enc} = \sqrt{D}E + P$
-- $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
-- Sentence (a sequence of tokens represented as a $D$-dimensional vector)
+    - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
+        - Sentence (a sequence of tokens represented as a $D$-dimensional vector)
 - Output: $H_\text{enc}'$ with weights changed according to the decoder's work.
-- Context is reflected.
+    - Context is reflected.
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
@@ -64,10 +64,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - The three "Norm"s in the figure
 - Normalize the elements of each vector $\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$ to equalize the influence of each vector.
-- How to normalize?
-- 1: The mean of $h_{1:D}$ is $0$ and the standard deviation is $1$.
-- 2: For each $h_i$, parameters $\gamma_i, \beta_i$ (training target) are prepared and transformed into $\gamma_ih_i + \beta_i$.
-- Because the importance of each element varies depending on its position.
+    - How to normalize?
+        - 1: The mean of $h_{1:D}$ is $0$ and the standard deviation is $1$.
+        - 2: For each $h_i$, parameters $\gamma_i, \beta_i$ (training target) are prepared and transformed into $\gamma_ih_i + \beta_i$.
+            - Because the importance of each element varies depending on its position.
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
@@ -76,12 +76,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### <span style="color:red">Self-Attention Mechanism</span>
 
 - Changes token vectors based on the system's own information.
-- Reflects context (see next page for details).
+    - Reflects context (see next page for details).
 - Mechanism: Q, K, and V are all generated from the input to the system.
-- Query: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span> (previously it was $H_\text{dec}$).
-- Key: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span> (same as above)
-- Value: $V= W_\text{V}H_\text{enc}$
-- Output: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+    - Query: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span> (previously it was $H_\text{dec}$).
+    - Key: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span> (same as above)
+    - Value: $V= W_\text{V}H_\text{enc}$
+    - Output: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 - The previous attention mechanism was <span style="color:red">Cross Attention Mechanism</span>
 
 ![bg right:20% 100%](./figs/transformer_kvq.png)
