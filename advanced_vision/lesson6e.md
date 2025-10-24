@@ -102,16 +102,15 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Multi-head Attention
 
-- Transformer implementations split the attention mechanism into multiple parts.
-- $W_\text{K}, W_\text{V}, W_\text{Q}$ ($D \times D$ matrix) is divided.
-- $Q^{(m)}= W_\text{Q}^{(m)}H$
-- $K^{(m)}= W_\text{K}^{(m)}H$
-- $V^{(m)}= W_\text{V}^{(m)}H\quad$ ($m=1, 2, \dots, M$)
-- $W_X^{(m)}$: $(D/M) \times D$ matrix obtained by cutting $W_X$ horizontally.
-- In terms of ANNs, connections are broken every $m$ and become independent.
-- Each one changes how it interprets the sentence.
-(Apparently, it is trained to do so.)
-- The output $Q^{(m)}, K^{(m)}, and V^{(m)}$ are combined$\rightarrow$ to return the original $D \times D$ matrix.
+- Split the attention mechanism into multiple parts.
+    - $W_\text{K}, W_\text{V}, W_\text{Q}$ ($D \times D$ matrix) is divided.
+        - $Q^{(m)}= W_\text{Q}^{(m)}H$
+        - $K^{(m)}= W_\text{K}^{(m)}H$
+        - $V^{(m)}= W_\text{V}^{(m)}H\quad$ ($m=1, 2, \dots, M$)
+            - $W_X^{(m)}$: $(D/M) \times D$ matrix obtained by cutting $W_X$ horizontally.
+    - In terms of ANNs, connections are broken every $m$ and become independent.
+        - Each one changes how it interprets the sentence. (It is trained to do so.)
+- The $m$ outputs are combined$\rightarrow$ return to $D \times D$ matrix.
 
 ![bg right:20% 100%](./figs/transformer_kvq.png)
 
