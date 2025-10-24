@@ -245,7 +245,7 @@ $= - \log Q(\boldsymbol{e}^*)$
 Also from [[Nakai 2025]](https://gihyo.jp/book/2025/978-4-297-14972-7) (Section 4.3.2)
 
 - Training with the configuration shown on the right allows for random sentence generation.
-- Because context is taken into account, the output is fairly natural (though there is no guarantee that the content is correct).
+    - Because context is taken into account, the output is fairly natural (though there is no guarantee that the content is correct).
 - GPT uses a decoder (we will do this in the next post or later).
 
 ![bg right:20% 90%](./figs/transformer_encoder_generator.png)
