@@ -162,7 +162,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
-### Decoder (and Attachment)
+### Decoder (and Head)
 
 - The main body is in the green box.
     - Receives a matrix $H_\text{dec}$ corresponding to the sentence up to that point.
