@@ -172,22 +172,37 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="" data-marpit-pagination-total="14" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:28%;" data-marpit-pagination-total="14" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/transformer_encoder.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="72%" height="720"><section id="9" data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:28%;" data-marpit-pagination-total="14" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="feedforward-layer-fully-connected-layer">Feedforward layer (fully connected layer)</h3>
 <ul>
-<li>Text passed through the self-attention mechanism is passed through.</li>
+<li>Text passed through the self-attention mechanism is passed through.
+<ul>
 <li>The upper of the two dotted boxes in the right figure.</li>
-<li>Features are further emphasized through a nonlinear activation function (the original was ReLU).</li>
+<li>Features are further emphasized through a nonlinear activation function (ReLU in the original Transformers).</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Lesson 6</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="" data-marpit-pagination-total="14" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="14" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/transformer_encoder_body.png&quot;);background-size:95%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="10" data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="--footer:Advanced Vision Lesson 6;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="14" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="additional-notes-1">Additional Notes 1</h3>
 <ul>
-<li>Both the attention mechanism and the feedforward layer use skip connections.</li>
+<li>Both the attention mechanism and the feedforward layer use skip connections.
+<ul>
 <li>Each layer learns and outputs differentials.</li>
-<li>To provide easy-to-understand input to each layer at the beginning of learning.</li>
+<li>To provide easy-to-understand input to each layer at the beginning of learning.
+<ul>
 <li>Necessary because the layers are deep.</li>
-<li>Although not shown in the figure, dropout layers are used in several places.</li>
-<li>Dropout: A process that disables a certain percentage of neurons per learning unit (batch).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Although not shown in the figure, dropout layers are used in several places.
+<ul>
+<li>Dropout: a process that disables a certain percentage of neurons per learning unit (batch).
+<ul>
 <li>Prevents overfitting by not assigning specific roles to specific neurons.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Lesson 6</footer>
 </section>

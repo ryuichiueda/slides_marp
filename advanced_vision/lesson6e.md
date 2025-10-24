@@ -119,8 +119,8 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Feedforward layer (fully connected layer)
 
 - Text passed through the self-attention mechanism is passed through.
-- The upper of the two dotted boxes in the right figure.
-- Features are further emphasized through a nonlinear activation function (the original was ReLU).
+    - The upper of the two dotted boxes in the right figure.
+    - Features are further emphasized through a nonlinear activation function (ReLU in the original Transformers).
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
@@ -129,12 +129,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Additional Notes 1
 
 - Both the attention mechanism and the feedforward layer use skip connections.
-- Each layer learns and outputs differentials.
-- To provide easy-to-understand input to each layer at the beginning of learning.
-- Necessary because the layers are deep.
+    - Each layer learns and outputs differentials.
+    - To provide easy-to-understand input to each layer at the beginning of learning.
+        - Necessary because the layers are deep.
 - Although not shown in the figure, dropout layers are used in several places.
-- Dropout: A process that disables a certain percentage of neurons per learning unit (batch).
-- Prevents overfitting by not assigning specific roles to specific neurons.
+    - Dropout: a process that disables a certain percentage of neurons per learning unit (batch).
+        - Prevents overfitting by not assigning specific roles to specific neurons.
 
 ![bg right:20% 95%](./figs/transformer_encoder_body.png)
 
