@@ -19,12 +19,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 <!-- paginate: true -->
 
-## What to do today
+## Contents
 
-- The Structure of the Transformer
-- A Simple Application of the Transformer
+- The Structure of Transformer
+- A Simple Application of Transformer
 
-(More complex applications will be discussed next time.)
+(More complex applications will be discussed next lesson.)
 
 ---
 
