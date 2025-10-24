@@ -255,9 +255,9 @@ Also from [[Nakai 2025]](https://gihyo.jp/book/2025/978-4-297-14972-7) (Section 
 ## Summary
 
 - Transformer Encoder
-- Reflecting context in embedding
-- Adding location information ($\rightarrow$) and self-attention
+    - Reflecting context in embedding
+       - Adding location information ($\rightarrow$) and self-attention
 - Transformer Decoder
-- Encoder functionality plus cross-attention allows for other languages ​​to be reflected in the context.
-- Masking during training
+    - Encoder functionality plus cross-attention allows for other languages to be reflected in the context.
+    - Masking during training
 - Other References: [[Kikuta 2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
