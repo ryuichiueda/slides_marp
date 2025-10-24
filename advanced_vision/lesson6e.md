@@ -153,10 +153,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Encoder Summary
 
 - Trained to achieve the following behavior:
-- Receives a sentence as a matrix $H_\text{enc}$, which is a list of token vectors and adds positional information.
-- Operates each vector in $H$ according to the context using a self-attention mechanism and a fully connected layer.
-- Repeats the above steps.
-- Outputs $H'_\text{enc}$, which reflects the context.
+    - Receives a sentence as a matrix $H_\text{enc}$, which is a list of token vectors and adds positional information.
+    - Operates each vector in $H$ according to the context using a self-attention mechanism and a fully connected layer.
+        - Repeats the above steps.
+    - Outputs $H'_\text{enc}$, which reflects the context.
 - The backpropagation error received depends on the decoder.
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
