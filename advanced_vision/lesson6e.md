@@ -162,15 +162,15 @@ Ryuichi Ueda, Chiba Institute of Technology
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
-### Decoder (and Beyond the Decoder)
+### Decoder (and Attachment)
 
 - The main body is in the green box.
-- Receives a matrix $H_\text{dec}$ corresponding to the sentence up to that point.
+    - Receives a matrix $H_\text{dec}$ corresponding to the sentence up to that point.
 - An ANN is connected after the decoder to perform the specific task.
-- In the case of translation, a fully connected layer is used to predict the next word.
-- The decoder changes $H_\text{dec}$ to $H'_\text{dec}$ to make this task easier.
+    - In the case of translation, a fully connected layer is used to predict the next word.
+    - The decoder changes $H_\text{dec}$ to $H'_\text{dec}$ to make this task easier.
 
-![bg right:50% 100%](./figs/transformer_decoder.png)
+![bg right:45% 100%](./figs/transformer_decoder.png)
 
 ---
 
