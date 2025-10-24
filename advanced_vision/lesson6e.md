@@ -189,20 +189,20 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Beyond the Decoder
+### Head
 
 - Predicts the next word after the decoder input with a fully connected layer
-- Can be trained like a skip-gram
-- Output is the probability that each token will appear next
-- There are as many dimensions as there are token types.
+    - Can be trained like a skip-gram
+    - Output is the probability that each token will appear next
+        - Dimension: the number of the token types.
 - Learning progresses by backpropagating the error in this area.
-- Loss function: Cross entropy
-- $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
+    - Loss function: Cross entropy
+        - $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
 $= - \log Q(\boldsymbol{e}^*)$
-- $P$ is the correct answer, and $Q$ is the output.
-- $\boldsymbol{e}^*$: The correct token.
+            - $P$ is the correct answer, and $Q$ is the output.
+            - $\boldsymbol{e}^*$: The correct token.
 
-![bg right:40% 125%](./figs/transformer_prediction.png)
+![bg right:20% 125%](./figs/transformer_prediction.png)
 
 ---
 
