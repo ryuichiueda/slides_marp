@@ -142,10 +142,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Additional Notes 2
 
-- GELU (Gaussian Error Linear Unit) is sometimes used instead of ReLU as the activation function.
-- $h(x) = x\cdot \frac{1}{2}\big\{ 1 + \text{erf}(x/\sqrt{2})\big\}$
-- $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
-- Trivially differentiable
+- GELUs (Gaussian Error Linear Units) are sometimes used instead of ReLUs as the activation function.
+    - $h(x) = x\cdot \frac{1}{2}\big\{ 1 + \text{erf}(x/\sqrt{2})\big\}$
+        - $\text{erf}(a) = \frac{2}{\sqrt{\pi}}\int_0^a e^{-t^2}\text{d}t$
+    - Differentiable
 
 ![bg right:30% 100%](https://upload.wikimedia.org/wikipedia/commons/4/42/ReLU_and_GELU.svg)<span style="font-size:50%">([Image by Ringdongdang CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:ReLU_and_GELU.svg))
 
