@@ -90,14 +90,13 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Supplementary information on self-attention mechanisms [[Google2017]](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
 
-- If we simply associate pronouns with nouns,
-we cannot tell whether the next "it" is "dog" or "street."
-- 1: The animal didn't cross the street because it was too tired.
-- it: dog
-- 2: The animal didn't cross the street because it was too wide.
-- it: street
+- If we simply associate pronouns with nouns, we cannot tell whether the next "it" is "dog" or "street."
+    - 1: The animal didn't cross the street because it was too tired.
+        - it: dog
+    - 2: The animal didn't cross the street because it was too wide.
+        - it: street
 - KVQ: By applying not only nouns but also all tokens to a matrix $K$, we can calculate the proximity of the query (it) to the other.
-- "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf) (Reprinted)
+    - "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf) (Reprinted)
 
 ---
 

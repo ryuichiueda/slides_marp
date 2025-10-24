@@ -120,14 +120,25 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="" data-marpit-pagination-total="14" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="Advanced Vision Lesson 6" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:Advanced Vision Lesson 6;--paginate:true;" data-marpit-pagination-total="14">
 <h3 id="supplementary-information-on-self-attention-mechanisms-google2017">Supplementary information on self-attention mechanisms <a href="https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/">[Google2017]</a></h3>
 <ul>
-<li>If we simply associate pronouns with nouns,<br />
-we cannot tell whether the next &quot;it&quot; is &quot;dog&quot; or &quot;street.&quot;</li>
-<li>1: The animal didn't cross the street because it was too tired.</li>
+<li>If we simply associate pronouns with nouns, we cannot tell whether the next &quot;it&quot; is &quot;dog&quot; or &quot;street.&quot;
+<ul>
+<li>1: The animal didn't cross the street because it was too tired.
+<ul>
 <li>it: dog</li>
-<li>2: The animal didn't cross the street because it was too wide.</li>
+</ul>
+</li>
+<li>2: The animal didn't cross the street because it was too wide.
+<ul>
 <li>it: street</li>
-<li>KVQ: By applying not only nouns but also all tokens to a matrix <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container>, we can calculate the proximity of the query (it) to the other.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>KVQ: By applying not only nouns but also all tokens to a matrix <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container>, we can calculate the proximity of the query (it) to the other.
+<ul>
 <li>&quot;You shall know a word by the company it keeps!&quot; <a href="https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf">[Firth1957]</a> (Reprinted)</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Lesson 6</footer>
 </section>
