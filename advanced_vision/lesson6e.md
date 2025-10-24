@@ -28,19 +28,18 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-## Transformer (for translation) Structure
+## Structure of Transformer (for translation)
 
 - Consists of an encoder and a decoder
-- Left: Encoder
-- Input: Sentence before translation
-(e.g., "This is a pen.")
-- Right: Decoder
-- Input: Token indicating "start of translation" or partially translated sentence (e.g., "This is")
-- Output: Next word (e.g., "a")
+    - Left: Encoder
+        - Input: Sentence before translation (e.g., "This is a pen.")
+    - Right: Decoder
+        - Input: Token indicating "start of translation" or partially translated sentence (e.g., "This is")
+        - Output: Next word (e.g., "a")
 
 <center style="padding-top:0.5em">Let's take a look at it step by step</center>
 
-![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
+![bg right:38% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
 [<span style="font-size:70%">Image: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
