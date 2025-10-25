@@ -47,3 +47,9 @@ marp: true
 - FMはこれをなんとかした
 
 ![bg right:32% 100%](./figs/ddpm_training_data.png)
+
+---
+
+### FMのアイデア
+
+- ガウス分布$p_0$を画像の分布など意味のある分布$p_1$にベクトル場$u_t$（$0\le t \le 1$）で変形できる
