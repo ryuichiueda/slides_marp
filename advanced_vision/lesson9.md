@@ -65,9 +65,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 訓練データ（途中の画像）の作成
 
-（論文を読み込めてないのでちょっと自信がないんですが）
-
-- 拡散モデル同様、途中の$t$の画像が必要
+- 拡散モデル同様、途中の$t$の画像（やデータ）が必要
     - 分布全体で考えると難しい
+- $p_t$を条件付き確率に分解
+    - $p_t(\boldsymbol{x}) = \int p(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z}) \text{d}\boldsymbol{z}$
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
