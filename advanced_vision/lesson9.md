@@ -88,3 +88,4 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
         - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
 
+![bg right:27% 95%](./figs/conditional_flow.svg)

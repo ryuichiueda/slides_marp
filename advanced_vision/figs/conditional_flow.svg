@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.86 60.63">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Times-BoldItalic, Times;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-3 {
+        font-style: italic;
+      }
+
+      .cls-2, .cls-4 {
+        font-family: Times-Roman, Times;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-4 {
+        font-size: 8px;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        fill: #231815;
+      }
+
+      .cls-3 {
+        font-family: Times-Italic, Times;
+      }
+    </style>
+  </defs>
+  <circle class="cls-6" cx="22.15" cy="17.97" r="17.72"/>
+  <text class="cls-7" transform="translate(.95 50.44)"><tspan class="cls-3" x="0" y="0">p</tspan><tspan class="cls-4" x="6" y="3.73">0</tspan><tspan class="cls-2" x="10" y=".06">(</tspan><tspan class="cls-1" x="14" y=".1">x</tspan><tspan class="cls-2" x="20" y=".06" xml:space="preserve"> | </tspan><tspan class="cls-1" x="28.4" y=".1">x</tspan><tspan class="cls-4" x="34.4" y="3.73">1</tspan><tspan class="cls-2" x="38.4" y=".06">)</tspan></text>
+  <circle class="cls-7" cx="197.01" cy="29.04" r="2.66"/>
+  <line class="cls-5" x1="22.15" y1=".25" x2="197.01" y2="26.38"/>
+  <line class="cls-5" x1="22.15" y1="35.69" x2="197.01" y2="31.04"/>
+  <text class="cls-7" transform="translate(178.47 47.78)"><tspan class="cls-3" x="0" y="0">p</tspan><tspan class="cls-4" x="6" y="3.73">1</tspan><tspan class="cls-2" x="10" y=".06">(</tspan><tspan class="cls-1" x="14" y=".1">x</tspan><tspan class="cls-2" x="20" y=".06" xml:space="preserve"> | </tspan><tspan class="cls-1" x="28.4" y=".1">x</tspan><tspan class="cls-4" x="34.4" y="3.73">1</tspan><tspan class="cls-2" x="38.4" y=".06">)</tspan></text>
+</svg>
