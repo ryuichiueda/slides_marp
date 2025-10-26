@@ -97,6 +97,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 最適輸送による定式化
 
+（まだ講師の頭の整理がついていないので雰囲気だけ）
+
 - 途中（時間の関数としての$\boldsymbol{\mu}_t(\boldsymbol{x}_1)$と$\sigma_t(\boldsymbol{x}_1)$）には自由度がある
     - なるべく素直なフローで分布を移したい$\Longrightarrow$最適輸送問題
 - 条件つき最適輸送パス
