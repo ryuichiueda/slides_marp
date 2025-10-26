@@ -63,8 +63,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### 訓練データの作成
+### 訓練データ（途中の画像）の作成
+
+（論文を読み込めてないのでちょっと自信がないんですが）
 
 - 拡散モデル同様、途中の$t$の画像が必要
+    - 分布全体で考えると難しい
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
