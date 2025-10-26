@@ -70,7 +70,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - $p_t$を条件付き確率に分解
     - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
         - $q$: 訓練データの分布
-            - $\boldsymbol{x}_1$の添え字はデータの番号ではなく時刻
+            - $\boldsymbol{x}_1$の添え字: データの番号ではなく時刻
             - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
 - ベクトル場$\boldsymbol{u}_t$も計算できる（重み付き平均）
     - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
