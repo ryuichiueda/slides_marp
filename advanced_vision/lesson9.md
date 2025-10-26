@@ -57,6 +57,8 @@ marp: true
 - 問題としては最適輸送問題をANNに解かせることに
     - 最適輸送問題: 分布を一番楽な方法で変形する問題
 
+![bg right:27% 95%](./figs/flow_matching_problem.svg)
+
 ---
 
 ### 訓練データの作成
