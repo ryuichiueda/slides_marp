@@ -67,3 +67,5 @@ marp: true
 ### 訓練データの作成
 
 - 拡散モデル同様、途中の$t$の画像が必要
+
+![bg right:27% 95%](./figs/flow_matching_method.svg)
