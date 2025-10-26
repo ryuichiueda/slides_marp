@@ -56,7 +56,7 @@
   </defs>
   <circle class="cls-3" cx="41.89" cy="69.71" r="22.15"/>
   <text class="cls-10" transform="translate(13.53 111.55)"><tspan class="cls-5" x="0" y="0">ガウス分布</tspan><tspan class="cls-6" x="60" y="-.65">p</tspan><tspan class="cls-8" x="66" y="3.09">0</tspan></text>
-  <text class="cls-10" transform="translate(135.32 112.99)"><tspan class="cls-5" x="0" y="0">なにか意味のある分布</tspan><tspan class="cls-6" x="120" y="-.65">p</tspan><tspan class="cls-8" x="126" y="3.09">1</tspan><tspan class="cls-5"><tspan x="29" y="20.68">（画像など</tspan><tspan class="cls-11" x="89" y="20.68">）</tspan></tspan></text>
+  <text class="cls-10" transform="translate(135.32 112.99)"><tspan class="cls-5" x="0" y="0">なにか意味のある分布</tspan><tspan class="cls-6" x="120" y="-.65">p</tspan><tspan class="cls-8" x="126" y="3.09">1</tspan><tspan class="cls-5"><tspan x="11" y="20.68">（画像の分布など</tspan><tspan class="cls-11" x="107" y="20.68">）</tspan></tspan></text>
   <path class="cls-1" d="M186.76,4.94c.33-1.37.96-2.71,2.05-3.6,3.69-3.01,8.92.81,12.07,4.38,2.79,3.17,5.76,7.51,3.79,11.25-.86,1.64-2.5,2.68-3.95,3.83-7.72,6.08-11.28,16.96-8.65,26.43.62,2.22,1.65,4.48,3.59,5.72,2.28,1.45,5.21,1.15,7.91,1.16,6.68.03,13.33,2.38,18.55,6.55,2.25,1.8,4.29,4.03,5.15,6.78,1.04,3.3.24,6.87-.56,10.24-1.17,4.95-2.52,10.2-6.26,13.65-4.98,4.58-13.07,4.47-18.93,1.09s-9.78-9.37-12.43-15.59c-8.77-20.57-3.55-39.36,5.45-58.43-4.71-2.69-9.21-7.45-7.78-13.45Z"/>
   <g>
     <line class="cls-2" x1="83.84" y1="69.71" x2="159.41" y2="56.57"/>
