@@ -90,3 +90,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 途中（時間の関数としての$\boldsymbol{\mu}_t(\boldsymbol{x}_1)$と$\sigma_t(\boldsymbol{x}_1)$）には自由度がある
 
 ![bg right:27% 95%](./figs/conditional_flow.svg)
+
+---
+
+### 最適輸送による定式化
+
