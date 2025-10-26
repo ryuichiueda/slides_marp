@@ -83,5 +83,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - ひとつの条件付き確率に対し、途中の経路（分布）の定式化が必要
 - とりあえずガウス分布を選択
-    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \mu_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
+    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
+        - $\boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)$は時間の関数と解釈したほうがよい
 
