@@ -96,6 +96,7 @@ marp: true
 
 - 探索問題はなにを解いているか？
     - （直接的、あるいは間接的に）<span style="color:red">ゴールまでのコスト</span>を計算している
+        - コスト: 状態（位置）$\boldsymbol{x}$に対して$V(\boldsymbol{x})$
 
 
 ---
