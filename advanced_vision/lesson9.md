@@ -87,7 +87,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - $\boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)$は時間の関数と解釈したほうがよい
         - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
         - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
-- 途中（時間の関数としての$\boldsymbol{\mu}_t(\boldsymbol{x}_1)$と$\sigma_t(\boldsymbol{x}_1)$）には自由度がある
+    - このときのベクトル場
+        - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) =\dfrac{\sigma_t(\boldsymbol{x}_1)'}{\sigma_t(\boldsymbol{x}_1)}\{\boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1)\} + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
+            - $'$は時間の微分
 
 ![bg right:27% 95%](./figs/conditional_flow.svg)
 
@@ -95,3 +97,5 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 最適輸送による定式化
 
+
+- 途中（時間の関数としての$\boldsymbol{\mu}_t(\boldsymbol{x}_1)$と$\sigma_t(\boldsymbol{x}_1)$）には自由度がある
