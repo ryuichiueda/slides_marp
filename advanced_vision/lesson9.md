@@ -69,5 +69,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 分布全体で考えると難しい
 - $p_t$を条件付き確率に分解
     - $p_t(\boldsymbol{x}) = \int p(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z}) \text{d}\boldsymbol{z}$
+        - $\boldsymbol{z}$の例: 訓練データ
+            - $p_1$からドーローされたと解釈
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
