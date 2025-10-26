@@ -113,6 +113,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### FMでできること
 
-- [[Lipman 2022]](https://arxiv.org/abs/2210.02747)の図1
+- [[Lipman 2022]](https://arxiv.org/abs/2210.02747)の図1、6、11〜
     - アルゴリズムの説明のための図だけど図4も面白い
 - Stable Diffusion 3
