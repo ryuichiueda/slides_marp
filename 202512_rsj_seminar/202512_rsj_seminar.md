@@ -88,7 +88,7 @@ marp: true
     - 他のアプローチ（学習）との比較や理解のためには問題
     - 本質的に解決できないことはないか？
 
-$\Longrightarrow$問題を整理しましょう
+<span style="color:red">$\Longrightarrow$問題を整理しましょう</span>
 
 ---
 
