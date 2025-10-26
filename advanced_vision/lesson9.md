@@ -68,9 +68,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 拡散モデル同様、途中の$t$の画像（やデータ）が必要
     - 分布全体で考えると難しい
 - $p_t$を条件付き確率に分解
-    - $p_t(\boldsymbol{x}) = \int p(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z}) \text{d}\boldsymbol{z}$
+    - $p_t(\boldsymbol{x}) = \int_Z p_t(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z}) \text{d}\boldsymbol{z}$
         - $\boldsymbol{z}$の例: 訓練データ
             - $p_1$からドローされたと解釈
             - 訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる
+- ベクトル場$u_t$も計算できる（重み付き平均）
+    - $u_t(\boldsymbol{x}) = \int_Z u_t(\boldsymbol{x}|\boldsymbol{z}) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z})}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{z}$
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
