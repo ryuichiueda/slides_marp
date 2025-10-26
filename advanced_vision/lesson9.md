@@ -53,10 +53,10 @@ marp: true
 ### FMのアイデア
 
 - ガウス分布$p_0$と画像の分布など意味のある分布$p_1$の相互変換
-    - <span style="color:red">ベクトル場</span>$u_t$（$0\le t \le 1$）で考える
+    - <span style="color:red">ベクトル場</span>$\boldsymbol{u}_t$（$0\le t \le 1$）で考える
         - 各時刻で分布をひっぱる速度場を仮定
-    - このベクトル場を再現する関数$v_t(\boldsymbol{w})$をANNが学習
-    - $v_t(\boldsymbol{w})$と$u_t$の差（2乗誤差）を損失関数に
+    - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
+    - $\boldsymbol{v}_t(\boldsymbol{w})$と$\boldsymbol{u}_t$の差（2乗誤差）を損失関数に
 - 問題としては最適輸送問題をANNに解かせることに
     - 最適輸送問題: 分布を一番楽な方法で変形する問題
 $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
@@ -68,11 +68,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 拡散モデル同様、途中の$t$の画像（やデータ）が必要
     - 分布全体で考えると難しい
 - $p_t$を条件付き確率に分解
-    - $p_t(\boldsymbol{x}) = \int_Z p_t(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z}) \text{d}\boldsymbol{z}$
-        - $\boldsymbol{z}$の例: 訓練データ
-            - $p_1$からドローされたと解釈
-            - 訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる
-- ベクトル場$u_t$も計算できる（重み付き平均）
-    - $u_t(\boldsymbol{x}) = \int_Z u_t(\boldsymbol{x}|\boldsymbol{z}) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{z})p(\boldsymbol{z})}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{z}$
+    - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
+        - $q$: 訓練データの分布
+            - $\boldsymbol{x}_1$の添え字はデータの番号ではなく時刻
+            - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
+- ベクトル場$\boldsymbol{u}_t$も計算できる（重み付き平均）
+    - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
