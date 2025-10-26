@@ -76,3 +76,12 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
+
+---
+
+### フローの設計
+
+- ひとつの条件付き確率に対し、途中の経路（分布）の定式化が必要
+- とりあえずガウス分布を選択
+    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \mu_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
+
