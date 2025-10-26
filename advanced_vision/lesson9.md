@@ -56,7 +56,7 @@ marp: true
     - に<span style="color:red">ベクトル場</span>$u_t$（$0\le t \le 1$）で考える
     - 各時刻で分布をひっぱる速度場を仮定
     - このベクトル場を再現する関数$v_t(\boldsymbol{w})$をANNが学習
-    - $v_t(\boldsymbol{w})$と$u_t$の差を損失関数に
+    - $v_t(\boldsymbol{w})$と$u_t$の差（2乗誤差）を損失関数に
 - 問題としては最適輸送問題をANNに解かせることに
     - 最適輸送問題: 分布を一番楽な方法で変形する問題
 
