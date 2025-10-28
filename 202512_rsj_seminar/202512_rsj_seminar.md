@@ -72,9 +72,9 @@ marp: true
     - ダイクストラ、A*、RRT、...
         - いまだ現役
 - 一方、移動ロボットや自動車を自律移動させることは難しい
-    - 自己位置推定がずれる（今回は直接扱わず）
-    - 障害物をうまく避けれない
+    - 自己位置推定がずれる（今回は直接扱わず）、 障害物をうまく避けれない、・・・
 
+$\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">図: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成</span>
 
 ---
 
@@ -102,6 +102,7 @@ marp: true
     - 一本道
     - 各地点でコストが（直接的/間接的に）概算されている
     - 経路を進むとコストが下がる（経路上でのコストの大小関係が解けている）
+
 
 ---
 
