@@ -23,7 +23,8 @@ marp: true
 
 - 本題の前に
     - flow matching
-- VLA（vision-language-action model）
+- ANNによるロボットの制御
+    - VLA（vision-language-action model）、ロボット基盤モデル
 
 ---
 
@@ -120,7 +121,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-## Vision-Language-Action（VLA）モデル
+## ANNによるロボットの制御
+
+---
+
+### Vision-Language-Action（VLA）モデル
 
 - 言語$\rightarrow$動作という変換が必要
     - 「言語$\rightarrow$画像」のようにできないだろうか？
@@ -135,4 +140,5 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
 
 - Physical Intelligence社が開発したVLAモデル
+- 「ロボット基盤モデル」と呼ばれるもののひとつ
 
