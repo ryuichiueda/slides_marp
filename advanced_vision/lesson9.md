@@ -166,8 +166,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - 画像からトークンへ
     - EfficientNetというネットワークで画像の特徴量を抽出
-        - FiLM（Feature-wise Linear Modulation）のレイヤーで言語を混ぜていく
-            - 詳細は次ページ
+        - 言葉をFiLMで変換して特徴量に強弱をつける
 
 
 ---
