@@ -128,11 +128,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - センサ=視覚（や視覚と同等に扱える信号）と考えると
     「画像$\rightarrow$動作」という変換が必要となる
 
-<center style="color:red;padding-top:2em">「言語、画像、動作の相互変換」というアイデアに</center>
+<center style="color:red;padding-top:2em">「画像、言語、動作（VLA）の相互変換」というアイデアに</center>
 
 ---
 
-### $pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
+### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
 
-
+- Physical Intelligence社が開発したVLAモデル
 
