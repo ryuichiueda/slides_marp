@@ -122,11 +122,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ## Vision-Language-Action（VLA）モデル
 
+- 言語$\rightarrow$動作という変換が必要
+    - 「言語$\rightarrow$画像」のようにできないだろうか？
+- 従来のようにセンサ$\rightarrow$動作という変換も必要
 
 ---
 
-### 人の指示によるロボットの制御
-
-- 言語$\rightarrow$動作という変換が必要
 
 
