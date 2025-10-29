@@ -113,9 +113,12 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 最適制御問題
     - 状態空間と状態を考える
 
+![bg right:30% 100%](optimal_control.svg)
+
 ---
 
 ### 最適制御問題が「解けていない」状態
+
 
 
 ---
