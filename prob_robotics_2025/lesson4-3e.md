@@ -188,3 +188,138 @@ The ellipse that satisfies $\dfrac{a^2}{\sigma_a^2} + \dfrac{b^2}{\sigma_b^2} = 
 
 ---
 
+### Return coordinates
+
+- Convert an ellipse that satisfies $\dfrac{a^2}{\sigma_a^2} + \dfrac{b^2}{\sigma_b^2} = n^2$ in the $ab$-coordinate system to the $xy$-coordinate system
+    - $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$
+- Rotate by $\theta$ and translate by $\mu$
+
+$\qquad\qquad\qquad$![w:600](./figs/ellipse.png)
+
+---
+
+### Draw with actual values
+
+- $\Sigma = \begin{pmatrix}
+0.016 & -0.029 \\
+-0.029 & 0.197 \\
+\end{pmatrix}$
+$= R(-8.9$deg$)
+\begin{pmatrix}
+0.107^2 & 0 \\
+0 & 0.449^2 \\
+\end{pmatrix}R(-8.9$deg$)$
+$\boldsymbol{\mu}
+= \begin{pmatrix}
+3.88 \\
+0.51
+\end{pmatrix}$
+- Right: Drawing ellipses for $n=1, 2, 3$
+- This is called the <span style="color:red">error ellipse</span>
+
+![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
+
+---
+
+## Calculating the multivariate Gaussian distribution
+
+- Is there reproducibility?
+
+---
+
+### Reproducibility and linear transformations
+
+- Example 1: When $\boldsymbol{x}_i \sim \mathcal{N}(\boldsymbol{\mu}_i, \Sigma_i)\ (i=1,2)$, what is the distribution of $\boldsymbol{x} = \boldsymbol{x}_1 + \boldsymbol{x}_2$?
+- $\boldsymbol{x}_1 and \boldsymbol{x}_2$ are independent.
+- Answer (Let's write this by analogy with the 1-dimensional case):
+* $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_1 + \boldsymbol{\mu}_2, \Sigma_1 + \Sigma_2)$
+- A derivation example is available in Detailed Explanation of Probabilistic Robotics.
+- Example 2: When $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)$, what is the distribution of $\boldsymbol{y} = A\boldsymbol{x} + \boldsymbol{b}$?
+- Answer (this will be covered on the next page):
+* $\boldsymbol{y} \sim \mathcal{N}(A\boldsymbol{\mu} +\boldsymbol{b}, A\Sigma A^\top )$
+- $A\Sigma A^\top$: This form appears frequently.
+
+---
+
+### Linear transformation of the Gaussian distribution
+
+- When transforming from the coordinate system of $\boldsymbol{x}$ to the coordinate system of $\boldsymbol{y} = A \boldsymbol{x} + \boldsymbol{b}$, the space is stretched by $|\det(A)|$ [[Sugiura 1985]](https://www.utp.or.jp/book/b302043.html)
+- The area ratio of the green part in the diagram below is $1:|\det(A)|$
+- Additional information: $|\det(A)|$ is the absolute value of the determinant of $A$
+(Writing it as $||A||$ is confusing, so we use this notation.)
+![w:600](https://upload.wikimedia.org/wikipedia/commons/3/34/DeterminantOfMatrix.png)
+<span style="font-size:50%">[(Image: CC0)](https://commons.wikimedia.org/wiki/File:DeterminantOfMatrix.png)</span>
+
+---
+
+### Linear transformation of the Gaussian distribution (continued)
+
+- When space is stretched $|\det(A)|$, the density is diluted by $1/|\det(A)|$
+- $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma ) \big/ |\det(A)|$
+$= \mathcal{N}\big[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) | \boldsymbol{\mu}, \Sigma \big] \big/ |\det(A)|$
+$= \frac{1}{\sqrt{(2\pi)^n |\Sigma| |A|^2}}
+\cdot\exp\left\{ 
+-\frac{1}{2}\left[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu} \right]^T \Sigma^{-1} \left[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu}\right] 
+\right\}$ 
+- $|\Sigma| outside the exponent About |A|^2$$|\Sigma||A|^2 = |A| |\Sigma| |A^\top|= |A\Sigma A^\top|$ 
+- $= in parentheses of exponent part -\frac{1}{2} \left[ 
+A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} ) 
+\right]^\top \Sigma^{-1} A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$ 
+$= -\frac{1}{2} 
+( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )^\top 
+(A^{-1})^\top \Sigma^{-1} A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$ 
+$= -\frac{1}{2} 
+( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )^\top 
+(A \Sigma A^\top )^{-1} 
+( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$
+
+$\Longrightarrow p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\mu} + \boldsymbol{b}, A\Sigma A^\top)$
+
+---
+
+### Product of multivariate Gaussian distributions
+
+- Problem:
+$p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | What kind of distribution is A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$?
+- This will be discussed in the second half of the lecture.
+- Solution: Simply transform the equation.
+- A note for the second half: Do not incorporate $s$ into $\eta$.
+- $s > 0$
+
+---
+
+### Product of Multivariate Gaussian Distributions (Solution)
+
+- First, simplify the expansion $\mathcal{N}$ by formulating it.
+- $p(\boldsymbol{x}) = \eta
+\dfrac{1}{\sqrt{(2\pi)^k |sB| }}
+\dfrac{1}{\sqrt{(2\pi)^\ell |sC| }}$
+$\cdot \exp\Big\{
+-\dfrac{1}{2s}(\boldsymbol{a} - A\boldsymbol{x} - \boldsymbol{b})^\top B^{-1} (\boldsymbol{a} - A\boldsymbol{x} - \boldsymbol{b})
+-\dfrac{1}{2s}(\boldsymbol{x} - \boldsymbol{c})^\top C^{-1}(\boldsymbol{x} - \boldsymbol{c})
+\Big\}$
+$= \dfrac{\eta}{s}
+\exp\Big\{ -\dfrac{1}{2s} L(\boldsymbol{x}) \Big\}$
+- where $L(\boldsymbol{x})$ is the exponent multiplied by $-2s$.
+
+---
+
+### Multivariate Gaussian Product (Answer, continued)
+
+- Rearranging $L$
+- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
+$\qquad\quad - (A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - \boldsymbol{x}^\top C^{-1}\boldsymbol{c}$
+$\qquad\quad - (\boldsymbol{a}- \boldsymbol{b} )^\top B^{-1} (A\boldsymbol{x}) - \boldsymbol{c}^\top C^{-1} \boldsymbol{x} + U'$
+- $U'$ is a term unrelated to $\boldsymbol{x}$
+- $(XY)^\top = Y^\top X^\top$. ​​Using the property that the covariance matrix is ​​symmetric,
+- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
+$\qquad\quad - 2(A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - 2\boldsymbol{x}^\top C^{-1}\boldsymbol{c} + U'$
+$\qquad = \boldsymbol{x}^\top(A^\top B^{-1} A + C^{-1})\boldsymbol{x}- 2\boldsymbol{x}^\top \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\} + U'$
+
+---
+
+### Product of Multivariate Gaussian Distributions (Answer, continued)
+
+- Replace the last line on the previous page with the following:
+- $D^{-1} = A^\top B^{-1} A + C^{-1}$
+- $\boldsy
