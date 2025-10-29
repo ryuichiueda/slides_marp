@@ -31,6 +31,9 @@ marp: true
 ## 層正規化（前回の補足）
 
 - あるレイヤーの出力を正規化して出力
+- 方法: ある層が渡してきたベクトル$\boldsymbol{x}=(x_1, x_2, \dots, x_d)$に対し
+    - ベクトルの要素の平均値$0$、分散$1$になるように正規化
+    - $i$番目の要素を$\gamma_i$倍して$\beta_i$だけシフト
 
 ![bg right:20% 100%](./figs/layer_normalization.png)
 
