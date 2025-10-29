@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.71 46.36">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #231815;
+      }
+
+      .cls-3 {
+        fill: #e60012;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        stroke-width: .75px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g>
+    <ellipse class="cls-6" cx="118.4" cy="27.75" rx="5.88" ry="2.94"/>
+    <line class="cls-5" x1="118.4" y1="26.95" x2="118.4" y2="9.99"/>
+    <polygon class="cls-3" points="126.72 12.47 118.4 17.32 118.4 7.63 126.72 12.47"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="4.14" y1="21.25" x2="17.52" y2="15.98"/>
+    <polygon class="cls-1" points="16.33 19.74 15.65 19.42 17.25 16.08 13.81 14.73 14.08 14.04 18.27 15.68 16.33 19.74"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="19.02" y1="15.65" x2="34.19" y2="17.9"/>
+    <polygon class="cls-1" points="31.28 20.57 30.86 19.95 33.91 17.86 31.6 14.97 32.18 14.5 35 18.02 31.28 20.57"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="35.32" y1="18.45" x2="48.69" y2="13.18"/>
+    <polygon class="cls-1" points="47.5 16.94 46.83 16.62 48.42 13.28 44.98 11.93 45.26 11.24 49.45 12.88 47.5 16.94"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="50.19" y1="12.85" x2="65.37" y2="15.1"/>
+    <polygon class="cls-1" points="62.46 17.77 62.03 17.15 65.08 15.06 62.77 12.17 63.36 11.7 66.17 15.22 62.46 17.77"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="66.87" y1="15.5" x2="81.23" y2="16.05"/>
+    <polygon class="cls-1" points="78.63 19.02 78.14 18.45 80.95 16.04 78.33 13.42 78.87 12.89 82.05 16.08 78.63 19.02"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="82.74" y1="16.35" x2="95.73" y2="24.51"/>
+    <polygon class="cls-1" points="92 25.78 91.86 25.04 95.49 24.35 94.53 20.78 95.26 20.59 96.42 24.94 92 25.78"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="97.13" y1="24.93" x2="112.3" y2="27.19"/>
+    <polygon class="cls-1" points="109.39 29.86 108.97 29.24 112.02 27.14 109.71 24.26 110.29 23.79 113.11 27.31 109.39 29.86"/>
+  </g>
+  <text class="cls-2" transform="translate(94.18 19.55)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-2" transform="translate(115.1 42.29)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-2" transform="translate(80.78 12.88)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-2" transform="translate(63.56 11.57)"><tspan x="0" y="0">3</tspan></text>
+  <text class="cls-2" transform="translate(44.99 10.56)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-2" transform="translate(31.14 12.85)"><tspan x="0" y="0">5</tspan></text>
+  <text class="cls-2" transform="translate(15.46 12.47)"><tspan x="0" y="0">6</tspan></text>
+  <text class="cls-2" transform="translate(0 18.47)"><tspan x="0" y="0">7</tspan></text>
+</svg>
