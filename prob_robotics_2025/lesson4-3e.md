@@ -278,12 +278,11 @@ $\Longrightarrow p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\
 
 ### Product of multivariate Gaussian distributions
 
-- Problem:
-$p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | What kind of distribution is A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$?
-- This will be discussed in the second half of the lecture.
-- Solution: Simply transform the equation.
-- A note for the second half: Do not incorporate $s$ into $\eta$.
-- $s > 0$
+- Problem: the shape of $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$
+- This will be discussed in the later part of this lecture
+    - Solution: Simply transform the equation.
+    - A note for the second half: Do not incorporate $s$ into $\eta$.
+    - $s > 0$
 
 ---
 
