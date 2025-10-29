@@ -25,6 +25,7 @@ marp: true
     - flow matching
 - ANNによるロボットの制御
     - VLA（vision-language-action model）、ロボット基盤モデル
+    - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
 
 ---
 
