@@ -146,7 +146,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### Robotics Transformer-1（RT-1）
+### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)
 
 - 動画: https://www.youtube.com/watch?v=UuKAp9a6wMs
 
