@@ -127,4 +127,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 人の指示によるロボットの制御
 
+- 言語$\rightarrow$動作という変換が必要
+
 
