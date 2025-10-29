@@ -100,15 +100,15 @@ $\qquad\qquad\qquad$![w:500](./figs/prob_t_compare.png)
 
 - Although the textbook uses discretization, let's calculate it as is.
 - Let's look at each element of $p_i(t) = p(x_i|t) p_{i-1}(t)/ p(x_i | x_{1:i-1})$.
-- $p(x_i|t)$: Probability of $x_i$ occurring when the completion rate is $t$.
-- $x_i$ completes: $t$
-- $x_i$ fails: $1-t$
-- To summarize the above: style="color:red">$p(x_i|t) = t^{x_i}(1-t)^{1-x_i}$</span>
-- $p(x_i | x_{1:i-1}) = \int_{0}^1 p(t, x_i| x_{1:i-1}) \text{d}t = \int_{0}^1 p(x_i|t)p_{i-1}(t) \text{d}t$
+    - $p(x_i|t)$: Probability of $x_i$ occurring when the completion rate is $t$.
+        - $x_i$ completes: $t$
+        - $x_i$ fails: $1-t$
+        - To summarize the above: <span style="color:red">$p(x_i|t) = t^{x_i}(1-t)^{1-x_i}$</span>
+    - $p(x_i | x_{1:i-1}) = \int_{0}^1 p(t, x_i| x_{1:i-1}) \text{d}t = \int_{0}^1 p(x_i|t)p_{i-1}(t) \text{d}t$
 $=\langle p(x_i|t) \rangle_{p_{i-1}(t)}=\langle t^{x_i}(1-t)^{1-x_i} \rangle_{p_{i-1}(t)}$
-- From (b) on the previous page
-- The likelihood of $x_i$ occurring when considering $p_{i-1}$
-- In the above equation, it is treated as a constant ($t$ disappears during integration).
+        - From (b) on the previous page
+        - The likelihood of $x_i$ occurring when considering $p_{i-1}$
+        - In the above equation, it is treated as a constant ($t$ disappears during integration).
 
 ---
 
