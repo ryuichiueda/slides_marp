@@ -138,6 +138,20 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+### ANNによるロボットの制御の課題
+
+- 訓練データどうするの？
+    - たぶんCLIPのときのようなネットのデータはない
+- 方策（制御則）をどう表現する？
+
+---
+
+### Robotics Transformer-1（RT-1）
+
+- 動画: https://www.youtube.com/watch?v=UuKAp9a6wMs
+
+---
+
 ### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
 
 - Physical Intelligence社が開発したVLAモデル
