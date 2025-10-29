@@ -166,6 +166,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 画像からトークンへ
     - EfficientNetというネットワークで画像の特徴量を抽出
     - FiLM（Feature-wise Linear Modulation）で言語を混ぜていく
+        - ガイダンスのようなもの？
 
 ---
 
