@@ -86,13 +86,13 @@ $\qquad\qquad\qquad$![w:500](./figs/prob_t_compare.png)
 ### Derivation of the probability distribution of completion rate
 
 - Define $p_i(t) = p(t| x_{1:i})$
-- Distribution estimated from trial results $x_{1:i}$
+    - Distribution estimated from trial results $x_{1:i}$
 - Consider the following two equations using the multiplication theorem for $p_{i-1}(t) = p(t| x_{1:i-1}) \ (i>0)$
-- $p(t, x_i | x_{1:i-1}) = p(t | x_{1:i})p(x_i | x_{1:i-1}) = p_i(t) p(x_i | x_{1:i-1})$ ---(a)
-- $p(t, x_i | x_{1:i-1}) = p(x_i | t, x_{1:i-1})p(t | x_{1:i-1}) = p(x_i|t) p_{i-1}(t)$ ---(b)
-- If we know $t$, we don't need information about $x_{1:i-1}$.
+    - $p(t, x_i | x_{1:i-1}) = p(t | x_{1:i})p(x_i | x_{1:i-1}) = p_i(t) p(x_i | x_{1:i-1})$ ---(a)
+    - $p(t, x_i | x_{1:i-1}) = p(x_i | t, x_{1:i-1})p(t | x_{1:i-1}) = p(x_i|t) p_{i-1}(t)$ ---(b)
+        - If we know $t$, we don't need information about $x_{1:i-1}$.
 - From the right-hand side of the above two equations:
-- $p_i(t) = p(x_i|t) p_{i-1}(t)/ p(x_i | x_{1:i-1})$
+    - $p_i(t) = p(x_i|t) p_{i-1}(t)/ p(x_i | x_{1:i-1})$
 
 ---
 
