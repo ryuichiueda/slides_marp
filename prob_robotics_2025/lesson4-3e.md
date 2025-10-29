@@ -117,12 +117,12 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 ### Drawing a Bivariate Gaussian Distribution
 
 - Let's start by drawing the point that is Mahalanobis distance $n$ from the center.
-- Mahalanobis distance: $D_\text{M}(\boldsymbol{x}) = \sqrt{
+    - Mahalanobis distance: $D_\text{M}(\boldsymbol{x}) = \sqrt{
 (\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})}$
-- Compare with a 1-dimensional model.
+        - Compare with a 1-dimensional model.
 - The figure is an ellipse.
-- Ellipse formula: $\dfrac{(x - \mu_x)^2}{a^2} + \dfrac{(y - \mu_y)^2}{b^2} = 1$
-- Converting $(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})$ into a polynomial results in the same form (verify on the next page).
+    - Ellipse formula: $\dfrac{(x - \mu_x)^2}{a^2} + \dfrac{(y - \mu_y)^2}{b^2} = 1$
+        - Converting $(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu})$ into a polynomial results in the same form (verify on the next page).
 
 ![bg right:30% 95%](./figs/2d_gauss_draw_question.png)
 
