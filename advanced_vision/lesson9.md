@@ -153,6 +153,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - Transformerの前の部分
         - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
         - 出力: 512次元の48個のトークン
+    - Transformerの部分
+        - 入力: 48個のトークンに位置埋め込みしたもの
+        - 出力: 
 
 ---
 
