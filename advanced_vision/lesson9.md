@@ -150,7 +150,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - 動画: https://www.youtube.com/watch?v=UuKAp9a6wMs
 - 構造: 論文の図3
-    - 時間差のある6枚の画像と言葉によるロボットへの指示を入力
+    - Transformerの前の部分
+        - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
+        - 出力: 512次元の48個のトークン
 
 ---
 
