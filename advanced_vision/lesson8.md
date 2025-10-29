@@ -21,6 +21,7 @@ marp: true
 
 ## 今日やること
 
+- 今回のための補足
 - Vision Transformer
 - Image GPT
 - Diffusion Transformer
@@ -29,6 +30,16 @@ marp: true
 - GLIDE
 - DALL·E 2（unCLIP）
 - Stable Diffusion
+
+---
+
+## FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
+
+（今回のための補足です）
+
+- あるレイヤーの出力を線形変換する仕組み
+    - [層正規化](./lesson7.html#3)と同じ仕組みで正規化しないで$\beta_i$、$\gamma_i$で線形変換
+    - $\beta_i$、$\gamma_i$を外の情報源から学習
 
 ---
 

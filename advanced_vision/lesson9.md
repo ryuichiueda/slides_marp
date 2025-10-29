@@ -169,12 +169,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - FiLM（Feature-wise Linear Modulation）のレイヤーで言語を混ぜていく
             - 詳細は次ページ
 
----
-
-### FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
-
-- あるレイヤーの出力を線形変換する仕組み
-    - 層最適化やDiffusion TransformerのadaLNに似ている
 
 ---
 
