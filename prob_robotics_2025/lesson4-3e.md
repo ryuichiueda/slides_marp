@@ -180,14 +180,11 @@ S^{-1} \{ R(-\theta)
 (\boldsymbol{x} - \boldsymbol{\mu}) \}
 }$
 - Substituting the following, we get $D_\text{M}(\boldsymbol{x}) = \sqrt{ a^2/\sigma_a^2 + b^2 / \sigma_b^2}$
-- $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$
-- $S = \text{diag}(\sigma_a^2, \sigma_b^2)$
+    - $\boldsymbol{a} = (a \ \ b)^\top = R(-\theta)(\boldsymbol{x} - \boldsymbol{\mu})$
+    - $S = \text{diag}(\sigma_a^2, \sigma_b^2)$
 - Therefore
-- The figure drawn by points whose Mahalanobis distance is $n$:
+     - The figure drawn by points whose Mahalanobis distance is $n$:
 The ellipse that satisfies $\dfrac{a^2}{\sigma_a^2} + \dfrac{b^2}{\sigma_b^2} = n^2$ in the $ab$-coordinate system
 
 ---
 
-### Return coordinates
-
-- The ellipse that satisfies $\dfrac{a^2}{\sigma_a^2} + \dfrac{b^2}{\sigma_b^2} = n^2$ in the $ab$-coordinate system
