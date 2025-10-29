@@ -21,8 +21,16 @@ marp: true
 
 ## 今日やること
 
+- 前回の補足
 - BERT
 - GPT
+
+
+---
+
+## 層正規化（前回の補足）
+
+![bg right:20% 100%](./figs/layer_normalization.png)
 
 ---
 

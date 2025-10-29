@@ -156,6 +156,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - Transformerの部分
         - 入力: 48個のトークンに位置埋め込みしたもの
         - 出力: ロボットの行動（11次元の離散空間中の点）
+            - ロボット: モバイルマニピュレータ
             - モード1次元、腕の動き7次元、位置・向き3次元
             - 3Hz
 
@@ -165,8 +166,15 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - 画像からトークンへ
     - EfficientNetというネットワークで画像の特徴量を抽出
-    - FiLM（Feature-wise Linear Modulation）で言語を混ぜていく
-        - 画像生成のガイダンスのようなもの？
+        - FiLM（Feature-wise Linear Modulation）のレイヤーで言語を混ぜていく
+            - 詳細は次ページ
+
+---
+
+### FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
+
+- あるレイヤーの出力を線形変換する仕組み
+    - 層最適化やDiffusion TransformerのadaLNに似ている
 
 ---
 
