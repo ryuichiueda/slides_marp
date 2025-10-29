@@ -221,7 +221,7 @@ $\boldsymbol{\mu}
 
 ---
 
-## Calculating the multivariate Gaussian distribution
+## Calculation of the multivariate Gaussian distribution
 
 - Is there reproducibility?
 
@@ -230,14 +230,14 @@ $\boldsymbol{\mu}
 ### Reproducibility and linear transformations
 
 - Example 1: When $\boldsymbol{x}_i \sim \mathcal{N}(\boldsymbol{\mu}_i, \Sigma_i)\ (i=1,2)$, what is the distribution of $\boldsymbol{x} = \boldsymbol{x}_1 + \boldsymbol{x}_2$?
-- $\boldsymbol{x}_1 and \boldsymbol{x}_2$ are independent.
-- Answer (Let's write this by analogy with the 1-dimensional case):
-* $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_1 + \boldsymbol{\mu}_2, \Sigma_1 + \Sigma_2)$
-- A derivation example is available in Detailed Explanation of Probabilistic Robotics.
-- Example 2: When $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)$, what is the distribution of $\boldsymbol{y} = A\boldsymbol{x} + \boldsymbol{b}$?
-- Answer (this will be covered on the next page):
-* $\boldsymbol{y} \sim \mathcal{N}(A\boldsymbol{\mu} +\boldsymbol{b}, A\Sigma A^\top )$
-- $A\Sigma A^\top$: This form appears frequently.
+    - $\boldsymbol{x}_1$ and $\boldsymbol{x}_2$ are independent.
+    - Answer (Let's write this by analogy with the 1-dimensional case):
+        * $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}_1 + \boldsymbol{\mu}_2, \Sigma_1 + \Sigma_2)$
+    - A derivation example is available in the orange book
+        - Example 2: When $\boldsymbol{x} \sim \mathcal{N}(\boldsymbol{\mu}, \Sigma)$, what is the distribution of $\boldsymbol{y} = A\boldsymbol{x} + \boldsymbol{b}$?
+    - Answer (this will be covered on the next page):
+        * $\boldsymbol{y} \sim \mathcal{N}(A\boldsymbol{\mu} +\boldsymbol{b}, A\Sigma A^\top )$
+            - $A\Sigma A^\top$: This form appears frequently.
 
 ---
 
