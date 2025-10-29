@@ -34,12 +34,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### Question: Let's discuss this experiment.
 
-- Mr. C improved software that automatically drives a robot from one point to another and conducted an experiment to evaluate it.
-- Experimental Procedure: The robot ran five times with the before and after software.
+- Student C improved software that automatically drives a robot from one point to another and conducted an experiment to evaluate it.
+- Experimental Procedure: The robot ran five times with the before and after the improvement.
 - Experimental Results:
-- Before Improvement: Completed $\rightarrow$Failed $\rightarrow$Failed $\rightarrow$Completed $\rightarrow$Completed
-- After Improvement: Completed all runs.
-- Mr. C's Conclusion: The improved software is superior.
+    - Before Improvement: Completed $\rightarrow$Failed $\rightarrow$Failed $\rightarrow$Completed $\rightarrow$Completed
+    - After Improvement: Completed all runs.
+- C's Conclusion: The improved software is superior.
 
 <center style="padding-top:2em">Really? </center>
 
