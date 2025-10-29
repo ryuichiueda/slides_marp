@@ -45,14 +45,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### I feel like I haven't done enough experiments...
+### We feel like he haven't done enough experiments.
 
 - The results might be reversed if I try more trials.
-- This is the problem I'll be addressing.
+    - This is the problem I'll be addressing.
 - Approach to the problem: <span style="color:red">Estimate the probability distribution of the completion rate</span>
-- In other words, treat the probability (completion rate) itself as a random variable.
-- The underlying idea: Without an infinite number of trials, the completion rate is uncertain.
-$\rightarrow$Completion rate is probabilistic.
+    - In other words, treat the probability (completion rate) itself as a random variable.
+    - The underlying idea: Without an infinite number of trials, the completion rate is uncertain.
+<span style="color:red">$\rightarrow$Completion rate is probabilistic.</span>
 
 ---
 

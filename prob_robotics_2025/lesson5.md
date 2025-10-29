@@ -54,7 +54,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 問題へのアプローチ: <span style="color:red">完走率の確率分布を推定する</span>
     - つまり確率（完走率）自体を確率変数として扱う
     - 背景となる考え: 無限回の試行をしないと完走率はそもそも不確か
-    $\rightarrow$完走率は確率的
+    <span style="color:red">$\rightarrow$完走率は確率的</span>
 
 ---
 
