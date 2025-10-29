@@ -244,9 +244,8 @@ $\boldsymbol{\mu}
 ### Linear transformation of the Gaussian distribution
 
 - When transforming from the coordinate system of $\boldsymbol{x}$ to the coordinate system of $\boldsymbol{y} = A \boldsymbol{x} + \boldsymbol{b}$, the space is stretched by $|\det(A)|$ [[Sugiura 1985]](https://www.utp.or.jp/book/b302043.html)
-- The area ratio of the green part in the diagram below is $1:|\det(A)|$
-- Additional information: $|\det(A)|$ is the absolute value of the determinant of $A$
-(Writing it as $||A||$ is confusing, so we use this notation.)
+    - The area ratio of the green part in the diagram below is $1:|\det(A)|$
+        - Additional information: $|\det(A)|$ is the absolute value of the determinant of $A$ (Writing it as $||A||$ is confusing, so we use this notation.)
 ![w:600](https://upload.wikimedia.org/wikipedia/commons/3/34/DeterminantOfMatrix.png)
 <span style="font-size:50%">[(Image: CC0)](https://commons.wikimedia.org/wiki/File:DeterminantOfMatrix.png)</span>
 
