@@ -129,9 +129,9 @@ Normalized to $p_i$.
 ### Drawing the distribution of completion rates
 
 - Let's plot the evolution of the distribution over time for trials of the software before the improvement.
-- Completed$\rightarrow$Failed$\rightarrow$Failed$\rightarrow$Completed$\rightarrow$Completed
-- $p(t) = \eta \ t^a (1-t)^b$
-* This is what happens.
+    - Completed$\rightarrow$Failed$\rightarrow$Failed$\rightarrow$Completed$\rightarrow$Completed
+    - $p(t) = \eta \ t^a (1-t)^b$
+    * This is what happens.
 $\qquad\qquad\qquad$![w:700](./figs/post_prob.png)
 
 ---
