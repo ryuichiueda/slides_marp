@@ -66,12 +66,12 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 
 - Let's fit $x$ and $y$ from the experimental data to a multivariate Gaussian distribution (2D Gaussian distribution).
 - [Data for 20 trials](./misc/xy_data.txt)
-- Column 1: $x$[m], Column 2: $y$[m]
+    - Column 1: $x$[m], Column 2: $y$[m]
 - Parameters to be calculated
-- Mean and variance of $x$ and $y$
-- Covariance of $x$ and $y$
-- <span style="color:red">How to calculate covariance from data</span>: $s_{ab} = \dfrac{1}{N-1}\sum_{i=1}^n (a_i - \bar{a})(b_i - \bar{b})$
-- For $N$ data pairs $(a,b)_{1:N}$
+    - Mean and variance of $x$ and $y$
+    - Covariance of $x$ and $y$
+        - <span style="color:red">How to calculate covariance from data</span>: $s_{ab} = \dfrac{1}{N-1}\sum_{i=1}^n (a_i - \bar{a})(b_i - \bar{b})$
+            - For $N$ data pairs $(a,b)_{1:N}$
 
 ![bg right:30% 95%](./figs/robot_final_pos_b.png)
 
