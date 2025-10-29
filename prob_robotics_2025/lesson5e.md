@@ -115,13 +115,14 @@ $=\langle p(x_i|t) \rangle_{p_{i-1}(t)}=\langle t^{x_i}(1-t)^{1-x_i} \rangle_{p_
 ### Derivation of the distribution of completion rates (complete)
 
 - Therefore, the following holds:
-- $p_i(t) = \eta \ t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
-- Meaning: If $x_i$ is a success, multiply $p_{i-1}$ by $t$; if it is a failure, multiply $t-1$.
+    - $p_i(t) = \eta \ t^{x_i}(1-t)^{1-x_i} p_{i-1}(t)$
+        - Meaning: If $x_i$ is a success, multiply $p_{i-1}$ by $t$; if it is a failure, multiply $t-1$.
 Normalized to $p_i$.
 - Suppose there have been $a$ successes and $b$ failures so far.
-- $p_{a+b}(t) = \eta \ t^a (1-t)^b p_0(t)$
+    - $p_{a+b}(t) = \eta \ t^a (1-t)^b p_0(t)$
 - Suppose $p_0$ is uniformly distributed.
-- <span style="color:red">$p(t) = \eta \ t^a (1-t)^b$</span> However, the distribution of completion rates after $a+b$ trials.
+    - <span style="color:red">$p(t) = \eta \ t^a (1-t)^b$</span>
+        - the distribution of completion rates after $a+b$ trials.
 
 ---
 
