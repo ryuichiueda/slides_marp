@@ -305,12 +305,12 @@ $= \dfrac{\eta}{s}
 ### Multivariate Gaussian Product (Answer, continued)
 
 - Rearranging $L$
-- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
+    - $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
 $\qquad\quad - (A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - \boldsymbol{x}^\top C^{-1}\boldsymbol{c}$
 $\qquad\quad - (\boldsymbol{a}- \boldsymbol{b} )^\top B^{-1} (A\boldsymbol{x}) - \boldsymbol{c}^\top C^{-1} \boldsymbol{x} + U'$
-- $U'$ is a term unrelated to $\boldsymbol{x}$
-- $(XY)^\top = Y^\top X^\top$. ​​Using the property that the covariance matrix is ​​symmetric,
-- $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
+        - $U'$ is a term unrelated to $\boldsymbol{x}$
+- from $(XY)^\top = Y^\top X^\top$ and that the covariance matrix is symmetric,
+    - $L(\boldsymbol{x}) = (A\boldsymbol{x})^\top B^{-1}(A\boldsymbol{x}) + \boldsymbol{x}^\top C^{-1}\boldsymbol{x}$
 $\qquad\quad - 2(A\boldsymbol{x})^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) - 2\boldsymbol{x}^\top C^{-1}\boldsymbol{c} + U'$
 $\qquad = \boldsymbol{x}^\top(A^\top B^{-1} A + C^{-1})\boldsymbol{x}- 2\boldsymbol{x}^\top \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\} + U'$
 
