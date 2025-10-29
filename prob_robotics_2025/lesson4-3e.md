@@ -339,21 +339,20 @@ $= \eta s^{-1/2}e^{-U/2s}
 
 ### Product of Multivariate Gaussian Distributions (Summary)
 
-- Problem: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | What is the distribution of A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$?
-- Answer: $p(\boldsymbol{x}) = \eta s^{-1/2}e^{-U/2s}
-\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
-- $D^{-1} = A^\top B^{-1} A + C^{-1}$
-- $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
-- $U = (\boldsymbol{a} - \boldsymbol{b})^\top B^{-1}(\boldsymbol{a} - \boldsymbol{b}) + \boldsymbol{c}^\top C^{-1} \boldsymbol{c} - \boldsymbol{d}^\top D^{-1} \boldsymbol{d}$
+- Problem: what is the shape of $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$?
+- Answer: $p(\boldsymbol{x}) = \eta s^{-1/2}e^{-U/2s} \mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
+    - $D^{-1} = A^\top B^{-1} A + C^{-1}$
+    - $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
+    - $U = (\boldsymbol{a} - \boldsymbol{b})^\top B^{-1}(\boldsymbol{a} - \boldsymbol{b}) + \boldsymbol{c}^\top C^{-1} \boldsymbol{c} - \boldsymbol{d}^\top D^{-1} \boldsymbol{d}$
 
 This results in a Gaussian distribution (we'll explain how to use it later in the lecture).
 
 ---
 
-## Summary of the Multivariate Gaussian Distribution
+## Summary of the multivariate Gaussian distribution
 
 - Introduces the multivariate Gaussian distribution (multidimensional Gaussian distribution).
-- The parameters are the mean and variance-covariance matrix.
-- Enclosing the $n$-sigma range results in an ellipse.
-- It inherits the properties seen in the one-dimensional Gaussian distribution.
+    - The parameters are the mean and variance-covariance matrix.
+    - Enclosing the $n$-sigma range results in an ellipse.
+    - It inherits the properties seen in the one-dimensional Gaussian distribution.
 - It appears in numerous papers (in all fields these days), so it's a good idea to get familiar with it.
