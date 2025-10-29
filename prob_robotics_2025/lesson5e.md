@@ -73,11 +73,11 @@ $\qquad\qquad\qquad$![w:500](./figs/prob_t.png)
 ### Comparisons can be made by considering the probability distribution of the completion rate.
 
 - With many trials, the distributions of completion rates before and after the improvement (almost) do not overlap, as in (c).
-- We can (almost) tell which is superior.
+    - We can (almost) tell which is superior.
 - With around five trials, the distributions appear to overlap, as in (b).
-- There is a non-negligible possibility that the completion rates before and after the improvement are reversed.
+    - There is a non-negligible possibility that the completion rates before and after the improvement are reversed.
 
-$\qquad\qquad\qquad$![w:800](./figs/prob_t_compare.png)
+$\qquad\qquad\qquad$![w:500](./figs/prob_t_compare.png)
 
 <center>How do I calculate it? </center>
 
