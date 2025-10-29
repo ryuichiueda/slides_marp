@@ -254,14 +254,14 @@ $\boldsymbol{\mu}
 ### Linear transformation of the Gaussian distribution (continued)
 
 - When space is stretched $|\det(A)|$, the density is diluted by $1/|\det(A)|$
-- $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma ) \big/ |\det(A)|$
+    - $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma ) \big/ |\det(A)|$
 $= \mathcal{N}\big[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) | \boldsymbol{\mu}, \Sigma \big] \big/ |\det(A)|$
 $= \frac{1}{\sqrt{(2\pi)^n |\Sigma| |A|^2}}
 \cdot\exp\left\{ 
 -\frac{1}{2}\left[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu} \right]^T \Sigma^{-1} \left[ A^{-1}(\boldsymbol{y} - \boldsymbol{b}) - \boldsymbol{\mu}\right] 
 \right\}$ 
-- $|\Sigma| outside the exponent About |A|^2$$|\Sigma||A|^2 = |A| |\Sigma| |A^\top|= |A\Sigma A^\top|$ 
-- $= in parentheses of exponent part -\frac{1}{2} \left[ 
+- $|\Sigma| |A|^2$ outside the exponent: $|\Sigma||A|^2 = |A| |\Sigma| |A^\top|= |A\Sigma A^\top|$ 
+    - in parentheses of exponent part $=-\frac{1}{2} \left[ 
 A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} ) 
 \right]^\top \Sigma^{-1} A^{-1} ( \boldsymbol{y} - \boldsymbol{b} - A \boldsymbol{\mu} )$ 
 $= -\frac{1}{2} 
