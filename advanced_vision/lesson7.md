@@ -30,6 +30,8 @@ marp: true
 
 ## 層正規化（前回の補足）
 
+- あるレイヤーの出力を正規化して出力
+
 ![bg right:20% 100%](./figs/layer_normalization.png)
 
 ---
