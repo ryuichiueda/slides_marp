@@ -117,3 +117,14 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - アルゴリズムの説明のための図だけど図4も面白い
 - Stable Diffusion 3
 - ロボットの制御（これからやります）
+
+---
+
+## Vision-Language-Action（VLA）モデル
+
+
+---
+
+### 人の指示によるロボットの制御
+
+
