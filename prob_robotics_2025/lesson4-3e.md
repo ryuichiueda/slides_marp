@@ -80,7 +80,7 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 ### Calculation Results
 
 - Example using `datamash`
-``bash
+```bash
 ### Mean ###
 $ cat xy_data.txt | tr ' ' \\t | datamash mean 1 mean 2
 3.8822 0.51035
@@ -99,7 +99,7 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 
 - $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^2 |\Sigma|}}
 \exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
-- $\Sigma
+    - $\Sigma
 = \begin{pmatrix}
 0.016 & -0.029 \\
 -0.029 & 0.197 \\
@@ -109,8 +109,8 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 3.88 \\
 0.51
 \end{pmatrix}$
-- I understand the formula, but I'm not sure how to interpret it.
-- Let's try drawing a graph.
+- We understand the formula, but I'm not sure how to interpret it.
+    - Let's try drawing a graph.
 
 ---
 
