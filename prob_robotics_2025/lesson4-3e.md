@@ -22,18 +22,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## Contents
 
-- Multivariate Gaussian Distribution
-- Calculations for Multivariate Gaussian Distribution
+- Multivariate Gaussian distribution
+- Calculations for multivariate Gaussian distribution
 
 ---
 
 ## Multivariate Gaussian Distribution
 
 - Gaussian-distributed variables $x_{1:n}$ can be collectively expressed as a single multidimensional Gaussian distribution.
-- Let's first show the formula.
-- $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
+    - $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \dfrac{1}{\sqrt{(2\pi)^n |\Sigma|}}
 \exp\left\{-\dfrac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
-- Here, 
+        - Here, 
 $\boldsymbol{x} = \begin{pmatrix} 
 x_1 \\ x_2 \\ \vdots \\ x_n 
 \end{pmatrix}, \ 
@@ -51,14 +50,14 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 
 ### Variance-covariance matrix
 
-- $\Sigma$ on the previous page: A matrix combining the variances and covariances of each variable
-- $\Sigma = \begin{pmatrix}
+- $\Sigma$ on the previous page: a matrix combining the variances and covariances of each variable
+    - $\Sigma = \begin{pmatrix}
 \sigma^2_1 & \sigma_{12} & \dots & \sigma_{1n} \\
 \sigma_{12} & \sigma^2_2 & \dots & \sigma_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 \sigma_{1n} & \sigma_{2n} & \dots & \sigma^2_n \\
 \end{pmatrix}$
-- $\sigma_{ij} = \big\langle (x_i - \mu_i )(x_j-\mu_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
+        - $\sigma_{ij} = \big\langle (x_i - \mu_i )(x_j-\mu_j) \big\rangle_{\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma)}$
 - In normal conversation, "covariance matrix" is acceptable.
 
 ---
