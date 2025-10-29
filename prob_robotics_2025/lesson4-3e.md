@@ -131,20 +131,20 @@ $ cat xy_data.txt |tr ' ' \\t | datamash scov 1:2
 ### Diagonalize first
 
 - Decompose $\Sigma$ as follows:
-- $\Sigma = R(-\theta)^\top S R(-\theta)$
-- $R(\theta) =
+    - $\Sigma = R(-\theta)^\top S R(-\theta)$
+        - $R(\theta) =
 \begin{pmatrix}
 \cos\theta & -\sin\theta \\
 \sin\theta & \cos\theta
 \end{pmatrix}$: Rotation matrix
-- $S =
+        - $S =
 \begin{pmatrix}
 \sigma_a^2 & 0 \\
 0 & \sigma_b^2 \\
 \end{pmatrix}
 = \text{diag}(\sigma_a^2, \sigma_b^2)$: Diagonal matrix
 - Then
-- $D_\text{M}(\boldsymbol{x})
+    - $D_\text{M}(\boldsymbol{x})
 = \sqrt{
 (\boldsymbol{x} - \boldsymbol{\mu})^\top \{
 R(-\theta)^\top S R(-\theta)
