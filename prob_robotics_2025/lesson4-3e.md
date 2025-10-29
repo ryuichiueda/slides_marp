@@ -316,8 +316,44 @@ $\qquad = \boldsymbol{x}^\top(A^\top B^{-1} A + C^{-1})\boldsymbol{x}- 2\boldsym
 
 ---
 
-### Product of Multivariate Gaussian Distributions (Answer, continued)
+### Multivariate Gaussian Distribution Product (Answer, continued)
 
 - Replace the last line on the previous page with the following:
+    - $D^{-1} = A^\top B^{-1} A + C^{-1}$
+    - $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
+- $L(\boldsymbol{x}) = \boldsymbol{x}^\top D^{-1} \boldsymbol{x} - 2\boldsymbol{x}^\top D^{-1}\boldsymbol{d} +U'$
+$\qquad = ( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) - \boldsymbol{d}^\top D^{-1} \boldsymbol{d} + U'$
+$\qquad = ( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) + U$
+- Return $L$ to exponent
+    - $p(\boldsymbol{x}) = \frac{\eta}{s}
+\exp\Big\{ -\frac{1}{2s}
+( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} )
+\Big\} \cdot \exp \left( - \frac{1}{2s} U \right)$
+$= \frac{\eta}{s^{1/2}} \frac{1}{\sqrt{(2\pi)^\ell |sD|}} \exp \left\{
+-\frac{1}{2s}( \boldsymbol{x} - \boldsymbol{d} )^\top D^{-1} ( \boldsymbol{x} - \boldsymbol{d} ) \right\}
+\cdot e^{ - U/2s}$
+$= \eta s^{-1/2}e^{-U/2s}
+\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
+
+---
+
+### Product of Multivariate Gaussian Distributions (Summary)
+
+- Problem: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | What is the distribution of A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)$?
+- Answer: $p(\boldsymbol{x}) = \eta s^{-1/2}e^{-U/2s}
+\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
 - $D^{-1} = A^\top B^{-1} A + C^{-1}$
-- $\boldsy
+- $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
+- $U = (\boldsymbol{a} - \boldsymbol{b})^\top B^{-1}(\boldsymbol{a} - \boldsymbol{b}) + \boldsymbol{c}^\top C^{-1} \boldsymbol{c} - \boldsymbol{d}^\top D^{-1} \boldsymbol{d}$
+
+This results in a Gaussian distribution (we'll explain how to use it later in the lecture).
+
+---
+
+## Summary of the Multivariate Gaussian Distribution
+
+- Introduces the multivariate Gaussian distribution (multidimensional Gaussian distribution).
+- The parameters are the mean and variance-covariance matrix.
+- Enclosing the $n$-sigma range results in an ellipse.
+- It inherits the properties seen in the one-dimensional Gaussian distribution.
+- It appears in numerous papers (in all fields these days), so it's a good idea to get familiar with it.
