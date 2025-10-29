@@ -215,7 +215,7 @@ $\boldsymbol{\mu}
 0.51
 \end{pmatrix}$
 - Right: Drawing ellipses for $n=1, 2, 3$
-- This is called the <span style="color:red">error ellipse</span>
+    - This is called the <span style="color:red">error ellipse</span>
 
 ![bg right:30% 95%](./figs/robot_final_pos_ellipse.png)
 
