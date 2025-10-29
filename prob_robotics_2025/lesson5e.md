@@ -59,11 +59,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### (Predicted) probability distribution of the completion rate.
 
 - If the completion rate (random variable) is $t$, then $p(t)$ will probably look like the graph below.
-- (a) Before trials: Uniform distribution (no information available).
-- (b) After several trials: A peak appears at "number of completions/number of trials," but it's still unclear.
-- (c) After many trials: The completion rate is clear and the distribution is sharp.
+    - (a) Before trials: Uniform distribution (no information available).
+    - (b) After several trials: A peak appears at "number of completions/number of trials," but it's still unclear.
+    - (c) After many trials: The completion rate is clear and the distribution is sharp.
 
-$\qquad\qquad\qquad$![w:700](./figs/prob_t.png)
+$\qquad\qquad\qquad$![w:500](./figs/prob_t.png)
 
 <center>Let's compare the results before and after the improvement using this distribution.
 <br /> (I'll leave aside the question of how to calculate this distribution.)</center>
