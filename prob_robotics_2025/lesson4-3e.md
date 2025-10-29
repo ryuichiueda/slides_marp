@@ -289,7 +289,7 @@ $\Longrightarrow p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\
 ### Product of Multivariate Gaussian Distributions (Solution)
 
 - First, simplify the expansion $\mathcal{N}$ by formulating it.
-- $p(\boldsymbol{x}) = \eta
+    - $p(\boldsymbol{x}) = \eta
 \dfrac{1}{\sqrt{(2\pi)^k |sB| }}
 \dfrac{1}{\sqrt{(2\pi)^\ell |sC| }}$
 $\cdot \exp\Big\{
@@ -298,7 +298,7 @@ $\cdot \exp\Big\{
 \Big\}$
 $= \dfrac{\eta}{s}
 \exp\Big\{ -\dfrac{1}{2s} L(\boldsymbol{x}) \Big\}$
-- where $L(\boldsymbol{x})$ is the exponent multiplied by $-2s$.
+        - where $L(\boldsymbol{x})$ is the exponent multiplied by $-2s$.
 
 ---
 
