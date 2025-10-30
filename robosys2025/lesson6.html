@@ -70,7 +70,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <h3 id="%E5%9F%BA%E6%9C%AC%E4%BA%8B%E9%A0%85">基本事項</h3>
 <ul>
 <li>シェルは，<code>変数名=文字列</code>で，文字を記憶<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### 例 ###</span>
-$ X=我々は宇宙人だ   <span class="hljs-comment"># 変数のセット</span>
+$ X=我々は宇宙人だ   <span class="hljs-comment"># 変数のセット                                             </span>
 </code></pre>
 </li>
 <li><code>${変数名}</code>で値に置換<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### 例 ###</span>
@@ -78,14 +78,14 @@ $ <span class="hljs-built_in">echo</span> <span class="hljs-variable">${X}</span
 我々は宇宙人だぜ！
 $ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$X</span>            <span class="hljs-comment"># {}は省略できる（こともある）</span>
 我々は宇宙人だ
-$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;$X&#x27;</span> <span class="hljs-comment"># 値にしないときはシングルクォートで囲う（``と混同注意）</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;$X&#x27;</span> <span class="hljs-comment"># 値にしないときはシングルクォートで囲う（``と混同注意）               </span>
 <span class="hljs-variable">$X</span>
 </code></pre>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-comment">### {} が省略できない例 ###</span>
 $ <span class="hljs-built_in">echo</span> <span class="hljs-variable">${X}</span>Z
 我々は宇宙人だZ
 $ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$XZ</span>
-                        <span class="hljs-comment">#変数「XZ」と解釈されるのでなにも出力されない</span>
+                        <span class="hljs-comment">#変数「XZ」と解釈されるのでなにも出力されない                       </span>
 </code></pre>
 </li>
 </ul>

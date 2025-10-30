@@ -56,7 +56,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - シェルは，`変数名=文字列`で，文字を記憶
     ```bash
     ### 例 ###
-    $ X=我々は宇宙人だ   # 変数のセット
+    $ X=我々は宇宙人だ   # 変数のセット                                             
     ```
 - `${変数名}`で値に置換
     ```bash
@@ -65,7 +65,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     我々は宇宙人だぜ！
     $ echo $X            # {}は省略できる（こともある）
     我々は宇宙人だ
-    $ echo '$X' # 値にしないときはシングルクォートで囲う（``と混同注意）
+    $ echo '$X' # 値にしないときはシングルクォートで囲う（``と混同注意）               
     $X
     ```
     ```bash
@@ -73,7 +73,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $ echo ${X}Z
     我々は宇宙人だZ
     $ echo $XZ
-                            #変数「XZ」と解釈されるのでなにも出力されない
+                            #変数「XZ」と解釈されるのでなにも出力されない                       
     ```
 
 ---
