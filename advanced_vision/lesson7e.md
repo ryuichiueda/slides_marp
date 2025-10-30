@@ -229,10 +229,10 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 
 - Able to perform arithmetic operations with a small number of shots
 - The output fictitious articles are indistinguishable from those written by humans
-- ChatGPT
-- A service that uses GPT to answer prompts (human text input)
-- "Prompt": A collective term for task descriptions, examples, and prompts
-- Fine-tuning is no longer necessary, enabling services to answer a variety of questions
+    - <span style="color:red">ChatGPT</span>
+        - A service that uses GPT to answer <span style="color:red">prompts</span> (human text input)
+            - "Prompt": A collective term for task descriptions, examples, and prompts
+            - Fine-tuning is no longer necessary, enabling services to answer a variety of questions
 - Performance is expected to improve even with further training
 
 ---
