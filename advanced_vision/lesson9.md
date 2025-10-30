@@ -169,7 +169,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 文をベクトルにする
 - 構造: Transformer（エンコーダ） or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
 - 学習方法
-    - 前後の文の
+    - 前後の文の予測
+    - 質問文への返答文の予測
+    - 前提と仮設の文が矛盾しているかどうか
 
 ---
 
