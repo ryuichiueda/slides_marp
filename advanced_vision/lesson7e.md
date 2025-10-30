@@ -99,11 +99,11 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### How to use BERT (continued)
 
 - Extractive summarization
-- Extracting important parts from a sentence and summarizing them
-- Example configuration [[Liu2019]](https://aclanthology.org/D19-1387.pdf): Add an encoder on top of BERT, and output a binary value indicating whether to output the sentence in the class token at the beginning of each sentence.
+    - Extracting important parts from a sentence and summarizing them
+    - Example configuration [[Liu2019]](https://aclanthology.org/D19-1387.pdf): Add an encoder on top of BERT, and output a binary value indicating whether to output the sentence in the class token at the beginning of each sentence.
 - Abstractive summarization
-- Properly rewriting and summarizing
-- It seems possible, but we're still investigating.
+    - Properly rewriting and summarizing
+    - It seems possible, but I'm still investigating.
 
 ---
 ## GPT (Generative Pre-trained Transformer)
