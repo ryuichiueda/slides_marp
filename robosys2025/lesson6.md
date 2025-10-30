@@ -33,6 +33,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## その前に: 前回の「aaa由来」について
+
+- 例は例
+    - 指名欄に「工大 太郎」とあったら自分の名前に変えないといけない
+
+---
+
 ## 1. シェルの変数
 
 ---
