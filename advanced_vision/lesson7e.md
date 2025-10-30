@@ -111,7 +111,7 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 - GPT-1
 - GPT-2
 - GPT-3
-- ChatGPT
+    - ChatGPT
 - GPT-4
 
 ---
