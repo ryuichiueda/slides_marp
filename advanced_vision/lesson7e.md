@@ -176,19 +176,119 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### [GPT-2 [Radford2019]](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
 
 - Scaling up GPT-1
-- 10x the number of parameters and training data
-- Collected 45 million links from the internet and acquired 80GB of text
+    - 10x the number of parameters and training data
+    - Collected 45 million links from the internet and acquired 80GB of text
 - The paper pursues zero-shot learning
-- Instead of changing the model depending on the task, the task is also input
-- $P($Answer$|$Task$,$Input$)$
-- Example: "Translate into Japanese: This is a pen.", "Summary: (long sentence)"
-- Is it possible? Try increasing the $\rightarrow$ parameters and training volume (GPT-1's performance improved with training volume).
+    - Instead of changing the model depending on the task, the task is also input
+        - $P($Answer$|$Task$,$Input$)$
+        - Example: "Translate into Japanese: This is a pen.", "Summary: (long sentence)"
+- Is it possible? $\rightarrow$ Try increasing the parameters and training volume (GPT-1's performance improved with training volume).
 
 ---
 
 ### GPT-2 Capabilities
 
-- As mentioned above, it receives task instructions such as "◯◯:" as input and responds.
-- It achieves the versatility to complete tasks without fine-tuning.
-- However, fine-tuning may still be necessary for some tasks.
-- It writes fictional articles. [[Radford2019]](https://cdn.openai.com/better-language-models/language_models_are_unsupervised
+- As mentioned before, it receives task instructions such as "◯◯:" as input and responds.
+    - It achieves the versatility to complete tasks without fine-tuning.
+    - However, fine-tuning may still be necessary for some tasks.
+- Table 13 of [[Radford2019]](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) writing fictional articles
+- <span style="color:red">The paper suggests there is still room for learning</span>
+
+---
+
+### [GPT-3 [Brown 2020]](https://arxiv.org/abs/2005.14165)
+
+- Enlarge the model and further increase the amount of training
+- 175 billion parameters, use up to 2048 tokens for prediction, and use 300 billion tokens for training
+- Addressing computational complexity
+- Sparse attention [[Child2019]](https://arxiv.org/abs/1904.10509)
+- Use alternately with a standard attention mechanism
+- Reduce computational complexity
+- Only tokens in specific positions are considered for calculation.
+- In other words, manual attention.
+- Structured for GPUs.
+
+---
+
+### Questioning Method
+
+- In the paper, questions are input to GPT-3 in the following divided ways:
+- Task Description: (e.g., "Translate English to French")
+- Example: (e.g., "sea otter => loutre de mer")
+- One Example: <span style="color:red">One-Shot</span>
+- Several Examples: <span style="color:red">Few-Shot</span>
+- Prompt: (e.g., "Answer =>") (In the paper, "cheese =>")
+- <span style="color:red">In-Context Learning</span>
+- Adjusting the output using examples like the ones above.
+- Instead of fine-tuning.
+- Weights are not updated (forgotten after solving the problem).
+
+---
+
+### GPT-3 Results
+
+- Able to perform arithmetic operations with a small number of shots
+- The output fictitious articles are indistinguishable from those written by humans
+- ChatGPT
+- A service that uses GPT to answer prompts (human text input)
+- "Prompt": A collective term for task descriptions, examples, and prompts
+- Fine-tuning is no longer necessary, enabling services to answer a variety of questions
+- Performance is expected to improve even with further training
+
+---
+
+### [GPT-4 [OpenAI]](https://arxiv.org/abs/2303.08774)
+
+- The structure has been kept secret due to social impact
+- Parameters: Several to several dozen times faster than GPT-3? (Possibilities measured in trillions)
+- <span style="color:red">Images can also be input</span>
+- Images + text will be discussed next time.
+
+---
+
+### Reinforcement Learning from Human Feedback (RLHF) [[Christiano 2017]](https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf)
+
+- Mechanism introduced in GPT-4 [([Ouyang 2022]?)](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf)
+- Reinforcement learning with human feedback
+- RLHF: Since the reward function for generating complex robot movements (cooking, cleaning) is unknown, we designed the reward by having humans compare various movements and score state transitions.
+- It seems that people are more likely to score when it's a comparison rather than an absolute evaluation.
+- Application to LLM
+- Objective: Prevent false, biased, or harmful sentences from being output through human feedback.
+- The method is explained on the next page.
+
+---
+
+### Applying RLHF to GPT
+
+The experiments described in the paper were conducted with GPT-3.
+
+- 3 Steps
+- Step 1: Select a prompt, have a human (elite team) create responses to create example inputs and outputs, and fine-tune the pre-trained model to reproduce the inputs and outputs.
+- Step 2: Humans score several sentences output by the model from Step 1 in response to one prompt. We then changed the head of the model from Step 1 to output reward values, creating a model that outputs the desirability of each sentence as a reward. Learning using human scores as training data
+- Step 3: Using the reward model (which functions as a reward function) created in Step 2, reinforcement learning is performed on the model to achieve high-reward outputs.
+
+---
+
+### "Hallucination"
+
+- Suddenly starting to say strange things
+- Since words are output one by one,
+the conversation may go off track depending on the order of the previous words.
+- Have you ever gotten nervous and blurted out something strange during an interview?
+- This is a simple anthropomorphization of a probabilistic model, which can lead to misunderstandings, and the paper warns against this.
+
+---
+
+## Summary
+
+- We've looked at applications of the Transformer.
+- It's having a major impact (or confusion?) on society.
+- The more data and parameters there are, the smarter it becomes.
+- If you read all the text ever written on Earth, would it end in a single paragraph? ?
+- There are many more applications beyond language.
+
+---
+
+- ​​References
+- Yamada et al.: Introduction to Large-Scale Language Models, Gijutsu Hyoronsha, 2023.
+- Yohei Kikuta: Unraveling Generative AI from Original Papers, Gijutsu Hyoronsha, 2025.
