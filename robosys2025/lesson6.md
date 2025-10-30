@@ -197,7 +197,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     #!/bin/bash
     　
     ng () {
-            echo ${1}行目が違うよ  #$1はngの1番目の引数
+            echo ${1}行目が違うよ  #$1はngの1番目の引数                                
     }
     　
     ng 123
