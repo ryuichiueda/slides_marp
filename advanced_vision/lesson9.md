@@ -167,12 +167,13 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### Transformerより前の部分
 
 - FiLM EfficientNet-B3とTokenLearnerの2つの部分
-- FiLM EfficientNet-B3: 画像からトークンへの変換
+- FiLM EfficientNet-B3: 各画像からトークンへの変換
     - EfficientNetというネットワークで画像の特徴量を抽出
         - 言葉をFiLMで変換して特徴量に強弱をつける
-    - 512次元の81個のベクトル（vision-language tokens）を出力
+    - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
 - TokenLearner
     - トークンの数を減らす（圧縮する）役割
+    - $81\rightarrow8$（6枚の画像で48トークン。512次元）
 
 
 ---
