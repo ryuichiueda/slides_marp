@@ -152,15 +152,20 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - 動画: https://www.youtube.com/watch?v=UuKAp9a6wMs
 - 構造: 論文の図3
-    - Transformerより前の部分
+    - Universal Sentence Encoder: FiLMのパラメータを出力
+    - FiLM EfficientNet-B3とTokenLearner
         - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
         - 出力: 512次元の48個のトークン
-    - Transformerの部分
+    - Transformer（デコーダー）
         - 入力: 48個のトークンに位置埋め込みしたもの
         - 出力: ロボットの行動（11次元の離散空間中の点）
             - ロボット: モバイルマニピュレータ
             - モード1次元、腕の動き7次元、位置・向き3次元
             - 3Hz
+
+---
+
+### Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
 
 ---
 
