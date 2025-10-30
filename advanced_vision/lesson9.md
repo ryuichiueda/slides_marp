@@ -173,6 +173,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
 - TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
     - トークンの数を減らす（圧縮する）役割
+        - もともとViTの入力ベクトル数を減らすためのもの
     - $81\rightarrow8$（6枚の画像で48トークン。512次元）
 
 
