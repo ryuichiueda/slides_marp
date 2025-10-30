@@ -165,10 +165,10 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 
 - Use GPT without fine-tuning
 - Method used in the GPT-1 paper (example of having the machine answer a multiple-choice quiz)
-- Ask a question and ensure the answer is the last token
-- Compare the probability of occurrence of the answer token and select the one with the highest probability as the answer
-- If you input a question instead of just a single token and prompt the machine for output, perhaps it will provide a written answer?
-- GPT is essentially a model that continuously produces words.
+    - Ask a question and ensure the answer is the last token
+    - Compare the probability of occurrence of the answer token and select the one with the highest probability as the answer
+- If it outputs sentences instead of just a single token,  perhaps it will be an answer?
+    - GPT is essentially a model that continuously produces words.
 <span style="color:red">$\Longrightarrow$Continues with GPT-2</span>
 
 ---
