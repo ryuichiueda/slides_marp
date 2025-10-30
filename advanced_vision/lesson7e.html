@@ -83,13 +83,19 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="Advanced Vision Lesson 7" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:Advanced Vision Lesson 7;--paginate:true;" data-marpit-pagination-total="16">
 <h3 id="input-format">Input format</h3>
 <ul>
-<li>In addition to the standard positional embedding, each token is assigned a segment embedding, indicating the sentence position.</li>
-<li>The later <a href="https://arxiv.org/abs/1907.11692">RoBERTa</a> does not use segment embeddings.<br />
+<li>In addition to the standard positional embedding, each token is assigned a segment embedding which indicates the sentence position.
+<ul>
+<li>The latercommer <a href="https://arxiv.org/abs/1907.11692">RoBERTa</a> does not use segment embeddings.<br />
 (It also does not predict the next sentence.)</li>
-<li>Special tokens</li>
+</ul>
+</li>
+<li>Special tokens
+<ul>
 <li><code>[CLS]</code>: Class token (attached to the beginning)</li>
 <li><code>[SEP]</code>: Sentence separator</li>
 <li><code>[MASK]</code>: Mask used to hide tokens during training.</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Lesson 7</footer>
 </section>

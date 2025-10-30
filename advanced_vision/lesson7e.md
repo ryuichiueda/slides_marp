@@ -59,13 +59,13 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Input format
 
-- In addition to the standard positional embedding, each token is assigned a segment embedding, indicating the sentence position.
-- The later [RoBERTa](https://arxiv.org/abs/1907.11692) does not use segment embeddings.
+- In addition to the standard positional embedding, each token is assigned a segment embedding which indicates the sentence position.
+    - The latercommer [RoBERTa](https://arxiv.org/abs/1907.11692) does not use segment embeddings.
 (It also does not predict the next sentence.)
 - Special tokens
-- `[CLS]`: Class token (attached to the beginning)
-- `[SEP]`: Sentence separator
-- `[MASK]`: Mask used to hide tokens during training.
+    - `[CLS]`: Class token (attached to the beginning)
+    - `[SEP]`: Sentence separator
+    - `[MASK]`: Mask used to hide tokens during training.
 
 ---
 
