@@ -288,6 +288,6 @@ The experiments described in the paper were conducted with GPT-3.
 
 ---
 
-- ​​References
-- Yamada et al.: Introduction to Large-Scale Language Models, Gijutsu Hyoronsha, 2023.
-- Yohei Kikuta: Unraveling Generative AI from Original Papers, Gijutsu Hyoronsha, 2025.
+- References
+    - Yamada et al.: Introduction to Large-Scale Language Models, Gijutsu Hyoronsha, 2023.
+    - Yohei Kikuta: Unraveling Generative AI from Original Papers, Gijutsu Hyoronsha, 2025.
