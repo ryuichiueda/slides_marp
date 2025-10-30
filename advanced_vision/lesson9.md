@@ -171,7 +171,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - EfficientNetというネットワークで画像の特徴量を抽出
         - 言葉をFiLMで変換して特徴量に強弱をつける
     - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
-- TokenLearner
+- TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
     - トークンの数を減らす（圧縮する）役割
     - $81\rightarrow8$（6枚の画像で48トークン。512次元）
 
