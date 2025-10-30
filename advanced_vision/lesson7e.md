@@ -213,15 +213,15 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### Questioning Method
 
 - In the paper, questions are input to GPT-3 in the following divided ways:
-- Task Description: (e.g., "Translate English to French")
-- Example: (e.g., "sea otter => loutre de mer")
-- One Example: <span style="color:red">One-Shot</span>
-- Several Examples: <span style="color:red">Few-Shot</span>
-- Prompt: (e.g., "Answer =>") (In the paper, "cheese =>")
+    - Task Description: (e.g., "Translate English to French")
+    - Example: (e.g., "sea otter => loutre de mer")
+        - One Example: <span style="color:red">One-Shot</span>
+        - Several Examples: <span style="color:red">Few-Shot</span>
+    - Prompt: (e.g., "Answer =>") (In the paper, "cheese =>")
 - <span style="color:red">In-Context Learning</span>
-- Adjusting the output using examples like the ones above.
-- Instead of fine-tuning.
-- Weights are not updated (forgotten after solving the problem).
+    - Adjusting the output using examples like the ones above.
+    - Instead of fine-tuning.
+    - Weights are not updated (forgotten after solving the problem).
 
 ---
 
