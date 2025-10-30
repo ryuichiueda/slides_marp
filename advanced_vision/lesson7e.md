@@ -144,10 +144,9 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### GPT-1 Training Method (Pre-training Part 2)
 
 - Adding special tokens: `<s>` at the beginning of a sentence and `<e>` at the end
-- Connecting a fully connected layer to the output $\boldsymbol{h}_\text{<e>}$ corresponding to `<e>`
-to calculate the occurrence probability for all words
-- $P(w_i) = $softmax$(W\boldsymbol{h}_\text{<e>})$
-- The idea is that the meaning of the read sentence is summarized in the `<e>` part, like a class token
+- Connecting a fully connected layer to the output $\boldsymbol{h}_\text{<e>}$ corresponding to `<e>` to calculate the occurrence probability for all words
+    - $P(w_i) =\text{softmax}(W\boldsymbol{h}_\text{<e>})$
+    - The idea is that the meaning of the read sentence is summarized in the `<e>` part, like a class token
 
 ![bg right:20% 100%](./figs/gpt-1_pt.svg)
 
@@ -156,9 +155,9 @@ to calculate the occurrence probability for all words
 ### GPT-1 Training Method (Fine Tuning)
 
 - Adding a head to the part of the pre-trained decoder corresponding to `<e>` to specialize it for a specific task
-- Problems similar to those handled by BERT (although GPT-1 was developed earlier)
-- Demonstrates high performance (omitted)
-- High performance is important, but the results on the next page are even more significant
+    - Problems similar to those handled by BERT (although GPT-1 was developed earlier)
+    - Demonstrates high performance (omitted)
+        - High performance is important, but the results on the next page are even more significant
 
 ---
 
