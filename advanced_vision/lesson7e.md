@@ -240,9 +240,9 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### [GPT-4 [OpenAI]](https://arxiv.org/abs/2303.08774)
 
 - The structure has been kept secret due to social impact
-- Parameters: Several to several dozen times faster than GPT-3? (Possibilities measured in trillions)
+    - Parameters: Several to several dozen times larger than GPT-3? (Possibilities measured in trillions)
 - <span style="color:red">Images can also be input</span>
-- Images + text will be discussed next time.
+    - Images + text will be discussed next time.
 
 ---
 
