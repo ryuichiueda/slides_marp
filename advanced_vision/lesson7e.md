@@ -119,9 +119,9 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### [GPT-1 [Radford2018]](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
 - Making the Transformer decoder work like BERT
-- (BERT is the encoder)
-- Decoder in this case: A Transformer decoder with masked self-attention, without cross-attention
-- Masked: In other words, pre-training with next-word prediction
+    - (BERT is the encoder)
+    - Decoder in this case: A Transformer decoder with masked self-attention, without cross-attention
+        - Masked: In other words, pre-training with next-word prediction
 
 [<span style="font-size:70%">Image: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
 
