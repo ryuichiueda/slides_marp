@@ -172,6 +172,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - 言葉をFiLMで変換して特徴量に強弱をつける
     - 512次元の81個のベクトル（vision-language tokens）を出力
 - TokenLearner
+    - トークンの数を減らす（圧縮する）役割
 
 
 ---
