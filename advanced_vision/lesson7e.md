@@ -133,11 +133,11 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 
 - Pre-training Data: 4.5GB of text from 7,000 unpublished books across various genres ([BookCorpus](https://github.com/soskek/bookcorpus))
 - Predict the next word from the unmasked portion
-- As described on the previous page
-- Loss function: $\mathcal{L}(\boldsymbol{\Theta}) = -\sum_i \log P(w_i | w_{{i-k}:{i-1}}, \boldsymbol{\Theta})$
-- $w_i$: Token to predict
-- $w_{i-k:i-1}$: Token used for prediction
-- $k$: Range of past tokens to read (truncation threshold)
+    - As described on the previous page
+    - Loss function: $\mathcal{L}(\boldsymbol{\Theta}) = -\sum_i \log P(w_i | w_{{i-k}:{i-1}}, \boldsymbol{\Theta})$
+        - $w_i$: Token to predict
+        - $w_{i-k:i-1}$: Token used for prediction
+        - $k$: Range of past tokens to read (truncation threshold)
 
 ---
 
