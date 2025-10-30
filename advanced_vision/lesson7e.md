@@ -19,7 +19,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 <!-- paginate: true -->
 
-## What to do today
+## Contents
 
 - Supplementary notes from last session
 - BERT
@@ -27,17 +27,17 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-## Layer Normalization (Additional Information from the Previous Article)
+## Layer Normalization
 
 - Normalize the output of a layer
 - Method: For each vector $\boldsymbol{x}=(x_1, x_2, \dots, x_d)$ passed,
-- Normalize the vector elements so that their mean is $0$ and variance is $1$.
-- Multiply the $i$th element by $\gamma_i$ and shift it by $\beta_i$.
-- $\gamma_i$ and $\beta_i$ are the parameters to be trained.
+    - Normalize the vector elements so that their mean is $0$ and variance is $1$.
+    - Multiply the $i$th element by $\gamma_i$ and shift it by $\beta_i$.
+        - $\gamma_i$ and $\beta_i$ are the parameters to be trained.
 - Role
-- Prevent values ​​from becoming extreme.
-- Emphasize or weaken certain elements of the vector (manipulate the degree of attention).
-- Later, we will introduce a mechanism to learn $\gamma_i$ and $\beta_i$ from other information.
+    - Prevent values from becoming extreme.
+    - Emphasize or weaken certain elements of the vector (manipulate the degree of attention).
+        - Later, we will introduce a mechanism to learn $\gamma_i$ and $\beta_i$ from other information.
 
 ![bg right:20% 100%](./figs/layer_normalization.png)
 
