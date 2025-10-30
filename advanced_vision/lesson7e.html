@@ -414,7 +414,7 @@
 <h3 id="applying-rlhf-to-gpt">Applying RLHF to GPT</h3>
 <p>The experiments described in the paper were conducted with GPT-3.</p>
 <ul>
-<li>3 Steps
+<li>3 Steps (Step 1 and 2 build a reward function model)
 <ul>
 <li>Step 1: Select a prompt, have a human (elite team) create responses to create example inputs and outputs, and fine-tune the pre-trained model to reproduce the inputs and outputs.</li>
 <li>Step 2: Humans score several sentences output by the model from Step 1 in response to one prompt. We then changed the head of the model from Step 1 to output reward values, creating a model that outputs the desirability of each sentence as a reward. Learning using human scores as training data</li>
