@@ -164,6 +164,13 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+### RT-1の訓練データ
+
+- 700タスクを13のロボットにさせて13万エピソードを収集（地獄）
+    - 人が遠隔操作
+
+---
+
 ### Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
 
 （重要そうだけど概要だけ）
