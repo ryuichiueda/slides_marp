@@ -256,7 +256,7 @@ $ ./test.bash
 　
 res=0
 a=山田
-[ <span class="hljs-string">&quot;<span class="hljs-variable">$a</span>&quot;</span> = 上田 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>  <span class="hljs-comment"># LINENOは，この行の行番号の入る変数</span>
+[ <span class="hljs-string">&quot;<span class="hljs-variable">$a</span>&quot;</span> = 上田 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>  <span class="hljs-comment"># LINENOは，この行の行番号の入る変数         </span>
 [ <span class="hljs-string">&quot;<span class="hljs-variable">$a</span>&quot;</span> = 山田 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>  <span class="hljs-comment"># ngに第一引数として$LINENOを付与</span>
 　
 <span class="hljs-built_in">exit</span> <span class="hljs-variable">$res</span>     <span class="hljs-comment"># このシェルスクリプトの終了ステータスを返して終了</span>
