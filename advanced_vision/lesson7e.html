@@ -102,13 +102,19 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="Advanced Vision Lesson 7" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:Advanced Vision Lesson 7;--paginate:true;" data-marpit-pagination-total="16">
 <h3 id="pre-training">Pre-training</h3>
 <ul>
-<li>Masked LM (also known as bidirectional tasks): Use a Transformer encoder to solve a sentence fill-in-the-blank problem.</li>
+<li>Masked LM (also known as bidirectional tasks): Use a Transformer encoder to solve a sentence fill-in-the-blank problem.
+<ul>
 <li>Example: <code>[CLS]</code> I went to Doutonbori <code>[MASK]</code> bus. <code>[SEP]</code></li>
-<li>The embeddings output by the encoder are followed by a fully connected layer that outputs the probability of each word. This is the learning process.</li>
+<li>The embeddings output by the encoder are followed by a fully connected layer that outputs the probability of each word.</li>
 <li>Occasionally, the system will ask the user to answer using the existing word without masking, or to swap tokens to answer the correct answer.</li>
-<li>Next-Sentence Prediction: Two sentences are connected with a <code>[sep]</code> and the user is asked to guess whether they are a continuation or not.</li>
+</ul>
+</li>
+<li>Next-Sentence Prediction: Two sentences are connected with a <code>[sep]</code> and the user is asked to guess whether they are a continuation or not.
+<ul>
 <li>50% of the training data is continuation sentences, and the other 50% is separate sentences.</li>
-<li>A fully connected layer that probabilistically determines continuity/discontinuity is attached to the output class token, which is the learning process.</li>
+<li>A fully connected layer answers continuity/discontinuity.</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Lesson 7</footer>
 </section>

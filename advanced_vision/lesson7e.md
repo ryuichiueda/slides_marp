@@ -72,12 +72,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Pre-training
 
 - Masked LM (also known as bidirectional tasks): Use a Transformer encoder to solve a sentence fill-in-the-blank problem.
-- Example: `[CLS]` I went to Doutonbori `[MASK]` bus. `[SEP]`
-- The embeddings output by the encoder are followed by a fully connected layer that outputs the probability of each word. This is the learning process.
-- Occasionally, the system will ask the user to answer using the existing word without masking, or to swap tokens to answer the correct answer.
+    - Example: `[CLS]` I went to Doutonbori `[MASK]` bus. `[SEP]`
+    - The embeddings output by the encoder are followed by a fully connected layer that outputs the probability of each word. 
+    - Occasionally, the system will ask the user to answer using the existing word without masking, or to swap tokens to answer the correct answer.
 - Next-Sentence Prediction: Two sentences are connected with a `[sep]` and the user is asked to guess whether they are a continuation or not.
-- 50% of the training data is continuation sentences, and the other 50% is separate sentences.
-- A fully connected layer that probabilistically determines continuity/discontinuity is attached to the output class token, which is the learning process.
+    - 50% of the training data is continuation sentences, and the other 50% is separate sentences.
+    - A fully connected layer answers continuity/discontinuity.
 
 ---
 
