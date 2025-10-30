@@ -166,6 +166,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
 
+（重要そうだけど概要だけ）
+
 - 文をベクトルにする
 - 構造: Transformer（エンコーダ） or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
 - 学習方法
