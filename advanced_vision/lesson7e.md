@@ -199,14 +199,14 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### [GPT-3 [Brown 2020]](https://arxiv.org/abs/2005.14165)
 
 - Enlarge the model and further increase the amount of training
-- 175 billion parameters, use up to 2048 tokens for prediction, and use 300 billion tokens for training
+    - 175 billion parameters, use up to 2048 tokens for prediction, and use 300 billion tokens for training
 - Addressing computational complexity
-- Sparse attention [[Child2019]](https://arxiv.org/abs/1904.10509)
-- Use alternately with a standard attention mechanism
-- Reduce computational complexity
-- Only tokens in specific positions are considered for calculation.
-- In other words, manual attention.
-- Structured for GPUs.
+    - Sparse attention [[Child2019]](https://arxiv.org/abs/1904.10509)
+        - Use alternately with a standard attention mechanism
+        - Reduce computational complexity
+             - Only tokens in specific positions are considered for calculation.
+             - In other words, manual attention.
+    - Structured for GPUs.
 
 ---
 
