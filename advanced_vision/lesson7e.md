@@ -262,7 +262,7 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 
 The experiments described in the paper were conducted with GPT-3.
 
-- 3 Steps (Step 1 and 2 build a reward function model)
+- 3 Steps (Step 1 and 2 build a reward function model.)
     - Step 1: Select a prompt, have a human (elite team) create responses to create example inputs and outputs, and fine-tune the pre-trained model to reproduce the inputs and outputs.
     - Step 2: Humans score several sentences output by the model from Step 1 in response to one prompt. We then changed the head of the model from Step 1 to output reward values, creating a model that outputs the desirability of each sentence as a reward. Learning using human scores as training data
     - Step 3: Using the reward model (which functions as a reward function) created in Step 2, reinforcement learning is performed on the model to achieve high-reward outputs.
@@ -272,10 +272,9 @@ The experiments described in the paper were conducted with GPT-3.
 ### "Hallucination"
 
 - Suddenly starting to say strange things
-- Since words are output one by one,
-the conversation may go off track depending on the order of the previous words.
-- Have you ever gotten nervous and blurted out something strange during an interview?
-- This is a simple anthropomorphization of a probabilistic model, which can lead to misunderstandings, and the paper warns against this.
+- Since words are output one by one, the conversation may go off track depending on the order of the previous words.
+    - Have you ever gotten nervous and blurted out something strange during an interview?
+- This is a simple anthropomorphization of a probabilistic model, which can lead to misunderstandings. The paper warns against this.
 
 ---
 

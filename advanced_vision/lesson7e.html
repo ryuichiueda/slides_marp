@@ -414,7 +414,7 @@
 <h3 id="applying-rlhf-to-gpt">Applying RLHF to GPT</h3>
 <p>The experiments described in the paper were conducted with GPT-3.</p>
 <ul>
-<li>3 Steps (Step 1 and 2 build a reward function model)
+<li>3 Steps (Step 1 and 2 build a reward function model.)
 <ul>
 <li>Step 1: Select a prompt, have a human (elite team) create responses to create example inputs and outputs, and fine-tune the pre-trained model to reproduce the inputs and outputs.</li>
 <li>Step 2: Humans score several sentences output by the model from Step 1 in response to one prompt. We then changed the head of the model from Step 1 to output reward values, creating a model that outputs the desirability of each sentence as a reward. Learning using human scores as training data</li>
@@ -428,10 +428,12 @@
 <h3 id="hallucination">&quot;Hallucination&quot;</h3>
 <ul>
 <li>Suddenly starting to say strange things</li>
-<li>Since words are output one by one,<br />
-the conversation may go off track depending on the order of the previous words.</li>
+<li>Since words are output one by one, the conversation may go off track depending on the order of the previous words.
+<ul>
 <li>Have you ever gotten nervous and blurted out something strange during an interview?</li>
-<li>This is a simple anthropomorphization of a probabilistic model, which can lead to misunderstandings, and the paper warns against this.</li>
+</ul>
+</li>
+<li>This is a simple anthropomorphization of a probabilistic model, which can lead to misunderstandings. The paper warns against this.</li>
 </ul>
 <footer>Advanced Vision Lesson 7</footer>
 </section>
