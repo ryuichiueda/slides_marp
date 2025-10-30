@@ -281,9 +281,9 @@ The experiments described in the paper were conducted with GPT-3.
 ## Summary
 
 - We've looked at applications of the Transformer.
-- It's having a major impact (or confusion?) on society.
-- The more data and parameters there are, the smarter it becomes.
-- If you read all the text ever written on Earth, would it end in a single paragraph? ?
+    - It's having a major impact (or confusion?) on society.
+    - The more data and parameters there are, the smarter it becomes.
+        - If you read all the text ever written on Earth, would it end?
 - There are many more applications beyond language.
 
 ---
