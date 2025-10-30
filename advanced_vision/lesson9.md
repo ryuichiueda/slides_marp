@@ -194,6 +194,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### Transformerの部分
 
+- 8個の自己注意機構の層、1900万パラメータ
+
 
 ---
 
