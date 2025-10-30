@@ -388,7 +388,7 @@ $ <span class="hljs-built_in">echo</span> $?
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="ロボットシステム学第6回" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:ロボットシステム学第6回;--paginate:true;" data-marpit-pagination-total="25">
 <h3 id="%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AE%E7%A2%BA%E8%AA%8D">シェルスクリプトの挙動の確認</h3>
 <ul>
-<li><code>-x</code>や<code>-v</code>でシェルスクリプトの動作を観察可能（デバッグに便利）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash -xv        &lt;- シバンの後ろに-xvと書いて-xと-vをセット</span>
+<li><code>-x</code>や<code>-v</code>でシェルスクリプトの動作を観察可能（デバッグに便利）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-meta">#!/bin/bash -xv        &lt;- シバンの後ろに-xvと書いて-xと-vをセット                </span>
 （以下略）
 </code></pre>
 <ul>
@@ -397,7 +397,7 @@ out=$(<span class="hljs-built_in">seq</span> 5 | ./plus)
 ++ <span class="hljs-built_in">seq</span> 5
 ++ ./plus
 + out=15
-[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = 15 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span>
+[ <span class="hljs-string">&quot;<span class="hljs-variable">${out}</span>&quot;</span> = 15 ] || ng <span class="hljs-string">&quot;<span class="hljs-variable">$LINENO</span>&quot;</span> 　                                         
 + <span class="hljs-string">&#x27;[&#x27;</span> 15 = 15 <span class="hljs-string">&#x27;]&#x27;</span>
 
 [ <span class="hljs-string">&quot;<span class="hljs-variable">${res}</span>&quot;</span> = 0 ] &amp;&amp; <span class="hljs-built_in">echo</span> OK
