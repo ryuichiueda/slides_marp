@@ -9,3 +9,4 @@
 - [第9回: ROS 2の通信と型](https://ryuichiueda.github.io/slides_marp/robosys2025/lesson9.html)
 - [第10回: ROSシステムのテスト](https://ryuichiueda.github.io/slides_marp/robosys2025/lesson10.html)
 - [第11回: Pythonのクラスとオブジェクト](https://ryuichiueda.github.io/slides_marp/robosys2025/lesson11.html)
+- [第おまけ回: プロセス](https://ryuichiueda.github.io/slides_marp/robosys2025/lesson_ex1.html)
