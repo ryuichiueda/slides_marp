@@ -46,14 +46,14 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## [BERT](https://aclanthology.org/N19-1423/) (Bidirectional Encoder Representations from Transformers) [Devlin2019]
 
 - Model using Transformer encoder
-- Application: Google Search
+    - Application: Google Search
 - BERT<span style="font-size:60%;vertical-align:-5pt">BASE</span> and BERT<span style="font-size:60%;vertical-align:-5pt">LARGE</span>
-- Number of encoders: 12 for the former, 24 for the latter
-- Number of parameters: 110M for the former, 340M for the latter
+    - Number of encoders: 12 for the former, 24 for the latter
+    - Number of parameters: 110M for the former, 340M for the latter
 - Training method (ANN configuration: [Fig. 1 in the original paper](https://aclanthology.org/N19-1423.pdf))
-- Pre-training: Sentence fill-in (masked LM, MLM) and next-sentence prediction tasks simultaneously
-- Wikipedia + 7,000 books
-- Fine-tuning: Tasks tailored to each application
+    - Pre-training: Sentence fill-in (masked LM, MLM) and next-sentence prediction tasks simultaneously
+        - Wikipedia + 7,000 books
+    - Fine-tuning: Tasks tailored to each application
 
 ---
 
