@@ -164,9 +164,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### RT-1の訓練データ（地獄の様相）
+### RT-1の訓練データ（力づく）
 
-- 図2のようなキッチン（3種類）やテーブルのような環境でロボットを動かして訓練データを採取
+- 図2のようなキッチン（3種類）やテーブルのような環境で
+ロボットを動かして訓練データを採取
     - 人が遠隔操作
     - やった作業に人間がテキストの解説をつける
         - これで画像とテキストと動作のセットができる
@@ -193,14 +194,14 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### Transformerより前の部分
 
 - FiLM EfficientNet-B3とTokenLearnerの2つの部分
-- FiLM EfficientNet-B3: 各画像からトークンへの変換
-    - EfficientNetというネットワークで画像の特徴量を抽出
-        - 言葉をFiLMで変換して特徴量に強弱をつける
-    - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
-- TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
-    - トークンの数を減らす（圧縮する）役割
-        - もともとViTの入力ベクトル数を減らすためのもの
-    - $81\rightarrow8$（6枚の画像で48トークン。512次元）
+    - FiLM EfficientNet-B3: 各画像からトークンへの変換
+        - EfficientNetというネットワークで画像の特徴量を抽出
+            - 言葉をFiLMで変換して特徴量に強弱をつける
+        - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
+    - TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
+        - トークンの数を減らす（圧縮する）役割
+            - もともとViTの入力ベクトル数を減らすためのもの
+        - $81\rightarrow8$（6枚の画像で48トークン。512次元）
 
 
 ---
@@ -210,6 +211,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 8個の自己注意機構の層、1900万パラメータ
 - 6枚の画像の各8トークンが順番に並べられて文のような入力に
     - これが何をすべきかを示す時系列情報に
+- 出力: 先述のようにロボットを動かすために必要な次元分のパラメータとモード
+    - モード: arm, base, terminate
 
 
 ---
