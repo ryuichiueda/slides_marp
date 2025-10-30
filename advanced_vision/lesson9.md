@@ -192,6 +192,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+### Transformerの部分
+
+
+---
+
 ### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
 
 - Physical Intelligence社が開発したVLAモデル
