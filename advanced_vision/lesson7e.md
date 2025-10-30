@@ -249,12 +249,12 @@ There are various ways to use BERT, and they are <span style="color:red">fine-tu
 ### Reinforcement Learning from Human Feedback (RLHF) [[Christiano 2017]](https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf)
 
 - Mechanism introduced in GPT-4 [([Ouyang 2022]?)](https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf)
-- Reinforcement learning with human feedback
+    - Reinforcement learning with human feedback
 - RLHF: Since the reward function for generating complex robot movements (cooking, cleaning) is unknown, we designed the reward by having humans compare various movements and score state transitions.
-- It seems that people are more likely to score when it's a comparison rather than an absolute evaluation.
+        - It seems that people are more likely to score when it's a comparison rather than an absolute evaluation.
 - Application to LLM
-- Objective: Prevent false, biased, or harmful sentences from being output through human feedback.
-- The method is explained on the next page.
+    - Objective: Prevent false, biased, or harmful sentences from being output through human feedback.
+        - The method is explained on the next page.
 
 ---
 
