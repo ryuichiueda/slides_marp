@@ -83,15 +83,16 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### How to Use BERT
 
-There are various ways to use BERT, and they are fine-tuned to suit the purpose (see [Reference](https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1)).
+There are various ways to use BERT, and they are <span style="color:red">fine-tuned</span> to suit the purpose (see [Reference](https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1)).
+
 - Classification, Sentiment Analysis
-- Class token output is passed to a classifier.
+    - Class token output is passed to a classifier.
 - Question Answering
-- First, the system reads a sentence containing the answer, then asks a one-word quiz to answer.
-- For questions that require predicting the next word in the quiz.
+    - First, the system reads a sentence containing the answer, then asks a one-word quiz to answer.
+        - For questions that require predicting the next word in the quiz.
 - Named entity recognition
-- Classifying unknown words into categories such as "person's name," "place name," "organization name," etc.
-- Converting sentences into labels (a rough explanation)
+    - Classifying unknown words into categories such as "person's name," "place name," "organization name," etc.
+    - Converting sentences into labels (a rough explanation)
 
 ---
 
