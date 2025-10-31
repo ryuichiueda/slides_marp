@@ -146,6 +146,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - テーブル
 - 方策（制御則）等の表現方法
     - Transformerのデコーダだと1つずつ細かい動きを出していくことに
+- 汎化
+    - 教えた動作から外れた動作もできる
 
 ---
 
