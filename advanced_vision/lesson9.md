@@ -241,6 +241,11 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+### RT-2（[サイト](https://robotics-transformer2.github.io/)）
+
+
+---
+
 ### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
 
 - Physical Intelligence社が開発したVLAモデル
