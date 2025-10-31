@@ -148,6 +148,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - Transformerのデコーダだと1つずつ細かい動きを出していくことに
 - 汎化
     - 教えた動作から外れた動作もできる
+    - おそらく言葉の存在（意味の理解）が可能にする
 
 ---
 
