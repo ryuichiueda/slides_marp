@@ -231,6 +231,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - ロバスト性
     - 学習したキッチンと異なるキッチンでのタスク
     - 様々なテーブルクロス
+- 学習したものより長い/抽象化されたタスクへの対応
+    - 例: “how would you throw away all the items on the table?”
 
 ---
 
