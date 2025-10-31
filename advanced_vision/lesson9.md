@@ -162,7 +162,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - Transformer（デコーダー）
         - 入力: 48個のトークンに位置埋め込みしたもの
         - 出力: ロボットの行動（11次元の離散空間中の点）
-            - ロボット: モバイルマニピュレータ
+            - ロボット: モバイルマニピュレータ（[Everyday Robots](https://x.company/projects/everyday-robots/)）
             - モード1次元、腕の動き7次元、位置・向き3次元
             - 3Hz
 
@@ -187,7 +187,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 （重要そうだけど概要だけ）
 
 - 文をベクトルにする
-- 構造: Transformer（エンコーダ） or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
+    - 似たような文のベクトルの内積が大きくなるように
+- 構造: Transformer（エンコーダ）or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
 - 学習方法
     - 前後の文の予測
     - 質問文への返答文の予測

@@ -255,7 +255,7 @@
 <li>入力: 48個のトークンに位置埋め込みしたもの</li>
 <li>出力: ロボットの行動（11次元の離散空間中の点）
 <ul>
-<li>ロボット: モバイルマニピュレータ</li>
+<li>ロボット: モバイルマニピュレータ（<a href="https://x.company/projects/everyday-robots/">Everyday Robots</a>）</li>
 <li>モード1次元、腕の動き7次元、位置・向き3次元</li>
 <li>3Hz</li>
 </ul>
@@ -295,8 +295,12 @@
 <h3 id="universal-sentence-encodercer-2018">Universal Sentence Encoder（<a href="https://arxiv.org/abs/1803.11175">[Cer 2018]</a>）</h3>
 <p>（重要そうだけど概要だけ）</p>
 <ul>
-<li>文をベクトルにする</li>
-<li>構造: Transformer（エンコーダ） or Deep Average Network Encoder（<a href="https://aclanthology.org/P15-1162/">[Iyyer 2015]</a>）</li>
+<li>文をベクトルにする
+<ul>
+<li>似たような文のベクトルの内積が大きくなるように</li>
+</ul>
+</li>
+<li>構造: Transformer（エンコーダ）or Deep Average Network Encoder（<a href="https://aclanthology.org/P15-1162/">[Iyyer 2015]</a>）</li>
 <li>学習方法
 <ul>
 <li>前後の文の予測</li>
