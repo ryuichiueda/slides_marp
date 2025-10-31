@@ -237,7 +237,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - "how would you throw away all the items on the table?"
         - "near a sink"などの直接的でない場所の指定
 - 他
-    - シミュレーションから得られる訓練データの使用
+    - シミュレーション or 異なるロボットから得られる訓練データの使用
 
 ---
 
