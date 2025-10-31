@@ -228,11 +228,14 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### RT-1の達成事項
 
 - 学習した種類のタスクを97\%の成功率で達成
+    - 動作の例: 論文の図5
 - ロバスト性
     - 学習したキッチンと異なるキッチンでのタスク
     - 様々なテーブルクロス
 - 学習したものより長い/抽象化されたタスクへの対応
-    - 例: “how would you throw away all the items on the table?”
+    - 例
+        - "how would you throw away all the items on the table?"
+        - "near a sink"などの直接的でない場所の指定
 
 ---
 
