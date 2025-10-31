@@ -241,7 +241,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### RT-2（[サイト](https://robotics-transformer2.github.io/)）
+### RT-2（[[Brohan2023]](https://arxiv.org/abs/2307.15818)）（[サイト](https://robotics-transformer2.github.io/)）
 
 
 ---
