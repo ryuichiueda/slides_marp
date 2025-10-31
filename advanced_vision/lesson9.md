@@ -145,6 +145,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - <span style="color:red">先に答えを言うと、人間がひたすらデータを生成</span>
         - テーブル
 - 方策（制御則）等の表現方法
+    - Transformerのデコーダだと1つずつ細かい動きを出していくことに
 
 ---
 
