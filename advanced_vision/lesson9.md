@@ -244,11 +244,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### RT-2（[[Brohan2023]](https://arxiv.org/abs/2307.15818)）（[サイト](https://robotics-transformer2.github.io/)）
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
-- 構造: 論文の図1
-    - 中央のANNの図
-        - `<task>`という特殊トークンを入れた文を入力
-        - ロボットの動きに関するトークンを出力
-        - トークンをデコードするとロボットの制御指令に
+- 構造: 論文の図1（の中央のANNの図）
+    - `<task>`という特殊トークンを入れた文を入力
+    - ロボットの動きに関するトークンを出力
+    - トークンをデコードするとロボットの制御指令に
 
 
 ---
