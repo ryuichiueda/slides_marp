@@ -154,7 +154,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
-- 構造・入出力の概要: 論文の図3
+- 構造・入出力の概要: 論文の図3（まだVLAという言葉はない）
     - Universal Sentence Encoder: FiLMのパラメータを出力
     - FiLM EfficientNet-B3とTokenLearner
         - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
@@ -242,6 +242,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ---
 
 ### RT-2（[[Brohan2023]](https://arxiv.org/abs/2307.15818)）（[サイト](https://robotics-transformer2.github.io/)）
+
+- この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
 
 
 ---
