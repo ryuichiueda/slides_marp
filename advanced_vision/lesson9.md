@@ -51,15 +51,12 @@ marp: true
 
 ---
 
-### Vision-Language-Action（VLA）モデル
+### 基本的な考え方
 
-- 言語$\rightarrow$動作という変換が必要
-    - 「言語$\rightarrow$画像」のようにできないだろうか？
-- 従来のようにセンサ$\rightarrow$動作という変換も必要
-    - センサ=視覚（や視覚と同等に扱える信号）と考えると
-    「画像$\rightarrow$動作」という変換が必要となる
-
-<center style="color:red;padding-top:2em">「画像、言語、動作（VLA）の相互変換」というアイデアに</center>
+- 様々なモーダルの情報を動作に変換
+    - 画像、センサ
+    - 言葉による指示
+    - 自身の内部状態
 
 ---
 
