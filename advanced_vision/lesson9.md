@@ -23,6 +23,7 @@ marp: true
 
 - 本題の前に
     - flow matching
+    - PaLM
 - ANNによるロボットの制御
     - VLA（vision-language-action model）、ロボット基盤モデル
     - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
@@ -119,6 +120,13 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - アルゴリズムの説明のための図だけど図4も面白い
 - Stable Diffusion 3
 - ロボットの制御（これからやります）
+
+---
+
+## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)
+
+- Pathways Language Model（Googleの大規模言語モデル）
+    - Transformerのデコーダで構成されているのでGPTのように機能
 
 ---
 
@@ -243,9 +251,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### PaLM-E[[Driess2023]](https://arxiv.org/abs/2303.03378)
 
+- 身体性マルチモーダル言語モデル
+    - 身体性: ロボットの身体の情報を織り込むということ
 - Googleの大規模言語モデルPaLMに画像やロボットの知覚情報を入力できるようにして、タスクのやりかたを作文できるようにしたモデル
-    - PaLM: Pathways Language Model（Googleの大規模言語モデル）
-        - Transformerのデコーダで構成されているのでGPTのように機能
 - 構成: 論文の図1
 
 ---
