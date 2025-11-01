@@ -182,3 +182,5 @@ marp: true
 ### PaLM-Eの構成
 
 - 構成: [論文](https://arxiv.org/abs/2303.03378)の図1
+    - ViT（220億パラメータ）
+    - PaLM（5400億パラメータ）
