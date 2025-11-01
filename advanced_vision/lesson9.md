@@ -220,12 +220,15 @@ PaLMへの入力の部分
             - 時系列で決められたセット数だけ入力
 - 損失関数: 答えと出力のクロスエントロピー誤差
 - 特記事項
-    - <span style="color:red">ほとんどが画像の内容を答えるもので、ロボットのものは10\%未満</span>
+    - <span style="color:red">ほとんどが画像の内容を答えるもので、ロボット関連のものは10\%未満</span>
         - [Webli]([[Chen2022]](https://arxiv.org/html/2410.23676v1))というデータセットのものが半分以上
 
 
 ---
 
-- 3種類の訓練
-    - Task and Motion Planning（TAMP）: テーブルの上に積み木を置く
+### ロボット関連の訓練データ
+
+3種類
+
+- Task and Motion Planning（TAMP）: テーブルの上に積み木を置く
 
