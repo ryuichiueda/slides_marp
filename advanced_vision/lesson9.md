@@ -243,6 +243,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### PaLM-E[[Driess2023]](https://arxiv.org/abs/2303.03378)
 
+- Googleの大規模言語モデルPaLMに画像やロボットの知覚情報を入力し、タスクのやりかたを作文させる
+    - PaLM: Pathways Language Model（Googleの大規模言語モデル）
+
 ---
 
 ### RT-2（[[Brohan2023]](https://arxiv.org/abs/2307.15818)）（[サイト](https://robotics-transformer2.github.io/)）
@@ -262,7 +265,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - vision-languageモデルを使用
     - PaLI-X（[[Chen2023]](https://arxiv.org/abs/2305.18565)） or PaLM-E（[[Driess2023]](https://arxiv.org/abs/2303.03378)）
         - PaLI: Pathways Language and Image Model
-        - PaLM: Pathways Language Model（Googleの大規模言語モデル）
         - PaLM-E: ロボットのためにPaLMにViTをくっつけたもの（"E": embodied）
 
 ---
