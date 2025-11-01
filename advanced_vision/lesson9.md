@@ -133,7 +133,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 構造: 論文の図1（ViT+Transformerエンコーダ+Transformerデコーダ）
         - 言葉のトークンもViTの出す画像の特徴量のトークンも同じ長さのベクトルにしてTransformerに入力
         - 交差注意機構も使うらしい（未調査）
--
+
 ---
 
 ## ANNによるロボットの制御
