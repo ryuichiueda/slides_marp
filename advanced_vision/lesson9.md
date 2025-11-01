@@ -243,7 +243,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### PaLM-E[[Driess2023]](https://arxiv.org/abs/2303.03378)
 
-- Googleの大規模言語モデルPaLMに画像やロボットの知覚情報を入力し、タスクのやりかたを作文させる
+- Googleの大規模言語モデルPaLMに画像やロボットの知覚情報を入力できるようにして、タスクのやりかたを作文できるようにしたモデル
     - PaLM: Pathways Language Model（Googleの大規模言語モデル）
 
 ---
