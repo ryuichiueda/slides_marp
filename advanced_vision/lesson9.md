@@ -23,7 +23,7 @@ marp: true
 
 - 本題の前に
     - flow matching
-    - PaLM
+    - PaLM、PaLI
 - ANNによるロボットの制御
     - VLA（vision-language-action model）、ロボット基盤モデル
     - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
@@ -125,8 +125,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)
 
-- Pathways Language Model（Googleの大規模言語モデル）
+- PaLM: Pathways Language Model（Googleの大規模言語モデル）
     - Transformerのデコーダで構成されているのでGPTのように機能
+    - 後述のようにGoogleのロボット制御モデルに用いられている
+    - 最新のPaLM2は100以上の言語を使いこなす（多言語翻訳が可能）
 
 ---
 
