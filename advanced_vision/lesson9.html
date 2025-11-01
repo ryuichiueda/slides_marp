@@ -306,11 +306,10 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer="アドバンストビジョン第9回" data-paginate="true" lang="ja-JP" data-marpit-pagination="15" style="--footer:アドバンストビジョン第9回;--paginate:true;" data-marpit-pagination-total="17">
 <h3 id="palm-epalm-e-562b%E3%81%AE%E6%A7%8B%E6%88%90%E8%AB%96%E6%96%87%E3%81%AE%E5%9B%B31%E3%81%9D%E3%81%AE1">PaLM-E（PaLM-E-562B）の構成（<a href="https://arxiv.org/abs/2303.03378">論文</a>の図1）（その1）</h3>
-<ul>
-<li>PaLMへの入力の部分
+<p>PaLMへの入力の部分</p>
 <ul>
 <li>ViT（220億パラメータ）: 画像をPaLMへのトークンに変換</li>
-<li>「?」: 他のセンサ値、状態推定値、ロボットの状態などをPaLMへのトークンに変換
+<li>「?」: 他の情報をPaLMへのトークンに変換
 <ul>
 <li>入力のタイプによって変わるので、おそらく「?」と表記
 <ul>
@@ -319,6 +318,11 @@
 </li>
 </ul>
 </li>
+<li>「?」に入力する情報の例
+<ul>
+<li>画像以外のセンサ値</li>
+<li>画像中の物体にラベル付けしたり名前をつけたりした結果（<a href="https://arxiv.org/abs/2206.06922">[Sadi2022]</a>などを使用）</li>
+<li>状態推定値、ロボットの状態などをPaLMへのトークンに変換</li>
 </ul>
 </li>
 </ul>
