@@ -177,7 +177,7 @@ marp: true
         - 出力: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
             - [動画](https://research.google/blog/palm-e-an-embodied-multimodal-language-model/)
 
-<span style="color:red">PaLMがすでに言語的な知識をたくさんもっているので、この情報を認識の機能や動作の生成に利用できる</span>
+<span style="color:red">PaLM持っている言語的な知識を、認識の機能や動作の生成に利用できる</span>
 
 ---
 
