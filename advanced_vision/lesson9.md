@@ -70,6 +70,7 @@ marp: true
     - たぶんCLIPのときのようなネットのデータはない
     - <span style="color:red">先に答えを言うと、人間がひたすらデータを生成</span>
         - 例: https://www.youtube.com/watch?v=S4tvirlG8sQ
+    - もちろんシミュレータ（ディジタルツイン）も使える
 - 方策（制御則）等の表現方法
     - Transformerのデコーダだと1つずつ細かい動きを出していくことに
 - 汎化
