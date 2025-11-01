@@ -29,13 +29,18 @@ marp: true
 
 ---
 
-## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)、PaLI[[Chen2022]](https://arxiv.org/abs/2209.06794)
+## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)
 
-- PaLM: Pathways Language Model（Googleの大規模言語モデル）
+- Pathways Language Model（Googleの大規模言語モデル）
     - Transformerのデコーダで構成されているのでGPTのように機能
     - 後述のようにGoogleのロボット制御モデルに用いられている
     - 新しいバージョンのPaLM 2[[Anil2023]](https://arxiv.org/abs/2305.10403)は100以上の言語を使いこなす（多言語翻訳が可能）
-- PaLI: Pathways Language and Image model
+
+---
+
+## PaLI[[Chen2022]](https://arxiv.org/abs/2209.06794)
+
+- Pathways Language and Image model
     - 構造: 論文の図1（ViT+Transformerエンコーダ+Transformerデコーダ）
         - 言葉のトークンもViTの出す画像の特徴量のトークンも同じ長さのベクトルにしてTransformerに入力
         - 交差注意機構も使うらしい（未調査）
