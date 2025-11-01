@@ -121,31 +121,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)、PaLI[[Chen2022]](https://arxiv.org/abs/2209.06794)
-
-- PaLM: Pathways Language Model（Googleの大規模言語モデル）
-    - Transformerのデコーダで構成されているのでGPTのように機能
-    - 後述のようにGoogleのロボット制御モデルに用いられている
-    - 新しいバージョンのPaLM 2[[Anil2023]](https://arxiv.org/abs/2305.10403)は100以上の言語を使いこなす（多言語翻訳が可能）
-- PaLI: Pathways Language and Image model
-    - 構造: 論文の図1（ViT+Transformerエンコーダ+Transformerデコーダ）
-        - 言葉のトークンもViTの出す画像の特徴量のトークンも同じ長さのベクトルにしてTransformerに入力
-        - 交差注意機構も使うらしい（未調査）
-
----
-
-## Vision-Language-Action（VLA）モデル
-
-- 言語$\rightarrow$動作という変換が必要
-    - 「言語$\rightarrow$画像」のようにできないだろうか？
-- 従来のようにセンサ$\rightarrow$動作という変換も必要
-    - センサ=視覚（や視覚と同等に扱える信号）と考えると
-    「画像$\rightarrow$動作」という変換が必要となる
-
-<center style="color:red;padding-top:2em">「画像、言語、動作（VLA）の相互変換」というアイデアに</center>
-
----
-
 ### RT-2（[[Brohan2023]](https://arxiv.org/abs/2307.15818)）（[サイト](https://robotics-transformer2.github.io/)）
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
