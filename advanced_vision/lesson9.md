@@ -181,4 +181,4 @@ marp: true
 
 ### PaLM-Eの構成
 
-- 構成: 論文の図1
+- 構成: [論文](https://arxiv.org/abs/2303.03378)の図1
