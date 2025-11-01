@@ -235,4 +235,5 @@ PaLMへの入力の部分
         - 物体の関係性
         - プランニング
 - Interactive Language Table: 論文のB.2
+    - [[Lynch2022]](https://arxiv.org/abs/2210.06407)のデータ
 
