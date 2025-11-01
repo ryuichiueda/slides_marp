@@ -176,6 +176,7 @@ marp: true
             - `<img>`: 画像（この場合は机の上に様々な色の物体）
         - 出力: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
 - RT-1との違い: <span style="color:red">PaLM持っている言語的な知識を利用可能</span>
+    - 動作と関係なく「画像に何がある？」や「この画像とこの画像の間に何が起こった？」などの質問にも答えてくれる
 
 ---
 
