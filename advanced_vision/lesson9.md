@@ -73,7 +73,7 @@ marp: true
         - 上記2つの方法の例: https://www.youtube.com/watch?v=S4tvirlG8sQ
 - 方策（制御則）等の表現方法や出力方法
     - アクチュエータへの出力？
-    - Transformerだと1つずつ出していく？
+    - Transformerベースだと1つずつ出していく？
 - 汎化
     - 教えた動作から外れた動作もできる
     - おそらく言葉の存在（意味の理解）が可能にする
