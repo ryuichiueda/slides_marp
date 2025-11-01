@@ -22,7 +22,8 @@ marp: true
 ## 今日やること
 
 - 本題の前に
-    - PaLM、PaLI
+    - PaLM
+    - PaLI
 - ANNによるロボットの制御
     - VLA（vision-language-action model）という言葉ができる以前のもの
         - VLAという言葉が出た後の話については次回
