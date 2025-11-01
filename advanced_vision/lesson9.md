@@ -171,6 +171,13 @@ marp: true
 - 身体性マルチモーダル言語モデル
     - 身体性: ロボットの身体の情報を織り込むということ
 - PaLMに画像やロボットの知覚情報を入力できるようにして、タスクのやりかたを作文できるようにしたモデル
-    - <span style="color:red">PaLMがすでに言語的な知識をたくさんもっているので、この情報を認識の機能や動作の生成に利用できる</span>
-- 構成: 論文の図1
+    - 例（論文の図1から引用）
+        - 入力: "Given `<img>` Task: Sort colors into corners."
+            - `<img>`: 画像（この場合は机の上に様々な色の物体）
+        - 出力: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
 
+<span style="color:red">PaLMがすでに言語的な知識をたくさんもっているので、この情報を認識の機能や動作の生成に利用できる</span>
+
+### PaLM-Eの構成
+
+- 構成: 論文の図1
