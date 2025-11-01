@@ -179,9 +179,7 @@ marp: true
 
 ---
 
-### PaLM-E（PaLM-E-562B）の構成
-
-[論文](https://arxiv.org/abs/2303.03378)の図1
+### PaLM-E（PaLM-E-562B）の構成（[論文](https://arxiv.org/abs/2303.03378)の図1）
 
 - 主な部品
     - PaLM（5400億パラメータ）: 言葉をトークンで受けつけ
