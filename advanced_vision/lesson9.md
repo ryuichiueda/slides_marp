@@ -230,5 +230,8 @@ PaLMへの入力の部分
 
 3種類
 
-- Task and Motion Planning（TAMP）: テーブルの上に積み木を置く
+- Task and Motion Planning（TAMP）: 論文のB.1
+    - 机の上の様々な色の積み木に対する質問
+        - 物体の関係性
+        - プランニング
 
