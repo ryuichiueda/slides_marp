@@ -130,6 +130,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 後述のようにGoogleのロボット制御モデルに用いられている
     - 新しいバージョンのPaLM 2[[Anil2023]](https://arxiv.org/abs/2305.10403)は100以上の言語を使いこなす（多言語翻訳が可能）
 - PaLI: Pathways Language and Image model
+    - PaLMにViT経由で画像も入力
+        - 言葉のトークンも画像のトークンも同じ長さのベクトルに
 -
 ---
 
