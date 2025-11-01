@@ -257,6 +257,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - vision-languageモデルを使用
     - PaLI-X（[[Chen2023]](https://arxiv.org/abs/2305.18565)） or PaLM-E（[[Driess2023]](https://arxiv.org/abs/2303.03378)）
+        - PaLI: Pathways Language and Image Model
+        - PaLM: Pathways Language Model
 
 ---
 
