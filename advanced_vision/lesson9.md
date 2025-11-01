@@ -246,6 +246,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - Googleの大規模言語モデルPaLMに画像やロボットの知覚情報を入力できるようにして、タスクのやりかたを作文できるようにしたモデル
     - PaLM: Pathways Language Model（Googleの大規模言語モデル）
         - Transformerのデコーダで構成されているのでGPTのように機能
+- 構成: 論文の図1
 
 ---
 
