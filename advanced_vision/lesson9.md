@@ -255,8 +255,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 構造（RT-2-PaLI-X）
 
-- PaLI-X
-    - ViT-22B
+- vision-languageモデルを使用
+    - PaLI-X（[[Chen2023]](https://arxiv.org/abs/2305.18565)） or PaLM-E（[[Driess2023]](https://arxiv.org/abs/2303.03378)）
 
 ---
 
