@@ -123,13 +123,14 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)
+## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)、PaLI[[Chen2022]](https://arxiv.org/abs/2209.06794)
 
 - PaLM: Pathways Language Model（Googleの大規模言語モデル）
     - Transformerのデコーダで構成されているのでGPTのように機能
     - 後述のようにGoogleのロボット制御モデルに用いられている
     - 最新のPaLM 2[[Anil2023]](https://arxiv.org/abs/2305.10403)は100以上の言語を使いこなす（多言語翻訳が可能）
-
+- PaLI: Pathways Language and Image model
+-
 ---
 
 ## ANNによるロボットの制御
