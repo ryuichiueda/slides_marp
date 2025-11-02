@@ -83,7 +83,7 @@ marp: true
 ### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
 - 構造・入出力の概要: 論文の図3
-    - Universal Sentence Encoder: FiLMのパラメータを出力
+    - Universal Sentence Encoder: [FiLM](lesson8.html#3)のパラメータを出力
     - FiLM EfficientNet-B3とTokenLearner
         - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
         - 出力: 512次元の48個のトークン
