@@ -128,6 +128,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - PaLIにいろいろくっつけたもの（RT-2-PaLI-X）
     - PaLM-Eベースのもの（RT-2-PaLM-E）
         - 以後はPaLM-Eの使用を前提に話します
+        - なんでもトークンにして突っ込めてトークンを話すモデル
 
 
 ---
