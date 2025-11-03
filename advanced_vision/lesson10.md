@@ -141,7 +141,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - 例: 論文の図1の訓練データのペア（一番下のやつ）
             - Q: What should the robot do to `<task>`?
             - A: 変位: $(0.1, -0.2, 0)$、回転: $(10^\degree, 25^\degree, -7^\degree)$
-- PaLM-Eと違って直接的にロボットの動作を出力可能
+- $\Longrightarrow$ PaLM-Eと違って直接的にロボットの動作を出力可能
     - 制御のレイヤーを考えるとRT-1の後継と考えることが妥当
 
 ---
