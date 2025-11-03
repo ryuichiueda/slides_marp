@@ -126,7 +126,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
 - 構造にPaLM-E（あるいはPaLI系統の別のもの）を使用
     - ここではPaLM-Eの使用を前提に話します
-- PaLM-Eとの違い
+- PaLM-Eとの違い（VLAと呼ぶ理由）
     - ロボットの動作（言語レベルではなく<span style="color:red">数値レベル</span>のもの）も一緒に学習
         - 数値レベル: 関節の回転角や移動量などのこと
     - PaLM-Eと違って直接的にロボットの動作を出力可能
