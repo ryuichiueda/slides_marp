@@ -130,6 +130,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - 以後はPaLM-Eの使用を前提に話します
         - なんでもトークンにして突っ込めてトークンを話すモデル
 
+<center style="padding-top:2em">だとしたらPaLM-EとRT-2の違いはなに？</center>
 
 ---
 
