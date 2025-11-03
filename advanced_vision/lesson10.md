@@ -128,6 +128,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - ここではPaLM-Eの使用を前提に話します
 - PaLM-Eとの違い
     - ロボットの動作（言語レベルではなく数値レベルのもの）も一緒に学習
+    - PaLM-Eと違って直接的にロボットの動作を出力可能
 
 ---
 
