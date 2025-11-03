@@ -138,7 +138,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - ロボットの動作（言語レベルではなく<span style="color:red">数値レベル</span>のもの）も一緒に学習
     - 数値レベル: 関節の回転角や移動量などのこと
-        - 例: 論文の図1の訓練データ（一番下のやつ）
+        - 例: 論文の図1の訓練データのペア（一番下のやつ）
             - Q: What should the robot do to `<task>`?
             - A: 変位: $(0.1, -0.2, 0)$、回転: $(10^\degree, 25^\degree, -7^\degree)$
 - PaLM-Eと違って直接的にロボットの動作を出力可能
