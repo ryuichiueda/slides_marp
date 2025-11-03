@@ -146,7 +146,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### OpenVLA
+### OpenVLA[[Kim2024]](https://arxiv.org/abs/2406.09246)
+
 
 
 ---
