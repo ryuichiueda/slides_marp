@@ -133,7 +133,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+### RT-2の構造（論文
 
+- [[Brohan2023]](https://arxiv.org/abs/2307.15818)の図1
 - 構造の概要: 論文の図1（の中央のANNの図）
     - `<task>`という特殊トークンを入れた文を入力
     - ロボットの動きに関するトークンを出力
