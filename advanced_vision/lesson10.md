@@ -124,11 +124,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### Robotics Transformer 2（RT-2）[[Brohan2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
-- 構造にPaLM-E（あるいはPaLI系統の別のもの）を使用
-    - ここではPaLM-Eの使用を前提に話します
-- [[Brohan2023]](https://arxiv.org/abs/2307.15818)の図1と付録D
-    - 2つの実装があるので図1はどっちでもない曖昧なものが描かれている
-    - 1つはPaLM-Eベースのもの（RT-2-PaLM-E）
+- 構造（2種類ある）
+    - PaLIにいろいろくっつけたもの（RT-2-PaLI-X）
+    - PaLM-Eベースのもの（RT-2-PaLM-E）
+        - 以後はPaLM-Eの使用を前提に話します
 
 
 ---
