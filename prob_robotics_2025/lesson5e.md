@@ -180,7 +180,7 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
     - About 30 trials for $t^*_\text{after} = 0.8$
     - More than 100 trials for $t^*_\text{after} = 0.7$
         - 100 trials reduce the probability below 10%
-- A much larger number of trials is required (than what a student in the department would expect)
+- A much larger number of trials is required (than what a student would expect)
 
 ![bg right:25% 100%](./figs/false_prob_reduction.png)
 
