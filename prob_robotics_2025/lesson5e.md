@@ -205,11 +205,11 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 
 - $p(a, b) = p(a|b)p(b) = p(b|a)p(a)$
 $\Longrightarrow p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \dfrac{p(b|a)p(a)}{\int_{-\infty}^\infty p(b|a')p(a') \text{d}a'}$
-- (Aside from being a variation of the multiplication theorem) This is called <span style="color:red">Bayes' Theorem</span>
+    - (Aside from being a variation of the multiplication theorem) This is called <span style="color:red">Bayes' Theorem</span>
 - Various notations of Bayes' Theorem
-- $p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \eta p(b|a)p(a) = \dfrac{p(b|a)p(a)}{\langle p(b|a') \rangle_{p(a')}}$
-- This holds whether $a and b$ are continuous or discrete.
-- $\Pr \{A|B \} = \dfrac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}$
+    - $p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \eta p(b|a)p(a) = \dfrac{p(b|a)p(a)}{\langle p(b|a') \rangle_{p(a')}}$
+    - This holds whether $a and b$ are continuous or discrete.
+    - $\Pr \{A|B \} = \dfrac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}$
 
 ---
 
