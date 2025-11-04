@@ -150,8 +150,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - その名の通りオープンなVLA
 - 構造
-    - ゼロショットで画像分類するモデルSigLIP
-
+    - ゼロショットで画像分類するモデルSigLIP https://arxiv.org/abs/2303.15343
+        - softmaxでの多数のものから物体を分類をするのではなく、画像と短文がどれだけ合っているか確率で出力
 
 ---
 
