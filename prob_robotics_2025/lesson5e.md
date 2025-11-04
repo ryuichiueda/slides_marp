@@ -173,17 +173,16 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 ### How many trials are needed?
 
 - Right graph: Value of $\Pr\{ t_\text{before} > t_\text{after} \}$
-- Probability that improvement is meaningless
-- Conditions
-- Completion rate before improvement: $t^*_\text{before} = 0.6$ (fixed)
-- Completion rate after improvement: $t^*_\text{after} = 1.0, 0.9, 0.8, 0.7$
+    - Probability that improvement is meaningless
+        - Completion rate before improvement: $t^*_\text{before} = 0.6$ (fixed)
+        - Completion rate after improvement: $t^*_\text{after} = 1.0, 0.9, 0.8, 0.7$
 - Number of trials required to reduce the probability of meaninglessness below 5%
-- About 30 trials for $t^*_\text{after} = 0.8$
-- More than 100 trials for $t^*_\text{after} = 0.7$
-- 100 trials will reduce the probability below 10%
+    - About 30 trials for $t^*_\text{after} = 0.8$
+    - More than 100 trials for $t^*_\text{after} = 0.7$
+        - 100 trials reduce the probability below 10%
 - A much larger number of trials is required (than what a student in the department would expect)
 
-![bg right:30% 100%](./figs/false_prob_reduction.png)
+![bg right:25% 100%](./figs/false_prob_reduction.png)
 
 ---
 
