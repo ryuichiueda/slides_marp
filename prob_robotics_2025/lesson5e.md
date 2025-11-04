@@ -185,7 +185,122 @@ $\qquad\qquad\qquad$![w:400](./figs/prob_comp2.png)
 ![bg right:25% 100%](./figs/false_prob_reduction.png)
 
 ---
-
 ### Summary so far
 
-- For comparisons between trials, the reliability is calculated using probability calculations.
+- When comparing results across trials, their reliability can be determined by probability calculations.
+    - Consider a pdf for probabilities such as completion rate.
+- No matter how many trials you perform, the possibility of results being overturned by chance never reaches zero.
+    - Design experimental evaluation items and methods to minimize the number of trials or ensure a large number of trials.
+    - In research paper guidance, you're told to "state with certainty," but I personally have serious doubts about this.
+        - Present meaningful results and additional information as much as possible, assuming that others will replicate them.
+    - Basically, don't just accept experimental results in a research paper.
+       - Always question yourself, even
+
+---
+## Bayes' Theorem
+
+---
+
+### The transformation of this formula we used earlier is actually very important.
+
+- $p(a, b) = p(a|b)p(b) = p(b|a)p(a)$
+$\Longrightarrow p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \dfrac{p(b|a)p(a)}{\int_{-\infty}^\infty p(b|a')p(a') \text{d}a'}$
+- (Aside from being a variation of the multiplication theorem) This is called <span style="color:red">Bayes' Theorem</span>
+- Various notations of Bayes' Theorem
+- $p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \eta p(b|a)p(a) = \dfrac{p(b|a)p(a)}{\langle p(b|a') \rangle_{p(a')}}$
+- This holds whether $a and b$ are continuous or discrete.
+- $\Pr \{A|B \} = \dfrac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}$
+
+---
+
+### Meaning of Bayes' Theorem
+
+What does $p(a|b) = \eta p(b|a)p(a)$ mean?
+
+- Equation for reflecting new information in a distribution
+- Adding new information $b$ to $p(a)$ changes the distribution to $p(a|b)$
+- Example: When the outcome of trial $x_i$ is observed, $p_{i-1}$ changes to $p_i$
+- Terms in this context
+- $p(a)$: <span style="color:red">prior distribution</span>
+- $p(a|b)$: <span style="color:red">posterior distribution</span>
+
+![bg right:25% 95%](./figs/bayes_add_info.png)
+
+---
+
+### Likelihood/Likelihood Function
+
+- <span style="color:red">Likelihood</span>: The value of $p(b|a)$ for $p(a|b)= \eta p(b|a)p(a)$
+- Example: $p(x_i|t) = t^{x_i}(1-t)^{1-x_i}$
+- Quantifies the likelihood of observed $x_i$ when the random variable $t$ is fixed (conditional).
+- <span style="color:red">Likelihood function</span>: $L(a|b)$, a function that considers $a$ in $p(b|a)$ as a variable.
+- Quantifies the likelihood of $a$ given the observed information $b$.
+- Example: $p(x_i|t) = L(t|x_i)$
+- In $p(x_i|t)$, $x_i$ is the variable, but in reality, $t$ is the variable and $x_i$ is a fixed value.
+- $L$ is not a probability distribution.
+- Bayes' theorem has a normalization constant, so it applies even if it is not a distribution.
+
+---
+
+### Marginal likelihood
+
+- $p(a|b)= The value of $p(b)$ in p(b|a)p(a)/p(b)$.
+- Meaning: A numerical value that indicates how plausible the observed information $b$ is when the prior distribution $p(a)$ is believed.
+- This can be understood (slightly) by transforming it.
+- $p(b) = \int_{-\infty}^\infty p(b|a)p(a)\text{d}a = \langle p(b|a) \rangle_{p(a)}$
+- When $a$ is likely to occur, if $p(b|a)$ is large, the marginal likelihood will be large.
+- (If other information is available, it is not necessary to use $p(a)$.)
+- Example (Conditional Distribution)
+- $p(x_i | x_{1:i-1}) = \int_{0}^1 p(t, x_i| x_{1:i-1}) \text{d}t = \int_{0}^1 p(x_i|t)p_{i-1}(t) \text{d}t$
+- Biological meaning: When $p(b)$ is very small, experience contradicts it and we are very surprised.
+- $-\log p(b)$: Shannon surprise
+- e.g., free energy principle
+
+---
+
+## Other notes
+
+---
+
+### Beta distribution
+
+- The shape of the posterior distribution obtained from the experiment
+- $p(t) = \eta \ t^a (1-t)^b$
+- When $a=b=0$, it is a uniform distribution
+- General notation
+- $p(x|\alpha, \beta) = \eta x^{\alpha-1}(1-x)^{\beta-1}= \dfrac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}$
+- $B(\alpha, \beta) = \int_0^1 x^{\alpha-1}(1-x)^{\beta-1}\text{d}x$
+(Beta function)
+
+![bg right:30% 95%](https://upload.wikimedia.org/wikipedia/commons/f/f3/Beta_distribution_pdf.svg?uselang=ja)
+
+<span style="font-size:50%">[Figure: Public Domain](https://commons.wikimedia.org/wiki/File:Beta_distribution_pdf.svg)</span>
+
+---
+
+### Bernoulli Trial, Beta Distribution, and Conjugacy
+
+- Bernoulli Trial: An attempt whose outcome can be expressed as a binary random variable
+- Success/Failure, Heads/Tails (of a Coin), etc.
+- The probability distribution is the "Bernoulli Distribution" introduced in Part 2
+- In the case of Bernoulli trials (when the likelihood function is derived from a Bernoulli distribution),
+if the prior distribution is a beta distribution, the posterior distribution is also a beta distribution.
+- This relationship is called <span style="color:red">conjugacy</span>.
+- The beta distribution for a Bernoulli distribution: It is called a conjugate prior distribution.
+- Conjugacy also appears for other pairs of distributions.
+- We will discuss it when it comes up.
+- It is very convenient because the calculation of Bayes' theorem requires only parameter updates.
+- When $p(t) = \eta \ t^a (1-t)^b$: Simply adding $1$ to $a$ or $b$ gives the posterior distribution.
+
+---
+
+## Summary
+
+- Consideration of the "number of experiments required"
+- Bayes' theorem emerged naturally.
+- Bayes' theorem
+- A theorem for reflecting certain information in a probability distribution.
+- Important in robotics (discussed next time).
+- Conjugacy
+- A useful property when solving or implementing Bayes' theorem.
+- There is some law behind it
