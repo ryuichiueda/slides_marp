@@ -218,11 +218,11 @@ $\Longrightarrow p(a|b)= \dfrac{p(b|a)p(a)}{p(b)} = \dfrac{p(b|a)p(a)}{\int_{-\i
 What does $p(a|b) = \eta p(b|a)p(a)$ mean?
 
 - Equation for reflecting new information in a distribution
-- Adding new information $b$ to $p(a)$ changes the distribution to $p(a|b)$
-- Example: When the outcome of trial $x_i$ is observed, $p_{i-1}$ changes to $p_i$
+    - Adding new information $b$ to $p(a)$ changes the distribution to $p(a|b)$
+        - Example: When the outcome of trial $x_i$ is observed, $p_{i-1}$ changes to $p_i$
 - Terms in this context
-- $p(a)$: <span style="color:red">prior distribution</span>
-- $p(a|b)$: <span style="color:red">posterior distribution</span>
+    - $p(a)$: <span style="color:red">prior distribution</span>
+    - $p(a|b)$: <span style="color:red">posterior distribution</span>
 
 ![bg right:25% 95%](./figs/bayes_add_info.png)
 
