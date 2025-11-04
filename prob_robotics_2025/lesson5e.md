@@ -139,14 +139,14 @@ $\qquad\qquad\qquad$![w:700](./figs/post_prob.png)
 ### Comparing distributions
 
 - Comparing the distributions before and after the improvement after five trials.
-- If you have time, try plotting this as well.
-* This is what happens.
+    - If you have time, try plotting this as well.
+    * This is what happens.
 $\qquad\qquad\qquad$![w:400](./figs/prob_comp.png)
-- It's possible that the completion rate was higher before the improvement.
+        - It's possible that the completion rate of "before" was higher.
 
 ---
 
-### Probability that the completion rate was higher before the improvement.
+### Probability that the completion rate of "before" was higher.
 
 - $p_\text{before}(t) = \eta t^3(1-t)^2 = 60 (t^5 -2 t^4 + t^3)$
 - $p_\text{after}(t) = \eta t^5 = 6t^5$
@@ -157,7 +157,7 @@ $= \int_0^1 p_\text{after}(t)\int_{t}^1 p_\text{before}(t')\text{d}t'\text{d}t$
 $= \int_0^1 6t^5 [ 10t'^6 -24t'^5 + 15t'^4 ]_{t'}^1 \text{d}t$
 $= \int_0^1 6t^5 (1 - 10 t^6 + 24 t^5 - 15t^4)\text{d}t$
 <span style="color:red">$= 1/11$</span>
-$\Longrightarrow$ There is a 9% probability that the completion rate is higher before the improvement.
+$\Longrightarrow$ There is a 9% probability that the completion rate of "before" is higher.
 
 ---
 
