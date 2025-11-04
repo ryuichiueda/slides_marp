@@ -149,6 +149,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### OpenVLA[[Kim2024]](https://arxiv.org/abs/2406.09246)
 
 - その名の通りオープンなVLA
+- 構造
+    - ゼロショットで画像分類するモデルSigLIP
 
 
 ---
