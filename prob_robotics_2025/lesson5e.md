@@ -231,14 +231,14 @@ What does $p(a|b) = \eta p(b|a)p(a)$ mean?
 ### Likelihood/Likelihood Function
 
 - <span style="color:red">Likelihood</span>: The value of $p(b|a)$ for $p(a|b)= \eta p(b|a)p(a)$
-- Example: $p(x_i|t) = t^{x_i}(1-t)^{1-x_i}$
-- Quantifies the likelihood of observed $x_i$ when the random variable $t$ is fixed (conditional).
+    - Example: $p(x_i|t) = t^{x_i}(1-t)^{1-x_i}$
+        - Quantifies the likelihood of observed $x_i$ when the random variable $t$ is fixed (conditional).
 - <span style="color:red">Likelihood function</span>: $L(a|b)$, a function that considers $a$ in $p(b|a)$ as a variable.
-- Quantifies the likelihood of $a$ given the observed information $b$.
-- Example: $p(x_i|t) = L(t|x_i)$
-- In $p(x_i|t)$, $x_i$ is the variable, but in reality, $t$ is the variable and $x_i$ is a fixed value.
-- $L$ is not a probability distribution.
-- Bayes' theorem has a normalization constant, so it applies even if it is not a distribution.
+    - Quantifies the likelihood of $a$ given the observed information $b$.
+    - Example: $p(x_i|t) = L(t|x_i)$
+        - In $p(x_i|t)$, $x_i$ is the variable, but in reality, $t$ is the variable and $x_i$ is a fixed value.
+    - $L$ is not a probability distribution.
+        - Bayes' theorem has a normalization constant, so it applies even if it is not a distribution.
 
 ---
 
@@ -246,15 +246,14 @@ What does $p(a|b) = \eta p(b|a)p(a)$ mean?
 
 - $p(a|b)= The value of $p(b)$ in p(b|a)p(a)/p(b)$.
 - Meaning: A numerical value that indicates how plausible the observed information $b$ is when the prior distribution $p(a)$ is believed.
-- This can be understood (slightly) by transforming it.
-- $p(b) = \int_{-\infty}^\infty p(b|a)p(a)\text{d}a = \langle p(b|a) \rangle_{p(a)}$
-- When $a$ is likely to occur, if $p(b|a)$ is large, the marginal likelihood will be large.
-- (If other information is available, it is not necessary to use $p(a)$.)
-- Example (Conditional Distribution)
-- $p(x_i | x_{1:i-1}) = \int_{0}^1 p(t, x_i| x_{1:i-1}) \text{d}t = \int_{0}^1 p(x_i|t)p_{i-1}(t) \text{d}t$
+    - This can be understood (slightly) by transforming it.
+        - $p(b) = \int_{-\infty}^\infty p(b|a)p(a)\text{d}a = \langle p(b|a) \rangle_{p(a)}$
+            - When $a$ is likely to occur, if $p(b|a)$ is large, it will be large.
+            - (If other information is available, it is not necessary to use $p(a)$.)
+    - Example (Conditional Distribution)
+        - $p(x_i | x_{1:i-1}) = \int_{0}^1 p(t, x_i| x_{1:i-1}) \text{d}t = \int_{0}^1 p(x_i|t)p_{i-1}(t) \text{d}t$
 - Biological meaning: When $p(b)$ is very small, experience contradicts it and we are very surprised.
-- $-\log p(b)$: Shannon surprise
-- e.g., free energy principle
+    - $-\log p(b)$: Shannon's surprise (e.g., free energy principle)
 
 ---
 
