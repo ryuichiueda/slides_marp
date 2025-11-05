@@ -176,6 +176,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - Open X-Embodimentdataset
     - 70台、200万のロボットの軌道
+- ファインチューニング用の訓練データ
+    - ユーザーが用意
+
 
 ---
 
