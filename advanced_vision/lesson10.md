@@ -153,7 +153,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### 構造
+### 構造（[[論文]](https://arxiv.org/abs/2406.09246)の図2）
 
 - 画像処理の部分SigLIPとDINOv2という2つのモデルからそれぞれ独立にトークンを生成
     - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): ゼロショットで画像分類するモデル
