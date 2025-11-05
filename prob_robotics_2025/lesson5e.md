@@ -264,11 +264,11 @@ What does $p(a|b) = \eta p(b|a)p(a)$ mean?
 ### Beta distribution
 
 - The shape of the posterior distribution obtained from the experiment
-- $p(t) = \eta \ t^a (1-t)^b$
-- When $a=b=0$, it is a uniform distribution
+    - $p(t) = \eta \ t^a (1-t)^b$
+    - When $a=b=0$, it is a uniform distribution
 - General notation
-- $p(x|\alpha, \beta) = \eta x^{\alpha-1}(1-x)^{\beta-1}= \dfrac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}$
-- $B(\alpha, \beta) = \int_0^1 x^{\alpha-1}(1-x)^{\beta-1}\text{d}x$
+    - $p(x|\alpha, \beta) = \eta x^{\alpha-1}(1-x)^{\beta-1}= \dfrac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}$
+        - $B(\alpha, \beta) = \int_0^1 x^{\alpha-1}(1-x)^{\beta-1}\text{d}x$
 (Beta function)
 
 ![bg right:30% 95%](https://upload.wikimedia.org/wikipedia/commons/f/f3/Beta_distribution_pdf.svg?uselang=ja)
