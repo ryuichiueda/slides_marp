@@ -172,12 +172,13 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### 訓練データ
+### 訓練データ・訓練方法
 
-- Open X-Embodimentdataset
+- 事前学習の訓練データ: Open X-Embodimentdataset
     - 70台、200万のロボットの軌道
-- ファインチューニング用の訓練データ
-    - ユーザーが用意
+- ファインチューニング
+    - 訓練データはユーザーが用意
+    - 全パラメーターを訓練してもよいが、LoRAという高効率な方法も論文では使われている
 
 
 ---
