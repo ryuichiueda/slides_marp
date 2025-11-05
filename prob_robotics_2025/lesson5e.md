@@ -280,26 +280,28 @@ What does $p(a|b) = \eta p(b|a)p(a)$ mean?
 ### Bernoulli Trial, Beta Distribution, and Conjugacy
 
 - Bernoulli Trial: An attempt whose outcome can be expressed as a binary random variable
-- Success/Failure, Heads/Tails (of a Coin), etc.
-- The probability distribution is the "Bernoulli Distribution" introduced in Part 2
-- In the case of Bernoulli trials (when the likelihood function is derived from a Bernoulli distribution),
-if the prior distribution is a beta distribution, the posterior distribution is also a beta distribution.
-- This relationship is called <span style="color:red">conjugacy</span>.
-- The beta distribution for a Bernoulli distribution: It is called a conjugate prior distribution.
+    - Success/Failure, Heads/Tails (of a Coin), etc.
+    - The distribution is the "Bernoulli Distribution" introduced in Lesson 2
+- In the case of Bernoulli trials (when the likelihood function is derived from a Bernoulli distribution), if the prior distribution is a beta distribution, the posterior distribution is also a beta distribution.
+    - This relationship is called <span style="color:red">conjugacy</span>.
+    - The beta distribution for a Bernoulli distribution: It is called a conjugate prior distribution.
+
+---
+
 - Conjugacy also appears for other pairs of distributions.
-- We will discuss it when it comes up.
-- It is very convenient because the calculation of Bayes' theorem requires only parameter updates.
-- When $p(t) = \eta \ t^a (1-t)^b$: Simply adding $1$ to $a$ or $b$ gives the posterior distribution.
+    - We will discuss it when it comes up.
+    - It is very convenient because the calculation of Bayes' theorem requires only parameter updates.
+        - When $p(t) = \eta \ t^a (1-t)^b$: Simply adding $1$ to $a$ or $b$ gives the posterior distribution.
 
 ---
 
 ## Summary
 
 - Consideration of the "number of experiments required"
-- Bayes' theorem emerged naturally.
+    - Bayes' theorem emerged naturally.
 - Bayes' theorem
-- A theorem for reflecting certain information in a probability distribution.
-- Important in robotics (discussed next time).
+    - A theorem for reflecting certain information in a probability distribution.
+    - Important in robotics (discussed next time).
 - Conjugacy
-- A useful property when solving or implementing Bayes' theorem.
-- There is some law behind it
+    - A useful property when solving or implementing Bayes' theorem.
+    - There is some law behind it
