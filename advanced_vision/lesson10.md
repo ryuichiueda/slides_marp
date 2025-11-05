@@ -149,14 +149,19 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### OpenVLA[[Kim2024]](https://arxiv.org/abs/2406.09246)
 
 - その名の通りオープンなVLA
-- 構造
-    - 画像処理の部分SigLIPとDINOv2という2つのモデルからそれぞれ独立にトークンを生成
-        - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): ゼロショットで画像分類するモデル
-            - softmaxでの多数のものから物体を分類をするのではなく、画像と短文がどれだけ合っているか確率で出力
-            - 何が写っているかをトークンに
-        - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): 画像の基盤モデル
-            - 画像の特徴量を抽出してトークンに
-    - LLMのパート: Llama（Large Language Model Meta AI）
+
+
+---
+
+### 構造
+
+- 画像処理の部分SigLIPとDINOv2という2つのモデルからそれぞれ独立にトークンを生成
+    - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): ゼロショットで画像分類するモデル
+        - softmaxでの多数のものから物体を分類をするのではなく、画像と短文がどれだけ合っているか確率で出力
+        - 何が写っているかをトークンに
+    - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): 画像の基盤モデル
+        - 画像の特徴量を抽出してトークンに
+- LLMのパート: Llama（Large Language Model Meta AI）
 
 ---
 
