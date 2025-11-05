@@ -169,6 +169,14 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 下のAction De-tokenizerに入力するトークンを出力
 - 行動の生成: 「Action De-tokenizer」（どんな実装か不明。コードを読め？）
 
+
+---
+
+### 訓練データ
+
+- Open X-Embodimentdataset
+    - 70台、200万のロボットの軌道
+
 ---
 
 ### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
