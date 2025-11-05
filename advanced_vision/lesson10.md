@@ -162,6 +162,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): 画像の基盤モデル
         - 画像の特徴量を抽出してトークンに
 - LLMのパート: Llama（Large Language Model Meta AI）
+    - 下のAction De-tokenizerに入力するトークンを出力
 - 行動の生成: 「Action De-tokenizer」（どんな実装か不明。コードを読め？）
 
 ---
