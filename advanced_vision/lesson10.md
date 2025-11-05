@@ -153,7 +153,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 画像処理の部分SigLIPとDINOv2という2つのモデルからそれぞれ独立にトークンを生成
         - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): ゼロショットで画像分類するモデルSigLIP
             - softmaxでの多数のものから物体を分類をするのではなく、画像と短文がどれだけ合っているか確率で出力
-        - DINOv2: 画像の基盤モデル
+        - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): 画像の基盤モデル
 
 ---
 
