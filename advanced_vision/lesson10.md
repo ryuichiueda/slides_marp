@@ -130,6 +130,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 横にファインチューニング用のモデルを
     用意してパラメータの差分だけ計算
         - 下のモデルよりパラメータ数を小さく
+        - どうやって少なくするかは次ページ
 
 ![bg right:32% 100%](./figs/LoRA.svg)
 
