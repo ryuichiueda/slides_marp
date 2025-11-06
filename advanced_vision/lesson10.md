@@ -125,7 +125,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ## Low-Rank Adaptation（LoRA）[[Hu2021]](https://arxiv.org/abs/2106.09685)
 
 - 高効率なファインチューニング方法
-- アイデア
+- アイデア（<span style="color:red">アダプター</span>の一種）
     - 事前学習されたモデルのパラメータは固定
     - 横にファインチューニング用のモデルを
     用意してパラメータの差分だけ計算
