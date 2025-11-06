@@ -33,6 +33,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
+## その前に: 前回の「aaa由来」について
+
+- 例は例
+    - 氏名欄に「工大 太郎」とあったら自分の名前に変えないといけない
+    - 当然、「工大 太郎」という書類を出したらおかしなことに
+- 理解している = 例を自身の状況に応じて適切に書き換えられること
+    - 例は間違っているかもしれない（例はわざと雑に書いてます）
+    - 例をそのままコピペする人: 理解しようとしていないから0点
+- コピペがだいじょうぶなときもある
+   - 誰が書いても同じになるとき（ライセンスなど）・指示があったとき
+   - 理解している: この状況判断ができること
+
+---
+
 ## 1. シェルの変数
 
 ---
@@ -42,7 +56,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - シェルは，`変数名=文字列`で，文字を記憶
     ```bash
     ### 例 ###
-    $ X=我々は宇宙人だ   # 変数のセット
+    $ X=我々は宇宙人だ   # 変数のセット                                             
     ```
 - `${変数名}`で値に置換
     ```bash
@@ -51,7 +65,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     我々は宇宙人だぜ！
     $ echo $X            # {}は省略できる（こともある）
     我々は宇宙人だ
-    $ echo '$X' # 値にしないときはシングルクォートで囲う（``と混同注意）
+    $ echo '$X' # 値にしないときはシングルクォートで囲う（``と混同注意）               
     $X
     ```
     ```bash
@@ -59,7 +73,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $ echo ${X}Z
     我々は宇宙人だZ
     $ echo $XZ
-                            #変数「XZ」と解釈されるのでなにも出力されない
+                            #変数「XZ」と解釈されるのでなにも出力されない                       
     ```
 
 ---
@@ -183,7 +197,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     #!/bin/bash
     　
     ng () {
-            echo ${1}行目が違うよ  #$1はngの1番目の引数
+            echo ${1}行目が違うよ  #$1はngの1番目の引数                                
     }
     　
     ng 123
@@ -211,7 +225,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     　
     res=0
     a=山田
-    [ "$a" = 上田 ] || ng "$LINENO"  # LINENOは，この行の行番号の入る変数
+    [ "$a" = 上田 ] || ng "$LINENO"  # LINENOは，この行の行番号の入る変数         
     [ "$a" = 山田 ] || ng "$LINENO"  # ngに第一引数として$LINENOを付与
     　
     exit $res     # このシェルスクリプトの終了ステータスを返して終了
@@ -279,6 +293,7 @@ $ echo $?
         - 注意: テストと無関係です．
     1. さきほどの`test.bash`をリポジトリ直下（`plus`と同じところ）に置いてコミットしてGitHubにpush
 - 次のように`test.bash`を変更（次ページ）
+   - デバッグが必要なら`-xv`（3ページうしろ）
 
 ---
 
@@ -323,7 +338,7 @@ $ echo $?
 
 - `-x`や`-v`でシェルスクリプトの動作を観察可能（デバッグに便利）
     ```bash
-    #!/bin/bash -xv        <- シバンの後ろに-xvと書いて-xと-vをセット
+    #!/bin/bash -xv        <- シバンの後ろに-xvと書いて-xと-vをセット                
     （以下略）
     ```
      - 動作確認
@@ -333,7 +348,7 @@ $ echo $?
         ++ seq 5
         ++ ./plus
         + out=15
-        [ "${out}" = 15 ] || ng "$LINENO"
+        [ "${out}" = 15 ] || ng "$LINENO" 　                                         
         + '[' 15 = 15 ']'
         
         [ "${res}" = 0 ] && echo OK
