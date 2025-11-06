@@ -246,6 +246,7 @@ marp: true
 - ALOHA: A Low-cost Open-source Hardware System for Bimanual Teleoperation
     - 訓練データ取得用の遠隔操作システム
         - 買えるものの例: https://www.tegtks.net/products/case10.html
+        - 移動マニピュレータ版: https://www.youtube.com/watch?v=zMNumQ45pJ8
 - ACT: Action Chunking with Transformers
     - 離散ではなく連続量で制御を出力するモデル
 
