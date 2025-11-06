@@ -218,4 +218,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 - Physical Intelligence社が開発したVLAモデル
 - 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
+- action chunking architecture
 
