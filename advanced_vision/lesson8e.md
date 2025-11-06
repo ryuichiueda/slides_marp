@@ -166,12 +166,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## Background on CLIP
 
 - Steps in a commonly used image recognition method
-1. Collect photos
-2. Label the objects in the photos
-3. Training
+    1. Collect photos
+    2. Label the objects in the photos
+    3. Training
 - Problems with the above method
-- Troublesome
-- Only labeled objects can be recognized
+    - Bothersome
+    - Only labeled objects can be recognized
 
 <center>Is there any way to collect labeled images? </center>
 
