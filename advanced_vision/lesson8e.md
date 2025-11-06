@@ -154,13 +154,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ---
 ## CLIP (Contrastive Language-Image Pre-training) [[Radford 2021]](https://arxiv.org/abs/2103.00020)
 
-- contrastive: Means "contrasting."
 - Links text and images using contrastive learning (explained later).
 - [Figure](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
 - What CLIP can do
-- Recognize what appears in an image (in a sense, there is no limit to the number of labels)
-- A component for generating images from text
-- unCLIP (covered later)
+    - Recognize what appears in an image (in a sense, there is no limit to the number of labels)
+    - A component for generating images from text
+        - unCLIP (covered later)
 
 ---
 
