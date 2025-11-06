@@ -56,16 +56,15 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## Vision Transformer (ViT) [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
 - Repurposes the Transformer encoder for images
-- Divides the image into blocks and treats it like words (right image)
-- CLS: Class token (right image)
-- Same as sentence classification
-- Passes through a fully connected layer (MLP Head)
-- Treating the image as blocks is the same as CNN, but the process after that is different
-- CNNs are not good at seeing the relationships between distant blocks
+    - Divides the image into blocks and treats it like words (right image)
+    - CLS: Class token (right image)
+        - Same as sentence classification
+        - Passes through a fully connected layer (MLP Head)
+- Treating the image as blocks is the same as CNN, but CNNs are not good at seeing the relationships between distant blocks
 
-[Image: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)<span style="font-size:70%">(The configuration diagram is also shown in Fig. 1 of [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929))</span>
+[Image: CC-BY-4.0 by Daniel Voigt Godoy](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)<span style="font-size:60%">(The configuration diagram is also shown in Fig. 1 of [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929))</span>
 
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
 
 ---
 
