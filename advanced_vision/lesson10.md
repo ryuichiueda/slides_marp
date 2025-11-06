@@ -139,15 +139,18 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### パラメータの削減方法
 
-- 事前学習された$\alpha \times \beta$行列$W$に対し、次の行列を準備
+- 事前学習された$\alpha \times \beta$行列$W$に対し
+次の行列を準備
      - 行列$A$（$d\times \beta$）
      - 行列$B$（$\alpha \times d$）
-         - $d$は$2$など小さい数に
+         - $d$は小さい数に
 - ファインチューニングされた行列: $W' = W + BA$
     - $W$のパラメータ数: $\alpha \beta$
     - $BA$のパラメータ数: $(\alpha + \beta)d$
+- 入力の次元が$A$で落ちて$B$で元通りに
+    - 潜在空間による次元圧縮のようなもの
 
-![bg right:32% 100%](./figs/lora_matrixes.svg)
+![bg right:40% 100%](./figs/lora_matrixes.svg)
 
 ---
 
