@@ -93,12 +93,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Pre-training method
 
 - Solve classification problems with supervised learning
-- Unlike language, unsupervised learning (like BERT) is not very effective
+    - Unlike language, unsupervised learning (like BERT) is not very effective
 - Training data used in the original paper
-- JFT-300M
-- A dataset with 300 million images and 18,291 classes
-- ImageNet-21k
-- Dataset of 14 million images and 21,841 classes
+    - JFT-300M
+        - A dataset with 300 million images and 18,291 classes
+    - ImageNet-21k
+        - Dataset of 14 million images and 21,841 classes
 - High performance with more training data (JFT-300M was better)
 
 ---
@@ -106,13 +106,13 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### How ViT works
 
 - Regarding position embedding
-- Fig. 7 (left) in [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
-- Similar to basis functions used in image processing
+    - Fig. 7 (left) in [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
+    - Similar to basis functions used in image processing
 - What is the focus of the decision?
-- Fig. 6 and Fig. 7 (right) in [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
-- In the head of a self-attention mechanism (or multi-head attention mechanism), variations such as global and local layers already appear in layers close to the input.
-- Global layers are similar to the convolutional layers closer to the input of a CNN.
-- The further away from the input, the more global the results.
+    - Fig. 6 and Fig. 7 (right) in [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
+    - In the head of a self-attention mechanism (or multi-head attention mechanism), variations such as global and local layers already appear in layers close to the input.
+        - Global layers are similar to the convolutional layers closer to the input of a CNN.
+    - The further away from the input, the more global the results.
 
 ---
 
