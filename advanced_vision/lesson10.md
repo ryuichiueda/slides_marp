@@ -143,10 +143,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 次の行列を準備
      - 行列$A$（$d\times \beta$）
      - 行列$B$（$\alpha \times d$）
-         - $d$は小さい数に
 - ファインチューニングされた行列: $W' = W + BA$
     - $W$のパラメータ数: $\alpha \beta$
     - $BA$のパラメータ数: $(\alpha + \beta)d$
+        - 小さい$d$でパラメータ数削減
 - 入力の次元が$A$で落ちて$B$で元通りに
     - 潜在空間による次元圧縮のようなもの
 
