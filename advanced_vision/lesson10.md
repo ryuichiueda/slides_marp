@@ -142,6 +142,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 事前学習された$\alpha \times \beta$行列$W$に対し、次の行列を準備
      - 行列$A$（$d\times \beta$）
      - 行列$B$（$\alpha \times d$）
+         - $d$は$2$など小さい数に
+- ファインチューニングされた行列: $W' = W + BA$
+    - $W$のパラメータ数: $\alpha \beta$
+    - $BA$のパラメータ数: $d (\alpha + \beta)$
 
 ---
 
