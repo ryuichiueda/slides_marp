@@ -145,7 +145,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
          - $d$は$2$など小さい数に
 - ファインチューニングされた行列: $W' = W + BA$
     - $W$のパラメータ数: $\alpha \beta$
-    - $BA$のパラメータ数: $d (\alpha + \beta)$
+    - $BA$のパラメータ数: $(\alpha + \beta)d$
 
 ---
 
