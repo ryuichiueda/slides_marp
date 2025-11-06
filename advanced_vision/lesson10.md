@@ -182,10 +182,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### OpenVLA[[Kim2024]](https://arxiv.org/abs/2406.09246)
 
 - その名の通りオープンなVLA
-- オープンにする難しさ
-    - ユーザーのロボットが違う
-    $\Longrightarrow$ファインチューニングしやすくするとよいが
+- オープンにするときの要件
+    - ユーザーのロボットが違うのでファインチューニングしやすくすると便利
        - （補足: 多種のロボットの訓練データで学習したVLAは、ファインチューニングなしでも少しのロボットの違いをある程度吸収）
+$\Longrightarrow$<span style="color:red">LoRAが使えるようになっている</span>
 
 ---
 
@@ -210,7 +210,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 70台、200万のロボットの軌道
 - ファインチューニング
     - 訓練データはユーザーが用意
-    - <span style="color:red">LoRAが使える</span>
 
 ---
 
