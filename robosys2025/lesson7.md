@@ -111,7 +111,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
     test:           #testというジョブを作る
       runs-on: ubuntu-latest   #どの環境で動かすか
       steps:                   #手続きの記述
-      - uses: actions/checkout@v3  #https://github.com/actions/checkoutのバージョン3を使用
+      - uses: actions/checkout@v3  #https://github.com/actions/checkoutのバージョン3を使用             
       - name: All test             #このジョブの名前
         run: bash -xv ./test.bash  #テストのシェルスクリプトを走らせる
 ```
@@ -122,9 +122,9 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 
 - リポジトリのページに小さな記号
   - <span style="color:orange">$\bullet$</span>: 実行中、<span style="color:green">$\checkmark$</span>: テスト成功、<span style="color:red">$\times$</span>: テスト失敗
-<img src="./figs/github_actions_running.png" width="65%" />
+<img src="./figs/github_actions_running.png" width="60%" />
 - 記号を左クリックすると小窓が出現$\rightarrow$「Details」を押してみましょう。
-<img src="./figs/github_actions_ok.png" width="70%" />
+<img src="./figs/github_actions_ok.png" width="65%" />
 
 ---
 
