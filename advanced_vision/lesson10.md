@@ -137,6 +137,14 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+### パラメータの削減方法
+
+- 事前学習された$\alpha \times \beta$行列$W$に対し、次の行列を準備
+     - 行列$A$（$d\times \beta$）
+     - 行列$B$（$\alpha \times d$）
+
+---
+
 ### Robotics Transformer 2（RT-2）[[Brohan2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
