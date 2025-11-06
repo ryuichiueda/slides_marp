@@ -179,11 +179,11 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ### Collecting images with labels (not captions)
 
-- Some images have captions (that's what the paper says, right?)
+- Some images have captions (e.g. academic papers)
 $\Longrightarrow$It's possible to collect a large number of images and captions from various sources.
-- Original paper: <span style="color:red">Collecting a set of 400 million images and captions</span>
+    - Original paper: <span style="color:red">Collecting a set of 400 million images and captions</span>
 - Problem: Captions are sentences or phrases, not just words.
-- It's not a simple label.
+    - It's not a simple label.
 
 <center>Can we use Transformer to solve this problem? </center>
 
