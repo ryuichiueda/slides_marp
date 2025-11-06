@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382.21 248.89">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: TimesNewRomanPS-BoldItalicMT, 'Times New Roman';
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 24px;
+        font-style: italic;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #231815;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+      }
+
+      .cls-6 {
+        stroke-width: .5px;
+      }
+
+      .cls-6, .cls-7 {
+        fill: none;
+        stroke: #231815;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 16px;
+      }
+
+      .cls-8 {
+        fill: #fff;
+        stroke: #040000;
+      }
+    </style>
+  </defs>
+  <rect class="cls-7" x=".5" y="77.18" width="150.47" height="98.32"/>
+  <text class="cls-2" transform="translate(65.74 131.34)"><tspan x="0" y="0">W</tspan></text>
+  <g>
+    <line class="cls-7" x1="75.73" y1="220.12" x2="75.73" y2="182.68"/>
+    <polygon class="cls-5" points="80.72 184.14 75.73 175.51 70.75 184.14 80.72 184.14"/>
+  </g>
+  <text class="cls-4" transform="translate(31.2 205.56)"><tspan x="0" y="0">入力</tspan></text>
+  <g>
+    <line class="cls-7" x1="217.96" y1="197.81" x2="217.96" y2="165.97"/>
+    <polygon class="cls-5" points="222.94 167.43 217.96 158.8 212.97 167.43 222.94 167.43"/>
+  </g>
+  <line class="cls-7" x1="76.81" y1="197.81" x2="217.93" y2="197.81"/>
+  <g>
+    <line class="cls-7" x1="73.1" y1="77.18" x2="73.1" y2="39.75"/>
+    <polygon class="cls-5" points="78.09 41.21 73.1 32.57 68.12 41.21 78.09 41.21"/>
+  </g>
+  <text class="cls-4" transform="translate(28.57 62.63)"><tspan x="0" y="0">出力</tspan></text>
+  <g>
+    <line class="cls-7" x1="80.28" y1="58.46" x2="217.96" y2="58.46"/>
+    <polygon class="cls-5" points="81.74 63.45 73.1 58.46 81.74 53.47 81.74 63.45"/>
+  </g>
+  <text class="cls-4" transform="translate(88.18 54.8)"><tspan x="0" y="0">+</tspan></text>
+  <line class="cls-7" x1="217.96" y1="164.3" x2="217.96" y2="58.46"/>
+  <text class="cls-1" transform="translate(69.73 241.53)"><tspan x="0" y="0">x</tspan></text>
+  <g>
+    <polyline class="cls-8" points="238.28 128.78 196.21 128.78 177.98 158.8 238.28 158.8"/>
+    <polyline class="cls-8" points="197.63 128.78 239.7 128.78 257.93 158.8 197.63 158.8"/>
+  </g>
+  <text class="cls-3" transform="translate(210.6 152.54)"><tspan x="0" y="0">A</tspan></text>
+  <g>
+    <polyline class="cls-8" points="197.6 118.69 239.67 118.69 257.9 88.67 197.6 88.67"/>
+    <polyline class="cls-8" points="238.25 118.69 196.18 118.69 177.95 88.67 238.25 88.67"/>
+  </g>
+  <text class="cls-2" transform="translate(210.63 113.19)"><tspan x="0" y="0">B</tspan></text>
+  <text class="cls-1" transform="translate(70.41 19.95)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-4" transform="translate(286.21 115.6)"><tspan x="0" y="0">ベクトルの</tspan><tspan x="0" y="18">次元が落ちる</tspan></text>
+  <line class="cls-6" x1="221.26" y1="124.58" x2="282.77" y2="118.69"/>
+  <text class="cls-4" transform="translate(284.49 62.63)"><tspan x="0" y="0">ベクトルの</tspan><tspan x="0" y="18">次元が戻る</tspan></text>
+  <line class="cls-6" x1="219.54" y1="71.61" x2="281.05" y2="65.72"/>
+</svg>

@@ -147,6 +147,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - $W$のパラメータ数: $\alpha \beta$
     - $BA$のパラメータ数: $(\alpha + \beta)d$
 
+![bg right:32% 100%](./figs/lora_matrixes.svg)
+
 ---
 
 ### Robotics Transformer 2（RT-2）[[Brohan2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
