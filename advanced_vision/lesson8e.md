@@ -189,7 +189,7 @@ $\Longrightarrow$It's possible to collect a large number of images and captions 
 
 ---
 
-### CLIP Training Method
+### Training Method of CLIP 
 
 1. Prepare training data using the method on the previous page.
 2. Encode images using ViT.
@@ -200,7 +200,3 @@ $\Longrightarrow$ Creates an ANN capable of converting images to sentences, sent
 
 ---
 
-### CLIP Structure
-
-- [Overview](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- image
