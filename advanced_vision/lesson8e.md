@@ -71,22 +71,22 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Size of ViT
 
 - The original paper includes several models of different sizes.
-- ViT-Base: 12 layers, vector dimension: 768, parameters: 86 million
-- ViT-Large: 24 layers, vector dimension: 1024, parameters: 307 million
-- ViT-Huge: Number of layers: 32, Vector dimension: 1280, Number of parameters: 632 million
+    - ViT-Base: 12 layers, vector dimension: 768, parameters: 86 million
+    - ViT-Large: 24 layers, vector dimension: 1024, parameters: 307 million
+    - ViT-Huge: Number of layers: 32, Vector dimension: 1280, Number of parameters: 632 million
 
 ---
 
 ### How to create vectors corresponding to tokens
 
 - Divide the image into blocks of $P \times P$ pixels
-- Example: $P=16$: The vector dimension is $16\times 16 \times 3 = 768$
-- 3 is the number of channels (RGB)
-- Position embedding is also performed
-- However, parameters are not fixed values; they are the learning target
+    - Example: $P=16$: The vector dimension is $16\times 16 \times 3 = 768$
+        - 3 is the number of channels (RGB)
+    - Position embedding is also performed
+        - Parameters are not fixed values; they are the learning target
 - Image understanding
-- Local understanding: Vector depth
-- Global understanding: Learning with self-attention
+    - Local understanding: into each vector
+    - Global understanding: learning with self-attention
 
 ---
 
