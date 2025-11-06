@@ -23,7 +23,7 @@ marp: true
 
 - 本題の前に
     - flow matching
-    - RoLA（low-rank adaptation）
+    - LoRA（low-rank adaptation）
 - VLA（vision-language-action model）、ロボット基盤モデル
     - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
 
@@ -125,11 +125,13 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ## Low-Rank Adaptation（LoRA）[[Hu2021]](https://arxiv.org/abs/2106.09685)
 
 - 高効率なファインチューニング方法
-- 概要
-    - 事前学習されたモデルのパラメータはそのままに
-    - 横にファインチューニング用のモデルを用意して
-    パラメータの差分だけ計算
+- アイデア
+    - 事前学習されたモデルのパラメータは固定
+    - 横にファインチューニング用のモデルを
+    用意してパラメータの差分だけ計算
         - 下のモデルよりパラメータ数を小さく
+
+![bg right:32% 100%](./figs/LoRA.svg)
 
 ---
 
@@ -190,7 +192,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 70台、200万のロボットの軌道
 - ファインチューニング
     - 訓練データはユーザーが用意
-    - <span style="color:red">RoLAが使える</span>
+    - <span style="color:red">LoRAが使える</span>
 
 
 ---
