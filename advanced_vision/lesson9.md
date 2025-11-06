@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第9回: 画像と言語、ロボット制御の融合
+## 第9回: 画像と言語、ロボット制御の融合I
 
 千葉工業大学 上田 隆一
 
@@ -22,103 +22,29 @@ marp: true
 ## 今日やること
 
 - 本題の前に
-    - flow matching
+    - PaLM
+    - PaLI
 - ANNによるロボットの制御
-    - VLA（vision-language-action model）、ロボット基盤モデル
-    - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
+    - VLA（vision-language-action model）という言葉ができる以前のもの
+        - VLAという言葉が出た後の話については次回
 
 ---
 
-## Flow matching（FL）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
+## PaLM[[Chowdhery2022]](https://arxiv.org/abs/2204.02311)
 
-- 拡散モデルとは別のアプローチで分布の変換を実現
-- 拡散モデル（下図。再掲）
-    - 現実（実際には訓練データ）の分布をガウス分布に変換・逆変換
-        - 変換にはノイズを乗せていく方法が取られた
-- FL: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
-
-![w:900](./figs/ddpm.svg)
+- Pathways Language Model（Googleの大規模言語モデル）
+    - Transformerのデコーダで構成されているのでGPTのように機能
+    - 後述のようにGoogleのロボット制御モデルに用いられている
+    - 新しいバージョンのPaLM 2[[Anil2023]](https://arxiv.org/abs/2305.10403)は100以上の言語を使いこなす（多言語翻訳が可能）
 
 ---
 
-### 前ページのアイデアの問題
+## PaLI[[Chen2022]](https://arxiv.org/abs/2209.06794)
 
-- 任意の時刻のノイズ画像が生成できない
-    - 下図（再掲）
-    - 各時刻の学習に支障
-- FMはこれをなんとかした
-
-![bg right:32% 100%](./figs/ddpm_training_data.png)
-
----
-
-### FMのアイデア
-
-- ガウス分布$p_0$と画像の分布など意味のある分布$p_1$の相互変換
-    - <span style="color:red">ベクトル場</span>$\boldsymbol{u}_t$（$0\le t \le 1$）で考える
-        - 各時刻で分布をひっぱる速度場を仮定
-    - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
-    - $\boldsymbol{v}_t(\boldsymbol{w})$と$\boldsymbol{u}_t$の差（2乗誤差）を損失関数に
-- 問題としては最適輸送問題をANNに解かせることに
-    - 最適輸送問題: 分布を一番楽な方法で変形する問題
-$\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
-
----
-
-### 問題の分解: 条件つきフローマッチング
-
-- 拡散モデル同様、途中の$t$の画像（やデータ）が必要
-    - 分布全体で考えると難しい
-- $p_t$を条件付き確率に分解
-    - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
-        - $q$: 訓練データの分布
-            - $\boldsymbol{x}_1$の添え字: データの番号ではなく時刻
-            - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
-- ベクトル場$\boldsymbol{u}_t$も計算できる（重み付き平均）
-    - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
-
-![bg right:27% 95%](./figs/flow_matching_method.svg)
-
----
-
-### フローの設計
-
-- ひとつの条件付き確率に対し、途中の経路（分布）の定式化が必要
-- とりあえずガウス分布を選択
-    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
-        - $\boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)$は時間の関数と解釈したほうがよい
-        - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
-        - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
-    - このときのベクトル場
-        - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) =\dfrac{\sigma_t(\boldsymbol{x}_1)'}{\sigma_t(\boldsymbol{x}_1)}\{\boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1)\} + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
-            - $'$は時間の微分
-
-![bg right:27% 95%](./figs/conditional_flow.svg)
-
----
-
-### 最適輸送による定式化
-
-（まだ講師の頭の整理がついていないので雰囲気だけ）
-
-- 途中（時間の関数としての$\boldsymbol{\mu}_t(\boldsymbol{x}_1)$と$\sigma_t(\boldsymbol{x}_1)$）には自由度がある
-    - なるべく素直なフローで分布を移したい$\Longrightarrow$最適輸送問題
-- 条件つき最適輸送パス
-    - $\boldsymbol{\mu}_t(x)=t x_1, \sigma_t(x)=1 - (1- \sigma_\text{min})t$
-        - とても単純
-    $\Longrightarrow \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) = \dfrac{\boldsymbol{x}_1 - (1-\sigma_\min)\boldsymbol{x}}{1-(1-\sigma_\min)t}$
-- 損失関数
-    - $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_t(\boldsymbol{\psi}_t(\boldsymbol{x}_0))  - [ \boldsymbol{x}_1 - (1 - \sigma_\min)\boldsymbol{x}_0 ] \}^2 \big\rangle_{t \sim \mathcal{U},q(\boldsymbol{x}_1), p(\boldsymbol{x}_0 )}$
-        - ここで$\boldsymbol{\psi}_t(\boldsymbol{x}) = \{1 - ( 1 - \sigma_\min)t\}\boldsymbol{x} + t \boldsymbol{x}_1$（フロー）
-
----
-
-### FMでできること
-
-- [[Lipman 2022]](https://arxiv.org/abs/2210.02747)の図1、6、11〜
-    - アルゴリズムの説明のための図だけど図4も面白い
-- Stable Diffusion 3
-- ロボットの制御（これからやります）
+- Pathways Language and Image model
+    - 構造: 論文の図1（ViT+Transformerエンコーダ+Transformerデコーダ）
+        - 言葉のトークンもViTの出す画像の特徴量のトークンも同じ長さのベクトルにしてTransformerに入力
+        - 交差注意機構も使うらしい（未調査）
 
 ---
 
@@ -126,15 +52,15 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### Vision-Language-Action（VLA）モデル
+### 基本的な考え方
 
-- 言語$\rightarrow$動作という変換が必要
-    - 「言語$\rightarrow$画像」のようにできないだろうか？
-- 従来のようにセンサ$\rightarrow$動作という変換も必要
-    - センサ=視覚（や視覚と同等に扱える信号）と考えると
-    「画像$\rightarrow$動作」という変換が必要となる
-
-<center style="color:red;padding-top:2em">「画像、言語、動作（VLA）の相互変換」というアイデアに</center>
+- 様々な種類の情報を動作に変換するANNを構築
+    - 画像、センサ
+    - 言葉による指示
+    - 自身の内部状態や構造
+- 方針: これまでのvision-languageモデルを拡張して・・・
+    - 画像以外の情報を入力できるように
+    - 動作を出力できるように
 
 ---
 
@@ -143,22 +69,28 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 訓練データどうするの？
     - たぶんCLIPのときのようなネットのデータはない
     - <span style="color:red">先に答えを言うと、人間がひたすらデータを生成</span>
-        - テーブル
-- 方策（制御則）等の表現方法
+    - もちろんシミュレータ（ディジタルツイン）も使える
+        - 上記2つの方法の例: https://www.youtube.com/watch?v=S4tvirlG8sQ
+- 方策（制御則）等の表現方法や出力方法
+    - アクチュエータへの出力？
+    - Transformerベースだと1つずつ順番に出していく？
+- 汎化
+    - 教えた動作から外れた動作もできる
+    - おそらく言葉の存在（意味の理解）が可能にする
 
 ---
 
 ### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
 - 構造・入出力の概要: 論文の図3
-    - Universal Sentence Encoder: FiLMのパラメータを出力
+    - Universal Sentence Encoder: [FiLM](lesson8.html#3)のパラメータを出力
     - FiLM EfficientNet-B3とTokenLearner
         - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
         - 出力: 512次元の48個のトークン
     - Transformer（デコーダー）
         - 入力: 48個のトークンに位置埋め込みしたもの
         - 出力: ロボットの行動（11次元の離散空間中の点）
-            - ロボット: モバイルマニピュレータ
+            - ロボット: モバイルマニピュレータ（[Everyday Robots](https://x.company/projects/everyday-robots/)）
             - モード1次元、腕の動き7次元、位置・向き3次元
             - 3Hz
 
@@ -183,7 +115,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 （重要そうだけど概要だけ）
 
 - 文をベクトルにする
-- 構造: Transformer（エンコーダ） or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
+    - 似たような文のベクトルの内積が大きくなるように
+- 構造: Transformer（エンコーダ）or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
 - 学習方法
     - 前後の文の予測
     - 質問文への返答文の予測
@@ -218,11 +151,101 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - デコーダのマスク機能を使った学習と思われる
         （注意: Transformerだけでなくモデル全体が学習）
 
+---
+
+### RT-1の達成事項
+
+- 学習した種類のタスクを97\%の成功率で達成
+    - 動作の例: 論文の図5
+- ロバスト性
+    - 学習したキッチンと異なるキッチンでのタスク
+    - 様々なテーブルクロス
+- 学習したものより長い/抽象化されたタスクへの対応
+    - 例
+        - "how would you throw away all the items on the table?"
+        - "near a sink"などの直接的でない場所の指定
+- 他
+    - シミュレーション or 異なるロボットから得られる訓練データの使用
 
 ---
 
-### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
+### PaLM-E[[Driess2023]](https://arxiv.org/abs/2303.03378)（[動画](https://research.google/blog/palm-e-an-embodied-multimodal-language-model/)）
 
-- Physical Intelligence社が開発したVLAモデル
-- 「ロボット基盤モデル」と呼ばれるもののひとつ
+- 身体性マルチモーダル言語モデル
+    - 身体性: ロボットの身体の情報を織り込むということ
+- PaLMに画像やロボットの知覚情報を入力できるようにして、タスクのやりかたを作文できるようにしたモデル
+    - 例（論文の図1から引用）
+        - 入力: "Given `<img>` Task: Sort colors into corners."
+            - `<img>`: 画像（この場合は机の上に様々な色の物体）
+        - 出力: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
+- RT-1との違い: <span style="color:red">PaLM持っている言語的な知識を利用可能</span>
+    - 動作と関係なく「画像に何がある？」や「この画像とこの画像の間に何が起こった？」などの質問にも答えてくれる
 
+---
+
+### PaLM-E（PaLM-E-562B）の構成（[論文](https://arxiv.org/abs/2303.03378)の図1）（その1）
+
+- PaLMへの入力の部分
+    - ViT（220億パラメータ）: 画像をPaLMへのトークンに変換
+    - 「?」: 他の情報をPaLMへのトークンに変換
+        - 入力のタイプによって変わるので、おそらく「?」と表記
+            - 基本、トークンが出力できればなんでもよい
+- 「?」に入力する情報の例
+    - 画像以外のセンサ値
+    - 画像中の物体にラベル付けしたり名前をつけたり、位置を推定した結果（[[Sajjadi2022]](https://arxiv.org/abs/2206.06922)などを使用）
+    - 他にもいろいろ入力できそう
+
+---
+### PaLM-E（PaLM-E-562B）の構成（[論文](https://arxiv.org/abs/2303.03378)の図1）（その2）
+
+- 本体
+    - PaLM（5400億パラメータ）: 言葉をトークンで受けつけ
+        - 出力: 身体性（ロボット自身の体の構造）を考慮した作文
+            - 手順を出力できる
+- コントローラ: ロボットを動かしたかったら図の紫色の部分が必要
+    - [[Lynch2020]](https://arxiv.org/abs/2005.07648)やRT-1など
+    - アクチュエータへの指示をPaLMに直接出力させたかったら、そのように学習すればよいが、あんまり長いシーケンスはだせなさそう（論文を読んだ限りでは）
+
+---
+
+### PaLM-Eの学習方法
+
+- 訓練データ（論文の表6）
+    - 文章と他のデータのセット
+        - 文章: 質問と答えをつなげたもの
+            - 何トークン目までがタスクの内容なのかを示す値も準備
+        - 画像やセンサのデータ
+            - 時系列で決められたセット数だけ入力
+- 損失関数: 答えと出力のクロスエントロピー誤差
+- 特記事項
+    - <span style="color:red">ほとんどが画像の内容を答えるもので、ロボット関連のものは10\%未満</span>
+        - [Webli]([[Chen2022]](https://arxiv.org/html/2410.23676v1))というデータセットのものが半分以上
+
+---
+
+### ロボット関連の訓練データ
+
+3種類
+
+- Task and Motion Planning（TAMP）: 論文のB.1
+    - シミュレータ環境で、机の上の様々な色の積み木に対する質問に答える
+        - 物体の関係性
+        - プランニング
+- Language-Table: 論文のB.2（[[Lynch2022]](https://arxiv.org/abs/2210.06407)のデータ）
+    - マニピュレータの関節角の遷移と作業の様子の動画と説明文のセット
+    - [Lynch2022]では60万セットが作られた
+- キッチン環境のデータセット
+    - 上記2つは机の上の積み木しか見ないので、それを補うために
+    - [[Ahn2022]](https://arxiv.org/abs/2204.01691)の訓練データに類似
+
+
+---
+
+## まとめ
+
+- ロボットが自然言語にしたがって作業できるようになった
+    - RT-1: ロボットの動きの生成
+    - PaLM-E: RT-1より上層の作業計画
+- vision-languageモデルと組み合わせることで、新しい状況にも対応可能に
+- 今回の内容でまだできてないこと
+    - いろんな種類のロボットが動かせるのか？
