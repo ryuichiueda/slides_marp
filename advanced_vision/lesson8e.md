@@ -119,10 +119,10 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## Image GPT [[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html) ([site](https://openai.com/ja-JP/index/image-gpt/)) ([video](https://www.youtube.com/watch?v=7rFLnQdl22c))
 
 - Image version of GPT
-- Uses the GPT-2 structure
-- Number of parameters: $1.36 billion for a model called iGPT-L
+    - Uses the GPT-2 structure
+    - Number of parameters: $1.36 billion for a model called iGPT-L
 - Inputs a partial image and predicts the next pixel
-- Same problem as [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)
+    - Same problem as [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)
 - Like GPT, adding a head and fine-tuning it can be used for other tasks
 
 ---
@@ -130,13 +130,13 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Image GPT training
 
 - Two training methods
-- Next pixel prediction (GPT-like)
-- Fill-in-the-blank problem (BERT-style)
-- Vector equivalent to embedding: Image reduced in resolution and arranged in a single row
-- Site: $32^2$, $48^2$, or $64^2$ pixels
-- Paper: $32^2$, $48^2$, $96^2$, or $192^2$ pixels
-- For $32^2$ or $48^2$, convert the colors from RGB to a color palette (a method used in older computers)
-- For $96^2$ and $192^2$ pixels, compress using VQ-VAE (to $16^2$ and $34^2$ code sequences, respectively)
+    - Next pixel prediction (GPT-like)
+    - Fill-in-the-blank problem (BERT-style)
+- Vector to embedding: Image reduced in resolution and arranged in a single row
+    - Site: $32^2$, $48^2$, or $64^2$ pixels
+    - Paper: $32^2$, $48^2$, $96^2$, or $192^2$ pixels
+        - For $32^2$ or $48^2$, convert the colors from RGB to a color palette (a method used in older computers)
+        - For $96^2$ and $192^2$ pixels, compress using VQ-VAE (to $16^2$ and $34^2$ code sequences, respectively)
 
 ---
 ## Diffusion Transformer (DiT) [[Peebles 2022]](https://arxiv.org/abs/2212.09748)
