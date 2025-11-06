@@ -217,8 +217,8 @@ $\Longrightarrow$ Creates an ANN capable of converting images to sentences, sent
 ### Evaluation Method (Contrastive Learning)
 
 - $N$ pairs (batches) of images and captions are input to the encoder
-- Output of the image encoder: Vector $\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
-- Text encoder output: Vector $\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
+    - Output of the image encoder: Vector $\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
+    - Text encoder output: Vector $\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
 - I want the vectors of paired images and captions to be the same.
 - I want to increase the cosine similarity between $\boldsymbol{i}_j$ and $\boldsymbol{t}_j$.
 - Cosine similarity: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
