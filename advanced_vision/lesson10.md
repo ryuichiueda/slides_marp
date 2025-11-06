@@ -23,6 +23,7 @@ marp: true
 
 - 本題の前に
     - flow matching
+    - LoRA（low-rank adaptation）
 - VLA（vision-language-action model）、ロボット基盤モデル
     - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
 
@@ -121,6 +122,21 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
+## Low-Rank Adaptation（LoRA）[[Hu2021]](https://arxiv.org/abs/2106.09685)
+
+- 高効率なファインチューニング方法
+- アイデア（一般的に<span style="color:red">アダプター</span>と呼ばれるもの）
+    - 事前学習された行列状のパラメータを固定
+    - 横にファインチューニング用のモデルを
+    用意してパラメータの差分だけ計算
+        - 下のモデルよりパラメータ数を小さく
+            - 誤差逆伝搬の計算量が減る
+        - どうやって少なくするかは次ページ
+
+![bg right:32% 100%](./figs/LoRA.svg)
+
+---
+
 ### Robotics Transformer 2（RT-2）[[Brohan2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
@@ -178,10 +194,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - 70台、200万のロボットの軌道
 - ファインチューニング
     - 訓練データはユーザーが用意
-    - LoRA[[Hu2021]](https://arxiv.org/abs/2106.09685)という高効率な方法が利用可能
-        - 事前学習されたモデルのパラメータはそのままにして、横にファインチューニング用のモデルを用意してパラメータの差分を計算し、加算
-            - 元のモデルの$X\times Y$パラメータ行列$W$に対し、$X\times Z$行列$B$、$Z\times Y$行列$A$の2つを学習し、$W + BA$
-
+    - <span style="color:red">LoRAが使える</span>
 
 ---
 

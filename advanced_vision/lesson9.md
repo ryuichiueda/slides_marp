@@ -196,7 +196,6 @@ marp: true
     - 他にもいろいろ入力できそう
 
 ---
-
 ### PaLM-E（PaLM-E-562B）の構成（[論文](https://arxiv.org/abs/2303.03378)の図1）（その2）
 
 - 本体
@@ -221,7 +220,6 @@ marp: true
 - 特記事項
     - <span style="color:red">ほとんどが画像の内容を答えるもので、ロボット関連のものは10\%未満</span>
         - [Webli]([[Chen2022]](https://arxiv.org/html/2410.23676v1))というデータセットのものが半分以上
-
 
 ---
 
