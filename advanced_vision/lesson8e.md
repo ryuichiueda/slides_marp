@@ -142,15 +142,14 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## Diffusion Transformer (DiT) [[Peebles 2022]](https://arxiv.org/abs/2212.09748)
 
 - Diffusion model + Transformer
-- Additionally, a latent diffusion model is used to compress information into the latent space
-- Input labels to control output ([Classifier-less Guidance](lesson4-2.html#5))
-- Structure
-- Figure 3 in [[Peebles 2022]](https://arxiv.org/abs/2212.09748)
-- Input: Image tokens plus one token consisting of a vector representing the label and a vector representing the time.
-- The latter is applied to the image using a mechanism called adaLN-Zero.
-- Similar to FiLM with one additional parameter added.
-- Output: Mean and variance of noise per pixel.
-- Uses VAE to reduce image size.
+    - Additionally, a latent diffusion model is used to compress information into the latent space
+    - Input labels to control output ([Classifier-free Guidance](lesson4-2.html#5))
+- Structure: Figure 3 in [[Peebles 2022]](https://arxiv.org/abs/2212.09748)
+    - Input: Image tokens plus one token consisting of a vector representing the label and a vector representing the time.
+        - The latter is applied to the image using a mechanism called adaLN-Zero.
+            - Similar to FiLM with one additional parameter added.
+        - Output: Mean and variance of noise per pixel.
+    - Uses VAE to reduce image size.
 
 ---
 ## CLIP (Contrastive Language-Image Pre-training) [[Radford 2021]](https://arxiv.org/abs/2103.00020)
