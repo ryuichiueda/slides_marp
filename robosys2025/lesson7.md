@@ -147,7 +147,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
       runs-on: ubuntu-latest
       strategy:
         matrix:
-          python-version: ["3.7", "3.8", "3.9", "3.10"]
+          python-version: ["3.7", "3.8", "3.9", "3.10"]                          
       steps:
         ・・・
   ```
@@ -190,7 +190,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
 ### テスト結果やテストに対する記述
 
 
-- README.mdの例
+- README.mdの例（鵜呑みにしないこと。コピーしても正解になりません）
   ```md
   # plusコマンド
   ![test](https://github.com/ryuichiueda/robosys2022/actions/workflows/test.yml/badge.svg)
