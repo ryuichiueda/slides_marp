@@ -287,6 +287,8 @@ marp: true
 
 ### ACTの構造
 
+- CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
+
 
 ---
 
