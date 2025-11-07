@@ -219,17 +219,17 @@ $\Longrightarrow$ Creates an ANN capable of converting images to sentences, sent
 - $N$ pairs (batches) of images and captions are input to the encoder
     - Output of the image encoder: Vector $\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
     - Text encoder output: Vector $\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
-- I want the vectors of paired images and captions to be the same.
-- I want to increase the cosine similarity between $\boldsymbol{i}_j$ and $\boldsymbol{t}_j$.
-- Cosine similarity: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
-- I want the vectors of unpaired images and captions to be different.
-- I want to decrease the cosine similarity between $\boldsymbol{i}_j$ and $\boldsymbol{t}_k (i\neq k)$.
+- We want the vectors of paired images and captions to be the same.
+    - to increase the cosine similarity between $\boldsymbol{i}_j$ and $\boldsymbol{t}_j$
+        - Cosine similarity: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
+- We want the vectors of unpaired images and captions to be different.
+    - to decrease the cosine similarity between $\boldsymbol{i}_j$ and $\boldsymbol{t}_k (i\neq k)$
 - $\Rightarrow$ loss function: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\mu_{j,k}
 e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}
 -\dfrac{1}{N} \sum_{k=1}^N \ln\mu_{j,k}
 e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
-- $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
-- $T$ is the "temperature" and is decreased as training progresses.
+    - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
+    - $T$ is the "temperature" and is decreased as training progresses.
 
 ---
 
