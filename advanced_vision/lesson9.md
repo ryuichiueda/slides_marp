@@ -255,7 +255,7 @@ marp: true
 
 ### ACTの計算（学習時）
 
-構成: Transformerで作った条件付きVAE（CVAE）
+構成: Transformerで作った条件付きVAE（CVAE）（構造を見ると混乱するので後で）
 
 - エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k}, \bar{\boldsymbol{o}}_t )$
     - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる）
