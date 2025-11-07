@@ -272,6 +272,9 @@ marp: true
 
 ### ACTの計算（使用・推論時）
 
+- 前ページのデコーダだけ使用
+    - $a_{t:t+k} \sim \pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} | \boldsymbol{o}_t, \boldsymbol{z} = \boldsymbol{0} )$
+
 
 ---
 
