@@ -236,10 +236,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ### How to use the trained model
 
 - Example: Image classification
-- Prepare $N$ labels for the objects you want to classify.
-- "a photo of Generate $N$ phrases, each with the same label, and run them through a text encoder to obtain a feature vector $T_{1:N}$.
-- Run the image through an image encoder to obtain a feature vector $I$.
-- Compare $I$ with $T_i (i=1,2,\dots,N)$ and select $T_i$ with the highest cosine similarity.
+    - Prepare $N$ labels for the objects you want to classify.
+    - "a photo of Generate $N$ phrases, each with the same label, and run them through a text encoder to obtain a feature vector $T_{1:N}$.
+    - Run the image through an image encoder to obtain a feature vector $I$.
+    - Compare $I$ with $T_i (i=1,2,\dots,N)$ and select $T_i$ with the highest cosine similarity.
 
 ---
 
