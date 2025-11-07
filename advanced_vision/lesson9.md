@@ -259,6 +259,7 @@ marp: true
     - エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k}, \bar{\boldsymbol{o}}_t )$
         - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる）
         - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス
+        - $\bar{\boldsymbol{o}}_t$: 画像以外のセンサデータ（内界センサの値など）
 
 ---
 
