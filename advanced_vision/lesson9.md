@@ -261,6 +261,7 @@ marp: true
     - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる）
     - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス（位置埋め込みあり）
     - $\bar{\boldsymbol{o}}_t$: 画像以外のセンサデータ（内界センサの値など）
+        - 「画像以外」: 時短のため
 - デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} | \boldsymbol{o}_t, \boldsymbol{z} )$
     - $\hat{\boldsymbol{a}}_{t:t+k}$: 復元した動作シーケンス
     - $\boldsymbol{o}_t$: 画像を含むセンサデータ
