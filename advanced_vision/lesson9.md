@@ -249,6 +249,11 @@ marp: true
         - 移動マニピュレータ版: https://www.youtube.com/watch?v=zMNumQ45pJ8
 - ACT: Action Chunking with Transformers
     - 離散ではなく連続量で制御を出力するモデル
+    - 1ステップずつではなく、数ステップ先まで一度に出力して制御周期を上げ、滑らかな制御を実現
+
+---
+
+### ACTの学習方法
 
 ---
 
