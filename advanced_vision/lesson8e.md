@@ -304,7 +304,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - Above the dotted line: CLIP (used for training)
 - Below the dotted line: Generation
-- Consists of a prior model (prior) and a decoder (almost entirely GLIDE)
+    - Consists of a prior model (prior) and a decoder (almost entirely GLIDE)
 
 <span style="font-size:70%">[Image: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
 ![](./figs/unclip.png)
@@ -314,15 +314,15 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ### Prior model + decoder (unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125))
 
 - Redundant problem of estimating (generating) image $\boldsymbol{x}$ from text $\boldsymbol{y}$ 
-- $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} | \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} | \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$ 
-- $\boldsymbol{z}_x, \boldsymbol{z}_y$: Feature vectors for image and text in CLIP, respectively.
-- Mathematically redundant, but with additional hints during training, quality improves.
+    - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} | \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} | \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$ 
+    - $\boldsymbol{z}_x, \boldsymbol{z}_y$: Feature vectors for image and text in CLIP, respectively.
+    - Mathematically redundant, but with additional hints during training, quality improves.
 - Last term: $p(\boldsymbol{x} | \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
-- Backward probability distribution: Prior model
-- Outputs high-quality image feature vectors.
-- Rather than simply outputting text feature vectors, this is enhanced by inputting text as well.
-- Forward probability distribution: Decoder
-- This also inputs text again.
+    - the right probability distribution: Prior model
+        - Outputs high-quality image feature vectors.
+        - Rather than simply outputting text feature vectors, this is enhanced by inputting text as well.
+    - Forward probability distribution: Decoder
+        - This also inputs text again.
 
 ---
 
