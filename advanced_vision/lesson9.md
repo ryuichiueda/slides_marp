@@ -243,6 +243,8 @@ marp: true
 
 ## ALOHA, ACT[[Zhao2023]](https://arxiv.org/abs/2304.13705)
 
+- 模倣学習の枠組みの提案
+    - 基本的に1つのタスクを学習
 - ALOHA: A Low-cost Open-source Hardware System for Bimanual Teleoperation
     - 訓練データ取得用の遠隔操作システム
         - 買えるものの例: https://www.tegtks.net/products/case10.html
@@ -250,7 +252,6 @@ marp: true
 - ACT: Action Chunking with Transformers
     - 離散ではなく連続量で制御を出力するモデル
     - 1ステップずつではなく、数ステップ先まで一度に出力して制御周期を上げ、滑らかな制御を実現
-    - 基本的に1つのタスクを学習
 
 ---
 
