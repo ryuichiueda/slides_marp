@@ -416,10 +416,16 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Advanced Vision Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:Advanced Vision Lesson 8;--paginate:true;--marpit-advanced-background-split:45%;" data-marpit-pagination-total="28" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/dall-e.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="55%" height="720"><section id="21" data-footer="Advanced Vision Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:Advanced Vision Lesson 8;--paginate:true;--marpit-advanced-background-split:45%;" data-marpit-pagination-total="28" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="training-dalle">Training DALL·E</h3>
 <ul>
-<li>Caption-image pairs are used as training data</li>
+<li>Caption-image pairs are used as training data
+<ul>
 <li>Same as CLIP</li>
-<li>Stage 1: Train dVAE using collected images</li>
-<li>Inputting a <a href="https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6">code string</a> to a trained decoder generates an image.</li>
+</ul>
+</li>
+<li>Stage 1: Train dVAE using collected images
+<ul>
+<li>Inputting a <a href="https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6">code sequence</a> to a trained decoder generates an image.</li>
+</ul>
+</li>
 <li>Stage 2: Train a transformer to generate a code string after the input sentence.</li>
 </ul>
 <footer>Advanced Vision Lesson 8</footer>

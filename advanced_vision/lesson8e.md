@@ -257,12 +257,13 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
         - Encodes $256 × 256$ images into $32 × 32$ images (or rather, code sequences)
 
 ---
+
 ### Training DALL·E
 
 - Caption-image pairs are used as training data
-- Same as CLIP
+    - Same as CLIP
 - Stage 1: Train dVAE using collected images
-- Inputting a [code string](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6) to a trained decoder generates an image.
+    - Inputting a [code sequence](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6) to a trained decoder generates an image.
 - Stage 2: Train a transformer to generate a code string after the input sentence.
 
 ![bg right:45% 100%](./figs/dall-e.svg)
