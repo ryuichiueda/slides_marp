@@ -288,6 +288,7 @@ marp: true
 ### ACTの構造
 
 - CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
+    - `[CLS]`を入力につけて、`[CLS]`の出力を$\boldsymbol{z}$に
 
 
 ---
