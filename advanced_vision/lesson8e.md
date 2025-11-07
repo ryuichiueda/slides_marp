@@ -2,11 +2,11 @@
 marp: true
 ---
 
-<!-- footer: "Advanced Vision Session 8" -->
+<!-- footer: "Advanced Vision Lesson 8" -->
 
 # Advanced Vision
 
-## Session 8: The Integration of Image Processing and Language Processing
+## Lesson 8: The Integration of Image Processing and Language Processing
 
 Ryuichi Ueda, Chiba Institute of Technology
 
