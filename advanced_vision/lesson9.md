@@ -255,11 +255,13 @@ marp: true
 
 ### ACTの構造、入出力（学習時）
 
-- 構成: Transformerで作った条件付きVAE（CVAE）
-    - エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k}, \bar{\boldsymbol{o}}_t )$
-        - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる）
-        - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス（位置埋め込みあり）
-        - $\bar{\boldsymbol{o}}_t$: 画像以外のセンサデータ（内界センサの値など）
+構成: Transformerで作った条件付きVAE（CVAE）
+
+- エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k}, \bar{\boldsymbol{o}}_t )$
+    - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる）
+    - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス（位置埋め込みあり）
+    - $\bar{\boldsymbol{o}}_t$: 画像以外のセンサデータ（内界センサの値など）
+- デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} | \boldsymbol{o}_t, \boldsymbol{z} )$
 
 ---
 
