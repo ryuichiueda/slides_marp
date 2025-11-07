@@ -265,6 +265,7 @@ marp: true
 - デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} | \boldsymbol{o}_t, \boldsymbol{z} )$
     - $\hat{\boldsymbol{a}}_{t:t+k}$: 復元した動作シーケンス
     - $\boldsymbol{o}_t$: 画像を含むセンサデータ
+        - 行動の生成は$\boldsymbol{o}_t$だけでできる（スタイル変数は不要）
 
 ---
 
