@@ -274,6 +274,7 @@ marp: true
 
 - 前ページのデコーダだけ使用
     - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{o}_t, \boldsymbol{z} = \boldsymbol{0} )$
+- $\hat{\boldsymbol{a}}_{t:t+k}$の平滑化
 
 
 ---
