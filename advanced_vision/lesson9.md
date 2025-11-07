@@ -253,7 +253,9 @@ marp: true
 
 ---
 
-### ACTの学習方法
+### ACTの構造、入出力
+
+- 構成: Transformerで作った条件付きVAE（CVAE）
 
 ---
 
