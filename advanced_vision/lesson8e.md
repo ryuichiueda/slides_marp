@@ -273,9 +273,9 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ### Image Generation with DALL·E
 
 - Stage 2 configuration on the previous page
-- Website: https://openai.com/ja-JP/index/dall-e/
-- Generate 512 images, rank them using CLIP, and output the top 32.
-- Let's play around.
+    - Website: https://openai.com/ja-JP/index/dall-e/
+        - Generate 512 images, rank them using CLIP, and output the top 32.
+        - Let's play around.
 
 ---
 ## GLIDE[[Nichol 2021]](https://arxiv.org/abs/2112.10741)
