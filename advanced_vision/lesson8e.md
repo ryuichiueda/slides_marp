@@ -355,7 +355,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ## Summary
 
-- Studying the application of language processing techniques to images and their combination with image processing
+- We studied the applications of language processing techniques to images and their combination with image processing
 - Recently, cutting-edge services have been released one after another
-- New technologies are also being developed
+    - New technologies are also being developed
 - Not covered: Video understanding and video generation
