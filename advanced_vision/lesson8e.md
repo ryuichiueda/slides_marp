@@ -246,15 +246,15 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ## DALL·E (Dali) [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
 
 - Generate images from phrases or sentences.
-- Figures 2 and 8 in [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
-- https://openai.com/ja-JP/index/dall-e/
+    - Figures 2 and 8 in [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
+    - https://openai.com/ja-JP/index/dall-e/
 - Have the Transformer consider images as a continuation of a sentence.
 - What you'll need
-- Transformer (decoder)
-- A modified version of GPT-3
-- Images can also be input as embedding vectors
-- [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8) (The paper calls it [discrete VAE (dVAE)](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3))
-- Encodes $256 × 256$ images into $32 × 32$ images (or rather, code sequences)
+    - Transformer (decoder)
+        - A modified version of GPT-3
+        - Images can also be input as embedding vectors
+    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8) (The paper calls it [discrete VAE (dVAE)](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3))
+        - Encodes $256 × 256$ images into $32 × 32$ images (or rather, code sequences)
 
 ---
 ### Training DALL·E
