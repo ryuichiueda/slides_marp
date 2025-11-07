@@ -274,6 +274,7 @@ marp: true
 
 - 前ページのデコーダだけ使用
     - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{o}_t, \boldsymbol{z} = \boldsymbol{0} )$
+        - $\boldsymbol{z}$は「平均的」なゼロベクトルに
         - なんで$\boldsymbol{z}$がわざわざあるのか？
             - 同じタスクでもマニピュレータの動きが何通りもある（いくつもモードがある）ので、それらが学習中に混ざらないようにしている
             - 異なるモードの（スタイル$\boldsymbol{z}$の値が大きくちがう）行動シーケンスは潜在空間の別の場所に配置
