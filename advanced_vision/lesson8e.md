@@ -294,10 +294,9 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - Successor to DALL·E
 - Basic idea
-- Uses CLIP
-- Since text and images are in the same latent space,
-text can also be converted to images using the latent space vector $\rightarrow$image
-- However, various efforts were made to output a well-defined image.
+    - Uses CLIP
+    - Since text and images are in the same latent space, text can also be converted to images using the latent space vector $\rightarrow$image
+        - However, various efforts were made to output a well-defined image.
 
 ---
 
