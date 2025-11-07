@@ -335,11 +335,27 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-### Stable Diffusion (v1) structure (Latent Diffusion) Models, LDM) [[Rombach 2021]](https://arxiv.org/abs/2112.10752)
+### Architecture of Stable Diffusion (v1) (Latent Diffusion Models, LDM) [[Rombach 2021]](https://arxiv.org/abs/2112.10752)
 
-- Figure 3 in [[Rombach 2021]](https://arxiv.org/abs/2112.10752) (Figure from Wikipedia)
-- The upper $x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$ section is for training.
-- The training images are converted into vectors in the latent space and then diffused using DDPM.
-- Latent space: From the VQGAN proposed in [[Esser 2020]](https://arxiv.org/abs/2012.09841)
-- In essence, it's the GAN version of VQ-VAE.
--
+- Figure 3 in [[Rombach 2021]](https://arxiv.org/abs/2112.10752)（[the figure in Wikipedia](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+    - The upper $x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$ section is for training.
+        - The training images are converted into vectors in the latent space and then diffused using DDPM.
+            - Latent space: VQGAN's one [[Esser 2020]](https://arxiv.org/abs/2012.09841) 
+                - Essentially, a GAN version of VQ-VAE
+                - The pink part in the diagram is a (variant) VQGAN
+
+---
+
+- The $\tilde{x}\leftarrow z_T$ part at the bottom is the image generation part
+    - Returning noise to the latent space vector $z$ (U-Net)
+    - Guidance is provided by the cross-attention mechanism using text and image embedding (generated within the white box in the diagram)
+        - Since it is basically a matrix calculation, it can also be incorporated into U-Net
+
+---
+
+## Summary
+
+- Studying the application of language processing techniques to images and their combination with image processing
+- Recently, cutting-edge services have been released one after another
+- New technologies are also being developed
+- Not covered: Video understanding and video generation
