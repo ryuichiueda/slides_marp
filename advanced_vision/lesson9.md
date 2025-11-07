@@ -253,7 +253,7 @@ marp: true
 
 ---
 
-### ACTの構造、入出力
+### ACTの構造、入出力（学習時）
 
 - 構成: Transformerで作った条件付きVAE（CVAE）
     - エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k}, \bar{\boldsymbol{o}}_t )$
