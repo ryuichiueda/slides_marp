@@ -281,12 +281,11 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ## GLIDE[[Nichol 2021]](https://arxiv.org/abs/2112.10741)
 
 - Acronym for Guided Language to Image Diffusion for generation and editing.
-- Poor generation
-- "A Diffusion Model for Language-Guided Image Generation and Editing"
-- Using natural language and [classifier-less guidance] (lesson4-2.html#5) to generate images using a diffusion model
-- (Other methods, such as CLIP guidance, were also tried, but the classifier-less approach produced better results.)
-- Encoding natural language is used as labels for classifier-less guidance
-- U-Net structure
+    - Where is generation?
+- Using natural language and [classifier-free guidance](lesson4-2.html#5) to generate images using a diffusion model
+    - (Other methods, such as CLIP guidance, were also tried, but the classifier-less approach produced better results.)
+    - Encoding natural language is used as labels for classifier-less guidance
+    - U-Net structure
 - Generated image: Figure 1 in the paper
 - Fine-tuning allows for partial image modification with text (image inpainting): Figures 2, 3, and 4 in the paper
 

@@ -449,13 +449,18 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="Advanced Vision Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:Advanced Vision Lesson 8;--paginate:true;" data-marpit-pagination-total="28">
 <h2 id="glidenichol-2021">GLIDE<a href="https://arxiv.org/abs/2112.10741">[Nichol 2021]</a></h2>
 <ul>
-<li>Acronym for Guided Language to Image Diffusion for generation and editing.</li>
-<li>Poor generation</li>
-<li>&quot;A Diffusion Model for Language-Guided Image Generation and Editing&quot;</li>
-<li>Using natural language and [classifier-less guidance] (lesson4-2.html#5) to generate images using a diffusion model</li>
+<li>Acronym for Guided Language to Image Diffusion for generation and editing.
+<ul>
+<li>Where is generation?</li>
+</ul>
+</li>
+<li>Using natural language and <a href="lesson4-2.html#5">classifier-free guidance</a> to generate images using a diffusion model
+<ul>
 <li>(Other methods, such as CLIP guidance, were also tried, but the classifier-less approach produced better results.)</li>
 <li>Encoding natural language is used as labels for classifier-less guidance</li>
 <li>U-Net structure</li>
+</ul>
+</li>
 <li>Generated image: Figure 1 in the paper</li>
 <li>Fine-tuning allows for partial image modification with text (image inpainting): Figures 2, 3, and 4 in the paper</li>
 </ul>
