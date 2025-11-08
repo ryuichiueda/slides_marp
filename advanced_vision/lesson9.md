@@ -267,20 +267,19 @@ marp: true
 
 ### ACTの計算（学習時）
 
-構成: Transformerで作った条件付きVAE（CVAE）（構造を見ると混乱するので後で）
+構成: Transformerで作った条件付きVAE（CVAE）
 
-- エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k}, \bar{\boldsymbol{o}}_t )$
+- エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k},$画像以外の時刻$t$のセンサ値$)$
     - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる。後述。）
     - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス（位置埋め込みあり）
-    - $\bar{\boldsymbol{o}}_t$: 画像以外のセンサデータ（内界センサの値など）
-        - 「画像以外」: 時短のため
-- デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} | \boldsymbol{o}_t, \boldsymbol{z} )$
+    - 「画像以外」: 内界センサなど。画像を抜くのは時短のため
+- デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} |$画像を含む$t$のセンサ値$, \boldsymbol{z} )$
     - $\hat{\boldsymbol{a}}_{t:t+k}$: 復元した動作シーケンス
-    - $\boldsymbol{o}_t$: 画像を含むセンサデータ
-        - 行動の生成は$\boldsymbol{o}_t$だけでできる（スタイル変数は不要）
-            - 何をすれば良いかは画像と自身の関節角だけで推論可能
+$\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ---
+        - 行動の生成は$\boldsymbol{o}_t$だけでできる（スタイル変数は不要）
+            - 何をすれば良いかは画像と自身の関節角だけで推論可能
 
 ### スタイル変数: なんで$\boldsymbol{z}$がわざわざあるのか？
 
