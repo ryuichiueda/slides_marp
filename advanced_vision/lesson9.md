@@ -291,13 +291,14 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ### ACTの計算（使用・推論時）
 
-- 前ページのデコーダだけ使用
-    - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{o}_t, \boldsymbol{z} = \boldsymbol{0} )$
-        - $\boldsymbol{z}$は「平均的」なゼロベクトルに
+- 前ページの説明通り、次のようにデコーダだけを使用
+    - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{z} = \boldsymbol{0},$ 画像を含むセンサ値$)$
 - $\hat{\boldsymbol{a}}_{t:t+k}$の平滑化
     - 出力された行動のシーケンスが終わるまでにデコーダからまた出力
     $\rightarrow$重み付き平均をとってアクチュエータに入力
 
+
+![bg right:25% 100%](./figs/act_dec_use.svg)
 
 ---
 

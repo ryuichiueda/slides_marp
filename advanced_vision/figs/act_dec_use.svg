@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184.3 120.06">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-3 {
+        font-family: Times-Bold, Times;
+      }
+
+      .cls-3, .cls-4 {
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        font-size: 16px;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-6, .cls-7 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        font-family: Times-BoldItalic, Times;
+        font-style: italic;
+      }
+
+      .cls-8 {
+        letter-spacing: -.48em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.48em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="cls-6" points="35.97 61.02 35.97 18.94 86.04 .71 86.04 61.02"/>
+    <polyline class="cls-6" points="35.97 20.36 35.97 62.43 86.04 80.66 86.04 20.36"/>
+  </g>
+  <text class="cls-1" transform="translate(38.77 43.93)"><tspan x="0" y="0">decoder</tspan></text>
+  <text class="cls-1" transform="translate(125.92 36.73)"><tspan x="0" y="0">出力</tspan><tspan class="cls-13" x="-40.14" y="14.4">（</tspan><tspan x="-28.38" y="14.4">動</tspan><tspan class="cls-15" x="-16.38" y="14.4">作シー</tspan><tspan class="cls-10" x="18.54" y="14.4">ケン</tspan><tspan class="cls-14" x="40.62" y="14.4">ス</tspan><tspan class="cls-9" x="52.14" y="14.4">）</tspan></text>
+  <g>
+    <line class="cls-7" x1="10.35" y1="54.88" x2="29.76" y2="54.88"/>
+    <path d="M35.79,54.88c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
+  </g>
+  <line class="cls-7" x1="10.35" y1="53.88" x2="10.35" y2="84.98"/>
+  <text class="cls-1" transform="translate(0 101.59)"><tspan x="0" y="0">条件</tspan><tspan class="cls-13" x="-5.76" y="14.4">（</tspan><tspan x="6" y="14.4">画</tspan><tspan class="cls-12" x="18" y="14.4">像を</tspan><tspan x="41.52" y="14.4">含</tspan><tspan class="cls-16" x="53.52" y="14.4">む</tspan><tspan class="cls-11" x="65.4" y="14.4">セ</tspan><tspan class="cls-12" x="76.68" y="14.4">ン</tspan><tspan x="88.44" y="14.4">サ</tspan><tspan class="cls-13" x="100.44" y="14.4">値</tspan><tspan class="cls-8" x="112.2" y="14.4">）</tspan></text>
+  <text class="cls-5" transform="translate(6.14 46.57)"><tspan class="cls-4" x="0" y="0">z</tspan><tspan class="cls-2" x="6.23" y="0">=</tspan><tspan class="cls-3" x="17.01" y="0">0</tspan></text>
+</svg>
