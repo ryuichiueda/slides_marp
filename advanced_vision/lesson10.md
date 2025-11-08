@@ -228,4 +228,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - SigLIP
 - Gemma
     - オープン、軽量なGoogleのLLM
-
+- action expert
+    - ロボットの動作のシーケンスを出力
