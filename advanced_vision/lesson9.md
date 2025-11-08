@@ -314,6 +314,7 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
             - 次ページで詳しく
     - Transformerのデコーダへの入力: 位置埋め込みだけ
         - <span style="color:red">交差注意機構でTransformerのエンコーダの出力を反映</span>
+    - Transformerデコーダの出力: $\hat{\boldsymbol{a}}_{t:t+k}$（$14$次元のベクトル$k$個）
 
 ---
 
