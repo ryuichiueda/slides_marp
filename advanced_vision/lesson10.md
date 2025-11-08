@@ -86,9 +86,18 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - ひとつの条件付き確率に対し、途中の経路（分布）の定式化が必要
 - とりあえずガウス分布を選択
     - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
-        - $\boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)$は時間の関数と解釈したほうがよい
-        - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
-        - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
+        - 境界条件
+            - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
+            - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
+        - $\boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)$は時間の関数と解釈
+            - 境界だけしかまだ決まっていない
+            - とりあえず簡単なフロー$\boldsymbol{\psi}_t(\boldsymbol{x}) = \{1 - ( 1 - \sigma_\min)t\}\boldsymbol{x} + t \boldsymbol{x}_1$
+            を決めて、そこから計算
+
+![bg right:27% 95%](./figs/conditional_flow.svg)
+
+---
+
     - このときのベクトル場
         - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) =\dfrac{\sigma_t(\boldsymbol{x}_1)'}{\sigma_t(\boldsymbol{x}_1)}\{\boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1)\} + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
             - $'$は時間の微分
@@ -102,7 +111,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 途中（時間の関数としての$\boldsymbol{\mu}_t(\boldsymbol{x}_1)$と$\sigma_t(\boldsymbol{x}_1)$）には自由度がある
     - なるべく素直なフローで分布を移したい$\Longrightarrow$最適輸送問題
 - 条件つき最適輸送パス
-    - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \{1 - ( 1 - \sigma_\min)t\}\boldsymbol{x} + t \boldsymbol{x}_1$を選んでみる
     - $\boldsymbol{\mu}_t(x)=t \boldsymbol{x}_1, \sigma_t(x)=1 - (1- \sigma_\text{min})t$
         - とても単純
     $\Longrightarrow \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) = \dfrac{\boldsymbol{x}_1 - (1-\sigma_\min)\boldsymbol{x}}{1-(1-\sigma_\min)t}$
