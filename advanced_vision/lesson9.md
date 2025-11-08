@@ -247,11 +247,21 @@ marp: true
     - 基本的に1つのタスクを学習
 - ALOHA: A Low-cost Open-source Hardware System for Bimanual Teleoperation
     - 訓練データ取得用の遠隔操作システム
-        - 買えるものの例: https://www.tegtks.net/products/case10.html
-        - 移動マニピュレータ版: https://www.youtube.com/watch?v=zMNumQ45pJ8
-- ACT: Action Chunking with Transformers
-    - 離散ではなく連続量で制御を出力するモデル
-    - 1ステップずつではなく、数ステップ先まで一度に出力して制御周期を上げ、滑らかな制御を実現
+        - [訓練データ取得の様子](https://youtu.be/VOpTZBwN7xs?si=IT14vfsjEirvKfKF&t=52)
+        - [買えるものの例](https://www.tegtks.net/products/case10.html)
+        - [移動マニピュレータ版](https://www.youtube.com/watch?v=zMNumQ45pJ8)
+- ACT: 次のページ
+
+---
+
+### ACT: Action Chunking with Transformers
+
+- 離散ではなく連続量で制御を出力するモデル
+- 1ステップずつではなく、数ステップ先まで一度に出力して制御周期を上げ、滑らかな制御を実現
+- ロボットの動きの例
+    - [小さいカップの蓋を開ける](https://youtu.be/VOpTZBwN7xs?si=9tmS5TD94stPVUOF&t=214)
+    - [電池の挿入など](https://youtu.be/VOpTZBwN7xs?si=7zIrDrnEHrqJYWfx&t=252)
+    - https://www.youtube.com/watch?v=VUxFhtGWD7w
 
 ---
 
