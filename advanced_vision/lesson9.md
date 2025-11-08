@@ -278,8 +278,6 @@ marp: true
 $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ---
-        - 行動の生成は$\boldsymbol{o}_t$だけでできる（スタイル変数は不要）
-            - 何をすれば良いかは画像と自身の関節角だけで推論可能
 
 ### スタイル変数: なんで$\boldsymbol{z}$がわざわざあるのか？
 
