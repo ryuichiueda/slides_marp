@@ -308,7 +308,8 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 - CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
     - `[CLS]`を入力につけて、`[CLS]`の出力を$\boldsymbol{z}$に
 - CVAEのデコーダ: Transformerのエンコーダ・デコーダ構成
-    - 4方向からの画像を入力できる（ResNetで埋め込みのベクトルに）
+    - 4方向からの画像を入力できる
+        - ResNetで$300$個、$512$次元の埋め込みのベクトルに
 
 
 ---
