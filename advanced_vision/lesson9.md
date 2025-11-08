@@ -269,11 +269,11 @@ marp: true
 
 構成: Transformerで作った条件付きVAE（CVAE）
 
-- エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k},$画像以外の時刻$t$のセンサ値$)$
+- エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k},$ 画像以外の時刻$t$のセンサ値$)$
     - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる。後述。）
     - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス（位置埋め込みあり）
     - 「画像以外」: 内界センサなど。画像を抜くのは時短のため
-- デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} |$画像を含む$t$のセンサ値$, \boldsymbol{z} )$
+- デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} |\boldsymbol{z},$ 画像を含む$t$のセンサ値$)$
     - $\hat{\boldsymbol{a}}_{t:t+k}$: 復元した動作シーケンス
 $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
