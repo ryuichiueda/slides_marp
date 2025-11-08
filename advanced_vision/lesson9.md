@@ -307,6 +307,8 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 - [論文](https://arxiv.org/abs/2304.13705)の図4
 - CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
     - `[CLS]`を入力につけて、`[CLS]`の出力を$\boldsymbol{z}$に
+- CVAEのデコーダ: Transformerのエンコーダ・デコーダ構成
+    - 4方向からの画像を入力できる
 
 
 ---
