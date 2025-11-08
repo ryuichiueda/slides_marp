@@ -227,6 +227,6 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 - SigLIP
 - PaliGemma
-    - オープン、軽量なGoogleのLLM
+    - オープン、軽量なGoogleのVLM
 - action expert
     - ロボットの動作のシーケンスを出力
