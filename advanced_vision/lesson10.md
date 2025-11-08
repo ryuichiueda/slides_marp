@@ -229,3 +229,8 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - オープン、軽量なGoogleのVLM（30億パラメータ）
 - action expert
     - ロボットの動作のシーケンスを出力
+
+---
+### フローマッチングの使い方
+
+- Lcfmのvの引数に観測データも入れて、条件付きでフローを学習
