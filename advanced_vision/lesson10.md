@@ -225,8 +225,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ### 構造
 
-- SigLIP
 - PaliGemma
-    - オープン、軽量なGoogleのVLM
+    - オープン、軽量なGoogleのVLM（30億パラメータ）
 - action expert
     - ロボットの動作のシーケンスを出力
