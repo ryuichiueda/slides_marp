@@ -219,5 +219,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - Physical Intelligence社が開発したVLAモデル
 - 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
 - ACTで使われていたaction chunking architectureで50Hzの制御周期を達成
-    - ただし、CVAEではなくconditional flow matchingを使用
+    - ただし、CVAEではなくconditional flow matching（CFM）を使用
 
