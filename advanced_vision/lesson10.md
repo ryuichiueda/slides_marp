@@ -29,7 +29,7 @@ marp: true
 
 ---
 
-## Flow matching（FL）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
+## Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
 
 - 拡散モデルとは別のアプローチで分布の変換を実現
 - 拡散モデル（下図。再掲）
@@ -218,5 +218,6 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 - Physical Intelligence社が開発したVLAモデル
 - 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
-- action chunking architectureで50Hzの制御周期を達成
+- ACTで使われていたaction chunking architectureで50Hzの制御周期を達成
+    - ただし、CVAEではなくflow matchingを使用
 
