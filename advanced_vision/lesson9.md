@@ -302,14 +302,17 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ---
 
-### ACTの構造
+### ACTの実装
 
 - [論文](https://arxiv.org/abs/2304.13705)の図4
 - CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
     - `[CLS]`を入力につけて、`[CLS]`の出力を$\boldsymbol{z}$に
 - CVAEのデコーダ: Transformerのエンコーダ・デコーダ構成
-    - 4方向からの画像を入力できる
-        - ResNetで$300$個、$512$次元の埋め込みのベクトルに
+    - デコーダにエンコーダが使われていてややこしい
+    - センサ値
+        - 4方向からの$480\times640$pixelのRGB画像を入力できる
+            - 1枚あたりResNetで$300$個、$512$次元の埋め込みのベクトルに
+                - 全部で$1200$個のベクトルに
     - Transformerのデコーダには位置埋め込みだけを入力
 
 
