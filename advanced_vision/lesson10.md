@@ -113,19 +113,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-
-
----
-
-- このときのベクトル場
-    - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) =\dfrac{\sigma_t(\boldsymbol{x}_1)'}{\sigma_t(\boldsymbol{x}_1)}\{\boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1)\} + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
-       - $'$は時間の微分
-
-![bg right:27% 95%](./figs/conditional_flow.svg)
-
----
-
-
 ### FMでできること
 
 - [[Lipman 2022]](https://arxiv.org/abs/2210.02747)の図1、6、11〜
