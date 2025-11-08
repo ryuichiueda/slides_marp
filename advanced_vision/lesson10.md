@@ -221,3 +221,11 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - ACTで使われていたaction chunking architectureで50Hzの制御周期を達成
     - ただし、CVAEではなくconditional flow matching（CFM）を使用
 
+---
+
+### 構造
+
+- SigLIP
+- Gemma
+    - オープン、軽量なGoogleのLLM
+
