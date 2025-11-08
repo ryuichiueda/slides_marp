@@ -310,6 +310,7 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 - CVAEのデコーダ: Transformerのエンコーダ・デコーダ構成
     - 4方向からの画像を入力できる
         - ResNetで$300$個、$512$次元の埋め込みのベクトルに
+    - Transformerのデコーダには位置埋め込みだけを入力
 
 
 ---
