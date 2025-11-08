@@ -226,7 +226,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 ### 構造
 
 - SigLIP
-- Gemma
+- PaliGemma
     - オープン、軽量なGoogleのLLM
 - action expert
     - ロボットの動作のシーケンスを出力
