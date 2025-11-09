@@ -237,7 +237,8 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - 損失関数: $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_{\boldsymbol{w}}(A_t^\tau,\boldsymbol{o}_t)  - \boldsymbol{u}(A_t^\tau | A_t) \}^2 \big\rangle_{q(A_t^\tau | A_t), p(A_t | \boldsymbol{o}_t ), \tau \sim \text{Beta}}$
         - $\tau$がFMの時刻（$0 \le \tau \le 1$）
             - $t$は実際の時刻（ロボットの動作のステップ）
-            - $\tau$が小さいときの損失関数を重視するためベータ分布で重み付き平均をとる
+            - $\tau$が小さいときの損失関数を重視したい
+            $\rightarrow$ベータ分布でバイアスをかけて重み付き平均で評価
         - $A_t$（時刻$t$での動作シーケンス）が訓練データ
             - $\boldsymbol{o}_t$と対になっている
         - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$（最適輸送パス）
