@@ -219,6 +219,9 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 - Physical Intelligence社が開発したVLAモデル
 - 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
+    - 68種のタスクの独自データセットとOpen X-Embodiment dataset
+        - それぞれ7種+22種のロボットのデータを含む
+        - 1万時間超の長さ
 - ACTで使われていたaction chunking architectureで50Hzの制御周期を達成
     - ただし、CVAEではなくconditional flow matching（CFM）を使用
 - 使用例: 上記のサイトにいろいろ
