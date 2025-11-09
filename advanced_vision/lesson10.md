@@ -234,3 +234,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 ### フローマッチングの使い方
 
 - Lcfmのvの引数に観測データも入れて、条件付きでフローを学習
+    - 損失関数: $\mathcal{L}^\tau_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_{\boldsymbol{w}}(A_t^\tau, \boldsymbol{o}_t )  - [ \boldsymbol{x}_1 - (1 - \sigma_\min)\boldsymbol{x}_0 ] \}^2 \big\rangle_{t \sim \mathcal{U},q(\boldsymbol{x}_1), p(\boldsymbol{x}_0 )}$
+    - （参考）CFMの一般的な損失関数: $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_t(\boldsymbol{x})  - \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) ] \}^2 \big\rangle_{t \sim \mathcal{U},q(\boldsymbol{x}_1), p_t(\boldsymbol{x} | \boldsymbol{x}_1 )}$
