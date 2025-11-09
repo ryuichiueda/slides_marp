@@ -250,4 +250,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
             - 観測や指示$\boldsymbol{o}_t$と対になっている
         - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$（最適輸送パス）
 - 使用（推論）時
-    - $A_t^0$に雑音を入れると$\boldsymbol{o}_t$に導かれて$A_t^1$が生成される
+    - $A_t^0$に雑音を入れると$\boldsymbol{o}_t$に条件づけられた$\boldsymbol{v}_\boldsymbol{w}$に導かれて$A_t^1$が生成される
