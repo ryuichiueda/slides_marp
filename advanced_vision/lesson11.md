@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第11回: CLIP (Contrastive Language-Image Pretraining)
+## 第11回: NeRF（Neural Radiance Fields）
 
 千葉工業大学 上田 隆一
 
@@ -21,74 +21,4 @@ marp: true
 
 ## 今日やること
 
-- CLIP
-    - テキストと画像の関連性を学習したモデル（[論文](https://arxiv.org/pdf/2103.00020)）
-    - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- CLIPでできること
-    - 画像に何が写っているかを認識（ある意味ではラベルの数に制限がない）
-    - テキストから画像を生成するときの部品
-
----
-
-## 画像認識の方法
-
-- よく行われてきた方法
-    - 写真をあつめる
-    - 写真に写っているものをラベル付けする
-- 上記方法の問題
-    - めんどくさい
-    - ラベルのあるものしか認識できない
-
----
-
-### ラベルの部分についてTransformerを使ってなんとかならないか？
-
-- 画像にはキャプションのついたものがある（論文はそうですよね？）
-$\Longrightarrow$画像とキャプションをいろんなところから大量に集めてくることは可能
-- 問題: キャプションは単語ではなく文や句になっている
-    - 単純なラベルではない
-
-<center>Transformerを使ってなんとかならないか？（2回目）</center>
-
----
-
-### Contrastive Language-Image Pre-training (CLIP)
-
-- 学習方法
-    1. 前ページの方法で学習用のデータを準備
-    2. ViTを使って画像をエンコーディング
-    3. Transformerを使って文をエンコーディング
-    4. エンコーディングされたデータ（埋め込み）同士の相関を学習
-$\Longrightarrow$画像から文、文から画像などの変換が可能なANNができる
-- 補足: 必ずしもViT、Transformerである必要はない（が性能が高くなる）
-
----
-
-### CLIPの構造
-
-- [全体像](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- image encoder: ViT
-    - 入力は画像
-    - クラストークンを出力として使う（数百次元のベクトル）
-- text encoder: Transformerのデコーダから交差注意機構を除いたもの
-    - 入力は画像のキャプション
-    - 出力をimage encoderに合わせる
-
----
-
-### 評価方法
-
-- $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
-    - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
-    - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
-- ペアとなっている画像とキャプションのベクトルを同じにしたい
-    - $\boldsymbol{i}_j$と$\boldsymbol{t}_j$のコサイン類似度を大きくしたい
-        - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
-- ペアでない画像とキャプションのベクトルを違うものにしたい
-    - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
-- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\dfrac
-{e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}}
-{\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}} -\dfrac{1}{N} \sum_{k=1}^N \ln\dfrac
-{e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}}
-{\sum_{j=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T}}$ 
-    - $T$は「温度」で学習が進むにつれて下げていく
+- NeRF（Neural Radiance Fields）
