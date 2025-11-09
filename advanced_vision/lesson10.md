@@ -92,7 +92,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     - フローはこうなる: $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
         - $t=0$の様々な箇所の$\boldsymbol{x}$が$\boldsymbol{x}_1$に向かう（右図）
         - まだ$\sigma_t(\boldsymbol{x}_1), \boldsymbol{\mu}_t(\boldsymbol{x}_1)$の形は決まっていない
-            - 様々な設計法が選べる
             - 補足: いずれも$\boldsymbol{x}_1$ではなく時間の関数
 
 ![bg right:27% 95%](./figs/conditional_flow.svg)
@@ -118,7 +117,9 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - [[Lipman 2022]](https://arxiv.org/abs/2210.02747)の図1、6、11〜
     - アルゴリズムの説明のための図だけど図4も面白い
 - Stable Diffusion 3
-- ロボットの制御（これからやります）
+- ロボットの制御（今回の後半にやります）
+- 補足
+    - 最適輸送の場合しか説明しませんでしたが、他にもいろいろ設計の余地があります
 
 ---
 
