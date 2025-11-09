@@ -243,7 +243,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
             - $\tau$が小さいときの損失関数を重視したい
             $\rightarrow$ベータ分布でバイアスをかけて重み付き平均で評価
         - $A_t$（時刻$t$での動作シーケンス）が訓練データ
-            - $\boldsymbol{o}_t$と対になっている
+            - 観測や指示$\boldsymbol{o}_t$と対になっている
         - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$（最適輸送パス）
 - 使用（推論）時
     - $A_t^0$に雑音を入れると$\boldsymbol{o}_t$に導かれて$A_t^1$が生成される
