@@ -237,5 +237,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - 損失関数: $\mathcal{L}^\tau_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_{\boldsymbol{w}}(A_t^\tau,\boldsymbol{o}_t)  - \boldsymbol{u}(A_t^\tau | A_t) \}^2 \big\rangle_{q(A_t^\tau | A_t), p(A_t | \boldsymbol{o}_t )}$
         - $\tau$がFMの時刻（$0 \le \tau \le 1$）
             - $t$は実際の時刻（ロボットの動作のステップ）
+        - $A_t$が訓練データ（$\boldsymbol{o}_t$と対になっている）
         - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_T, (1-\tau)I]$（最適輸送パス）
-    - （参考）CFMの一般的な損失関数: $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_\tau(\boldsymbol{x})  - \boldsymbol{u}_\tau(\boldsymbol{x}|\boldsymbol{x}_1) ] \}^2 \big\rangle_{\tau \sim \mathcal{U},q(\boldsymbol{x}_1), p_t(\boldsymbol{x} | \boldsymbol{x}_1 )}$
