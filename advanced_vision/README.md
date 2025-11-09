@@ -7,5 +7,7 @@
 - [第6回: Transformerの構造](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson6.html)
 - [第7回: Transformerの応用](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson7.html)
 - [第8回: 画像処理と言語処理の融合](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson8.html)
-- 第9回: VLA
-- 第10回: NeRF, 3D Gaussian Splatting
+- [第9回: 画像と言語、ロボット制御の融合I](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson9.html)
+- [第10回: 画像と言語、ロボット制御の融合II](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson10.html)
+- 第11回: NeRF
+- 第12回: 3D Gaussian Splatting
