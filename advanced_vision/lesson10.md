@@ -229,9 +229,13 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 - PaliGemma
     - オープン、軽量なGoogleのVLM（30億パラメータ）
+    - 入力: 画像と作業の指示
+    - 出力: トークン
 - action expert
     - ロボットの動作のシーケンスを出力（3億パラメータ）
-    - フローマッチング
+    - 入力: PaliGemmaからのトークンとロボットの状態
+    - 出力: 動作シーケンス
+        - <span style="color:red">フローマッチングで</span>
 
 ---
 ### フローマッチングの使い方

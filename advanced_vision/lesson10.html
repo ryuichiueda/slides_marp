@@ -370,12 +370,19 @@
 <li>PaliGemma
 <ul>
 <li>オープン、軽量なGoogleのVLM（30億パラメータ）</li>
+<li>入力: 画像と作業の指示</li>
+<li>出力: トークン</li>
 </ul>
 </li>
 <li>action expert
 <ul>
 <li>ロボットの動作のシーケンスを出力（3億パラメータ）</li>
-<li>フローマッチング</li>
+<li>入力: PaliGemmaからのトークンとロボットの状態</li>
+<li>出力: 動作シーケンス
+<ul>
+<li><span style="color:red">フローマッチングで</span></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
