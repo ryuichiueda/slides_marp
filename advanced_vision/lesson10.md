@@ -228,7 +228,8 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - PaliGemma
     - オープン、軽量なGoogleのVLM（30億パラメータ）
 - action expert
-    - ロボットの動作のシーケンスを出力
+    - ロボットの動作のシーケンスを出力（3億パラメータ）
+    - フローマッチング
 
 ---
 ### フローマッチングの使い方
