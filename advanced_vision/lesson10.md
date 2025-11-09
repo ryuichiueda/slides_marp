@@ -225,7 +225,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ---
 
-### 構造
+### 構造（[このページ](https://arxiv.org/html/2410.24164v3)の図3）
 
 - PaliGemma
     - オープン、軽量なGoogleのVLM（30億パラメータ）
