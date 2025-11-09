@@ -238,4 +238,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
         - $\tau$がFMの時刻（$0 \le \tau \le 1$）
             - $t$は実際の時刻（ロボットの動作のステップ）
         - $A_t$が訓練データ（$\boldsymbol{o}_t$と対になっている）
-        - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_T, (1-\tau)I]$（最適輸送パス）
+        - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$（最適輸送パス）
