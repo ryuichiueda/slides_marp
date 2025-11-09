@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第11回: NeRF（Neural Radiance Fields）
+## 第11回: SfMとNeRF
 
 千葉工業大学 上田 隆一
 
@@ -21,4 +21,5 @@ marp: true
 
 ## 今日やること
 
-- NeRF（Neural Radiance Fields）
+- SfM（structure from motion）
+- NeRF（neural radiance fields）
