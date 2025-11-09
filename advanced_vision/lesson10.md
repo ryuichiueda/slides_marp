@@ -214,12 +214,14 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ---
 
-### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)
+### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)（[サイト](https://www.physicalintelligence.company/blog/pi0)）
 
 - Physical Intelligence社が開発したVLAモデル
 - 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
 - ACTで使われていたaction chunking architectureで50Hzの制御周期を達成
     - ただし、CVAEではなくconditional flow matching（CFM）を使用
+- 使用例: 上記のサイトにいろいろ
+    - 洗濯物を洗濯機から取り出して畳むなど複雑で細かい動作を実現
 
 ---
 
