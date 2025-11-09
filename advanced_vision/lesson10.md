@@ -238,6 +238,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
         - <span style="color:red">フローマッチングで</span>
 
 ---
+
 ### フローマッチングの使い方
 
 - ニューラルネットの作るベクトル場の変数に観測データも入れて学習
@@ -251,3 +252,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
         - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$（最適輸送パス）
 - 使用（推論）時
     - $A_t^0$に雑音を入れると$\boldsymbol{o}_t$に条件づけられた$\boldsymbol{v}_\boldsymbol{w}$に導かれて$A_t^1$が生成される
+
+---
+
+## まとめ
