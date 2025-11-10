@@ -32,4 +32,10 @@ marp: true
     - 位置・姿勢は以後あわせて「姿勢」と表現
     - 参考: https://demuc.de/papers/schoenberger2016sfm.pdf
 - SLAMとの違い
-   - Visual SLAMとあまり変わらないが、SLAMのほうがより広い領域を対象に
+   - Visual SLAMとあまり変わらないが、より被写体の形状に興味がある
+       - SLAMはロボットの移動する空間にも興味がある
+
+---
+
+### 特徴点を利用したSfMの処理の流れ
+
