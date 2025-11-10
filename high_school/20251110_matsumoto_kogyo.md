@@ -294,22 +294,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 同じ潜在空間に文章と画像の情報が置かれる
 
 
-
 ---
 
-## 自由エネルギー原理
+## 画像とロボットの動き or 言葉と画像とロボットの動きの結びつけ
 
-- 動物はこの式の値を最小にするように動いているのではないか？
-    - $F= D_\text{KL}[q(\boldsymbol{w}) || p(\boldsymbol{w} | \boldsymbol{z})] + \{ - \log_e p(\boldsymbol{z}) \}$
-        - $\boldsymbol{z}$: いままでの五感での経験（見たものとか）
-        - 右辺最初の項（認識・理解の項）: 認識と現実のズレ
-            - $\boldsymbol{w}$: 知りたいこと
-            - $p$: $\boldsymbol{z}$から導かれる、知りたいことに対する確率分布
-            - $q$: 知りたいことに対する頭の中の認識
-                - 確率分布であり、構造は神経回路で決まる
-        - 右辺2番目の項（サプライズ項。行動の項）: 頭の中の認識と$\boldsymbol{z}$のズレ
-            - <span style="color:red">違和感があると値が増える$\rightarrow$違和感のないように行動</span>
-    - たぶん猫より人間のほうが$q$の表現力が高い
+- ここ2年でできるようになった
+- $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)（[サイト](https://www.physicalintelligence.company/blog/pi0)）
+- 千葉工大でも林原教授が農業ロボットに活用
 
 ---
 
