@@ -48,3 +48,4 @@ marp: true
         - $\boldsymbol{x}$が画像上での位置、$\boldsymbol{f}$が特徴量のベクトル
 - 共通の特徴点を持つ画像のペアを見つけていく
     - ペア: $(I_a, I_b)_{1:N_\text{pair}}$（ここで$1 \le a < b \le N_I$）
+    - 特徴量のペアもできる（記号は省略）
