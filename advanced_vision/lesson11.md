@@ -44,5 +44,6 @@ marp: true
 - 被写体をいろんなところから写して画像を得る
     - 画像$I_{1:N_I}$を得る
 - 各画像からSIFT等の特徴点をとる
-    - 画像$I_i$に対し、$(\boldsymbol{x}, \boldsymbol{f} )_{1:N_{F_i}}$
+    - 画像$I_i$に対し、$(\boldsymbol{x}, \boldsymbol{f} )_{1:N_{F_i}}$を得る
+        - $\boldsymbol{x}$が画像上での位置、$\boldsymbol{f}$が特徴量のベクトル
 
