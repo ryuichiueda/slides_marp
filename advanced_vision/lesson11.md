@@ -70,4 +70,4 @@ marp: true
         - 他、ホモグラフィー行列や三焦点テンソルなど
 - 世界座標系にひとつずつカメラの姿勢を置いていく
 - バンドル調整<span style="color:red">$\Rightarrow$この出力をNeRFに使う</span>
-    - graph-based SLAMの要領でカメラの座標系を調整
+    - graph-based SLAMの要領（最小二乗法）でカメラの座標系を調整
