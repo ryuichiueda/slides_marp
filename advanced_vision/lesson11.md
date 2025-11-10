@@ -43,12 +43,18 @@ marp: true
 
 ### 特徴点を利用したSfMの処理の流れ
 
-- カメラを用意（内部パラメータをキャリブレーションしておく）
+- カメラを用意
 - 被写体をいろんなところから写して画像を得る
     - 画像$I_{1:N_I}$を得る
 - 各画像からSIFT等の特徴点をとる
     - 画像$I_i$に対し、$(\boldsymbol{x}, \boldsymbol{f} )_{1:N_{F_i}}$を得る
-        - $\boldsymbol{x}$が画像上での位置、$\boldsymbol{f}$が特徴量のベクトル
+        - $\boldsymbol{x}$が画像上の座標、$\boldsymbol{f}$が特徴量のベクトル
 - 共通の特徴点を持つ画像のペアを見つけていく
-    - ペア: $(I_a, I_b)_{1:N_\text{pair}}$（ここで$1 \le a < b \le N_I$）
-    - 特徴量のペアもできる（記号は省略）
+    - ペア: $(I_a, I_b)_{1:N_\text{pair}}$（$1 \le a < b \le N_I$）
+    - 特徴量のペアもできる（右図）
+
+![bg right:30% 90%](https://upload.wikimedia.org/wikipedia/commons/3/3d/Matching_of_two_images_using_the_SIFT_method.jpg)
+
+---
+
+
