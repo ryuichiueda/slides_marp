@@ -33,6 +33,7 @@ marp: true
     - 参考: https://demuc.de/papers/schoenberger2016sfm.pdf
 - SLAMとの違い
    - Visual SLAMとあまり変わらないが、より被写体の形状に興味がある
+       - 基本的なSfMはカメラの移動量を画像だけから求めようとする
        - SLAMはロボットの移動する空間にも興味がある
        - SLAMでは同じ被写体が念入りに撮れないことがある
 
