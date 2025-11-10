@@ -75,7 +75,7 @@ marp: true
 
 ---
 
-## NeRF（neural radiance fields）
+## NeRF（neural radiance fields）[[Mildenhall2020]](https://arxiv.org/abs/2003.08934)
 
 - 前ページのように、カメラの姿勢と画像のペアから3次元空間を復元していく
 - 従来のSfMの手法と何が違う？
