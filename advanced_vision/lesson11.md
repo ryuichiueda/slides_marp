@@ -46,4 +46,5 @@ marp: true
 - 各画像からSIFT等の特徴点をとる
     - 画像$I_i$に対し、$(\boldsymbol{x}, \boldsymbol{f} )_{1:N_{F_i}}$を得る
         - $\boldsymbol{x}$が画像上での位置、$\boldsymbol{f}$が特徴量のベクトル
-
+- 共通の特徴点を持つ画像のペアを見つけていく
+    - ペア: $(I_a, I_b)_{1:N_\text{pair}}$（ここで$1 \le a < b \le N_I$）
