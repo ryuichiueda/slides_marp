@@ -22,6 +22,7 @@ marp: true
 ## 今日やること
 
 - SfM（structure from motion）
+    - 本当は細かくやるべきだけど概要だけ
 - NeRF（neural radiance fields）
 
 ---
