@@ -72,3 +72,12 @@ marp: true
 - バンドル調整<span style="color:red">$\Rightarrow$この出力をNeRFに使う</span>
     - graph-based SLAMの要領（最小二乗法）で全カメラの姿勢を調整
 - 各画像のピクセルの位置を世界座標系で確定させていく
+
+---
+
+## NeRF（neural radiance fields）
+
+- 前ページのように、カメラの姿勢と画像のペアから3次元空間を復元していく
+- 従来のSfMの手法と何が違う？
+    - 光の透過や反射も計算
+
