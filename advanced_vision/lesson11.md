@@ -51,7 +51,8 @@ marp: true
         - $\boldsymbol{x}$が画像上の座標、$\boldsymbol{f}$が特徴量のベクトル
 - 共通の特徴点を持つ画像のペアを見つけていく
     - ペア: $(I_a, I_b)_{1:N_\text{pair}}$（$1 \le a < b \le N_I$）
-    - 特徴量のペアもできる（右図）
+    - 特徴量のペアもできる
+    （右図。SfMのものじゃないけど）
 
 ![bg right:30% 90%](https://upload.wikimedia.org/wikipedia/commons/3/3d/Matching_of_two_images_using_the_SIFT_method.jpg)
 
