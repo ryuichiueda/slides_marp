@@ -36,6 +36,8 @@ marp: true
        - 基本的なSfMはカメラの移動量を画像だけから求めようとする
        - SLAMはロボットの移動する空間にも興味がある
        - SLAMでは同じ被写体が念入りに撮れないことがある
+- ここではCOLMAP[[Schönberger2016]](https://ieeexplore.ieee.org/document/7780814)に基づいて説明
+    - 同作者の別の論文のデモ: https://www.youtube.com/watch?v=11awtGWSqQU
 
 ---
 
