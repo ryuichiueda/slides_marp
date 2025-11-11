@@ -118,24 +118,26 @@ $\Longrightarrow$<span style="color:red">How did it move? </span>
 
 - The distribution of state transitions is determined solely by the state (distribution) immediately before the transition
 - Both of the two representations on the previous page assume Markov property
-- $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
-- $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
-- Neither expression method includes $\boldsymbol{x}_{t-2}$ or $\boldsymbol{u}_{t-1}$.
+    - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+    - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+    - Neither expression method includes $\boldsymbol{x}_{t-2}$ or $\boldsymbol{u}_{t-1}$.
 $\Longrightarrow$The next posture is determined solely by $\boldsymbol{x}_{t-1}$ and $\boldsymbol{u}_t$ (<span style="color:red">This is merely an assumption</span>).
+
+---
+
 - Note: This does not necessarily hold true for robots.
-- A robot that has been in motion for a long time (that has undergone state transitions) will become less mobile due to heat.
-- The difference in behavior between a stationary robot and a robot that is already moving.
-(When this cannot be ignored: (Applying corrections or incorporating variables representing temperature and conditions into the state)
+    - A robot that has been in motion for a long time (that has undergone state transitions) will become less mobile due to heat.
+    - The difference in behavior between a stationary robot and a robot that is already moving.
+(When this cannot be ignored: incorporating variables representing temperature and conditions into the state)
 
 ---
 
 ### Distribution shape after state transition
 
 - What is the relationship between $p_{t-1}$ and $p_{t}$?
-- Let's express it using the state transition distribution $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$.
-- It can be expressed using expected values.
-- Answer
-* $p_t(\boldsymbol{x}) = p(\boldsymbol{x} | \boldsymbol{u}_{1:t}, p_0)$
+    - Let's express it using the state transition distribution $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$.
+    - It can be expressed using expected values.
+* Answer: $p_t(\boldsymbol{x}) = p(\boldsymbol{x} | \boldsymbol{u}_{1:t}, p_0)$
 $= \int_{X} p(\boldsymbol{x}, \boldsymbol{x}_{t-1} | \boldsymbol{u}_{1:t}, p_0)\text{d}\boldsymbol{x}_{t-1}$
 $= \int_{X} p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_{1:t}, p_0) p(\boldsymbol{x}_{t-1} | \boldsymbol{u}_{1:t}, p_0) \text{d}\boldsymbol{x}_{t-1}$ 
 $= \int_{X} p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) p(\boldsymbol{x}_{t-1} | \boldsymbol{u}_{1:t-1}, p_0) \text{d}\boldsymbol{x}_{t-1}$ 
@@ -144,7 +146,7 @@ $= \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\r
 
 <span style="color:red">Implementing the above equation$\Rightarrow$We can predict the robot's motion (but how?)</span>
 
-![bg right:20% 90%](./figs/distribution_motion.png)
+![bg right:15% 90%](./figs/distribution_motion.png)
 
 ---
 
