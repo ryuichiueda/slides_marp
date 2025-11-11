@@ -4,7 +4,7 @@ marp: true
 
 <!-- footer: Probabilistic Robotics Lecture 6 -->
 
-# Probabilistic Robotics, Lesson 6: Probability Distribution of Motion (Part 1)
+# Probabilistic Robotics, Lesson 6: Motion of Probability Distribution (Part 1)
 
 Ryuichi Ueda, Chiba Institute of Technology
 
