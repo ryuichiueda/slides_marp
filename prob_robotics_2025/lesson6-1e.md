@@ -68,13 +68,12 @@ $\Longrightarrow$<span style="color:red">How did it move? </span>
 
 ---
 
-### Preparation 2: Modeling Robot Movement
+### Preparation 2: Model of Robot Movement
 
 - Assume that the robot changes the control commands sent to the motors at each discrete time.
-- The control command at time $t$ is expressed as $\boldsymbol{u}_{t+1}$ (note that the subscripts will shift).
-- Interpreted as "control commands up to time $t+1$."
+    - The control command at time $t$ is expressed as $\boldsymbol{u}_{t+1}$ (note that the subscripts will shift).
+        - Interpreted as "control commands up to time $t+1$."
 - Specific examples of $\boldsymbol{u}_{t+1}$ will be provided later.
-- Let's generalize for now.
 
 ![bg right:30% 95%](./figs/control_input.png)
 
@@ -83,13 +82,13 @@ $\Longrightarrow$<span style="color:red">How did it move? </span>
 ### Expressing the relationship between $\boldsymbol{x}$ and $\boldsymbol{u}$
 
 - This lecture will use two different representations.
-- Part 1: <span style="color:red">Equation of State</span>
-- $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
-- $\boldsymbol{\varepsilon}$: Discrepancy between expected and actual movement (noise)
-- $\boldsymbol{f}$: <span style="color:red">State transition function</span>
-- Part 2: Representation using probability distribution
-- $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
-- $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">State transition distribution</span>
+- 1: <span style="color:red">State equation</span>
+    - $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+        - $\boldsymbol{\varepsilon}$: error between expected and actual movement (noise)
+        - $\boldsymbol{f}$: <span style="color:red">State transition function</span>
+- 2: Representation using a pdf
+    - $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+         - $p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$: <span style="color:red">State transition distribution</span>
 
 ![bg right:30% 100%](./figs/motion_error_representation.png)
 
