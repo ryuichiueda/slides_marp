@@ -193,11 +193,11 @@ $= \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\r
 ### More problems
 
 - When $p_0 = \mathcal{N}(\boldsymbol{\mu}_0, \Sigma_0)$, what is $p_t$?
-- $p_0$: Distribution of the robot's position at $t=0$
+    - $p_0$: Distribution of the robot's position at $t=0$
 - Answer
-* Simply add the mean movement and covariance matrix
-- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_0 + \sum_{i=1}^t \overline{\Delta\boldsymbol{x}}_i$
-- $\Sigma_t = \Sigma_0 + \sum_{i=1}^t S_i$
+    * Simply add the mean movement and covariance matrix
+        - $\boldsymbol{\mu}_t = \boldsymbol{\mu}_0 + \sum_{i=1}^t \overline{\Delta\boldsymbol{x}}_i$
+        - $\Sigma_t = \Sigma_0 + \sum_{i=1}^t S_i$
 
 ![bg right:35% 100%](./figs/linear_motion2.png)
 
