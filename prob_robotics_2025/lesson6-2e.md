@@ -27,7 +27,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:30% 95%](https://upload.wikimedia.org/wikipedia/commons/d/d1/2022%E5%B9%B4%E5%8F%B0%E9%A2%A814%E5%8F%B7%E3%81%AE%E4%BA%88%E5%A0%B1%E5%86%86_%28%E6%B0%97%E8%B1%A1%E5%BA%81%29.jpg)
 
-<span style="font-size:50%"><a Image: Japan Meteorological Agency, CC BY-SA 4.0
+<span style="font-size:50%"><a href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:2022%E5%B9%B4%E5%8F%B0%E9%A2%A814%E5%8F%B7%E3%81%AE%E4%BA%88%E5%A0%B1%E5%86%86_(%E6%B0%97%E8%B1%A1%E5%BA%81).jpg">画像: 気象庁 CC BY-SA 4.0</a></span>
 
 ---
 
@@ -39,13 +39,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### "Linear" and "Nonlinear"
 
-- Linear State Equation
-- $\boldsymbol{x}_t = A \boldsymbol{x}_{t-1} + B \boldsymbol{u}_t + \boldsymbol{\varepsilon}$
-- The robot has a direction, so it doesn't look like the one above (nonlinear).
-- Example: For the robot shown on the right
-(Control commands are velocity and angular velocity)
-- <span style="font-size:90%">$\begin{pmatrix} x_t \\ y_t \\ \theta_t \end{pmatrix} = \begin{pmatrix} x_{t-1} \\ y_{t-1} \\ \theta_{t-1} \end{pmatrix} + \nu_t\omega_t^{-1} \begin{pmatrix} \sin( \theta_{t-1} + \omega_t \Delta t ) - \sin\theta_{t-1} \\ -\cos( \theta_{t-1} + \omega_t \Delta t ) + \cos\theta_{t-1} \\ \omega_t \Delta t\end{pmatrix}$</span><br />
-- $\Delta t$: The (continuous, not discrete) time between $t$ and $t-1$
+- Linear state equation
+   - $\boldsymbol{x}_t = A \boldsymbol{x}_{t-1} + B \boldsymbol{u}_t + \boldsymbol{\varepsilon}$
+- The robot has a direction, so it doesn't look like the one above (<span style="color:red">nonlinear</span>).
+    - Example: for the robot shown on the right (Control commands are velocity and angular velocity)
+        - <span style="font-size:90%">$\begin{pmatrix} x_t \\ y_t \\ \theta_t \end{pmatrix} = \begin{pmatrix} x_{t-1} \\ y_{t-1} \\ \theta_{t-1} \end{pmatrix} + \nu_t\omega_t^{-1} \begin{pmatrix} \sin( \theta_{t-1} + \omega_t \Delta t ) - \sin\theta_{t-1} \\ -\cos( \theta_{t-1} + \omega_t \Delta t ) + \cos\theta_{t-1} \\ \omega_t \Delta t\end{pmatrix}$</span><br />
+            - $\Delta t$: The (continuous, not discrete) time between $t$ and $t-1$
 
 ![bg right:17% 95%](./figs/control_output.png)
 
@@ -54,9 +53,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Difficulties in nonlinear cases
 
 - <span style="color:red">Reproducibility disappears</span>
-- As the robot moves, the probability distribution of predictions becomes non-Gaussian.
+    - As the robot moves, the pdf becomes non-Gaussian.
 - Right: The experiment in Chapter 4 repeated 100 times.
-- The more the orientation shifts due to noise, the slower the progress along the $x$ axis becomes.
+    - The more the orientation shifts due to noise, the slower the progress along the $x$ axis becomes.
 $\Longrightarrow$ Banana-shaped distribution
 
 Let's calculate $p_t$ as far as possible.
