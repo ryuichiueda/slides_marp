@@ -97,17 +97,20 @@ $\Longrightarrow$<span style="color:red">How did it move? </span>
 ### Representing the relationship between $\boldsymbol{x}$ and $\boldsymbol{u}$ (continued)
 
 - The former is sufficient when possible, but the latter is more abstract and has a wider range of application.
-- The former (modern control): $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
-- The latter (probabilistic robotics): $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
-- Advantages of the latter
-- Noise is acceptable
-- Distributions after transitions are allowed to split
-- $\boldsymbol{\varepsilon}$ and $\boldsymbol{f}$ do not need to be independent
-- ...
-- Instructor's personal opinion:
-Probabilistic robotics is a generalization of modern control
+    - The former (modern control theory): $\boldsymbol{x}_t = \boldsymbol{f}( \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}$
+    - The latter (probabilistic robotics): $\boldsymbol{x}_t \sim p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t)$
+        - Advantages of the latter
+            - Noise is acceptable
+            - Pdfs after transitions are allowed to split
+            - $\boldsymbol{\varepsilon}$ and $\boldsymbol{f}$ do not need to be independent
+            - ...
 
-![bg right:25% 100%](./figs/motion_error_representation.png)
+---
+
+- Instructor's personal opinion:
+    - Probabilistic robotics is a generalization of modern control theory
+
+![bg right:20% 100%](./figs/motion_error_representation.png)
 
 ---
 
