@@ -205,6 +205,6 @@ $= \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\r
 
 ### Summary of Position Prediction for a "Linear Robot"
 
-- If a linear, Gaussian distribution is assumed, predicting the distribution becomes a simple addition
-- However, this is not the case in reality (nonlinear)
-- To be continued
+- When Gaussian distribution is assumed, predicting the distribution becomes a simple addition
+- However, this is not the case in reality 
+    - To be continued
