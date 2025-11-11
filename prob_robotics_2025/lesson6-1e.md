@@ -150,4 +150,61 @@ $= \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\r
 
 ---
 
-## "Linear robot"
+## Position Prediction for a "Linear Robot"
+
+(The term "linear" is explained in the "Nonlinear" section.)
+
+- Consider a robot moving around the $xy$ plane without any orientation, as shown in the figure on the right.
+- The distribution of displacement $p(\Delta \boldsymbol{x} | \boldsymbol{u})$ relative to $\boldsymbol{u}$ is known and is a Gaussian distribution.
+- Let's derive $p_t$ from $p_{t-1}$.
+
+![bg right:25% 100%](./figs/linear_motion.png)
+
+---
+
+### Definition of the Gaussian distribution needed for calculations
+
+- Displacement distribution (figure above)
+    - $p(\Delta \boldsymbol{x} | \boldsymbol{u}_t) = \mathcal{N}(\Delta\boldsymbol{x} | \overline{\Delta\boldsymbol{x}}_t, S_t)$
+        - $\overline{\Delta\boldsymbol{x}}_t$: Average displacement by $\boldsymbol{u}_t$
+        - $S_t$: Covariance matrix of position variance when moving by $\boldsymbol{u}_t$ from a certain point
+(We won't use $\boldsymbol{u}_t$ from now on.)
+- Distribution of position before movement (see figure below)
+   - $p_{t-1} = \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+
+![bg right:28% 100%](./figs/gauss_expectation.png)
+
+---
+
+### This is the problem we're facing$\rightarrow$Solve
+
+- When $\boldsymbol{x}_t = Find the distribution of \boldsymbol{x}_{t-1} + \Delta \boldsymbol{x}_t$.
+- $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+- $\Delta \boldsymbol{x}_t \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}}_t, S_t)$
+- $\boldsymbol{x}_{t-1}$ and $\Delta \boldsymbol{x}_t$ are independent.
+- Answer
+* Use the reproducibility of the Gaussian distribution. $\Rightarrow$<span style="color:red">Simply add the mean and covariance matrices.</span>
+- $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
+- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta\boldsymbol{x}}_t$
+- $\Sigma_t = \Sigma_{t-1} + S_t$
+
+---
+
+### More problems
+
+- When $p_0 = \mathcal{N}(\boldsymbol{\mu}_0, \Sigma_0)$, what is $p_t$?
+- $p_0$: Distribution of the robot's position at $t=0$
+- Answer
+* Simply add the mean movement and covariance matrix
+- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_0 + \sum_{i=1}^t \overline{\Delta\boldsymbol{x}}_i$
+- $\Sigma_t = \Sigma_0 + \sum_{i=1}^t S_i$
+
+![bg right:35% 100%](./figs/linear_motion2.png)
+
+---
+
+### Summary of Position Prediction for a "Linear Robot"
+
+- If a linear, Gaussian distribution is assumed, predicting the distribution becomes a simple addition
+- However, this is not the case in reality (nonlinear)
+- To be continued
