@@ -178,15 +178,15 @@ $= \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\r
 
 ### This is the problem we're facing$\rightarrow$Solve
 
-- When $\boldsymbol{x}_t = Find the distribution of \boldsymbol{x}_{t-1} + \Delta \boldsymbol{x}_t$.
-- $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
-- $\Delta \boldsymbol{x}_t \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}}_t, S_t)$
-- $\boldsymbol{x}_{t-1}$ and $\Delta \boldsymbol{x}_t$ are independent.
+- Solve the distribution of $\boldsymbol{x}_t = \boldsymbol{x}_{t-1} + \Delta \boldsymbol{x}_t$.
+    - $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+    - $\Delta \boldsymbol{x}_t \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}}_t, S_t)$
+    - $\boldsymbol{x}_{t-1}$ and $\Delta \boldsymbol{x}_t$ are independent.
 - Answer
-* Use the reproducibility of the Gaussian distribution. $\Rightarrow$<span style="color:red">Simply add the mean and covariance matrices.</span>
-- $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
-- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta\boldsymbol{x}}_t$
-- $\Sigma_t = \Sigma_{t-1} + S_t$
+    * Use the reproducibility of the Gaussian distribution. $\Rightarrow$<span style="color:red">Simply add the mean and covariance matrices.</span>
+    - $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
+        - $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta\boldsymbol{x}}_t$
+        - $\Sigma_t = \Sigma_{t-1} + S_t$
 
 ---
 
