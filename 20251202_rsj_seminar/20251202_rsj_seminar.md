@@ -100,7 +100,13 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - 機械が振動している$\rightarrow$振動してない状態に戻したい
         - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
         - <span style="color:red">今いるところは目的地じゃない$\rightarrow$目的地にいる状態に持っていきたい</span>
+            - これが移動ロボットの大域計画の問題
         - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
+
+
+---
+
+### 大域計画は制御問題のサブセット
 
 
 ---
