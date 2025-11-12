@@ -112,6 +112,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 ### 大域計画は最適制御問題のサブセット
 
 - <span style="color:red">今いるところは目的地じゃない$\rightarrow$目的地にいる状態に持っていきたい</span>
+    - なるべく悪路を走らないで最短時間で
 - 例（全部一緒じゃないですか）
     - 機械が振動している$\rightarrow$振動してない状態に戻したい
     - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
