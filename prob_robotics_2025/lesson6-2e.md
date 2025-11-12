@@ -197,14 +197,14 @@ $= \left\{\boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\
 ### Calculating the shift of the distribution from the linearized equation
 
 - Distribution before shift and noise distribution after shift
-- $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
-- $\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
+    - $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+    - $\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
 - $\boldsymbol{x}_t = \left\{ \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
 (The approximate equation obtained on the previous page) can be decomposed as follows:
-- $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
-- $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
-- $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
-- Consider the distributions of $\boldsymbol{a}$ and $\boldsymbol{b}$, and then consider the distribution of $\boldsymbol{a}+\boldsymbol{b}$ later (the meaning will be explained later).
+    - $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
+        - $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+        - $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
+    - Consider the distributions of $\boldsymbol{a}$ and $\boldsymbol{b}$, and then consider the distribution of $\boldsymbol{a}+\boldsymbol{b}$ later (the meaning will be explained later).
 
 ---
 
