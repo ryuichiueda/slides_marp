@@ -134,6 +134,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 時間がかかりすぎる$\rightarrow$罰則
     - エネルギーを食いすぎる$\rightarrow$罰則
     - 危険$\rightarrow$罰則
+- 罰則の与え方（評価関数）: $r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
 
 ---
 
