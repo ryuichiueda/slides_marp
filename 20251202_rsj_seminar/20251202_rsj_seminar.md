@@ -99,10 +99,10 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 計画から制御にいきなり話が飛びますが・・・
 
-- 問題
+- 問題（とりあえず離散時関系で考えます）
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
     - この状態を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで変化させたいです
-    - 
+    - 制御対象には$\boldsymbol{u}$という力をかけると
 
 ---
 
