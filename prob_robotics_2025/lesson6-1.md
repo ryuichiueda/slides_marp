@@ -161,6 +161,7 @@ $\Longrightarrow$<span style="color:red">どんなふうに動いてきたんだ
 ### 計算に必要なガウス分布の定義
 
 - 移動量の分布（上図）
+    - メモ: 上の図の$\Sigma$は$S$の間違い 
     - $p(\Delta \boldsymbol{x} | \boldsymbol{u}_t) = \mathcal{N}(\Delta\boldsymbol{x} | \overline{\Delta\boldsymbol{x}}_t, S_t)$
         - $\overline{\Delta\boldsymbol{x}}_t$: $\boldsymbol{u}_t$で動いたときの平均移動量
         - $S_t$: ある点から$\boldsymbol{u}_t$で動いた時の位置のばらつきの共分散行列
