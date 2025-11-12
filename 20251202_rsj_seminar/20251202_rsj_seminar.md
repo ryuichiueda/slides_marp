@@ -95,14 +95,17 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 最適制御
+### 最適制御問題
 
-@@@ここに1ページでまとめる@@@
+計画から制御にいきなり話が飛びますが・・・
 
+- 問題
+    - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
+    - この状態を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで変化させたいです
 
 ---
 
-### 大域計画は制御問題のサブセット
+### 大域計画は最適制御問題のサブセット
 
 - 制御の問題をシンプルに説明すると
     - 「現状の<span style="color:red">状態</span>がよくないので、理想の<span style="color:red">状態</span>に持っていきたい」
@@ -113,11 +116,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - これが移動ロボットの大域計画の問題
     - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
         - <span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
-
-
 ---
 
-### 状態と行動
+### 最適制御問題の解
 
 - 制御: 理想の状態まで状態を遷移させていく
     - 状態: 状態の集合$\mathcal{X}$の要素$\boldsymbol{x}$
@@ -132,6 +133,15 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 
 ![bg right:30% 100%](state_final_state.svg)
+
+
+---
+
+
+---
+
+### 状態と行動
+
 
 
 ---
