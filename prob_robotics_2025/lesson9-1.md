@@ -76,6 +76,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - あくまで主観
     - ひとそれぞれ。何をやってもいつか死ぬので難しい話
     - 問題: これからの人生をモデル化してみましょう！
+        - 趣味に生きるか、スキルをつけるか、あるいは両方か・・・
 
 ![w:500](./figs/reward_sum.png)
 
