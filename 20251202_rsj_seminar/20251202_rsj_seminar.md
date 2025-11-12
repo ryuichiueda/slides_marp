@@ -95,9 +95,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 最適制御問題
-
-計画から制御にいきなり話が飛びますが・・・
+### 最適制御問題（計画から制御にいきなり話が飛びますが・・・）
 
 - 問題（とりあえず離散時関系で考えます）
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
