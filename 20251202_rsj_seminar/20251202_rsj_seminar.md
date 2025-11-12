@@ -114,12 +114,17 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 制御: 理想の状態まで状態を遷移させていく
     - 状態: 状態の集合$\mathcal{X}$の要素$\boldsymbol{x}$
         - マルコフ性を満たす（あとで説明）という前提で説明
-    - 行動（制御指令）: $\boldsymbol{u}$
     - 理想の状態: 終端状態の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$
-- いろんな遷移方法があるので点数をつけたほうがいい
+- 状態を遷移させるもの
+    - 行動（制御指令）: $\boldsymbol{u}$
 
 
 ![w:400](state_final_state.svg)
+
+
+---
+
+- いろんな遷移方法があるので点数をつけたほうがいい
 
 ---
 
