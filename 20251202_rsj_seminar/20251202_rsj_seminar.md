@@ -107,7 +107,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 「状態」
+### 「状態」（マルコフ性を満たすもの）
 
 
 ---
