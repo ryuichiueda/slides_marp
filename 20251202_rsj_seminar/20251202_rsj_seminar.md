@@ -128,9 +128,12 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### どんな
+### 最適制御
 
-- いろんな遷移方法があるので点数をつけたほうがいい
+- いろんな遷移方法があるので罰則をつけたほうがいい
+    - 時間がかかりすぎる$\rightarrow$罰則
+    - エネルギーを食いすぎる$\rightarrow$罰則
+    - 危険$\rightarrow$罰則
 
 ---
 
