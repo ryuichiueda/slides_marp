@@ -75,8 +75,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     $\ell_1 + \ell_2 + \dots + \ell_{10} + V(\boldsymbol{x}_\text{f})$
 - あくまで主観
     - ひとそれぞれ。何をやってもいつか死ぬので難しい話
-- 問題: 授業中の行動をモデル化してみましょう！
-    - 真面目に聞く、寝る、別のことをやる、...
+    - 問題: 人生をモデル化してみましょう！
 
 ![w:500](./figs/reward_sum.png)
 
