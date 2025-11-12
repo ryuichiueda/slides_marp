@@ -135,7 +135,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - エネルギーを食いすぎる$\rightarrow$罰則
     - 危険$\rightarrow$罰則
 - 罰則の与え方（評価関数）: $r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \in \mathbb{R}$
-    - 状態遷移全体の評価
+    - 状態遷移全体の評価: $J(\boldsymbol{x}_{0:t}, \boldsymbol{u}_{1:t}) = \sum r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V(\boldsymbol{x}_t \in \mathcal{X}_\text{f})$
 
 ---
 
