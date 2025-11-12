@@ -69,12 +69,11 @@ Let's calculate $p_t$ as far as possible.
 - Consider the movement $\Delta \boldsymbol{x}_t'$ in the robot coordinate system $\Sigma_\text{robot}$ as the control command and set up the state equation.
     - $\Delta \boldsymbol{x}_t' = (\Delta x_t' \ \ \Delta y_t' \ \ \Delta \theta_t')^\top$
     - $\Sigma_\text{robot}$ is based on the pose before movement.
-- Policy
+- How to solve
     - Consider the movement $\Delta \boldsymbol{x}_t$ in the world coordinate system $\Sigma_\text{world}$.
         - $\Delta \boldsymbol{x}_t = (\Delta x_t \ \ \Delta y_t \ \ \Delta \theta_t)^\top$
     - Derive the equation $\boldsymbol{x}_t = \boldsymbol{f}(\Delta \boldsymbol{x}'_t)$, which relates $\Delta\boldsymbol{x}_t'$ and $\Delta\boldsymbol{x}_t$.
-    - $\boldsymbol{x}_t =\Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}= \boldsymbol{f}(\Delta \boldsymbol{x}'_t) + \boldsymbol{x}_{t-1}$
-As the equation of state.
+    - State equation: $\boldsymbol{x}_t =\Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}= \boldsymbol{f}(\Delta \boldsymbol{x}'_t) + \boldsymbol{x}_{t-1}$
 
 The answer is on the next page.
 
@@ -82,14 +81,14 @@ The answer is on the next page.
 
 ---
 
-### Calculating the Robot's Movement (Answer)
+### Calculation of Robot's Movement (Answer)
 
 - The relationship between the $x$ and $y$ coordinates can be expressed using a rotation matrix.
-- $\begin{pmatrix} \Delta x_t \\ \Delta y_t \end{pmatrix} = R(\theta_{t-1}) \begin{pmatrix} \Delta x'_t \\ \Delta y'_t \end{pmatrix}$
+    - $\begin{pmatrix} \Delta x_t \\ \Delta y_t \end{pmatrix} = R(\theta_{t-1}) \begin{pmatrix} \Delta x'_t \\ \Delta y'_t \end{pmatrix}$
 - The change in $\theta$ is the same in both coordinate systems. $\Rightarrow \Delta \theta_t = \Delta \theta_t'$
-- In summary
-- $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$
-- Here, $T(\boldsymbol{x}_{t-1}) =
+- Answer:
+    - $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$
+        - Here, $T(\boldsymbol{x}_{t-1}) =
 \begin{pmatrix}
 \cos \theta_{t-1} & -\sin \theta_{t-1} & 0 \\
 \sin \theta_{t-1} & \cos \theta_{t-1} & 0 \\
