@@ -225,4 +225,72 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### Distribution of $\boldsymbol{x}_t = \boldsymbol{a}+\boldsymbol{b}$
 
-- Two-variable Gaussian distribution
+- The distribution of the sum of two Gaussian variables is Gaussian.
+- $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
+- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
+- $\Sigma_t = F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
+- The meaning of the covariance matrix
+- Variance of $\boldsymbol{a}$ (above): Error amplification due to nonlinearity (the orientation of u$\theta$ varies depending on the posture within the distribution)
+- Variation of $\boldsymbol{b}$ (see figure below): Noise from the movement itself
+
+![bg right:25% 95%](./figs/kalman_motion.png)
+
+---
+
+### Summary of position prediction for "nonlinear robots"
+
+- Linear approximation allows the Gaussian distribution to calculate the movement and deformation of the distribution.
+- However, this is an approximation.
+
+---
+
+## Methods that do not use the Gaussian distribution
+
+- Monte Carlo method
+- Histogram filter
+
+---
+
+### Monte Carlo method
+
+- In this way, the population of $\boldsymbol{x}_t^{(i)}$ becomes data sampled from $p_t$.
+- Prepare many robot clones.
+- $\boldsymbol{x}_t^{(i)} = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}) \quad (i=1,2,\dots,N)$
+- Move each avatar using the state transition distribution.
+- $\boldsymbol{x}_t^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{x}_{t-1}^{(i)}, \boldsymbol{u}_t)$
+- Difference from linearization methods
+- Can express any distribution.
+- <span style="color:red">Especially when state transitions branch (see figure below)</span></span>
+- The computational complexity is greater than matrix calculations.
+
+![bg right:30% 95%](./figs/motion_update_particles.png)
+
+---
+
+### Prediction using a histogram-like lattice
+
+- Move the distribution in the lower right figure to match the robot's movement.
+- The figure on the right is a reprint from Chapter 4.
+- It is actually a 3D grid.
+- The probability that the robot is in the grid $s$ after the robot moves:
+- $P_t(s) = \int_s \big\langle p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1})}\text{d}\boldsymbol{x}$
+- $p_{t-1}$ is the density calculated from the probability in the grid before the move.
+- The post-move distribution $p_t$ is the integral over $s$.
+- Approximations such as the Monte Carlo method, which cannot be calculated.
+![w:300](./figs/histgram_filter.png)
+
+![bg right:25% 95%](./figs/discretization.png)
+
+---
+
+## Summary
+
+- Predicting robot movement
+- Nonlinear, as discussed in the second half (Part 2)
+- Requires linearization or numerical approximation
+- This lesson covers a portion of the Bayesian filter and its implementation
+- Adding sensing results in the Bayesian filter discussed in Part 7
+- Implementation of the Bayesian filter
+- Linearization + Gaussian distribution: Part of the (extended) Kalman filter
+- Monte Carlo method: Part of the particle filter
+- Histogram: Part of the histogram filter
