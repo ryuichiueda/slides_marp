@@ -101,14 +101,14 @@ The answer is on the next page.
 
 ---
 
-### Checking for nonlinearity and countermeasures
+### Nonlinearity and countermeasures
 
 - State equation: $\boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t' + \boldsymbol{x}_{t-1}$
 - It does not become a linear equation, $\boldsymbol{x}_t = A \Delta \boldsymbol{x}_t' + B \boldsymbol{x}_{t-1}$.
-- $\theta_t$ in $\boldsymbol{x}_t$ is mixed into $A$.
+    - $\theta_t$ in $\boldsymbol{x}_t$ is mixed into $A$.
 - When calculating $p_t(\boldsymbol{x})$ from $p_{t-1}(\boldsymbol{x})$ (assumed to be Gaussian), the movement of $\boldsymbol{x}$ within the distribution of $p_{t-1}$ is not aligned in one direction, so $p_t$ is distorted and not a Gaussian distribution.
-- How do we calculate $p_t$? - Do not use reproducibility (later)
-- <span style="color:red">Linear approximation</span>
+    - How do we calculate $p_t$? - Do not use reproducibility (later)
+    - <span style="color:red">Linear approximation</span>
 
 ![bg right:22% 95%](./figs/nonlinear_motion.png)
 
