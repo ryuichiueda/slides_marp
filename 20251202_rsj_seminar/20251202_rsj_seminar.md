@@ -124,7 +124,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 最適制御問題の解（ベルマン方程式で解いた場合）
+### 最適制御問題の解の性質
 
 
 ---
