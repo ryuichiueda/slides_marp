@@ -105,6 +105,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - $\boldsymbol{x}' \sim p(\boldsymbol{x}' |\boldsymbol{x}, \boldsymbol{u})$（確率的）
     - 「時間最小」や「エネルギー最小」などの評価があるとき、評価を最小にするためには$\mathcal{U}$からどのように$\boldsymbol{u}$を選んでいけばいいでしょうか？
 
+![bg right:20% 95%](optimal_control_problem.svg)
+
 ---
 
 ### 大域計画は最適制御問題のサブセット
