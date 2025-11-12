@@ -33,6 +33,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 次の2つの値を比較
     - $V^\Pi(\boldsymbol{x})$
     - $\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+        - $a$は方策が示すものとは別の行動
 - 後者のほうがよければ
     - $\Pi(\boldsymbol{x})$の行動を変える
     - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
