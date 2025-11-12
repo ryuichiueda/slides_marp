@@ -109,6 +109,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 「状態」（マルコフ性を満たすもの）
 
+- 状態空間の点$\boldsymbol{x}$
+    - ベクトルである必要はないがベクトルと仮定して話を進める
+
 
 ---
 
