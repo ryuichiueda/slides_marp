@@ -30,7 +30,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## Q学習の「学習の原理」として紹介した手続き
 
 - 最初に適当な$V$を設定
-- $V^\Pi(\boldsymbol{x})$と$\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$を比較
+- 次の2つの値を比較
+    - $V^\Pi(\boldsymbol{x})$
+    - $\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
 - 後者のほうがよければ
     - $\Pi(\boldsymbol{x})$の行動を変える
     - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
