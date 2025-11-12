@@ -254,14 +254,14 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 ### Monte Carlo method
 
 - In this way, the population of $\boldsymbol{x}_t^{(i)}$ becomes data sampled from $p_t$.
-- Prepare many robot clones.
-- $\boldsymbol{x}_t^{(i)} = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}) \quad (i=1,2,\dots,N)$
-- Move each avatar using the state transition distribution.
-- $\boldsymbol{x}_t^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{x}_{t-1}^{(i)}, \boldsymbol{u}_t)$
+   - Prepare many robot clones.
+       - $\boldsymbol{x}_t^{(i)} = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}) \quad (i=1,2,\dots,N)$
+   - Move each clone using the state transition distribution.
+       - $\boldsymbol{x}_t^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{x}_{t-1}^{(i)}, \boldsymbol{u}_t)$
 - Difference from linearization methods
-- Can express any distribution.
-- <span style="color:red">Especially when state transitions branch (see figure below)</span></span>
-- The computational complexity is greater than matrix calculations.
+    - Can express any distribution.
+        - <span style="color:red">Especially when state transitions branch (see figure below)</span></span>
+    - The calculation amount is greater than matrix calculations.
 
 ![bg right:30% 95%](./figs/motion_update_particles.png)
 
@@ -269,17 +269,16 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### Prediction using a histogram-like lattice
 
-- Move the distribution in the lower right figure to match the robot's movement.
-- The figure on the right is a reprint from Chapter 4.
-- It is actually a 3D grid.
-- The probability that the robot is in the grid $s$ after the robot moves:
-- $P_t(s) = \int_s \big\langle p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1})}\text{d}\boldsymbol{x}$
-- $p_{t-1}$ is the density calculated from the probability in the grid before the move.
-- The post-move distribution $p_t$ is the integral over $s$.
-- Approximations such as the Monte Carlo method, which cannot be calculated.
-![w:300](./figs/histgram_filter.png)
+- Move the distribution in the lower right figure.
+    - The figure on the right is a reprint from Chapter 4.
+    - It is actually a 3D grid.
+- The probability that the robot is in the grid $s$ after the robot moves: $P_t(s) = \int_s \big\langle p( \boldsymbol{x} | \boldsymbol{x}_{t-1}, \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1})}\text{d}\boldsymbol{x}$
+    - $p_{t-1}$: the density calculated from the probability in the grid
+    - The post-move distribution $p_t$ is the integral over $s$.
+    - Use approximations such as the Monte Carlo method, which cannot be calculated.
+![w:200](./figs/histgram_filter.png)
 
-![bg right:25% 95%](./figs/discretization.png)
+![bg right:15% 95%](./figs/discretization.png)
 
 ---
 
