@@ -117,9 +117,12 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 理想の状態: 終端状態の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$
 - 状態を遷移させるもの
     - 行動（制御指令）: $\boldsymbol{u}$
+- 状態と行動の関係（とりあえず離散時間系で）
+    - 決定論的: $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
+    - 確率的: $\boldsymbol{x}' \sim p(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u})$
 
 
-![w:400](state_final_state.svg)
+![bg right:30% 100%](state_final_state.svg)
 
 
 ---
