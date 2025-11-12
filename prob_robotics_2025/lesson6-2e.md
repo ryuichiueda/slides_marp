@@ -116,22 +116,21 @@ The answer is on the next page.
 
 ### Linear approximation
 
-- Approximate $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'\simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
-
-- Substitute $T(\boldsymbol{x}_{t-1})$ for $T(\boldsymbol{\mu}_{t-1})$
-- $\boldsymbol{\mu}_{t-1}$: The center of the distribution of $p_{t-1}$
-- $T(\boldsymbol{x}_{t-1}) =
+- Approximate as $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'\simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+    - Substitute $T(\boldsymbol{x}_{t-1})$ for $T(\boldsymbol{\mu}_{t-1})$
+        - $\boldsymbol{\mu}_{t-1}$: The center of the distribution of $p_{t-1}$
+        - $T(\boldsymbol{x}_{t-1}) =
 \begin{pmatrix}
 R(\theta_{t-1})& \boldsymbol{0} \\
 \boldsymbol{0} & 1
 \end{pmatrix}$
 Therefore, $\theta_{t-1}$ is substituted with the $\theta$ component of $\boldsymbol{\mu}_{t-1}$.
-- $G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$: Correction of deviation due to approximation
-- The further away from the center, the greater the correction required.
+    - $G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$: Correction of deviation due to approximation
+        - The further away from the center, the greater the correction required.
 
 <span style="color:red">How do we calculate $G$? </span>
 
-![bg right:30% 95%](./figs/linearization.png)
+![bg right:15% 95%](./figs/linearlization.png)
 
 ---
 
