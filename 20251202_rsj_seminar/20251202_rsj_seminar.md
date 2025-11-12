@@ -120,12 +120,15 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 状態と行動の関係（とりあえず離散時間系で）
     - 決定論的: $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
     - 確率的: $\boldsymbol{x}' \sim p(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u})$
+        - 注意: $\boldsymbol{x}$はこの定式化を満たすように定義しないといけない（マルコフ性等）
 
 
 ![bg right:30% 100%](state_final_state.svg)
 
 
 ---
+
+### どんな
 
 - いろんな遷移方法があるので点数をつけたほうがいい
 
