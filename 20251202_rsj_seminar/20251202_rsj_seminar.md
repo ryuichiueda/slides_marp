@@ -86,7 +86,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 現場であれば問題が出たらまた潰せば良い
 - 本当にこれで問題ない？
     - 理論上解決できないのか？
-    - 本質的に解決する方法はないのか？
+    - 根本から解決する方法はないのか？
 
 <span style="color:red">$\Longrightarrow$問題を整理しましょう</span>
 
