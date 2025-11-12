@@ -105,7 +105,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 制御対象には$\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に次のように動きます
         - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
         - $\boldsymbol{x}' \sim p(\boldsymbol{x}' |\boldsymbol{x}, \boldsymbol{u})$（確率的）
-- 「時間最小」や「エネルギー最小」などの制約があるとき、$\mathcal{U}$から$\boldsymbol{u}$を選んでいって、
+    - 「時間最小」や「エネルギー最小」などの評価があるとき、評価を最小にするためにはどう$\mathcal{U}$から$\boldsymbol{u}$を選んでいけばいいでしょうか？
 
 ---
 
