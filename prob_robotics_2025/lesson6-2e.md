@@ -70,10 +70,10 @@ Let's calculate $p_t$ as far as possible.
     - $\Delta \boldsymbol{x}_t' = (\Delta x_t' \ \ \Delta y_t' \ \ \Delta \theta_t')^\top$
     - $\Sigma_\text{robot}$ is based on the pose before movement.
 - Policy
-     - Consider the movement $\Delta \boldsymbol{x}_t$ in the world coordinate system $\Sigma_\text{world}$.
-- $\Delta \boldsymbol{x}_t = (\Delta x_t \ \ \Delta y_t \ \ \Delta \theta_t)^\top$
-- Derive the equation $\boldsymbol{x}_t = \boldsymbol{f}(\Delta \boldsymbol{x}'_t)$, which relates $\Delta\boldsymbol{x}_t'$ and $\Delta\boldsymbol{x}_t$.
-- $\boldsymbol{x}_t =\Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}= \boldsymbol{f}(\Delta \boldsymbol{x}'_t) + \boldsymbol{x}_{t-1}$
+    - Consider the movement $\Delta \boldsymbol{x}_t$ in the world coordinate system $\Sigma_\text{world}$.
+        - $\Delta \boldsymbol{x}_t = (\Delta x_t \ \ \Delta y_t \ \ \Delta \theta_t)^\top$
+    - Derive the equation $\boldsymbol{x}_t = \boldsymbol{f}(\Delta \boldsymbol{x}'_t)$, which relates $\Delta\boldsymbol{x}_t'$ and $\Delta\boldsymbol{x}_t$.
+    - $\boldsymbol{x}_t =\Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}= \boldsymbol{f}(\Delta \boldsymbol{x}'_t) + \boldsymbol{x}_{t-1}$
 As the equation of state.
 
 The answer is on the next page.
