@@ -239,8 +239,8 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 ### Summary of position prediction for "nonlinear robots"
 
-- Linear approximation allows the Gaussian distribution to calculate the movement and deformation of the distribution.
-- However, this is an approximation.
+- Linear approximation allows to calculate the movement and deformation of the distribution with Gaussian distributions.
+    - However, this is an approximation.
 
 ---
 
