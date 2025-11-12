@@ -102,7 +102,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - <span style="color:red">今いるところは目的地じゃない$\rightarrow$目的地にいる状態に持っていきたい</span>
             - これが移動ロボットの大域計画の問題
         - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
-            - <span style="font-size:80%">（※VLAは目的の状態を言葉から設定するのでもう一つ難しい問題を解いている）</span>
+            - <span style="font-size:80%">（※VLAは目的の状態を言葉から設定するのでもう一段難しい問題を解いている）</span>
 
 
 ---
