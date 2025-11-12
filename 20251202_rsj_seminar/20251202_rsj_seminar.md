@@ -106,7 +106,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 大域計画は制御問題のサブセット
+### 状態変化
 
 
 ---
