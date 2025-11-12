@@ -262,7 +262,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ![bg right:30% 100%](./figs/puddle_world4.gif)
 
-
 ---
 
 ### ロボットに行動させる
