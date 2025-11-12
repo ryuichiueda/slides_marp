@@ -92,7 +92,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 大域計画は制御問題の一部
+### 大域計画は制御問題のサブセット
 
 - 探索問題はなにを解いているか？
     - （直接的、あるいは間接的に）<span style="color:red">ゴールまでのコスト</span>を計算
