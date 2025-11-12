@@ -120,7 +120,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 線形近似
 	
-- $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'\simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+- $\Delta \boldsymbol{x}_t = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'\simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t'$
+$+ G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
     と近似
     - $T(\boldsymbol{x}_{t-1})$を$T(\boldsymbol{\mu}_{t-1})$で代用
         - $\boldsymbol{\mu}_{t-1}$: $p_{t-1}$の分布の中心位置
