@@ -22,3 +22,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## 今日やること
 
+- Q学習のおさらい
+- ベルマン方程式
+
+---
+
+## Q学習のおさらい
+
+- こんな式を使った
