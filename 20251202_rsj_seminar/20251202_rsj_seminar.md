@@ -92,12 +92,20 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ![bg right:35% 95%](avoidance.svg)
 
+
+---
+
+### 最適制御
+
+@@@ここに1ページでまとめる@@@
+
+
 ---
 
 ### 大域計画は制御問題のサブセット
 
 - 制御の問題をシンプルに説明すると
-    - 「現状の状態がよくないので、理想の状態に持っていきたい」
+    - 「現状の<span style="color:red">状態</span>がよくないので、理想の<span style="color:red">状態</span>に持っていきたい」
 - 例（全部一緒じゃないですか）
     - 機械が振動している$\rightarrow$振動してない状態に戻したい
     - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
@@ -109,12 +117,38 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 「状態」
+### 状態と行動
 
-- 状態空間$\mathcal{X}$の点$\boldsymbol{x}$
-    - ベクトルである必要はないがベクトルと仮定して話を進める
-    - マルコフ性を満たす（あとで説明）ものという前提で説明
-        - 自動車の場合は速度なども状態の要素に
+- 制御: 理想の状態まで状態を遷移させていく
+    - 状態: 状態の集合$\mathcal{X}$の要素$\boldsymbol{x}$
+    - 理想の状態: 終端状態の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$
+- 状態を遷移させるもの
+    - 行動（制御指令）: $\boldsymbol{u}$
+- 状態と行動の関係（とりあえず離散時間系で）
+    - 決定論的: $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
+    - 確率的: $\boldsymbol{x}' \sim p(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u})$
+        - 注意: $\boldsymbol{x}$はこの定式化を満たすように定義しないといけない（マルコフ性等）
+        - 場合によっては時刻も$\boldsymbol{x}$の要素にできる
+
+
+![bg right:30% 100%](state_final_state.svg)
+
+
+---
+
+### 最適制御
+
+- いろんな遷移方法があるので罰則をつけたほうがいい
+    - 時間がかかりすぎる$\rightarrow$罰則
+    - エネルギーを食いすぎる$\rightarrow$罰則
+    - 危険$\rightarrow$罰則
+- 罰則の与え方（評価関数）: $r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \in \mathbb{R}$
+    - 状態遷移全体の評価: $J(\boldsymbol{x}_{0:T}, \boldsymbol{u}_{1:T}) = \sum_{t=1}^T r(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t, \boldsymbol{x}'_t) + V(\boldsymbol{x}_T \in \mathcal{X}_\text{f})$
+
+---
+
+### 大域計画を最適制御で解釈
+
 
 ---
 
