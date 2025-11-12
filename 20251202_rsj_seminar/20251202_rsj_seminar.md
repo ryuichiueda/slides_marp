@@ -120,7 +120,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
         - <span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
 
-<center>制御対象の見かけ、計算リソース・時間の制約、解法で違う問題に見えるだけ</center>
+<center style="color:red">制御対象の見かけ、計算リソース・時間の制約、解法で違う問題に見えるだけ</center>
 
 ---
 
