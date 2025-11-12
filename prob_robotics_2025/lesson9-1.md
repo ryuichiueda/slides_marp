@@ -100,8 +100,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 強化学習
 
 - 評価がよりよくなる行動をロボット（エージェント）に選ばせるように学習させる仕組み
-    - エージェントには感情がないが、ステップ数が多く、
-    行動の損失が大きい課題を解くのは難しい（計算が難しい）
 - 学習するもの: <span style="color:red">$\Pi$: 方策</span>
     - ある状態$\boldsymbol{x}$でどの行動$a$を選ぶかを決める関数
     - $a = \Pi(\boldsymbol{x})$
