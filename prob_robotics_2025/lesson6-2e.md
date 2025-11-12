@@ -136,7 +136,93 @@ Therefore, $\theta_{t-1}$ is substituted with the $\theta$ component of $\boldsy
 
 ### Calculating $G$
 
-- Reprint: $\Delta \boldsymbol{x}_t \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+- $\Delta \boldsymbol{x}_t \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
 - What is $G$?
-- The percentage of deviation of $\Delta \boldsymbol{x}_t$ when $\boldsymbol{x}_{t-1}$ deviates from $\boldsymbol{\mu}_{t-1}$.
-<span style="color:red"
+    - The deviation of $\Delta \boldsymbol{x}_t$ when $\boldsymbol{x}_{t-1}$ deviates from $\boldsymbol{\mu}_{t-1}$.
+<span style="color:red">$\Longrightarrow$Jacobian matrix</span>
+    - $G = \dfrac{\partial \{ T(\boldsymbol{x}_{t-1})\Delta \boldsymbol{x}_t' - T(\boldsymbol{\mu}_{t-1})\Delta \boldsymbol{x}_t' \}}{\partial \boldsymbol{x}_{t-1}}{\huge{|}}_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}
+= \dfrac{\partial T(\boldsymbol{x}_{t-1})\Delta \boldsymbol{x}_t' }{\partial \boldsymbol{x}_{t-1}}{\huge{|}}_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
+        - The denominator corresponds to the deviation.
+- Let's say $\boldsymbol{g} = T(\boldsymbol{x}_{t-1}) \Delta \boldsymbol{x}_t'$
+   - $\boldsymbol{g} = \begin{pmatrix}
+\Delta x_t' \cos \theta_{t-1} - \Delta y_t' \sin \theta_{t-1} \\
+\Delta x_t'\sin \theta_{t-1} + \Delta y_t' \cos \theta_{t-1} \\ 
+\Delta \theta_t' 
+\end{pmatrix}$
+
+
+---
+
+### Calculation of $G$ (continued)
+
+- $G= \left. 
+\dfrac{\partial \boldsymbol{g} }{\partial \boldsymbol{x}_{t-1}} \right|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}} = 
+\left. 
+\begin{pmatrix} 
+\frac{\partial g_x}{\partial x_{t-1}} & 
+\frac{\partial g_x}{\partial y_{t-1}} & 
+\frac{\partial g_x}{\partial \theta_{t-1}} \\ 
+\frac{\partial g_y}{\partial x_{t-1}} & 
+\frac{\partial g_y}{\partial y_{t-1}} & 
+\frac{\partial g_y}{\partial \theta_{t-1}} \\ 
+\frac{\partial g_\theta}{\partial x_{t-1}} & 
+\frac{\partial g_\theta}{\partial y_{t-1}} & 
+\frac{\partial g_\theta}{\partial \theta_{t-1}} \\
+\end{pmatrix} \right|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$
+$= \left. \begin{pmatrix} 0 & 0 & - \Delta x_t' \sin \theta_{t-1} - \Delta y_t' \cos \theta_{t-1} \\ 0 & 0 & \Delta x_t' \cos \theta_{t-1} - \Delta y_t' \sin \theta_{t-1} \\ 0 & 0 & 0 \end{pmatrix} \right|_{\boldsymbol{x}_{t-1} = \boldsymbol{\mu}_{t-1}}$ 
+$= \begin{pmatrix} 
+0 & 0 & - \Delta x_t' \sin \bar\theta_{t-1} - \Delta y_t' \cos \bar\theta_{t-1} \\ 
+0 & 0 & \Delta x_t' \cos \bar\theta_{t-1} - \Delta y_t' \sin \bar\theta_{t-1} \\
+0 & 0 & 0
+\end{pmatrix}$
+    - $\bar\theta_{t-1}$ is the $\theta$ component of $\boldsymbol{\mu}_{t-1}$
+
+---
+
+### Approximate equation
+
+- Substitute $\Delta \boldsymbol{x}_t = \simeq T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$ into the equation of state $\boldsymbol{x}_t = \Delta \boldsymbol{x}_t + \boldsymbol{x}_{t-1}$
+- $\boldsymbol{x}_t = T(\boldsymbol{\mu}_{t-1}) \Delta \boldsymbol{x}_t' + G (\boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) + \boldsymbol{x}_{t-1}$ 
+$= \left\{\boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$ 
+    - here 
+        - $F_{t-1} = I + G = \begin{pmatrix} 
+1 & 0 & - \Delta x_t' \sin \bar\theta_{t-1} - \Delta y_t' \cos \bar\theta_{t-1} \\
+0 & 1 & \Delta x_t' \cos \bar\theta_{t-1} - \Delta y_t' \sin \bar\theta_{t-1} \\
+0 & 0 & 1
+\end{pmatrix}$
+        - $T_{t-1} = T(\boldsymbol{\mu}_{t-1})$ (just an abbreviation)
+
+---
+
+### Calculating the shift of the distribution from the linearized equation
+
+- Distribution before shift and noise distribution after shift
+- $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+- $\Delta\boldsymbol{x}_t' \sim \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
+- $\boldsymbol{x}_t = \left\{ \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) \right\} + T_{t-1} \Delta \boldsymbol{x}_t'$
+(The approximate equation obtained on the previous page) can be decomposed as follows:
+- $\boldsymbol{x}_t = \boldsymbol{a} + \boldsymbol{b}$
+- $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1})$
+- $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$
+- Consider the distributions of $\boldsymbol{a}$ and $\boldsymbol{b}$, and then consider the distribution of $\boldsymbol{a}+\boldsymbol{b}$ later (the meaning will be explained later).
+
+---
+
+### Distributions of $\boldsymbol{a}$ and $\boldsymbol{b}$
+
+- Both are transformed using the linear transformation formula $p(\boldsymbol{y}) = \mathcal{N}(\boldsymbol{y} | A\boldsymbol{\mu} + \boldsymbol{b}, A\Sigma A^\top)$
+- Distribution of $\boldsymbol{a}$
+- $\boldsymbol{a} = \boldsymbol{\mu}_{t-1} + F_{t-1}( \boldsymbol{x}_{t-1} - \boldsymbol{\mu}_{t-1}) = F_{t-1} \boldsymbol{x}_{t-1} + \boldsymbol{\mu}_{t-1} - F_{t-1}\boldsymbol{\mu}_{t-1}$
+is the linear transformation of $\boldsymbol{x}_{t-1} \sim \mathcal{N}(\boldsymbol{\mu}_{t-1}, \Sigma_{t-1})$
+$\Longrightarrow \boldsymbol{a} \sim \mathcal{N}(A\boldsymbol{\mu} + \boldsymbol{b}, A\Sigma A^\top)$
+$= \mathcal{N}(F_{t-1}\bar{\boldsymbol{x}}_{t-1} + \boldsymbol{\mu}_{t-1} -F_{t-1}\boldsymbol{\mu}_{t-1}, F_{t-1}\Sigma_{t-1} F_{t-1}^\top)$
+$= \mathcal{N}(\boldsymbol{\mu}_{t-1}, F_{t-1}\Sigma_{t-1} F_{t-1}^\top)$
+- Distribution of $\boldsymbol{b}$ 
+- $\boldsymbol{b} = T_{t-1} \Delta \boldsymbol{x}_t'$ is $\Delta\boldsymbol{x}_t' \sim Linear transformation of \mathcal{N}(\overline{\Delta\boldsymbol{x}'_{t}}, S_t)$
+$\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsymbol{x}'_{t}}, T_{t-1}S_{t-1} T_{t-1}^\top)=\mathcal{N}(\overline{\Delta\boldsymbol{x}_{t}}, T_{t-1}S_{t-1} T_{t-1}^\top)$
+
+---
+
+### Distribution of $\boldsymbol{x}_t = \boldsymbol{a}+\boldsymbol{b}$
+
+- Two-variable Gaussian distribution
