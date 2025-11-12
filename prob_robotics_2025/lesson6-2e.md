@@ -285,11 +285,11 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 ## Summary
 
 - Predicting robot movement
-- Nonlinear, as discussed in the second half (Part 2)
-- Requires linearization or numerical approximation
+    - Nonlinear, as discussed in the second half (Part 2)
+    - Requires linearization or numerical approximation
 - This lesson covers a portion of the Bayesian filter and its implementation
-- Adding sensing results in the Bayesian filter discussed in Part 7
-- Implementation of the Bayesian filter
-- Linearization + Gaussian distribution: Part of the (extended) Kalman filter
-- Monte Carlo method: Part of the particle filter
-- Histogram: Part of the histogram filter
+    - Adding sensing results in the Bayesian filter discussed in Part 7
+    - Implementation of the Bayesian filter
+         - Linearization + Gaussian distribution: Part of the (extended) Kalman filter
+         - Monte Carlo method: Part of the particle filter
+         - Histogram: Part of the histogram filter
