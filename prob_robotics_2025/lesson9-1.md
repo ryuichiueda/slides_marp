@@ -107,7 +107,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $J(\Pi | \boldsymbol{x}) = \left\langle \ell_1 + \ell_2 + \dots + \ell_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
         - $\boldsymbol{x}$: 最初の状態
 
-![bg right:30% 100%](./figs/reward_model.png)
+![bg right:35% 100%](./figs/reward_model.png)
 
 ---
 
