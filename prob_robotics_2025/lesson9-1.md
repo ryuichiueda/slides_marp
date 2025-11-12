@@ -296,8 +296,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### もっと複雑な問題
 
 - DQN (Deep Q-Network) [[Mnih 2013]](https://arxiv.org/abs/1312.5602)
-    - ゲームをするエージェント（=コンピュータの中の体のないロボット）
-    を実現して騒ぎに
+    - ゲームをするエージェントを実現して騒ぎに
 - [ゲームの学習方法](https://huggingface.co/blog/deep-rl-dqn)
     - 画像（全体の）をCNNに通して特徴で分類して状態に
     - $Q$の表現にも人工ニューラルネットワークを使用
