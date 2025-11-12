@@ -111,12 +111,10 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 大域計画は最適制御問題のサブセット
 
-「現状の<span style="color:red">状態</span>がよくないので、理想の<span style="color:red">終端状態</span>に持っていきたい」
-
+- <span style="color:red">今いるところは目的地じゃない$\rightarrow$目的地にいる状態に持っていきたい</span>
 - 例（全部一緒じゃないですか）
     - 機械が振動している$\rightarrow$振動してない状態に戻したい
     - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
-    - <span style="color:red">今いるところは目的地じゃない$\rightarrow$目的地にいる状態に持っていきたい</span>
         - これが移動ロボットの大域計画の問題
     - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
         - <span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
