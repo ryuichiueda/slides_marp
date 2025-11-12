@@ -113,7 +113,6 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 制御: 理想の状態まで状態を遷移させていく
     - 状態: 状態の集合$\mathcal{X}$の要素$\boldsymbol{x}$
-        - マルコフ性を満たす（あとで説明）という前提で説明
     - 理想の状態: 終端状態の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$
 - 状態を遷移させるもの
     - 行動（制御指令）: $\boldsymbol{u}$
@@ -121,6 +120,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 決定論的: $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
     - 確率的: $\boldsymbol{x}' \sim p(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u})$
         - 注意: $\boldsymbol{x}$はこの定式化を満たすように定義しないといけない（マルコフ性等）
+        - 場合によっては時刻も$\boldsymbol{x}$の要素にできる
 
 
 ![bg right:30% 100%](state_final_state.svg)
