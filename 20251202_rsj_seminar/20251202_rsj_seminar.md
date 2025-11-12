@@ -102,9 +102,10 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 問題（とりあえず離散時関系で考えます）
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
     - この状態を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで変化させたいです
-    - 制御対象には$\boldsymbol{u}$という力をかけると次の時刻に次のように動きます
+    - 制御対象には$\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に次のように動きます
         - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
         - $\boldsymbol{x}' \sim p(\boldsymbol{x}' |\boldsymbol{x}, \boldsymbol{u})$（確率的）
+- 「時間最小」や「エネルギー最小」などの制約があるとき、$\mathcal{U}$から$\boldsymbol{u}$を選んでいって、
 
 ---
 
