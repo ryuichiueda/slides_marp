@@ -227,11 +227,11 @@ $\Longrightarrow \boldsymbol{b} \sim \mathcal{N}(T_{t-1}\overline{\Delta\boldsym
 
 - The distribution of the sum of two Gaussian variables is Gaussian.
 - $\boldsymbol{x}_t \sim \mathcal{N}(\boldsymbol{\mu}_t, \Sigma_t)$
-- $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
-- $\Sigma_t = F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
+    - $\boldsymbol{\mu}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
+    - $\Sigma_t = F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
 - The meaning of the covariance matrix
-- Variance of $\boldsymbol{a}$ (above): Error amplification due to nonlinearity (the orientation of u$\theta$ varies depending on the posture within the distribution)
-- Variation of $\boldsymbol{b}$ (see figure below): Noise from the movement itself
+    - Variance of $\boldsymbol{a}$ (above): Error amplification due to nonlinearity (the orientation of $\theta$ varies depending on the posture within the distribution)
+    - Variation of $\boldsymbol{b}$ (see figure below): Noise from the movement itself
 
 ![bg right:25% 95%](./figs/kalman_motion.png)
 
