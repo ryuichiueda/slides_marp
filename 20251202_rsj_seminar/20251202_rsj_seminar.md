@@ -90,6 +90,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 <span style="color:red">$\Longrightarrow$問題を整理しましょう</span>
 
+![bg right:35% 95%](avoidance.svg)
+
 ---
 
 ### 大域計画は制御問題のサブセット
