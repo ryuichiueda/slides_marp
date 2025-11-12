@@ -92,6 +92,14 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ![bg right:35% 95%](avoidance.svg)
 
+
+---
+
+### 最適制御
+
+@@@ここに1ページでまとめる@@@
+
+
 ---
 
 ### 大域計画は制御問題のサブセット
