@@ -102,13 +102,14 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 問題
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
     - この状態を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで変化させたいです
+    - 
 
 ---
 
 ### 大域計画は最適制御問題のサブセット
 
-- 制御の問題をシンプルに説明すると
-    - 「現状の<span style="color:red">状態</span>がよくないので、理想の<span style="color:red">状態</span>に持っていきたい」
+「現状の<span style="color:red">状態</span>がよくないので、理想の<span style="color:red">終端状態</span>に持っていきたい」
+
 - 例（全部一緒じゃないですか）
     - 機械が振動している$\rightarrow$振動してない状態に戻したい
     - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
