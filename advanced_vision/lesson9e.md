@@ -338,10 +338,10 @@ $\qquad\qquad\qquad$![w:500](./figs/act_enc_dec.svg)
 ## Summary
 
 - Robots can now perform tasks according to natural language.
-- RT-1: Robot movement generation
-- PaLM-E: Task planning at a higher level than RT-1
-- By combining with the vision-language model, they can adapt to new situations.
+    - RT-1: Robot movement generation
+    - PaLM-E: Task planning at a higher level than RT-1
+    - By combining with the vision-language model, they can adapt to new situations.
 - Robots can now perform detailed tasks.
-- ACT
+   - ACT
 - What we haven't yet achieved with this content.
-- How can we enable multiple types of robots to perform multiple tasks?
+    - How can we enable multiple types of robots to perform multiple tasks?
