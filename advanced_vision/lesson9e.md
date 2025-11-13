@@ -184,14 +184,14 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### PaLM-E (PaLM-E-562B) Configuration (Figure 1 in the paper) (Part 1)
 
 - Input to PaLM
-- ViT (22 billion parameters): Converts images to tokens for PaLM
-- "?": Converts other information to tokens for PaLM
-- This varies depending on the input type, so it's probably written as "?"
-- Basically, anything that can output a token is fine
+    - ViT (22 billion parameters): Converts images to tokens for PaLM
+    - "?": Converts other information to tokens for PaLM
+        - This varies depending on the input type, so it's probably written as "?"
+            - Basically, anything that can output a token is fine
 - Examples of information to input to "?"
-- Sensor values ​​other than images
-- Labeling, naming, and position estimation results for objects in images (using [[Sajjadi2022]](https://arxiv.org/abs/2206.06922], etc.)
-- Various other inputs are also possible
+    - Sensor values other than images
+    - Labeling, naming, and position estimation results for objects in images (using [[Sajjadi2022]](https://arxiv.org/abs/2206.06922], etc.)
+    - Various other inputs are also possible
 
 ---
 ### PaLM-E (PaLM-E-562B) Configuration (Figure 1 in [Paper](https://arxiv.org/abs/2303.03378)) (Part 2)
