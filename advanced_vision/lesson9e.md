@@ -222,20 +222,17 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Robot-related training data
-
-3 types
+### Robot-related training data (3 types)
 
 - Task and Motion Planning (TAMP): B.1 of the paper
-- Answering questions about blocks of various colors on a desk in a simulator environment
-- Object relationships
-- Planning
+    - Answering questions about blocks of various colors on a desk in a simulator environment
+        - Object relationships and Planning
 - Language-Table: B.2 of the paper (data from [[Lynch2022]](https://arxiv.org/abs/2210.06407))
-- A set of videos and explanatory text showing the transition of manipulator joint angles and the state of work.
-- 600,000 sets were created in [Lynch2022].
+    - A set of videos and explanatory text showing the transition of manipulator joint angles and the state of work.
+    - 600,000 sets were created in [Lynch2022].
 - Kitchen environment dataset.
-- To compensate for the fact that the above two only see building blocks on a desk.
-- Similar to the training data in [[Ahn2022]](https://arxiv.org/abs/2204.01691).
+    - To compensate for the fact that the above two only see building blocks on a desk.
+    - Similar to the training data in [[Ahn2022]](https://arxiv.org/abs/2204.01691).
 
 ---
 
