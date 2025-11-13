@@ -277,15 +277,18 @@ $\qquad\qquad\qquad$![w:500](./figs/act_enc_dec.svg)
 ### Additional information on training
 
 - Role of style variables and latent space
-- Since there are multiple robot movements (modes) for the same task, this prevents mixing of these.
-- The encoder assigns various modes to the Gaussian distribution in the latent space.
-- The Gaussian distribution is a simple one with zero covariance.
-- The decoder assigns $\boldsymbol{z} = Specifying \boldsymbol{0}$ yields the center action sequence in the $\rightarrow$ latent space.
-- Conditioning on image and sensor values ​​yields appropriate action for the task.
+    - Since there are multiple robot movements (modes) for the same task, this prevents mixing of these.
+        - The encoder assigns various modes to the Gaussian distribution in the latent space.
+            - The Gaussian distribution is a simple one with zero covariance.
+        - The decoder assigns $\boldsymbol{z} = 0 \rightarrow$ Specifying the center action sequence in the latent space.
+            - Conditioning on image and sensor values yields appropriate action for the task.
+
+---
+
 - Loss function: L1 error (sum of absolute errors) of $\hat{\boldsymbol{a}}_{t:t+k}$.
-- Used to definitively select the best action rather than the average optimal (e.g., identifying individuals from images).
-- Learned in optimization lectures.
-- Use in ACT: It is assumed that you want to output a solid action.
+    - L1 error: Used to definitively select the best action rather than the average optimal (e.g., identifying individuals from images).
+        - Learned in optimization lectures.
+        - Use in ACT: It seems that they want to output a solid action.
 
 ---
 
