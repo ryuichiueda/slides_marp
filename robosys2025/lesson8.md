@@ -512,5 +512,35 @@ setup(
 ## 宿題
 
 - `mypkg`をGitHubにアップする
+    - やりかたは次のページに書きます
     - そのままこれが課題2のリポジトリになります
     - 注意: `~/ros2_ws/src/mypkg`下のファイルとかディレクトリがリポジトリの一番上の階層に来るようにアップすること
+
+---
+
+## 手元のディレクトリをGitHubのリポジトリにする方法（その1）
+
+- GitHubで同じ名前（今日の内容だと`mypkg`という名前）のリポジトリを作る
+- 手元の`mypkg`で次のように作業
+    ```bash
+    ### デフォルトでできるブランチ名の指定 ###
+    $ git config --global init.defaultBranch main
+    ### mypkgをGitのリポジトリに ###
+    $ git init
+    ### git statusなどで状況を調べましょう ###
+    $ git add -A
+    ### コミット ###
+    $ git commit -m "Initial commit"
+    [master (root-commit) 22f68e2] Initial commit
+     8 files changed, 124 insertions(+)
+     ・・・
+     create mode 100644 test/test_pep257.py
+     ### 手元のリポジトリとGitHubのリポジトリを紐づけ ###
+     $ git remote add origin git@github.com:ryuichiueda/mypkg.git
+     ### ブランチ名をmainに ###
+     $ git branch -M main
+     ### push###
+     git push -u origin main
+     ### ブラウザでアップロードできていることを確認を ###
+    ```
+
