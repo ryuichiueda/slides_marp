@@ -97,16 +97,16 @@ Ryuichi Ueda, Chiba Institute of Technology
         - 3 Hz
 
 ---
-### RT-1 training data (forced)
+### RT-1 training data (brute-force)
 
 - Training data was collected by moving the robot in environments such as kitchens (three types) and tables, as shown in Figure 2.
-- Remote control by a human
-- Humans provide textual commentary on the tasks performed.
-- This creates a set of images, text, and actions.
+    - Remote control by a human
+    - Humans provide textual commentary on the tasks performed.
+        - This creates a set of images, text, and actions.
 - Collected training data
-- 744 tasks (referred to as "skills" in the paper) (Table 1 in the paper)
-- 13 robots
-- 130,000 episodes
+    - 744 tasks (referred to as "skills" in the paper) (Table 1 in the paper)
+    - 13 robots
+    - 130,000 episodes
 
 ---
 ### Universal Sentence Encoder ([[Cer 2018]](https://arxiv.org/abs/1803.11175))
@@ -114,12 +114,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 (This seems important, but just an overview)
 
 - Convert sentences into vectors
-- Make the dot product of similar sentences larger
+    - Make the dot product of similar sentences larger
 - Structure: Transformer (encoder) or Deep Average Network Encoder ([[Iyyer 2015]](https://aclanthology.org/P15-1162/))
 - Learning method
-- Predict previous and following sentences
-- Predict response sentences to questions
-- Check whether premise and hypothesis statements are contradictory
+    - Predict previous and following sentences
+    - Predict response sentences to questions
+    - Check whether premise and hypothesis statements are contradictory
 
 ---
 
