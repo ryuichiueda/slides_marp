@@ -126,14 +126,14 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### The part before the Transformer
 
 - Two parts: FiLM EfficientNet-B3 and TokenLearner
-- FiLM EfficientNet-B3: Convert each image to tokens
-- Extract image features using a network called EfficientNet
-- Transform words using FiLM to add emphasis to features
-- For each image, it outputs 81 vectors (vision-language tokens) with 512 dimensions.
-- TokenLearner [[Ryoo 2021]] (https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
-- Reduces (compresses) the number of tokens.
-- Originally designed to reduce the number of input vectors for ViT.
-- $81\rightarrow8$ (48 tokens for 6 images, 512 dimensions).
+    - FiLM EfficientNet-B3: Convert each image to tokens
+        - Extract image features using a network called EfficientNet
+            - Transform words using FiLM to add emphasis to features
+        - For each image, it outputs 81 vectors (vision-language tokens) with 512 dimensions.
+    - TokenLearner [[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
+        - Reduces (compresses) the number of tokens.
+            - Originally designed to reduce the number of input vectors for ViT.
+        - $81\rightarrow8$ (48 tokens for 6 images, 512 dimensions).
 
 ---
 
