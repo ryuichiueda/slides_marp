@@ -130,7 +130,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 実数を返す関数$V^\pi(\boldsymbol{x})$: <span style="color:red">状態価値関数（値関数）</span>
 - 大域計画の問題で考えると、別に難しい話ではない
     - ある場所$\boldsymbol{x}$にいるとき、行き方$\pi(\boldsymbol{x})$が決まっていれば、目的地までの時間$V^\pi(\boldsymbol{x})$が見積もれる
-    - もっと良い行き方$\pi'(\boldsymbol{x})$があれば、時間が$V^{\pi'}(\boldsymbol{x})$に短縮される
+    - もっと良い行き方$\pi'(\boldsymbol{x})$があれば、時間の期待値が$V^{\pi'}(\boldsymbol{x})$に短縮される
 
 
 ---
