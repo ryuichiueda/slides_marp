@@ -129,7 +129,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - ある制御則の解（方策）$\boldsymbol{u} = \pi(\boldsymbol{x})$に対し、ひとつひとつの状態から終端状態までのコストの期待値が計算できる
     - 実数を返す関数$V^\pi(\boldsymbol{x})$: <span style="color:red">状態価値関数（値関数）</span>
 - 別に難しい話ではない
-    - 移動ロボットの問題: ある場所にいるとき、目的地までの時間が見積もれる
+    - 移動ロボットの問題: ある場所$\boldsymbol{x}$にいるとき、
+    目的地までの時間$V(\boldsymbol{x})$が見積もれる
 
 
 ---
