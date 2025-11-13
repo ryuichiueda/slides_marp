@@ -154,30 +154,30 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### RT-1 Achievements
 
 - Achieved 97% success rate on the trained task type
-- Example of behavior: Figure 5 in the paper
+    - Example of behavior: Figure 5 in the paper
 - Robustness
-- Tasks in a different kitchen than the trained one
-- Various tablecloths
+    - Tasks in a different kitchen than the trained one
+    - Various tablecloths
 - Support for longer/more abstract tasks than the trained one
-- Examples
-- "How would you throw away all the items on the table?"
-- Indirect location specifications, such as "near a sink"
+    - Examples
+        - "How would you throw away all the items on the table?"
+        - Indirect location specifications, such as "near a sink"
 - Other
-- Use of training data from simulations or different robots
+    - Use of training data from simulations or different robots
 
 ---
 
 ### PaLM-E [[Driess2023]](https://arxiv.org/abs/2303.03378) ([Video](https://research.google/blog/palm-e-an-embodied-multimodal-language-model/))
 
 - Embodied multimodal language model
-- Embodiment: Incorporating information from the robot's body
-- A model that allows PaLM to input images and robot sensory information, allowing it to compose instructions on how to perform a task.
-- Example (taken from Figure 1 in the paper)
-- Input: "Given `<img>` Task: Sort colors into corners."
-- `<img>`: Image (in this case, various colored objects on a desk)
-- Output: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
+    - Embodiment: Incorporating information from the robot's body
+- A model that allows PaLM to input images and robot sensory information, making it enable to compose instructions on how to perform a task.
+    - Example (taken from Figure 1 in the paper)
+        - Input: "Given `<img>` Task: Sort colors into corners."
+            - `<img>`: Image (in this case, various colored objects on a desk)
+        - Output: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
 - Difference from RT-1: <span style="color:red">PaLM can utilize its linguistic knowledge</span>
-- It can also answer questions such as "What's in the image?" and "What happened between this image and this image?" regardless of the action.
+    - It can also answer questions such as "What's in the image?" and "What happened between this image and this image?" regardless of the action.
 
 ---
 
