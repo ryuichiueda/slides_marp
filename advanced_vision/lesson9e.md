@@ -141,12 +141,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - 8 self-attention layers, 19 million parameters
 - 8 tokens from each of the 6 images are arranged in order to create a sentence-like input.
-- This is converted into time-series information indicating what to do.
+    - This is converted into time-series information indicating what to do.
 - Output: As mentioned above, parameters and modes for the dimensions required to move the robot.
-- Modes: arm, base, terminate
+    - Modes: arm, base, terminate
 - Learning from training data
-- Predicting the next step based on verbal instructions and images.
-- It appears to learn using the decoder's mask function.
+    - Predicting the next step based on verbal instructions and images.
+        - It appears to learn using the decoder's mask function.
 (Note: The entire model trains, not just the Transformer.)
 
 ---

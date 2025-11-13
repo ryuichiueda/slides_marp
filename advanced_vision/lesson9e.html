@@ -230,14 +230,26 @@
 <h3 id="transformer-part">Transformer part</h3>
 <ul>
 <li>8 self-attention layers, 19 million parameters</li>
-<li>8 tokens from each of the 6 images are arranged in order to create a sentence-like input.</li>
+<li>8 tokens from each of the 6 images are arranged in order to create a sentence-like input.
+<ul>
 <li>This is converted into time-series information indicating what to do.</li>
-<li>Output: As mentioned above, parameters and modes for the dimensions required to move the robot.</li>
+</ul>
+</li>
+<li>Output: As mentioned above, parameters and modes for the dimensions required to move the robot.
+<ul>
 <li>Modes: arm, base, terminate</li>
-<li>Learning from training data</li>
-<li>Predicting the next step based on verbal instructions and images.</li>
+</ul>
+</li>
+<li>Learning from training data
+<ul>
+<li>Predicting the next step based on verbal instructions and images.
+<ul>
 <li>It appears to learn using the decoder's mask function.<br />
 (Note: The entire model trains, not just the Transformer.)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Lesson 9</footer>
 </section>
