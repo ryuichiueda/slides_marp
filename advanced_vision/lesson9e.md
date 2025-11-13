@@ -239,12 +239,12 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## ALOHA, ACT [[Zhao2023]](https://arxiv.org/abs/2304.13705)
 
 - Proposal of a framework for imitation learning.
-- Basically, it learns one task.
+    - Basically, it learns one task.
 - ALOHA: A Low-cost Open-source Hardware System for Bimanual Teleoperation.
-- A teleoperation system for acquiring training data.
-- [Training Data Acquisition](https://youtu.be/VOpTZBwN7xs?si=IT14vfsjEirvKfKF&t=52)
-- [Example of Items Available for Purchase](https://www.tegtks.net/products/case10.html)
-- [Mobile Manipulator Version](https://www.youtube.com/watch?v=zMNumQ45pJ8)
+    - A teleoperation system for acquiring training data.
+        - [Training Data Acquisition](https://youtu.be/VOpTZBwN7xs?si=IT14vfsjEirvKfKF&t=52)
+        - [Example of Items Available for Purchase](https://www.tegtks.net/products/case10.html)
+        - [Mobile Manipulator Version](https://www.youtube.com/watch?v=zMNumQ45pJ8)
 - ACT: Next Page
 
 ---
@@ -254,9 +254,9 @@ Ryuichi Ueda, Chiba Institute of Technology
 - Model that outputs control in continuous quantities rather than discrete quantities
 - Outputs several steps ahead at once, rather than one step at a time, increasing the control period and achieving smoother control
 - Example of Robot Movement
-- [Opening the Lid of a Small Cup](https://youtu.be/VOpTZBwN7xs?si=9tmS5TD94stPVUOF&t=214)
-- [Battery insertion, etc.](https://youtu.be/VOpTZBwN7xs?si=7zIrDrnEHrqJYWfx&t=252)
-- https://www.youtube.com/watch?v=VUxFhtGWD7w
+    - [Opening the Lid of a Small Cup](https://youtu.be/VOpTZBwN7xs?si=9tmS5TD94stPVUOF&t=214)
+    - [Battery insertion, etc.](https://youtu.be/VOpTZBwN7xs?si=7zIrDrnEHrqJYWfx&t=252)
+    - https://www.youtube.com/watch?v=VUxFhtGWD7w
 
 ---
 
