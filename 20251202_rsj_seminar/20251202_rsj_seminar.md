@@ -127,6 +127,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 ### 最適制御問題の解の性質（どう解くかという話とは別）
 
 - ある制御則の解$\pi(\boldsymbol{x})$に対し、ひとつひとつの状態から終端状態までのコストの期待値が計算できる
+    - 実数を返す関数$V^\pi(\boldsymbol{x})$: <span style="color:red">状態価値関数</span>
 - 罰則の与え方（評価関数）: $r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \in \mathbb{R}$
     - 状態遷移全体の評価: $J(\boldsymbol{x}_{0:T}, \boldsymbol{u}_{1:T}) = \sum_{t=1}^T r(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t, \boldsymbol{x}'_t) + V(\boldsymbol{x}_T \in \mathcal{X}_\text{f})$
 
