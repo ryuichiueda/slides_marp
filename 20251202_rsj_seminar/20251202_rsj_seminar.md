@@ -132,6 +132,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - ある場所$\boldsymbol{x}$にいるとき、行き方$\pi(\boldsymbol{x})$が決まっていれば、目的地までの時間の期待値$V^\pi(\boldsymbol{x})$が見積もれる
     - もっと良い行き方$\pi'(\boldsymbol{x})$があれば、時間の期待値が$V^{\pi'}(\boldsymbol{x})$に短縮される
 
+$\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
