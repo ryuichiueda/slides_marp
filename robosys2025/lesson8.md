@@ -327,7 +327,7 @@ setup(
   - `~/.bashrc`の末尾に2行追加
     ```bash
     source ~/ros2_ws/install/setup.bash
-    source ~/ros2_ws/install/local_setup.bash                                           
+    source ~/ros2_ws/install/local_setup.bash                                                
     ```
 - `source`して確認
   ```bash
@@ -396,7 +396,7 @@ setup(
         ・・・
           <license>BSD-3-Clause</license>
           <exec_depend>rclpy</exec_depend>            <-追加
-          <exec_depend>std_msgs</exec_depend>         <-追加
+          <exec_depend>std_msgs</exec_depend>         <-追加                           
         ・・・
         ```
     - `setup.py`に`talker.py`のどの関数を呼び出すかを登録
@@ -431,7 +431,7 @@ setup(
         Starting >>> mypkg
         Finished <<< mypkg [2.55s]
         
-        Summary: 1 package finished [3.06s]
+        Summary: 1 package finished [3.06s]                                           
         $ source ~/.bashrc
         ```
 
@@ -477,7 +477,7 @@ setup(
      13
      14
      15 def main():
-     16     pub = node.create_subscription(Int16, "countup", cb, 10) 　　　
+     16     pub = node.create_subscription(Int16, "countup", cb, 10) 　　　                  
      17     rclpy.spin(node)
     ```
 

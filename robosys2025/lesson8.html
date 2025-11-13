@@ -433,7 +433,7 @@ Summary: 1 package finished [0.69s]
 <li><code>ros2_ws</code>下のパッケージを利用可能に
 <ul>
 <li><code>~/.bashrc</code>の末尾に2行追加<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash"><span class="hljs-built_in">source</span> ~/ros2_ws/install/setup.bash
-<span class="hljs-built_in">source</span> ~/ros2_ws/install/local_setup.bash                                           
+<span class="hljs-built_in">source</span> ~/ros2_ws/install/local_setup.bash                                                
 </code></pre>
 </li>
 </ul>
@@ -518,7 +518,7 @@ mypkg
 <li><code>package.xml</code>に利用するモジュールを登録<pre is="marp-pre" data-auto-scaling="downscale-only"><code>・・・
   &lt;license&gt;BSD-3-Clause&lt;/license&gt;
   &lt;exec_depend&gt;rclpy&lt;/exec_depend&gt;            &lt;-追加
-  &lt;exec_depend&gt;std_msgs&lt;/exec_depend&gt;         &lt;-追加
+  &lt;exec_depend&gt;std_msgs&lt;/exec_depend&gt;         &lt;-追加                           
 ・・・
 </code></pre>
 </li>
@@ -559,7 +559,7 @@ $ rosdep install -i --from-path src --rosdistro jazzy -y
 Starting &gt;&gt;&gt; mypkg
 Finished &lt;&lt;&lt; <span class="hljs-string">mypkg [2.55s]
 
-Summary: 1 package finished [3.06s]
+Summary: 1 package finished [3.06s]                                           
 $ source ~/.bashrc
 </span></code></pre>
 </li>
@@ -606,7 +606,7 @@ data: 14
  <span class="hljs-number">13</span>
  <span class="hljs-number">14</span>
  <span class="hljs-number">15</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
- <span class="hljs-number">16</span>     pub = node.create_subscription(Int16, <span class="hljs-string">&quot;countup&quot;</span>, cb, <span class="hljs-number">10</span>) 　　　
+ <span class="hljs-number">16</span>     pub = node.create_subscription(Int16, <span class="hljs-string">&quot;countup&quot;</span>, cb, <span class="hljs-number">10</span>) 　　　                  
  <span class="hljs-number">17</span>     rclpy.spin(node)
 </code></pre>
 </li>
