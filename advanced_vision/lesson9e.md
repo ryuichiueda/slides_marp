@@ -323,15 +323,15 @@ $\qquad\qquad\qquad$![w:500](./figs/act_enc_dec.svg)
 ### ACT Implementation (Details of the Transformer Encoder Input)
 
 - Camera image
-- RGB image of $480\times640$ pixels from four directions
-- 300 images per image are processed using ResNet, resulting in a $512$-dimensional embedding vector
-- Total of $1200$ vectors
+    - RGB image of $480\times640$ pixels from four directions
+        - 512-dimensional 300 vectors per image are processed using ResNet
+             - Total of $1200$ vectors
 - 14 joint angles
-- Combined into a single $512$-dimensional vector
+    - Combined into a single $512$-dimensional vector
 - Style variable $\boldsymbol{z}$
-- This is also a single $512$-dimensional vector
+    - This is also a single $512$-dimensional vector
 
-<center>So far, 1202 $512$-dimensional vectors have been input</center>
+<center>So far, 512-dimensional 1202 vectors have been input</center>
 
 ---
 
