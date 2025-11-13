@@ -535,12 +535,18 @@ setup(
      8 files changed, 124 insertions(+)
      ・・・
      create mode 100644 test/test_pep257.py
-     ### 手元のリポジトリとGitHubのリポジトリを紐づけ ###
-     $ git remote add origin git@github.com:ryuichiueda/mypkg.git
-     ### ブランチ名をmainに ###
-     $ git branch -M main
-     ### push###
-     git push -u origin main
-     ### ブラウザでアップロードできていることを確認を ###
-    ```
+     ### 次のページに続く
+     ```
+
+---
+
+```bash
+### 手元のリポジトリとGitHubのリポジトリを紐づけ ###
+$ git remote add origin git@github.com:ryuichiueda/mypkg.git
+### ブランチ名をmainに ###
+$ git branch -M main
+### push###
+git push -u origin main
+### ブラウザでアップロードできていることを確認を ###
+```
 
