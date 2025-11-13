@@ -247,7 +247,7 @@ ros2_ws/
     ```bash
     ### パッケージ作成の例 ###
     $ cd ~/ros2_ws/src/
-    $ ros2 pkg create mypkg --build-type ament_python
+    $ ros2 pkg create mypkg --build-type ament_python                                   
     $ tree mypkg/
     mypkg/
     ├── mypkg
@@ -279,7 +279,7 @@ ros2_ws/
   <name>mypkg</name>
   <version>0.0.0</version>
   <description>a package for practice</description>
-  <maintainer email="ryuichiueda@example.com">Ryuichi Ueda</maintainer>
+  <maintainer email="ryuichiueda@example.com">Ryuichi Ueda</maintainer>                       
   <license>BSD-3-Clause</license>
 
   <test_depend>ament_copyright</test_depend>
@@ -319,7 +319,7 @@ setup(
   ```bash
   $ cd ~/ros2_ws/
   $ colcon build
-  （略。警告が出る場合があるけどとりあえず気にしない。エラーは気にする。）
+  （略。警告が出る場合があるけどとりあえず気にしない。エラーは気にする。）                              
   Summary: 1 package finished [0.69s]
     1 package had stderr output: mypkg 
   ```
@@ -327,12 +327,12 @@ setup(
   - `~/.bashrc`の末尾に2行追加
     ```bash
     source ~/ros2_ws/install/setup.bash
-    source ~/ros2_ws/install/local_setup.bash
+    source ~/ros2_ws/install/local_setup.bash                                           
     ```
 - `source`して確認
   ```bash
   $ source ~/.bashrc
-  $ ros2 pkg list | grep mypkg
+  $ ros2 pkg list | grep mypkg                                                              
   mypkg
   ```
 
