@@ -137,7 +137,9 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ### $\boldsymbol{\pi}$と$V$の関係性と最適性
 
-- $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \max_{a \in \mathcal{A}} \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, a) \left[ R(\boldsymbol{x}, a, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
+- 状態遷移が決定論的: 
+    - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x}) = $
+- $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
 
 ---
 
