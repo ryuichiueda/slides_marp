@@ -125,17 +125,17 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題の解の性質（どう解くかという話とは別）
 
-- ある制御則の解（方策）$\boldsymbol{u} = \pi(\boldsymbol{x})$に対し、ひとつひとつの状態から終端状態までのコストの期待値が計算できる
-    - 実数を返す関数$V^\pi(\boldsymbol{x})$: <span style="color:red">状態価値関数（値関数）</span>
+- ある制御則の解（方策）$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$に対し、ひとつひとつの状態から終端状態までのコストの期待値が計算できる
+    - 実数を返す関数$V^\boldsymbol{\pi}(\boldsymbol{x})$: <span style="color:red">状態価値関数（値関数）</span>
 - 大域計画の問題で考えると、別に難しい話ではない
-    - ある場所$\boldsymbol{x}$にいるとき、行き方$\pi(\boldsymbol{x})$が決まっていれば、目的地までの時間の期待値$V^\pi(\boldsymbol{x})$が見積もれる
-    - もっと良い行き方$\pi'(\boldsymbol{x})$があれば、時間の期待値が$V^{\pi'}(\boldsymbol{x})$に短縮される
+    - ある場所$\boldsymbol{x}$にいるとき、行き方$\boldsymbol{\pi}(\boldsymbol{x})$が決まっていれば、目的地までの時間の期待値$V^\boldsymbol{\pi}(\boldsymbol{x})$が見積もれる
+    - もっと良い行き方$\boldsymbol{\pi}'(\boldsymbol{x})$があれば、時間の期待値が$V^{\boldsymbol{\pi}'}(\boldsymbol{x})$に短縮される
 
 $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-### 方策と状態価値関数の関係性と最適性
+### $\boldsymbol{\pi}$と$V$の関係性と最適性
 
 
 ---
