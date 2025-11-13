@@ -190,7 +190,7 @@ Ryuichi Ueda, Chiba Institute of Technology
             - Basically, anything that can output a token is fine
 - Examples of information to input to "?"
     - Sensor values other than images
-    - Labeling, naming, and position estimation results for objects in images (using [[Sajjadi2022]](https://arxiv.org/abs/2206.06922], etc.)
+    - Labeling, naming, and position estimation results for objects in images (using [[Sajjadi2022]](https://arxiv.org/abs/2206.06922), etc.)
     - Various other inputs are also possible
 
 ---
