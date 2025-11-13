@@ -528,6 +528,7 @@ setup(
     ### mypkgをGitのリポジトリに ###
     $ git init
     ### git statusなどで状況を調べましょう ###
+    ### add ###
     $ git add -A
     ### コミット ###
     $ git commit -m "Initial commit"
