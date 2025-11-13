@@ -295,10 +295,10 @@ $\qquad\qquad\qquad$![w:500](./figs/act_enc_dec.svg)
 ### ACT calculation (use/inference)
 
 - As explained on the previous page, use only the decoder as follows:
-- $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{z} = \boldsymbol{0},$ sensor values ​​including image$)$
+    - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{z} = \boldsymbol{0},$ sensor values including image$)$
 - Smoothing of $\hat{\boldsymbol{a}}_{t:t+k}$
-- The decoder outputs the action sequence again before it finishes.
-$\rightarrow$Weighted average is calculated and input to the actuator.
+    - The decoder outputs the action sequence again before it finishes.
+     $\rightarrow$Weighted average is calculated and input to the actuator.
 
 ![bg right:25% 100%](./figs/act_dec_use.svg)
 
@@ -308,15 +308,15 @@ $\rightarrow$Weighted average is calculated and input to the actuator.
 
 - Figure 4 in [Paper](https://arxiv.org/abs/2304.13705)
 - CVAE Encoder: "BART-like" Transformer Encoder
-- Attach `[CLS]` to the input, and set the output of `[CLS]` to $\boldsymbol{z}$
+    - Attach `[CLS]` to the input, and set the output of `[CLS]` to $\boldsymbol{z}$
 - CVAE Decoder: Transformer Encoder-Decoder Configuration
-- The decoder uses an encoder, which is confusing.
-- Input to the Transformer Encoder
-- Four camera images, 14 joint angles for two manipulators, and a style variable $\boldsymbol{z}$
-- See the next page for details.
-- Input to the Transformer Decoder: Position embedding only
-- <span style="color:red">Reflecting the Transformer encoder output using a cross-attention mechanism</span>
-- Transformer decoder output: $\hat{\boldsymbol{a}}_{t:t+k}$ ($k$ vectors of $14$ dimension)
+    - The decoder uses an encoder, which is confusing.
+    - Input to the Transformer Encoder
+        - Four camera images, 14 joint angles for two manipulators, and $\boldsymbol{z}$
+            - See the next page for details.
+    - Input to the Transformer Decoder: Position embedding only
+        - <span style="color:red">Reflecting the Transformer encoder output using a cross-attention mechanism</span>
+    - Transformer decoder output: $\hat{\boldsymbol{a}}_{t:t+k}$ ($k$ vectors of $14$ dimension)
 
 ---
 
