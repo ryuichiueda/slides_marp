@@ -35,5 +35,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
         - $a$は方策が示すものとは別の行動
 - 後者のほうがよければ
-    - $\Pi(\boldsymbol{x})$の行動を変える
+    - $\Pi(\boldsymbol{x})$を変える
     - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+
+<center style="color:red">いつか収束する</center>
