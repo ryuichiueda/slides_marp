@@ -139,7 +139,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - $\boldsymbol{x}$の価値は遷移先$\boldsymbol{x}'$の価値に遷移したときのコスト$\ell$を足したもの
     - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
        - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$、$\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
-    - 例: ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
+    - 例
+       - ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
 - もっと良い行き方$\boldsymbol{\pi}'(\boldsymbol{x})$があれば、時間の期待値が$V^{\boldsymbol{\pi}'}(\boldsymbol{x})$に短縮される
 
 ---
