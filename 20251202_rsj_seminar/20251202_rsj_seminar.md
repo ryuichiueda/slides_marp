@@ -164,7 +164,6 @@ $\qquad\qquad\qquad$![w:400](search.svg)
         - 距離の定義が空間になくてもよい
     - むしろ解の$V^*$が距離のようなものの定義になっている
 
-
 ---
 
 ### 探索で得られる大域計画の解の性質
@@ -182,13 +181,18 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-### 解が機能しないパターン
+### よく問題になること
 
-- パスがなにかにスレスレ
 - パスがチャタリング
-    - 中央分離帯にぶつかる問題
+- 経路上の障害物への対応
+- 固定障害物への対応
 
 ---
+
+
+### チャタリングの問題
+
+    - 中央分離帯にぶつかる問題
 
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
 
