@@ -100,9 +100,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 問題（とりあえず離散時関系で考えます）
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
     - この状態を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで変化させたいです
-    - 制御対象には$\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}'$が$\boldsymbol{x}$に遷移します
-        - $\boldsymbol{x} = \boldsymbol{f}(\boldsymbol{x}', \boldsymbol{u})$（決定論的）
-        - $\boldsymbol{x} \sim p(\boldsymbol{x} |\boldsymbol{x}', \boldsymbol{u})$（確率的）
+    - 制御対象には$\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移します
+        - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
+        - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
     - 「時間消費」、「エネルギー消費」、「危険性」などの評価があるとき、評価を最小にするためには$\mathcal{U}$からどのように$\boldsymbol{u}$を選んでいけばいいでしょうか？
 
 ![bg right:20% 95%](optimal_control_problem.svg)
@@ -138,8 +138,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 ### $\boldsymbol{\pi}$と$V$の関係性と最適性
 
 - 状態遷移が決定論的: 
-    - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x})+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
-        - $\boldsymbol{x} = \boldsymbol{f}(\boldsymbol{x}', \boldsymbol{u})$
+    - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
+        - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$, $\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$
+        - 「$\boldsymbol{x}$の$V^\boldsymbol{\pi}$は遷移先$\boldsymbol{x}'$の$V^\boldsymbol{\pi}$に遷移したときのコスト$\ell$を足したもの」
+        - 例: ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩になった
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
 
 ---
