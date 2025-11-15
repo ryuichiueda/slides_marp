@@ -158,9 +158,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - 最適なとき
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
     - $\boldsymbol{\pi}^*(\boldsymbol{x}) = \arg\!\min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
-- この定式化のおもしろいところ（なんで強化学習がうまくいくかの理由の1つ）
+- この定式化のおもしろいところ
     - $\boldsymbol{x}$や$\boldsymbol{u}$はベクトルで表記しているけどその必要はない
-    - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ決まっていればよい（距離とかの定義も不要）
+    - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ厳密に決まっていればよい
+        - 距離の定義が空間になくてもよい
     - むしろ解の$V^*$が距離のようなものの定義になっている
 
 ---
