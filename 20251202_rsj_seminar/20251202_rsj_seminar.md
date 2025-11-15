@@ -172,17 +172,20 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
+### 解が機能しないパターン
+
+- パスがなにかにスレスレ
+- パスがチャタリング
+    - 中央分離帯にぶつかる問題
+
+---
+
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
 
 ---
 
 - 罰則の与え方（評価関数）: $r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \in \mathbb{R}$
     - 状態遷移全体の評価: $J(\boldsymbol{x}_{0:T}, \boldsymbol{u}_{1:T}) = \sum_{t=1}^T r(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t, \boldsymbol{x}'_t) + V(\boldsymbol{x}_T \in \mathcal{X}_\text{f})$
-
-
----
-
-### 探索で解いた帯域計画の解の構造
 
 
 ---
@@ -207,28 +210,6 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 ---
 
 
----
-
-### 状態と行動
-
-
-
----
-
-### 最適制御
-
-- いろんな遷移方法があるので罰則をつけたほうがいい
-    - 時間がかかりすぎる$\rightarrow$罰則
-    - エネルギーを食いすぎる$\rightarrow$罰則
-    - 危険$\rightarrow$罰則
-
----
-
-### 大域計画を最適制御で解釈
-
-
----
-
 ### 大域計画は制御問題のサブセット
 
 - 探索問題はなにを解いているか？
@@ -252,11 +233,6 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ![bg right:30% 100%](optimal_control.svg)
 
----
-
-### 最適制御問題が「解けていない」状態
-
-
 
 ---
 
@@ -264,8 +240,6 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 - ゴールに行くことは考えるが危険を避けることは制御レベルでは考えていない
 - 環境の変化や不確かさ
-
-「補足」が必要→補足で済むか？
 
 ---
 
