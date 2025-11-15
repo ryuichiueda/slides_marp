@@ -176,6 +176,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - 概算
 - 状態遷移は確率的ではない
 
+<center style="padding-top:2em">きっちり方策通りに行ければ問題はない、が</center>
+
 ![bg right:15% 95%](path_answer.svg)
 
 ---
