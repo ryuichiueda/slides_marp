@@ -94,3 +94,17 @@ marp: true
 - まとめて$(r, g, b, \sigma) = \boldsymbol{f}_{\boldsymbol{w}}(x,y,z,\theta,\phi)$をANNで表現
 
 ![bg right:28% 100%](./figs/color_difference.svg)
+
+---
+
+### 学習方法
+
+- SfMでどこから撮影したか分かっている画像を用意
+- 画像が撮られた姿勢から$\boldsymbol{f}_{\boldsymbol{w}}$を使って画像を復元
+
+---
+
+### 構造
+
+- 論文の図
+
