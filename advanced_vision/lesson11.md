@@ -102,8 +102,8 @@ marp: true
 - 論文の図7
     - 基本は全結合層+ReLUで構成
     - 最初の入力: $(x,y,z)$（3次元）を$60$次元に拡張
-        - $\gamma(p) = (\sin (2^0\pi p), \cos(2^0\pi p), \sin (2^1\pi p), \cos(2^1\pi p), \dots,$
-        $\sin (2^{L-1}\pi p), \cos(2^{L-1}\pi p))$
+        - $\boldsymbol{\gamma}(p) = [\sin (2^0\pi p), \cos(2^0\pi p), \sin (2^1\pi p), \cos(2^1\pi p), \dots,$
+        $\sin (2^{L-1}\pi p), \cos(2^{L-1}\pi p)]$
             - $p$には$x,y,z$が入る
             - 論文の実装では$L=10$
         - 位置符号のように低周波数成分と高周波数成分
