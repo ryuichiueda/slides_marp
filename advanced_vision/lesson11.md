@@ -116,7 +116,12 @@ marp: true
 
 - 基本は全結合層+ReLUで構成
 - 入力（3箇所）
-    - 最初に$(x,y,z)$を入力
+    - 最初に位置$\boldsymbol{x} = (x,y,z)$を入力
+    - 中間で再度、位置$\boldsymbol{x} = (x,y,z)$を連結
+    - 後ろの層で$\boldsymbol{d} = (\theta, \phi)$を連結
+- 出力（2箇所）
+    - $\boldsymbol{d}$を連結する層の1つを$\sigma$値に
+    - 最終層の出力を$(r,g,b)$値に
 
 
 
