@@ -82,5 +82,6 @@ marp: true
     - 光の透過も扱えて再現性が高い（論文中に多くの例、比較あり）
 - 方法
     - ある3次元空間中の点の光（radiance、輝き）を次の関数で表現
-        - $(r, g, b, \sigma) = \boldsymbol{f}(x, y, z, \theta, \phi)$
+        - $(r, g, b) = RGB(x, y, z, \theta, \phi)$
+        - $\sigma = \sigma(x, y, z)$
 
