@@ -164,6 +164,12 @@ $\qquad\qquad\qquad$![w:400](search.svg)
         - 距離の定義が空間になくてもよい
     - むしろ解の$V^*$が距離のようなものの定義になっている
 
+
+---
+
+### 探索で得られる大域計画の解の性質
+
+
 ---
 
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
