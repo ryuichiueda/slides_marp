@@ -162,6 +162,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - $\boldsymbol{x}$や$\boldsymbol{u}$はベクトルで表記しているけどその必要はない
     - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ決まっていればよい（距離とかの定義も不要）
     - むしろ解の$V^*$が距離のようなものの定義になっている
+        - なんで強化学習がうまくいくかの理由のひとつ
 
 ---
 
