@@ -99,7 +99,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 問題（とりあえず離散時関系で考えます）
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
-    - この状態を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで変化させたいです
+        - （注意: $\boldsymbol{x}$には速度や時間も変数として入れられる）
+    - $\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
     - 制御対象には$\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移します
         - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
         - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
@@ -192,50 +193,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ### チャタリングの問題
 
-    - 中央分離帯にぶつかる問題
-
-- $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
-
----
-
-- 罰則の与え方（評価関数）: $r(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \in \mathbb{R}$
-    - 状態遷移全体の評価: $J(\boldsymbol{x}_{0:T}, \boldsymbol{u}_{1:T}) = \sum_{t=1}^T r(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t, \boldsymbol{x}'_t) + V(\boldsymbol{x}_T \in \mathcal{X}_\text{f})$
-
-
----
-
-### 最適制御問題の解
-
-- 制御: 理想の状態まで状態を遷移させていく
-    - 状態: 状態の集合$\mathcal{X}$の要素$\boldsymbol{x}$
-    - 理想の状態: 終端状態の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$
-- 状態を遷移させるもの
-    - 行動（制御指令）: $\boldsymbol{u}$
-- 状態と行動の関係（とりあえず離散時間系で）
-    - 決定論的: $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
-    - 確率的: $\boldsymbol{x}' \sim p(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u})$
-        - 注意: $\boldsymbol{x}$はこの定式化を満たすように定義しないといけない（マルコフ性等）
-        - 場合によっては時刻も$\boldsymbol{x}$の要素にできる
-
-
-![bg right:30% 100%](state_final_state.svg)
-
-
----
-
-
-### 大域計画は制御問題のサブセット
-
-- 探索問題はなにを解いているか？
-    - （直接的、あるいは間接的に）<span style="color:red">ゴールまでのコスト</span>を計算
-        - コスト: 通常は時間や距離、ステップ数
-            - 危険やロボットが汚れる箇所には時間、距離換算でペナルティー
-- 解けた解の構造
-    - 一本道
-    - 各地点でコストが（直接的/間接的に）概算されている
-    - 経路を進むとコストが下がる（経路上でのコストの大小関係が解けている）
-
-![w:400](search.svg)
+- 中央分離帯にぶつかる問題
 
 ---
 
