@@ -169,8 +169,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ### 探索で得られる大域計画の解の性質
 
+- 1本道の方策$\boldsymbol{\pi}$ができている
+    - 右図の矢印
 
-![bg right:30% 95%](path_answer.svg)
+![bg right:15% 95%](path_answer.svg)
 
 ---
 
