@@ -92,4 +92,4 @@ marp: true
         - 点の位置で「密度」を決める
             - 密度が低いほど光が透過
 
-![bg right:30% 100%](./figs/color_difference.svg)
+![bg right:28% 100%](./figs/color_difference.svg)
