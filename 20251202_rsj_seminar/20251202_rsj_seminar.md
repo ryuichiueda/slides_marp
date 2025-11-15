@@ -138,8 +138,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 ### $\boldsymbol{\pi}$と$V$の関係性と最適性
 
 - 状態遷移が決定論的: 
-    - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
-        - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
+    - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x})+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
+        - $\boldsymbol{x} = \boldsymbol{f}(\boldsymbol{x}', \boldsymbol{u})$
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
 
 ---
