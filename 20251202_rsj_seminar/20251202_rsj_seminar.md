@@ -144,8 +144,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - もっと良い行き方$\boldsymbol{\pi}'(\boldsymbol{x})$があれば、時間の期待値が$V^{\boldsymbol{\pi}'}(\boldsymbol{x})$に短縮される
     - 方策を改善していくと収束
         - 収束した$V$: <span style="color:red">最適状態価値関数$V^*$</span>
-        - $V^*(\boldsymbol{x}) = V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}^*, \boldsymbol{x}')$
-            - ここで$\boldsymbol{u}^* = \boldsymbol{\pi}^*(\boldsymbol{x})$（<span style="color:red">最適方策</span>）
+            - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \{ V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \}$
+            - $\boldsymbol{\pi}^*(\boldsymbol{x}) = \arg\!\min_\boldsymbol{u} \{ V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \}$（<span style="color:red">最適方策</span>）
 
 
 ---
@@ -154,10 +154,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \big\langle V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
     - $\langle f(x) \rangle_{p(x)}$: 分布$p$のときの$f$の期待値
-- もっと良い行き方$\boldsymbol{\pi}'(\boldsymbol{x})$があれば、時間の期待値が$V^{\boldsymbol{\pi}'}(\boldsymbol{x})$に短縮される
-    - 方策を改善していくと収束
-        - 収束した$V$: <span style="color:red">最適状態価値関数$V^*$</span>
-        - $V^*(\boldsymbol{x}) = V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}^*, \boldsymbol{x}')$
+- 最適なとき
+    - $V^*(\boldsymbol{x}) = \big\langle V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
             - ここで$\boldsymbol{u}^* = \boldsymbol{\pi}^*(\boldsymbol{x})$（<span style="color:red">最適方策</span>）
 
 ---
