@@ -135,13 +135,15 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-### $\boldsymbol{\pi}$と$V$の関係性と最適性
+### $V$の性質（状態遷移が決定論的な場合）
 
-- 状態遷移が決定論的: 
+- $\boldsymbol{x}$の価値は遷移先$\boldsymbol{x}'$の価値に遷移したときのコスト$\ell$を足したもの
     - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
-        - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$, $\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$
-        - 「$\boldsymbol{x}$の$V^\boldsymbol{\pi}$は遷移先$\boldsymbol{x}'$の$V^\boldsymbol{\pi}$に遷移したときのコスト$\ell$を足したもの」
-        - 例: ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩になった
+       - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$、$\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
+    - 例: ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
+
+---
+
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \sum_{\boldsymbol{x}'} P(\boldsymbol{x}' | \boldsymbol{x}, \boldsymbol{u}) \left[ R(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') + V^{\boldsymbol{\pi}}(\boldsymbol{x}') \right]$
 
 ---
