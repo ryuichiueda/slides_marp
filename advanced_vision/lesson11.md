@@ -86,7 +86,7 @@ marp: true
 ### 色の表現方法
 
 - ある3次元空間中の点の光（radiance、輝き）を次の関数で表現
-    - $(r, g, b) = RGB(x, y, z, \theta, \phi)$
+    - $(r, g, b) = \text{RGB}(x, y, z, \theta, \phi)$
         - 点の位置と視線の向きで色を決める
     - $\sigma = \sigma(x, y, z)$
         - 点の位置で「密度」を決める
