@@ -81,7 +81,8 @@ marp: true
 - 従来のSfMの手法と何が違う？
     - 光の透過も扱えて再現性が高い（論文中に多くの例、比較あり）
 - 使用例
-    - https://youtu.be/lR7XpLLbm0s?si=lJbW_qZUlFRRvOlW
+    - https://youtu.be/0zE6NXpTNBQ
+    - https://youtu.be/lR7XpLLbm0s
 
 ---
 
