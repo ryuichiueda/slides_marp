@@ -156,8 +156,12 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \big\langle V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
     - $\langle f(x) \rangle_{p(x)}$: 分布$p$のときの$f$の期待値
 - 最適なとき
-    - $V^*(\boldsymbol{x}) = \big\langle V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
-            - ここで$\boldsymbol{u}^* = \boldsymbol{\pi}^*(\boldsymbol{x})$（<span style="color:red">最適方策</span>）
+    - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
+    - $\boldsymbol{\pi}^*(\boldsymbol{x}) = \arg\!\min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
+- この定式化のおもしろいところ
+    - $\boldsymbol{x}$や$\boldsymbol{u}$はベクトルで表記しているけどその必要はない
+    - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ決まっていればよい（距離とかの定義も不要）
+    - むしろ解の$V^*$が距離のようなものの定義になっている
 
 ---
 
