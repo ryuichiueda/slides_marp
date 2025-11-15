@@ -91,5 +91,6 @@ marp: true
     - $\sigma = \sigma(x, y, z)$
         - 点の位置で「密度」を決める
             - 密度が低いほど光が透過
+- まとめて$(r, g, b, \sigma) = \boldsymbol{f}_{\boldsymbol{w}}(x,y,z,\theta,\phi)$をANNで表現
 
 ![bg right:28% 100%](./figs/color_difference.svg)
