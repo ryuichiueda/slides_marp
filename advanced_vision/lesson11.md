@@ -115,6 +115,7 @@ marp: true
 ### 構造（論文の図7）
 
 - 基本は全結合層+ReLUで構成
+    - 図中の「$\gamma$」についてはあとで
 - 入力（3箇所）
     - 最初に位置$\boldsymbol{x} = (x,y,z)$を入力
     - 中間で再度、位置$\boldsymbol{x} = (x,y,z)$を連結
@@ -127,6 +128,8 @@ marp: true
 
 
 ---
+
+### 図中の「$\gamma$」
 
 - 最初の入力: $(x,y,z)$（3次元）を$60$次元に拡張
     - $\boldsymbol{\gamma}(p) = [\sin (2^0\pi p), \cos(2^0\pi p), \sin (2^1\pi p), \cos(2^1\pi p), \dots,$
