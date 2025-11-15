@@ -142,6 +142,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - 例
        - ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
 - もっと良い行き方$\boldsymbol{\pi}'(\boldsymbol{x})$があれば、時間の期待値が$V^{\boldsymbol{\pi}'}(\boldsymbol{x})$に短縮される
+    - 方策を改善していくと収束
+        - 収束した$V$: <span style="color:red">最適状態価値関数$V^*$</span>
+        - $V^*(\boldsymbol{x}) = V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}^*, \boldsymbol{x}')$
+            - ここで$\boldsymbol{u}^* = \boldsymbol{\pi}^*(\boldsymbol{x})$（<span style="color:red">最適方策</span>）
 
 ---
 
