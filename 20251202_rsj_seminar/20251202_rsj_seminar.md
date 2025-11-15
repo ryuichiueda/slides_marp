@@ -170,6 +170,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 ### 探索で得られる大域計画の解の性質
 
 
+![bg right:30% 95%](path_answer.svg)
+
 ---
 
 ### 解が機能しないパターン
