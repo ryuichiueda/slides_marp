@@ -151,7 +151,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - 補足: $\ell$は一般化できる
     - 「ここは悪路だから歩数を倍に」ということをしても破綻しない
 
-![bg right:30% 100%](value_sum.svg)
+![bg right:20% 100%](value_sum.svg)
 
 ---
 
