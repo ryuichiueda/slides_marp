@@ -149,7 +149,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
        - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$、$\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
     - 例: ゴールまで7歩のところから1歩歩いたら、次の状態はゴールまで6歩に
 - 補足: $\ell$は一般化できる
-    - 「ここは悪路だから歩数を倍に」ということをしても破綻しない（ので以後、歩数として話を単純化）
+    - 「ここは悪路だからコストを倍に」ということをしても破綻しない（ので以後、歩数として話を単純化）
 
 ![bg right:20% 100%](value_sum.svg)
 
