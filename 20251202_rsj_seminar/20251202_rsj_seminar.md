@@ -278,6 +278,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 ### 次の問題: 部分問題との組み合わせ
 
 - 大域計画問題に局所計画問題を足す
+    - 問題の2階建て
 
 ![bg right:35% 95%](avoidance.svg)
 
