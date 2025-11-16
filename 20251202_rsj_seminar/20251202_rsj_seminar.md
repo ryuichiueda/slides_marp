@@ -146,7 +146,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - 「ゴール」（終端状態$\boldsymbol{x}_\text{f} \in \boldsymbol{X}_\text{f}$）
     - それ以上状態遷移しない状態
     - $V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f}) = 0$など、価値を固定しておく
-    - 他の状態の$V^\boldsymbol{\pi}$は$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$にしたがって決まる
+- 他の状態の$V^\boldsymbol{\pi}$は$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$にしたがって決まる
+    - <span style="color:red">$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$を底とするポテンシャル場に</span>
 
 
 ---
