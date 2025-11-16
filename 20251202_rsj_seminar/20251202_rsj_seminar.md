@@ -241,7 +241,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 終端状態$\mathcal{X}_\text{f}$の設計に問題がある
 
-- $V(\boldsymbol{x}_\text{f})$を大きく設定しておけば$\boldsymbol{\pi}$は
+- $V(\boldsymbol{x}_\text{f})$を大きな値で固定しておけば$\boldsymbol{\pi}$はそれを避けるように計算可能
 - 多くの制御手法でも「境界条件」と扱ってしまうが、それだと境界条件スレスレの制御が許容されてしまう/緩衝地帯の設計も恣意的に
 
 ![bg right:30% 100%](final_state.svg)
