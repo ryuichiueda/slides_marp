@@ -97,29 +97,35 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題（計画からいきなり話が飛びますが・・・）
 
+<span style="font-size:70%">マルコフ決定過程（MDP）でもあるけど最適制御と言います</span>
+
 - 問題（とりあえず離散時関系で考えます）
     - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
         - （注意: $\boldsymbol{x}$には速度や時間も変数として入れられる）
     - $\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
-    - 制御対象には$\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移します
+    - $\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移
         - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
         - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
     - 「時間消費」、「エネルギー消費」、「危険性」などの評価があるとき、評価を最小にするためには$\mathcal{U}$からどのように$\boldsymbol{u}$を選んでいけばいいでしょうか？
 
-![bg right:20% 95%](optimal_control_problem.svg)
+![bg right:18% 95%](optimal_control_problem.svg)
 
 ---
 
 ### 大域計画（や他の多くの制御問題）は最適制御問題のサブセット
 
+
 - <span style="color:red">今いるところは目的地じゃない$\rightarrow$目的地にいる状態に持っていきたい</span>
     - なるべく悪路を走らないで最短時間で
 - 制御の問題はほとんどが最適制御問題のサブセット
-    - 機械が振動している$\rightarrow$振動してない状態に戻したい
-    - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
-    - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
-        - <span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
-- 前ページの定式化はマルコフ決定過程（MDP）でもあるけど最適制御と言います
+
+|現象|制御|
+|:---:|:---:|
+|機械が振動している|振動してない状態に戻したい|
+|ライントレースのロボットがラインからずれた|ライン中央に戻したい|
+|洗濯物が洗濯機の中に|畳んで収納したい|
+
+<span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
 
 <center style="color:red">制御対象の見かけ、計算リソース・時間の制約、解法で違う問題に見えるだけ</center>
 
