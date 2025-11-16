@@ -200,6 +200,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
         - ROSのNavigation Stackのサンプル
 - （小手先で解決できるかもしれないが）本質的な原因は？
 
+![bg right:30% 100%](chattering.svg)
+
 ---
 
 ### 探索と制御（本発表の結論？）
