@@ -143,7 +143,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
        - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$、$\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
     - 例
        - ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
-- 「ゴール」（終端状態$\boldsymbol{x}_\text{f} \in \boldsymbol{X}_\text{f}$）
+- 終端状態$\boldsymbol{x}_\text{f} \in \boldsymbol{X}_\text{f}$の扱い
     - それ以上状態遷移しない状態
     - $V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f}) = 0$など、価値を固定しておく
 - 他の状態の$V^\boldsymbol{\pi}$は$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$にしたがって決まる
@@ -189,6 +189,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - ちょっと外れたところは基本無視
 - $V$は方策を求めるついでに計算されている
     - 概算
+    - 途中の計算で周辺の$V$も求められるが捨てられがち
 - 状態遷移は確率的ではない
 
 <center style="padding-top:2em">きっちり方策通りに行ければ問題はない、が</center>
@@ -220,12 +221,11 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-### <span style="color:red">「好ましくない終端状態」</span>という考え方の欠如
+### <span style="color:red">「事故もゴール（終端状態）」</span>という考え方の欠如
 
 終端状態$\mathcal{X}_\text{f}$の設計に問題がある
 
-- 壁に衝突するのも「ゴール」
-    - $V(\boldsymbol{x}_\text{f})$を大きく設定しておけば$\boldsymbol{\pi}$は
+- $V(\boldsymbol{x}_\text{f})$を大きく設定しておけば$\boldsymbol{\pi}$は
 - 多くの制御手法でも「境界条件」と扱ってしまうが、それだと境界条件スレスレの制御が許容されてしまう/ペナルティーも恣意的に
 
 ![bg right:30% 100%](final_state.svg)
