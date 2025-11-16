@@ -208,6 +208,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ### <span style="color:red">「好ましくない終端状態」</span>という考え方の欠如
 
+- 終端状態$\mathcal{X}_\text{f}$の設計に問題がある
+
 
 ---
 
