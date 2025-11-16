@@ -211,6 +211,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - 終端状態$\mathcal{X}_\text{f}$の設計に問題がある
 - 多くの制御手法でも「境界条件」と扱ってしまうが、それだと境界条件スレスレの制御が許容されてしまう/ペナルティーも恣意的に
 
+![bg right:20% 100%](final_state.svg)
 
 ---
 

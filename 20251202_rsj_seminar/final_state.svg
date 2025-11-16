@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.45 104.43">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Times-BoldItalic, Times;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-1, .cls-3 {
+        font-style: italic;
+      }
+
+      .cls-2, .cls-4 {
+        font-family: Times-Roman, Times;
+      }
+
+      .cls-5 {
+        fill: #d0d0d0;
+      }
+
+      .cls-6 {
+        stroke-width: .5px;
+      }
+
+      .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6, .cls-8 {
+        fill: none;
+      }
+
+      .cls-7 {
+        fill: #e60012;
+      }
+
+      .cls-4, .cls-10 {
+        font-size: 8px;
+      }
+
+      .cls-11, .cls-10 {
+        fill: #231815;
+      }
+
+      .cls-12 {
+        fill: #93979a;
+      }
+
+      .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-10 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-13 {
+        fill: #f5c839;
+      }
+
+      .cls-14 {
+        fill: #df4b59;
+      }
+
+      .cls-3 {
+        font-family: Times-Italic, Times;
+      }
+
+      .cls-15 {
+        fill: #3d4247;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-6" cx="28.4" cy="24.9" rx="9.74" ry="13.42" transform="translate(-7.37 37.05) rotate(-60)"/>
+  <g>
+    <ellipse class="cls-9" cx="86.7" cy="77.55" rx="5.88" ry="2.94"/>
+    <line class="cls-8" x1="86.7" y1="76.74" x2="86.7" y2="59.78"/>
+    <polygon class="cls-7" points="95.02 62.27 86.7 67.11 86.7 57.42 95.02 62.27"/>
+  </g>
+  <g>
+    <rect class="cls-13" x="16.71" y="5.81" width="21.44" height="7.37"/>
+    <polygon class="cls-15" points="20.19 13.18 16.71 13.18 19.93 5.81 23.41 5.81 20.19 13.18"/>
+    <polyline class="cls-15" points="24.08 13.18 27.13 5.81 30.78 5.81 27.73 13.18"/>
+    <polyline class="cls-15" points="31.45 13.18 34.49 5.81 38.15 5.81 35.1 13.18"/>
+    <rect class="cls-12" x="19.7" y="3.35" width="1.41" height="2.28"/>
+    <rect class="cls-5" x="20.05" y="3.35" width=".7" height="2.28"/>
+    <circle class="cls-12" cx="20.4" cy="2.46" r="2.46"/>
+    <circle class="cls-5" cx="20.4" cy="2.46" r="2.11"/>
+    <circle class="cls-14" cx="20.4" cy="2.46" r="1.76"/>
+    <rect class="cls-12" x="33.76" y="3.35" width="1.41" height="2.28"/>
+    <rect class="cls-5" x="34.11" y="3.35" width=".7" height="2.28"/>
+    <circle class="cls-12" cx="34.46" cy="2.46" r="2.46"/>
+    <circle class="cls-5" cx="34.46" cy="2.46" r="2.11"/>
+    <circle class="cls-14" cx="34.46" cy="2.46" r="1.76"/>
+    <rect class="cls-12" x="19.7" y="13.36" width="1.41" height="9.14"/>
+    <rect class="cls-5" x="20.05" y="13.36" width=".7" height="9.14"/>
+    <path class="cls-15" d="M21.8,22.5h-2.81s.7-.93.7-1.24h1.41c0,.32.7,1.24.7,1.24Z"/>
+    <rect class="cls-12" x="33.76" y="13.36" width="1.41" height="9.14"/>
+    <rect class="cls-5" x="34.11" y="13.36" width=".7" height="9.14"/>
+    <path class="cls-15" d="M35.87,22.5h-2.81s.7-.93.7-1.24h1.41c0,.32.7,1.24.7,1.24Z"/>
+    <rect class="cls-12" x="18.41" y="15.82" width="18.05" height="1.41"/>
+    <rect class="cls-5" x="19" y="16.17" width="16.86" height=".7"/>
+    <circle class="cls-15" cx="20.4" cy="16.52" r=".26"/>
+    <circle class="cls-15" cx="34.46" cy="16.52" r=".26"/>
+    <path class="cls-5" d="M37.98,12.3c0,.19-.16.35-.35.35h-20.39c-.19,0-.35-.16-.35-.35v-5.62c0-.19.16-.35.35-.35h20.39c.19,0,.35.16.35.35v5.62h0ZM38.33,5.62h-21.8c-.19,0-.35.16-.35.35v7.03c0,.19.16.35.35.35h21.8c.19,0,.35-.16.35-.35v-7.03c0-.19-.16-.35-.35-.35Z"/>
+    <path class="cls-12" d="M17.23,12.66c-.19,0-.35-.16-.35-.35v-5.62c0-.19.16-.35.35-.35h20.39c.19,0,.35.16.35.35v5.62c0,.19-.16.35-.35.35h-20.39ZM38.33,5.62h-21.8c-.19,0-.35.16-.35.35v7.03c0,.19.16.35.35.35h21.8c.19,0,.35-.16.35-.35v-7.03c0-.19-.16-.35-.35-.35ZM17.23,12.83h20.39c.29,0,.53-.24.53-.53v-5.62c0-.29-.24-.53-.53-.53h-20.39c-.29,0-.53.24-.53.53v5.62c0,.29.24.53.53.53M38.33,5.8c.1,0,.18.08.18.18v7.03c0,.1-.08.18-.18.18h-21.8c-.1,0-.18-.08-.18-.18v-7.03c0-.1.08-.18.18-.18h21.8"/>
+  </g>
+  <ellipse class="cls-11" cx="29.48" cy="28.04" rx="8.44" ry="4.54"/>
+  <text class="cls-11" transform="translate(68.76 96.32)"><tspan class="cls-1" x="0" y="0">x</tspan><tspan class="cls-4" x="6" y="1.63">f </tspan></text>
+  <line class="cls-6" x1="84.23" y1="77.55" x2="75.68" y2="89.13"/>
+  <line class="cls-6" x1="32.26" y1="33.58" x2="28.71" y2="41.72"/>
+  <text class="cls-11" transform="translate(65.26 50.09)"><tspan class="cls-1" x="0" y="0">x</tspan><tspan class="cls-4" x="6" y="1.63">f </tspan></text>
+  <text class="cls-10" transform="translate(0 50.09)"><tspan x="0" y="0">この領域の状態も</tspan></text>
+  <text class="cls-11" transform="translate(93.7 80.44)"><tspan class="cls-3" x="0" y="0">V</tspan><tspan class="cls-2" x="7.33" y=".06">(</tspan><tspan class="cls-1" x="11.33" y=".1">x</tspan><tspan class="cls-4" x="17.33" y="1.73">f</tspan><tspan class="cls-2" x="19.99" y=".06">)=0</tspan></text>
+  <text class="cls-11" transform="translate(42.68 27.99)"><tspan class="cls-3" x="0" y="0">V</tspan><tspan class="cls-2" x="7.33" y=".06">(</tspan><tspan class="cls-1" x="11.33" y=".1">x</tspan><tspan class="cls-4" x="17.33" y="1.73">f</tspan><tspan class="cls-2" x="19.99" y=".06">)=10000000</tspan></text>
+</svg>
