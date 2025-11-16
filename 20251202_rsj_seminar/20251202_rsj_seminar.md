@@ -143,6 +143,17 @@ $\qquad\qquad\qquad$![w:400](search.svg)
        - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$、$\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
     - 例
        - ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
+- 「ゴール」（終端状態$\boldsymbol{x}_\text{f} \in \boldsymbol{X}_\text{f}$）
+    - それ以上状態遷移しない状態
+    - $V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f}) = 0$など、価値を固定しておく
+    - 他の状態の$V^\boldsymbol{\pi}$は$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$にしたがって決まる
+
+
+---
+
+
+### 方策の改善と最適性
+
 - もっと良い行き方$\boldsymbol{\pi}'(\boldsymbol{x})$があれば、時間の期待値が$V^{\boldsymbol{\pi}'}(\boldsymbol{x})$に短縮される
     - 方策を改善していくと収束
         - 収束した$V$: <span style="color:red">最適状態価値関数$V^*$</span>
@@ -208,7 +219,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ### <span style="color:red">「好ましくない終端状態」</span>という考え方の欠如
 
-- 終端状態$\mathcal{X}_\text{f}$の設計に問題がある
+終端状態$\mathcal{X}_\text{f}$の設計に問題がある
+
+- 壁に衝突するのも「ゴール」
+    - $V(\boldsymbol{x}_\text{f})$を大きく設定しておけば$\boldsymbol{\pi}$は
 - 多くの制御手法でも「境界条件」と扱ってしまうが、それだと境界条件スレスレの制御が許容されてしまう/ペナルティーも恣意的に
 
 ![bg right:30% 100%](final_state.svg)
