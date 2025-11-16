@@ -190,7 +190,6 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-
 ### チャタリングの問題
 
 - 経路を再計算したら変わった/また計算したら戻った
@@ -204,6 +203,11 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - 最適制御という面から考えると？
 
 ![bg right:20% 100%](chattering.svg)
+
+---
+
+### <span style="color:red">「好ましくない終端状態」</span>という考え方の欠如
+
 
 ---
 
