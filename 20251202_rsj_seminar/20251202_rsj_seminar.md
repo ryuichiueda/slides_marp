@@ -133,6 +133,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題の解の性質（どう解くかという話とは別）
 
+最大原理で解くような問題でもうまく$\boldsymbol{x}$を設計できればこうなる
+
 - ある制御則の解（方策）$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$に対し、ひとつひとつの状態から終端状態までのコストの期待値が計算できる
     - 実数を返す関数$V^\boldsymbol{\pi}(\boldsymbol{x})$: <span style="color:red">状態価値関数（値関数）</span>
 - 大域計画の問題で考えると、別に難しい話ではない
