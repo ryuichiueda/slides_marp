@@ -147,14 +147,22 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 - $\boldsymbol{x}$の価値は遷移先$\boldsymbol{x}'$の価値に遷移したときのコスト$\ell$を足したもの
     - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
        - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$、$\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$
-    - 例
-       - ゴールまで10歩のところから1歩歩いたら、次の状態はゴールまで9歩に
-- 終端状態$\boldsymbol{x}_\text{f} \in \boldsymbol{X}_\text{f}$の扱い
-    - それ以上状態遷移しない状態
-    - $V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f}) = 0$など、価値を固定しておく
+    - 例: ゴールまで7歩のところから1歩歩いたら、次の状態はゴールまで6歩に
+- 補足: $\ell$は一般化できる
+    - 「ここは悪路だから歩数を倍に」ということをしても破綻しない
+
+![bg right:30% 100%](value_sum.svg)
+
+---
+
+### 終端状態$\boldsymbol{x}_\text{f} \in \boldsymbol{X}_\text{f}$の扱い
+
+- それ以上状態遷移しない状態
+- $V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f}) = 0$など、価値を固定しておく
 - 他の状態の$V^\boldsymbol{\pi}$は$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$にしたがって決まる
     - <span style="color:red">$V^\boldsymbol{\pi}(\boldsymbol{x}_\text{f})$を底とするポテンシャル場に</span>
 
+![bg right:25% 95%](potential.svg)
 
 ---
 

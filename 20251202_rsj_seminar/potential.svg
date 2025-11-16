@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.74 73.3">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e60012;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #231815;
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g>
+    <ellipse class="cls-4" cx="41.12" cy="39.72" rx="5.88" ry="2.94"/>
+    <line class="cls-3" x1="41.12" y1="38.91" x2="41.12" y2="21.95"/>
+    <polygon class="cls-2" points="49.44 24.44 41.12 29.28 41.12 19.59 49.44 24.44"/>
+  </g>
+  <text class="cls-5" transform="translate(22.21 24.44)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-5" transform="translate(17.39 10.56)"><tspan x="0" y="0">4</tspan></text>
+  <ellipse class="cls-1" cx="41.35" cy="41.36" rx="27.85" ry="21.76"/>
+  <ellipse class="cls-1" cx="41.37" cy="38.84" rx="41.12" ry="34.22"/>
+  <text class="cls-5" transform="translate(32.42 38.84)"><tspan x="0" y="0">0</tspan></text>
+</svg>

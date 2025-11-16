@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.91 88.63">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .75px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e60012;
+      }
+
+      .cls-5 {
+        letter-spacing: .25em;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #231815;
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" x1="28.33" y1="43.8" x2="28.33"/>
+  <rect class="cls-4" x=".5" y="4.55" width="55.67" height="17.26"/>
+  <g>
+    <ellipse class="cls-4" cx="75.6" cy="70.02" rx="5.88" ry="2.94"/>
+    <line class="cls-3" x1="75.6" y1="69.21" x2="75.6" y2="52.26"/>
+    <polygon class="cls-2" points="83.92 54.74 75.6 59.58 75.6 49.9 83.92 54.74"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="16.09" y1="35.68" x2="25.75" y2="42.91"/>
+    <polygon class="cls-6" points="21.92 43.88 21.84 43.13 25.52 42.74 24.86 39.1 25.6 38.97 26.4 43.4 21.92 43.88"/>
+  </g>
+  <text class="cls-7" transform="translate(72.29 84.56)"><tspan x="0" y="0">0</tspan></text>
+  <text class="cls-7" transform="translate(3.96 18.52)"><tspan x="0" y="0">あ</tspan><tspan class="cls-5" x="12" y="0">と6</tspan><tspan x="36.61" y="0">歩</tspan></text>
+  <text class="cls-7" transform="translate(9.48 39.54)"><tspan x="0" y="0">7</tspan></text>
+</svg>
