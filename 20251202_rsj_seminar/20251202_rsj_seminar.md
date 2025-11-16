@@ -159,6 +159,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - 方策を改善していくと収束
         - 収束した$V$: <span style="color:red">最適状態価値関数$V^*$</span>
             - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \{ V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \}$
+            - まったく停留点のないポテンシャル関数に
         - $V^*$を与える方策: <span style="color:red">最適方策$\boldsymbol{\pi}^*$</span>
             - $\boldsymbol{\pi}^*(\boldsymbol{x}) = \arg\!\min_\boldsymbol{u} \{ V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') \}$
 
