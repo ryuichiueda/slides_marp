@@ -182,7 +182,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-### $V$の性質（状態遷移が確率的な場合）
+### 状態遷移が確率的な場合への拡張
 
 - $V^{\boldsymbol{\pi}}(\boldsymbol{x}) = \big\langle V^{\boldsymbol{\pi}}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
     - $\langle f(x) \rangle_{p(x)}$: 分布$p$のときの$f$の期待値
