@@ -119,6 +119,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - ライントレースのロボットがラインからずれた$\rightarrow$ライン中央に戻したい
     - 洗濯物が洗濯機の中に$\rightarrow$畳んで収納したい
         - <span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
+- 前ページの定式化はマルコフ決定過程（MDP）でもあるけど最適制御と言います
 
 <center style="color:red">制御対象の見かけ、計算リソース・時間の制約、解法で違う問題に見えるだけ</center>
 
@@ -208,6 +209,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 ### <span style="color:red">「好ましくない終端状態」</span>という考え方の欠如
 
 - 終端状態$\mathcal{X}_\text{f}$の設計に問題がある
+- 多くの制御手法でも「境界条件」と扱ってしまうが、それだと境界条件スレスレの制御が許容されてしまう
 
 
 ---
