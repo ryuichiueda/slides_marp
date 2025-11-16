@@ -201,6 +201,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - なぜか遅い移動ロボットでもよく起こす
         - ROSのNavigation Stackのサンプル
 - （小手先で解決できるかもしれないが）根本的な原因は？
+    - 最適制御という面から考えると？
 
 ![bg right:20% 100%](chattering.svg)
 
