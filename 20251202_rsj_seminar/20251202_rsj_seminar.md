@@ -193,7 +193,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - $\boldsymbol{x}$や$\boldsymbol{u}$はベクトルで表記しているけどその必要はない
     - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ厳密に決まっていればよい
         - 距離の定義が空間になくてもよい
-    - むしろ解の$V^*$が距離のようなものの定義になっている
+    - <span style="color:red">むしろ解の$V^*$が距離のようなものの定義になっている</span>
 
 ---
 
