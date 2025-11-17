@@ -328,10 +328,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ### 根本的な問題
 
-- 「いまどのモードで制御をしているか」という変数で状態空間の次元が増える
-    - 状態変数$\boldsymbol{x}$に1つ変数が追加される
-        - $\boldsymbol{x}_\text{aug} = (\boldsymbol{x} ,$<span style="color:red"> mode</span>$)$
-            - 今は大域計画モードなのか局所計画モードなのか
+- モード切り替えをするシステムでは、状態空間の次元が増える
+    - $\boldsymbol{x}_\text{aug} = (\boldsymbol{x} ,$<span style="color:red"> mode</span>$)$
+        - 「mode」の例
+            - 今はナビゲーションしているのか衝突回避しているのか
             - どのウェイポイントを目指しているのか
 - 分けて簡単にしたつもりが逆に問題が難しく
     - $p(\boldsymbol{x}|\boldsymbol{x}', \boldsymbol{u})$が$p(\boldsymbol{x}|\boldsymbol{x}', \boldsymbol{u},$mode$)$に
