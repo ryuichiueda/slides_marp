@@ -304,7 +304,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 ---
 
-### 何が問題になるか
+### 問題を分けると何が問題になるか
 
 - もともと問題は1つしかない
     - いまの障害物の存在状況に対して適切な$\boldsymbol{\pi}$ or $V^\boldsymbol{\pi}$を計算すること
