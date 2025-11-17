@@ -284,6 +284,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - いままで解いた$\boldsymbol{\pi}, V^\boldsymbol{\pi}$を見直しする問題
     - 完全に解き直してもよい
     - 何か問題でも？
+        - 探索ベースの場合、2つの問題
+        （小さい問題と大きな問題）
 
 ![bg right:35% 95%](potential_obstacle.svg)
 
