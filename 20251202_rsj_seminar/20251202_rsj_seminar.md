@@ -329,8 +329,9 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 - 「いまどのモードで制御をしているか」という変数で状態空間の次元が増える
     - 状態変数$\boldsymbol{x}$に1つ変数が追加される
-        - 今は大域計画モードなのか局所計画モードなのか
-        - どのウェイポイントを目指しているのか
+        - $\boldsymbol{x} = (x_1, x_2, \dots, x_n ,$<span style="color:red"> mode</span>$)$
+            - 今は大域計画モードなのか局所計画モードなのか
+            - どのウェイポイントを目指しているのか
 - 分けて簡単にしたつもりが逆に問題が難しく
     - $p(\boldsymbol{x}|\boldsymbol{x}', \boldsymbol{u})$が$p(\boldsymbol{x}|\boldsymbol{x}', \boldsymbol{u},$mode$)$に
 
