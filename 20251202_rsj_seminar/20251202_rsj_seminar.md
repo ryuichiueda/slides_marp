@@ -299,7 +299,7 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - 問題の2階建て
     - 何か問題でも？
         - だいたいの問題はこれまで話で説明できるが、もう1つ問題が増える
-- 増える問題: <span style="color:red">解くべき最適制御問題は1つなのにわざわざ別の2つ以上にして、そして解が矛盾</span>
+- 増える問題: <span style="color:red">解くべき最適制御問題は1つなのにわざわざ別の問題を解き、そして解が矛盾</span>
 
 ![bg right:35% 95%](potential_obstacle.svg)
 
