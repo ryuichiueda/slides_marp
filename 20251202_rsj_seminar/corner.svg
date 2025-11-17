@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.57 214.3">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 2 2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-7, .cls-8 {
+        stroke: #231815;
+      }
+
+      .cls-1, .cls-2, .cls-5, .cls-6 {
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-2, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-9, .cls-10, .cls-11 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-9, .cls-12, .cls-4 {
+        fill: #e60012;
+      }
+
+      .cls-9, .cls-11 {
+        font-size: 12px;
+      }
+
+      .cls-10 {
+        font-size: 11px;
+      }
+
+      .cls-10, .cls-13, .cls-11 {
+        fill: #231815;
+      }
+
+      .cls-3 {
+        fill: #727171;
+      }
+
+      .cls-5 {
+        stroke: #00a0e9;
+      }
+
+      .cls-6 {
+        stroke: #e60012;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <ellipse class="cls-8" cx="129.94" cy="49.72" rx="8.81" ry="4.41"/>
+    <line class="cls-7" x1="129.94" y1="48.51" x2="129.94" y2="23.07"/>
+    <polygon class="cls-4" points="142.42 26.8 129.94 34.06 129.94 19.53 142.42 26.8"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="34.95" y1="192.66" x2="52.3" y2="191.97"/>
+    <polygon class="cls-13" points="50.73 194.08 50.37 193.73 52.11 191.98 50.24 190.37 50.56 190 52.84 191.95 50.73 194.08"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="37.43" y1="97.57" x2="37.43" y2="109.85"/>
+    <polygon class="cls-13" points="35.38 108.19 35.75 107.85 37.43 109.66 39.11 107.85 39.47 108.19 37.43 110.39 35.38 108.19"/>
+  </g>
+  <rect class="cls-3" x="28.63" y="44.29" width="82.79" height="50.43"/>
+  <g>
+    <line class="cls-1" x1="50.6" y1="97.57" x2="50.6" y2="109.85"/>
+    <polygon class="cls-13" points="48.56 108.19 48.92 107.85 50.6 109.66 52.28 107.85 52.64 108.19 50.6 110.39 48.56 108.19"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="63.44" y1="97.57" x2="63.44" y2="109.85"/>
+    <polygon class="cls-13" points="61.4 108.19 61.76 107.85 63.44 109.66 65.12 107.85 65.49 108.19 63.44 110.39 61.4 108.19"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="76.61" y1="97.57" x2="76.61" y2="109.85"/>
+    <polygon class="cls-13" points="74.57 108.19 74.93 107.85 76.61 109.66 78.29 107.85 78.66 108.19 76.61 110.39 74.57 108.19"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="89.78" y1="98.74" x2="89.78" y2="111.02"/>
+    <polygon class="cls-13" points="87.74 109.36 88.1 109.02 89.78 110.83 91.46 109.02 91.83 109.36 89.78 111.56 87.74 109.36"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="102.95" y1="98.74" x2="102.95" y2="111.02"/>
+    <polygon class="cls-13" points="100.91 109.36 101.28 109.02 102.95 110.83 104.63 109.02 105 109.36 102.95 111.56 100.91 109.36"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="115.8" y1="98.74" x2="122.98" y2="106.86"/>
+    <polygon class="cls-13" points="120.35 106.98 120.4 106.48 122.86 106.72 122.92 104.25 123.42 104.27 123.34 107.27 120.35 106.98"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="114.71" y1="87.3" x2="127" y2="87.3"/>
+    <polygon class="cls-13" points="125.34 89.34 125 88.98 126.81 87.3 125 85.62 125.34 85.25 127.54 87.3 125.34 89.34"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="114.71" y1="76.43" x2="127" y2="76.43"/>
+    <polygon class="cls-13" points="125.34 78.48 125 78.11 126.81 76.43 125 74.75 125.34 74.39 127.54 76.43 125.34 78.48"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="114.71" y1="63.98" x2="127" y2="63.98"/>
+    <polygon class="cls-13" points="125.34 66.02 125 65.66 126.81 63.98 125 62.3 125.34 61.94 127.54 63.98 125.34 66.02"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="114.71" y1="51.53" x2="127" y2="51.53"/>
+    <polygon class="cls-13" points="125.34 53.57 125 53.21 126.81 51.53 125 49.85 125.34 49.49 127.54 51.53 125.34 53.57"/>
+  </g>
+  <text class="cls-10" transform="translate(61.89 194.56)"><tspan x="0" y="0">壁避け方策</tspan></text>
+  <text class="cls-11" transform="translate(21.47 178.92)"><tspan x="0" y="0">凡例</tspan></text>
+  <g>
+    <line class="cls-6" x1="34.95" y1="205.16" x2="52.3" y2="204.47"/>
+    <polygon class="cls-12" points="50.73 206.58 50.37 206.23 52.11 204.48 50.24 202.87 50.56 202.49 52.84 204.45 50.73 206.58"/>
+  </g>
+  <text class="cls-10" transform="translate(61.51 208.93)"><tspan x="0" y="0">計画された経路</tspan></text>
+  <g>
+    <polyline class="cls-6" points="28.63 114.11 87.86 114.11 127.36 94.48 136.28 87.34 131.13 49.07"/>
+    <polygon class="cls-12" points="133.37 50.44 133.06 50.82 131.15 49.26 129.73 51.27 129.32 50.98 131.05 48.53 133.37 50.44"/>
+  </g>
+  <text class="cls-9" transform="translate(119.57 121.67)"><tspan x="0" y="0">角は矛盾</tspan><tspan x="0" y="12">しやすい</tspan></text>
+  <text class="cls-9" transform="translate(0 10.56)"><tspan x="0" y="0">ゴールと危険個所が</tspan><tspan x="12" y="12">近いと案外難しい</tspan></text>
+  <rect class="cls-5" x="18.14" y="164.36" width="122.12" height="49.69"/>
+  <line class="cls-2" x1="106.63" y1="24" x2="122.58" y2="43.61"/>
+</svg>
