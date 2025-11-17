@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 92.46 112.69">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 10px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #231815;
+      }
+
+      .cls-3 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 7px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5, .cls-2 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+      }
+
+      .cls-5, .cls-2, .cls-6 {
+        font-style: italic;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-10, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7, .cls-9, .cls-10 {
+        fill: none;
+      }
+
+      .cls-7, .cls-9, .cls-10, .cls-4 {
+        stroke: #231815;
+        stroke-width: .5px;
+      }
+
+      .cls-8 {
+        fill: #727171;
+        stroke: #727171;
+      }
+
+      .cls-11 {
+        fill: url(#_名称未設定グラデーション_17);
+      }
+
+      .cls-11, .cls-12 {
+        opacity: .1;
+      }
+
+      .cls-9 {
+        stroke-dasharray: 2.34 2.34;
+      }
+
+      .cls-2 {
+        font-size: 12px;
+      }
+
+      .cls-13 {
+        fill: url(#_名称未設定グラデーション_3);
+      }
+
+      .cls-10 {
+        stroke-dasharray: 1.94 1.94;
+      }
+
+      .cls-12 {
+        fill: url(#_名称未設定グラデーション_14);
+      }
+
+      .cls-6 {
+        font-family: TimesNewRomanPS-BoldItalicMT, 'Times New Roman';
+        font-weight: 700;
+      }
+
+      .cls-14 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_3" data-name="名称未設定グラデーション 3" x1="7.85" y1="87.87" x2="83.99" y2="87.87" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#231815"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_17" data-name="名称未設定グラデーション 17" x1="-4.24" y1="-46.05" x2="6.16" y2="-46.05" gradientTransform="translate(-.44 81.71) rotate(90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#231815"/>
+      <stop offset=".1" stop-color="#302623"/>
+      <stop offset=".29" stop-color="#544b49"/>
+      <stop offset=".55" stop-color="#8e8887"/>
+      <stop offset=".87" stop-color="#dddbdb"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_14" data-name="名称未設定グラデーション 14" x1="-81.05" y1="-46.05" x2="-70.84" y2="-46.05" gradientTransform="translate(-.44 17.03) rotate(-90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#231815"/>
+      <stop offset=".12" stop-color="#271c19"/>
+      <stop offset=".25" stop-color="#342a27"/>
+      <stop offset=".38" stop-color="#49403d"/>
+      <stop offset=".52" stop-color="#675f5d"/>
+      <stop offset=".67" stop-color="#8d8786"/>
+      <stop offset=".82" stop-color="#bcb8b7"/>
+      <stop offset=".97" stop-color="#f2f1f1"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-8" x="9.09" y="9.54" width="74.9" height="6.48"/>
+  <g>
+    <circle class="cls-7" cx="14.08" cy="21.1" r="2.91"/>
+    <line class="cls-7" x1="14.08" y1="21.1" x2="16.94" y2="20.93"/>
+  </g>
+  <path class="cls-4" d="M29.37,20.46c-.37,1.01-1.25,1.84-1.73,2.83s-.43,2.3.74,3.05c1.09.71,2.74.6,3.75.01s1.51-1.54,1.88-2.48c.62-1.57.96-3.26.65-4.96s-1.35-3.44-3.11-4.67c-.61-.43-1.33-.8-2.12-.91-2.52-.35-2.22,1.67-1.37,2.87,1.02,1.44,1.9,2.67,1.32,4.26Z"/>
+  <g>
+    <line class="cls-7" x1="29.4" y1="26.83" x2="28.42" y2="26.65"/>
+    <line class="cls-10" x1="26.51" y1="26.3" x2="16.02" y2="24.36"/>
+    <line class="cls-7" x1="15.07" y1="24.19" x2="14.08" y2="24.01"/>
+  </g>
+  <g>
+    <line class="cls-7" x1="26.44" y1="14.19" x2="25.49" y2="14.49"/>
+    <line class="cls-9" x1="23.25" y1="15.19" x2="15.44" y2="17.64"/>
+    <line class="cls-7" x1="14.33" y1="17.99" x2="13.37" y2="18.29"/>
+  </g>
+  <text class="cls-1" transform="translate(36.32 27.62)"><tspan class="cls-5" x="0" y="0">p</tspan><tspan class="cls-14" x="5" y="0">(</tspan><tspan class="cls-6" x="8.33" y="0">x</tspan><tspan class="cls-14" x="13.33" y="0" xml:space="preserve"> | </tspan><tspan class="cls-6" x="20.33" y="0">x’</tspan><tspan class="cls-14" x="28.66" y="0">, </tspan><tspan class="cls-6" x="33.66" y="0">u</tspan><tspan class="cls-14" x="39.22" y="0">)</tspan></text>
+  <rect class="cls-8" x="8.47" y="37.4" width="74.9" height="6.48"/>
+  <rect class="cls-7" x=".87" y=".25" width="91.34" height="51.32"/>
+  <text class="cls-3" transform="translate(43.57 15.19)"><tspan x="0" y="0">wall</tspan></text>
+  <text class="cls-3" transform="translate(43.57 42.88)"><tspan x="0" y="0">wall</tspan></text>
+  <rect class="cls-8" x="7.85" y="70.4" width="74.9" height="6.48"/>
+  <rect class="cls-8" x="7.85" y="98.26" width="74.9" height="6.48"/>
+  <rect class="cls-7" x=".25" y="61.11" width="91.34" height="51.32"/>
+  <text class="cls-3" transform="translate(42.95 76.05)"><tspan x="0" y="0">wall</tspan></text>
+  <text class="cls-3" transform="translate(42.94 103.74)"><tspan x="0" y="0">wall</tspan></text>
+  <rect class="cls-13" x="7.85" y="77.48" width="76.15" height="20.78"/>
+  <rect class="cls-11" x="7.85" y="77.48" width="75.52" height="10.39"/>
+  <rect class="cls-12" x="7.85" y="87.87" width="75.52" height="10.21"/>
+  <text class="cls-2" transform="translate(65.26 92.98)"><tspan x="0" y="0">V*</tspan></text>
+</svg>
