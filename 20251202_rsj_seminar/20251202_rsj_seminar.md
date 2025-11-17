@@ -331,7 +331,8 @@ $\qquad\qquad\qquad$![w:400](search.svg)
     - 状態変数$\boldsymbol{x}$に1つ変数が追加される
         - 今は大域計画モードなのか局所計画モードなのか
         - どのウェイポイントを目指しているのか
-- 分けて簡単にしたつもりが余計問題が難しく
+- 分けて簡単にしたつもりが逆に問題が難しく
+    - $p(\boldsymbol{x}|\boldsymbol{x}', \boldsymbol{u})$が$p(\boldsymbol{x}|\boldsymbol{x}', \boldsymbol{u},$mode$)$に
 
 
 ---
