@@ -279,9 +279,10 @@ $\qquad\qquad\qquad$![w:400](search.svg)
 
 - 大域計画問題に局所計画問題を足す
     - 問題の2階建て
-- 構造
+- 問題の構造
+    - いままで解いた$\boldsymbol{\pi}, V^\boldsymbol{\pi}$を見直しする問題
 
-![bg right:35% 95%](avoidance.svg)
+![bg right:35% 95%](potential_obstacle.svg)
 
 ---
 
