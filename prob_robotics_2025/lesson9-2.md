@@ -112,8 +112,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 意味
     - $\dot{\boldsymbol{x}} = A\boldsymbol{x} + B\boldsymbol{u} + \boldsymbol{\varepsilon}$なので、$\dot{\boldsymbol{x}}$の平均値$\bar{\dot{\boldsymbol{x}}}$を考えると
     $0 = \min_{\boldsymbol{u}} \left\{ L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top} \bar{\dot{\boldsymbol{x}}}\right\}$
-    - つまり、$\boldsymbol{u}$を適切に選ぶと、$V^*$の変化量に速度の平均値をかけると、$L$の減少率と釣り合う
-    - 任意の時刻で成立
+    - つまり、$\boldsymbol{u}$を適切に選ぶと、$V^*$の変化量に速度の平均値をかけると、$L$の減少率と釣り合う（任意の時刻で成立）
+- これからやること
+    - 右辺の括弧内を最小にする$\boldsymbol{u}$を求める
+    - その最小値が$0$になるように$V^*$を求める
 
 ---
 
@@ -136,3 +138,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ---
 
 ### $H_\text{min}=0$の解
+
+- $V^*(\boldsymbol{x}) = \dfrac{1}{2} \boldsymbol{x}^\top P \boldsymbol{x}$が成り立つと仮定すると$P$が次の方程式の解のときに$H_\text{min}=0$となる
