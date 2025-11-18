@@ -156,4 +156,5 @@ marp: true
 ### 空間中に置くガウス分布
 
 - $\mathcal{N}(\boldsymbol{\mu}, \Sigma)$
+    - $\boldsymbol{\mu}$: 3次元空間中の位置（中心）
 
