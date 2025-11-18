@@ -145,3 +145,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $P$を使って前ページの$\boldsymbol{u}$を表現すると
 	- $\boldsymbol{u}^* = -  R^{-1}B^\top P\boldsymbol{x}$
 	    - これが最適制御
+
+---
+
+### 今の例のおさらい
+
+- 強化学習と制御は別物ではない
+    - $Q$学習の背景となっていたベルマン方程式から、振動を抑える制御の解が得られた
+
