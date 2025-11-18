@@ -61,7 +61,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 制御の問題: ある状態を別の状態に変化させたい
     - その際、コストを抑えたい
-        - PIDなどはコストを考えていないのである意味でヒューリスティック
+        - PIDなどはコストを直接考えていないのである意味でヒューリスティック
 
 |現象|制御|
 |:---|:---|
