@@ -150,6 +150,7 @@ marp: true
        - 計算時間も少ない（論文の図1）: NeRFの48時間に対して6分
 - [使用例](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
    - 水面への映り込みなどに注目
+- [NVIDIAのチュートリアル](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
 
 ---
 
