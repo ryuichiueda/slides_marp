@@ -165,3 +165,4 @@ marp: true
         - $S$: スケーリング行列（対角行列）
     - 理由: 共分散行列は半正定対称行列でないといけない
         - 半正定: $\forall \boldsymbol{a}$に対して$\boldsymbol{a}^\top \Sigma \boldsymbol{a} \ge 0$
+    - なんでこれが共分散行列として適切なのかは[確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)を参照のこと
