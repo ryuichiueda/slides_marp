@@ -84,3 +84,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	    - $\boldsymbol{u}$: 制御入力（時間の関数）
 	    - $\dot{\boldsymbol{x}} = \dfrac{\text{d}\boldsymbol{x}}{\text{d}t}$
 - 制御の目的
+	$J(\Pi, \boldsymbol{x}_0) =  \int_0^\infty L\left[ \boldsymbol{x}(t), \boldsymbol{u}(t) \right] \text{d}t$
+	- $L(\boldsymbol{x}, \boldsymbol{u}) = 
+	\dfrac{1}{2}\boldsymbol{x}^\top Q \boldsymbol{x}
+	+\dfrac{1}{2}\boldsymbol{u}^\top R \boldsymbol{u}$
