@@ -164,4 +164,4 @@ marp: true
 
 ### 3次元のガウス分布から画像の平面への変換
 
-- $JW\Sigma W^\top J^\top$
+- $\Sigma' = JW\Sigma W^\top J^\top$
