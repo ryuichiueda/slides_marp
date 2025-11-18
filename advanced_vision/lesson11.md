@@ -152,6 +152,8 @@ marp: true
    - 水面への映り込みなどに注目
 - [NVIDIAのチュートリアル](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
 
+![bg right:25% 90%](figs/3d_gaussians.svg)
+
 ---
 
 ### 空間中に置くガウス分布
