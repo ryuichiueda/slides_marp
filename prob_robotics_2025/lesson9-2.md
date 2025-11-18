@@ -104,9 +104,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ベルマン方程式の整理
-
-方法は教科書を
+### ベルマン方程式の整理（数式の変形方法は教科書を）
 
 - $V^*[ \boldsymbol{x}( \Delta t)]$を$\Delta t$に対して線形な式に近似してベルマン方程式を整理すると
 	- $0 = \min_{\boldsymbol{u}} \left\{ L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top}  ( A\boldsymbol{x} + B\boldsymbol{u} ) \right\}$
