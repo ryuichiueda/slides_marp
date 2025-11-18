@@ -114,7 +114,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 意味
     - $\dot{\boldsymbol{x}} = A\boldsymbol{x} + B\boldsymbol{u} + \boldsymbol{\varepsilon}$なので、$\dot{\boldsymbol{x}}$の平均値$\bar{\dot{\boldsymbol{x}}}$を考えると
     $0 = \min_{\boldsymbol{u}} \left\{ L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top} \bar{\dot{\boldsymbol{x}}}\right\}$
-    - つまり、$V^*$の変化量に速度の平均値をかけると、状態遷移に伴って$-L$だけコストが減るという意味
+    - つまり、$V^*$の変化量に速度の平均値をかけると、$L$の減少率と釣り合う
 
 ---
 
