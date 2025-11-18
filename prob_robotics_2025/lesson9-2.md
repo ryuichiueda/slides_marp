@@ -35,8 +35,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $Q^\Pi(\boldsymbol{x}, a) = \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
         - $a$は方策が示すものとは別の行動
 - 後者のほうがよければ
-    - $\Pi(\boldsymbol{x})$を変える
-    - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+    - $\Pi(\boldsymbol{x}) \longleftarrow a$
+    - $V^\Pi(\boldsymbol{x})\longleftarrow Q(\boldsymbol{x},a)$
 
 <center style="color:red">いつか収束する</center>
 
