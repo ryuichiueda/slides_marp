@@ -73,3 +73,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
 
 <center style="color:red">制御対象の見かけ、計算リソース・時間の制約、解法で違う問題に見えるだけ</center>
+
+---
+
+### 例: ベルマン方程式から機械を安定させる問題へ
+
