@@ -157,4 +157,5 @@ marp: true
 
 - $\mathcal{N}(\boldsymbol{\mu}, \Sigma)$
     - $\boldsymbol{\mu}$: 3次元空間中の位置（中心）
+    - $\alpha$倍して透明度を表現
 
