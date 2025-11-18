@@ -159,11 +159,9 @@ marp: true
 - $\mathcal{N}(\boldsymbol{\mu}, \Sigma)$
     - $\boldsymbol{\mu}$: 3次元空間中の位置（中心）
     - $\alpha$倍して透明度を表現
-
-
----
-
-### 3次元のガウス分布から画像の平面への変換
-
-- $\boldsymbol{\mu}$については透視変換で大丈夫
-- $\Sigma' = JW\Sigma W^\top J^\top$
+- $\Sigma$の表現
+    - 計算には$\Sigma = RSS^\top R^\top$という表現を使用
+        - $R$: 回転行列
+        - $S$: スケーリング行列（対角行列）
+    - 理由: 共分散行列は半正定対称行列でないといけない
+        - 半正定: $\forall \boldsymbol{a}$に対して$\boldsymbol{a}^\top \Sigma \boldsymbol{a} \ge 0$
