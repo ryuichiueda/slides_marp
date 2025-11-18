@@ -127,3 +127,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	+\dfrac{1}{2}
 	\boldsymbol{u}^{\top}
 	R \boldsymbol{u} + \nabla V^*(\boldsymbol{x})^{\top}  ( A\boldsymbol{x} + B\boldsymbol{u} )$
+- 変形していくと（教科書参照のこと）、次の$\boldsymbol{u}$が$H$を最小に
+	- $\boldsymbol{u} = -  R^{-1}B^\top \nabla V^*(\boldsymbol{x})$
+- このときの$H$
+	- $H_\text{min} = \nabla V^*(\boldsymbol{x})^{\top}  A\boldsymbol{x} + \dfrac{1}{2} \boldsymbol{x}^\top Q \boldsymbol{x} -  \dfrac{1}{2}\nabla V^*(\boldsymbol{x})^{\top} BR^{-1} B^\top \nabla V^*(\boldsymbol{x})$
+    - <span style="color:red">ハミルトン-ヤコビ方程式</span>（物理で出てくる）
