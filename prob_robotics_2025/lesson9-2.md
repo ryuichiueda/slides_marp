@@ -48,4 +48,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $V^*(\boldsymbol{x}) = \min_{a\in\mathcal{A}} \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^*(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
     - $\Pi^*(\boldsymbol{x}) = \arg\!\min_{a\in\mathcal{A}} \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^*(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
 - $\Pi^*$: 最適方策
+    - どの$\boldsymbol{x}$でも最適な行動を提示可能
 - $V^*$: 最適状態価値関数
+    - 状態$\boldsymbol{x}$から、
