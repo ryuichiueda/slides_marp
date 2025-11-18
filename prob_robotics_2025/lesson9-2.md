@@ -117,5 +117,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 例: ベルマン方程式から機械を安定させる問題へ
+### ハミルトン-ヤコビ方程式
 
+- $H = L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top}  ( A\boldsymbol{x} + B\boldsymbol{u} )$を考える
+    - 前ページの方程式の$\min$のかっこの中身
