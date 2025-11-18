@@ -153,3 +153,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 強化学習と制御は別物ではない
     - $Q$学習の背景となっていたベルマン方程式から、振動を抑える制御の解が得られた
 
+
+---
+
+## 価値反復
+
