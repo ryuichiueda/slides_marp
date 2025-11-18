@@ -188,3 +188,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ![](./figs/10.7.jpg)
 
 ![bg right:30% 100%](./figs/puddle_world4.gif)
+
+---
+
+### 例: ロボットの制御
+
+- 価値反復をまわしっぱなしに
+    - [歩行者や移動障害物を発見して迂回](https://www.youtube.com/watch?v=n7LXx50gl9g)
+    - [状態価値関数の変化の様子（シミュレーション）](https://www.youtube.com/watch?v=O1NJnF0sIdA)
