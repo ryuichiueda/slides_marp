@@ -100,6 +100,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - $V^*(\boldsymbol{x}(0)) = \min_{\substack{\boldsymbol{u}(t) \\ (0\le t < \Delta t)}}\left\{ \int_0^{\Delta t} L\left[ \boldsymbol{x}(t), \boldsymbol{u}(t) \right] \text{d}t +  V^*\left[ \boldsymbol{x}( \Delta t) \right] \right\}$
         - どの時刻を$0$とおいてもよいことに注意
 - $\boldsymbol{u}(t)$を求めましょう
+    - $V^*[ \boldsymbol{x}( \Delta t)]$
 
 ---
 
