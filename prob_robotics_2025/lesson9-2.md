@@ -121,6 +121,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - $H = L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top}  ( A\boldsymbol{x} + B\boldsymbol{u} )$を考える
     - 前ページの方程式の$\min$のかっこの中身
+    - $H$を最小（ゼロ）にする$\boldsymbol{u}$を考える
 - $L$の中身を代入
     - $H = \dfrac{1}{2}\boldsymbol{x}^\top Q \boldsymbol{x}
 	+\dfrac{1}{2}
