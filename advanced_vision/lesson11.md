@@ -155,3 +155,5 @@ marp: true
 
 ### 空間中に置くガウス分布
 
+- $\mathcal{N}(\boldsymbol{\mu}, \Sigma)$
+
