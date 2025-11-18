@@ -147,4 +147,5 @@ marp: true
 
 - NeRFのような光の表現を、ガウス分布を空間中に置いて表現
    - 人工ニューラルネットワークは使わない
-
+- [使用例](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
+   - 水面への映り込みなどに注目
