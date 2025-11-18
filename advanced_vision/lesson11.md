@@ -164,4 +164,5 @@ marp: true
 
 ### 3次元のガウス分布から画像の平面への変換
 
+- $\boldsymbol{\mu}$については透視変換で大丈夫
 - $\Sigma' = JW\Sigma W^\top J^\top$
