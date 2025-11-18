@@ -87,3 +87,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $L(\boldsymbol{x}, \boldsymbol{u}) = 
 	\dfrac{1}{2}\boldsymbol{x}^\top Q \boldsymbol{x}
 	+\dfrac{1}{2}\boldsymbol{u}^\top R \boldsymbol{u}$
+	    - 最初の項: なるべく$\boldsymbol{x}$を原点付近に保つ
+	    - 次の項: なるべく入力$\boldsymbol{u}$の値を小さく
