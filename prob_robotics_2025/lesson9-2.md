@@ -42,7 +42,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## ベルマン最適方程式
+## ベルマン（最適）方程式
 
 - 収束した$\Pi$と$V$をそれぞれ$\Pi^*, V^*$とすると
     - $V^*(\boldsymbol{x}) = \min_{a\in\mathcal{A}} \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^*(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
