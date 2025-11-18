@@ -32,7 +32,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 最初に適当な$V$を設定
 - 次の2つの値を比較
     - $V^\Pi(\boldsymbol{x})$
-    - $\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+    - $Q(\boldsymbol{x}, a) = \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
         - $a$は方策が示すものとは別の行動
 - 後者のほうがよければ
     - $\Pi(\boldsymbol{x})$を変える
