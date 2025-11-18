@@ -24,6 +24,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - Q学習のおさらい
 - ベルマン方程式
+- ベルマン方程式と制御
+- 価値反復
 
 ---
 
@@ -42,7 +44,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ベルマン（最適）方程式
+## ベルマン（最適）方程式
 
 - 収束した$\Pi$と$V$をそれぞれ$\Pi^*, V^*$とすると
     - $V^*(\boldsymbol{x}) = \min_{a\in\mathcal{A}} \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^*(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
@@ -160,3 +162,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 強化学習は「状態遷移も報酬も分からんからエージェントに経験させる」というもの
 <span style="color:red">$\Longrightarrow$じゃあ分かってたら別に経験いらないじゃないか</span>
+    - ほんとうは順序が逆で、価値反復ができないから強化学習をやる
