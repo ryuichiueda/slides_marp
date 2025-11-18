@@ -119,7 +119,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### ハミルトン-ヤコビ方程式
+### $\boldsymbol{u}$の算出とハミルトン-ヤコビ方程式
 
 - $H = L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top}  ( A\boldsymbol{x} + B\boldsymbol{u} )$を考える
     - 前ページの方程式の$\min$のかっこの中身
