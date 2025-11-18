@@ -101,6 +101,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
         - どの時刻を$0$とおいてもよいことに注意
 - $\boldsymbol{u}(t)$を求めましょう
     - まずやること: $V^*[ \boldsymbol{x}( \Delta t)]$を$\Delta t$に対して線形な式に近似
+	$\nabla V^*(\boldsymbol{x}_0) = \left( \left. \dfrac{\partial V^*}{\partial\boldsymbol{x}} \right|_{\boldsymbol{x} = \boldsymbol{x}(0)} \right)^\top$
 
 ---
 
