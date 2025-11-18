@@ -76,7 +76,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### 例: ベルマン方程式から機械を安定させる問題へ
+## 例: ベルマン方程式から機械を安定させる問題へ
 
 - 考えるシステム
 	- $\dot{\boldsymbol{x}} = A\boldsymbol{x} + B\boldsymbol{u} + \boldsymbol{\varepsilon}$
