@@ -169,9 +169,22 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 価値反復の手続き
 
 
-- ベルマン方程式で$V$をひたすら更新
+- ベルマン方程式（の右辺）で$V$をひたすら更新
 - $V(\boldsymbol{x}) \longleftarrow \min_{a\in\mathcal{A}} \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
     - $V$: 収束していない最適状態価値関数
     - 問題設定が適切なら必ず収束
 - Q学習（や他の強化学習）との違い
     - 強化学習: $P(\boldsymbol{x}' | \boldsymbol{x}, a)$が分からないからエージェントに行動させて$\boldsymbol{x}' \sim P(\boldsymbol{x}' | \boldsymbol{x}, a)$を得る
+
+
+---
+
+### 例: 水たまりの問題（右図）
+
+- 状態価値関数の更新（下図）
+    - スイープ: 全状態の価値を更新すること
+- ゴール側から$V^*$が求まっていく
+
+![](./figs/10.7.jpg)
+
+![bg right:30% 100%](./figs/puddle_world4.gif)
