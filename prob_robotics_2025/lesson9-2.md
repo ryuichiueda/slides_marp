@@ -159,4 +159,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 価値反復
 
 - 強化学習は「状態遷移も報酬も分からんからエージェントに経験させる」というもの
-
+<span style="color:red">$\Longrightarrow$じゃあ分かってたら別に経験いらないじゃないか</span>
