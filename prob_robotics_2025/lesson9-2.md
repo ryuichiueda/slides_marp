@@ -78,3 +78,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### 例: ベルマン方程式から機械を安定させる問題へ
 
+- 考えるシステム
+	- $\dot{\boldsymbol{x}} = A\boldsymbol{x} + B\boldsymbol{u} + \boldsymbol{\varepsilon}$
+	    - $\boldsymbol{x}$: 状態（時間の関数）
+	    - $\boldsymbol{u}$: 制御入力（時間の関数）
+	    - $\dot{\boldsymbol{x}} = \dfrac{\text{d}\boldsymbol{x}}{\text{d}t}$
