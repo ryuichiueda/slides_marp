@@ -140,3 +140,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### $H_\text{min}=0$の解
 
 - $V^*(\boldsymbol{x}) = \dfrac{1}{2} \boldsymbol{x}^\top P \boldsymbol{x}$が成り立つと仮定すると$P$が次の方程式の解のときに$H_\text{min}=0$となる
+	- $P^\top A + A^\top P + Q - P^\top BR^{-1} B^\top P = O$
+        - 直接は解けないが「有本-ポッターの方法」などで求められる（講師は詳しくありませんが）
