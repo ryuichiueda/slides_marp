@@ -50,4 +50,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - $\Pi^*$: 最適方策
     - どの$\boldsymbol{x}$でも最適な行動を提示可能
 - $V^*$: 最適状態価値関数
-    - 状態$\boldsymbol{x}$から最適方策を選び続けたときの損失の積算
+    - 状態$\boldsymbol{x}$から最適方策を選び続けたときの価値の期待値
