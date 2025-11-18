@@ -131,4 +131,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	- $\boldsymbol{u} = -  R^{-1}B^\top \nabla V^*(\boldsymbol{x})$
 - このときの$H$
 	- $H_\text{min} = \nabla V^*(\boldsymbol{x})^{\top}  A\boldsymbol{x} + \dfrac{1}{2} \boldsymbol{x}^\top Q \boldsymbol{x} -  \dfrac{1}{2}\nabla V^*(\boldsymbol{x})^{\top} BR^{-1} B^\top \nabla V^*(\boldsymbol{x})$
-    - <span style="color:red">ハミルトン-ヤコビ方程式</span>（物理で出てくる）
+    - <span style="color:red">ハミルトン-ヤコビ方程式</span>（物理で出てくる。$\boldsymbol{u}$が消えて物理の問題に）
