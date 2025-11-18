@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第11回: SfMとNeRF
+## 第11回: NeRFと3D Gaussian splatting
 
 千葉工業大学 上田 隆一
 
@@ -125,8 +125,6 @@ marp: true
     - 最終層の出力を$(r,g,b)$値に
 
 
-
-
 ---
 
 ### 図中の「$\gamma$」
@@ -141,4 +139,11 @@ marp: true
         - $p$には$x,y,z,\theta,\phi$が入る
 - なんで拡張するのか？
     - 値の桁の小さいところも強調して、色の変化量が大きいところの解像度を上げたい（図4に比較）
+
+
+---
+
+## 3D Gaussian splatting
+
+- 
 
