@@ -163,6 +163,8 @@ marp: true
     - 計算には$\Sigma = RSS^\top R^\top$という表現を使用
         - $R$: 回転行列
         - $S$: スケーリング行列（対角行列）
-    - 理由: 共分散行列は半正定対称行列でないといけない
-        - 半正定: $\forall \boldsymbol{a}$に対して$\boldsymbol{a}^\top \Sigma \boldsymbol{a} \ge 0$
-    - なんでこれが共分散行列として適切なのかは[確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)を参照のこと
+    - 理由: 共分散行列として必要な要件を満たすように
+        - なんでこれが共分散行列として適切なのか
+            - $SS^\top$: 対角成分が正の行列に（楕円体の各軸の分散が並ぶ）
+            - $SS^\top$を両側から$R$で挟むと任意の向きに回転できる
+            - [確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)も参照のこと
