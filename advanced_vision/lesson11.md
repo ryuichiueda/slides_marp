@@ -159,3 +159,9 @@ marp: true
     - $\boldsymbol{\mu}$: 3次元空間中の位置（中心）
     - $\alpha$倍して透明度を表現
 
+
+---
+
+### 3次元のガウス分布から画像の平面への変換
+
+- $JW\Sigma W^\top J^\top$
