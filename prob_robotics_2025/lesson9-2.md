@@ -83,3 +83,4 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 	    - $\boldsymbol{x}$: 状態（時間の関数）
 	    - $\boldsymbol{u}$: 制御入力（時間の関数）
 	    - $\dot{\boldsymbol{x}} = \dfrac{\text{d}\boldsymbol{x}}{\text{d}t}$
+- 制御の目的
