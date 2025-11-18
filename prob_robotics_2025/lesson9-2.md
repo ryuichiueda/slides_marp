@@ -97,8 +97,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### この問題のベルマン方程式
 
 - ある時刻$0$から微小時間$\Delta t$の間の制御$\boldsymbol{u}(t)$が最適なとき
-    - $V^*(\boldsymbol{x}_0) = \min_{\substack{\boldsymbol{u}(t) \\ (0\le t < \Delta t)}}\left\{ \int_0^{\Delta t} L\left[ \boldsymbol{x}(t), \boldsymbol{u}(t) \right] \text{d}t +  V^*\left[ \boldsymbol{x}( \Delta t) \right] \right\}$
-        - $\boldsymbol{x}_0$: 時刻$0$の状態
+    - $V^*(\boldsymbol{x}(0)) = \min_{\substack{\boldsymbol{u}(t) \\ (0\le t < \Delta t)}}\left\{ \int_0^{\Delta t} L\left[ \boldsymbol{x}(t), \boldsymbol{u}(t) \right] \text{d}t +  V^*\left[ \boldsymbol{x}( \Delta t) \right] \right\}$
+        - $\boldsymbol{x}_0$: 時刻$0$の状態（どの時刻を$0$とおいてもよいことに注意）
 
 ---
 
