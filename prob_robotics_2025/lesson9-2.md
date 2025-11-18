@@ -163,3 +163,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 強化学習は「状態遷移も報酬も分からんからエージェントに経験させる」というもの
 <span style="color:red">$\Longrightarrow$じゃあ分かってたら別に経験いらないじゃないか</span>
     - ほんとうは順序が逆で、価値反復ができないから強化学習をやる
+
+---
+
+### 価値反復の手続き
+
+
+- ベルマン方程式で$V$をひたすら更新
+- $V(\boldsymbol{x}) \longleftarrow \min_{a\in\mathcal{A}} \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
+    - $V$: 収束していない最適状態価値関数
+    - 問題設定が適切なら必ず収束
+- Q学習（や他の強化学習）との違い
+    - 強化学習: $P(\boldsymbol{x}' | \boldsymbol{x}, a)$が分からないからエージェントに行動させて$\boldsymbol{x}' \sim P(\boldsymbol{x}' | \boldsymbol{x}, a)$を得る
