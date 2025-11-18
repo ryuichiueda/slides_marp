@@ -110,6 +110,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - $V^*[ \boldsymbol{x}( \Delta t)]$を$\Delta t$に対して線形な式に近似してベルマン方程式を整理すると
 	- $0 = \min_{\boldsymbol{u}} \left\{ L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top}  ( A\boldsymbol{x} + B\boldsymbol{u} ) \right\}$
+    （これもベルマン方程式といえる）
+- 意味
+    - $\dot{\boldsymbol{x}} = A\boldsymbol{x} + B\boldsymbol{u} + \boldsymbol{\varepsilon}$なので、$\dot{\boldsymbol{x}}$の平均値$\bar{\dot{\boldsymbol{x}}}$を考えると
+    $0 = \min_{\boldsymbol{u}} \left\{ L( \boldsymbol{x}, \boldsymbol{u} ) +  \nabla V^*(\boldsymbol{x})^{\top} \bar{\dot{\boldsymbol{x}}}\right\}$
+    - つまり、$L$と$V^*$の変化量に速度の平均値をかけると釣り合うという意味
 
 ---
 
