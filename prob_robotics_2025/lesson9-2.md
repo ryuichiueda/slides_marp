@@ -51,3 +51,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - どの$\boldsymbol{x}$でも最適な行動を提示可能
 - $V^*$: 最適状態価値関数
     - 状態$\boldsymbol{x}$から最適方策を選び続けたときの価値の期待値
+
+<center>実は世の中の制御はベルマン方程式を解く問題になっている</center>
