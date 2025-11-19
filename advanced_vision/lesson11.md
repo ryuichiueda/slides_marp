@@ -188,3 +188,7 @@ marp: true
 
 - 球面上でフーリエ変換のようなことをして関数を近似
 
+![bg right:30% 100%](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cubicharmonics_3840x2160.png/1600px-Cubicharmonics_3840x2160.png)
+
+<span style="font-size:50%">([Image by Daigokuz CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Cubicharmonics_3840x2160.png))
+
