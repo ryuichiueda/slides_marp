@@ -92,15 +92,14 @@ $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
 
 ---
 
-### Information Modeling
+### Modeling for information handling
 
-- The robot obtains (often indirect) information $Z_t$ about its location at each discrete time instant: <span style="color:red">observation</span>
-- $t=1,2,\dots$
-- "Indirect": Information that does not directly indicate "You are here"
-- Example
-- Tokyo Tower, Tokyo Skytree, Mt. Fuji, and the Clock Tower are visible
-- LiDAR sensor values ​​(absolute position not given)
-- <span style="color:red">Can be converted to location information using Bayes' theorem</span>
+- The robot obtains (often indirect) information $Z_t$ about its location at each discrete time instant: <span style="color:red">observation</span> ($t=1,2,\dots$)
+    - "Indirect": Information that does not directly indicate "You are here"
+        - Example
+           - Tokyo Tower, Tokyo Skytree, Mt. Fuji, and the Clock Tower are visible
+           - LiDAR sensor values (absolute position not given)
+        - <span style="color:red">Can be converted to location information using Bayes' theorem</span>
 - $Z_t$: Can be either an event or a random variable
 
 ![bg right:25% 100%](./figs/sensor_data.svg)
