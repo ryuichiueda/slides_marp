@@ -32,11 +32,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Review of Last Time's Topic
 
 - Bayesian Filter
-- Consists of the following two equations
-- When the robot moves: $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
-- When information is obtained: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
-- $b_t$ is calculated from $b_0$ by repeating the following calculations.
-- Converting motion and information into a belief distribution.
+    - Consists of the following two equations
+        - When the robot moves: $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
+        - When information is obtained: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
+    - $b_t$ is calculated from $b_0$ by repeating the following calculations.
+    - Converting motion and information into a belief distribution.
 - How is this implemented?
 
 ---
