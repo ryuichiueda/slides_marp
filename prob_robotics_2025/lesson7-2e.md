@@ -44,15 +44,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## Kalman Filter (Linear Case)
 
 - Linear: The observation equation can be written in linear form.
-- $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c} + \boldsymbol{\varepsilon}$
-- Time subscripts are omitted.
-- $\boldsymbol{z}$: Information (must be a vector).
-- $\boldsymbol{c}$: Constant term.
-- $\boldsymbol{\varepsilon}$: Noise.
-- $H$: (together with $\boldsymbol{c}$) A matrix that models the sensor values ​​obtained at location $\boldsymbol{x}$.
+    - $\boldsymbol{z} = H \boldsymbol{x} + \boldsymbol{c} + \boldsymbol{\varepsilon}$
+        - Time subscripts are omitted.
+        - $\boldsymbol{z}$: Information (must be a vector).
+        - $\boldsymbol{c}$: Constant term.
+        - $\boldsymbol{\varepsilon}$: Noise.
+        - $H$: (together with $\boldsymbol{c}$) A matrix that models the sensor values obtained at location $\boldsymbol{x}$.
 - Probabilistic observation equation notation (assuming $\boldsymbol{\varepsilon}$ follows a Gaussian distribution).
-- $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
-- $Q$: Noise covariance matrix
+    - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
+        - $Q$: Noise covariance matrix
 
 ---
 
