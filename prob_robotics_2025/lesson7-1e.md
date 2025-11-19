@@ -134,21 +134,24 @@ $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
     - The likelihood function of Bayes' theorem
 - It constructs its own distribution $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$ in its head from the condition and likelihood function
 $\Longrightarrow$ The constructed distribution is called a <span style="color:red">belief distribution</span>
-- It's a proper term
+    - It's a proper term
 
 ---
 
 ### Belief = subjective
 
 - In the case of animals
-- The likelihood function differs for each individual, and so does the belief distribution.
-- In fact, there is no correct answer.
-- As long as the belief distribution matches reality and allows for correct behavioral decisions, that's all that matters.
+    - The likelihood function differs for each individual, and so does the belief distribution.
+        - In fact, there is no correct answer.
+        - As long as the belief distribution matches reality and allows for correct behavioral decisions, that's all that matters.
+
+---
+
 - In the case of robots
-- Basically the same as with animals.
-- If the conditions are clearly defined, there is a "correct answer," but this is not necessarily the case if something deviates from those conditions.
-- Pursuing accuracy is not very meaningful; what matters is how well it can tolerate the unreasonableness of the real world.
-- There is a considerable degree of freedom in designing the likelihood function.
+    - Basically the same as with animals.
+    - If the conditions are clearly defined, there is a "correct answer," but this is not the case if something deviates from those conditions.
+    - Pursuing accuracy is not very meaningful; what matters is how well it can tolerate the unreasonableness of the real world.
+    - There is a considerable degree of freedom in designing the likelihood function.
 ---
 
 ### Calculating Belief Distributions 1
