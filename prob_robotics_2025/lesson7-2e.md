@@ -112,13 +112,13 @@ Assume the following case:
 
 ### Introducing the Kalman Gain
 
-- The last two equations on the previous page allowed us to incorporate GNSS and gyro values ​​into the distribution.
-- However, we can simplify things further, so let's continue the calculation.
+- The last two equations on the previous page allowed us to incorporate GNSS and gyro values into the distribution.
+    - However, we can simplify things further, so let's continue the calculation.
 - Introducing the following notation:
-- $K_t = \Sigma_t H^\top Q^{-1}$: <span style="color:red">Kalman Gain</span> (We'll explain what this is later.)
-- $\hat{\boldsymbol{z}}_t = H \hat{\boldsymbol{\mu}}_t + \boldsymbol{c}$: Sensor data likely to be obtained at the center of the distribution $\hat{b}_t$
-- $\boldsymbol{\mu}_t = \Sigma_t \big\{ H^\top Q^{-1}(\boldsymbol{z}_t- \boldsymbol{c} ) + \hat\Sigma_t^{-1}\hat{\boldsymbol{\mu}}_t Rearranging \big\}$ (Let's try it)
-* $= K_t (\boldsymbol{z}_t- \boldsymbol{c} ) + \Sigma_t(\Sigma_t^{-1} - H^\top Q^{-1}H)\hat{\boldsymbol{\mu}}_t$
+    - $K_t = \Sigma_t H^\top Q^{-1}$: <span style="color:red">Kalman Gain</span> (We'll explain what this is later.)
+    - $\hat{\boldsymbol{z}}_t = H \hat{\boldsymbol{\mu}}_t + \boldsymbol{c}$: Sensor data likely to be obtained at the center of the distribution $\hat{b}_t$
+- Rearranging $\boldsymbol{\mu}_t = \Sigma_t \big\{ H^\top Q^{-1}(\boldsymbol{z}_t- \boldsymbol{c} ) + \hat\Sigma_t^{-1}\hat{\boldsymbol{\mu}}_t  \big\}$ (Let's try it)
+    * $= K_t (\boldsymbol{z}_t- \boldsymbol{c} ) + \Sigma_t(\Sigma_t^{-1} - H^\top Q^{-1}H)\hat{\boldsymbol{\mu}}_t$
 $= K_t (\boldsymbol{z}_t- \boldsymbol{c} ) + (I - K_t H)\hat{\boldsymbol{\mu}}_t$
 $= K_t (\boldsymbol{z}_t- \boldsymbol{c} - H \hat{\boldsymbol{\mu}}_t) + \hat{\boldsymbol{\mu}}_t$
 $= K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
