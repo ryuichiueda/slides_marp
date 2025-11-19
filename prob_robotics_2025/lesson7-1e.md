@@ -122,13 +122,16 @@ $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
 ### Belief Distribution
 
 - What's going on in the head of a robot estimating its location?
-- Darkness (←↑ I know this is a bit metaphorical, but...)
-- It doesn't know its true location
-- Sensor values ​​are meaningless unless they pass through Bayes' theorem
-<span style="color:red">$\Longrightarrow$ Humans are actually the same, but they're so sophisticated they don't realize it</span>
+    - Darkness
+        - It doesn't know its true location
+        - Sensor values are meaningless unless they pass through Bayes' theorem
+<span style="color:red">$\Longrightarrow$ Humans are actually the same, but they're so sophisticated. They don't realize it.</span>
+
+---
+
 - Clues
-- The condition part of $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
-- The likelihood function of Bayes' theorem
+    - The condition part of $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
+    - The likelihood function of Bayes' theorem
 - It constructs its own distribution $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$ in its head from the condition and likelihood function
 $\Longrightarrow$ The constructed distribution is called a <span style="color:red">belief distribution</span>
 - It's a proper term
