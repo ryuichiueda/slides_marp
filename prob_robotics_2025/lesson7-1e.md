@@ -75,11 +75,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - Formula: $p(\boldsymbol{x} | Z_{1:n}) = \eta L(\boldsymbol{x}| Z_1)L(\boldsymbol{x} | Z_2)\cdots L(\boldsymbol{x}| Z_n) p(\boldsymbol{x})$
 $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
-- Information $Z_{1:n}$ is mutually independent (independent and identically distributed).
-- Let's derive it using Bayes' theorem.
-- The prior distribution is arbitrary (a uniform distribution is appropriate if there is no information).
+    - Information $Z_{1:n}$ is mutually independent (independent and identically distributed).
+    - Let's derive it using Bayes' theorem.
+    - The prior distribution is arbitrary (a uniform distribution is appropriate if there is no information).
 
-![w:500](./figs/prior_posterior.svg)<span style="font-size:70%">(Note: This is not an exact calculation.)</span>
+![w:300](./figs/prior_posterior.svg)<span style="font-size:70%">(Note: This is not an exact calculation.)</span>
 
 ---
 
