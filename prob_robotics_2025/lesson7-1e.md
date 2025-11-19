@@ -171,16 +171,19 @@ $= \eta p(Z_t | \boldsymbol{x} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z
 ### Calculating Belief Distribution 2
 
 - Let's find $\hat{b}_t$ from $b_{t-1}$
-- The equation found in Part 6 (Part 1) holds true.
-- $p_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1}) }$
+    - The equation found in Lesson 6 (Part 1) holds true.
+        - $p_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{p_{t-1}(\boldsymbol{x}_{t-1}) }$
 <span style="color:red">$\Longrightarrow \hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$</span>
-- $Z_t$ is irrelevant; it is determined by the already calculated $b_{t-1}$, the movement $\boldsymbol{u}_t$, and the state transition distribution.
+    - $Z_t$ is irrelevant; it is determined by the already calculated $b_{t-1}$, the movement $\boldsymbol{u}_t$, and the state transition distribution.
 
 ---
 
 ## Summary
 
 - $b_t$ is calculated by repeating the following calculations from $b_0$.
-- When the robot moves: $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
-- When information is available: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
-- The above two equations: <span style="color:red">Bayesian filtering
+    - When the robot moves: $\hat{b}_t(\boldsymbol{x}) = \big\langle p(\boldsymbol{x}| \boldsymbol{x}_{t-1} , \boldsymbol{u}_t) \big\rangle_{b_{t-1}(\boldsymbol{x}_{t-1}) }$
+    - When information is obtained: $b_t(\boldsymbol{x}) = \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
+- The above two equations: <span style="color:red">Bayesian filtering</span>
+    - Converting motion and information into a belief distribution
+- How do we implement it?
+    - Continued in Part 2
