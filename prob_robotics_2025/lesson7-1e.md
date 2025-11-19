@@ -85,10 +85,10 @@ $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
 
 ## Bayesian filter and localization
 
-- Applying this to a robot, the robot's position can be estimated from multiple pieces of information. $\Rightarrow$<span style="color:red">Bayesian filter</span> - Principles of localization estimation.
+- Applying this to a robot, the robot's position can be estimated from multiple pieces of information. $\Rightarrow$<span style="color:red">Bayesian filter</span> - Principles of mobile robot localization.
 - Differences from the previous discussion.
-- The robot moves.
-- The robot is the one doing the thinking (it must be properly programmed).
+    - The robot moves.
+    - We made robots solve the problem. It must be properly programmed.
 
 ---
 
