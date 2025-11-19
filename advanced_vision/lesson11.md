@@ -184,7 +184,7 @@ marp: true
 
 ---
 
-### 球面調和関数（spherical harmonics）
+### 球面調和関数（spherical harmonics）を利用した色（放射輝度）の表現[[Sloan2002]](https://dl.acm.org/doi/10.1145/566654.566612)
 
-- 球面にサイン波で模様を描いたもの
+- 球面上でフーリエ変換のようなことをして関数を近似
 
