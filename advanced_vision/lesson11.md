@@ -6,7 +6,7 @@ marp: true
 
 # アドバンストビジョン
 
-## 第11回: NeRFと3D Gaussian splatting
+## 第11回: NeRFと3DGS
 
 千葉工業大学 上田 隆一
 
@@ -24,6 +24,7 @@ marp: true
 - SfM（structure from motion）
     - 本当は細かくやるべきだけど概要だけ
 - NeRF（neural radiance fields）
+- 3DGS（3D Gaussian splatting）
 
 ---
 
@@ -142,7 +143,7 @@ marp: true
 
 ---
 
-## 3D Gaussian splatting[[Kerbl2023]](https://arxiv.org/pdf/2308.04079)
+## 3D Gaussian splatting（3DGS）[[Kerbl2023]](https://arxiv.org/pdf/2308.04079)
 
 - NeRFのような光の表現を、ガウス分布を空間中に置いて表現
    - 人工ニューラルネットワークは使わない（使う必要がなかった）
