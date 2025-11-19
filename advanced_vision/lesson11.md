@@ -180,3 +180,10 @@ marp: true
         - $SS^\top$: 対角成分が$0$以上の行列に（楕円体の各軸の分散が並ぶ）
         - $SS^\top$を両側から$R$で挟むと任意の向きに回転できる
     - [確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)も参照のこと
+
+---
+
+### 球面調和関数（spherical harmonics）
+
+- 球面にサイン派で模様を描いたもの
+
