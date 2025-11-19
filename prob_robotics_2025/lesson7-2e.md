@@ -56,15 +56,15 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## Example of a linear Kalman filter
+## Example of a Kalman filter
 
 Assume the following case:
 
 - State (position and orientation): $\boldsymbol{x} = (x \ y \ \theta)^\top$
-- The $x$ and $y$ axes correspond to the latitude and longitude directions, respectively.
+    - The $x$ and $y$ axes correspond to the latitude and longitude directions, respectively.
 - Observation: $\boldsymbol{z} = (p_\text{la} \ p_\text{lo} \ \varphi)^\top$
-- Latitude $p_\text{la}$ and longitude $p_\text{lo}$ are obtained directly from the GNSS (with error).
-- Direction $\varphi$ information is obtained from the gyro (with error).
+    - Latitude $p_\text{la}$ and longitude $p_\text{lo}$ are obtained directly from the GNSS (with error).
+    - Direction $\varphi$ information is obtained from the gyro (with error).
 
 ![bg right:25% 100%](./figs/gnss.svg)
 
