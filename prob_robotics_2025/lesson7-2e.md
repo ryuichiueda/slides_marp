@@ -128,7 +128,7 @@ $= K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
 ### Introducing the Kalman Gain (continued)
 
 - Streamlining $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$ (Let's try this too)
-* $I = \Sigma_t H^\top Q^{-1} H +\Sigma_t \hat\Sigma_t^{-1} \Longrightarrow
+    * $I = \Sigma_t H^\top Q^{-1} H +\Sigma_t \hat\Sigma_t^{-1} \Longrightarrow
 I = K_t H +\Sigma_t \hat\Sigma_t^{-1}$
 $\Longrightarrow
 \hat\Sigma_t = K_t H\hat\Sigma_t +\Sigma_t \Longrightarrow
