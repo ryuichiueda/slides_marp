@@ -109,10 +109,10 @@ $= \eta \prod_{i=1}^n L(\boldsymbol{x}| Z_i)p(\boldsymbol{x})$
 ### Distribution of Robot Location
 
 - Distribution of the robot's position $\boldsymbol{x}$ at time $t$: Denoted as $p_t(\boldsymbol{x}|$condition$)$
-- Problem: What goes in the "condition"? (Known information)
-- Let's say the distribution of $\boldsymbol{x}$ at time $t=0$ is $p_0$.
-- Answer
-* $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
+    - Problem: What goes in the "condition"? (Known information)
+        - Let's say the distribution of $\boldsymbol{x}$ at time $t=0$ is $p_0$.
+        - Answer
+            * $p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
 - The robot itself determines this conditional distribution = self-localization.
 
 ![bg right:25% 100%](./figs/sensor_data.svg)
