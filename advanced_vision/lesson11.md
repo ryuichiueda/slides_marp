@@ -186,7 +186,12 @@ marp: true
 
 ### 球面調和関数（spherical harmonics）を利用した色（放射輝度）の表現[[Sloan2002]](https://dl.acm.org/doi/10.1145/566654.566612)
 
-- 球面上でフーリエ変換のようなことをして関数を近似
+- 球面調和関数
+   - なんなのか雑に説明すると、球面上でのフーリエ変換
+   - RGBそれぞれに対して3つ用意すると、球面上の任意の点のRGBを表現できる
+   - ラプラス方程式の解で構成
+       - 原子の電子軌道と同じ計算
+       - 高い周波数成分を増やしていくと細かい表現が可能に
 
 ![bg right:30% 100%](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cubicharmonics_3840x2160.png/1600px-Cubicharmonics_3840x2160.png)
 
