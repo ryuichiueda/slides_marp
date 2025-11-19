@@ -63,9 +63,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Example of a likelihood function (example from the previous quiz)
 
 - Black areas or areas with pins stuck in them have a high likelihood.
-- This is a random function created by the instructor, but it works.
+   - This is a function made up by the instructor, but it works.
 - Applying the likelihood function using Bayes' theorem results in a high probability of finding the location of the clock tower in Hokkaido.
-- The equation for multiple pieces of information is on the next page.
+   - The equation for multiple pieces of information is on the next page.
 
 ![w:800](./figs/likelihoods.svg)
 
