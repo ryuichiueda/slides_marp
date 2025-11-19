@@ -73,17 +73,22 @@ Assume the following case:
 ### The observation equation (likelihood function) is as follows:
 
 - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{z} | H\boldsymbol{x} + \boldsymbol{c}, Q)$
-- $\boldsymbol{z} = (p_\text{la}, p_\text{lo},\varphi)$
-- $H = \begin{pmatrix}
+    - $\boldsymbol{z} = (p_\text{la}, p_\text{lo},\varphi)$
+    - $H = \begin{pmatrix}
 \alpha_\text{la} & 0 & 0 \\
 0 & \alpha_\text{lo} & 0 \\
 0 & 0 & 1
 \end{pmatrix}$
-- $\alpha_\text{la}, \alpha_\text{lo}$: Latitude and longitude per meter
-- $\boldsymbol{c} = (p_\text{la} \ p_\text{lo} \ \varphi_0)^\top$
-- Both are variables for adjusting the origin.
-- $Q$: Measured error magnitude and converted into a covariance matrix.
-- In this case, it seems appropriate to only enter values ​​on the diagonal elements (variance).
+        - $\alpha_\text{la}, \alpha_\text{lo}$: Latitude and longitude per meter
+    - $\boldsymbol{c} = (p_\text{la} \ p_\text{lo} \ \varphi_0)^\top$
+        - Both are variables for adjusting the origin.
+    - $Q$: Measured error magnitude and converted into a covariance matrix.
+         - In this case, it seems appropriate to only enter values on the diagonal elements (variance).
+
+![bg right:25% 100%](./figs/gnss.svg)
+
+---
+
 - The right-hand side is the likelihood function (measured likelihood of $\boldsymbol{z}\rightarrow \boldsymbol{x}$).
 
 ![bg right:25% 100%](./figs/gnss.svg)
