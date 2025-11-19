@@ -43,20 +43,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
    - Did you consider the instructor's intention?
    - What part of your brain did you use?
 - How can you implement it in a robot?
-   - We can use GPT now, but think a method that GPT also uses.
+   - We can use GPT now, but consider a method that GPT also uses.
 
 ---
 
 ### Thinking about "elimination"
 
-- Actually, it can be handled (analogously) using Bayes' theorem.
-- $p(\boldsymbol{x} | Z) = \eta L(\boldsymbol{x}| Z)p(\boldsymbol{x})$
-- $\boldsymbol{x}$: Estimation target
-- $Z$: Hint (the "condition" of conditional probability)
-- $L$: <span style="color:red">Likelihood function</span>
-- $L(\boldsymbol{x}|Z) = \Pr\{Z | \boldsymbol{x}\}$
+- Actually, it can be handled using Bayes' theorem.
+    - $p(\boldsymbol{x} | Z) = \eta L(\boldsymbol{x}| Z)p(\boldsymbol{x})$
+        - $\boldsymbol{x}$: Estimation target
+        - $Z$: Hint (the "condition" of conditional probability)
+        - $L$: <span style="color:red">Likelihood function</span>
+            - $L(\boldsymbol{x}|Z) = \Pr\{Z | \boldsymbol{x}\}$
 - The prior distribution $p(\boldsymbol{x})$ is transformed into the posterior distribution $p(\boldsymbol{x}|Z)$ using information $Z$.
-- If you read the equation carefully, you'll see that it does indeed have that form.
+    - If you read the equation carefully, you'll see that it does indeed have that form.
 
 ---
 
