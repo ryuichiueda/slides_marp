@@ -157,14 +157,14 @@ $\Longrightarrow$ The constructed distribution is called a <span style="color:re
 ### Calculating Belief Distributions 1
 
 - Preparation
-- Denote $b_t(\boldsymbol{x}) = p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
+    - Denote $b_t(\boldsymbol{x}) = p_t(\boldsymbol{x}|p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$
 - By Bayes' theorem,
-- $b_t(\boldsymbol{x}) = p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$ 
+    - $b_t(\boldsymbol{x}) = p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t})$ 
 $= \eta p(Z_t | \boldsymbol{x}, p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )$ 
 $= \eta p(Z_t | \boldsymbol{x} ) p(\boldsymbol{x} | p_0, \boldsymbol{u}_{1:t}, Z_{1:t-1} )\qquad$ (the distribution of $Z_t$ is determined only by $\boldsymbol{x}$) 
-<span style="color:red">$= \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$
-- $L$: Likelihood function
-- $\hat{b}_t$: Belief distribution at time $t$, just before the robot learns $Z_t$
+<span style="color:red">$= \eta L(\boldsymbol{x} | Z_t) \hat{b}_t(\boldsymbol{x})$</span>
+        - $L$: Likelihood function
+        - $\hat{b}_t$: Belief distribution at time $t$, just before the robot learns $Z_t$
 
 ---
 
