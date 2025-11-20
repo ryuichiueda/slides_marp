@@ -202,7 +202,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ---
 
-### 球面調和関数
+### 球面調和関数を利用した色の表現（詳細）
 
 - 球面の点の極座標を$(\theta, \varphi)$で表現
    - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
@@ -210,6 +210,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
        - $K_\ell^{m}$: 正規化定数（後述）
        - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)（後述）
+- 表現したい関数
 
 
 ---
