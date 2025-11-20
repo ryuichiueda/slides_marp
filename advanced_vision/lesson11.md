@@ -210,11 +210,15 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
     - 極座標$(\theta, \varphi)$
         - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
         - 球面の点の極座標を$(\theta, \varphi)$で表現
-- 基底関数（関数を分解した部品）
+
+---
+
+### 基底関数
+
+- 基底関数
    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
        - $K_\ell^{m}$: 正規化定数（後述）
        - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)（後述）
-- 表現したい関数
 
 
 ---
