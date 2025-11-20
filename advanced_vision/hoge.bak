@@ -1,9 +1,0 @@
-We propose recovery method from the failure of a LiDAR-based mobile robot
-self-localization using Visual Positioning System (VPS).
-We have proposed a recovery method using GNSS. This method makes
-a robot wander so as to search a place where GNSS signals
-are accurate. In this paper, we use the VPS based recovery method
-with the previous method so as to enhance the chance of recovery,
-and reduce the fequency of wandering. 
-The experimental results showed that the VPS based method is
-effective in an actual enviroment with some tall buildings. 
