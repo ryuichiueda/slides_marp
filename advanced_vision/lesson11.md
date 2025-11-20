@@ -206,9 +206,17 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 - 球面の点の極座標を$(\theta, \varphi)$で表現
    - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
-- 基底関数
+- 基底関数（関数を分解した部品）
    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
-       - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
+       - $K_\ell^{m}$: 正規化定数（後述）
+       - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)（後述）
+
+
+---
+
+### ルジャンドル陪多項式
+
+
            - 「The first few associated Legendre functions」のところに計算された多項式が掲載されている
            - 参考: https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf の(7.6)に三角関数バージョンが存在
 
