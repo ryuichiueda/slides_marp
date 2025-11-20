@@ -204,6 +204,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ### ガウス分布の操作
 
-- 最初にSfMで計算した特徴点の位置に置く
-- 次の操作で加減
+- 最初にSfMで計算に使った特徴点の位置に置く
+    - 必要な数より少ない
+- 次の操作で増加（ときには削減）
     - clone, split, pruning
