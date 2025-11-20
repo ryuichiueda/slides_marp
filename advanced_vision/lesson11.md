@@ -210,6 +210,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
        - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
            - 「The first few associated Legendre functions」のところに計算された多項式が掲載されている
+           - 参考: https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf
 
 ---
 
