@@ -92,7 +92,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
      13     listener = launch_ros.actions.Node(
      14         package='mypkg',
      15         executable='listener',
-     16         output='screen'        #ログを端末に出すための設定
+     16         output='screen'        #ログを端末に出すための設定                                   
      17         )
      18
      19     return launch.LaunchDescription([talker, listener])                      
