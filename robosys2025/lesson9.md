@@ -50,7 +50,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - パッケージのディレクトリに`launch`ディレクトリを作成
     ```
-    $ cd ~/ros2_ws/src/mypkg/
+    $ cd ~/ros2_ws/src/mypkg/                                                       
     $ mkdir launch
     ```
 
@@ -61,7 +61,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     （中略）
      11     data_files=[
     （中略）
-     15        (os.path.join('share', package_name), glob('launch/*.launch.py'))
+     15        (os.path.join('share', package_name), glob('launch/*.launch.py'))                          
      16     ],                       #↑追加
     ```
 - `package.xml`に依存関係を記述
