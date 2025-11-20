@@ -204,8 +204,12 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ### 球面調和関数を利用した色の表現（詳細）
 
-- 球面の点の極座標を$(\theta, \varphi)$で表現
-   - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
+- $f(\theta,\varphi) = \sum_{\ell=0}^{n-1}\sum_{m=-\ell}^\ell w_\ell^m y_\ell^m(\theta, \varphi)$
+    - $w_\ell^m$: パラメータ
+    - $y_\ell^m$: 基底関数（関数を分解した部品）
+    - 極座標$\theta, \varphi$
+        - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
+        - 球面の点の極座標を$(\theta, \varphi)$で表現
 - 基底関数（関数を分解した部品）
    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
        - $K_\ell^{m}$: 正規化定数（後述）
