@@ -220,6 +220,12 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
        - $K_\ell^m = \sqrt{\dfrac{(2\ell + 1)(\ell - |m|)!}{4\pi(\ell + |m|)!}}$（正規化定数）
        - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
            - 参考: https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf の(7.6)に三角関数バージョンが存在
+- 実数表現（これを使う）
+    - $y_\ell^m = \begin{cases}
+        \sqrt{2}\text{Re}(Y_\ell^m) & (m > 0) \\
+        \sqrt{2}\text{Im}(Y_\ell^m) & (m < 0) \\
+        Y_\ell^0 & m = 0
+    \end{cases}$
 
 
 ---
