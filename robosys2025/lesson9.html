@@ -246,7 +246,7 @@ uint8 age
 <span class="hljs-number">12</span>     <span class="hljs-keyword">global</span> n
 <span class="hljs-number">13</span>     msg = Person()         <span class="hljs-comment">#送信するデータの型を変更</span>
 <span class="hljs-number">14</span>     msg.name = <span class="hljs-string">&quot;上田隆一&quot;</span>  <span class="hljs-comment">#msgファイルに書いた「name」</span>
-<span class="hljs-number">15</span>     msg.age = n            <span class="hljs-comment">#msgファイルに書いた「age」</span>
+<span class="hljs-number">15</span>     msg.age = n            <span class="hljs-comment">#msgファイルに書いた「age」                             </span>
 <span class="hljs-number">16</span>     pub.publish(msg)
 <span class="hljs-number">17</span>     n += <span class="hljs-number">1</span>
 <span class="hljs-number">18</span> 
@@ -387,7 +387,7 @@ uint8 age
 <span class="hljs-number">16</span> 
 <span class="hljs-number">17</span> 
 <span class="hljs-number">18</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
-<span class="hljs-number">19</span>     srv = node.create_service(Query, <span class="hljs-string">&quot;query&quot;</span>, cb) <span class="hljs-comment">#サービスの作成     </span>
+<span class="hljs-number">19</span>     srv = node.create_service(Query, <span class="hljs-string">&quot;query&quot;</span>, cb) <span class="hljs-comment">#サービスの作成                     </span>
 <span class="hljs-number">20</span>     rclpy.spin(node)
 </code></pre>
 </li>

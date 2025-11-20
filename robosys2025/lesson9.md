@@ -210,7 +210,7 @@ $ ros2 launch mypkg talk_listen.launch.py
     12     global n
     13     msg = Person()         #送信するデータの型を変更
     14     msg.name = "上田隆一"  #msgファイルに書いた「name」
-    15     msg.age = n            #msgファイルに書いた「age」
+    15     msg.age = n            #msgファイルに書いた「age」                             
     16     pub.publish(msg)
     17     n += 1
     18 
@@ -335,7 +335,7 @@ $ ros2 launch mypkg talk_listen.launch.py
     16 
     17 
     18 def main():
-    19     srv = node.create_service(Query, "query", cb) #サービスの作成     
+    19     srv = node.create_service(Query, "query", cb) #サービスの作成                     
     20     rclpy.spin(node)
     ```
 
