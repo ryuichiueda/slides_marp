@@ -215,10 +215,11 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ### 基底関数
 
-- 基底関数
-   - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
-       - $K_\ell^{m}$: 正規化定数（後述）
-       - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)（後述）
+- 複素数表現
+    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
+       - $K_\ell^m = \sqrt{\dfrac{(2\ell + 1)(\ell - |m|)!}{4\pi(\ell + |m|)!}}$（正規化定数）
+       - $P_\ell^{|m|}$: [ルジャンドル陪多項式](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
+           - 参考: https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf の(7.6)に三角関数バージョンが存在
 
 
 ---
@@ -227,7 +228,6 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 
            - 「The first few associated Legendre functions」のところに計算された多項式が掲載されている
-           - 参考: https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf の(7.6)に三角関数バージョンが存在
 
 ---
 
