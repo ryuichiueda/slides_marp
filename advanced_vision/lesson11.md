@@ -204,7 +204,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ### 球面調和関数
 
-- 球面の点を$(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$で表現
+- 球面の点の極座標を$(\theta, \varphi)$で表現
+   - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
 
 ---
 
