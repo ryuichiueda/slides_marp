@@ -207,7 +207,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 - $f(\theta,\varphi) = \sum_{\ell=0}^{n-1}\sum_{m=-\ell}^\ell w_\ell^m y_\ell^m(\theta, \varphi)$
     - $w_\ell^m$: パラメータ
     - $y_\ell^m$: 基底関数（関数を分解した部品）
-    - 極座標$\theta, \varphi$
+    - 極座標$(\theta, \varphi)$
         - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
         - 球面の点の極座標を$(\theta, \varphi)$で表現
 - 基底関数（関数を分解した部品）
