@@ -241,7 +241,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
     - 初期化ではSfMで計算に使った特徴点の数だけで、必要な数より少ない
     - 数を増やしていく
 - ガウス分布を加減する操作
-    - clone
-    - split
-    - pruning
+    - 増やす操作（あるガウス分布の誤差が大きいとき）: cloneとsplit
+        - clone（ガウス分布が小さい場合）: ガウス分布を複製してそばに置く
+        - split（ガウス分布が大きい場合）: ガウス分布を分割
+    - 減らす操作: pruning
         - $\alpha$が閾値以下 or 共分散が大きすぎると消去
