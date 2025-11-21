@@ -239,6 +239,9 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 - NeRFと同様、モデルから画像を作って元の画像と比較してパラメータ修正
 - ガウス分布の個数の調整
     - 初期化ではSfMで計算に使った特徴点の数だけで、必要な数より少ない
-- 「clone」、「split」で増やしていく
-- pruning
-    - $\alpha$が閾値以下 or 共分散が大きすぎる
+    - 数を増やしていく
+- ガウス分布を加減する操作
+    - clone
+    - split
+    - pruning
+        - $\alpha$が閾値以下 or 共分散が大きすぎると消去
