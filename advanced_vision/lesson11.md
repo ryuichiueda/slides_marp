@@ -210,6 +210,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
     - 極座標$(\theta, \varphi)$
         - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
         - 球面の点の極座標を$(\theta, \varphi)$で表現
+- 原子では$n$の数が電子軌道の数に相当
+    - $\ell$が軌道
 
 ---
 
