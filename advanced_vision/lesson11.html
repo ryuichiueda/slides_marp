@@ -372,15 +372,16 @@
 <footer>アドバンストビジョン第11回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-footer="アドバンストビジョン第11回" data-paginate="true" lang="ja-JP" data-marpit-pagination="17" style="--footer:アドバンストビジョン第11回;--paginate:true;" data-marpit-pagination-total="17">
-<h3 id="%E3%82%AC%E3%82%A6%E3%82%B9%E5%88%86%E5%B8%83%E3%81%AE%E6%93%8D%E4%BD%9C">ガウス分布の操作</h3>
+<h3 id="%E5%AD%A6%E7%BF%92">学習</h3>
 <ul>
+<li>NeRFと同様、モデルから画像を作って元の画像と比較してパラメータ修正</li>
 <li>最初にSfMで計算に使った特徴点の位置に置く
 <ul>
 <li>必要な数より少ない</li>
 </ul>
 </li>
 <li>「clone」、「split」で増やしていく</li>
-<li>過剰になると「pruning」
+<li>pruning
 <ul>
 <li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.448ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 640 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D6FC" d="M34 156Q34 270 120 356T309 442Q379 442 421 402T478 304Q484 275 485 237V208Q534 282 560 374Q564 388 566 390T582 393Q603 393 603 385Q603 376 594 346T558 261T497 161L486 147L487 123Q489 67 495 47T514 26Q528 28 540 37T557 60Q559 67 562 68T577 70Q597 70 597 62Q597 56 591 43Q579 19 556 5T512 -10H505Q438 -10 414 62L411 69L400 61Q390 53 370 41T325 18T267 -2T203 -11Q124 -11 79 39T34 156ZM208 26Q257 26 306 47T379 90L403 112Q401 255 396 290Q382 405 304 405Q235 405 183 332Q156 292 139 224T121 120Q121 71 146 49T208 26Z"></path></g></g></g></svg></mjx-container>が閾値以下 or 共分散が大きすぎる</li>
 </ul>

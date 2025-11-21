@@ -234,10 +234,11 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ---
 
-### ガウス分布の操作
+### 学習
 
+- NeRFと同様、モデルから画像を作って元の画像と比較してパラメータ修正
 - 最初にSfMで計算に使った特徴点の位置に置く
     - 必要な数より少ない
 - 「clone」、「split」で増やしていく
-- 過剰になると「pruning」
+- pruning
     - $\alpha$が閾値以下 or 共分散が大きすぎる
