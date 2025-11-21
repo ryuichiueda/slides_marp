@@ -166,7 +166,7 @@ marp: true
     - $\Sigma$: 共分散行列（7パラメータ。後述）
 - 値$\alpha$（$0\le \alpha \le 1$）で（不）透明度を表現（1パラメータ）
     - 誤差を微分で補正するためにシグモイド関数で表現
-- 球面調和関数のパラメータ（25パラメータや49パラメータなど。後述）
+- 球面調和関数のパラメータ（27パラメータや48パラメータなど。後述）
     - NeRFと同様、見る方向によって色を変えるために使う
     - ANNなら勝手に計算してくれるが、ANNでないのでモデル化が必要
 
@@ -205,7 +205,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ### 球面調和関数を利用した色の表現（詳細）
 
-- $f(\theta,\varphi) = \sum_{\ell=0}^{n-1}\sum_{m=-\ell}^\ell w_\ell^m y_\ell^m(\theta, \varphi)$
+- ひとつの色に対して$f(\theta,\varphi) = \sum_{\ell=0}^{n-1}\sum_{m=-\ell}^\ell w_\ell^m y_\ell^m(\theta, \varphi)$
     - $w_\ell^m$: パラメータ
     - $y_\ell^m$: 基底関数（関数を分解した部品）
     - 極座標$(\theta, \varphi)$
@@ -213,7 +213,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
         - 球面の点の極座標を$(\theta, \varphi)$で表現
 - 原子では$n$の数が電子軌道の数に相当
     - $\ell$が軌道
-    - $n$に対してパラメータ数は$n^2$に
+    - $n$に対してパラメータ数は$3n^2$に
+        - $n=3, 4$だとそれぞれ$27, 48$
 
 ---
 
