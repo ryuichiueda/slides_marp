@@ -237,8 +237,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 ### 学習
 
 - NeRFと同様、モデルから画像を作って元の画像と比較してパラメータ修正
-- 最初にSfMで計算に使った特徴点の位置に置く
-    - 必要な数より少ない
+- ガウス分布の個数の調整
+    - 初期化ではSfMで計算に使った特徴点の数だけで、必要な数より少ない
 - 「clone」、「split」で増やしていく
 - pruning
     - $\alpha$が閾値以下 or 共分散が大きすぎる
