@@ -229,14 +229,6 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
         Y_\ell^0 & m = 0
     \end{cases}$
 
-
----
-
-### ルジャンドル陪多項式
-
-
-           - 「The first few associated Legendre functions」のところに計算された多項式が掲載されている
-
 ---
 
 ### ガウス分布の操作
