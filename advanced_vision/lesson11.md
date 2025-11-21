@@ -251,5 +251,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ## まとめ
 
-- NeRFと3DGSを概要だけさらっと
+- SfM、NeRFと3DGSを概要だけさらっと
+    - さらっとですみません
+- NeRFと3DGS
+    - 点に単色を割り当てるSfMに対し、視線で色を変えることで表現力があがる
 
