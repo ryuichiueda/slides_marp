@@ -246,3 +246,10 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
         - split（ガウス分布が大きい場合）: ガウス分布を分割
     - 減らす操作: pruning
         - $\alpha$が閾値以下 or 共分散が大きすぎると消去
+
+---
+
+## まとめ
+
+- NeRFと3DGSを概要だけさらっと
+
