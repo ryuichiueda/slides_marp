@@ -150,11 +150,11 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 前ページの単純な例でも、もっと複雑な例でも次の<span style="color:red">ベルマン方程式</span>が成立
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
-        - $V^*$: <span style="color:red">状態価値関数（値関数）</span>
+        - $V^*$: <span style="color:red">最適状態価値関数（最適な値関数）</span>
             - 各状態で最適な$\boldsymbol{u}$を選ぶ場合のコストの見積もり
     - $V^*$を実現する制御則を<span style="color:red">最適方策</span>$\boldsymbol{\pi}^*$と呼ぶ
         - $\boldsymbol{u} = \boldsymbol{\pi}^*(\boldsymbol{x})$（重要: 状態に対する関数になる）
-- もう一つ重要: 最適でなくても方策$\boldsymbol{\pi}$に対して価値関数が存在
+- もう一つ重要: 最適でなくても方策$\boldsymbol{\pi}$に対して$V^\boldsymbol{\pi}$が存在
     - $V^\boldsymbol{\pi}(\boldsymbol{x}) = \big\langle V^\boldsymbol{\pi}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
         - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$
 
