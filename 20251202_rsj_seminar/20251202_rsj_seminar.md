@@ -138,6 +138,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
     - $V(\boldsymbol{x}_\text{f}) = 0$
     - ステップ数を最小にしたい
+- 重要
+    - 状態ごとに終端状態までのコストが見積もれる
+    - 最良の$\boldsymbol{u}$を選ぶと1ステップのコストとコストの見積もりの減少が釣り合う
 
 ![bg right:30% 95%](simple_planning.svg)
 
