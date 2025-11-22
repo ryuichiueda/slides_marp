@@ -275,6 +275,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
+## 様々な制御手法について
+
 次ページからの話は一旦ボツにして、次元の呪いの話に
 
 
