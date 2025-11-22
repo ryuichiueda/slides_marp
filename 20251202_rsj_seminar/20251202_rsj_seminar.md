@@ -139,7 +139,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - $V(\boldsymbol{x}_\text{f}) = 0$
     - ステップ数を最小にしたい
 
-![bg right:18% 95%](simple_planning.svg)
+![bg right:30% 95%](simple_planning.svg)
 
 ---
 
