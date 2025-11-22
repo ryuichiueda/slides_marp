@@ -137,6 +137,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - $\boldsymbol{u}$: 前後左右
     - $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
     - $V(\boldsymbol{x}_\text{f}) = 0$
+- 右図: 問題と解の例
 - 重要
     - 状態ごとに終端状態までのコストが見積もれる
     - 最良の$\boldsymbol{u}$を選ぶと1ステップのコストとコストの見積もりの減少が釣り合う
