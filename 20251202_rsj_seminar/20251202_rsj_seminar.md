@@ -148,6 +148,15 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題の解の性質（どう解くかという話とは別）
 
+- 前ページの単純な例でも、もっと複雑な例でも次の<span style="color:red">ベルマン方程式</span>が成立
+    - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
+- 各状態で最適な$\boldsymbol{u}$が選べる時のコストの見積もり$V^*$
+
+
+---
+
+### 最適制御問題の解の性質（どう解くかという話とは別）
+
 最大原理で解くような問題でもうまく$\boldsymbol{x}$を設計すればこうなる
 
 - ある制御則の解（方策）$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$に対し、ひとつひとつの状態から終端状態までのコストの期待値が計算できる
