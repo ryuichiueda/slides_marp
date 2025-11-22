@@ -138,6 +138,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - $V(\boldsymbol{x}_\text{f}) = 0$
 - ステップ数を最小にしたい
 
+![bg right:18% 95%](simple_planning.svg)
+
 ---
 
 ### 最適制御問題の解の性質（どう解くかという話とは別）

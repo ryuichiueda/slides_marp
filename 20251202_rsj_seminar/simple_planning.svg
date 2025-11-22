@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.59 101.12">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #231815;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-4, .cls-5 {
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        fill: #e60012;
+      }
+
+      .cls-6 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+        font-size: 8px;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        fill: #231815;
+      }
+
+      .cls-7 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-7, .cls-8 {
+        font-size: 12px;
+      }
+
+      .cls-8 {
+        font-family: TimesNewRomanPS-BoldItalicMT, 'Times New Roman';
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        fill: #abaaaa;
+      }
+
+      .cls-9 {
+        fill: #e71f19;
+      }
+
+      .cls-5 {
+        stroke: #e71f19;
+      }
+    </style>
+  </defs>
+  <rect class="cls-4" x="83.56" y="67.11" width="16.67" height="16.67"/>
+  <g>
+    <line class="cls-3" x1="96.28" y1="89.91" x2="96.28" y2="72.96"/>
+    <polygon class="cls-2" points="104.6 75.44 96.28 80.28 96.28 70.6 104.6 75.44"/>
+  </g>
+  <text class="cls-8" transform="translate(41.92 30.2)"><tspan x="0" y="0">x</tspan></text>
+  <g>
+    <line class="cls-9" x1="26.81" y1="46.51" x2="26.81" y2="60.39"/>
+    <g>
+      <line class="cls-5" x1="26.81" y1="46.51" x2="26.81" y2="59.84"/>
+      <polygon class="cls-9" points="24.76 58.19 25.13 57.85 26.81 59.65 28.49 57.85 28.85 58.19 26.81 60.39 24.76 58.19"/>
+    </g>
+  </g>
+  <text class="cls-8" transform="translate(89.49 96.04)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-6" transform="translate(95.59 98.5)"><tspan x="0" y="0">f</tspan></text>
+  <g>
+    <rect class="cls-1" x=".25" y=".25" width="100" height="100"/>
+    <line class="cls-1" x1=".25" y1="83.58" x2="100.25" y2="83.58"/>
+    <line class="cls-1" x1=".25" y1="66.92" x2="100.25" y2="66.92"/>
+    <line class="cls-1" x1=".25" y1="50.25" x2="100.25" y2="50.25"/>
+    <line class="cls-1" x1=".25" y1="33.58" x2="100.25" y2="33.58"/>
+    <line class="cls-1" x1=".25" y1="16.92" x2="100.25" y2="16.92"/>
+    <line class="cls-1" x1="83.58" y1=".25" x2="83.58" y2="100.25"/>
+    <line class="cls-1" x1="66.92" y1=".25" x2="66.92" y2="100.25"/>
+    <line class="cls-1" x1="50.25" y1=".25" x2="50.25" y2="100.25"/>
+    <line class="cls-1" x1="33.58" y1=".25" x2="33.58" y2="100.25"/>
+    <line class="cls-1" x1="16.92" y1=".25" x2="16.92" y2="100.25"/>
+  </g>
+  <g>
+    <line class="cls-9" x1="40.05" y1="42.64" x2="27.12" y2="42.64"/>
+    <g>
+      <line class="cls-5" x1="40.05" y1="42.64" x2="27.66" y2="42.64"/>
+      <polygon class="cls-9" points="29.32 40.59 29.66 40.96 27.85 42.64 29.66 44.32 29.32 44.68 27.12 42.64 29.32 40.59"/>
+    </g>
+  </g>
+  <g>
+    <line class="cls-9" x1="38.58" y1="27.13" x2="38.58" y2="40.04"/>
+    <g>
+      <line class="cls-5" x1="38.58" y1="27.13" x2="38.58" y2="39.5"/>
+      <polygon class="cls-9" points="36.54 37.84 36.9 37.5 38.58 39.31 40.26 37.5 40.63 37.84 38.58 40.04 36.54 37.84"/>
+    </g>
+  </g>
+  <g>
+    <line class="cls-9" x1="26.81" y1="63.66" x2="26.81" y2="77.54"/>
+    <g>
+      <line class="cls-5" x1="26.81" y1="63.66" x2="26.81" y2="76.99"/>
+      <polygon class="cls-9" points="24.76 75.34 25.13 75 26.81 76.8 28.49 75 28.85 75.34 26.81 77.54 24.76 75.34"/>
+    </g>
+  </g>
+  <g>
+    <line class="cls-9" x1="26.81" y1="77.13" x2="38.67" y2="77.13"/>
+    <g>
+      <line class="cls-5" x1="26.81" y1="77.13" x2="38.12" y2="77.13"/>
+      <polygon class="cls-9" points="36.47 79.17 36.13 78.81 37.93 77.13 36.13 75.45 36.47 75.08 38.67 77.13 36.47 79.17"/>
+    </g>
+  </g>
+  <g>
+    <line class="cls-9" x1="45.83" y1="75.87" x2="57.69" y2="75.87"/>
+    <g>
+      <line class="cls-5" x1="45.83" y1="75.87" x2="57.15" y2="75.87"/>
+      <polygon class="cls-9" points="55.49 77.91 55.15 77.55 56.96 75.87 55.15 74.19 55.49 73.82 57.69 75.87 55.49 77.91"/>
+    </g>
+  </g>
+  <rect class="cls-4" x="33.58" y="50.25" width="16.67" height="16.67"/>
+  <rect class="cls-4" x="50.36" y="33.58" width="16.67" height="16.67"/>
+  <rect class="cls-4" x="67.13" y="33.31" width="16.67" height="16.67"/>
+  <text class="cls-7" transform="translate(72.85 96.5)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(55.44 97.05)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(71.85 80.28)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(55.44 80.28)"><tspan x="0" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(37.52 96.5)"><tspan x="0" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(72.44 62.59)"><tspan x="0" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(21.72 96.65)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-7" transform="translate(38.07 80.43)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-7" transform="translate(54.44 62.74)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-7" transform="translate(87.49 64.03)"><tspan x="0" y="0">4</tspan></text>
+  <text class="cls-7" transform="translate(5.49 97.05)"><tspan x="0" y="0">5</tspan></text>
+  <text class="cls-7" transform="translate(21.96 80.28)"><tspan x="0" y="0">5</tspan></text>
+  <text class="cls-7" transform="translate(88.97 46.69)"><tspan x="0" y="0">5</tspan></text>
+  <text class="cls-7" transform="translate(6.03 80.28)"><tspan x="0" y="0">6</tspan></text>
+  <text class="cls-7" transform="translate(21.96 64.03)"><tspan x="0" y="0">6</tspan></text>
+  <text class="cls-7" transform="translate(87.73 28.76)"><tspan x="0" y="0">6</tspan></text>
+  <text class="cls-7" transform="translate(5.71 64.03)"><tspan x="0" y="0">7</tspan></text>
+  <text class="cls-7" transform="translate(21.96 46.69)"><tspan x="0" y="0">7</tspan></text>
+  <text class="cls-7" transform="translate(72.26 28.76)"><tspan x="0" y="0">7</tspan></text>
+  <text class="cls-7" transform="translate(88.2 13.72)"><tspan x="0" y="0">7</tspan></text>
+  <text class="cls-7" transform="translate(6.03 46.84)"><tspan x="0" y="0">8</tspan></text>
+  <text class="cls-7" transform="translate(38.07 46.69)"><tspan x="0" y="0">8</tspan></text>
+  <text class="cls-7" transform="translate(54.44 28.76)"><tspan x="0" y="0">8</tspan></text>
+  <text class="cls-7" transform="translate(72.85 13.72)"><tspan x="0" y="0">8</tspan></text>
+  <text class="cls-7" transform="translate(56.03 13.87)"><tspan x="0" y="0">9</tspan></text>
+  <text class="cls-7" transform="translate(35.25 27.76)"><tspan x="0" y="0">9</tspan></text>
+  <text class="cls-7" transform="translate(22.5 14)"><tspan x="0" y="0">9</tspan></text>
+  <text class="cls-7" transform="translate(21.96 28.9)"><tspan x="0" y="0">8</tspan></text>
+  <text class="cls-7" transform="translate(5.51 29.2)"><tspan x="0" y="0">9</tspan></text>
+  <text class="cls-7" transform="translate(34.81 14.14)"><tspan x="0" y="0">10</tspan></text>
+  <text class="cls-7" transform="translate(3.03 13.72)"><tspan x="0" y="0">10</tspan></text>
+  <g>
+    <line class="cls-9" x1="76.18" y1="93.04" x2="89.51" y2="93.04"/>
+    <g>
+      <line class="cls-5" x1="76.18" y1="93.04" x2="88.97" y2="93.04"/>
+      <polygon class="cls-9" points="87.31 95.09 86.97 94.72 88.77 93.04 86.97 91.37 87.31 91 89.51 93.04 87.31 95.09"/>
+    </g>
+  </g>
+  <g>
+    <line class="cls-9" x1="60.61" y1="75.44" x2="73.93" y2="75.44"/>
+    <g>
+      <line class="cls-5" x1="60.61" y1="75.44" x2="73.39" y2="75.44"/>
+      <polygon class="cls-9" points="71.73 77.48 71.39 77.12 73.2 75.44 71.39 73.76 71.73 73.39 73.93 75.44 71.73 77.48"/>
+    </g>
+  </g>
+  <text class="cls-7" transform="translate(83.8 94.04)"><tspan x="0" y="0">0</tspan></text>
+  <g>
+    <line class="cls-9" x1="73.93" y1="77.97" x2="73.93" y2="91.85"/>
+    <g>
+      <line class="cls-5" x1="73.93" y1="77.97" x2="73.93" y2="91.31"/>
+      <polygon class="cls-9" points="71.89 89.65 72.25 89.31 73.93 91.12 75.61 89.31 75.98 89.65 73.93 91.85 71.89 89.65"/>
+    </g>
+  </g>
+</svg>
