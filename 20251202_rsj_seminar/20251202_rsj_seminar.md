@@ -119,7 +119,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - $\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移
     - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
     - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
-         - ※とりあえず離散時関系で考えます
+         - <span style="font-size:90%">※とりあえず離散時関系で考えます</span>
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
 - 終端状態にも点数: $V(\boldsymbol{x}_\text{f})$
@@ -132,9 +132,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 単純な大域計画の問題の場合
 
-- $\boldsymbol{x}$: ロボットの位置と向き（3次元）
-- $\boldsymbol{u}$: 「前進10cm」、「回転10deg」など
-- $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$がわかる
+- $\boldsymbol{x}$: ロボットの位置（2次元）
+- $\boldsymbol{u}$: 前後左右
 - $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
 - $V(\boldsymbol{x}_\text{f}) = 0$
 - ステップ数を最小にしたい
