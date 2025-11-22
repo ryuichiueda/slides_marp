@@ -257,7 +257,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - 確率的な状態遷移を扱える
     - 障害物を見つけると避けるように$V^\boldsymbol{\pi}$と$\boldsymbol{\pi}$が計算される
         - ゴールに行く経路はあとから計算される
-- 実機での障害物回避の例
+- [実機での障害物回避の例](https://www.youtube.com/watch?v=n7LXx50gl9g)[Ueda2023]
     - 速度が状態に入る自動車でも、原理的には適用可能（計算量の点で無理）
 
 
