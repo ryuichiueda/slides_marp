@@ -106,6 +106,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 |洗濯物が洗濯機の中に|畳んで収納したい|
 |ロボットが目的地でない場所に|目的地にいる状態にしたい|
 
+<span style="font-size:80%">（※VLAは目的の状態を言葉から自律的に設定）</span>
+
 <center>大雑把に考えると全部同じ</center>
 
 ---
