@@ -115,14 +115,16 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 <span style="font-size:70%">マルコフ決定過程（MDP）でもあるけど最適制御と言います</span>
 
 - <span style="color:red">状態</span>$\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
-    - 注意: $\boldsymbol{x}$には速度や時間、制御不可能なものの変数も入れられる
+    - $\boldsymbol{x}$には速度や時間、制御不可能なものの変数も入れられる
 - $\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移
     - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
     - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
          - ※とりあえず離散時関系で考えます
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
-    - できるならコストの総和を最小にする$\boldsymbol{u}$を選びたい
+- 終端状態にも点数: $V(\boldsymbol{x}_\text{f})$
+- <span style="color:red">コストの総和を最小化したい</span>
+
 
 ![bg right:18% 95%](optimal_control_problem.svg)
 
