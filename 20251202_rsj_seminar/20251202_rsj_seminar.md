@@ -123,10 +123,21 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
 - 終端状態にも点数: $V(\boldsymbol{x}_\text{f})$
-- <span style="color:red">コストの総和を最小化したい</span>
+- <span style="color:red">コストの総和$\sum \ell + V(\boldsymbol{x}_\text{f})$を最小化したい</span>
 
 
 ![bg right:18% 95%](optimal_control_problem.svg)
+
+---
+
+### 単純な大域計画の問題の場合
+
+- $\boldsymbol{x}$: ロボットの位置と向き（3次元）
+- $\boldsymbol{u}$: 「前進10cm」、「回転10deg」など
+- $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$がわかる
+- $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
+- $V(\boldsymbol{x}_\text{f}) = 0$
+- ステップ数を最小にしたい
 
 ---
 
