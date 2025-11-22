@@ -260,13 +260,6 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - [実機での障害物回避の例](https://www.youtube.com/watch?v=n7LXx50gl9g)[Ueda2023]
     - 速度が状態に入る自動車でも、原理的には適用可能（計算量の点で無理）
 
-
----
-
-### 価値反復による障害物回避
-
-- デモ
-
 ---
 
 ### 余計な一言
