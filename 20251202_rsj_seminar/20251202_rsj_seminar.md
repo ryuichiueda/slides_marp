@@ -154,9 +154,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
             - 各状態で最適な$\boldsymbol{u}$を選ぶ場合のコストの見積もり
     - $V^*$を実現する制御則を<span style="color:red">最適方策</span>$\boldsymbol{\pi}^*$と呼ぶ
         - $\boldsymbol{u} = \boldsymbol{\pi}^*(\boldsymbol{x})$（重要: 状態に対する関数になる）
-- もう一つ重要: 最適でなくても方策$\boldsymbol{\pi}$に対して、
-    - $V^\boldsymbol{\pi}(\boldsymbol{x}) = \boldsymbol{u} \big\langle V^\boldsymbol{\pi}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
-        が存在
+- もう一つ重要: 最適でなくても方策$\boldsymbol{\pi}$に対して価値関数が存在
+    - $V^\boldsymbol{\pi}(\boldsymbol{x}) = \big\langle V^\boldsymbol{\pi}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
+        - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$
 
 ![bg right:20% 95%](simple_planning.svg)
 
