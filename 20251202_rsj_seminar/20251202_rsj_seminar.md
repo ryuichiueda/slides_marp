@@ -150,7 +150,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 前ページの単純な例でも、もっと複雑な例でも次の<span style="color:red">ベルマン方程式</span>が成立
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
-- 各状態で最適な$\boldsymbol{u}$が選べる時のコストの見積もり$V^*$
+        - $V^*$: <span style="color:red">状態価値関数（値関数）</span>
+            - 各状態で最適な$\boldsymbol{u}$が選べる時のコストの見積もり
 
 ![bg right:20% 95%](simple_planning.svg)
 
