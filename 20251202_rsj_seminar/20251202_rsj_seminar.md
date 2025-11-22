@@ -153,6 +153,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - $V^*$: <span style="color:red">状態価値関数（値関数）</span>
             - 各状態で最適な$\boldsymbol{u}$を選ぶ場合のコストの見積もり
     - $V^*$を実現する制御則を<span style="color:red">最適方策</span>$\boldsymbol{\pi}^*$と呼ぶ
+        - $\boldsymbol{u} = \boldsymbol{\pi}^*(\boldsymbol{x})$（重要: 状態に対する関数になる）
 
 ![bg right:20% 95%](simple_planning.svg)
 
