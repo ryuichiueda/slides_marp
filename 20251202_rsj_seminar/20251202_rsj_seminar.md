@@ -152,6 +152,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')}$
 - 各状態で最適な$\boldsymbol{u}$が選べる時のコストの見積もり$V^*$
 
+![bg right:20% 95%](simple_planning.svg)
 
 ---
 
