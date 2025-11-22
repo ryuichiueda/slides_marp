@@ -96,6 +96,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 ### ナビゲーション（大域+局所）の問題
 
 - 探索は手段であって、本来は複雑な制御問題
+- 制御: なにか制御したいものの<span style="color:red">状態</span>$\boldsymbol{x}$を、
+好ましい状態のひとつ$\boldsymbol{x}_\text{f}$に変える
+    - $\boldsymbol{x}$: そのときの世界のスナップショット（非常に多次元）
 
 ---
 
