@@ -132,11 +132,12 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 単純な大域計画の問題の場合
 
-- $\boldsymbol{x}$: ロボットの位置（2次元）
-- $\boldsymbol{u}$: 前後左右
-- $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
-- $V(\boldsymbol{x}_\text{f}) = 0$
-- ステップ数を最小にしたい
+- 問題
+    - $\boldsymbol{x}$: ロボットの位置（2次元）
+    - $\boldsymbol{u}$: 前後左右
+    - $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
+    - $V(\boldsymbol{x}_\text{f}) = 0$
+    - ステップ数を最小にしたい
 
 ![bg right:18% 95%](simple_planning.svg)
 
