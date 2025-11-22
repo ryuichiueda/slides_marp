@@ -141,6 +141,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 重要
     - 状態ごとに終端状態までのコストが見積もれる
     - 最良の$\boldsymbol{u}$を選ぶと1ステップのコストとコストの見積もりの減少が釣り合う
+    - いまの状態$\boldsymbol{x}$と解は無関係
 
 ![bg right:30% 95%](simple_planning.svg)
 
