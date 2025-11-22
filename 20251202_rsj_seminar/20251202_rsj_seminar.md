@@ -122,7 +122,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
          - ※とりあえず離散時関系で考えます
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
-    - できるならコストを最小にする$\boldsymbol{u}$を選びたい
+    - できるならコストの総和を最小にする$\boldsymbol{u}$を選びたい
 
 ![bg right:18% 95%](optimal_control_problem.svg)
 
