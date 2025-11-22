@@ -149,7 +149,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題の解の性質（どう解くかという話とは別）
 
-- 前ページの単純な例でも、もっと複雑な例でも次の<span style="color:red">ベルマン方程式</span>が成立
+- 前ページの単純な例でも、もっと複雑な例でも$\boldsymbol{x}$が連続でも次の<span style="color:red">ベルマン方程式</span>が成立
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
         - $V^*$: <span style="color:red">最適状態価値関数（最適な値関数）</span>
             - 各状態で最適な$\boldsymbol{u}$を選ぶ場合のコストの見積もり
