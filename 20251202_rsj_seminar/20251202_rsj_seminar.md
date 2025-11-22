@@ -115,9 +115,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 <span style="font-size:70%">マルコフ決定過程（MDP）でもあるけど最適制御と言います</span>
 
 - 問題（とりあえず離散時関系で考えます）
-    - いま、なにか制御したいものの<span style="color:red">状態</span>が$\boldsymbol{x}$です
-        - （注意: $\boldsymbol{x}$には速度や時間も変数として入れられる）
-    - $\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
+    - <span style="color:red">状態</span>$\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
+        - 注意: $\boldsymbol{x}$には速度や時間も変数として入れられる
     - $\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移
         - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
         - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
