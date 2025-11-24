@@ -296,6 +296,12 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 確率モデルで表現することで失うもの/得られるもの
 
+状態方程式: $\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1},\boldsymbol{u}_t)$
+観測方程式: $\boldsymbol{z}_t \sim p(\boldsymbol{z}|\boldsymbol{x}_t)$
+
+- 一般化されすぎていて既存の制御理論から離れないといけない
+    - リアプノフやポントリャーギンの話から離れるか、解釈をしなおさなければならない
+
 ---
 
 ### 次の問題: 大域計画と局所計画との組み合わせ
