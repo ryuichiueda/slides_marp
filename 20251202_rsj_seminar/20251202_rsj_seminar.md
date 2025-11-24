@@ -231,7 +231,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 探索結果+危険回避の組み合わせはダメ？
 
-- OK。ただし計画と矛盾しないように（難しい）
+- OK。ただし互いに矛盾しないように（難しい）
     - 矛盾がない: 両方の方策から計算される$V^\boldsymbol{\pi}$に停留点がない
         - <span style="color:red">問題は1つなのに2つ別の方策$\rightarrow$矛盾</span>
 - よくある矛盾
