@@ -167,12 +167,13 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 右図の矢印
     - 最適である保証はない
     - 経路からちょっと外れたところは基本無視
+    - $p(\boldsymbol{x}'|\boldsymbol{x},\boldsymbol{u})$を決定論的に解釈
 - $V^\boldsymbol{\pi}$は方策を求めるついでに計算されている
     - 単なる概算
     - 途中の計算で周辺の$V$も求められるが捨てられがち
 - 状態遷移は確率的ではない
 
-<center style="padding-top:2em">きっちり方策通りに行ければ問題はない、が</center>
+<center style="padding-top:1em">きっちり方策通りにロボットが動けば問題はない、が</center>
 
 ![bg right:15% 95%](path_answer.svg)
 
