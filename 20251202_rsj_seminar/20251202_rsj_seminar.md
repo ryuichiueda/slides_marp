@@ -140,7 +140,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 右図: 問題と解の例
 - 重要
     - 状態ごとに終端状態までのコストが見積もれる
-    - 最良の$\boldsymbol{u}$を選ぶと1ステップのコストとコストの見積もりの減少が釣り合う
+    - 最良の$\boldsymbol{u}$を選ぶと1ステップのコストとコストの見積もりの減少が<span style="color:red">釣り合う</span>
     - いまの状態$\boldsymbol{x}$と解は無関係
 
 ![bg right:30% 95%](simple_planning.svg)
@@ -149,12 +149,11 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題の解の性質（どう解くかという話とは別）
 
-- 前ページの単純な例でも、もっと複雑な例でも$\boldsymbol{x}$が連続でも次の<span style="color:red">ベルマン方程式</span>が成立
+- 「釣り合い」の式: ベルマン方程式
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
         - $V^*$: <span style="color:red">最適状態価値関数（最適な値関数）</span>
-            - 各状態で最適な$\boldsymbol{u}$を選ぶ場合のコストの見積もり
-    - $V^*$を実現する制御則を<span style="color:red">最適方策</span>$\boldsymbol{\pi}^*$と呼ぶ
-        - $\boldsymbol{u} = \boldsymbol{\pi}^*(\boldsymbol{x})$（重要: 状態に対する関数になる）
+- $V^*$から各状態で最適な行動$\boldsymbol{u}^* = \boldsymbol{\pi}^*(\boldsymbol{x})$が得られる
+    - $\boldsymbol{\pi}^*$: <span style="color:red">最適方策</span>
 - もう一つ重要: 最適でなくても方策$\boldsymbol{\pi}$に対して$V^\boldsymbol{\pi}$が存在
     - $V^\boldsymbol{\pi}(\boldsymbol{x}) = \big\langle V^\boldsymbol{\pi}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
         - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$
