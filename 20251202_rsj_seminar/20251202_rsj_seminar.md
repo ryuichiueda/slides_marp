@@ -117,8 +117,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - <span style="color:red">状態</span>$\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
     - $\boldsymbol{x}$には速度や時間、制御不可能なものの変数も入れられる
 - $\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移
-    - $\boldsymbol{x}' = \boldsymbol{f}(\boldsymbol{x}, \boldsymbol{u})$（決定論的）
-    - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$（確率的）
+    - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$
          - <span style="font-size:90%">※とりあえず離散時関系で考えます</span>
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
