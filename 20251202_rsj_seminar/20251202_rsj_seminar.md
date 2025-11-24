@@ -299,7 +299,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 個人的な確率ロボティクスの本質の解釈（2006年ごろ）
     - <span style="color:red">状態方程式を確率モデルで表すこと</span>
-        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon} \Longrightarrow$
+        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon} \Longrightarrow$<span style="color:red">$\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1},\boldsymbol{u}_t)$</span>
     - 自己位置推定やSLAMはその派生であって本質ではない
 
 ---
