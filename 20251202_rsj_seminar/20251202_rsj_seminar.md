@@ -317,7 +317,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 「$p(x|u,x')$さえ決まっていれば状態$x$はなんでもよい」
     $\Longrightarrow$状態空間に距離や内積はいらないかもしれない
-    - <span style="color:red">むしろ$V^*$が距離のようなものの定義になっている</span>
+    - <span style="color:red">むしろ$\boldsymbol{\pi}^*$、$V^*$が距離のようなものの定義に</span>
         - なめらかで矛盾がない
 - この面白さが出ている典型的な例（議論の余地あり）
     - 強化学習で脚ロボットがよく歩くのは、
