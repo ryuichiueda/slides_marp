@@ -133,7 +133,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 問題
     - $\boldsymbol{x}$: ロボットの位置（2次元）
-    - $\boldsymbol{u}$: 前後左右
+    - $\boldsymbol{u}$: 前後左右（状態遷移: 決定論的）
     - $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}') = 1$step
     - $V(\boldsymbol{x}_\text{f}) = 0$
 - 右図: 問題と解の例
