@@ -284,7 +284,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 制御問題の記述
 
-- 個人的な確率ロボティクスの本質の解釈
+- 確率ロボティクスの本質の個人的な解釈
     - <span style="color:red">状態方程式を確率モデルで表すこと</span>
         - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_\text{motion}$
         $\Longrightarrow$<span style="color:red">$x_t \sim p(x|x_{t-1},u_t)$</span>
