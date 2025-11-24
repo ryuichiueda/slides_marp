@@ -316,8 +316,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 ### 確率モデル+ベルマン方程式の面白さ
 
 - この定式化のおもしろいところ
-    - $\boldsymbol{x}$や$\boldsymbol{u}$はベクトルで表記しているけどその必要はない
-    - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ厳密に決まっていればよい
+    - $p(x|u,x')$さえ決まっていれば状態$x$はなんでもよい
         - 距離の定義が空間になくてもよい
     - <span style="color:red">むしろ解の$V^*$が距離のようなものの定義になっている</span>
 
