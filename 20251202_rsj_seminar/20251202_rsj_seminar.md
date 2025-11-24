@@ -222,7 +222,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - $V(\boldsymbol{x}_\text{f})$を大きな値で固定
         - $\boldsymbol{\pi}$は危ない状態を避ける制御則に
         - ゴールに行く・危険回避を統一的に解ける
-- 多くの制御手法では「境界条件」として扱ってしまっている
+- 探索では「境界条件」として扱ってしまっている
+    - 制御の分野でも無批判に「境界条件」と置いてしまいがち
 
 ![bg right:30% 100%](final_state.svg)
 
