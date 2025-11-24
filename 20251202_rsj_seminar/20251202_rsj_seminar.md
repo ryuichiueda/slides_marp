@@ -317,7 +317,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 「$p(x|u,x')$さえ決まっていれば状態$x$はなんでもよい」
     $\Longrightarrow$空間に距離や内積の定義はいらないかもしれない
-    - <span style="color:red">むしろ解の$V^*$が距離のようなものの定義になっている</span>
+    - <span style="color:red">むしろ$V^*$が距離のようなものの定義になっている</span>
 - 面白い例
     - 強化学習で脚ロボットが歩くのは特異点の問題から解放されているから？
 
