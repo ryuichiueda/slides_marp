@@ -196,19 +196,6 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ![bg right:20% 100%](chattering.svg)
 
-
----
-
-### 原因: 根本の原因は真面目に制御問題を解いていないことだが
-
-- 個人的に次の3点が気になる
-    - 「危険な状態」の取り扱い
-    - 他の方策とのつぎはぎになりやすい
-    - 確率的な遷移を扱っていない
-
-<center style="padding-top:1em">順に説明していきます</center>
-
-
 ---
 
 ### <span style="color:red">「事故もゴール（終端状態）」</span>という考え方の欠如
@@ -303,6 +290,11 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{obs} \Longrightarrow$<span style="color:red">$\boldsymbol{z}_t \sim p(\boldsymbol{z}|\boldsymbol{x}_t)$</span>
     - 自己位置推定やSLAMはその派生であって本質ではない
         - 2006年ごろからそう思っているけど世の中はそう思ってない
+
+
+---
+
+### 確率モデルで表現することで失うもの/得られるもの
 
 ---
 
