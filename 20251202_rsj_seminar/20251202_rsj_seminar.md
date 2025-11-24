@@ -207,6 +207,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 他の方策とつぎはぎの状態になりやすい
     - 確率的な遷移を扱っていない
 
+<center style="padding-top:1em">順に説明していきます</center>
+
 
 ---
 
