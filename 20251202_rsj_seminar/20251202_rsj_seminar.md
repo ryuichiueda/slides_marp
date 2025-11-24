@@ -295,7 +295,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 最適制御問題の記述
+### 制御問題の記述
 
 - 個人的な確率ロボティクスの本質の解釈（2006年ごろ）
     - <span style="color:red">状態方程式を確率モデルで表すこと</span>
