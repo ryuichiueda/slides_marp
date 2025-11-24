@@ -290,7 +290,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         $\Longrightarrow$<span style="color:red">$x_t \sim p(x|x_{t-1},u_t)$</span>
         - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{obs}$
         $\Longrightarrow$<span style="color:red">$z_t \sim p(z|x_t)$</span>
-            - 太字にしなかった理由: ベクトルから確率変数や事象に定義を変更
+            - 太字にしなかった理由: ベクトルから記号を一般化
     - 自己位置推定やSLAMはその派生であって本質ではない
         - 2005年ごろからそう思っているけど世の中はそう思ってない
 
