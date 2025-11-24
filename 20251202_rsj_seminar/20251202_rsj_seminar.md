@@ -297,8 +297,9 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 最適制御問題の記述
 
-- 個人的な確率ロボティクスの解釈（2006年ごろ）
-    - 状態方程式を確率モデルで表すこと
+- 個人的な確率ロボティクスの本質の解釈（2006年ごろ）
+    - <span style="color:red">状態方程式を確率モデルで表すこと</span>
+        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon} \Longrightarrow$
     - 自己位置推定やSLAMはその派生であって本質ではない
 
 ---
