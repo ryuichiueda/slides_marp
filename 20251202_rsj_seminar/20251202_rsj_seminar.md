@@ -300,7 +300,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 観測方程式: $\boldsymbol{z}_t \sim p(\boldsymbol{z}|\boldsymbol{x}_t)$
 
 - 一般化されすぎていて既存の制御理論から離れないといけない
-    - リアプノフやポントリャーギンの話から離れるか、解釈をしなおさなければならない
+    - リアプノフやポントリャーギンの話から離れるか、再解釈が必要になる
 
 ---
 
