@@ -310,6 +310,17 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - ややこしい実世界を扱うには都合がよい
     - 当時のロボット周辺で取り入れていた分野: <span style="color:red">（強化）学習と確率ロボティクス</span>
 
+
+---
+
+### 確率モデル+ベルマン方程式の面白さ
+
+- この定式化のおもしろいところ
+    - $\boldsymbol{x}$や$\boldsymbol{u}$はベクトルで表記しているけどその必要はない
+    - $p(\boldsymbol{x}|\boldsymbol{u},\boldsymbol{x}')$さえ厳密に決まっていればよい
+        - 距離の定義が空間になくてもよい
+    - <span style="color:red">むしろ解の$V^*$が距離のようなものの定義になっている</span>
+
 ---
 
 ### 次の問題: 大域計画と局所計画との組み合わせ
