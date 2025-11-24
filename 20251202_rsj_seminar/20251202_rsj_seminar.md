@@ -286,8 +286,11 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 個人的な確率ロボティクスの本質の解釈
     - <span style="color:red">状態方程式を確率モデルで表すこと</span>
-        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_\text{motion} \Longrightarrow$<span style="color:red">$\boldsymbol{x}_t \sim p(\boldsymbol{x}|\boldsymbol{x}_{t-1},\boldsymbol{u}_t)$</span>
-        - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{obs} \Longrightarrow$<span style="color:red">$\boldsymbol{z}_t \sim p(\boldsymbol{z}|\boldsymbol{x}_t)$</span>
+        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_\text{motion}$
+        $\Longrightarrow$<span style="color:red">$x_t \sim p(x|x_{t-1},u_t)$</span>
+        - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{obs}$
+        $\Longrightarrow$<span style="color:red">$z_t \sim p(z|x_t)$</span>
+            - 太字にしなかった理由: ベクトルから確率変数や事象に定義を変更
     - 自己位置推定やSLAMはその派生であって本質ではない
         - 2006年ごろからそう思っているけど世の中はそう思ってない
 
