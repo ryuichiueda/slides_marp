@@ -316,7 +316,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 ### 確率モデル+ベルマン方程式の面白さ
 
 - 「$p(x|u,x')$さえ決まっていれば状態$x$はなんでもよい」
-    $\Longrightarrow$空間に距離や内積の定義はいらないかもしれない
+    $\Longrightarrow$状態空間に距離や内積はいらないかもしれない
     - <span style="color:red">むしろ$V^*$が距離のようなものの定義になっている</span>
         - なめらかで矛盾がない
 - 面白さが出ている典型的な例（議論の余地あり）
