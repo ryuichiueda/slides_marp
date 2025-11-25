@@ -562,14 +562,19 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-footer="Probabilistic Robotics Lesson 7" data-paginate="true" lang="ja-JP" data-marpit-pagination="28" style="--footer:Probabilistic Robotics Lesson 7;--paginate:true;" data-marpit-pagination-total="29">
 <h3 id="application-of-particle-filters">Application of particle filters</h3>
-<p>(See YouTube for examples)</p>
 <ul>
 <li>Often used in mobile robots using laser scanners.</li>
-<li>Likelihood function: Designed by comparing with the following &quot;occupancy grid map&quot; (likelihood field).</li>
+<li>Likelihood function: Designed by comparing with the following &quot;occupancy grid map&quot; (likelihood field).
+<ul>
 <li>The likelihood increases when the tip of the scan hits a grid containing a recorded obstacle.</li>
-<li>In practice, a gray area is added, but this simple model works well.</li>
+<li>In practice, a gray area is added, but this simple model works well.
+<ul>
 <li>Even if there are obstacles not on the map, the score does not drop significantly.<br />
-<img src="./figs/lidar_likelihood.svg" alt="" style="width:500px;" /></li>
+<img src="./figs/lidar_likelihood.svg" alt="" style="width:400px;" /></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <footer>Probabilistic Robotics Lesson 7</footer>
 </section>

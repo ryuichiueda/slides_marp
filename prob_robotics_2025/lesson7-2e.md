@@ -372,14 +372,12 @@ This is an approximation of a Bayesian filter.
 
 ### Application of particle filters
 
-(See YouTube for examples)
-
 - Often used in mobile robots using laser scanners.
 - Likelihood function: Designed by comparing with the following "occupancy grid map" (likelihood field).
-- The likelihood increases when the tip of the scan hits a grid containing a recorded obstacle.
-- In practice, a gray area is added, but this simple model works well.
-- Even if there are obstacles not on the map, the score does not drop significantly.
-![w:500](./figs/lidar_likelihood.svg)
+    - The likelihood increases when the tip of the scan hits a grid containing a recorded obstacle.
+    - In practice, a gray area is added, but this simple model works well.
+        - Even if there are obstacles not on the map, the score does not drop significantly.
+![w:400](./figs/lidar_likelihood.svg)
 
 ---
 
