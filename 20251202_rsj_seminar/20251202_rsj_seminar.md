@@ -343,6 +343,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 - 変分オートエンコーダ、拡散モデル、フローマッチングが作る潜在空間や分布
 - Transformerが入出力するトークン（埋め込みのベクトル）の空間
+- <span style="font-size:70%">ちなみに私の博士論文のテーマも「方策の圧縮」です</span>
 
 
 ---
