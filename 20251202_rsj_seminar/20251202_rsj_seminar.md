@@ -353,6 +353,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 方策を記録
 - 価値を推定
 
+![bg right:30% 100%](act_enc_dec.svg)
+
 ---
 
 ### その先（妄想）
