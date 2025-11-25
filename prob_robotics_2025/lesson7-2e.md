@@ -227,12 +227,12 @@ $\qquad\qquad\qquad\qquad\qquad\qquad$![w:350](./figs/camera_landmark.svg)
 Combined with the equation for movement in Lesson 6, we get the following:
 
 - When the robot moves
-- $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
-- $\hat\Sigma_t = F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
+    - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}}_t$
+    - $\hat\Sigma_t = F_{t-1} \Sigma_{t-1} F_{t-1}^\top + T_{t-1} S_t T_{t-1}^\top$
 - When the robot observes
-- $K_t = \hat\Sigma_t H_t^\top ( H_t \hat\Sigma_t H_t^\top + Q_t )^{-1}$
-- $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
-- $\Sigma_t = (I - K_t H_t)\hat\Sigma_t$
+    - $K_t = \hat\Sigma_t H_t^\top ( H_t \hat\Sigma_t H_t^\top + Q_t )^{-1}$
+    - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
+    - $\Sigma_t = (I - K_t H_t)\hat\Sigma_t$
 
 ---
 
