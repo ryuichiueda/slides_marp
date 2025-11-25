@@ -327,10 +327,10 @@ $(i=1,2,\dots,N)$
 
 - Reflect information $Z_t$ in $\hat{\xi}_t^{(1:N)}$ to get $\xi_t^{(1:N)}$.
 - Use the likelihood function value as the weight.
-- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
-- Leave the posture unchanged ($\hat{\boldsymbol{x}}_t^{(i)} \rightarrow \boldsymbol{x}_t^{(i)}$).
+    - $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+    - Leave the posture unchanged ($\hat{\boldsymbol{x}}_t^{(i)} \rightarrow \boldsymbol{x}_t^{(i)}$).
 - $w_t^{(i)}$ is the probability assigned by the Monte Carlo method.
-- The calculation of $\eta$ can be omitted and the results can be reconciled using the next step.
+    - The calculation of $\eta$ can be omitted and the results can be reconciled using the next step.
 
 ---
 
