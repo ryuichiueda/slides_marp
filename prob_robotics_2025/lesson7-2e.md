@@ -349,9 +349,9 @@ $(i=1,2,\dots,N)$
 ### Resampling procedure (naive)
 
 - Repeat the following to create $\hat{\xi}_{t+1}^{(i)} \ (i=1,2,\dots,N)$.
-- 1: Select one particle $\xi' = (\boldsymbol{x}', w')$ from $\xi_t^{(1:N)}$ with a probability proportional to the weight.
-- 2: $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
-- 3: $\hat{w}_{t+1}^{(i)} = 1/N$
+    - 1: Select one particle $\xi' = (\boldsymbol{x}', w')$ from $\xi_t^{(1:N)}$ with a probability proportional to the weight.
+    - 2: $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
+    - 3: $\hat{w}_{t+1}^{(i)} = 1/N$
 - The above method is computationally intensive and biased, so a better method (systematic sampling) is used in implementation.
 
 ---
@@ -359,12 +359,12 @@ $(i=1,2,\dots,N)$
 ### Summary of Particle Filter
 
 - Reflecting Sensor Information:
-- For $i=1,2,\dots,N$
-- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+    - For $i=1,2,\dots,N$
+        - $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
 - Reflection of movement:
-- For $i=1,2,\dots,N$
-- $\xi' = (\boldsymbol{x}', w') \sim \xi_t^{(1:N)}$ (weights are the probability of selection)
-- $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
+    - For $i=1,2,\dots,N$
+        - $\xi' = (\boldsymbol{x}', w') \sim \xi_t^{(1:N)}$ (weights are the probability of selection)
+        - $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
 
 This is an approximation of a Bayesian filter.
 
