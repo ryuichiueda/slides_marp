@@ -253,7 +253,142 @@ m_\psi - \theta_t - \pi
 
 ---
 
-### Application to example: Calculation of Jacobian matrix $H_t$
+### Application to an Example: Calculating the Jacobian Matrix $H_t$
 
+- $H_t = \left. \dfrac{\partial \boldsymbol{h}}{\partial \boldsymbol{x}}\right|_{\boldsymbol{x} = \hat{\boldsymbol{\mu}}_t} = ...$ (Let's calculate it.)
+* $= \left.
+\begin{pmatrix}
+(m_y-y) / \ell(\boldsymbol{x_t})^2 & (x - m_x) / \ell(\boldsymbol{x_t})^2 & -1 \\
+(x - m_x) / \ell(\boldsymbol{x_t}) & (y - m_y) / \ell(\boldsymbol{x_t}) & 0 \\
+0 & 0 & -1
+\end{pmatrix} \right|_{\boldsymbol{x} = \hat{\boldsymbol{\mu}}_t}$ 
+$= 
+\begin{pmatrix} 
+(m_y-\hat\mu_{yt}) / \ell(\hat{\boldsymbol{\mu}}_t)^2 & (\hat\mu_{xt} - m_x) / \ell(\hat{\boldsymbol{\mu}}_t)^2 & -1 \\ 
+(\hat\mu_{xt} - m_x) / \ell(\hat{\boldsymbol{\mu}}_t) & (\hat\mu_{yt} - m_y) / \ell(\hat{\boldsymbol{\mu}}_t) & 0 \\ 
+0 & 0 & -1 
+\end{pmatrix}$ 
+- $\hat{\boldsymbol{\mu}}_t = (\hat\mu_{xt},\hat\mu_{yt},\hat\mu_{\theta t})$
+- $\ell(\boldsymbol{x}) = \{(m_x - x)^2 + (m_y - y)^2 \}^{1/2}$
 
-- $H_t = \left. \dfrac{\partial \boldsymbol{h}}{\partial \boldsymbol{x}}\right|_{\boldsymbol{x} = \hat{
+---
+
+### Application to Example Problem: Determining $Q_t$
+
+(This seems to be missing from the textbook.)
+
+- Create by measuring or estimating the variances for $\ell, \varphi, and \psi$
+- Example: $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2, \sigma_\psi^2 )$
+- $\sigma_\ell$: Increase the value depending on the distance (e.g., $\sigma_\ell = \sigma_\ell' \ell(\hat{\boldsymbol{\mu}}_t)$)
+- $\sigma_\varphi, \sigma_\psi$ are constants
+
+---
+
+### Example (from Detailed Explanation of Probabilistic Robotics)
+
+- Left: No observation. Right: Observation.
+- There is no $\psi$
+- $H_t$ and $Q_t$ are $2\times 2$ matrices, but that's not a problem.
+- Let's think about why we can use this to estimate $(x, y, \theta)$.
+
+![w:350](./figs/kalman_no_obs.gif)![w:350](./figs/kalman_filter.gif)
+
+---
+
+## Particle Filter
+
+- Bayesian filter using Monte Carlo methods
+- Used over Kalman filters for mobile robots
+- Suitable for simulating collisions with walls, as in the example in Part 6
+(However, there are few serious implementations.)
+- Noise often does not follow a Gaussian distribution
+- LiDAR data: While it's rare to measure the distance to an object from a distance, it's common to measure it from a distance as a person passes by.
+
+$\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
+
+---
+
+### Particle (Redefinition)
+
+- Right: Review
+- Adding a "weight" variable to the particle from Lesson 6
+- $\xi_t^{(i)} = (\boldsymbol{x}_t^{(i)}, w_t^{(i)}) = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}, w_t^{(i)})$
+$(i=1,2,\dots,N)$
+- Each arrow in the right figure has a weight.
+- Set: $\xi_t^{(1:N)} = \{\xi_t^{(1)}, \xi_t^{(2)}, \dots, \xi_t^{(N)}\}$
+- Defines an approximation method for the probability that the true pose $\boldsymbol{x}^*$ is within $X$.
+- $\text{Pr}\{ \boldsymbol{x}^* \in X \} \simeq \sum_{i=1}^N w_t^{(i)} \delta(\boldsymbol{x}_t^{(i)} \in X)$
+- $\delta(\cdot)$: 1 if the value in the parentheses is true, 0 if false.
+- Set of particles before applying sensor information: $\hat{\xi}_t^{(1:N)}$
+
+![bg right:25% 100%](./figs/motion_update_particles.png)
+
+---
+
+### Particle processing when applying sensor information
+
+- Reflect information $Z_t$ in $\hat{\xi}_t^{(1:N)}$ to get $\xi_t^{(1:N)}$.
+- Use the likelihood function value as the weight.
+- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+- Leave the posture unchanged ($\hat{\boldsymbol{x}}_t^{(i)} \rightarrow \boldsymbol{x}_t^{(i)}$).
+- $w_t^{(i)}$ is the probability assigned by the Monte Carlo method.
+- The calculation of $\eta$ can be omitted and the results can be reconciled using the next step.
+
+---
+
+### Particle processing when the robot moves
+
+- Reflect the control command $\boldsymbol{u}_t$ in $\xi_t^{(1:N)}$ to $\hat{\xi}_{t+1}^{(1:N)}$.
+- Instead of simply moving each particle, <span style="color:red">resampling</span> is used.
+- Prevent weight imbalance and propagate particles with high weights.
+- Example
+- Left: No resampling (weights are multiplied by likelihood).
+- Right: With resampling.
+![w:300](./figs/mcl_sensor_update.gif)![w:300](./figs/mcl_sys_resampling.gif)
+
+---
+
+### Resampling procedure (naive)
+
+- Repeat the following to create $\hat{\xi}_{t+1}^{(i)} \ (i=1,2,\dots,N)$.
+- 1: Select one particle $\xi' = (\boldsymbol{x}', w')$ from $\xi_t^{(1:N)}$ with a probability proportional to the weight.
+- 2: $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
+- 3: $\hat{w}_{t+1}^{(i)} = 1/N$
+- The above method is computationally intensive and biased, so a better method (systematic sampling) is used in implementation.
+
+---
+
+### Summary of Particle Filter
+
+- Reflecting Sensor Information:
+- For $i=1,2,\dots,N$
+- $w_t^{(i)} = \eta L(\boldsymbol{x}_t^{(i)} | Z_t)$
+- Reflection of movement:
+- For $i=1,2,\dots,N$
+- $\xi' = (\boldsymbol{x}', w') \sim \xi_t^{(1:N)}$ (weights are the probability of selection)
+- $\hat{\boldsymbol{x}}_{t+1}^{(i)} \sim p(\boldsymbol{x} | \boldsymbol{u}_t, \boldsymbol{x}')$
+
+This is an approximation of a Bayesian filter.
+
+---
+
+### Application of particle filters
+
+(See YouTube for examples)
+
+- Often used in mobile robots using laser scanners.
+- Likelihood function: Designed by comparing with the following "occupancy grid map" (likelihood field).
+- The likelihood increases when the tip of the scan hits a grid containing a recorded obstacle.
+- In practice, a gray area is added, but this simple model works well.
+- Even if there are obstacles not on the map, the score does not drop significantly.
+![w:500](./figs/lidar_likelihood.svg)
+
+---
+
+## Summary
+
+- We've looked at the implementation of Bayesian filters.
+- Kalman filters, extended Kalman filters, and particle filters.
+- Kalman filters are still commonly used for machine control.
+- Particle filters are still commonly used for mobile robots.
+- However, newer methods exist, so keep an eye on trends.
