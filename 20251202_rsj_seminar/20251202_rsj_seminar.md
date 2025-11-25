@@ -317,7 +317,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 ### 確率モデル+ベルマン方程式の面白さ
 
 - 「$p(x|u,x')$さえ決まっていれば状態$x$はなんでもよい」
-    $\Longrightarrow$状態空間に距離や内積はいらないかもしれない
+    $\Longrightarrow$状態空間に距離や内積の定義は不要
     - <span style="color:red">むしろ$\boldsymbol{\pi}^*$、$V^*$が距離のようなものの定義に</span>
         - なめらかで矛盾がない
         - いずれかをうまく近似表現するとロボットが動く
