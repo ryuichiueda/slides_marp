@@ -279,8 +279,8 @@ $=
 
 - Create by measuring or estimating the variances for $\ell, \varphi, and \psi$
 - Example: $Q_t = \text{diag}( \sigma_\varphi^2, \sigma_\ell^2, \sigma_\psi^2 )$
-- $\sigma_\ell$: Increase the value depending on the distance (e.g., $\sigma_\ell = \sigma_\ell' \ell(\hat{\boldsymbol{\mu}}_t)$)
-- $\sigma_\varphi, \sigma_\psi$ are constants
+    - $\sigma_\ell$: Increase the value depending on the distance (e.g., $\sigma_\ell = \sigma_\ell' \ell(\hat{\boldsymbol{\mu}}_t)$)
+    - $\sigma_\varphi, \sigma_\psi$ are constants
 
 ---
 
