@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350.78 326.18">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        fill: red;
+      }
+
+      .cls-5, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-5, .cls-7, .cls-9, .cls-10 {
+        font-size: 10px;
+      }
+
+      .cls-12, .cls-9 {
+        fill: #1f17ff;
+      }
+
+      .cls-13 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-15 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-17 {
+        font-family: TimesNewRomanPS-BoldItalicMT, 'Times New Roman';
+        font-weight: 700;
+      }
+
+      .cls-17, .cls-18 {
+        font-size: 16px;
+        font-style: italic;
+      }
+
+      .cls-19 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        stroke-width: 2px;
+      }
+
+      .cls-21 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-22 {
+        fill: #666;
+      }
+
+      .cls-23 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-24 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-8 {
+        font-size: 14px;
+      }
+
+      .cls-18 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+      }
+
+      .cls-10, .cls-25 {
+        fill: #cf00e7;
+      }
+
+      .cls-26 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-11 {
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="cls-3" points="141.2 61.47 141.2 19.39 91.14 1.16 91.14 61.47"/>
+    <polyline class="cls-3" points="141.2 20.81 141.2 62.88 91.14 81.11 91.14 20.81"/>
+  </g>
+  <text class="cls-11" transform="translate(93.98 44.38)"><tspan x="0" y="0">encoder</tspan></text>
+  <g>
+    <polyline class="cls-3" points="205.03 61.47 205.03 19.39 255.1 1.16 255.1 61.47"/>
+    <polyline class="cls-3" points="205.03 20.81 205.03 62.88 255.1 81.11 255.1 20.81"/>
+  </g>
+  <text class="cls-11" transform="translate(207.83 44.38)"><tspan x="0" y="0">decoder</tspan></text>
+  <text class="cls-11" transform="translate(150.61 86.79)"><tspan x="0" y="0">潜在空間</tspan></text>
+  <g>
+    <line class="cls-1" x1="10.56" y1="61.47" x2="72.83" y2="61.47"/>
+    <polygon points="72.1 63.96 76.41 61.47 72.1 58.97 72.1 63.96"/>
+  </g>
+  <path class="cls-1" d="M23.39,50.96c3.35-25.74,5.18-34.04,6.18-33.96,1.98.16.53,33.48,4.63,33.96,3,.35,5.91-17.24,10.94-17.14,4.96.1,6.97,17.33,10.68,17.17,4.6-.2,5.37-26.81,9.27-27.04,1.88-.11,4.57,5.94,8.49,27.04"/>
+  <text class="cls-17" transform="translate(67.55 76)"><tspan x="0" y="0">x</tspan></text>
+  <g>
+    <line class="cls-1" x1="15.67" y1="68.59" x2="15.67" y2="15.04"/>
+    <polygon points="18.16 15.77 15.67 11.45 13.18 15.77 18.16 15.77"/>
+  </g>
+  <text class="cls-18" transform="translate(1.77 17)"><tspan x="0" y="0">p</tspan></text>
+  <g>
+    <line class="cls-1" x1="271.88" y1="57.76" x2="334.15" y2="57.76"/>
+    <polygon points="333.42 60.25 337.74 57.76 333.42 55.27 333.42 60.25"/>
+  </g>
+  <path class="cls-1" d="M284.72,47.26c3.35-25.74,5.18-34.04,6.18-33.96,1.98.16.53,33.48,4.63,33.96,3,.35,5.91-17.24,10.94-17.14,4.96.1,6.97,17.33,10.68,17.17,4.6-.2,5.37-26.81,9.27-27.04,1.88-.11,4.57,5.94,8.49,27.04"/>
+  <text class="cls-17" transform="translate(328.88 72.3)"><tspan x="0" y="0">x</tspan></text>
+  <g>
+    <line class="cls-1" x1="277" y1="64.89" x2="277" y2="11.34"/>
+    <polygon points="279.49 12.07 277 7.75 274.5 12.07 279.49 12.07"/>
+  </g>
+  <text class="cls-18" transform="translate(263.1 13.3)"><tspan x="0" y="0">p</tspan></text>
+  <g>
+    <line class="cls-1" x1="148.49" y1="56.32" x2="196.89" y2="56.32"/>
+    <polygon points="196.16 58.81 200.48 56.32 196.16 53.83 196.16 58.81"/>
+  </g>
+  <text class="cls-17" transform="translate(192.24 69.86)"><tspan x="0" y="0">z</tspan></text>
+  <g>
+    <line class="cls-1" x1="153.61" y1="63.45" x2="153.61" y2="34.38"/>
+    <polygon points="156.1 35.11 153.61 30.79 151.11 35.11 156.1 35.11"/>
+  </g>
+  <text class="cls-18" transform="translate(149.85 22.81)"><tspan x="0" y="0">q</tspan></text>
+  <path class="cls-1" d="M155.11,51.99c2.86-.26,6.61-1.1,9.94-3.7,8.47-6.61,7.99-19.7,10.54-19.65,2.47.05,1.53,12.3,9.31,19.08,3.32,2.88,7.2,3.9,10.21,4.27"/>
+  <text class="cls-8" transform="translate(87.97 305.53)"><tspan x="0" y="0">画像の画素の超多次元分布</tspan></text>
+  <g>
+    <line class="cls-2" x1="26.24" y1="313.41" x2="275.79" y2="313.41"/>
+    <polygon points="274.33 318.4 282.96 313.41 274.33 308.43 274.33 318.4"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="41.89" y1="326.12" x2="41.89" y2="235.43"/>
+    <polygon points="46.87 236.88 41.89 228.25 36.9 236.88 46.87 236.88"/>
+  </g>
+  <g>
+    <line class="cls-2" x1="35.79" y1="325.98" x2="68.3" y2="249.73"/>
+    <polygon points="72.31 253.03 71.11 243.13 63.14 249.12 72.31 253.03"/>
+  </g>
+  <circle class="cls-12" cx="166.85" cy="258.18" r="1.48"/>
+  <text class="cls-9" transform="translate(176.72 268.82)"><tspan x="0" y="0">犬の画像の集団</tspan></text>
+  <circle class="cls-12" cx="177.07" cy="256.71" r="1.48"/>
+  <circle class="cls-12" cx="175.59" cy="248.01" r="1.48"/>
+  <circle class="cls-12" cx="162.48" cy="249.49" r="1.48"/>
+  <circle class="cls-6" cx="104.01" cy="231.73" r="1.48"/>
+  <text class="cls-5" transform="translate(76.11 218.17)"><tspan x="0" y="0">猫の画像の集団</tspan></text>
+  <circle class="cls-6" cx="93.7" cy="230.25" r="1.48"/>
+  <circle class="cls-6" cx="105.49" cy="225.13" r="1.48"/>
+  <circle class="cls-6" cx="117.29" cy="230.2" r="1.48"/>
+  <circle class="cls-6" cx="108.08" cy="235.93" r="1.48"/>
+  <circle class="cls-25" cx="211.41" cy="217.19" r="1.48"/>
+  <text class="cls-10" transform="translate(183.5 203.63)"><tspan x="0" y="0">狸の画像の集団</tspan></text>
+  <circle class="cls-25" cx="201.09" cy="215.71" r="1.48"/>
+  <circle class="cls-25" cx="212.88" cy="210.59" r="1.48"/>
+  <circle class="cls-25" cx="224.68" cy="215.67" r="1.48"/>
+  <circle class="cls-25" cx="215.48" cy="221.39" r="1.48"/>
+  <ellipse class="cls-22" cx="170.98" cy="225.13" rx="10.7" ry="17.38" transform="translate(-95.07 320.71) rotate(-72.54)"/>
+  <text class="cls-7" transform="translate(187.87 242.87)"><tspan x="0" y="0">集団間の隙間: 無数</tspan><tspan class="cls-20" x="84.51" y="0">の</tspan><tspan x="94.21" y="0">で</tspan><tspan class="cls-27" x="104.21" y="0">た</tspan><tspan class="cls-28" x="113.51" y="0">ら</tspan><tspan x="122.91" y="0">めな画像</tspan></text>
+  <polygon class="cls-2" points="92.22 270.02 90.64 270.36 89.56 269.16 90.05 267.62 91.63 267.28 92.72 268.48 92.22 270.02"/>
+  <text class="cls-7" transform="translate(66.98 279.87)"><tspan class="cls-15" x="0" y="0">ゴ</tspan><tspan class="cls-19" x="9.2" y="0">ッ</tspan><tspan x="18.3" y="0">ホの絵</tspan></text>
+  <polygon class="cls-2" points="97.85 266.22 96.26 266.56 95.18 265.36 95.67 263.82 97.26 263.48 98.34 264.68 97.85 266.22"/>
+  <polygon class="cls-2" points="90.64 263.9 89.06 264.24 87.97 263.04 88.47 261.5 90.05 261.16 91.14 262.36 90.64 263.9"/>
+  <polygon class="cls-2" points="294.08 275.57 292.5 275.91 291.41 274.71 291.91 273.17 293.49 272.83 294.58 274.03 294.08 275.57"/>
+  <text class="cls-7" transform="translate(277 286.62)"><tspan class="cls-21" x="0" y="0">ム</tspan><tspan class="cls-23" x="9.3" y="0">ン</tspan><tspan class="cls-15" x="18.2" y="0">ク</tspan><tspan x="27.4" y="0">の絵</tspan></text>
+  <polygon class="cls-2" points="301.29 266.96 299.7 267.3 298.62 266.1 299.12 264.56 300.7 264.22 301.78 265.42 301.29 266.96"/>
+  <polygon class="cls-2" points="292.5 269.45 290.92 269.79 289.83 268.59 290.33 267.05 291.91 266.71 293 267.91 292.5 269.45"/>
+  <g>
+    <line class="cls-4" x1="89.56" y1="166.35" x2="49.16" y2="89.1"/>
+    <path d="M58.06,93.7c-.16.29-.53.39-.82.22l-7.96-4.58-.78,9.15c-.03.33-.32.58-.65.55-.33-.03-.57-.32-.55-.65l.86-10.08c.02-.2.14-.39.32-.48s.4-.09.58.01l8.77,5.05c.1.06.18.14.23.24.09.18.09.39-.01.58Z"/>
+  </g>
+  <text class="cls-8" transform="translate(84.25 128.13)"><tspan x="0" y="0">興味</tspan><tspan class="cls-16" x="28" y="0">の</tspan><tspan class="cls-24" x="41.72" y="0">あ</tspan><tspan class="cls-13" x="54.74" y="0">る</tspan><tspan x="68.18" y="0">画</tspan><tspan class="cls-16" x="82.18" y="0">像を</tspan><tspan x="0" y="16.8">学</tspan><tspan class="cls-16" x="14" y="16.8">習</tspan><tspan class="cls-26" x="27.72" y="16.8">デ</tspan><tspan class="cls-29" x="41.58" y="16.8">ー</tspan><tspan class="cls-14" x="54.74" y="16.8">タ</tspan><tspan class="cls-26" x="68.04" y="16.8">に</tspan><tspan x="81.9" y="16.8">選択</tspan></text>
+</svg>
