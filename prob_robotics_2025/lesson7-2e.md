@@ -239,9 +239,9 @@ Combined with the equation for movement in Lesson 6, we get the following:
 ### Application to the Example Problem: Formulate the Observation Equation
 
 - Calculate the Obtained Sensor Value (Details Omitted)
-- $\varphi = \arctan \{(m_y - y_t)/(m_x - x_t)\} - \theta_t$
-- $\ell = \{(m_x - x_t)^2 + (m_y - y_t)^2 \}^{1/2}$ 
-- $\psi = m_\psi - \theta_t - \pi$
+    - $\varphi = \arctan \{(m_y - y_t)/(m_x - x_t)\} - \theta_t$
+    - $\ell = \{(m_x - x_t)^2 + (m_y - y_t)^2 \}^{1/2}$ 
+    - $\psi = m_\psi - \theta_t - \pi$
 - Observation equation: $\boldsymbol{h}(\boldsymbol{x}_t) =$
 $\begin{pmatrix} 
 \arctan \{ (m_y - y_t)/(m_x - x_t) \} - \theta_t \\ 
