@@ -177,20 +177,20 @@ $= \hat\Sigma_t H^\top (Q + H \hat\Sigma_t H^\top)^{-1}$
 ## Extended Kalman filter
 
 - How do we apply the Kalman filter in nonlinear cases?
-- Linearize as in the 6th lesson.
+    - Linearize as in the Lesson 6.
 - Example: Observe a point landmark with a camera (camera position = robot position).
-- The distance $\ell$ to the landmark and the direction $\varphi$ from the robot to the landmark can be measured.
-- The direction $\psi$ of the landmark itself can also be measured.
-- Landmark position and direction: $(m_x \ m_y \ m_\psi)^\top$
+    - The distance $\ell$ to the landmark and the direction $\varphi$ from the robot to the landmark can be measured.
+    - The direction $\psi$ of the landmark itself can also be measured.
+    - Landmark position and direction: $(m_x \ m_y \ m_\psi)^\top$
 
-$\qquad\qquad\qquad\qquad\qquad\qquad$![w:500](./figs/camera_landmark.svg)
+$\qquad\qquad\qquad\qquad\qquad\qquad$![w:350](./figs/camera_landmark.svg)
 
 ---
 
 ### Observation model and likelihood function
 
 - Observation model: $\boldsymbol{z}_t \sim \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right]$
-- Observation equation $\boldsymbol{h}(\boldsymbol{x}_t)$: The mean value of the vector of sensor values ​​obtained at $\boldsymbol{x}_t$
+    - Observation equation $\boldsymbol{h}(\boldsymbol{x}_t)$: The mean value of the vector of sensor values obtained at $\boldsymbol{x}_t$
 - Elements are $\ell, \varphi, \psi$ ($\boldsymbol{z}_t$ is a vector in the space of sensor values)
 - $Q_t(\boldsymbol{x}_t)$: The noise covariance matrix at $\boldsymbol{x}_t$
 - Preliminary approximation of $Q_t(\boldsymbol{x}_t)$: Approximate the covariance matrix at the center $\hat{b}_t$ of $\hat{b}_t$
