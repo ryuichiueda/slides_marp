@@ -349,6 +349,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### VLA（vision-language-action）モデルにおける空間表現
 
+- 制御という観点から見ると、「方策寄り」か「価値寄り」かという軸で話ができる
 - 方策を記録
 - 価値を推定
 
