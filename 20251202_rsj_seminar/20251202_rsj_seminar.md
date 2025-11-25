@@ -348,7 +348,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">å›
 
 ![bg right:30% 100%](autoenc_prob.svg)
 
-![w:400](lang_vision_space.svg)
+![w:200](lang_vision_space.svg)
 
 ---
 
