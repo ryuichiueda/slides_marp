@@ -345,6 +345,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - Transformerが入出力するトークン（埋め込みのベクトル）の空間
 - <span style="font-size:70%">ちなみに私の博士論文のテーマも「方策の圧縮」です。自己位置推定でもSLAMでもないです。</span>
 
+![w:400](vae.png)
 
 ---
 
