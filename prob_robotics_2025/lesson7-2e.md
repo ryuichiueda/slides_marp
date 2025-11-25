@@ -127,7 +127,7 @@ $= K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
 
 ### Introducing the Kalman Gain (continued)
 
-- Streamlining $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$ (Let's try this too)
+- Transforming $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$ (Let's try this too)
     * $I = \Sigma_t H^\top Q^{-1} H +\Sigma_t \hat\Sigma_t^{-1} \Longrightarrow
 I = K_t H +\Sigma_t \hat\Sigma_t^{-1}$
 $\Longrightarrow
@@ -146,12 +146,12 @@ $\Longrightarrow$<span style="color:red">Kalman gain: The strength of the influe
 ### Modification of the Kalman gain
 
 - $K_t = \Sigma_t H^\top Q^{-1}$ cannot be calculated because $\Sigma_t$ is on the right-hand side.
-- Remove $\Sigma_t$
-- Substitute $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$
-- Use Woodbury's formula
-- $(A + BDC)^{-1} = A^{-1} - A^{-1}B(D^{-1} + CA^{-1} B)^{-1} CA^{-1}$
+    - Remove $\Sigma_t$
+        - Substitute $\Sigma_t^{-1} = H^\top Q^{-1} H + \hat\Sigma_t^{-1}$
+        - Use Woodbury's formula
+           - $(A + BDC)^{-1} = A^{-1} - A^{-1}B(D^{-1} + CA^{-1} B)^{-1} CA^{-1}$
 - Answer
-* $K_t = \{ \hat{\Sigma}_t - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} H\hat{\Sigma}_t \} H^\top Q^{-1}$
+    * $K_t = \{ \hat{\Sigma}_t - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} H\hat{\Sigma}_t \} H^\top Q^{-1}$
 $= \hat{\Sigma}_t H^\top Q^{-1} - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} H\hat{\Sigma}_t H^\top Q^{-1}$
 $= \hat{\Sigma}_t H^\top Q^{-1} - \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1} (Q + H\hat{\Sigma}_t H^\top ) Q^{-1}$
 $+ \hat{\Sigma}_t H^\top ( Q + H\hat{\Sigma}_t H^\top )^{-1}QQ^{-1}$
