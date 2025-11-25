@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.34 87.33">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #231815;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 9.6px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-5 {
+        stroke-width: .5px;
+      }
+
+      .cls-3 {
+        font-size: 9.6px;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-4" x1=".09" y1="74.16" x2="50.45" y2="83.09"/>
+    <path class="cls-1" d="M56.39,84.14c-2.98.54-6.76,1.7-9.25,3.19l2.52-4.38-.86-4.98c1.82,2.26,4.97,4.64,7.59,6.17Z"/>
+  </g>
+  <g>
+    <line class="cls-4" x1=".08" y1="76.12" x2="55.4" y2="69.81"/>
+    <path class="cls-1" d="M61.4,69.13c-2.7,1.37-6,3.55-7.95,5.69l1.17-4.92-2.25-4.53c2.39,1.64,6.09,3.03,9.03,3.76Z"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="1.2" y1="77.44" x2="46.12" y2="57.7"/>
+    <path class="cls-1" d="M51.65,55.27c-2.18,2.11-4.68,5.17-5.91,7.79l-.34-5.05-3.49-3.66c2.77.86,6.71,1.09,9.74.91Z"/>
+  </g>
+  <g>
+    <line class="cls-4" x1="5.76" y1="78.9" x2="5.83" y2="23.16"/>
+    <path class="cls-1" d="M5.83,17.13c1.05,2.84,2.84,6.37,4.75,8.55l-4.75-1.73-4.76,1.71c1.91-2.18,3.71-5.7,4.76-8.54Z"/>
+  </g>
+  <text class="cls-3" transform="translate(7.54 66.13) rotate(21.47)"><tspan x="0" y="0">...</tspan></text>
+  <circle class="cls-1" cx="34.39" cy="23.65" r="1.08"/>
+  <circle class="cls-1" cx="39.79" cy="53.54" r="1.08"/>
+  <circle class="cls-1" cx="33.31" cy="29.67" r="1.08"/>
+  <circle class="cls-1" cx="25.34" cy="27.51" r="1.08"/>
+  <circle class="cls-1" cx="32.97" cy="52.46" r="1.08"/>
+  <circle class="cls-1" cx="28.96" cy="57.01" r="1.08"/>
+  <circle class="cls-1" cx="27.24" cy="41.93" r="1.08"/>
+  <circle class="cls-1" cx="58.64" cy="41.93" r="1.08"/>
+  <circle class="cls-1" cx="59.72" cy="26.43" r="1.08"/>
+  <circle class="cls-1" cx="66.18" cy="43.01" r="1.08"/>
+  <circle class="cls-1" cx="71.98" cy="35.69" r="1.08"/>
+  <circle class="cls-1" cx="65.1" cy="28.59" r="1.08"/>
+  <circle class="cls-1" cx="64.02" cy="34.61" r="1.08"/>
+  <circle class="cls-1" cx="56.05" cy="32.45" r="1.08"/>
+  <circle class="cls-1" cx="49.2" cy="28.59" r="1.08"/>
+  <line class="cls-5" x1="36.07" y1="22.17" x2="44.88" y2="10.74"/>
+  <text class="cls-2" transform="translate(46.06 8.45)"><tspan x="0" y="0">ねこ</tspan></text>
+  <line class="cls-5" x1="24.14" y1="25.63" x2="19.24" y2="13.56"/>
+  <text class="cls-2" transform="translate(2.75 10.75)"><tspan x="0" y="0">まるい</tspan></text>
+  <line class="cls-5" x1="58.05" y1="17.19" x2="35.31" y2="28.35"/>
+  <text class="cls-2" transform="translate(60.54 19.59)"><tspan x="0" y="0">ねむい</tspan></text>
+</svg>
