@@ -344,6 +344,12 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 - 変分オートエンコーダ、拡散モデル、フローマッチングが作る潜在空間や分布
 - Transformerが入出力するトークン（埋め込みのベクトル）
 
+
+---
+
+- VLA（vision-language-action）モデルにおける空間表現
+
+
 ---
 
 ## 以後ボツスライド
