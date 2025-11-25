@@ -284,12 +284,12 @@ $=
 
 ---
 
-### Example (from Detailed Explanation of Probabilistic Robotics)
+### Example (from the orange book)
 
 - Left: No observation. Right: Observation.
 - There is no $\psi$
-- $H_t$ and $Q_t$ are $2\times 2$ matrices, but that's not a problem.
-- Let's think about why we can use this to estimate $(x, y, \theta)$.
+    - $H_t$ and $Q_t$ are $2\times 2$ matrices, but that's not a problem.
+    - Let's think about why we can use this to estimate $(x, y, \theta)$.
 
 ![w:350](./figs/kalman_no_obs.gif)![w:350](./figs/kalman_filter.gif)
 
@@ -299,10 +299,9 @@ $=
 
 - Bayesian filter using Monte Carlo methods
 - Used over Kalman filters for mobile robots
-- Suitable for simulating collisions with walls, as in the example in Part 6
-(However, there are few serious implementations.)
+    - Suitable for simulating collisions with walls, as in the example in Part 6 (However, there are few implementations that simulate it.)
 - Noise often does not follow a Gaussian distribution
-- LiDAR data: While it's rare to measure the distance to an object from a distance, it's common to measure it from a distance as a person passes by.
+    - LiDAR data: While it's rare to measure the distance to an object from a distance, it's common to measure it from a distance as a person passes by.
 
 $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 
@@ -310,16 +309,15 @@ $\qquad\qquad\qquad$![w:800](./figs/1d_likelihood.svg)
 
 ### Particle (Redefinition)
 
-- Right: Review
 - Adding a "weight" variable to the particle from Lesson 6
-- $\xi_t^{(i)} = (\boldsymbol{x}_t^{(i)}, w_t^{(i)}) = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}, w_t^{(i)})$
+    - $\xi_t^{(i)} = (\boldsymbol{x}_t^{(i)}, w_t^{(i)}) = (x_t^{(i)},y_t^{(i)},\theta_t^{(i)}, w_t^{(i)})$
 $(i=1,2,\dots,N)$
-- Each arrow in the right figure has a weight.
-- Set: $\xi_t^{(1:N)} = \{\xi_t^{(1)}, \xi_t^{(2)}, \dots, \xi_t^{(N)}\}$
+        - Each arrow in the right figure has a weight.
+    - Set: $\xi_t^{(1:N)} = \{\xi_t^{(1)}, \xi_t^{(2)}, \dots, \xi_t^{(N)}\}$
 - Defines an approximation method for the probability that the true pose $\boldsymbol{x}^*$ is within $X$.
-- $\text{Pr}\{ \boldsymbol{x}^* \in X \} \simeq \sum_{i=1}^N w_t^{(i)} \delta(\boldsymbol{x}_t^{(i)} \in X)$
-- $\delta(\cdot)$: 1 if the value in the parentheses is true, 0 if false.
-- Set of particles before applying sensor information: $\hat{\xi}_t^{(1:N)}$
+    - $\text{Pr}\{ \boldsymbol{x}^* \in X \} \simeq \sum_{i=1}^N w_t^{(i)} \delta(\boldsymbol{x}_t^{(i)} \in X)$
+        - $\delta(\cdot)$: 1 if the value in the parentheses is true, 0 if false.
+- Set of particles before applying sensor info.: $\hat{\xi}_t^{(1:N)}$
 
 ![bg right:25% 100%](./figs/motion_update_particles.png)
 
