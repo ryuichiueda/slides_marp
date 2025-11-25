@@ -338,10 +338,10 @@ $(i=1,2,\dots,N)$
 
 - Reflect the control command $\boldsymbol{u}_t$ in $\xi_t^{(1:N)}$ to $\hat{\xi}_{t+1}^{(1:N)}$.
 - Instead of simply moving each particle, <span style="color:red">resampling</span> is used.
-- Prevent weight imbalance and propagate particles with high weights.
+    - Prevent weight imbalance and propagate particles with high weights.
 - Example
-- Left: No resampling (weights are multiplied by likelihood).
-- Right: With resampling.
+    - Left: No resampling (weights are multiplied by likelihood).
+    - Right: With resampling.
 ![w:300](./figs/mcl_sensor_update.gif)![w:300](./figs/mcl_sys_resampling.gif)
 
 ---
