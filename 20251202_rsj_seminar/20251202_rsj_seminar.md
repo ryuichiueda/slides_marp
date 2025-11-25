@@ -347,7 +347,10 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-- VLA（vision-language-action）モデルにおける空間表現
+### VLA（vision-language-action）モデルにおける空間表現
+
+- 方策を記録
+- 価値を推定
 
 
 ---
