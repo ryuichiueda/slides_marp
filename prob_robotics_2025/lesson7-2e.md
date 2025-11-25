@@ -162,15 +162,15 @@ $= \hat\Sigma_t H^\top (Q + H \hat\Sigma_t H^\top)^{-1}$
 ### Kalman filter
 
 - Summary of the above results and the equation for movement in Lesson 6
-- When the robot moves
-- $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}_t}$ (Recap: Add the average displacement to the original average position)
-- $\hat{\Sigma}_{t-1} = \Sigma_t + S_t$ (Recap: Add the uncertainty of the displacement)
+    - When the robot moves
+        - $\hat{\boldsymbol{\mu}}_t = \boldsymbol{\mu}_{t-1} + \overline{\Delta \boldsymbol{x}_t}$ (Recap: Add the average displacement to the original average position)
+        - $\hat{\Sigma}_{t-1} = \Sigma_t + S_t$ (Recap: Add the uncertainty of the displacement)
 - When the robot observes
-- $K_t = \hat\Sigma_t H^\top ( H \hat\Sigma_t H^\top + Q )^{-1}$
-- $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
-- $\Sigma_t = (I - K_t H)\hat\Sigma_t$
+    - $K_t = \hat\Sigma_t H^\top ( H \hat\Sigma_t H^\top + Q )^{-1}$
+    - $\boldsymbol{\mu}_t = K_t (\boldsymbol{z}_t- \hat{\boldsymbol{z}}_t) + \hat{\boldsymbol{\mu}}_t$
+    - $\Sigma_t = (I - K_t H)\hat\Sigma_t$
 - The above update equation is called the <span style="color:red">Kalman filter</span>.
-- Implementing a Bayesian filter using Gaussian distribution operations.
+    - Implementing a Bayesian filter using Gaussian distribution operations.
 
 ---
 
