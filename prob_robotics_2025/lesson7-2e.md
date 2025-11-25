@@ -191,14 +191,14 @@ $\qquad\qquad\qquad\qquad\qquad\qquad$![w:350](./figs/camera_landmark.svg)
 
 - Observation model: $\boldsymbol{z}_t \sim \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right]$
     - Observation equation $\boldsymbol{h}(\boldsymbol{x}_t)$: The mean value of the vector of sensor values obtained at $\boldsymbol{x}_t$
-- Elements are $\ell, \varphi, \psi$ ($\boldsymbol{z}_t$ is a vector in the space of sensor values)
-- $Q_t(\boldsymbol{x}_t)$: The noise covariance matrix at $\boldsymbol{x}_t$
-- Preliminary approximation of $Q_t(\boldsymbol{x}_t)$: Approximate the covariance matrix at the center $\hat{b}_t$ of $\hat{b}_t$
-- $Q_t(\boldsymbol{x}_t)\simeq Q_t(\hat{\boldsymbol{\mu}}_t)$
-- From now on, $Q_t(\hat{\boldsymbol{\mu}}_t)$ will be simply referred to as $Q_t$.
+        - Elements are $\ell, \varphi, \psi$ ($\boldsymbol{z}_t$ is a vector in the space of sensor values)
+    - $Q_t(\boldsymbol{x}_t)$: The noise covariance matrix at $\boldsymbol{x}_t$
+        - Preliminary approximation of $Q_t(\boldsymbol{x}_t)$: Approximate the covariance matrix at the center $\hat{\boldsymbol{\mu}}_t$ of $\hat{b}_t$
+           - $Q_t(\boldsymbol{x}_t)\simeq Q_t(\hat{\boldsymbol{\mu}}_t)$
+           - From now on, $Q_t(\hat{\boldsymbol{\mu}}_t)$ will be simply referred to as $Q_t$.
 - Likelihood function: $L(\boldsymbol{x}_t |\boldsymbol{z}_t) = \mathcal{N}\left[ \boldsymbol{h}(\boldsymbol{x}_t), Q_t(\boldsymbol{x}_t) \right] \simeq \mathcal{N}(\boldsymbol{h}(\boldsymbol{x}_t), Q_t)$
-- Linearization is required
-- Approximate $\boldsymbol{h}$ to a linear equation such as $\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$
+    - Linearization is required
+        - Approximate $\boldsymbol{h}$ to a linear equation such as $\boldsymbol{z} = H\boldsymbol{x} + \boldsymbol{c}$
 
 ---
 
