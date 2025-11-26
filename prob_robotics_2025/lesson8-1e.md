@@ -280,10 +280,10 @@ This is complicated, so let's just think about the meaning.
 ### Regression Formulas (continued)
 
 - Assumption 3: Since the value of $\lambda$ is unknown, it is expressed as a probability distribution (large variance at first).
-- This distribution: $\text{Gam}(\lambda | a, b) = \eta \lambda^{a-1}e^{-b\lambda}$ (Gamma distribution)
-- Figure below (a): Probability distribution of the gamma distribution
-- Figure below (b): The horizontal axis of (a) is scaled by logarithm
-- $\lambda = The standard deviation of the variability of $y_i$ is $10$ for a parameter of 10^{-2}$.
+    - This distribution: $\text{Gam}(\lambda | a, b) = \eta \lambda^{a-1}e^{-b\lambda}$ (Gamma distribution)
+         - Figure below (a): Probability distribution of the gamma distribution
+         - Figure below (b): The horizontal axis of (a) is scaled by logarithm
+    - When $\lambda = 10^{-2}$, the standard deviation of the variability of $y_i$ is $10$ 
 
 <center><img width=50% src="./figs/gamma_dist.png" /></center>
 
