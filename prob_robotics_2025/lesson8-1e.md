@@ -125,12 +125,12 @@ $= \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
 ### Derive parameters to minimize the loss function
 
 - Partially differentiate the loss function with respect to the parameters to find the parameters that make $0$.
-- $\nabla \mathcal{L}(w_{0:1} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0}, \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
-- No matter how $w_0$ and $w_1$ are shifted, the value of $\mathcal{L}$ does not change.
+    - $\nabla \mathcal{L}(w_{0:1} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0}, \dfrac{\partial\mathcal{L}}{\partial w_1} \right) = \boldsymbol{0}$
+        - No matter how $w_0$ and $w_1$ are shifted, the value of $\mathcal{L}$ does not change.
 $\Rightarrow$If there are no other such points, the value at that point is the minimum value of $\mathcal{L}$.
 - Let's try solving the equation on the previous page.
-- $\mathcal{L}(w_{0:1}| x_{1:N}, y_{1:N}) = \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
-- Set simultaneous equations by differentiating with respect to $w_0$ and $w_1$.
+    - $\mathcal{L}(w_{0:1}| x_{1:N}, y_{1:N}) = \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
+        - Set simultaneous equations by differentiating with respect to $w_0$ and $w_1$.
 
 ---
 
