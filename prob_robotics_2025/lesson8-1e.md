@@ -321,74 +321,71 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
             - $\boldsymbol{a} = y_1, \boldsymbol{b} = 0, \boldsymbol{c} = \boldsymbol{\mu}_0, s=\lambda^{-1}, \boldsymbol{x} = (w_0 \ w_1)^\top$
             - $A = (1 \ x_1), B=I, C = \Lambda_0^{-1}$
 
-
 ---
 
-### 回帰の方法（計算結果）
+### Regression Method (Calculation Results)
 
-- 左辺はガウス-ガンマ分布となり、事後分布のパラメータはこうなる
-    - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$（ここで$\phi(x) = (1 \ \  x)^\top$）
+- The left-hand side is a Gaussian-Gamma distribution, and the posterior distribution parameters are as follows:
+    - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$ (where $\phi(x) = (1 \ \ x)^\top$)
     - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1\phi(x_1) + \Lambda_0 \boldsymbol{\mu}_0 \}$
     - $a_1 = 1/2 + a_0$
-    - $b_1 = \left( y_1^2 -  \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
+    - $b_1 = \left( y_1^2 - \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
 
 ---
 
-### ポイント
+### Key Points
 
-- 事前確率と事後確率の分布が同じ形
-    - 事前確率: $p(\boldsymbol{w}, \lambda | x_0, y_0) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
-    - 事後確率: $p(\boldsymbol{w}, \lambda | x_1, y_1) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
-- $\Lambda_1, \boldsymbol{\mu}_1, a_1, b_1$は既存の数値で計算可能$\rightarrow$<span style="color:red">事後分布が計算可能</span>
-    - 講義だとどうしても原理の話になり、それは重要なのだけど、使うときは前ページの下の4つの式に事前分布のパラメータとデータの値を入力するだけ
-    - まず大事なことは、使いどころがどこなのかおさえておくこと
-
----
-
-### データが複数の場合
-
-- 最小二乗法のように一気に計算可能
-- データ$(x,y)_{1:N}$に対する事後分布:
-    - $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
-        - $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0\qquad$（データが増えて精度向上）
-            - ここで$\boldsymbol{\phi}(x_i) = (1 \ \ x_i )^\top$
-	    - $\boldsymbol{\mu}_N = \Lambda_N^{-1}\left( \sum_{i=1}^N y_i \boldsymbol{\phi}(x_i)+ \Lambda_0\boldsymbol{\mu}_0 \right)$（パラメータの平均値の調整）
-	    - $a_N = \dfrac{N}{2} + a_0\qquad\qquad\qquad\qquad\quad$（データが増えて分布が鋭く）
-	    - $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 -  \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
-            - $b_N$の式の意味はよくわかりませんが$\lambda$の平均値は$a_N/b_N$
-
-<center style="color:red">これもデータと事前分布のパラメータを当てはめるだけ</center>
+- The distributions of the prior and posterior probabilities are the same.
+- Prior probability: $p(\boldsymbol{w}, \lambda | x_0, y_0) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
+- Posterior probability: $p(\boldsymbol{w}, \lambda | x_1, y_1) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
+- $\Lambda_1, \boldsymbol{\mu}_1, a_1, b_1$ can be calculated using existing values.$\rightarrow$<span style="color:red">The posterior distribution can be calculated</span>
+- In lectures, we inevitably discuss the principles, and while they are important, to use them, all you need to do is enter the prior parameters and data values ​​into the four equations at the bottom of the previous page.
+- The first important thing is to understand when to use them.
 
 ---
 
-### さらに$y = w_0 + w_1 x$以外の曲線を当てはめることを考えてみる
+### For multiple data sets
 
-- いろんな関数に係数をかけて足したもの
-    - $y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
-        - $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
-        - $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
-- $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
-    - <span style="color:red">実は前ページの式がそのまま使える</span>
+- Can be calculated all at once, like the least squares method.
+- Posterior distribution for data $(x,y)_{1:N}$:
+- $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
+- $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0\qquad$ (Increased data improves accuracy)
+- Here, $\boldsymbol{\phi}(x_i) = (1 \ \ x_i )^\top$
+- $\boldsymbol{\mu}_N = \Lambda_N^{-1}\left( \sum_{i=1}^N y_i \boldsymbol{\phi}(x_i)+ \Lambda_0\boldsymbol{\mu}_0 \right)$ (Adjusts the mean value of the parameters)
+- $a_N = \dfrac{N}{2} + a_0\qquad\qquad\qquad\qquad\quad$ (Increased data sharpens the distribution)
+- $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 - \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
+- I'm not sure what the $b_N$ formula means, but the mean of $\lambda$ is $a_N/b_N$.
+
+<center style="color:red">This also just involves fitting the data and prior parameters.</center>
 
 ---
 
-### 例: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
+### Let's consider fitting a curve other than $y = w_0 + w_1 x$.
 
-- 少しずつデータを入力して、事後分布から関数（多項式）をサンプリング
-    - データが増えるにしたがって関数のばらつきが減る
-    - データ（2次関数からサンプリング）にしたがい、高次のパラメータが$0$へ
+- Adding various functions multiplied by coefficients.
+- $y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
+- $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
+- $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
+- $y = w_0 + w_1 x$ is difficult, but is it okay?$\rightarrow$Yes.
+- <span style="color:red">Actually, we can use the formula from the previous page as is.</span>
+
+---
+
+### Example: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
+
+- Input data little by little and sample a function (polynomial) from the posterior distribution.
+- As the amount of data increases, the variability of the function decreases.
+- Higher-order parameters tend to zero according to the data (sampled from a quadratic function).
 
 <center><img width=50% src="./figs/function_estimation.png" /></center>
 
 ---
 
-## まとめ
+## Summary
 
-- ベイズの定理で回帰がより一般的に
-    - 関数の分布=パラメータの分布と考える
-    - データの不足によるあいまいさをも考慮可能に
-- ベイズ線形回帰の導出
-    - 難しいが結果は機械的に使用可能
-    - 使いどころを間違えなければ誰にでも便利な道具に
-
-
+- Bayes' theorem makes regression more general.
+- Consider the distribution of the function as the distribution of the parameters.
+- Can also account for ambiguity due to insufficient data.
+- Derivation of Bayesian linear regression.
+- Difficult, but the results are easily interpretable.
+- A useful tool for anyone, as long as it's used correctly.
