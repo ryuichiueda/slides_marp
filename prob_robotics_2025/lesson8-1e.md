@@ -348,13 +348,13 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
 
 - Can be calculated all at once, like the least squares method.
 - Posterior distribution for data $(x,y)_{1:N}$:
-- $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
-- $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0\qquad$ (Increased data improves accuracy)
-- Here, $\boldsymbol{\phi}(x_i) = (1 \ \ x_i )^\top$
-- $\boldsymbol{\mu}_N = \Lambda_N^{-1}\left( \sum_{i=1}^N y_i \boldsymbol{\phi}(x_i)+ \Lambda_0\boldsymbol{\mu}_0 \right)$ (Adjusts the mean value of the parameters)
-- $a_N = \dfrac{N}{2} + a_0\qquad\qquad\qquad\qquad\quad$ (Increased data sharpens the distribution)
-- $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 - \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
-- I'm not sure what the $b_N$ formula means, but the mean of $\lambda$ is $a_N/b_N$.
+    - $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
+        - $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0\qquad$ (Increased data improves accuracy)
+            - Here, $\boldsymbol{\phi}(x_i) = (1 \ \ x_i )^\top$
+        - $\boldsymbol{\mu}_N = \Lambda_N^{-1}\left( \sum_{i=1}^N y_i \boldsymbol{\phi}(x_i)+ \Lambda_0\boldsymbol{\mu}_0 \right)$ (Adjusts the mean value of the parameters)
+        - $a_N = \dfrac{N}{2} + a_0\qquad\qquad\qquad$ (Increased data sharpens the distribution)
+        - $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 - \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
+        - I'm not sure what the $b_N$ formula means, but the mean of $\lambda$ is $a_N/b_N$.
 
 <center style="color:red">This also just involves fitting the data and prior parameters.</center>
 
