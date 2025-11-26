@@ -350,10 +350,11 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### 内部状態の構成（令和最新版）
 
+<span style="font-size:70%">ちなみに私の博士論文のテーマも「方策の圧縮」です。自己位置推定でもSLAMでもないです。</span>
+
 - 変分オートエンコーダ（VAE）、拡散モデル、フローマッチング（FM）が作る潜在空間や分布（右図）
     - 超多次元、複雑な空間中の確率分布を圧縮表現
 - Transformerが入出力する言語や映像のトークン（埋め込みのベクトル）の空間
-- <span style="font-size:70%">ちなみに私の博士論文のテーマも「方策の圧縮」です。自己位置推定でもSLAMでもないです。</span>
 
 ![bg right:30% 100%](autoenc_prob.svg)
 
