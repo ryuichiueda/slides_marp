@@ -185,16 +185,13 @@ $\Longrightarrow y=0.0590 x + 2.01$
 ## Optimization when partial differential equations cannot be solved
 
 - Consider optimizing a loss function consisting of $n$ parameters.
-- $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$
-- How to reduce the value of $\mathcal{L}$ by manipulating $w_{1:n}$
+    - $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$
+        - How to reduce the value of $\mathcal{L}$ by manipulating $w_{1:n}$
 - Try shifting it by $\Delta w_{1:n}$
-- $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$ becomes $\mathcal{L}(w_{1:n} + \Delta w_{1:n}| x_{1:N}, y_{1:N})$
-- If the latter value becomes smaller, change $w_{1:n}$ to $w_{1:n} + \Delta Changing to w_{1:n}$
-
-"Better"
-- Problem: Trying various $\Delta w_{1:n}$s is good, but with a large number of parameters, the number of combinations becomes tedious.
-
-Is it possible to find the best $\Delta w_{1:n}$ using $\Rightarrow$ calculations?
+    - $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$ becomes $\mathcal{L}(w_{1:n} + \Delta w_{1:n}| x_{1:N}, y_{1:N})$
+        - If the latter value becomes smaller, change $w_{1:n}$ to $w_{1:n} + \Delta w_{1:n}$. And it changes to "Better."
+    - Problem: Trying various $\Delta w_{1:n}$s is good, but with a large number of parameters, the number of combinations becomes tedious.
+$\Rightarrow$ Is it possible to find the best $\Delta w_{1:n}$?
 
 ---
 
