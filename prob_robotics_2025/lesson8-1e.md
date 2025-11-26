@@ -80,7 +80,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### Situations for Using Regression
+### Situations for using Regression
 
 For the data on the right, it seems reasonable to apply a probability distribution, but...
 
@@ -93,11 +93,11 @@ For the data on the right, it seems reasonable to apply a probability distributi
 
 ---
 
-### Fitting a Linear Equation Using the Least Squares Method
+### Fitting a Linear Equation using the Least Squares Method
 
 - For the points $(x, y)_{1:N}$, find $w_1, w_0$, where the line $y=w_1 x + w_0$ passes through the middle.
-- $w_1$ is the slope, and $w_0$ is the intercept.
-- The most basic regression you've probably studied somewhere.
+    - $w_1$ is the slope, and $w_0$ is the intercept.
+    - The most basic regression you've probably studied somewhere.
 
 ![bg right:30% 100%](./figs/lsm_liner.png)
 
