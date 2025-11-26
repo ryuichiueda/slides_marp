@@ -363,11 +363,11 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
 ### Let's consider fitting a curve other than $y = w_0 + w_1 x$.
 
 - Adding various functions multiplied by coefficients.
-- $y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
-- $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
-- $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
+    - $y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
+        - $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
+        - $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
 - $y = w_0 + w_1 x$ is difficult, but is it okay?$\rightarrow$Yes.
-- <span style="color:red">Actually, we can use the formula from the previous page as is.</span>
+    - <span style="color:red">Actually, we can use the formula from the previous page as is.</span>
 
 ---
 
