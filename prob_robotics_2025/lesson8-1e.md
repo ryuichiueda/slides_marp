@@ -82,7 +82,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ### Situations for Using Regression
 
-For the data on the right, it seems reasonable to apply a probability distribution.
+For the data on the right, it seems reasonable to apply a probability distribution, but...
 
 - There's no point/interest in considering the horizontal distribution.
     - When it's meaningless: Time series data, etc.
