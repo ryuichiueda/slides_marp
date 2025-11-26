@@ -256,9 +256,9 @@ This is complicated, so let's just think about the meaning.
 
 - Example: Fitting formula: Polynomial $y = w_0 + w_1 x$
 - Let's make some assumptions.
-- Assumption 1: For $x_i$, $y_i$ varies with variance $\lambda^{-1}$ around the polynomial value $w_0 + w_1 x_i$.
-- $y_i \sim \mathcal{N}(y | w_0 + w_1 x_i, \lambda^{-1})$
-- $\lambda$: Accuracy
+    - Assumption 1: For $x_i$, $y_i$ varies with variance $\lambda^{-1}$ around the polynomial value $w_0 + w_1 x_i$.
+        - $y_i \sim \mathcal{N}(y | w_0 + w_1 x_i, \lambda^{-1})$
+        - $\lambda$: precision
 
 ![bg right:30% 100%](./figs/lsm.png)
 
