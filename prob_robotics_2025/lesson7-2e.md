@@ -384,7 +384,7 @@ This is an approximation of a Bayesian filter.
 ## Summary
 
 - We've looked at the implementation of Bayesian filters.
-- Kalman filters, extended Kalman filters, and particle filters.
+    - Kalman filters, extended Kalman filters, and particle filters.
 - Kalman filters are still commonly used for machine control.
 - Particle filters are still commonly used for mobile robots.
-- However, newer methods exist, so keep an eye on trends.
+    - However, newer methods exist, so keep an eye on trends.
