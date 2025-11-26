@@ -64,7 +64,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - Various methods, from least squares to artificial neural networks (ANNs)
 - Let's start with the basic least squares method.
-- Overview: Least squares is not probabilistic, so it has limitations. $\rightarrow$ Introducing probability.
+    - Flow of story: Least squares is not probabilistic, so it has limitations. $\rightarrow$ Introducing probability.
 
 ---
 ## Least squares method
