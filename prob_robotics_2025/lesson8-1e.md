@@ -198,7 +198,7 @@ $\Rightarrow$ Is it possible to find the best $\Delta w_{1:n}$?
 ### Partial Differentiation Again
 
 - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0}, \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
-is $w_0, w_1, \dots, The change in $\mathcal{L}$ when each w_n$ is slightly shifted
+is the change of $\mathcal{L}$ when each $w_0, w_1, \dots, w_n$ is slightly shifted.
 - Calculating the change
 - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
 - What we can learn
