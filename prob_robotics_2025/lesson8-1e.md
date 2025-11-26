@@ -285,7 +285,7 @@ This is complicated, so let's just think about the meaning.
          - Figure below (b): The horizontal axis of (a) is scaled by logarithm
     - When $\lambda = 10^{-2}$, the standard deviation of the variability of $y_i$ is $10$ 
 
-<center><img width=50% src="./figs/gamma_dist.png" /></center>
+<center><img width=40% src="./figs/gamma_dist.png" /></center>
 
 ---
 
