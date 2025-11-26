@@ -311,8 +311,84 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
 
 ---
 
-### Regression Methods (continued)
-
 - If the posterior distribution on the left side has the same shape, we can obtain the following equation:
     - $\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda| a_1, b_1)$
 $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+$= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+        - Same form as the product of Gaussian distributions shown in the Lesson 4: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)= \eta s^{-1/2}e^{-U/2s}\mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , sD)$
+            - $\boldsymbol{d} = D \left\{ A^\top B^{-1}(\boldsymbol{a}- \boldsymbol{b} ) + C^{-1}\boldsymbol{c} \right\}$
+            - $D^{-1} = A^\top B^{-1} A + C^{-1}$
+            - $\boldsymbol{a} = y_1, \boldsymbol{b} = 0, \boldsymbol{c} = \boldsymbol{\mu}_0, s=\lambda^{-1}, \boldsymbol{x} = (w_0 \ w_1)^\top$
+            - $A = (1 \ x_1), B=I, C = \Lambda_0^{-1}$
+
+
+---
+
+### 回帰の方法（計算結果）
+
+- 左辺はガウス-ガンマ分布となり、事後分布のパラメータはこうなる
+    - $\Lambda_1 = \phi(x_1)\phi(x_1)^\top + \Lambda_0\qquad\qquad$（ここで$\phi(x) = (1 \ \  x)^\top$）
+    - $\boldsymbol{\mu}_1 = \Lambda_1^{-1} \{ y_1\phi(x_1) + \Lambda_0 \boldsymbol{\mu}_0 \}$
+    - $a_1 = 1/2 + a_0$
+    - $b_1 = \left( y_1^2 -  \boldsymbol{\mu}_1^\top \Lambda_1 \boldsymbol{\mu}_1 + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right)/2 + b_0$
+
+---
+
+### ポイント
+
+- 事前確率と事後確率の分布が同じ形
+    - 事前確率: $p(\boldsymbol{w}, \lambda | x_0, y_0) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
+    - 事後確率: $p(\boldsymbol{w}, \lambda | x_1, y_1) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
+- $\Lambda_1, \boldsymbol{\mu}_1, a_1, b_1$は既存の数値で計算可能$\rightarrow$<span style="color:red">事後分布が計算可能</span>
+    - 講義だとどうしても原理の話になり、それは重要なのだけど、使うときは前ページの下の4つの式に事前分布のパラメータとデータの値を入力するだけ
+    - まず大事なことは、使いどころがどこなのかおさえておくこと
+
+---
+
+### データが複数の場合
+
+- 最小二乗法のように一気に計算可能
+- データ$(x,y)_{1:N}$に対する事後分布:
+    - $p_N( \boldsymbol{w}, \lambda) = \eta \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_N, \lambda^{-1}\Lambda_N^{-1} ) \text{Gam}(\lambda | a_N, b_N)$
+        - $\Lambda_N = \sum_{i=1}^N \boldsymbol{\phi}(x_i) \boldsymbol{\phi}(x_i)^\top + \Lambda_0\qquad$（データが増えて精度向上）
+            - ここで$\boldsymbol{\phi}(x_i) = (1 \ \ x_i )^\top$
+	    - $\boldsymbol{\mu}_N = \Lambda_N^{-1}\left( \sum_{i=1}^N y_i \boldsymbol{\phi}(x_i)+ \Lambda_0\boldsymbol{\mu}_0 \right)$（パラメータの平均値の調整）
+	    - $a_N = \dfrac{N}{2} + a_0\qquad\qquad\qquad\qquad\quad$（データが増えて分布が鋭く）
+	    - $b_N = \dfrac{1}{2}\left( \sum_{i=1}^N y_i^2 -  \boldsymbol{\mu}_N^\top \Lambda_N \boldsymbol{\mu}_N + \boldsymbol{\mu}_0^\top \Lambda_0\boldsymbol{\mu}_0 \right) + b_0$
+            - $b_N$の式の意味はよくわかりませんが$\lambda$の平均値は$a_N/b_N$
+
+<center style="color:red">これもデータと事前分布のパラメータを当てはめるだけ</center>
+
+---
+
+### さらに$y = w_0 + w_1 x$以外の曲線を当てはめることを考えてみる
+
+- いろんな関数に係数をかけて足したもの
+    - $y = w_0 \phi_0(x) + w_1 \phi_1(x) + w_2 \phi_2(x) + \dots = \boldsymbol{w}\cdot\boldsymbol{\phi}(x)$
+        - $\boldsymbol{w} = (w_0 \ \ w_1 \ \ w_2 \ \ \cdots)^\top$
+        - $\boldsymbol{\phi}(x) = (\phi_0(x) \ \ \phi_1(x) \ \ \phi_2(x) \ \ \cdots)^\top$
+- $y = w_0 + w_1 x$でも難しいのに大丈夫か?$\rightarrow$大丈夫
+    - <span style="color:red">実は前ページの式がそのまま使える</span>
+
+---
+
+### 例: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
+
+- 少しずつデータを入力して、事後分布から関数（多項式）をサンプリング
+    - データが増えるにしたがって関数のばらつきが減る
+    - データ（2次関数からサンプリング）にしたがい、高次のパラメータが$0$へ
+
+<center><img width=50% src="./figs/function_estimation.png" /></center>
+
+---
+
+## まとめ
+
+- ベイズの定理で回帰がより一般的に
+    - 関数の分布=パラメータの分布と考える
+    - データの不足によるあいまいさをも考慮可能に
+- ベイズ線形回帰の導出
+    - 難しいが結果は機械的に使用可能
+    - 使いどころを間違えなければ誰にでも便利な道具に
+
+
