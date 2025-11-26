@@ -237,14 +237,14 @@ $\rightarrow$ Sometimes this is correct, but it may simply be due to insufficien
 ## Bayesian Linear Regression
 
 - Consider the distribution of $y = f(x)$
-- What is the distribution of a function? $\Rightarrow$ Distribution of parameters
+    - What is the distribution of a function? $\Rightarrow$ Distribution of parameters
 - Example: $y = w_1 x + w_0$
-- Consider the probability distribution of $w_1$ and $w_0$
-- Right figure: Sampling is performed assuming that $w_1 and w_0$ are distributed according to a Gaussian distribution.
-- Both have a mean of $0$ and a standard deviation of $1$.
-- Using Bayes' theorem, we change the distribution of $w_1 and w_0$ to fit the data (circles).
+    - Consider the probability distribution of $w_1$ and $w_0$
+    - Right figure: Sampling is performed assuming that $w_1$ and $w_0$ are distributed according to a Gaussian distribution.
+        - Both have a mean of $0$ and a standard deviation of $1$.
+        - Using Bayes' theorem, we change the distribution of $w_1 and w_0$ to fit the data (circles).
 
-![bg right:30% 100%](./figs/line_sampling2.png)
+![bg right:20% 100%](./figs/line_sampling2.png)
 
 <center style="color:red">The solution can be left vague when the amount of data is small</center>
 
