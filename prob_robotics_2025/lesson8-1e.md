@@ -374,10 +374,10 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
 ### Example: $y = w_0 + w_1 x^1 + w_2 x^2 + w_3 x^3 + w_4 x^4$
 
 - Input data little by little and sample a function (polynomial) from the posterior distribution.
-- As the amount of data increases, the variability of the function decreases.
-- Higher-order parameters tend to zero according to the data (sampled from a quadratic function).
+    - As the amount of data increases, the variability of the function decreases.
+    - Higher-order parameters tend to zero according to the data (sampled from a quadratic function).
 
-<center><img width=50% src="./figs/function_estimation.png" /></center>
+<center><img width=40% src="./figs/function_estimation.png" /></center>
 
 ---
 
