@@ -213,9 +213,9 @@ is the change of $\mathcal{L}$ when each $w_0, w_1, \dots, w_n$ is slightly shif
 
 - By partially differentiating the loss function and solving the simultaneous equations, you can apply least squares (and various other optimization methods) to any equation.
 - If you can't solve the simultaneous equations, you can find good parameters by gradually adjusting the parameters according to the gradient vector.
-- For specific examples, see Advanced Vision.
+    - For specific examples, see Advanced Vision.
 - But isn't something missing?
-- Considering what we discussed last time (Bayes' theorem), is there something missing?
+    - Considering what we discussed last time (Bayes' theorem), is there something missing?
 
 ---
 
