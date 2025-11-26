@@ -267,11 +267,11 @@ This is complicated, so let's just think about the meaning.
 ### Regression Formulas (continued)
 
 - Assumption 2: $w_0, w_1$ are also multidimensional Gaussian distributions with large initial variance.
-- Distribution $p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$This is the target of estimation</span>
-- $\boldsymbol{w} = (w_0, w_1) = (w_0 \ \ w_1)^\top$
-- $\boldsymbol{\mu} = (\mu_0, \mu_1) = (\mu_0 \ \ \mu_1)^\top$ (mean of $w_0, w_1$)
-- $\Lambda$ is a $2\times 2$ matrix
-- $\lambda\Lambda$: This is called the "precision matrix"
+    - Distribution $p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$This is the target of estimation</span>
+        - $\boldsymbol{w} = (w_0, w_1) = (w_0 \ \ w_1)^\top$
+        - $\boldsymbol{\mu} = (\mu_0, \mu_1) = (\mu_0 \ \ \mu_1)^\top$ (mean of $w_0, w_1$)
+        - $\Lambda$ is a $2\times 2$ matrix
+            - $\lambda\Lambda$: This is called the "precision matrix"
 
 <center><img width=50% src="./figs/lsm_params.png" /></center>
 
