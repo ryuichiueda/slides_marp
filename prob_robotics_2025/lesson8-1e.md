@@ -384,8 +384,8 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
 ## Summary
 
 - Bayes' theorem makes regression more general.
-- Consider the distribution of the function as the distribution of the parameters.
-- Can also account for ambiguity due to insufficient data.
+   - Consider the distribution of the function as the distribution of the parameters.
+   - Can also account for ambiguity due to insufficient data.
 - Derivation of Bayesian linear regression.
-- Difficult, but the results are easily interpretable.
-- A useful tool for anyone, as long as it's used correctly.
+   - Difficult, but the results are easily interpretable.
+   - A useful tool for anyone, as long as it's used correctly.
