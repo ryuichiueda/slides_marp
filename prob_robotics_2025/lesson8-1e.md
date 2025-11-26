@@ -336,11 +336,11 @@ $= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w
 ### Key Points
 
 - The distributions of the prior and posterior probabilities are the same.
-- Prior probability: $p(\boldsymbol{w}, \lambda | x_0, y_0) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
-- Posterior probability: $p(\boldsymbol{w}, \lambda | x_1, y_1) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
+    - Prior probability: $p(\boldsymbol{w}, \lambda | x_0, y_0) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda, a_0, b_0)$
+    - Posterior probability: $p(\boldsymbol{w}, \lambda | x_1, y_1) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda, a_1, b_1)$
 - $\Lambda_1, \boldsymbol{\mu}_1, a_1, b_1$ can be calculated using existing values.$\rightarrow$<span style="color:red">The posterior distribution can be calculated</span>
-- In lectures, we inevitably discuss the principles, and while they are important, to use them, all you need to do is enter the prior parameters and data values ​​into the four equations at the bottom of the previous page.
-- The first important thing is to understand when to use them.
+   - In lectures, we inevitably discuss the principles. However, to use them, all you need to do is enter the prior parameters and data values into the four equations at the bottom of the previous page.
+   - The first important thing is to understand when to use them.
 
 ---
 
