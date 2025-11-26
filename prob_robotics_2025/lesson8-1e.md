@@ -85,9 +85,9 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 For the data on the right, it seems reasonable to apply a probability distribution.
 
 - There's no point/interest in considering the horizontal distribution.
-- When it's meaningless: Time series data, etc.
+    - When it's meaningless: Time series data, etc.
 (e.g., stock prices, population trends)
-- There's no need to treat time as a distribution.
+         - There's no need to treat time as a distribution.
 
 ![bg right:30% 100%](./figs/relations.png)
 
