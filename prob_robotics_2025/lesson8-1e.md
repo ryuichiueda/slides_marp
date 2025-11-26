@@ -292,10 +292,10 @@ This is complicated, so let's just think about the meaning.
 ### Regression Method
 
 - Prior distribution of $w_0, w_1, \lambda$
-- $p_0(\boldsymbol{w}, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
-- $\boldsymbol{\mu}_0, \Lambda_0, a_0, b_0$ are parameters that determine the shape of the distribution
+    - $p_0(\boldsymbol{w}, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+        - $\boldsymbol{\mu}_0, \Lambda_0, a_0, b_0$ are parameters that determine the shape of the distribution
 (= parameters of the prior distribution)
-- A distribution called the "Gaussian-Gamma Distribution"
+        - A distribution called the "Gaussian-Gamma Distribution"
 
 ---
 
