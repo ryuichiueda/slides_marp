@@ -222,13 +222,13 @@ is the change of $\mathcal{L}$ when each $w_0, w_1, \dots, w_n$ is slightly shif
 ### Remaining problems
 
 - Least squares only produces one answer.
-- It can't express "lack of confidence."
-- Is it okay to fit four data points as shown in the upper right figure?
-- The size of $\mathcal{L}$ allows you to compare the goodness of fit, but it doesn't tell you how unconfident you are.
+    - It can't express "lack of confidence."
+    - Is it okay to fit four data points as shown in the upper right figure?
+    - The size of $\mathcal{L}$ allows you to compare the goodness of fit, but it doesn't tell you how unconfident you are.
 - A large number of parameters can lead to "overfitting."
-- A graph connecting the data with a curve is produced.
+    - A graph connecting the data with a curve is produced.
 $\rightarrow$ Sometimes this is correct, but it may simply be due to insufficient data.
-- This is also common in humans.
+    - This is also common in humans.
 
 ![bg right:30% 90%](./figs/lms_overfit.png)
 

@@ -309,14 +309,20 @@ is the change of <mjx-container class="MathJax" jax="SVG"><svg style="vertical-a
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Probabilistic Robotics Lecture 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Probabilistic Robotics Lecture 8;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="25" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/lms_overfit.png&quot;);background-size:90%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="18" data-footer="Probabilistic Robotics Lecture 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:Probabilistic Robotics Lecture 8;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="25" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="remaining-problems">Remaining problems</h3>
 <ul>
-<li>Least squares only produces one answer.</li>
+<li>Least squares only produces one answer.
+<ul>
 <li>It can't express &quot;lack of confidence.&quot;</li>
 <li>Is it okay to fit four data points as shown in the upper right figure?</li>
 <li>The size of <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="1.561ex" height="1.645ex" role="img" focusable="false" viewBox="0 -705 690 727"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="4C" d="M62 -22T47 -22T32 -11Q32 -1 56 24T83 55Q113 96 138 172T180 320T234 473T323 609Q364 649 419 677T531 705Q559 705 578 696T604 671T615 645T618 623V611Q618 582 615 571T598 548Q581 531 558 520T518 509Q503 509 503 520Q503 523 505 536T507 560Q507 590 494 610T452 630Q423 630 410 617Q367 578 333 492T271 301T233 170Q211 123 204 112L198 103L224 102Q281 102 369 79T509 52H523Q535 64 544 87T579 128Q616 152 641 152Q656 152 656 142Q656 101 588 40T433 -22Q381 -22 289 1T156 28L141 29L131 20Q111 0 87 -11Z"></path></g></g></g></g></svg></mjx-container> allows you to compare the goodness of fit, but it doesn't tell you how unconfident you are.</li>
-<li>A large number of parameters can lead to &quot;overfitting.&quot;</li>
+</ul>
+</li>
+<li>A large number of parameters can lead to &quot;overfitting.&quot;
+<ul>
 <li>A graph connecting the data with a curve is produced.<br />
 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> Sometimes this is correct, but it may simply be due to insufficient data.</li>
 <li>This is also common in humans.</li>
+</ul>
+</li>
 </ul>
 <footer>Probabilistic Robotics Lecture 8</footer>
 </section>
