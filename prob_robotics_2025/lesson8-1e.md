@@ -70,14 +70,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## Least squares method
 
 - Finding the trend $y = f(x)$ of the vertical axis values ​​relative to the horizontal axis values ​​($x$)
-- Example (data from the [Japan Society of Hospital Pharmacists](https://www.jshp.or.jp/))
-- What I want to know
-- What is the relationship between height and weight?
-- What is the relationship between blood pressure and triglyceride concentration?
-- The vertical distribution is large, but I want to find a central pattern for now.
-(This is just an example, not a solution.)
+    - Example (data from the [Japan Society of Hospital Pharmacists](https://www.jshp.or.jp/))
+        - What I want to know
+            - What is the relationship between height and weight?
+            - What is the relationship between blood pressure and triglyceride concentration?
+        - The vertical distribution is large, but I want to find a central pattern for now. (This is just an example, not a solution.)
 
-![bg right:30% 100%](./figs/relations.png)
+![bg right:25% 100%](./figs/relations.png)
 
 ---
 
