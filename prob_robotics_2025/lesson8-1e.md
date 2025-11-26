@@ -46,17 +46,17 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### Basic Concept
+### Basic Idea
 
 - Data is generated due to some cause.
-- For example, if a couple wearing pink clothes is standing in front of you, a lot of pink signals will be received by your photoreceptor cells.
+    - For example, if a couple wearing pink clothes is standing in front of you, a lot of pink signals will be received by your photoreceptor cells.
 - <span style="color:red">If the cause is modeled mathematically, the observed data is thought to arise from it.</span>
-- Example 1: The cause is the function $\boldsymbol{y} = f(\boldsymbol{x})$
-- Data $(\boldsymbol{x}, \boldsymbol{y})_1, (\boldsymbol{x}, \boldsymbol{y})_2,\dots,(\boldsymbol{x}, \boldsymbol{y})_N$ is observed.
-- Example 2: The cause is the probability distribution $\boldsymbol{x} \sim P$
-- Data $\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_N$ is observed (creating some characteristic distribution)
+    - Example 1: The cause is the function $\boldsymbol{y} = f(\boldsymbol{x})$
+        - Data $(\boldsymbol{x}, \boldsymbol{y})_1, (\boldsymbol{x}, \boldsymbol{y})_2,\dots,(\boldsymbol{x}, \boldsymbol{y})_N$ is observed.
+    - Example 2: The cause is the probability distribution $\boldsymbol{x} \sim P$
+        - Data $\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_N$ is observed (creating some characteristic distribution)
 
-$\qquad$<span style="color:red">A problem of calculating the cause $f$ and $P$ from data. $\Rightarrow$ Regression problem (self-localization is one example)</span>
+<span style="color:red">A problem of calculating the cause $f$ and $P$ from data. $\Rightarrow$ Regression problem (self-localization is one example)</span>
 
 ---
 
