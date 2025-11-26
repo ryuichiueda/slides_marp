@@ -109,13 +109,14 @@ For the data on the right, it seems reasonable to apply a probability distributi
 ### How do we determine the "center"?
 
 - Consider the distance between the line and each point along the y-axis as the loss, and minimize it by adding the square of the distance.
-- <span style="color:red">Loss function</span>$\mathcal{L}(w_{0:1}| x_{1:N}, y_{1:N}) = \{w_1 x_1 + w_0 -y_1\}^2$
+    - <span style="color:red">Loss function: minimize the value of 
+</span>$\mathcal{L}(w_{0:1}| x_{1:N}, y_{1:N}) = \{w_1 x_1 + w_0 -y_1\}^2$
 $\qquad\qquad+\{w_1 x_2 + w_0 -y_2\}^2+\dots$
 $\qquad\qquad+\{w_1 x_N + w_0 -y_N\}^2$
-Minimize the value of $= \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
-- Why square it?: It's not necessary, but it makes sense if you interpret it as minimizing variance.
+$= \sum_{i=1}^N \{w_1 x_i + w_0 -y_i\}^2$
+    - Why square it?: It's not necessary, but it makes sense if you interpret it as minimizing variance.
 - The loss function is also important in ANNs.
-- The process is not very different.
+    - The process is not very different.
 
 ![bg right:30% 100%](./figs/lsm_loss.png)
 
