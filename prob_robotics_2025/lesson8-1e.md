@@ -184,6 +184,3 @@ $\Longrightarrow y=0.0590 x + 2.01$
 
 ## Optimization when partial differential equations cannot be solved
 
-- Consider optimizing a loss function consisting of $n$ parameters
-- $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$
-- How do we find $w_
