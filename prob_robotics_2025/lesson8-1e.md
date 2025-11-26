@@ -200,12 +200,12 @@ $\Rightarrow$ Is it possible to find the best $\Delta w_{1:n}$?
 - $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0}, \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
 is the change of $\mathcal{L}$ when each $w_0, w_1, \dots, w_n$ is slightly shifted.
 - Calculating the change
-- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
-- What we can learn
-- When there is a constraint $|\Delta w_{1:n}| \le \alpha$, the greatest reduction occurs when the dot product is minimized.<span style="color:red">$\Delta w_{1:n} = - \alpha \nabla When \mathcal{L}(w_{1:n})$</span>
-- $\nabla \mathcal{L}(w_{1:n})$: <span style="color:red">gradient vector</span>
-- Just update the parameters according to the equation in red above.
-- This is what ANNs do.
+    - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
+- What we can know
+    - When there is a constraint $|\Delta w_{1:n}| \le \alpha$, the greatest reduction occurs when the dot product is minimized: <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>
+        - $\nabla \mathcal{L}(w_{1:n})$: <span style="color:red">gradient vector</span>
+    - Just update the parameters according to the equation in red above.
+        - This is what ANNs do.
 
 ---
 
