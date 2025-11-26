@@ -184,3 +184,140 @@ $\Longrightarrow y=0.0590 x + 2.01$
 
 ## Optimization when partial differential equations cannot be solved
 
+- Consider optimizing a loss function consisting of $n$ parameters.
+- $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$
+- How to reduce the value of $\mathcal{L}$ by manipulating $w_{1:n}$
+- Try shifting it by $\Delta w_{1:n}$
+- $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$ becomes $\mathcal{L}(w_{1:n} + \Delta w_{1:n}| x_{1:N}, y_{1:N})$
+- If the latter value becomes smaller, change $w_{1:n}$ to $w_{1:n} + \Delta Changing to w_{1:n}$
+
+"Better"
+- Problem: Trying various $\Delta w_{1:n}$s is good, but with a large number of parameters, the number of combinations becomes tedious.
+
+Is it possible to find the best $\Delta w_{1:n}$ using $\Rightarrow$ calculations?
+
+---
+
+### Partial Differentiation Again
+
+- $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0}, \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
+is $w_0, w_1, \dots, The change in $\mathcal{L}$ when each w_n$ is slightly shifted
+- Calculating the change
+- $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
+- What we can learn
+- When there is a constraint $|\Delta w_{1:n}| \le \alpha$, the greatest reduction occurs when the dot product is minimized.<span style="color:red">$\Delta w_{1:n} = - \alpha \nabla When \mathcal{L}(w_{1:n})$</span>
+- $\nabla \mathcal{L}(w_{1:n})$: <span style="color:red">gradient vector</span>
+- Just update the parameters according to the equation in red above.
+- This is what ANNs do.
+
+---
+
+### Summary of least squares and loss functions
+
+- By partially differentiating the loss function and solving the simultaneous equations, you can apply least squares (and various other optimization methods) to any equation.
+- If you can't solve the simultaneous equations, you can find good parameters by gradually adjusting the parameters according to the gradient vector.
+- For specific examples, see Advanced Vision.
+- But isn't something missing?
+- Considering what we discussed last time (Bayes' theorem), is there something missing?
+
+---
+
+### Remaining problems
+
+- Least squares only produces one answer.
+- It can't express "lack of confidence."
+- Is it okay to fit four data points as shown in the upper right figure?
+- The size of $\mathcal{L}$ allows you to compare the goodness of fit, but it doesn't tell you how unconfident you are.
+- A large number of parameters can lead to "overfitting."
+- A graph connecting the data with a curve is produced.
+$\rightarrow$ Sometimes this is correct, but it may simply be due to insufficient data.
+- This is also common in humans.
+
+![bg right:30% 90%](./figs/lms_overfit.png)
+
+---
+
+## Bayesian Linear Regression
+
+- Consider the distribution of $y = f(x)$
+- What is the distribution of a function? $\Rightarrow$ Distribution of parameters
+- Example: $y = w_1 x + w_0$
+- Consider the probability distribution of $w_1$ and $w_0$
+- Right figure: Sampling is performed assuming that $w_1 and w_0$ are distributed according to a Gaussian distribution.
+- Both have a mean of $0$ and a standard deviation of $1$.
+- Using Bayes' theorem, we change the distribution of $w_1 and w_0$ to fit the data (circles).
+
+![bg right:30% 100%](./figs/line_sampling2.png)
+
+<center style="color:red">The solution can be left vague when the amount of data is small</center>
+
+---
+
+### Formula for Bayesian Linear Regression
+
+This is complicated, so let's just think about the meaning.
+
+- Example: Fitting formula: Polynomial $y = w_0 + w_1 x$
+- Let's make some assumptions.
+- Assumption 1: For $x_i$, $y_i$ varies with variance $\lambda^{-1}$ around the polynomial value $w_0 + w_1 x_i$.
+- $y_i \sim \mathcal{N}(y | w_0 + w_1 x_i, \lambda^{-1})$
+- $\lambda$: Accuracy
+
+![bg right:30% 100%](./figs/lsm.png)
+
+---
+
+### Regression Formulas (continued)
+
+- Assumption 2: $w_0, w_1$ are also multidimensional Gaussian distributions with large initial variance.
+- Distribution $p(\boldsymbol{w}) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}, \lambda^{-1}\Lambda^{-1}) \quad$<span style="color:red">$\leftarrow$This is the target of estimation</span>
+- $\boldsymbol{w} = (w_0, w_1) = (w_0 \ \ w_1)^\top$
+- $\boldsymbol{\mu} = (\mu_0, \mu_1) = (\mu_0 \ \ \mu_1)^\top$ (mean of $w_0, w_1$)
+- $\Lambda$ is a $2\times 2$ matrix
+- $\lambda\Lambda$: This is called the "precision matrix"
+
+<center><img width=50% src="./figs/lsm_params.png" /></center>
+
+---
+
+### Regression Formulas (continued)
+
+- Assumption 3: Since the value of $\lambda$ is unknown, it is expressed as a probability distribution (large variance at first).
+- This distribution: $\text{Gam}(\lambda | a, b) = \eta \lambda^{a-1}e^{-b\lambda}$ (Gamma distribution)
+- Figure below (a): Probability distribution of the gamma distribution
+- Figure below (b): The horizontal axis of (a) is scaled by logarithm
+- $\lambda = The standard deviation of the variability of $y_i$ is $10$ for a parameter of 10^{-2}$.
+
+<center><img width=50% src="./figs/gamma_dist.png" /></center>
+
+---
+
+### Regression Method
+
+- Prior distribution of $w_0, w_1, \lambda$
+- $p_0(\boldsymbol{w}, \lambda) = \mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+- $\boldsymbol{\mu}_0, \Lambda_0, a_0, b_0$ are parameters that determine the shape of the distribution
+(= parameters of the prior distribution)
+- A distribution called the "Gaussian-Gamma Distribution"
+
+---
+
+### Regression Methods (continued)
+
+- Posterior distribution with only one piece of data, $(x_1, y_1)$, as input
+- Using Bayes' theorem
+- $p(\boldsymbol{w}, \lambda | x_1, y_1) = \eta p(x_1, y_1 | \boldsymbol{w}, \lambda)p_0(\boldsymbol{w}, \lambda)$
+$= \eta p(y_1 | x_1, \boldsymbol{w}, \lambda)p(x_1 | \boldsymbol{w}, \lambda)p_0(\boldsymbol{w}, \lambda)$
+$= \eta p(y_1 | x_1, \boldsymbol{w}, \lambda)p_0(\boldsymbol{w}, \lambda)\qquad\qquad$ (Assuming the distribution of $x_1$ is uniform)
+$= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} ) p_0(\boldsymbol{w}, \lambda)\quad$ (From Assumption 1)
+$= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+
+---
+
+### Regression Methods (continued)
+
+- If the posterior distribution on the left side has the same shape, we can obtain the following equation:
+- $\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_1, \lambda^{-1}\Lambda^{-1}_1)\text{Gam}(\lambda| a_1, b_1)$
+$= \eta \mathcal{N}(y_1 | w_1 x_1 + w_0, \lambda^{-1} )\mathcal{N}(\boldsymbol{w} | \boldsymbol{\mu}_0, \lambda^{-1}\Lambda^{-1}_0)\text{Gam}(\lambda| a_0, b_0)$
+- The formula for the product of Gaussian distributions, which appeared in the fourth lesson, is: $p(\boldsymbol{x}) = \eta \mathcal{N}(\boldsymbol{a} | A\boldsymbol{x} + \boldsymbol{b}, sB) \mathcal{N}(\boldsymbol{x} | \boldsymbol{c}, sC)= \eta s^{-1/2}e^{-U/2s} \mathcal{N}(\boldsymbol{x} | \boldsymbol{d} , Same shape as sD)$ 
+- $\boldsymbol{d} = D \l
