@@ -178,7 +178,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - 経路からちょっと外れたところは基本無視
     - $p(\boldsymbol{x}'|\boldsymbol{x},\boldsymbol{u})$を決定論的に解釈
 - $V^\boldsymbol{\pi}$は方策を求めるついでに計算されている
-    - 単なる概算
+    - 概算
     - 途中の計算で周辺の$V$も求められるが捨てられがち
 - 状態遷移は確率的ではない
 
