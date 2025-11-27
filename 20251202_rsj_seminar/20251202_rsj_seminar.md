@@ -366,7 +366,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ### VLA（vision-language-action）モデルにおける空間表現
 
-制御という観点から見ると面白い
+制御という観点から見ると面白い（$\boldsymbol{\pi}$寄りだったり$V$寄りだったり）
 
 - 模倣学習寄りの手法（ACTや$\pi_0$）: $\boldsymbol{\pi}$を記録
     - VAEや拡散モデル、FMでさまざまな動作シーケンスの分布を学習・生成
