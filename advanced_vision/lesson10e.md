@@ -71,12 +71,17 @@ $\qquad\qquad$![w:600](./figs/flow_matching_problem.svg)
 ### Problem Decomposition: Conditional Flow Matching
 
 - Like the diffusion model, intermediate images (or data) of $t$ are required.
-- Considering the entire distribution is difficult.
+    - Considering the entire distribution is difficult.
 - Decomposing $p_t$ into conditional probabilities.
-- $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
-- $q$: Distribution of the training data
-- Subscript of $\boldsymbol{x}_1$: Time, not the data number
-- <span style="color:red">The overall loss function can be minimized even by minimizing the loss function for each training data point</span>
+    - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
+        - $q$: Distribution of the training data
+            - Subscript of $\boldsymbol{x}_1$: Time, not the data number
+            - <span style="color:red">The overall loss function can be minimized even by minimizing the loss function for each training data point</span>
+
+![bg right:27% 95%](./figs/flow_matching_method.svg)
+
+---
+
 - Vector field $\boldsymbol{u}_t$ can also be calculated (weighted average)
 - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
 
