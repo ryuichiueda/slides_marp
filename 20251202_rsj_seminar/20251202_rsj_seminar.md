@@ -289,18 +289,19 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 制御問題の記述
+### 確率ロボティクスの本質の個人的な解釈
 
-- 確率ロボティクスの本質の個人的な解釈
-    - <span style="color:red">状態方程式を確率モデルで表すこと</span>
-        - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_\text{motion}$
-        $\Longrightarrow$<span style="color:red">$x_t \sim p(x|x_{t-1},u_t)$</span>
-        - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{observation}$
-        $\Longrightarrow$<span style="color:red">$z_t \sim p(z|x_t)$</span>
-            - 太字にしなかった理由: ベクトルから記号を一般化
-    - 自己位置推定やSLAMはその派生であって本質ではない
-        - 青い本のうしろ1/3は行動決定や探査の話（読む人、少）
-        - 2005年頃からそう思っているけど世間はそう思ってない
+<span style="color:red">= 制御のパラダイムシフト</span>
+
+- 状態方程式を確率モデルで表現
+    - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_\text{motion}$
+    $\Longrightarrow$<span style="color:red">$x_t \sim p(x|x_{t-1},u_t)$</span>
+    - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{observation}$
+    $\Longrightarrow$<span style="color:red">$z_t \sim p(z|x_t)$</span>
+        - 太字にしなかった理由: ベクトルから記号を一般化
+- 自己位置推定やSLAMはその派生であって本質ではない
+    - 青い本のうしろ1/3は行動決定や探査の話（読む人少ない）
+    - 2005年頃からそう思っているけど世間はそう思ってない
 
 ![bg right:17% 90%](books.svg)
 
