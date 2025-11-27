@@ -221,7 +221,7 @@ $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
 
 - LLM part: Llama (Large Language Model Meta AI)
     - Output tokens to be input into the Action De-tokenizer below
-- Action generation: "Action De-tokenizer" (The implementation is unclear. Can you read the code?)
+- Action generation: "Action De-tokenizer" (The implementation is unclear. Should we read the code?)
 
 ---
 
