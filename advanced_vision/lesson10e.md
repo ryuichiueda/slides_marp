@@ -125,14 +125,14 @@ $\qquad\qquad$![w:600](./figs/flow_matching_problem.svg)
 
 ---
 
-### What FM Can Do
+### What FM can do
 
 - Figures 1, 6, and 11 in [[Lipman 2022]](https://arxiv.org/abs/2210.02747)
-- Figure 4 is also interesting, even though it is used to explain the algorithm.
+    - Figure 4 is also interesting, even though it is used to explain the algorithm.
 - Stable Diffusion 3
 - Robot Control (We will cover this later in this article)
 - Supplementary Information
-- We have only discussed the case of optimal transportation, but there is room for other design possibilities.
+    - We have only discussed the case of optimal transportation, but there is room for other design possibilities.
 
 ---
 
