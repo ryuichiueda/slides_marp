@@ -202,9 +202,9 @@ prepare the following matrix:
 
 - As the name suggests, this VLA is open.
 - Requirements for making it open.
-- Since users' robots vary, it is useful to facilitate fine-tuning.
-- (Note: A VLA trained on training data from a variety of robots can absorb minor differences between robots to some extent, even without fine-tuning.)
+    - Since users' robots vary, it is useful to facilitate fine-tuning.
 $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
+        - (Note: A VLA trained on training data from a variety of robots can absorb minor differences between robots to some extent, even without fine-tuning.)
 
 ---
 
