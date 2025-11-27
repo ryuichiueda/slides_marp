@@ -356,7 +356,8 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 
 - 変分オートエンコーダ（VAE）、拡散モデル、フローマッチング（FM）が作る潜在空間や分布（右図）
-    - 超多次元、複雑な空間中の確率分布を圧縮表現
+    - <span style="color:red">超多次元空間への対応</span>
+    - 複雑な空間中の確率分布を圧縮表現
 - Transformerが入出力する言語や映像のトークン（埋め込みのベクトル）の空間
 
 ![bg right:30% 100%](autoenc_prob.svg)
