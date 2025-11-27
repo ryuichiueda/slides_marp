@@ -211,13 +211,16 @@ $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
 ### Structure (Figure 2 in [[Paper]](https://arxiv.org/abs/2406.09246))
 
 - Image processing: Tokens are generated independently from two models, SigLIP and DINOv2.
-- SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): A zero-shot image classification model.
-- Instead of classifying objects from a large number of objects using softmax, it outputs a probability of matching between the image and a short sentence.
-- Tokens represent what is in the image.
-- DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): Image base model
-- Extract image features and convert them into tokens
+    - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): A zero-shot image classification model.
+        - Instead of classifying objects from a large number of objects using softmax, it outputs a probability of matching between the image and a short sentence.
+        - Tokens represent what is in the image.
+    - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): Image foundation model
+        - Extract image features and convert them into tokens
+
+---
+
 - LLM part: Llama (Large Language Model Meta AI)
-- Output tokens to be input into the Action De-tokenizer below
+    - Output tokens to be input into the Action De-tokenizer below
 - Action generation: "Action De-tokenizer" (The implementation is unclear. Can you read the code?)
 
 ---
