@@ -1,103 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.47 134.71">
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382.54 365.78">
   <defs>
     <style>
       .cls-1 {
-        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
         font-size: 12px;
       }
 
-      .cls-2 {
-        fill: #fff;
-      }
-
-      .cls-2, .cls-3 {
-        stroke: #000;
-        stroke-miterlimit: 10;
-      }
-
-      .cls-3 {
-        fill: none;
-        stroke-width: 2px;
+      .cls-1, .cls-2, .cls-3 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
       }
 
       .cls-4 {
-        letter-spacing: -.48em;
+        font-family: Times-Bold, Times;
       }
 
-      .cls-5 {
-        letter-spacing: -.48em;
+      .cls-4, .cls-5 {
+        font-weight: 700;
       }
 
-      .cls-6 {
-        letter-spacing: -.08em;
+      .cls-2, .cls-6 {
+        font-size: 16px;
       }
 
       .cls-7 {
-        letter-spacing: -.06em;
+        stroke: #231815;
+      }
+
+      .cls-7, .cls-8, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7, .cls-9 {
+        fill: none;
       }
 
       .cls-8 {
-        letter-spacing: -.06em;
+        fill: #fff;
+      }
+
+      .cls-8, .cls-9 {
+        stroke: #000;
       }
 
       .cls-9 {
-        letter-spacing: -.02em;
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        font-family: Times-BoldItalic, Times;
+        font-style: italic;
       }
 
       .cls-10 {
-        letter-spacing: -.02em;
+        letter-spacing: -.48em;
       }
 
       .cls-11 {
-        letter-spacing: -.04em;
+        letter-spacing: -.48em;
       }
 
       .cls-12 {
-        letter-spacing: -.03em;
+        letter-spacing: -.08em;
       }
 
       .cls-13 {
-        letter-spacing: -.01em;
+        letter-spacing: -.06em;
       }
 
       .cls-14 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-20 {
         letter-spacing: 0em;
       }
     </style>
   </defs>
-  <text class="cls-1" transform="translate(34.38 51.39)"><tspan x="0" y="0">入力</tspan><tspan class="cls-10" x="-40.14" y="14.4">（</tspan><tspan x="-28.38" y="14.4">動</tspan><tspan class="cls-12" x="-16.38" y="14.4">作シー</tspan><tspan class="cls-6" x="18.54" y="14.4">ケン</tspan><tspan class="cls-11" x="40.62" y="14.4">ス</tspan><tspan class="cls-5" x="52.14" y="14.4">）</tspan></text>
+  <text class="cls-1" transform="translate(34.38 70.38)"><tspan x="0" y="0">入力</tspan><tspan class="cls-16" x="-40.14" y="14.4">（</tspan><tspan x="-28.38" y="14.4">動</tspan><tspan class="cls-18" x="-16.38" y="14.4">作シー</tspan><tspan class="cls-12" x="18.54" y="14.4">ケン</tspan><tspan class="cls-17" x="40.62" y="14.4">ス</tspan><tspan class="cls-11" x="52.14" y="14.4">）</tspan></text>
   <g>
-    <polyline class="cls-2" points="146.31 75.67 146.31 33.6 96.25 15.37 96.25 75.67"/>
-    <polyline class="cls-2" points="146.31 35.01 146.31 77.08 96.25 95.31 96.25 35.01"/>
+    <polyline class="cls-8" points="146.31 94.66 146.31 52.59 96.25 34.36 96.25 94.66"/>
+    <polyline class="cls-8" points="146.31 54.01 146.31 96.08 96.25 114.31 96.25 54.01"/>
   </g>
-  <text class="cls-1" transform="translate(99.09 58.59)"><tspan x="0" y="0">encoder</tspan></text>
+  <text class="cls-1" transform="translate(99.09 77.58)"><tspan x="0" y="0">encoder</tspan></text>
   <g>
-    <polyline class="cls-2" points="210.14 75.67 210.14 33.6 260.2 15.37 260.2 75.67"/>
-    <polyline class="cls-2" points="210.14 35.01 210.14 77.08 260.2 95.31 260.2 35.01"/>
+    <polyline class="cls-8" points="210.14 94.66 210.14 52.59 260.2 34.36 260.2 94.66"/>
+    <polyline class="cls-8" points="210.14 54.01 210.14 96.08 260.2 114.31 260.2 54.01"/>
   </g>
-  <text class="cls-1" transform="translate(212.94 58.59)"><tspan x="0" y="0">decoder</tspan></text>
-  <text class="cls-1" transform="translate(300.09 51.39)"><tspan x="0" y="0">出力</tspan><tspan class="cls-10" x="-40.14" y="14.4">（</tspan><tspan x="-28.38" y="14.4">動</tspan><tspan class="cls-12" x="-16.38" y="14.4">作シー</tspan><tspan class="cls-6" x="18.54" y="14.4">ケン</tspan><tspan class="cls-11" x="40.62" y="14.4">ス</tspan><tspan class="cls-5" x="52.14" y="14.4">）</tspan></text>
-  <text class="cls-1" transform="translate(155.21 58.59)"><tspan x="0" y="0">潜在空間</tspan></text>
+  <text class="cls-1" transform="translate(212.94 77.58)"><tspan x="0" y="0">decoder</tspan></text>
+  <text class="cls-1" transform="translate(300.09 70.38)"><tspan x="0" y="0">出力</tspan><tspan class="cls-16" x="-40.14" y="14.4">（</tspan><tspan x="-28.38" y="14.4">動</tspan><tspan class="cls-18" x="-16.38" y="14.4">作シー</tspan><tspan class="cls-12" x="18.54" y="14.4">ケン</tspan><tspan class="cls-17" x="40.62" y="14.4">ス</tspan><tspan class="cls-11" x="52.14" y="14.4">）</tspan></text>
+  <text class="cls-1" transform="translate(155.21 77.58)"><tspan x="0" y="0">潜在空間</tspan></text>
   <g>
-    <line class="cls-3" x1="70.8" y1="81.43" x2="90.21" y2="81.43"/>
-    <path d="M96.25,81.43c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
-  </g>
-  <g>
-    <line class="cls-3" x1="184.51" y1="69.53" x2="203.93" y2="69.53"/>
-    <path d="M209.96,69.53c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
-  </g>
-  <line class="cls-3" x1="184.51" y1="68.53" x2="184.51" y2="99.63"/>
-  <text class="cls-1" transform="translate(58.8 116.25)"><tspan x="0" y="0">条件</tspan><tspan class="cls-10" x="-53.04" y="14.4">（</tspan><tspan x="-41.28" y="14.4">画</tspan><tspan class="cls-13" x="-29.28" y="14.4">像</tspan><tspan class="cls-9" x="-17.4" y="14.4">以</tspan><tspan x="-5.64" y="14.4">外</tspan><tspan class="cls-13" x="6.36" y="14.4">の</tspan><tspan class="cls-8" x="18.24" y="14.4">セ</tspan><tspan class="cls-10" x="29.52" y="14.4">ン</tspan><tspan x="41.28" y="14.4">サ</tspan><tspan class="cls-9" x="53.28" y="14.4">値</tspan><tspan class="cls-5" x="65.04" y="14.4">）</tspan></text>
-  <line class="cls-3" x1="70.8" y1="80.59" x2="70.8" y2="99.63"/>
-  <text class="cls-1" transform="translate(174.17 116.25)"><tspan x="0" y="0">条件</tspan><tspan class="cls-10" x="-5.76" y="14.4">（</tspan><tspan x="6" y="14.4">画</tspan><tspan class="cls-9" x="18" y="14.4">像を</tspan><tspan x="41.52" y="14.4">含</tspan><tspan class="cls-14" x="53.52" y="14.4">む</tspan><tspan class="cls-7" x="65.4" y="14.4">セ</tspan><tspan class="cls-9" x="76.68" y="14.4">ン</tspan><tspan x="88.44" y="14.4">サ</tspan><tspan class="cls-10" x="100.44" y="14.4">値</tspan><tspan class="cls-4" x="112.2" y="14.4">）</tspan></text>
-  <g>
-    <line class="cls-3" x1="149.82" y1="15.37" x2="149.82" y2="28.89"/>
-    <path d="M149.82,34.92c-1.05-2.84-2.85-6.36-4.76-8.55l4.76,1.72,4.75-1.72c-1.9,2.18-3.7,5.71-4.75,8.55Z"/>
+    <line class="cls-9" x1="70.8" y1="100.42" x2="90.21" y2="100.42"/>
+    <path d="M96.25,100.42c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
   </g>
   <g>
-    <line class="cls-3" x1="70.8" y1="81.43" x2="90.21" y2="81.43"/>
-    <path d="M96.25,81.43c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
+    <line class="cls-9" x1="184.51" y1="88.52" x2="203.93" y2="88.52"/>
+    <path d="M209.96,88.52c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
   </g>
-  <text class="cls-1" transform="translate(137.82 10.56)"><tspan x="0" y="0">雑音</tspan></text>
+  <line class="cls-9" x1="184.51" y1="87.52" x2="184.51" y2="118.62"/>
+  <text class="cls-1" transform="translate(58.8 135.24)"><tspan x="0" y="0">条件</tspan><tspan class="cls-16" x="-53.04" y="14.4">（</tspan><tspan x="-41.28" y="14.4">画</tspan><tspan class="cls-19" x="-29.28" y="14.4">像</tspan><tspan class="cls-15" x="-17.4" y="14.4">以</tspan><tspan x="-5.64" y="14.4">外</tspan><tspan class="cls-19" x="6.36" y="14.4">の</tspan><tspan class="cls-14" x="18.24" y="14.4">セ</tspan><tspan class="cls-16" x="29.52" y="14.4">ン</tspan><tspan x="41.28" y="14.4">サ</tspan><tspan class="cls-15" x="53.28" y="14.4">値</tspan><tspan class="cls-11" x="65.04" y="14.4">）</tspan></text>
+  <line class="cls-9" x1="70.8" y1="99.58" x2="70.8" y2="118.62"/>
+  <text class="cls-1" transform="translate(174.17 135.24)"><tspan x="0" y="0">条件</tspan><tspan class="cls-16" x="-5.76" y="14.4">（</tspan><tspan x="6" y="14.4">画</tspan><tspan class="cls-15" x="18" y="14.4">像を</tspan><tspan x="41.52" y="14.4">含</tspan><tspan class="cls-20" x="53.52" y="14.4">む</tspan><tspan class="cls-13" x="65.4" y="14.4">セ</tspan><tspan class="cls-15" x="76.68" y="14.4">ン</tspan><tspan x="88.44" y="14.4">サ</tspan><tspan class="cls-16" x="100.44" y="14.4">値</tspan><tspan class="cls-10" x="112.2" y="14.4">）</tspan></text>
+  <g>
+    <line class="cls-9" x1="149.82" y1="34.36" x2="149.82" y2="47.88"/>
+    <path d="M149.82,53.91c-1.05-2.84-2.85-6.36-4.76-8.55l4.76,1.72,4.75-1.72c-1.9,2.18-3.7,5.71-4.75,8.55Z"/>
+  </g>
+  <g>
+    <line class="cls-9" x1="70.8" y1="100.42" x2="90.21" y2="100.42"/>
+    <path d="M96.25,100.42c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
+  </g>
+  <text class="cls-1" transform="translate(137.82 29.55)"><tspan x="0" y="0">雑音</tspan></text>
+  <g>
+    <polyline class="cls-8" points="209.75 275.23 209.75 233.16 259.81 214.93 259.81 275.23"/>
+    <polyline class="cls-8" points="209.75 234.58 209.75 276.65 259.81 294.88 259.81 234.58"/>
+  </g>
+  <text class="cls-1" transform="translate(212.55 258.15)"><tspan x="0" y="0">decoder</tspan></text>
+  <text class="cls-1" transform="translate(299.7 250.95)"><tspan x="0" y="0">出力</tspan><tspan class="cls-16" x="-40.14" y="14.4">（</tspan><tspan x="-28.38" y="14.4">動</tspan><tspan class="cls-18" x="-16.38" y="14.4">作シー</tspan><tspan class="cls-12" x="18.54" y="14.4">ケン</tspan><tspan class="cls-17" x="40.62" y="14.4">ス</tspan><tspan class="cls-11" x="52.14" y="14.4">）</tspan></text>
+  <g>
+    <line class="cls-9" x1="184.12" y1="269.1" x2="203.54" y2="269.1"/>
+    <path d="M209.57,269.1c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76-1.72-4.75c2.18,1.9,5.71,3.7,8.55,4.75Z"/>
+  </g>
+  <line class="cls-9" x1="184.12" y1="268.1" x2="184.12" y2="299.19"/>
+  <text class="cls-1" transform="translate(173.78 315.81)"><tspan x="0" y="0">条件</tspan><tspan class="cls-16" x="-5.76" y="14.4">（</tspan><tspan x="6" y="14.4">画</tspan><tspan class="cls-15" x="18" y="14.4">像を</tspan><tspan x="41.52" y="14.4">含</tspan><tspan class="cls-20" x="53.52" y="14.4">む</tspan><tspan class="cls-13" x="65.4" y="14.4">セ</tspan><tspan class="cls-15" x="76.68" y="14.4">ン</tspan><tspan x="88.44" y="14.4">サ</tspan><tspan class="cls-16" x="100.44" y="14.4">値</tspan><tspan class="cls-10" x="112.2" y="14.4">）</tspan></text>
+  <text class="cls-6" transform="translate(179.92 260.79)"><tspan class="cls-5" x="0" y="0">z</tspan><tspan class="cls-3" x="6.23" y="0">=</tspan><tspan class="cls-4" x="17.01" y="0">0</tspan></text>
+  <text class="cls-2" transform="translate(116.4 180.76)"><tspan x="0" y="0">ACT[Zhao2023]の学習</tspan></text>
+  <rect class="cls-7" x="9.53" y=".5" width="372.51" height="162.17"/>
+  <text class="cls-2" transform="translate(157.34 360.36)"><tspan x="0" y="0">ACTの使用</tspan></text>
+  <rect class="cls-7" x="9.53" y="204.75" width="372.51" height="137.39"/>
 </svg>
