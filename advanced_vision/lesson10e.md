@@ -252,30 +252,33 @@ $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
 ### Structure (Figure 3 on [this page](https://arxiv.org/html/2410.24164v3))
 
 - PaliGemma
-- Open, lightweight Google VLM (3 billion parameters)
-- Input: Image and task instructions
-- Output: Token
-- Action Expert
-- Outputs robot action sequences (300 million parameters)
-- Input: Tokens from PaliGemma and robot state
-- Output: Action sequences
-- <span style="color:red">Flow Matching</span>
+    - Open, lightweight Google VLM (3 billion parameters)
+    - Input: Image and task instructions
+    - Output: Token
+- Action expert
+    - Outputs robot action sequences (300 million parameters)
+    - Input: Tokens from PaliGemma and robot state
+    - Output: Action sequences
+        - <span style="color:red">Flow Matching</span>
 
 ---
 
 ### How to use Flow Matching
 
 - Training by incorporating observational data into the vector field variables created by the neural network
-- Loss function: $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_{\boldsymbol{w}}(A_t^\tau,\boldsymbol{o}_t) - \boldsymbol{u}(A_t^\tau | A_t) \}^2 \big\rangle_{q(A_t^\tau | A_t), p(A_t | \boldsymbol{o}_t ), \tau \sim \text{Beta}}$
-- $\tau$ is the FM time ($0 \le \tau \le 1$)
-- $t$ is the actual time (the robot's movement step)
-- We want to emphasize the loss function when $\tau$ is small
-- We evaluate using a weighted average biased by the $\rightarrow$ beta distribution
-- $A_t$ (the movement sequence at time $t$) is the training data
-- It is paired with observations or instructions $\boldsymbol{o}_t$
-- $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$ (optimal transportation path)
+    - Loss function: $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_{\boldsymbol{w}}(A_t^\tau,\boldsymbol{o}_t) - \boldsymbol{u}(A_t^\tau | A_t) \}^2 \big\rangle_{q(A_t^\tau | A_t), p(A_t | \boldsymbol{o}_t ), \tau \sim \text{Beta}}$
+        - $\tau$ is the FM time ($0 \le \tau \le 1$)
+            - $t$ is the actual time (the robot's movement step)
+            - We want to emphasize the loss function when $\tau$ is small
+                 $\rightarrow$ We evaluate using a weighted average biased by the beta distribution
+        - $A_t$ (the movement sequence at time $t$) is the training data
+             - It is paired with observations or instructions $\boldsymbol{o}_t$
+        - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$ (optimal transportation path)
+
+---
+
 - During use (inference)
-- When noise is introduced into $A_t^0$, $A_t^1$ is generated, guided by $\boldsymbol{v}_\boldsymbol{w}$ conditioned on $\boldsymbol{o}_t$.
+    - When noise is introduced into $A_t^0$, $A_t^1$ is generated, guided by $\boldsymbol{v}_\boldsymbol{w}$ conditioned on $\boldsymbol{o}_t$.
 
 ---
 
