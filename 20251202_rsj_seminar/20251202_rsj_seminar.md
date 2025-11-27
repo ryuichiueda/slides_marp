@@ -296,7 +296,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
     - <span style="color:red">状態方程式を確率モデルで表すこと</span>
         - 状態方程式: $\boldsymbol{x}_t = \boldsymbol{f}(\boldsymbol{x}_{t-1}, \boldsymbol{u}_t) + \boldsymbol{\varepsilon}_\text{motion}$
         $\Longrightarrow$<span style="color:red">$x_t \sim p(x|x_{t-1},u_t)$</span>
-        - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{obs}$
+        - 観測方程式: $\boldsymbol{z}_t = \boldsymbol{h}(\boldsymbol{x}_t) + \boldsymbol{\varepsilon}_\text{observation}$
         $\Longrightarrow$<span style="color:red">$z_t \sim p(z|x_t)$</span>
             - 太字にしなかった理由: ベクトルから記号を一般化
     - 自己位置推定やSLAMはその派生であって本質ではない
