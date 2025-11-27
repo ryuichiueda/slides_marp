@@ -285,9 +285,9 @@ $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
 ## Summary
 
 - The VLA has been developed.
-- Over the past few years, robots have become capable of understanding human instructions.
-- They can even perform highly detailed tasks.
-- Tasks that are currently out of reach will eventually be possible.
+    - Over the past few years, robots have become capable of understanding human instructions.
+    - They can even perform highly detailed tasks.
+    - Tasks that are currently out of reach will eventually be possible.
 - Future
-- Take another look at your research topic.
-- Consider what you want to solve with robots, and whether they are unsolved.
+    - Take another look at your research topic.
+        - Consider what you want to solve with robots, and whether they are unsolved.
