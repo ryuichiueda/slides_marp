@@ -187,13 +187,14 @@ prepare the following matrix:
 
 ### Differences from PaLM-E (Why it's called VLA)
 
-- It also learns robot behavior (not at the language level, but at the <span style="color:red">numerical level</span>)
-- Numerical level: things like joint rotation angles and movement amounts
-- Example: The training data pair in Figure 1 of the paper (the bottom one)
-- Q: What should the robot do to `<task>`?
-- A: Displacement: $(0.1, -0.2, 0)$, Rotation: $(10^\degree, 25^\degree, -7^\degree)$
+- It also learns robot behavior
+(not at the language level, but at the <span style="color:red">numerical level</span>)
+    - Numerical level: things like joint rotation angles and movement amounts
+        - Example: The training data pair in Figure 1 of the paper (the bottom one)
+            - Q: What should the robot do to `<task>`?
+            - A: Displacement: $(0.1, -0.2, 0)$, Rotation: $(10^\degree, 25^\degree, -7^\degree)$
 - Unlike PaLM-E, it can directly output robot behavior.
-- Considering the control layer, it's reasonable to consider it a successor to RT-1.
+    - Considering the control layer, it's reasonable to consider it a successor to RT-1.
 
 ---
 
