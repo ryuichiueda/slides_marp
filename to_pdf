@@ -1,0 +1,3 @@
+#/usr/bin/env bash
+
+marp --pdf --allow-local-files $1
