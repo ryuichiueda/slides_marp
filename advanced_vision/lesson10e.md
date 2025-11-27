@@ -138,13 +138,13 @@ $\qquad\qquad$![w:600](./figs/flow_matching_problem.svg)
 
 ## Low-Rank Adaptation (LoRA) [[Hu2021]](https://arxiv.org/abs/2106.09685)
 
-- Highly Efficient Fine-Tuning Method
+- Highly efficient fine-tuning method
 - Idea (commonly called an <span style="color:red">adapter</span>)
-- Fixing pre-trained matrix parameters
-- Preparing a fine-tuning model next to it and calculating only the parameter differences
-- Fewer parameters than the model below
-- The computational complexity of backpropagation is reduced.
-- See the next page for how to reduce it.
+    - Fixing pre-trained matrix parameters
+    - Preparing a fine-tuning model next to it and calculating only the parameter differences
+        - Fewer parameters than the model below
+            - The computational complexity of backpropagation is reduced.
+        - See the next page for how to reduce it.
 
 ![bg right:32% 100%](./figs/LoRA.svg)
 
