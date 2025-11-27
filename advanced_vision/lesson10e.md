@@ -154,14 +154,19 @@ $\qquad\qquad$![w:600](./figs/flow_matching_problem.svg)
 
 - For the pre-trained $\alpha \times \beta$ matrix $W$,
 prepare the following matrix:
-- Matrix $A$ ($d\times \beta$)
-- Matrix $B$ ($\alpha \times d$)
+    - Matrix $A$ ($d\times \beta$)
+    - Matrix $B$ ($\alpha \times d$)
 - Fine-tuned matrix: $W' = W + BA$
-- Number of parameters in $W$: $\alpha \beta$
-- Number of parameters in $BA$: $(\alpha + \beta)d$
-- Reduce the number of parameters with a small $d$
+    - Number of parameters in $W$: $\alpha \beta$
+    - Number of parameters in $BA$: $(\alpha + \beta)d$
+         - Reduce the number of parameters with a small $d$
+
+![bg right:40% 100%](./figs/lora_matrixes.svg)
+
+---
+
 - The input dimensionality is reduced in $A$ and restored in $B$
-- Similar to dimensionality reduction using latent space
+    - Similar to dimensionality reduction using latent space
 
 ![bg right:40% 100%](./figs/lora_matrixes.svg)
 
