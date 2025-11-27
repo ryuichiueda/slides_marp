@@ -302,6 +302,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
         - 青い本のうしろ1/3は行動決定や探査の話（読む人少ない）
         - 2005年ごろからそう思っているけど世の中はそう思ってない
 
+![bg right:17% 90%](books.svg)
 
 ---
 
