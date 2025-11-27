@@ -228,10 +228,10 @@ $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
 ### Training data and training method
 
 - Pre-training training data: Open X-Embodiment dataset
-- Trajectories of 70 robots, 2 million robots
+    - Trajectories of 70 robots, 2 million robots
 - Fine tuning
-- Training data is provided by the user
-- As mentioned above, LoRA can be used
+    - Training data is provided by the user
+    - As mentioned above, LoRA can be used
 
 ---
 
@@ -239,15 +239,16 @@ $\Longrightarrow$<span style="color:red">LoRA is now available.</span>
 
 - VLA model developed by Physical Intelligence
 - Simultaneous training of data from a wide variety of robots, including single-arm, dual-arm, and mobile manipulators
-- Original dataset of 68 tasks and the Open X-Embodiment dataset
-- Each dataset contains data from 7 and 22 robots
-- Over 10,000 hours of training
+    - Original dataset of 68 tasks and the Open X-Embodiment dataset
+        - Each dataset contains data from 7 and 22 robots
+        - Over 10,000 hours of training
 - Achieves a 50Hz control cycle using the action chunking architecture used in ACT
-- However, it uses conditional flow matching (CFM) instead of CVAE
+    - However, it uses conditional flow matching (CFM) instead of CVAE
 - Usage examples: See the above site for various examples
-- Achieves complex and detailed movements, such as removing laundry from the washing machine and folding it
+    - Achieves complex and detailed movements, such as removing laundry from the washing machine and folding it
 
 ---
+
 ### Structure (Figure 3 on [this page](https://arxiv.org/html/2410.24164v3))
 
 - PaliGemma

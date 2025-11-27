@@ -358,11 +358,17 @@ prepare the following matrix:
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="Advanced Vision Session 10" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:Advanced Vision Session 10;--paginate:true;" data-marpit-pagination-total="25">
 <h3 id="training-data-and-training-method">Training data and training method</h3>
 <ul>
-<li>Pre-training training data: Open X-Embodiment dataset</li>
+<li>Pre-training training data: Open X-Embodiment dataset
+<ul>
 <li>Trajectories of 70 robots, 2 million robots</li>
-<li>Fine tuning</li>
+</ul>
+</li>
+<li>Fine tuning
+<ul>
 <li>Training data is provided by the user</li>
 <li>As mentioned above, LoRA can be used</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Session 10</footer>
 </section>
@@ -370,14 +376,26 @@ prepare the following matrix:
 <h3 id="black-2024-site"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.375ex;" xmlns="http://www.w3.org/2000/svg" width="2.277ex" height="1.35ex" role="img" focusable="false" viewBox="0 -431 1006.6 596.6"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path></g><g data-mml-node="mn" transform="translate(603,-150) scale(0.707)"><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></g></g></g></g></svg></mjx-container><a href="https://arxiv.org/html/2410.24164v1">[Black 2024]</a> (<a href="https://www.physicalintelligence.company/blog/pi0">site</a>)</h3>
 <ul>
 <li>VLA model developed by Physical Intelligence</li>
-<li>Simultaneous training of data from a wide variety of robots, including single-arm, dual-arm, and mobile manipulators</li>
-<li>Original dataset of 68 tasks and the Open X-Embodiment dataset</li>
+<li>Simultaneous training of data from a wide variety of robots, including single-arm, dual-arm, and mobile manipulators
+<ul>
+<li>Original dataset of 68 tasks and the Open X-Embodiment dataset
+<ul>
 <li>Each dataset contains data from 7 and 22 robots</li>
 <li>Over 10,000 hours of training</li>
-<li>Achieves a 50Hz control cycle using the action chunking architecture used in ACT</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Achieves a 50Hz control cycle using the action chunking architecture used in ACT
+<ul>
 <li>However, it uses conditional flow matching (CFM) instead of CVAE</li>
-<li>Usage examples: See the above site for various examples</li>
+</ul>
+</li>
+<li>Usage examples: See the above site for various examples
+<ul>
 <li>Achieves complex and detailed movements, such as removing laundry from the washing machine and folding it</li>
+</ul>
+</li>
 </ul>
 <footer>Advanced Vision Session 10</footer>
 </section>
