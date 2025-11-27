@@ -104,7 +104,7 @@ $\qquad\qquad$![w:600](./figs/flow_matching_problem.svg)
             - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
     - The flow is: $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
         - At $t=0$, $\boldsymbol{x}$ at various points moves toward $\boldsymbol{x}_1$ (right).
-        - The shapes of $\sigma_t(\boldsymbol{x}_1) and \boldsymbol{\mu}_t(\boldsymbol{x}_1)$ have not yet been determined.
+        - The shapes of $\sigma_t(\boldsymbol{x}_1)$ and $\boldsymbol{\mu}_t(\boldsymbol{x}_1)$ have not yet been determined.
             - Note: Both are functions of time, not $\boldsymbol{x}_1$.
 
 ![bg right:27% 95%](./figs/conditional_flow.svg)
