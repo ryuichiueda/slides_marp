@@ -379,7 +379,7 @@ $\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 結論
+## 結論
 
 
 - その先（妄想）
