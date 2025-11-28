@@ -294,6 +294,8 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ### ACTの計算（使用・推論時）
 
+[[Zhao2023]](https://arxiv.org/abs/2304.13705)の図11下
+
 - 前ページの説明通り、次のようにデコーダだけを使用
     - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{z} = \boldsymbol{0},$ 画像を含むセンサ値$)$
 - $\hat{\boldsymbol{a}}_{t:t+k}$の平滑化
