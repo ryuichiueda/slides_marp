@@ -265,7 +265,7 @@ marp: true
 
 ### ACTの計算（学習時）
 
-構成: Transformerで作った条件付きVAE（CVAE）
+構成: Transformerで作った条件付きVAE（CVAE, [[Zhao2023]](https://arxiv.org/abs/2304.13705)の図11上）
 
 - エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k},$ 画像以外の時刻$t$のセンサ値$)$
     - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる。後述。）
