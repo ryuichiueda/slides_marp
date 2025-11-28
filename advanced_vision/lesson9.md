@@ -334,7 +334,7 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 - スタイル変数$\boldsymbol{z}$
     - これも1つの$512$次元のベクトル
 
-<center>以上、1202個の$512$次元ベクトルを入力</center>
+<center>以上、1202個の512次元ベクトルを入力</center>
 
 
 ---
