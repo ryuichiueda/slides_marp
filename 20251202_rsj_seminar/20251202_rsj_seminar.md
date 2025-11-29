@@ -140,7 +140,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 単純な大域計画の問題の場合
+### 単純な（将棋盤上の）移動の問題の場合
 
 - 問題
     - $\boldsymbol{x}$: ロボットの位置（2次元）
