@@ -182,7 +182,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 - $V^\boldsymbol{\pi}$は方策を求めるついでに計算されている
     - 概算
     - 途中の計算で周辺の$V$も求められるが捨てられがち
-- 状態遷移は確率的ではない
+- かなり雑に解いている
 
 <center style="padding-top:1em">きっちり方策通りにロボットが動けば問題はない、が</center>
 
@@ -206,6 +206,15 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 <center>（小手先で解決できるかもしれないが）根本的な原因は？</center>
 
 ![bg right:20% 100%](chattering.svg)
+
+---
+
+### 原因
+
+- 大きくチャタリングする=間に良くない状態が存在
+- 完全に解いていない
+    - 本当はすべての$\boldsymbol{x}$について$V^*$や$V^\boldsymbol{\pi}$を評価
+- <span style="color:red">「事故もゴール（終端状態）」</span>という考え方の欠如
 
 ---
 
