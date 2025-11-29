@@ -175,8 +175,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 
 ### 探索で得られる大域計画の解の性質
 
-- 1本道の方策$\boldsymbol{\pi}$ができている
-    - 右図の矢印
+- 1本道の方策$\boldsymbol{\pi}$ができている（右図の矢印）
     - 最適である保証はない
     - 経路からちょっと外れたところは基本無視
     - $p(\boldsymbol{x}'|\boldsymbol{x},\boldsymbol{u})$を決定論的に解釈
