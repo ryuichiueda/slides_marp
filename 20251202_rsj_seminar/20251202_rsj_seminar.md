@@ -162,6 +162,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 - 「釣り合い」の式: ベルマン方程式
     - $V^*(\boldsymbol{x}) = \min_\boldsymbol{u} \big\langle V^*(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
         - $V^*$: <span style="color:red">最適状態価値関数（最適な値関数）</span>
+        - 状態遷移が確率的な場合、期待値の釣り合いに
 - $V^*$から各状態で最適な行動$\boldsymbol{u}^* = \boldsymbol{\pi}^*(\boldsymbol{x})$が得られる
     - $\boldsymbol{\pi}^*$: <span style="color:red">最適方策</span>
 - もう一つ重要: 最適でなくても方策$\boldsymbol{\pi}$に対して$V^\boldsymbol{\pi}$が存在
