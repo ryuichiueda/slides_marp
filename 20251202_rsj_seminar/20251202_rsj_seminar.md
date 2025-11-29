@@ -80,9 +80,11 @@ marp: true
     - ダイクストラ、A*、RRT、...
         - いまだ現役
 - 一方、移動ロボットや自動車を自律移動させることは難しい
-    - 自己位置推定がずれる（今回は直接扱わず）、 障害物をうまく避けれない、・・・
+    - 自己位置推定がずれる（今回は直接扱わず）
+    - 障害物をうまく避けれない
+    - ・・・
 
-$\qquad\qquad$![w:300](astar.gif)![w:300](rrt.gif)<span style="font-size:70%">図: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成</span>
+$\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">図: [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)で作成</span>
 
 ---
 
