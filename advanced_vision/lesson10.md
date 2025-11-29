@@ -35,7 +35,7 @@ marp: true
 - 拡散モデル（下図。再掲）
     - 現実（実際には訓練データ）の分布をガウス分布に変換・逆変換
         - 変換にはノイズを乗せていく方法が取られた
-- FL: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
+- FM: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
 
 ![w:900](./figs/ddpm.svg)
 
@@ -74,7 +74,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - $q$: 訓練データの分布
             - $\boldsymbol{x}_1$の添え字: データの番号ではなく時刻
             - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
-- ベクトル場$\boldsymbol{u}_t$も計算できる（重み付き平均）
+- 全体のベクトル場$\boldsymbol{u}_t$も個々のもの（後述）が分かれば計算できる（重み付き平均）
     - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
@@ -185,8 +185,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - その名の通りオープンなVLA
 - オープンにするときの要件
     - ユーザーのロボットが違うのでファインチューニングしやすくすると便利
-       - （補足: 多種のロボットの訓練データで学習したVLAは、ファインチューニングなしでも少しのロボットの違いをある程度吸収）
 $\Longrightarrow$<span style="color:red">LoRAが使えるようになっている</span>
+       - （補足: 多種のロボットの訓練データで学習したVLAは、ファインチューニングなしでも少しのロボットの違いをある程度吸収）
 
 ---
 

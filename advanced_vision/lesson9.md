@@ -265,7 +265,7 @@ marp: true
 
 ### ACTの計算（学習時）
 
-構成: Transformerで作った条件付きVAE（CVAE）
+構成: Transformerで作った条件付きVAE（CVAE, [[Zhao2023]](https://arxiv.org/abs/2304.13705)の図11上）
 
 - エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k},$ 画像以外の時刻$t$のセンサ値$)$
     - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる。後述。）
@@ -294,6 +294,8 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ### ACTの計算（使用・推論時）
 
+[[Zhao2023]](https://arxiv.org/abs/2304.13705)の図11下
+
 - 前ページの説明通り、次のようにデコーダだけを使用
     - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{z} = \boldsymbol{0},$ 画像を含むセンサ値$)$
 - $\hat{\boldsymbol{a}}_{t:t+k}$の平滑化
@@ -307,7 +309,7 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 
 ### ACTの実装
 
-- [論文](https://arxiv.org/abs/2304.13705)の図4
+- [論文](https://arxiv.org/abs/2304.13705)の図4、11
 - CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
     - `[CLS]`を入力につけて、`[CLS]`の出力を$\boldsymbol{z}$に
 - CVAEのデコーダ: Transformerのエンコーダ・デコーダ構成
@@ -332,7 +334,7 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
 - スタイル変数$\boldsymbol{z}$
     - これも1つの$512$次元のベクトル
 
-<center>以上、1202個の$512$次元ベクトルを入力</center>
+<center>以上、1202個の512次元ベクトルを入力</center>
 
 
 ---

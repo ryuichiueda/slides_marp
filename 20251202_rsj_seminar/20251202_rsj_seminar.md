@@ -128,7 +128,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 - <span style="color:red">状態</span>$\boldsymbol{x}$を<span style="color:red">終端状態</span>の集合$\mathcal{X}_\text{f}$の任意の要素$\boldsymbol{x}_\text{f}$まで導きたい
     - $\boldsymbol{x}$には速度や時間、制御不可能なものの変数も入れられる
 - $\boldsymbol{u} \in \mathcal{U}$という力をかけると次の時刻に状態$\boldsymbol{x}$が$\boldsymbol{x}'$に遷移
-    - $\boldsymbol{x}' \sim p(\boldsymbol{x} |\boldsymbol{x}, \boldsymbol{u})$
+    - $\boldsymbol{x}' \sim p(\boldsymbol{x}' |\boldsymbol{x}, \boldsymbol{u})$
          - <span style="font-size:90%">※とりあえず離散時関系で考えます</span>
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
@@ -370,15 +370,15 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### VLA（vision-language-action）モデルにおける空間表現
+### 最新のロボット制御のモデルにおける空間表現
 
 制御という観点から見ると面白い（$\boldsymbol{\pi}$寄りだったり$V$寄りだったり）
 
 - 模倣学習寄りの手法（ACTや$\pi_0$）: $\boldsymbol{\pi}$を記録
     - VAEや拡散モデル、FMでさまざまな動作シーケンスの分布を学習・生成
     - <span style="font-size:70%">ちなみに私の博士論文のテーマも「方策の圧縮表現」です。自己位置推定でもSLAMでもないです。</span>
-- その他VLA（RT-2など）: 指示と画像から$V$を推定
-    - $V$をよくする次の行動だけを出力
+- $V$の推定寄りの手法（RT-1, 2など）
+    - 指示と画像から$V$をよくする次の行動だけを出力
     - これが完璧だと（遅いけど）なんでもできる
 
 ![bg right:30% 100%](act_enc_dec.svg)
