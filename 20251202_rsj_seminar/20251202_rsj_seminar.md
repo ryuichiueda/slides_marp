@@ -289,7 +289,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 
 ---
 
-### 確率ロボティクスの本質の個人的な解釈
+### 確率ロボティクスの本質（個人的な解釈）
 
 <span style="color:red">= 制御のパラダイムシフト</span>
 
