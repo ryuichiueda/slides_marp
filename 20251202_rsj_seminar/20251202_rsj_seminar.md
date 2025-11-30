@@ -327,10 +327,12 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 状態方程式: $x_t \sim p(x|x_{t-1},u_t)$
 観測方程式: $z_t \sim p(z|x_t)$
 
-- 得: 状態$x$や制御（行動）$u$の解釈が自由に
+- 状態$x$や制御（行動）$u$の解釈が自由に
     - 確率モデルが決められればなんでもよい
         - ややこしい実世界を扱うには都合がよい
-    - 当時のロボット周辺で取り入れていた分野: <span style="color:red">機械学習と確率ロボティクス</span>
+    - 当時のロボット周辺で取り入れていた分野
+        - <span style="color:red">機械学習（強化学習・ニューラルネットワーク）</span>
+        - <span style="color:red">確率ロボティクス</span>
 
 
 
