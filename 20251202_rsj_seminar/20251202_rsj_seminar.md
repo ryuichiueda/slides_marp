@@ -331,9 +331,9 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 - 状態$x$や制御（行動）$u$の解釈が自由に
     - 確率モデルが決められればなんでもよい
         - ややこしい実世界を扱うには都合がよい
-    - 2000年頃にロボット周辺で取り入れていた分野
-        - <span style="color:red">機械学習（強化学習・ニューラルネットワーク）</span>
-        - <span style="color:red">確率ロボティクス</span>
+- 2000年頃にロボット周辺で取り入れていた分野
+    - <span style="color:red">機械学習（強化学習・ニューラルネットワーク）</span>
+    - <span style="color:red">確率ロボティクス</span>
 
 
 
