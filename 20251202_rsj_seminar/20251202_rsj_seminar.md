@@ -230,7 +230,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
     - 状態遷移$p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})$はちゃんと確率的に扱う
         - ギリギリを攻めない
         - $V^\boldsymbol{\pi}$がなめらかに
-- 探索や制御、最適化では障害物を「境界（制約）条件」として扱ってしまう（いいの？）
+- 探索や多くの制御、最適化では障害物を「境界（制約）条件」として扱ってしまう（いいの？）
     - <span style="color:red">「最適な経路」$\neq$「事故を避ける方策」</span>
         - 脆い
 
