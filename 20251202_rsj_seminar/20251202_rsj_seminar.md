@@ -229,8 +229,8 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 - 「事故を避ける方策」の計算方法
     - $V(\boldsymbol{x}_\text{f})$を大きな値で固定
         - <span style="font-size:70%">状態遷移にペナルティーを与える方法もある（等価）</span>
-        - $\boldsymbol{\pi}$は危ない状態を避ける制御則に
-            - ゴールに行く・危険回避を兼備
+    - 線ではなく面で計算
+        - 危険な箇所近傍の$V^*, \boldsymbol{\pi}^*$を全部解く
 - 探索や制御、最適化では障害物を「境界（制約）条件」として扱ってしまう（いいの？）
 
 ![bg right:30% 100%](final_state.svg)
