@@ -389,7 +389,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 
 - $\boldsymbol{\pi}$寄りの手法（ACTや$\pi_0$）
     - VAEや拡散モデル、FMでさまざまな動作シーケンスの分布を学習・生成
-    - <span style="font-size:70%">ちなみに私の博士論文のテーマも「方策の圧縮表現」です。自己位置推定でもSLAMでもないです。</span>
+    - <span style="font-size:70%">私の博士論文のテーマも「方策の圧縮表現」です。自己位置推定でもSLAMでもないです。</span>
 - $V$の推定寄りの手法（RT-1, 2など。$\pi_0$も）
     - 指示と画像から$V$を良くする次の行動だけ出力
     - これが完璧だと（遅いけど）なんでもできる
