@@ -169,6 +169,8 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
     - $V^\boldsymbol{\pi}(\boldsymbol{x}) = \big\langle V^\boldsymbol{\pi}(\boldsymbol{x}')+\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')\big\rangle_{p(\boldsymbol{x}'|\boldsymbol{u},\boldsymbol{x})}$
         - ここで$\boldsymbol{u} = \boldsymbol{\pi}(\boldsymbol{x})$
 
+「あとどれくらいで仕事が終わるかな？という見積もりが正確だと正しい行動ができる」
+
 ![bg right:20% 95%](simple_planning.svg)
 
 ---
