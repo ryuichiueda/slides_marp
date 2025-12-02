@@ -86,13 +86,12 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## Clustering numbers using k-means
 
 - Divide the following nine numbers into three clusters:
-- (8, 1, 3), (5, 5, 2), (6, 11, 7)
-- The brackets indicate the initial classifications, which were randomly chosen.
-- The answer is on the next page.
+    - (8, 1, 3), (5, 5, 2), (6, 11, 7)
+        - The brackets indicate the initial classifications, which were randomly chosen.
+    - The answer is on the next page.
 - Note
-- If the mean values ​​are the same, select the cluster appropriately.
-- If there are two or more close mean values ​​for a given data set (if they are the same distance),
-Try changing the original class.
+    - If the mean values are the same, select the cluster randomly.
+    - If there are two or more close mean values for a given data set (if they are the same distance), change the original class.
 
 ---
 
