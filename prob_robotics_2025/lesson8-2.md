@@ -33,7 +33,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - アドバンストビジョンの第1回のおさらい
     - 右の図は何に見えますか
     - なんで猫に見えるのか？
-- たぶん丸い部分1つと三角の部分1つに点をまとめている（クラスタリングしている）
+- たぶん丸い部分1つと三角の部分2つに点をまとめている（クラスタリングしている）
     - [研究例](https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
 
 

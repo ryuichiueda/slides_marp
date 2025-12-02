@@ -20,7 +20,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 <!-- paginate: true -->
 
-## This Week's Topics
+## Contents
 
 - Clustering
 - EM Method
@@ -30,10 +30,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ## The Importance of Clustering
 
-- Review of the First Advanced Vision Lesson
-- What Do You See in the Image on the Right?
-- Why Does It Look Like a Cat?
-- The points are probably grouped into one circle and one triangle (clustering).
+- Review of the advanced vision
+   - What do You see in the image on the right?
+   - Why does it look like a cat?
+- Probably grouping dots into one circle and two triangles (clustering).
 - [Research Example](https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
 
 ![bg right:40% 60%](./figs/dots.png)
@@ -43,7 +43,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### What can we learn by summarizing?
 
 - For example, if you want to know what is in front of you, what needs to be done?
-- What needs to be done: Photoreceptor cell response$\longrightarrow$Object to recognize (e.g., cat)
+   - What needs to be done: Photoreceptor cell response$\longrightarrow$Object to recognize (e.g., cat)
 - Numerous stimuli$\longrightarrow$The single word "cat"
 - <span style="color:red">The brain needs to "reduce"</span>
 - <span style="color:red">Reduce = Summarize to a representative value (feature)</span>

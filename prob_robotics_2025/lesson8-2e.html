@@ -20,7 +20,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <footer>Probabilistic Robotics Lesson 8</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="2" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;" data-marpit-pagination-total="15">
-<h2 id="this-weeks-topics">This Week's Topics</h2>
+<h2 id="contents">Contents</h2>
 <ul>
 <li>Clustering</li>
 <li>EM Method</li>
@@ -31,10 +31,13 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="15" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/dots.png&quot;);background-size:60%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="3" data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="15" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="the-importance-of-clustering">The Importance of Clustering</h2>
 <ul>
-<li>Review of the First Advanced Vision Lesson</li>
-<li>What Do You See in the Image on the Right?</li>
-<li>Why Does It Look Like a Cat?</li>
-<li>The points are probably grouped into one circle and one triangle (clustering).</li>
+<li>Review of the advanced vision
+<ul>
+<li>What do You see in the image on the right?</li>
+<li>Why does it look like a cat?</li>
+</ul>
+</li>
+<li>Probably grouping dots into one circle and two triangles (clustering).</li>
 <li><a href="https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf">Research Example</a></li>
 </ul>
 <footer>Probabilistic Robotics Lesson 8</footer>
@@ -42,8 +45,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="" data-marpit-pagination-total="15" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="15" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/leaf_stem.png&quot;);background-size:78%;"></figure></div></section></foreignObject><foreignObject width="70%" height="720"><section id="4" data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;--marpit-advanced-background-split:30%;" data-marpit-pagination-total="15" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="what-can-we-learn-by-summarizing">What can we learn by summarizing?</h3>
 <ul>
-<li>For example, if you want to know what is in front of you, what needs to be done?</li>
+<li>For example, if you want to know what is in front of you, what needs to be done?
+<ul>
 <li>What needs to be done: Photoreceptor cell response<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.706ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1638 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="27F6" d="M84 237T84 250T98 270H1444Q1328 357 1301 493Q1301 494 1301 496T1300 499Q1300 511 1317 511H1320Q1329 511 1332 510T1338 506T1341 497T1344 481T1352 456Q1374 389 1425 336T1544 261Q1553 258 1553 250Q1553 244 1548 241T1524 231T1486 212Q1445 186 1415 152T1370 85T1349 35T1341 4Q1339 -6 1336 -8T1320 -11Q1300 -11 1300 0Q1300 7 1305 25Q1337 151 1444 230H98Q84 237 84 250Z"></path></g></g></g></svg></mjx-container>Object to recognize (e.g., cat)</li>
+</ul>
+</li>
 <li>Numerous stimuli<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.706ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1638 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="27F6" d="M84 237T84 250T98 270H1444Q1328 357 1301 493Q1301 494 1301 496T1300 499Q1300 511 1317 511H1320Q1329 511 1332 510T1338 506T1341 497T1344 481T1352 456Q1374 389 1425 336T1544 261Q1553 258 1553 250Q1553 244 1548 241T1524 231T1486 212Q1445 186 1415 152T1370 85T1349 35T1341 4Q1339 -6 1336 -8T1320 -11Q1300 -11 1300 0Q1300 7 1305 25Q1337 151 1444 230H98Q84 237 84 250Z"></path></g></g></g></svg></mjx-container>The single word &quot;cat&quot;</li>
 <li><span style="color:red">The brain needs to &quot;reduce&quot;</span></li>
 <li><span style="color:red">Reduce = Summarize to a representative value (feature)</span></li>
