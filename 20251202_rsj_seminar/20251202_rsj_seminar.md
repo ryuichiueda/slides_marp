@@ -373,7 +373,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 <span style="color:red">超多次元空間への対応・次元の呪いの克服</span>
 
 - 変分オートエンコーダ（VAE）、拡散モデル、フローマッチング（FM）が作る潜在空間や分布（右図）
-    - 複雑な空間中の確率分布を圧縮表現
+    - 複雑な分布を圧縮表現
 - Transformerが入出力する言語や映像のトークン（埋め込みのベクトル）の空間
 ![](lang_vision_space.svg)
 
