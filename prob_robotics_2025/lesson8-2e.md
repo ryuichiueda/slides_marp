@@ -34,7 +34,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
    - What do You see in the image on the right?
    - Why does it look like a cat?
 - Probably grouping dots into one circle and two triangles (clustering).
-- [Research Example](https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
+   - [Research Example](https://www.riken.jp/medialibrary/riken/pr/press/2001/20010727_1/20010727_1.pdf)
 
 ![bg right:40% 60%](./figs/dots.png)
 
