@@ -76,8 +76,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## k-means algorithm
 
 - Divide the data into appropriate clusters and converge by repeating the following steps.
-- Find the center of each cluster (denoted by the $\times$ symbol in the figure).
-- Re-cluster each data set based on the nearest cluster center.
+    - Find the center of each cluster (denoted by the $\times$ symbol in the figure).
+    - Re-cluster each data set based on the nearest cluster center.
 
 ![](./figs/k-means.png)
 
