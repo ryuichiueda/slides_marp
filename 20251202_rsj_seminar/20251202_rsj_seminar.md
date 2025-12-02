@@ -133,7 +133,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
 - 状態遷移にはコスト: $\ell(\boldsymbol{x}, \boldsymbol{u}, \boldsymbol{x}')$
     - 「時間消費」、「エネルギー消費」、「危険性」などを点数化
 - 終端状態にも点数: $V(\boldsymbol{x}_\text{f})$
-- <span style="color:red">コストの総和$\sum \ell + V(\boldsymbol{x}_\text{f})$を最小化したい</span>
+- <span style="color:red">コストの総和$J = \sum \ell + V(\boldsymbol{x}_\text{f})$を最小化したい</span>
 
 
 ![bg right:18% 95%](optimal_control_problem.svg)
