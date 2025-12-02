@@ -391,7 +391,7 @@ $\qquad\qquad$![w:250](astar.gif)![w:250](rrt.gif)<span style="font-size:70%">�
     - <span style="font-size:70%">私の博士論文のテーマも「方策の圧縮表現」で、自己位置推定でもSLAMでもなかったりする</span>
 - $V$の推定寄りの手法（RT-1, 2など。$\pi_0$も）
     - 指示と画像から$V$を良くする次の行動だけ出力
-    - これが完璧だと（遅いけど）なんでもできる
+    - これが完璧だと（遅くても）なんでもできる
 
 ![bg right:30% 100%](act_enc_dec.svg)
 
