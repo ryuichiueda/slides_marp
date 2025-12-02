@@ -40,17 +40,22 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-### What can we learn by summarizing?
+### What can we recognize by summarizing?
 
 - For example, if you want to know what is in front of you, what needs to be done?
-   - What needs to be done: Photoreceptor cell response$\longrightarrow$Object to recognize (e.g., cat)
-- Numerous stimuli$\longrightarrow$The single word "cat"
-- <span style="color:red">The brain needs to "reduce"</span>
-- <span style="color:red">Reduce = Summarize to a representative value (feature)</span>
+   - Photoreceptor cell response$\longrightarrow$Object to recognize (e.g., cat)
+   - Numerous stimuli$\longrightarrow$The single word "cat"
+   - <span style="color:red">The brain needs to "reduce"</span>
+       - <span style="color:red">Reduce = Summarize to a representative value (feature)</span>
+
+![bg right:30% 78%](./figs/leaf_stem.png)
+
+---
+
 - Left image: Image of actual crops in a field, with stems and leaves classified.
-- For robotics
-- The various colors have been reduced to three.
-- Humans can (with time) produce classification results like the one on the right.
+    - For robotics
+    - The various colors have been reduced to three.
+    - Humans can (with time) produce classification results like the one on the right.
 
 ![bg right:30% 78%](./figs/leaf_stem.png)
 
