@@ -64,10 +64,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### Classical Clustering Methods
 
 - Used in the field of robotics for 30 years.
-- k-means algorithm
-- EM algorithm
+    - k-means algorithm
+    - EM algorithm
 - Problem to solve
-- Determine which points belong to the same group when points are scattered.
+    - Determine which points belong to the same group when points are scattered.
 
 ![bg right:30% 78%](./figs/clustering_problem.png)
 
