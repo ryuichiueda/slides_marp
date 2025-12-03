@@ -259,12 +259,12 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 ## Bayesian inference for Gaussian mixture distributions
 
 - Consider the "distribution of mixture distributions"
-- The distribution can be drawn as shown in the right figure.
+    - The distribution can be drawn as shown in the right figure.
 - Difference from EM method
-- Calculates the distribution of distributions themselves, not the maximum likelihood.
-- Updates the distribution using Bayes' theorem when data is received.
+    - Calculates the distribution of distributions themselves, not the maximum likelihood.
+    - Updates the distribution using Bayes' theorem when data is received.
 - Problem: Posterior probabilities cannot be calculated in one go using Bayes' theorem.
-- What to do? Gradually change the distribution, as in the $\rightarrow$EM method.
+    - What to do? Gradually change the distribution, as in the EM method.
 
 ---
 
