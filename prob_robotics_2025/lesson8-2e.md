@@ -407,11 +407,11 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 
 ---
 
-### Variational inference...
+### Variational inference toward the distribution
 
 - Another distribution was found.
-- This data was taken every 3 seconds from a certain sensor, and the average value was different during daylight and nighttime hours.
-- In a sense, the clustering resolution is higher than that of humans.
+    - This data was taken every 3 seconds from a certain sensor, and the average value was different during daylight and nighttime hours.
+    - In a sense, the clustering resolution is higher than that of humans.
 
 ![w:1200](figs/1d_clustering.png)
 
@@ -420,7 +420,7 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 ## Real-World Use Case 1
 
 - Bolt tip detection
-- Converting 3D positions to 1D and then clustering
+    - Converting 3D positions to 1D and then clustering
 
 ![w:700](./figs/bolt.png)
 
@@ -429,7 +429,7 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 ## Real-World Use Case 2
 
 - Clustering of grip positions on an object surface
-- 6-dimensional space of normal vector positions and orientations
+    - 6-dimensional space of normal vector positions and orientations
 
 ![bg right:55% 100%](./figs/cands_real.png)
 
@@ -439,8 +439,8 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 
 - Because the derivation is too difficult (explained in textbooks),
 we will only show the M and E steps.
-- Derive the posterior distribution of $q_1, q_3, q_4$ using Bayes' theorem.
-- Simply apply the derived formula to use it.
+    - Derive the posterior distribution of $q_1, q_3, q_4$ using Bayes' theorem.
+    - Simply apply the derived formula to use it.
 
 ---
 

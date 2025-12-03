@@ -624,11 +624,14 @@ Gauss-Wishart distribution
 <footer>Probabilistic Robotics Lesson 8</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="34" style="" data-marpit-pagination-total="44" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="35" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;" data-marpit-pagination-total="44">
-<h3 id="variational-inference-1">Variational inference...</h3>
+<h3 id="variational-inference-toward-the-distribution">Variational inference toward the distribution</h3>
 <ul>
-<li>Another distribution was found.</li>
+<li>Another distribution was found.
+<ul>
 <li>This data was taken every 3 seconds from a certain sensor, and the average value was different during daylight and nighttime hours.</li>
 <li>In a sense, the clustering resolution is higher than that of humans.</li>
+</ul>
+</li>
 </ul>
 <p><img src="figs/1d_clustering.png" alt="" style="width:1200px;" /></p>
 <footer>Probabilistic Robotics Lesson 8</footer>
@@ -636,8 +639,11 @@ Gauss-Wishart distribution
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="36" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;" data-marpit-pagination-total="44">
 <h2 id="real-world-use-case-1">Real-World Use Case 1</h2>
 <ul>
-<li>Bolt tip detection</li>
+<li>Bolt tip detection
+<ul>
 <li>Converting 3D positions to 1D and then clustering</li>
+</ul>
+</li>
 </ul>
 <p><img src="./figs/bolt.png" alt="" style="width:700px;" /></p>
 <footer>Probabilistic Robotics Lesson 8</footer>
@@ -645,8 +651,11 @@ Gauss-Wishart distribution
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="37" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;--marpit-advanced-background-split:55%;" data-marpit-pagination-total="44" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/cands_real.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="45%" height="720"><section id="37" data-footer="Probabilistic Robotics Lesson 8" data-paginate="true" lang="ja-JP" data-marpit-pagination="37" style="--footer:Probabilistic Robotics Lesson 8;--paginate:true;--marpit-advanced-background-split:55%;" data-marpit-pagination-total="44" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="real-world-use-case-2">Real-World Use Case 2</h2>
 <ul>
-<li>Clustering of grip positions on an object surface</li>
+<li>Clustering of grip positions on an object surface
+<ul>
 <li>6-dimensional space of normal vector positions and orientations</li>
+</ul>
+</li>
 </ul>
 <footer>Probabilistic Robotics Lesson 8</footer>
 </section>
@@ -654,9 +663,12 @@ Gauss-Wishart distribution
 <h2 id="specific-calculations-for-variational-inference">Specific calculations for variational inference</h2>
 <ul>
 <li>Because the derivation is too difficult (explained in textbooks),<br />
-we will only show the M and E steps.</li>
+we will only show the M and E steps.
+<ul>
 <li>Derive the posterior distribution of <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="8.002ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 3537 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(882.6,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msub" transform="translate(1327.2,0)"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g><g data-mml-node="mo" transform="translate(2209.8,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msub" transform="translate(2654.4,0)"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></g></svg></mjx-container> using Bayes' theorem.</li>
 <li>Simply apply the derived formula to use it.</li>
+</ul>
+</li>
 </ul>
 <footer>Probabilistic Robotics Lesson 8</footer>
 </section>
