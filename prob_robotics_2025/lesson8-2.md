@@ -238,7 +238,11 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 第5回のおさらい
+## 変分推論
+
+---
+
+### 第5回のおさらい
 
 - 実験の成功、失敗の結果から、「成功率の分布」を考えた
     - ベータ分布: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
