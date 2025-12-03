@@ -213,9 +213,9 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
     - Consider the auxiliary parameter $N_j = \sum_{i=1}^N k_{ij}$.
         - Equivalent to the number of elements in each cluster.
     - Calculate the size, mean, and covariance matrix of each cluster based on $N_j$ and $k_{ij}$.
-    - $\pi_j = \eta N_j = N_j / \sum_{j=1}^n N_j$.
-    - $\boldsymbol{\mu}_j = \dfrac{1}{N_j}\sum_{i=1}^N k_{ij}\boldsymbol{x}_i$
-    - $\Sigma_j = \dfrac{1}{N_j-1} \sum_{i=1}^N k_{ij}(\boldsymbol{x}_i - \boldsymbol{\mu}_j)(\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top$
+        - $\pi_j = \eta N_j = N_j / \sum_{j=1}^n N_j$.
+        - $\boldsymbol{\mu}_j = \dfrac{1}{N_j}\sum_{i=1}^N k_{ij}\boldsymbol{x}_i$
+        - $\Sigma_j = \dfrac{1}{N_j-1} \sum_{i=1}^N k_{ij}(\boldsymbol{x}_i - \boldsymbol{\mu}_j)(\boldsymbol{x}_i - \boldsymbol{\mu}_j)^\top$
 
 ![bg right:28% 90%](./figs/m-step.png)
 
