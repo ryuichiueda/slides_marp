@@ -354,15 +354,15 @@ Gauss-Wishart distribution
 ### Variational Inference Procedure
 
 1. Determine the prior distribution for $q_1q_3q_4$ appropriately
-- Initialize the probability $r_{ij}$ (equivalent to clustering)
-- Set the initial values ​​of the parameters $\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$.
-- Let $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$.
+    - Initialize the probability $r_{ij}$ (equivalent to clustering)
+    - Set the initial values ​​of the parameters $\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$.
+        - Let $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$.
 2. Fix $q_1$ and calculate the parameters $\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$ of the posterior distribution of $q_3q_4$.
-- This corresponds to the M-step in the EM algorithm (<span style="color:red">Variational M-step</span>).
+    - This corresponds to the M-step in the EM algorithm (<span style="color:red">Variational M-step</span>).
 3. Fix $q_3q_4$ and calculate $q_1$ (i.e., $r_{ij}$).
-- Equivalent to the E-step of the EM algorithm (<span style="color:red">Variational E-step</span>).
+    - Equivalent to the E-step of the EM algorithm (<span style="color:red">Variational E-step</span>).
 - Note: $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$ are fixed.
-- Fix the prior distribution and iteratively improve the posterior distribution.
+    - Fix the prior distribution and iteratively improve the posterior distribution.
 
 ---
 
