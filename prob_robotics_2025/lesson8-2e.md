@@ -182,13 +182,13 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 ### Step E
 
 - For each data point $\boldsymbol{x}_i$, we want to determine the probability of it belonging to which cluster.
-- The Gaussian mixture parameters $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$ are fixed.
-- Unlike k-means, we do not determine that it belongs to a single cluster.
-- <span style="color:red">We leave it vague because we don't know</span>
+    - The Gaussian mixture parameters $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$ are fixed.
+    - Unlike k-means, we do not determine that it belongs to a single cluster.
+        - <span style="color:red">We leave it vague because we don't know</span>
 - Mathematically,
-- We want to find the probability that cluster $k_i$, to which $\boldsymbol{x}_i$ belongs, is the j$th cluster. $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = k_{ij}$
-- For all cases where $k_i$ is $1, 2, \dots, n$
-- Variables like $k_{ij}$ are hidden and are called <span style="color:red">latent variables</span>.
+   - We want to find the probability that cluster $k_i$, to which $\boldsymbol{x}_i$ belongs, is the j$th cluster. $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = k_{ij}$
+       - For all cases where $k_i$ is $1, 2, \dots, n$
+   - Variables like $k_{ij}$ are hidden and are called <span style="color:red">latent variables</span>.
 
 ![bg right:20% 90%](./figs/belong_prob.png)
 
