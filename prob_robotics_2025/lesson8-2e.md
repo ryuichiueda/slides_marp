@@ -224,16 +224,19 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 ### What the EM algorithm can/cannot do
 
 - What it can do
-- Introduces a probabilistic approach
-- (I apologize for the lack of examples, but) Performance is better than k-means
-- Leaving unclear points vague reduces the chance of making strange mistakes
-- Establishes a criterion of "maximum likelihood" for a probabilistic model
-- Can be applied to other probabilistic models
+    - Introduces a probabilistic approach
+        - (I apologize for the lack of examples, but) Performance is better than k-means
+            - Leaving unclear points vague reduces the chance of making strange mistakes
+        - Establishes a criterion of "maximum likelihood" for a probabilistic model
+        - Can be applied to other probabilistic models
+
+---
+
 - What is not possible
-- It could be more probabilistic
-- Parameters also have distributions (Gaussian mixtures also vary probabilistically)
-- The number of Gaussian distributions is fixed
-- It is not powerful enough to eliminate unnecessary distributions
+    - It could be more probabilistic
+        - Parameters also have distributions (Gaussian mixtures also vary probabilistically)
+    - The number of Gaussian distributions is fixed
+        - It is not powerful enough to eliminate unnecessary distributions
 
 ---
 
