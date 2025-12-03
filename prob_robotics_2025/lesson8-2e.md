@@ -197,12 +197,12 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 ### How to Calculate $k_{ij}$
 
 - $k_{ij}$ is the density of the Gaussian distribution for cluster $j$ multiplied by the mixture ratio.
-- Derivation of the Formula
-- $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$ (Bayes' Theorem)
-- $p(\boldsymbol{x}_i | k_i = j )$: Gaussian distribution for the $k_i$th cluster
-- $\text{Pr}\{ k_i = j \}$: Probability of data being in the $k$th cluster when information on $\boldsymbol{x}_i$ is unavailable ($=\pi_k$)
-- $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j)$<span style="color:red">←Can be calculated</span>
-- Determine $\eta$ so that the sum of the $k_{ij}$ values ​​for each cluster equals $1$.
+- Derivation of the formula
+    - $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$ (Bayes' Theorem)
+        - $p(\boldsymbol{x}_i | k_i = j )$: Gaussian distribution for the $k_i$th cluster
+        - $\text{Pr}\{ k_i = j \}$: Probability of data being in the $k$th cluster when information on $\boldsymbol{x}_i$ is unavailable ($=\pi_k$)
+    - $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j)$<span style="color:red">←Can be calculated</span>
+        - Determine $\eta$ so that the sum of the $k_{ij}$ values ​​for each cluster equals $1$.
 
 ---
 
