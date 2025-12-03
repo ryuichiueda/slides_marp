@@ -317,12 +317,12 @@ $= \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
 ### Modeling $q_3$
 
 - Assumes a Dirichlet distribution
-- An extension of the beta distribution to multivariate cases, not just heads and tails of a coin.
-- Example: 6 for dice
-- $\text{Dir}(\pi_{1:K} | \alpha_{1:K})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
+    - An extension of the beta distribution to multivariate cases, not just heads and tails of a coin.
+        - Example: 6 for dice
+    - $\text{Dir}(\pi_{1:K} | \alpha_{1:K})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
 $= \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
-- <span style="color:red">$\alpha_{1:K}$</span>: Parameter that determines the variability of $\pi_{1:K}$
-- The larger the total value of $\alpha_{1:K}$, the more stable the value becomes.
+        - <span style="color:red">$\alpha_{1:K}$</span>: Parameter that determines the variability of $\pi_{1:K}$
+            - The larger the total value of $\alpha_{1:K}$, the more stable the value becomes.
 
 ![bg right:38% 95%](./figs/dil_params.png)
 
