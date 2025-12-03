@@ -306,8 +306,8 @@ $= \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
 
 - Consider the probability distribution $q_1'$ that the $i$th data $\boldsymbol{x}_i$ belongs to the $j$th cluster (where $k_i = j$).
 <span style="font-size:70%">(Note that the subscript $1$ does not refer to the data or cluster.)</span>
-- Let's express this as $r_{ij}$
-- This applies to table-like data without a specific formula.
+    - Let's express this as $r_{ij}$
+    - This applies to table-like data without a specific formula.
 - Let $q_1$ be the product of $q_1'$ for each data point.
 
 ![bg right:30% 100%](./figs/belong_prob.png)
