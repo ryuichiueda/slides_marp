@@ -247,13 +247,13 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 ### Review of Lesson 5
 
 - Consider the "distribution of success rates" based on the success and failure of the experiment.
-- Beta distribution: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
-- As the results of each experiment are reflected one by one, the distribution of success rates changes.
-- Figure below: Evolution of the distribution for success, success, failure, and failure
-- <span style="color:red">Don't assume the success rate is 1/2</span>
-- The distribution change was calculated using Bayes' theorem.
+    - Beta distribution: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
+    - As the results of each experiment are reflected one by one, the distribution of success rates changes.
+        - Figure below: Evolution of the distribution for success, success, failure, and failure
+            - <span style="color:red">Don't assume the success rate is 1/2</span>
+    - The distribution change was calculated using Bayes' theorem.
 
-![](./figs/success_distribution.png)
+![w:700](./figs/success_distribution.png)
 
 ---
 ## Bayesian inference for Gaussian mixture distributions
