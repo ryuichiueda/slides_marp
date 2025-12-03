@@ -332,9 +332,9 @@ $= \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
 
 - Distribution of each Gaussian distribution $\mathcal{N}(\boldsymbol{\mu}_j, \Lambda_j^{-1})$:
 Gauss-Wishart distribution
-- $q_4'(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
-- Wishart distribution $\mathcal{W}$: Distribution of precision matrix $\Lambda_j$
-- Parameters determining the distribution of each Gaussian distribution: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
+    - $q_4'(\boldsymbol{\mu}_j, \Lambda_j) = \mathcal{N}(\boldsymbol{\mu}_j|\boldsymbol{m}_j, (\beta_j \Lambda_j)^{-1})\mathcal{W}(\Lambda_j | W_j, \nu_j)$
+        - Wishart distribution $\mathcal{W}$: Distribution of precision matrix $\Lambda_j$
+        - Parameters determining the distribution of each Gaussian distribution: <span style="color:red">$\boldsymbol{m}_j, \beta_j, W_j, \nu_j$</span>
 - The product of $q_4'$ for each Gaussian distribution is defined as $q_4$
 
 ![bg right:25% 95%](./figs/gauss_wish.png)
