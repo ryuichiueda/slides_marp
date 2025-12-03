@@ -290,15 +290,15 @@ $= \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
 ### Solution using <span style="color:red">Variational Inference</span>
 
 - Approximate the target distribution as the product of independent distributions for each parameter.
-- $q(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
-- $q$: Approximate distribution
-- Fix either $q_1$ or $q_2$, and alternately adjust the other to fit the data.
-- Adjust $q_1$: Reconstruct clusters
-- Adjust $q_2$: Reconstruct distributions
-<span Same as EM (but more complicated)
+    - $q(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+        - $q$: Approximate distribution
+    - Fix either $q_1$ or $q_2$, and alternately adjust the other to fit the data.
+        - Adjust $q_1$: Reconstruct clusters
+        - Adjust $q_2$: Reconstruct distributions
+<span style="color:red">Same as EM</span> (but more complicated)
 - Next page
-- Further decompose $q_2 = q_3q_4$ to model $q_1, q_3, q_4$
-- $q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) = q_3(\pi_{1:K})q_4(\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+    - Further decompose $q_2 = q_3q_4$ to model $q_1, q_3, q_4$
+        - $q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) = q_3(\pi_{1:K})q_4(\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
 
 ---
 
