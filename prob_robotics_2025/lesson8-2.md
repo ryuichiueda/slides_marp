@@ -238,71 +238,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 ---
 
-## 補足資料
-
----
-
-### EM法の一般的な導出
-
-- p.13の対数尤度、p.14の潜在変数を次のように記述（記号を減らすため）
-    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
-    - $z_{1:N} = Z$
-- $\log_e p(X,Z | \boldsymbol{\Theta})$ を変形
-    - $\log_e p(X,Z | \boldsymbol{\Theta}) = \log_e p(Z | X, \boldsymbol{\Theta})p(X | \boldsymbol{\Theta})$
-    $= \log_e p(Z | X, \boldsymbol{\Theta}) + \log_e p(X | \boldsymbol{\Theta})$（←最後の項は対数尤度）
-- 対数尤度を右辺に移動し、各項に$q(Z)$をかけて$Z$で積分（$\int_Z q(Z) \text{d}Z= 1$）
-    - $\int_Z q(Z) \log_e p(X | \boldsymbol{\Theta}) \text{d}Z = \int_Z q(Z) \log_e p(X,Z |  \boldsymbol{\Theta})\text{d}Z$
-    $\qquad\qquad\qquad\qquad\qquad\quad - \int_Z q(Z) \log_e p(Z| X, \boldsymbol{\Theta}) \text{d}Z$
-- 左辺の積分は$Z$が$\log_e p(X | \boldsymbol{\Theta})$内にないので外せる
-    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
-
----
-
-### 潜在変数を考慮してEM法を導出（続き）
-
-- 右辺に足して0になる2項を増やして配分
-    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z)\log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
-    $= \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
-    $\quad- \int_Z q(Z) \log_e q(Z) \text{d}Z + \int_Z q(Z) \log_e q(Z) \text{d}Z$
-    $= \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
-- 新たな関数を定義して整理
-    - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
-        - $\mathcal{L}(q, \boldsymbol{\Theta}) = \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z$
-        - $\text{KL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
-
-
----
-
-### できた式
-
-- $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{KL}(q || p)$
-- $= \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
-    - $q$（$q(Z)$）: 潜在変数の分布
-    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
-        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
-        （一致すると$0$で、違うほどと正の大きな値に）
-    - $\mathcal{L}$: 変分下界
-        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
-
----
-
-### できた式と使い方
-
-- $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
-    - $q$（$q(Z)$）: 潜在変数の分布
-    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
-        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
-        （一致すると$0$で、違うほどと正の大きな値に）
-    - $\mathcal{L}$: 変分下界
-        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
-- 使い方
-    - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定して「良い」$q(Z)$を探す（<span style="color:red">Eステップ</span>）
-        - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
-    - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
-        - $\mathcal{L}$が最大になるように（対数尤度も大きくなってより良い結果に）
-
----
-
 ## 第5回のおさらい
 
 - 実験の成功、失敗の結果から、「成功率の分布」を考えた
@@ -554,4 +489,69 @@ MステップとEステップでの作業だけ示します
     - EM法とおなじく繰り返しでクラスタを形成していく
         - 計算方法が（扱わなかったけど）ベイズの定理に基づいている
     - 強力
+
+---
+
+## 補足資料
+
+---
+
+### EM法の一般的な導出
+
+- p.13の対数尤度、p.14の潜在変数を次のように記述（記号を減らすため）
+    - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = p(X | \boldsymbol{\Theta})$
+    - $z_{1:N} = Z$
+- $\log_e p(X,Z | \boldsymbol{\Theta})$ を変形
+    - $\log_e p(X,Z | \boldsymbol{\Theta}) = \log_e p(Z | X, \boldsymbol{\Theta})p(X | \boldsymbol{\Theta})$
+    $= \log_e p(Z | X, \boldsymbol{\Theta}) + \log_e p(X | \boldsymbol{\Theta})$（←最後の項は対数尤度）
+- 対数尤度を右辺に移動し、各項に$q(Z)$をかけて$Z$で積分（$\int_Z q(Z) \text{d}Z= 1$）
+    - $\int_Z q(Z) \log_e p(X | \boldsymbol{\Theta}) \text{d}Z = \int_Z q(Z) \log_e p(X,Z |  \boldsymbol{\Theta})\text{d}Z$
+    $\qquad\qquad\qquad\qquad\qquad\quad - \int_Z q(Z) \log_e p(Z| X, \boldsymbol{\Theta}) \text{d}Z$
+- 左辺の積分は$Z$が$\log_e p(X | \boldsymbol{\Theta})$内にないので外せる
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+
+---
+
+### 潜在変数を考慮してEM法を導出（続き）
+
+- 右辺に足して0になる2項を増やして配分
+    - $\log_e p(X | \boldsymbol{\Theta}) = \int_Z q(Z)\log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $= \int_Z q(Z) \log_e p(X, Z | \boldsymbol{\Theta})\text{d}Z - \int_Z q(Z) \log_e p(Z |X, \boldsymbol{\Theta}) \text{d}Z$
+    $\quad- \int_Z q(Z) \log_e q(Z) \text{d}Z + \int_Z q(Z) \log_e q(Z) \text{d}Z$
+    $= \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+- 新たな関数を定義して整理
+    - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+        - $\mathcal{L}(q, \boldsymbol{\Theta}) = \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z$
+        - $\text{KL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+
+
+---
+
+### できた式
+
+- $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{KL}(q || p)$
+- $= \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+    - $q$（$q(Z)$）: 潜在変数の分布
+    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
+        （一致すると$0$で、違うほどと正の大きな値に）
+    - $\mathcal{L}$: 変分下界
+        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+
+---
+
+### できた式と使い方
+
+- $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+    - $q$（$q(Z)$）: 潜在変数の分布
+    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+        - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
+        （一致すると$0$で、違うほどと正の大きな値に）
+    - $\mathcal{L}$: 変分下界
+        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+- 使い方
+    - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定して「良い」$q(Z)$を探す（<span style="color:red">Eステップ</span>）
+        - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
+    - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
+        - $\mathcal{L}$が最大になるように（対数尤度も大きくなってより良い結果に）
 
