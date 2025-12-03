@@ -240,6 +240,34 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 
 ---
 
+## Variational Inference
+
+---
+
+### Review of Lesson 5
+
+- Consider the "distribution of success rates" based on the success and failure of the experiment.
+- Beta distribution: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
+- As the results of each experiment are reflected one by one, the distribution of success rates changes.
+- Figure below: Evolution of the distribution for success, success, failure, and failure
+- <span style="color:red">Don't assume the success rate is 1/2</span>
+- The distribution change was calculated using Bayes' theorem.
+
+![](./figs/success_distribution.png)
+
+---
+## Bayesian inference for Gaussian mixture distributions
+
+- Consider the "distribution of mixture distributions"
+- The distribution can be drawn as shown in the right figure.
+- Difference from EM method
+- Calculates the distribution of distributions themselves, not the maximum likelihood.
+- Updates the distribution using Bayes' theorem when data is received.
+- Problem: Posterior probabilities cannot be calculated in one go using Bayes' theorem.
+- What to do? Gradually change the distribution, as in the $\rightarrow$EM method.
+
+---
+
 ## Supplementary Materials
 
 ---
@@ -302,26 +330,3 @@ $= \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - 
 - Fix $q(Z)$ and update $\boldsymbol{\Theta}_\text{old}$ to $\boldsymbol{\Theta}_\text{new}$ (<span style="color:red">M-step</span>)
 - To maximize $\mathcal{L}$ (the log likelihood also increases, resulting in a better result)
 
----
-
-## Review of Lesson 5
-
-- Consider the "distribution of success rates" based on the success and failure of the experiment.
-- Beta distribution: $p(x) = \eta x^{\alpha-1}(1-x)^{\beta-1}$
-- As the results of each experiment are reflected one by one, the distribution of success rates changes.
-- Figure below: Evolution of the distribution for success, success, failure, and failure
-- <span style="color:red">Don't assume the success rate is 1/2</span>
-- The distribution change was calculated using Bayes' theorem.
-
-![](./figs/success_distribution.png)
-
----
-## Bayesian inference for Gaussian mixture distributions
-
-- Consider the "distribution of mixture distributions"
-- The distribution can be drawn as shown in the right figure.
-- Difference from EM method
-- Calculates the distribution of distributions themselves, not the maximum likelihood.
-- Updates the distribution using Bayes' theorem when data is received.
-- Problem: Posterior probabilities cannot be calculated in one go using Bayes' theorem.
-- What to do? Gradually change the distribution, as in the $\rightarrow$EM method.
