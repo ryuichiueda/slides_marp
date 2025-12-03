@@ -371,8 +371,8 @@ Gauss-Wishart distribution
 It's very powerful, so I'll show an example before explaining the specific calculation method.
 
 - Example 1: Clustering 2-D Points
-- Right: A point randomly selected from a Gaussian mixture distribution containing six Gaussian distributions.
-- What happens when we apply variational inference to the clustering of this data (or rather, the inference of the Gaussian mixture distribution that has been generated)?
+    - Right: A point randomly selected from a Gaussian mixture distribution containing six Gaussian distributions.
+    - What happens when we apply variational inference to the clustering of this data (or rather, the inference of the Gaussian mixture distribution that has been generated)?
 
 ![bg right:30% 90%](figs/2d_clustering_problem.png)
 
@@ -381,7 +381,7 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 ### Inference Progress
 
 - Drawing the mean distribution from the Gaussian mixture distribution
-- Assume there are 10 distributions $\rightarrow$. Unnecessary distributions disappear ($\pi_j$ values ​​converge to 0).
+- Assume there are 10 distributions $\rightarrow$. Unnecessary distributions disappear ($\pi_j$ values converge to 0).
 
 ![](figs/2d_clustering_process.png)
 
@@ -390,8 +390,8 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 ### Comparison with the correct answer
 
 - There is some discrepancy in the covariance matrix, but it is accurate.
-- It may be more accurate than humans.
-- Being able to count numbers (although there is an upper limit) is very useful.
+    - It may be more accurate than humans.
+    - Being able to count numbers (although there is an upper limit) is very useful.
 
 ![w:900](figs/2d_clustering_result.png)
 
@@ -400,8 +400,8 @@ It's very powerful, so I'll show an example before explaining the specific calcu
 ### The Power of Variational Inference (Part 2)
 
 - Example 2: Analyzing One-Dimensional Data
-- A lecturer discovered this by chance while writing a book.
-- Is the distribution on the right a Gaussian distribution?
+    - I found this by chance while writing a book.
+    - Is the distribution on the right a Gaussian distribution?
 
 ![bg right:40% 100%](./figs/lidar_200.png)
 
