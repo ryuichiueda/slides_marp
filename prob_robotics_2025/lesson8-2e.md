@@ -275,15 +275,15 @@ $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathca
 This is about the "distribution" rather than the "distribution of distributions"
 
 - Parameters of each Gaussian distribution: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
-- (Review) Gaussian mixture distribution:
-- $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:K}, \Sigma_{1:K}, \pi_{1:K})$
+    - (Review) Gaussian mixture distribution:
+        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:K}, \Sigma_{1:K}, \pi_{1:K})$
 $= \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
 ($\pi_1 + \pi_2 + \dots + \pi_n = 1$)
 - The position of each data $\boldsymbol{x}_i$ ($i=1,2,\dots,N$) $k_{i}$
-- Which Gaussian distribution does it belong to?
-- Latent Variable
+    - Which Gaussian distribution does it belong to?
+    - Latent Variable
 
-![bg right:40% 100%](./figs/gauss_mixture.png)
+![bg right:30% 100%](./figs/gauss_mixture.png)
 
 ---
 
