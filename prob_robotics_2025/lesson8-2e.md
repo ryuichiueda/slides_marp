@@ -447,13 +447,48 @@ we will only show the M and E steps.
 ### Variational M step (calculate distribution parameters from each data point's affiliation).
 
 - Calculate auxiliary values.
-- $N_j = \sum_{i=1}^N r_{ij}\qquad\qquad$ (number of weighted data points in distribution $j$).
-- $\bar{\boldsymbol{x}}_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}\boldsymbol{x}_i\ \quad$ (weighted mean of distribution $j$)
-- $\Sigma_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)^\top$ (weighted covariance matrix of distribution $j$)
+    - $N_j = \sum_{i=1}^N r_{ij}\qquad\qquad$ (number of weighted data points in distribution $j$).
+    - $\bar{\boldsymbol{x}}_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}\boldsymbol{x}_i\ \quad$ (weighted mean of distribution $j$)
+    - $\Sigma_j = \dfrac{1}{N_j} \sum_{i=1}^N r_{ij}(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)(\boldsymbol{x}_i - \bar{\boldsymbol{x}}_j)^\top$ (weighted covariance matrix of distribution $j$)
+
+---
+
 - Calculate the parameters of the posterior distribution
-- $(\alpha_j, \beta_j, \nu_j) =(\alpha_j', \beta_j', \nu_j') + (N_j, N_j, N_j)$ (increase by the number of data points)
-- $\boldsymbol{m}_j = (\beta_j' \boldsymbol{m}_j' + N_j \bar{\boldsymbol{x}}_j ) /\beta_j\qquad\qquad\qquad$ (center adjustment of $\boldsymbol{\mu}_j$)
-- $W^{-1}_j = W'^{-1}_j + N_j \Sigma_j + \dfrac{\beta'_j N_j}{\beta'_j+ N_j} (\bar{\boldsy
+    - $(\alpha_j, \beta_j, \nu_j) =(\alpha_j', \beta_j', \nu_j') + (N_j, N_j, N_j)$ (increase by the number of data points)
+    - $\boldsymbol{m}_j = (\beta_j' \boldsymbol{m}_j' + N_j \bar{\boldsymbol{x}}_j ) /\beta_j\qquad\qquad\qquad$ (center adjustment of $\boldsymbol{\mu}_j$)
+    - $W^{-1}_j = W'^{-1}_j + N_j \Sigma_j + \dfrac{\beta'_j N_j}{\beta'_j+ N_j} (\bar{\boldsymbol{x}}_j - \boldsymbol{m}_j')(\bar{\boldsymbol{x}}_j - \boldsymbol{m}_j')^\top$
+(Adjusting the covariance matrix of each Gaussian distribution)
+
+---
+
+### Variational E-step (Calculating the affiliation of each data point from the distribution parameters)
+
+- $k_{1:N}$ distribution: Derived using the following calculation
+    - $P(k_{1:N}) = \langle p(\boldsymbol{x}_i, k_{i,1:K}, \pi_{1:K}, \boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) \rangle_{\pi_{1:K}, \boldsymbol{\mu}_{1:K}, \Lambda_{1:K}}$
+
+
+---
+
+- Calculation result: Probability that the next $r_{ij}$ is $k_i = j$
+    - $r_{ij} = \eta \rho_{ij}$
+        - $\log_e \rho_{ij} = -\dfrac{1}{2} d \beta_j^{-1} -\dfrac{1}{2} \nu_j(\boldsymbol{x}_i - \boldsymbol{m}_j)^\top W_j (\boldsymbol{x}_i - \boldsymbol{m}_j)$
+$\quad+ \dfrac{1}{2} \sum_{j=1}^d \psi\left(\dfrac{\nu_j + 1 - j}{2}\right) + \dfrac{1}{2}\log_e | W_j | + \eta'$
+$\quad+\psi(\alpha_j) - \psi\left( \sum_{j=1}^K \alpha_j \right)$
+        - All variables in the equation are either temporarily determined or known, so they are computable.
+            - $d$: Dimension of $\boldsymbol{x}$
+            - $\psi$: Digamma function (libraries available in high-level languages)
+
+---
+
+## Summary
+
+- Study k-means and EM algorithm first
+    - Non-probabilistic and less-probabilistic approaches
+- Variational inference (Variational Bayes)
+    - Consider the distribution of mixture distributions
+    - Form clusters iteratively, just like EM algorithm
+         - The computational method is based on Bayes' theorem (although not covered here)
+    - Powerful
 
 ---
 
