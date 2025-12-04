@@ -22,23 +22,27 @@ Ryuichi Ueda, Chiba Institute of Technology
 ## What to do today
 
 - Structure from Motion (SfM)
-- Just an overview, even though it should be detailed
+   - Just an overview, even though it should be detailed
 - NeRF (neural radiance fields)
 - 3DGS (3D Gaussian splatting)
 
 ---
 ## SfM
 
-- Problem and technology for recovering the camera position and orientation and the 3D shape of a subject from camera images.
-- Position and orientation will hereafter be referred to as "orientation."
-- Reference: https://demuc.de/papers/schoenberger2016sfm.pdf
+- Problem and technics for recovering the camera position and orientation and the 3D shape of a subject from camera images.
+   - Position and orientation will hereafter be referred to as "pose."
+   - Reference: https://demuc.de/papers/schoenberger2016sfm.pdf
+
+---
+
+
 - Differences from SLAM
-- Not very different from Visual SLAM, but more interested in the shape of the subject.
-- Basic SfM attempts to determine the camera movement amount from images alone.
-- SLAM is also interested in the space in which the robot moves.
-- SLAM may not be able to capture the same subject in detail.
-- This explanation is based on COLMAP [[Schönberger2016]] (https://ieeexplore.ieee.org/document/7780814).
-- [Demo from another paper by the same author](https://www.youtube.com/watch?v=11awtGWSqQU)
+   - Not very different from Visual SLAM, but more interested in the shape of the subject.
+       - Basic SfM attempts to determine the camera movement amount from images alone.
+       - SLAM is also interested in the space in which the robot moves.
+       - SLAM may not be able to capture the same subject in detail.
+- This explanation is based on COLMAP [[Schönberger2016]](https://ieeexplore.ieee.org/document/7780814).
+    - [Demo from another paper by the same author](https://www.youtube.com/watch?v=11awtGWSqQU)
 
 ---
 
