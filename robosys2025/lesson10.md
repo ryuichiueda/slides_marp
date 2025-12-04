@@ -45,7 +45,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
           
               Change for using Person
           
-          commit a906a47eda6962306edc91f3e72175940d2a7505    <- これっぽい
+          commit a906a47eda6962306edc91f3e72175940d2a7505    <- これっぽい                           
           Author: Ryuichi Ueda <ryuichiueda@gmail.com>
           Date:   Tue Oct 4 11:01:22 2022 +0900
           
@@ -82,7 +82,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
          1 #!/bin/bash
          2　
          3 dir=~
-         4 [ "$1" != "" ] && dir="$1"   #引数があったら、そちらをホームに変える。
+         4 [ "$1" != "" ] && dir="$1"   #引数があったら、そちらをホームに変える。            
          5    　　     　　　
          6 cd $dir/ros2_ws
          7 colcon build
