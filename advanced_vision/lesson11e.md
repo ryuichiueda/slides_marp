@@ -201,8 +201,3 @@ Uses millions of elements (Gaussian distribution + associated parameters) with d
 
 ---
 
-### Representing color (radiance) using spherical harmonics [[Sloan2002]](https://dl.acm.org/doi/10.1145/566654.566612)
-
-- Spherical harmonics
-- Rough explanation: Something like a Fourier transform on a sphere
-- RG
