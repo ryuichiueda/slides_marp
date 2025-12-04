@@ -178,26 +178,26 @@ $\qquad\qquad\sin (2^{L-1}\pi p), \cos(2^{L-1}\pi p)]$
 Uses millions of elements (Gaussian distribution + associated parameters) with dozens of parameters, such as the following:
 
 - $\mathcal{N}(\boldsymbol{\mu}, \Sigma)$
-- $\boldsymbol{\mu}$: Position in 3D space (center; 3 parameters)
-- $\Sigma$: Covariance matrix (7 parameters; see below)
+    - $\boldsymbol{\mu}$: Position in 3D space (center; 3 parameters)
+    - $\Sigma$: Covariance matrix (7 parameters; see below)
 - Value $\alpha$ ($0\le \alpha \le 1$) represents (opacity) (1 parameter)
-- Represented using a sigmoid function to correct errors through differentiation
+    - Represented using a sigmoid function to correct errors through differentiation
 - Parameters of spherical harmonics (27 or 48 parameters, etc.; see below)
-- Used to change color depending on the viewing direction, similar to NeRF
-- An ANN would calculate this automatically, but since it's not an ANN, modeling is required.
+    - Used to change color depending on the viewing direction, similar to NeRF
+    - An ANN would calculate this automatically, but since it's not an ANN, modeling is required.
 
 ---
 
 ### Representation of the covariance matrix $\Sigma$
 
 - For calculations, we use the expression $\Sigma = RSS^\top R^\top$.
-- $S$: Scaling matrix (3D diagonal matrix, so 3 parameters)
-- $R$: Rotation matrix (quaternion parameterized, 4 parameters)
+    - $S$: Scaling matrix (3D diagonal matrix, so 3 parameters)
+    - $R$: Rotation matrix (quaternion parameterized, 4 parameters)
 - Reason: To meet the requirements for a covariance matrix.
-- Why is this appropriate as a covariance matrix?
-- $SS^\top$: A matrix with diagonal elements greater than or equal to $0$ (the variances for each axis of the ellipsoid are aligned).
-- By enclosing $SS^\top$ between $R$ on both sides, you can rotate it in any direction.
-- See also [Probabilistic Robotics Slides](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)
+    - Why is this appropriate as a covariance matrix?
+        - $SS^\top$: A matrix with diagonal elements greater than or equal to $0$ (the variances for each axis of the ellipsoid are aligned).
+        - By enclosing $SS^\top$ between $R$ on both sides, you can rotate it in any direction.
+    - See also [Probabilistic Robotics Slides](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)
 
 ---
 
