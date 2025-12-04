@@ -92,25 +92,25 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - Reconstruct 3D space from camera pose and image pairs, as shown on the previous page.
 - How is this different from traditional SfM methods?
-- It can also handle light transmission and has high reproducibility (there are many examples and comparisons in the paper).
+    - It can also handle light transmission and has high reproducibility (there are many examples and comparisons in the paper).
 - Example of use
-- https://youtu.be/0zE6NXpTNBQ
-- https://youtu.be/lR7XpLLbm0s
+    - https://youtu.be/0zE6NXpTNBQ
+    - https://youtu.be/lR7XpLLbm0s
 
 ---
 
 ### How to represent color
 
 - The light (radiance, brightness) of a point in a 3D space is expressed by the following function:
-- $(r, g, b) = \text{RGB}(x, y, z, \theta, \phi)$
-- The color is determined by the point's position and the direction of the line of sight.
-- Figure 4 shows an example of the effect of changing color depending on the viewpoint.
-- $\sigma = \sigma(x, y, z)$
-- The "density" is determined by the point's position.
-- The lower the density, the more light is transmitted.
-- Overall, $(r, g, b, \sigma) = Representing \boldsymbol{f}_{\boldsymbol{w}}(x,y,z,\theta,\phi)$ using ANN
+    - $(r, g, b) = \text{RGB}(x, y, z, \theta, \phi)$
+       - The color is determined by the point's position and the direction of the line of sight.
+        - Figure 4 shows an example of the effect of changing color depending on the viewpoint.
+    - $\sigma = \sigma(x, y, z)$
+        - The "density" is determined by the point's position.
+            - The lower the density, the more light is transmitted.
+- Overall, representing $(r, g, b, \sigma) =  \boldsymbol{f}_{\boldsymbol{w}}(x,y,z,\theta,\phi)$ using ANN
 
-![bg right:28% 100%](./figs/color_difference.svg)
+![bg right:20% 100%](./figs/color_difference.svg)
 
 ---
 
