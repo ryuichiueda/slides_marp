@@ -201,3 +201,79 @@ Uses millions of elements (Gaussian distribution + associated parameters) with d
 
 ---
 
+### Representing Color (Radiance) Using Spherical Harmonics [[Sloan2002]](https://dl.acm.org/doi/10.1145/566654.566612)
+
+- Spherical Harmonics
+    - Rough explanation: similar to a Fourier transform on a sphere
+    - By preparing a function for each of the RGB colors, you can represent the RGB of any point on the sphere
+    - Constructed from the solution of the Laplace equation (same as electron orbits)
+        - Increasing the high-frequency components allows for more detailed representation
+
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cubicharmonics_3840x2160.png/1600px-Cubicharmonics_3840x2160.png)
+
+$\qquad\qquad\qquad$<span style="font-size:60%">(Image: [Image by Daigokuz CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Cubicharmonics_3840x2160.png))
+
+---
+
+- Illustration
+    - Left: Numerical values are represented by shading on a sphere
+    - Right: Numerical values are represented by elevation from the center
+
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cubicharmonics_3840x2160.png/1600px-Cubicharmonics_3840x2160.png)
+
+$\qquad\qquad\qquad$<span style="font-size:60%">(Image: [Image by Daigokuz CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Cubicharmonics_3840x2160.png))
+
+---
+
+### Color Representation Using Spherical Harmonics (Details)
+
+- For one color, $f(\theta,\varphi) = \sum_{\ell=0}^{n-1}\sum_{m=-\ell}^\ell w_\ell^m y_\ell^m(\theta, \varphi)$
+- $w_\ell^m$: Parameters
+- $y_\ell^m$: Basis functions (components of a function)
+- Polar coordinates $(\theta, \varphi)$
+- $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
+- Polar coordinates of a point on a sphere are expressed as $(\theta, \varphi)$
+- In atoms, the number $n$ corresponds to the number of electron orbitals
+- $\ell$ is the orbital
+- The number of parameters is $3n^2$ for $n$
+- For $n=3 and $4$, the number is $27 and $48$, respectively
+
+---
+
+### Basis functions
+
+- Complex number representation
+- $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
+- $K_\ell^m = \sqrt{\dfrac{(2\ell + 1)(\ell - |m|)!}{4\pi(\ell + |m|)!}}$ (normalization constant)
+- $P_\ell^{|m|}$: [Associated Legendre functions](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
+- Reference: [Lecture materials by Professor Nakatani of Tokyo Metropolitan University](https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf) (7.6) shows the actual formula (chemistry textbook)
+- Real number representation (use this)
+- $y_\ell^m = \begin{cases}
+\sqrt{2}\text{Re}(Y_\ell^m) & (m > 0) \\
+\sqrt{2}\text{Im}(Y_\ell^m) & (m < 0) \\
+Y_\ell^0 & m = 0
+\end{cases}$
+
+---
+
+### Learning
+
+- As with NeRF, create an image from the model and compare it with the original image to modify the parameters.
+- Adjust the number of Gaussian distributions.
+- Initialize the number of feature points used in the SfM calculation, which is less than the required number.
+- Increase the number.
+- Add or subtract Gaussian distributions.
+- Add operation (when the error of a Gaussian distribution is large): clone and split.
+- Clone (when the Gaussian distribution is small): Duplicate the Gaussian distribution and place it nearby.
+- Split (when the Gaussian distribution is large): Split the Gaussian distribution.
+- Pruning operation: Pruning.
+- Eliminate if $\alpha$ is below a threshold or the covariance is too large.
+
+---
+
+## Summary
+
+- A quick overview of SfM, NeRF, and 3DGS.
+- Sorry for the brief summary.
+- NeRF and 3DGS
+- Unlike SfM, which assigns a single color to each point, changing the color based on the line of sight increases expressiveness.
