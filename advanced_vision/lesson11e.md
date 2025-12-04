@@ -128,29 +128,29 @@ Ryuichi Ueda, Chiba Institute of Technology
 ### Structure (Figure 7 in the [paper](https://arxiv.org/abs/2003.08934))
 
 - The basic structure is a fully connected layer + ReLU
-- The "$\gamma$" in the diagram will be explained later.
+    - The "$\gamma$" in the diagram will be explained later.
 - Input (3 locations)
-- First, input the position $\boldsymbol{x} = (x,y,z)$.
-- In the middle, connect the position $\boldsymbol{x} = (x,y,z)$ again.
-- In the subsequent layer, connect $\boldsymbol{d} = (\theta, \phi)$.
+    - First, input the position $\boldsymbol{x} = (x,y,z)$.
+    - In the middle, connect the position $\boldsymbol{x} = (x,y,z)$ again.
+    - In the subsequent layer, connect $\boldsymbol{d} = (\theta, \phi)$.
 - Output (2 locations)
-- One of the layers connecting $\boldsymbol{d}$ is set to the $\sigma$ value.
-- The output of the final layer is set to the $(r,g,b)$ value.
+    - One of the layers connecting $\boldsymbol{d}$ is set to the $\sigma$ value.
+    - The output of the final layer is set to the $(r,g,b)$ value.
 
 ---
 
 ### "$\gamma$" in the diagram
 
 - Expand the position and orientation vectors by a factor of $2L$.
-- In the paper's implementation, $L=10$
-- $\boldsymbol{x}$ (3D) becomes 60-dimensional
-- $\boldsymbol{d}$ (2D) becomes 40-dimensional
+    - In the paper's implementation, $L=10$
+        - $\boldsymbol{x}$ (3D) becomes 60-dimensional
+        - $\boldsymbol{d}$ (2D) becomes 40-dimensional
 - Expansion formula (similar to positional embedding)
-- $\boldsymbol{\gamma}(p) = [\sin (2^0\pi p), \cos(2^0\pi p), \sin (2^1\pi p), \cos(2^1\pi p), \dots,$
+    - $\boldsymbol{\gamma}(p) = [\sin (2^0\pi p), \cos(2^0\pi p), \sin (2^1\pi p), \cos(2^1\pi p), \dots,$
 $\qquad\qquad\sin (2^{L-1}\pi p), \cos(2^{L-1}\pi p)]$
-- $p$ contains $x, y, z, \theta, and \phi$
+         - $p$ contains $x, y, z, \theta$, and $\phi$
 - Why do we expand?
-- Emphasize small values ​​and increase the resolution of areas with large color changes (compare to Figure 4).
+    - Emphasize small values and increase the resolution of areas with large color changes (compare to Figure 4).
 
 ---
 
