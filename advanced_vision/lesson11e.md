@@ -157,11 +157,16 @@ $\qquad\qquad\sin (2^{L-1}\pi p), \cos(2^{L-1}\pi p)]$
 ## 3D Gaussian splatting (3DGS) [[Kerbl2023]](https://arxiv.org/pdf/2308.04079)
 
 - Express light like NeRF by placing a Gaussian distribution in space.
-- Does not use an artificial neural network (it was unnecessary).
-- Instructor's interpretation: Since local calculations are sufficient, it is unnecessary to express such a complex function (ANN).
-- Short computation time (Figure 1 in the paper): 6 minutes compared to 48 hours for NeRF.
+    - Does not use an artificial neural network (it was unnecessary).
+        - Instructor's interpretation: Since local calculations are sufficient, it is unnecessary to express such a complex function (ANN).
+        - Short computation time (Figure 1 in the paper): 6 minutes compared to 48 hours for NeRF.
+
+![bg right:25% 90%](figs/3d_gaussians.svg)
+
+---
+
 - [Example of use](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
-- Focus on reflections on the water surface.
+    - Focus on reflections on the water surface.
 - [NVIDIA tutorial](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
 
 ![bg right:25% 90%](figs/3d_gaussians.svg)
