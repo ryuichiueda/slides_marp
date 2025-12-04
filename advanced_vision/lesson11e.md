@@ -118,7 +118,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 1. Prepare images from a known location using SfM.
 2. Reconstruct the image using $\boldsymbol{f}_{\boldsymbol{w}}$ based on the pose at which the image was taken.
-- Determine the color of each pixel from the line-of-sight $(r,g,b,\sigma)$ values.
+    - Determine the color of each pixel from the line-of-sight $(r,g,b,\sigma)$ values.
 3. Use the squared error for each pixel between image 1 and image 2 as the loss function.
 
 ![bg right:40% 100%](./figs/nerf_training.svg)
