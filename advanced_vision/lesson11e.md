@@ -50,13 +50,20 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 - Prepare a camera
 - Capture images of the subject from various angles
-- Obtain images $I_{1:N_I}$
+    - Obtain images $I_{1:N_I}$
 - Extract feature points from each image using SIFT or other methods
-- For image $I_i$, obtain $(\boldsymbol{x}, \boldsymbol{f})_{1:N_{F_i}}$
-- $\boldsymbol{x}$ is the image coordinate, and $\boldsymbol{f}$ is the feature vector
+    - For image $I_i$, obtain $(\boldsymbol{x}, \boldsymbol{f})_{1:N_{F_i}}$
+        - $\boldsymbol{x}$ is the image coordinate, and $\boldsymbol{f}$ is the feature vector
+
+![bg right:30% 90%](https://upload.wikimedia.org/wikipedia/commons/3/3d/Matching_of_two_images_using_the_SIFT_method.jpg)
+
+<span style="font-size:70%">Image: [CC BY-SA 3.0 by Indif](https://commons.wikimedia.org/wiki/File:Matching_of_two_images_using_the_SIFT_method.jpg)</span>
+
+---
+
 - Find pairs of images that share common feature points
-- Pair: $(I_a, I_b)_{1:N_\text{pair}}$ ($1 \le a < b \le N_I$)
-- Feature pairs can also be created
+    - Pair: $(I_a, I_b)_{1:N_\text{pair}}$ ($1 \le a < b \le N_I$)
+    - Feature pairs can also be created
 (Right image. Not from SfM.)
 
 ![bg right:30% 90%](https://upload.wikimedia.org/wikipedia/commons/3/3d/Matching_of_two_images_using_the_SIFT_method.jpg)
@@ -65,16 +72,18 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### SfM Processing Flow Using Feature Points (continued)
+### SfM Processing Flow using Feature Points (continued)
 
 - For each image pair: $(I_a, I_b)$, calculate the relative camera position when the two images were captured.
-- Method for calculating the relative position (varies by method).
-- Calculate the essential matrix $E$ (if the camera has been calibrated).
-- Calculate the fundamental matrix $F$ (if not already done above)
-- Other methods include the homography matrix and trifocal tensor.
+    - Method for calculating the relative position (varies by method).
+        - Calculate the essential matrix $E$ (if the camera has been calibrated).
+        - Calculate the fundamental matrix $F$ (if not already done above)
+        - Other methods include the homography matrix and trifocal tensor.
+---
+
 - Place each camera pose in the world coordinate system.
 - Bundle adjustment. <span style="color:red">$\Rightarrow$ Use this output in NeRF.</span>
-- Adjust the poses of all cameras using the graph-based SLAM method (least squares method).
+    - Adjust the poses of all cameras using the graph-based SLAM method (least squares method).
 - Determine the pixel position of each image in the world coordinate system.
 
 ---
