@@ -149,10 +149,16 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
         matrix:
           python-version: ["3.7", "3.8", "3.9", "3.10"]                          
       steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: All test
+        run: bash -xv ./test.bash
         ・・・
   ```
   - 実行してみると、全バージョンに対してテストが走る
-<img src="./figs/multi_version.png" width="45%" />
 
 ---
 
