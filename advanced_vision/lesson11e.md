@@ -125,7 +125,7 @@ Ryuichi Ueda, Chiba Institute of Technology
 
 ---
 
-### Structure (Figure 7 in the paper) (https://arxiv.org/abs/2003.08934)
+### Structure (Figure 7 in the [paper](https://arxiv.org/abs/2003.08934))
 
 - The basic structure is a fully connected layer + ReLU
 - The "$\gamma$" in the diagram will be explained later.
