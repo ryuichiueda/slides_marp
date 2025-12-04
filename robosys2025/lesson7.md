@@ -147,7 +147,7 @@ $ touch test.yml   #「./robosys2022/.github/workflows/test.yml」ができて�
       runs-on: ubuntu-latest
       strategy:
         matrix:
-          python-version: ["3.7", "3.8", "3.9", "3.10"]                          
+          python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]                          
       steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
