@@ -195,9 +195,9 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - 画像処理の部分: SigLIPとDINOv2という2つのモデルからそれぞれ独立にトークンを生成
     - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): ゼロショットで画像分類するモデル
         - softmaxでの多数のものから物体を分類をするのではなく、画像と短文がどれだけ合っているか確率で出力
-        - 何が写っているかをトークンに
+        - 画像全体の説明をトークンに
     - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): 画像の基盤モデル
-        - 画像の特徴量を抽出してトークンに
+        - 画像の低レベルの特徴量を抽出してトークンに
 - LLMのパート: Llama（Large Language Model Meta AI）
     - 下のAction De-tokenizerに入力するトークンを出力
 - 行動の生成: 「Action De-tokenizer」（どんな実装か不明。コードを読め？）
