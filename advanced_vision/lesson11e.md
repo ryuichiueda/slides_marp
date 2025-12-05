@@ -228,15 +228,15 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(Image: [Image by Daigokuz CC BY
 ### Color Representation Using Spherical Harmonics (Details)
 
 - For one color, $f(\theta,\varphi) = \sum_{\ell=0}^{n-1}\sum_{m=-\ell}^\ell w_\ell^m y_\ell^m(\theta, \varphi)$
-- $w_\ell^m$: Parameters
-- $y_\ell^m$: Basis functions (components of a function)
-- Polar coordinates $(\theta, \varphi)$
-- $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
-- Polar coordinates of a point on a sphere are expressed as $(\theta, \varphi)$
+    - $w_\ell^m$: Parameters
+    - $y_\ell^m$: Basis functions (components of a function)
+    - Polar coordinates $(\theta, \varphi)$
+        - $(x,y,z) = (\sin\theta \cos\varphi, \sin\theta \sin\varphi, \cos\theta )$
+        - Polar coordinates of a point on a sphere are expressed as $(\theta, \varphi)$
 - In atoms, the number $n$ corresponds to the number of electron orbitals
-- $\ell$ is the orbital
-- The number of parameters is $3n^2$ for $n$
-- For $n=3 and $4$, the number is $27 and $48$, respectively
+    - $\ell$ is the orbital
+    - The number of parameters is $3n^2$ for $n$
+        - For $n=3$ and $4$, the number is $27$ and $48$, respectively
 
 ---
 
