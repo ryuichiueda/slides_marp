@@ -277,6 +277,6 @@ Y_\ell^0 & m = 0
 ## Summary
 
 - A quick overview of SfM, NeRF, and 3DGS.
-- Sorry for the brief summary.
+    - Sorry for the brief summary.
 - NeRF and 3DGS
-- Unlike SfM, which assigns a single color to each point, changing the color based on the line of sight increases expressiveness.
+    - Unlike SfM, which assigns a single color to each point, changing the color based on the line of sight increases expressiveness.
