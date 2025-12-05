@@ -260,14 +260,17 @@ Y_\ell^0 & m = 0
 
 - As with NeRF, create an image from the model and compare it with the original image to modify the parameters.
 - Adjust the number of Gaussian distributions.
-- Initialize the number of feature points used in the SfM calculation, which is less than the required number.
-- Increase the number.
+    - Initialize the number of feature points used in the SfM calculation, which is less than the required number.
+    - Increase the number.
+
+---
+
 - Add or subtract Gaussian distributions.
-- Add operation (when the error of a Gaussian distribution is large): clone and split.
-- Clone (when the Gaussian distribution is small): Duplicate the Gaussian distribution and place it nearby.
-- Split (when the Gaussian distribution is large): Split the Gaussian distribution.
-- Pruning operation: Pruning.
-- Eliminate if $\alpha$ is below a threshold or the covariance is too large.
+    - Add operation (when the error of a Gaussian distribution is large): clone and split.
+        - Clone (when the Gaussian distribution is small): Duplicate the Gaussian distribution and place it nearby.
+        - Split (when the Gaussian distribution is large): Split the Gaussian distribution.
+    - Pruning operation: Pruning.
+        - Eliminate if $\alpha$ is below a threshold or the covariance is too large.
 
 ---
 
