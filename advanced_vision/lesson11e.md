@@ -243,12 +243,12 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(Image: [Image by Daigokuz CC BY
 ### Basis functions
 
 - Complex number representation
-- $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
-- $K_\ell^m = \sqrt{\dfrac{(2\ell + 1)(\ell - |m|)!}{4\pi(\ell + |m|)!}}$ (normalization constant)
-- $P_\ell^{|m|}$: [Associated Legendre functions](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
-- Reference: [Lecture materials by Professor Nakatani of Tokyo Metropolitan University](https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf) (7.6) shows the actual formula (chemistry textbook)
+    - $Y_\ell^m(\theta, \varphi) = K_\ell^m e^{im\varphi} P_\ell^{|m|}(\cos\theta)$
+        - $K_\ell^m = \sqrt{\dfrac{(2\ell + 1)(\ell - |m|)!}{4\pi(\ell + |m|)!}}$ (normalization constant)
+        - $P_\ell^{|m|}$: [Associated Legendre functions](https://en.wikipedia.org/wiki/Associated_Legendre_polynomials)
+            - Reference: [Lecture materials by Professor Nakatani of Tokyo Metropolitan University](https://theochem.fpark.tmu.ac.jp/hada/lecture_information/Chap07.pdf) (7.6) shows the actual formula (chemistry textbook)
 - Real number representation (use this)
-- $y_\ell^m = \begin{cases}
+    - $y_\ell^m = \begin{cases}
 \sqrt{2}\text{Re}(Y_\ell^m) & (m > 0) \\
 \sqrt{2}\text{Im}(Y_\ell^m) & (m < 0) \\
 Y_\ell^0 & m = 0
