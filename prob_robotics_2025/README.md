@@ -14,3 +14,4 @@
 - [確率ロボティクス第8回: 機械学習（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-1.html)
 - [確率ロボティクス第8回: 機械学習（その2）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson8-2.html)
 - [確率ロボティクス第9回: 行動決定（その1）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson9-1.html)
+- [確率ロボティクス第9回: 行動決定（その2）](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson9-2.html)
