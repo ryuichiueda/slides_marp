@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-450 -15 1800 1350">
+ <title>comparison image neural networks</title>
+ <desc>Comparison of the architectures of LeNet and AlexNet by CMG Lee with data from http://d2l.ai/chapter_convolutional-neural-networks/lenet.html and http://d2l.ai/chapter_convolutional-modern/alexnet.html .</desc>
+ <style type="text/css">
+.main  { font-family:Helvetica,Arial,sans-serif; font-size:40px; text-anchor:middle; fill:#000000; stroke:none; stroke-linejoin:round; }
+.name  { font-weight:bold; }
+.image { fill:#eeeeee; }
+.conv  { fill:#66ffff; }
+.pool  { fill:#ffccff; }
+.dense { fill:#ffee00; }
+ </style>
+ <defs>
+  <path id="box" d="M -440,-27 V 27 H 440 V -27 Z M 0,28 V 70 m -10,-20 l 10,20 m 0,0 l 10,-20" stroke="#000000"/>
+ </defs>
+ <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+ <g class="main">
+  <g transform="translate(0,0)">
+   <text class="name"                  x="0" y="1.6ex">LeNet</text>
+   <text transform="translate( 0,900)" x="0" y="0.6ex">Output: 1 of 10 classes</text>
+   <text transform="translate(20,250)" x="0" y="0.5ex" text-anchor="start">sigmoid</text>
+   <text transform="translate(20,450)" x="0" y="0.5ex" text-anchor="start">sigmoid</text>
+   <text transform="translate(20,550)" x="0" y="0.7ex" text-anchor="start">flatten</text>
+   <text transform="translate(20,650)" x="0" y="0.5ex" text-anchor="start">sigmoid</text>
+   <text transform="translate(20,750)" x="0" y="0.5ex" text-anchor="start">sigmoid</text>
+   <g transform="translate(0,100)"><use class="image" xlink:href="#box"/><text x="0" y="0.6ex">Image: 28 (height) &#215; 28 (width) &#215; 1 (channel)</text></g>
+   <g transform="translate(0,200)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8201;5&#215;5&#8201;kernel+2&#8202;padding:28&#215;28&#215;6</text></g>
+   <g transform="translate(0,400)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8201;5&#215;5&#8201;kernel&#8201;(no&#8201;pad):&#8202;10&#215;10&#215;16</text></g>
+   <g transform="translate(0,300)"><use class="pool"  xlink:href="#box"/><text x="0" y="0.6ex">Pool&#8201;with&#8201;2&#215;2&#8201;average&#8201;kernel+2&#8201;stride:&#8202;14&#215;14&#215;6</text></g>
+   <g transform="translate(0,500)"><use class="pool"  xlink:href="#box"/><text x="0" y="0.6ex">Pool&#8201;with&#8201;2&#215;2&#8201;average&#8201;kernel+2&#8201;stride:&#8201;5&#215;5&#215;16</text></g>
+   <g transform="translate(0,600)"><use class="dense" xlink:href="#box"/><text x="0" y="0.6ex">Dense: 120 fully connected neurons</text></g>
+   <g transform="translate(0,700)"><use class="dense" xlink:href="#box"/><text x="0" y="0.6ex">Dense: 84 fully connected neurons</text></g>
+   <g transform="translate(0,800)"><use class="dense" xlink:href="#box"/><text x="0" y="0.6ex">Dense: 10 fully connected neurons</text></g>
+  </g>
+  <g transform="translate(900,0)">
+   <text class="name"                   x="0" y="1.6ex">AlexNet</text>
+   <text transform="translate( 0,1300)" x="0" y="0.6ex">Output: 1 of 1000 classes</text>
+   <text transform="translate(20, 250)" x="0" y="0.7ex" text-anchor="start">ReLu</text>
+   <text transform="translate(20, 450)" x="0" y="0.7ex" text-anchor="start">ReLu</text>
+   <text transform="translate(20, 650)" x="0" y="0.7ex" text-anchor="start">ReLu</text>
+   <text transform="translate(20, 750)" x="0" y="0.7ex" text-anchor="start">ReLu</text>
+   <text transform="translate(20, 850)" x="0" y="0.7ex" text-anchor="start">ReLu</text>
+   <text transform="translate(20, 950)" x="0" y="0.7ex" text-anchor="start">flatten</text>
+   <text transform="translate(20,1050)" x="0" y="0.7ex" text-anchor="start">ReLu, dropout p=0.5</text>
+   <text transform="translate(20,1150)" x="0" y="0.7ex" text-anchor="start">ReLu, dropout p=0.5</text>
+   <g transform="translate(0, 100)"><use class="image" xlink:href="#box"/><text x="0" y="0.6ex">Image: 224 (height) &#215; 224 (width) &#215; 3 (channels)</text></g>
+   <g transform="translate(0, 200)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8202;11&#215;11&#8202;kernel+4&#8202;stride:54&#215;54&#215;96</text></g>
+   <g transform="translate(0, 300)"><use class="pool"  xlink:href="#box"/><text x="0" y="0.6ex">Pool&#8201;with&#8201;3&#215;3&#8201;max.&#8201;kernel+2&#8201;stride:&#8201;26&#215;26&#215;96</text></g>
+   <g transform="translate(0, 400)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8201;5&#215;5&#8201;kernel+2&#8201;pad:26&#215;26&#215;256</text></g>
+   <g transform="translate(0, 500)"><use class="pool"  xlink:href="#box"/><text x="0" y="0.6ex">Pool&#8201;with&#8201;3&#215;3&#8201;max.&#8202;kernel+2&#8202;stride:&#8202;12&#215;12&#215;256</text></g>
+   <g transform="translate(0, 600)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8201;3&#215;3&#8201;kernel+1&#8201;pad:12&#215;12&#215;384</text></g>
+   <g transform="translate(0, 700)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8201;3&#215;3&#8201;kernel+1&#8201;pad:12&#215;12&#215;384</text></g>
+   <g transform="translate(0, 800)"><use class="conv"  xlink:href="#box"/><text x="0" y="0.6ex">Convolution&#8201;with&#8201;3&#215;3&#8201;kernel+1&#8201;pad:12&#215;12&#215;256</text></g>
+   <g transform="translate(0, 900)"><use class="pool"  xlink:href="#box"/><text x="0" y="0.6ex">Pool&#8201;with&#8201;3&#215;3&#8201;max.&#8202;kernel+2&#8202;stride:&#8202;5&#215;5&#215;256</text></g>
+   <g transform="translate(0,1000)"><use class="dense" xlink:href="#box"/><text x="0" y="0.6ex">Dense: 4096 fully connected neurons</text></g>
+   <g transform="translate(0,1100)"><use class="dense" xlink:href="#box"/><text x="0" y="0.6ex">Dense: 4096 fully connected neurons</text></g>
+   <g transform="translate(0,1200)"><use class="dense" xlink:href="#box"/><text x="0" y="0.6ex">Dense: 1000 fully connected neurons</text></g>
+  </g>
+ </g>
+</svg>
