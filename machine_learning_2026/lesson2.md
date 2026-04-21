@@ -127,6 +127,8 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
     - 期待値はその基本
     - ただし万能ではない
         - [宝くじの例](https://b.ueda.tech/?page=robot_and_stats_questions#%E5%AE%9D%E3%81%8F%E3%81%98)
+- 補足
+    - <span style="color:red">代表値</span>: 平均値や中央値など、データを説明するために1つだけに集計した値
 
 ---
 
