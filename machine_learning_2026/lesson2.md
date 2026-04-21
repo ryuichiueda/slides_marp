@@ -129,6 +129,9 @@ $+ 1000 \cdot 5/6 + 1000 \cdot 6/6 - 3700 = 1000(3.5) - 3700$ <span style="color
         - [宝くじの例](https://b.ueda.tech/?page=robot_and_stats_questions#%E5%AE%9D%E3%81%8F%E3%81%98)
 - 補足
     - <span style="color:red">代表値</span>: 平均値や中央値など、データを説明するために1つだけに集計した値
+    - <span style="color:red">最頻値（モード）</span>: 平均値、中央値とともに代表的な代表値
+        - データのなかで一番多いものを指す
+        - 例: 1, 2, 2, 2, 3, 9, 10, 10 $\Rightarrow$2が最頻値
 
 ---
 
