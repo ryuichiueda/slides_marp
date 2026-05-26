@@ -21,10 +21,18 @@ marp: true
 
 ## 今日やること
 
+- 多変量ガウス分布のおさらい
 - データの法則性
 - 最小二乗法
 - 回帰
 - ベイズ線形回帰
+
+---
+
+## 補足: 多変量ガウス分布（多次元のガウス分布）
+
+- このスライドでおさらい
+    - https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html
 
 ---
 
