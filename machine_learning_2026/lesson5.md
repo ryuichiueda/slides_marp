@@ -92,7 +92,7 @@ marp: true
 - 尤度
     - $\text{Pr}($成功$|t) = t$、$\text{Pr}($失敗$|t) = 1-t$
 - ベイズの定理（再掲）
-    - $p(t|$結果$) = \eta\text{Pr}($結果$|t)p(t)
+    - $p(t|$結果$) = \eta P($結果$|t)p(t)$
 
 ---
 
