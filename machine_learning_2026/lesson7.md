@@ -206,18 +206,6 @@ marp: true
 
 ![bg right:20% 90%](./figs/belong_prob.png)
 
----
-
-### $k_{ij}$の計算方法
-
-- $k_{ij}$は、クラスタ$j$のガウス分布の密度に混合比率をかけたものになる
-- 計算式の導出
-    - $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$（ベイズの定理）
-        - $p(\boldsymbol{x}_i | k_i = j )$: $k_i$番目のクラスタのガウス分布
-        - $\text{Pr}\{ k_i = j \}$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
-    - $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
-        - $\eta$は各クラスタに対する$k_{ij}$の値の和が$1$になるように決める
-
 
 
 ---
@@ -254,6 +242,20 @@ marp: true
 ---
 
 ## 補足資料
+
+---
+
+
+### EM法のEステップの$k_{ij}$の計算方法
+
+- $k_{ij}$は、クラスタ$j$のガウス分布の密度に混合比率をかけたものになる
+- 計算式の導出
+    - $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = \eta p(\boldsymbol{x}_i | k_i = j )\text{Pr}\{ k_i = j \}$（ベイズの定理）
+        - $p(\boldsymbol{x}_i | k_i = j )$: $k_i$番目のクラスタのガウス分布
+        - $\text{Pr}\{ k_i = j \}$: $\boldsymbol{x}_i$の情報がないときに$k$番目のクラスタにデータがいる確率（$=\pi_k$）
+    - $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$<span style="color:red">←計算できる</span>
+        - $\eta$は各クラスタに対する$k_{ij}$の値の和が$1$になるように決める
+
 
 ---
 
