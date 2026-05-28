@@ -279,6 +279,7 @@ marp: true
         - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:K}, \Sigma_{1:K}, \pi_{1:K})$
         $=  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
+            - クラスタの数を$K$に変更しています
 - 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
     - どのガウス分布に所属しているか
     - 潜在変数
