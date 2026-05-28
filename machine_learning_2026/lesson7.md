@@ -175,7 +175,7 @@ marp: true
     - 具体的に書くと、次の$L$を最大化するパラメータを求める問題
         - $L(\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}|\boldsymbol{x}_{1:N})= \prod_{j=1}^N  \sum_{i=1}^n \pi_i \mathcal{N}(\boldsymbol{x}_j | \boldsymbol{\mu}_i, \Sigma_i)$
 - 対数をとって掛け算を足し算にして、<span style="color:red">対数尤度</span>を最大化する問題にする
-    - $\log_e L = \sum_{j=1}^N \log_e p(\boldsymbol{x}_j | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
+    - $\log_e L = \sum_{j=1}^N \log_e \sum_{i=1}^n  \pi_i \mathcal{N}(\boldsymbol{x}_j | \boldsymbol{\mu}_i, \Sigma_i)$
         - 問題が等価で簡単なものに
 
 ---
