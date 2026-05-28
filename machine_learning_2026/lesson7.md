@@ -276,10 +276,9 @@ marp: true
 
 - 各ガウス分布のパラメータ: $\boldsymbol{\mu}_j, \Sigma_j, \pi_j$
     - （おさらい）混合ガウス分布:
-        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:K}, \Sigma_{1:K}, \pi_{1:K})$
+        - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
         $=  \sum_{j=1}^n \pi_j \mathcal{N}(\boldsymbol{\mu}_j, \Sigma_j)$
         （$\pi_1 + \pi_2 + \dots + \pi_n = 1$）
-            - クラスタの数を$K$に変更しています
 - 各データ$\boldsymbol{x}_i$（$i=1,2,\dots,N$）の所属$k_{i}$
     - どのガウス分布に所属しているか
     - 潜在変数
@@ -291,7 +290,7 @@ marp: true
 ### <span style="color:red">変分推論</span>による解法
 
 - 推定対象の分布を、パラメータごとに独立な分布の積にして近似
-    - $q(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+    - $q(\pi_{1:n},\boldsymbol{\mu}_{1:n}, \Lambda_{1:n}, k_{1:N}) = q_1(k_{1:N})q_2(\pi_{1:n},\boldsymbol{\mu}_{1:n}, \Lambda_{1:n})$
          - $q$: 近似の分布
     - $q_1$と$q_2$のどちらかを固定、どちらかを動かして交互にデータに合わせていく
         - $q_1$を動かす: クラスタの再構成
@@ -299,7 +298,7 @@ marp: true
         <span style="color:red">EM法と同じ</span>（だけど計算はよりややこしく）
 - 次ページから
     - $q_2 = q_3q_4$とさらに分解して$q_1, q_3, q_4$をモデル化
-        - $q_2(\pi_{1:K},\boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) = q_3(\pi_{1:K})q_4(\boldsymbol{\mu}_{1:K}, \Lambda_{1:K})$
+        - $q_2(\pi_{1:n},\boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) = q_3(\pi_{1:n})q_4(\boldsymbol{\mu}_{1:n}, \Lambda_{1:n})$
 
 ---
 
@@ -321,11 +320,11 @@ marp: true
 - ディリクレ分布を仮定
     - ベータ分布をコインの裏表だけでなく多変数に拡張したもの
         - 例: さいころなら6
-    - $\text{Dir}(\pi_{1:K} | \alpha_{1:K})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
+    - $\text{Dir}(\pi_{1:n} | \alpha_{1:n})= \eta \pi_1^{\alpha_1-1}\pi_2^{\alpha_2-1}\dots\pi_n^{\alpha_n-1}$
     $= \eta \prod_{j=1}^n \pi_j^{\alpha_j - 1}$
-        - <span style="color:red">$\alpha_{1:K}$</span>: $\pi_{1:K}$のばらつきを決める
+        - <span style="color:red">$\alpha_{1:n}$</span>: $\pi_{1:n}$のばらつきを決める
         パラメータ
-            - $\alpha_{1:K}$の合計値が大きくなるほど値が定まってくる
+            - $\alpha_{1:n}$の合計値が大きくなるほど値が定まってくる
 
 ![bg right:38% 95%](./figs/dil_params.png)
 
@@ -351,7 +350,7 @@ marp: true
 |:---:|:---:|:---:|
 |$\boldsymbol{x}_i$|$k_i, \boldsymbol{\mu}_j, \Lambda_j, \pi_j$|$r_{ij}, \boldsymbol{m}_j, \beta_j, W_j, \nu_j, \alpha_j$|
 - $i=1,2,\dots,N$（$N$: データの数）
-- $j=1,2,\dots,K$（$K$: ガウス分布の数）
+- $j=1,2,\dots,n$（$n$: ガウス分布の数）
 
 
 ---
@@ -361,13 +360,13 @@ marp: true
 
 1. 適当に$q_1q_3q_4$の事前分布を決める
     - 確率$r_{ij}$を初期化（クラスタリングに相当）
-    - パラメータ$\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$の初期値を与える
-        - $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$としましょう
-2. $q_1$を固定し、$q_3q_4$の事後分布のパラメータ$\boldsymbol{m}_{1:K}, \beta_{1:K}, W_{1:K}, \nu_{1:K}, \alpha_{1:K}$を計算
+    - パラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$の初期値を与える
+        - $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$としましょう
+2. $q_1$を固定し、$q_3q_4$の事後分布のパラメータ$\boldsymbol{m}_{1:n}, \beta_{1:n}, W_{1:n}, \nu_{1:n}, \alpha_{1:n}$を計算
     - EM法のMステップに相当（<span style="color:red">変分Mステップ</span>）
 3. $q_3q_4$を固定し、$q_1$（つまり$r_{ij}$）を計算
     - EM法のEステップに相当（<span style="color:red">変分Eステップ</span>）
-- 注意: $\boldsymbol{m}'_{1:K}, \beta'_{1:K}, W'_{1:K}, \nu'_{1:K}, \alpha'_{1:K}$は固定
+- 注意: $\boldsymbol{m}'_{1:n}, \beta'_{1:n}, W'_{1:n}, \nu'_{1:n}, \alpha'_{1:n}$は固定
     - 事前分布を固定して、繰り返し事後分布の解を良くしていく
 
 
@@ -473,12 +472,12 @@ marp: true
 ### 変分Eステップ（分布のパラメータから各データの所属を計算）
 
 - $k_{1:N}$の分布: 次の計算で導出
-    - $P(k_{1:N}) = \langle p(\boldsymbol{x}_i, k_{i,1:K}, \pi_{1:K}, \boldsymbol{\mu}_{1:K}, \Lambda_{1:K}) \rangle_{\pi_{1:K}, \boldsymbol{\mu}_{1:K}, \Lambda_{1:K}}$
+    - $P(k_{1:N}) = \langle p(\boldsymbol{x}_i, k_{i,1:n}, \pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}) \rangle_{\pi_{1:n}, \boldsymbol{\mu}_{1:n}, \Lambda_{1:n}}$
 - 計算結果: 次の$r_{ij}$が、$k_i = j$になる確率
     - $r_{ij} = \eta \rho_{ij}$
         - $\log_e \rho_{ij} = -\dfrac{1}{2} d \beta_j^{-1} -\dfrac{1}{2} \nu_j(\boldsymbol{x}_i - \boldsymbol{m}_j)^\top W_j (\boldsymbol{x}_i - \boldsymbol{m}_j)$
          $\quad+ \dfrac{1}{2} \sum_{j=1}^d \psi\left(\dfrac{\nu_j + 1 - j}{2}\right) + \dfrac{1}{2}\log_e | W_j | + \eta'$
-        $\quad+\psi(\alpha_j) - \psi\left( \sum_{j=1}^K \alpha_j \right)$
+        $\quad+\psi(\alpha_j) - \psi\left( \sum_{j=1}^n \alpha_j \right)$
         - 式中の変数はすべて一時的に値が決まっているか既知なので計算可能
             - $d$: $\boldsymbol{x}$の次元
             - $\psi$: ディガンマ関数という関数（高級な言語にはライブラリあり）
@@ -537,37 +536,37 @@ marp: true
     $\quad- \int_Z q(Z) \log_e q(Z) \text{d}Z + \int_Z q(Z) \log_e q(Z) \text{d}Z$
     $= \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
 - 新たな関数を定義して整理
-    - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+    - $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{nL}(q || p)$
         - $\mathcal{L}(q, \boldsymbol{\Theta}) = \int_Z q(Z) \log_e \dfrac{ p(X, Z | \boldsymbol{\Theta}) }{q(Z)} \text{d}Z$
-        - $\text{KL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
+        - $\text{nL}(q || p) = - \int_Z q(Z) \log_e \dfrac{p(Z |X, \boldsymbol{\Theta})}{q(Z)} \text{d}Z$
 
 
 ---
 
 ### できた式
 
-- $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{KL}(q || p)$
-- $= \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+- $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{nL}(q || p)$
+- $= \mathcal{L}(q, \boldsymbol{\Theta}) + \text{nL}(q || p)$
     - $q$（$q(Z)$）: 潜在変数の分布
-    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+    - $\text{nL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
         - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
         （一致すると$0$で、違うほどと正の大きな値に）
     - $\mathcal{L}$: 変分下界
-        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+        - 対数尤度（左辺はこれより値が下にならない。nLが0以上なので）
 
 ---
 
 ### できた式と使い方
 
-- $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+- $\log_e p(X | \boldsymbol{\Theta}) = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{nL}(q || p)$
     - $q$（$q(Z)$）: 潜在変数の分布
-    - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
+    - $\text{nL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
         - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
         （一致すると$0$で、違うほどと正の大きな値に）
     - $\mathcal{L}$: 変分下界
-        - 対数尤度（左辺はこれより値が下にならない。KLが0以上なので）
+        - 対数尤度（左辺はこれより値が下にならない。nLが0以上なので）
 - 使い方
     - $\boldsymbol{\Theta}$を$\boldsymbol{\Theta}_\text{old}$に固定して「良い」$q(Z)$を探す（<span style="color:red">Eステップ</span>）
-        - $\text{KL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
+        - $\text{nL}$を$0$にするのがよさそう$\Rightarrow \mathcal{L}$が対数尤度に一致
     - $q(Z)$を固定して$\boldsymbol{\Theta}_\text{old}$を$\boldsymbol{\Theta}_\text{new}$に更新（<span style="color:red">Mステップ</span>）
         - $\mathcal{L}$が最大になるように（対数尤度も大きくなってより良い結果に）
