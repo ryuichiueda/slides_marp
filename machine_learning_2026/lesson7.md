@@ -195,14 +195,16 @@ marp: true
 
 ### Eステップ
 
-- 各データ$\boldsymbol{x}_i$について、どのクラスタにどれくらいの確率で所属しているのか求めたい
-    - 混合ガウス分布のパラメータ$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$は固定で
+- $\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = k_{ij}$の値を求めたい
+    - 各データ$\boldsymbol{x}_i$が、クラスタ$k_j$に所属する確率
+        - 各データ、各クラスタの組み合わせ全てに対して
     - k-meansと違って、1つのクラスタへの所属に断定しない
         - <span style="color:red">分からないのだから曖昧にしておく</span>
-- 数学的には
-    - $\boldsymbol{x}_i$の属するクラスタ$k_i$が$j$番目のクラスタである確率$\text{Pr}\{ k_i = j |\boldsymbol{x}_i \} = k_{ij}$の値を求めたい
-        - $k_i$が$1,2,\dots,n$の場合すべてに対して
     - $k_{ij}$のような変数は隠れているので<span style="color:red">潜在変数</span>と呼ばれる
+- 答え
+    - $k_{ij} = \eta \pi_k \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_j, \Sigma_j )$
+        - $\eta$は各クラスタに対する$k_{ij}$の和が$1$になるように決定
+        - $\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$は固定で計算
 
 ![bg right:20% 90%](./figs/belong_prob.png)
 
