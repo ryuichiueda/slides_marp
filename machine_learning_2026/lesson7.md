@@ -291,7 +291,7 @@ marp: true
 ### できた式
 
 - $\log_e p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \mathcal{L}(q, \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) + \text{KL}(q || p)$
-- $ = \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
+- $= \mathcal{L}(q, \boldsymbol{\Theta}) + \text{KL}(q || p)$
     - $q$（$q(Z)$）: 潜在変数の分布
     - $\text{KL}(q || p)$: <span style="color:red">カルバック・ライブラー距離</span>
         - 分布$q$と$p(Z |X, \boldsymbol{\Theta})$の形状の違いを数値化したもの
