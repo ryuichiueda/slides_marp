@@ -156,7 +156,7 @@ marp: true
     $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
         - 記号が多いので普段考えるときは
-        $p(\boldsymbol{x} |$パラメータ$)$でいい
+        $\sum_{i=1}^n \pi_i p(\boldsymbol{x} |$ガウス分布のパラメータ$)$でいい
         （注意: 円周率ではなく、<span style="color:red">混合比率</span>）
 - 絵に描くと右図のように
 （ちょっと当てはまりは悪いです）
