@@ -169,7 +169,7 @@ marp: true
 
 - 次の尤度を最大化するものが「一番尤もらしい」と考える
     - $p(\boldsymbol{x}_{1:N} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \prod_{j=1}^N p(\boldsymbol{x}_j | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n})$
-        - 左辺: データ$\boldsymbol{x}_{1:N}$が生成した確率の密度
+        - 左辺: データ$\boldsymbol{x}_{1:N}$が生成された確率の密度
         - 右辺: 各データ$\boldsymbol{x}_i$の密度の掛け算
         - <span style="color:red">データは既知なので、最も尤もらしい（最尤な）パラメータ$\boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}$や、その尤度を求める問題に</span>
     - 具体的に書くと
