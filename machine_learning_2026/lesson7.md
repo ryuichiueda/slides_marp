@@ -155,11 +155,11 @@ marp: true
     - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)$
     $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
-        - 記号が多いので普段考えるときは
-        $\sum_{i=1}^n \pi_i p(\boldsymbol{x} |$ガウス分布のパラメータ$)$でいい
         （注意: 円周率ではなく、<span style="color:red">混合比率</span>）
 - 絵に描くと右図のように
 （ちょっと当てはまりは悪いです）
+
+<span style="font-size:55%">大切: 記号が多いときは、文脈に応じて$p(\boldsymbol{x} |$パラメータ$)$とか$\sum_{i=1}^n \pi_i p_i$とか適宜省略して考える</span>
 
 ![bg right:30% 100%](./figs/gauss_mix.png)
 
