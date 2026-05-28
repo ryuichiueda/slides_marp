@@ -155,6 +155,8 @@ marp: true
     - $p(\boldsymbol{x} | \boldsymbol{\mu}_{1:n}, \Sigma_{1:n}, \pi_{1:n}) = \pi_1 \mathcal{N}(\boldsymbol{\mu}_1, \Sigma_1)$
     $\qquad+ \pi_2 \mathcal{N}(\boldsymbol{\mu}_2, \Sigma_2) + \dots + \pi_n \mathcal{N}(\boldsymbol{\mu}_n, \Sigma_n)$
         - $\pi_1 + \pi_2 + \dots + \pi_n = 1$
+        - 記号が多いので普段考えるときは
+        $p(\boldsymbol{x} |$パラメータ$)$でいい
         （注意: 円周率ではなく、<span style="color:red">混合比率</span>）
 - 絵に描くと右図のように
 （ちょっと当てはまりは悪いです）
