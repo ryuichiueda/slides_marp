@@ -284,7 +284,7 @@ marp: true
     - どのガウス分布に所属しているか
     - 潜在変数
 
-![bg right:40% 100%](./figs/gauss_mixture.png)
+![bg right:30% 100%](./figs/gauss_mixture.png)
 
 ---
 
