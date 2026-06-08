@@ -329,28 +329,6 @@ marp: true
 ---
 
 
-
-
-![bg right:25% 90%](./figs/back_propagation_diff.png)
-
-
----
-
-### アフィンレイヤーのパラメータ修正
-
-
-- 誤差に対するパラメータの影響
-    - $W$について: <span style="color:red">$\dfrac{\partial L}{\partial W} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
-    - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{b}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial L }{\partial \boldsymbol{y}}$</span>
-- これらの値を$\alpha$だけ割り引いて元のパラメータから引く
-    - 割り引くのはひとつの入力だけでパラメータを大きく変えないため
-
-
-![bg right:35% 90%](./figs/back_propagation_affine.png)
-
-
----
-
 ### 問題: p. 14のニューラルネットワークのパラメータ修正
 
 - $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
