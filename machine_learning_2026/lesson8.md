@@ -141,7 +141,7 @@ marp: true
 
 ---
 
-### 人工ニューラルネットワークの正体
+### ANNの正体
 
 - やってることは単なる行列の演算
 - 先ほどの例の一番左の「層」
@@ -203,7 +203,7 @@ marp: true
 - 第6回のおさらい
 - 最小二乗法や回帰
     - 損失関数を定義$\mathcal{L}(w_{1:n} |$データ$)$
-        - $w_{1:n}$: パラメータ（）
+        - $w_{1:n}$: パラメータ（ANNの場合は$\boldsymbol{b}$も含まれる）
     - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
     - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
 
