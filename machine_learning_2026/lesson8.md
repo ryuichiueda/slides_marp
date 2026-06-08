@@ -265,9 +265,9 @@ marp: true
 
 ### 多入力・多出力のアフィンレイヤーの場合
 
-- $\boldsymbol{y} = \boldsymbol{x}W - \boldsymbol{b}$
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
 - 行列の計算に
-    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
+    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
 
 
 ![bg right:35% 90%](./figs/back_propagation_affine.svg)
@@ -303,10 +303,22 @@ marp: true
 
 ### パラメータをどう変えるか?
 
-- 基本はこれ（再掲）
-    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>
-        - ひとつのデータで誤差を観測してパラメータを変更
-        - ある単位でまとめて更新することも（バッチ）
+- 伝播してきた誤差$\Delta \mathcal{L}_y$が減る方向にパラメータを変える
+- 1入力1出力の層の場合
+    - ある層の計算: $y = f(x | w_{1:n})$のとき
+    （$x$: 入力、$y$: 出力）
+    - パラメータの変更: $w_i \longleftarrow w_i - \alpha \dfrac{\partial f}{\partial w_i}\Bigg|_x \Delta \mathcal{L}_y$
+
+
+![bg right:25% 90%](./figs/back_propagation_diff.png)
+
+
+---
+
+
+- アフィンレイヤーでのパラメータ更新
+    - アフィンレイヤー（再掲）: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
+    - $\Delta_w = \Delta \mathcal{L}_y \dfrac{\partial \boldsymbol{f}}{\partial W} = \boldsymbol{x}^\top \Delta \mathcal{L}_y$
 
 ---
 
