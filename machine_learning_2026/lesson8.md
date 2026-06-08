@@ -227,7 +227,7 @@ marp: true
 - 1入力1出力の層の場合
     - ある層の計算: $y = f(x | w_{1:n})$のとき
     （$x$: 入力、$y$: 出力）
-    - 上流に送る誤差: $\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$
+    - 上流に送る誤差: <span style="color:red">$\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$</span>
         - 下流から来た誤差: $\Delta \mathcal{L}_y$
 - アフィンレイヤーの例: $f(x) = w x - b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
     - 考え方: $w$倍になって出ていく層は入力の誤差の影響力が$w$倍
