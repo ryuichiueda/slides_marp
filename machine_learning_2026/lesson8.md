@@ -218,7 +218,7 @@ marp: true
     - 送られてきた誤差が小さくなるように各層のパラメータを変える
         - <span style="color:red">各層でやっても前ページの計算が成立</span>
 
-![bg right:50% 90%](./figs/back_propagation.png)
+<center><img width=600 src="./figs/back_propagation.png" /></center>
 
 ---
 
