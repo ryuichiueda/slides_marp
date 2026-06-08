@@ -236,6 +236,17 @@ marp: true
 
 ---
 
+### 多入力・多出力のアフィンレイヤーの場合
+
+- $\boldsymbol{y} = \boldsymbol{x}W - \boldsymbol{b}$
+- 行列の計算に
+    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} W^\top$</span>
+
+
+![bg right:35% 90%](./figs/back_propagation_affine.svg)
+
+---
+
 ### 学習の方法: パラメータを変える
 
 - 例題: $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力する人工ニューロン
