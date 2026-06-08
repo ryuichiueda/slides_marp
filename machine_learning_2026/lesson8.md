@@ -240,7 +240,7 @@ marp: true
 
 - $\boldsymbol{y} = \boldsymbol{x}W - \boldsymbol{b}$
 - 行列の計算に
-    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} W^\top$</span>
+    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
 
 
 ![bg right:35% 90%](./figs/back_propagation_affine.svg)
