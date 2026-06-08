@@ -230,6 +230,8 @@ marp: true
         - 下流から来た誤差: $\Delta \mathcal{L}_y$
     - 例: $f(x) = w x + b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
 
+![bg right:25% 90%](./figs/back_propagation_diff.png)
+
 ---
 
 ### 学習の方法: パラメータを変える
