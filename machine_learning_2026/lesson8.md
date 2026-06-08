@@ -152,7 +152,7 @@ marp: true
         - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
         - $\boldsymbol{h}$は閾値処理
 
-![bg right:40% 100%](./figs/first_neural_network.png)
+![bg right:40% 100%](./figs/first_neural_network.svg)
 
 ---
 
