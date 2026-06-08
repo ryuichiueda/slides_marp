@@ -225,7 +225,9 @@ marp: true
 ### 誤差の送り方
 
 - 1入力1出力の場合
-    - ある層の計算: $y = f(x)$のとき（$x$: 入力、$y$: 出力）
+    - ある層の計算: $y = f(x | w_{1:n})$のとき（$x$: 入力、$y$: 出力）
+    - 下流から来た誤差: $\Delta y$
+    $\dfrac{\partial \mathcal{L}}{\partial x} = \dfrac{\partial \mathcal{L}}{\partial y}\dfrac{\partial y}{\partial x}$
 
 
 ---
