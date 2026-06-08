@@ -308,6 +308,9 @@ marp: true
     - ある層の計算: $y = f(x | w_{1:n})$のとき
     （$x$: 入力、$y$: 出力）
     - パラメータの変更: $w_i \longleftarrow w_i - \alpha \dfrac{\partial f}{\partial w_i}\Bigg|_x \Delta \mathcal{L}_y$
+- 右のアフィンレイヤー（$y = wx - b$）の例
+    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
+    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
 
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
@@ -315,17 +318,16 @@ marp: true
 
 ---
 
+### アフィンレイヤーでのパラメータ更新（一般的な式）
 
-- アフィンレイヤーでのパラメータ更新
-    - アフィンレイヤー（再掲）: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
-    - $\Delta_w = \Delta \mathcal{L}_y \dfrac{\partial \boldsymbol{f}}{\partial W} = \boldsymbol{x}^\top \Delta \mathcal{L}_y$
+- アフィンレイヤー（再掲）: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
+    - $W =  W -  \alpha\Delta \mathcal{L}_y \dfrac{\partial \boldsymbol{f}}{\partial W} = W- \alpha\boldsymbol{x}^\top \Delta \mathcal{L}_y$
+
+![bg right:35% 90%](./figs/back_propagation_affine.svg)
 
 ---
 
 
-- パラメータの修正（計算式の根拠は次ページ）
-    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
-    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
 
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
