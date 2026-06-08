@@ -283,9 +283,12 @@
 <ul>
 <li>出力側の誤差をどんどん入力側に送っていく
 <ul>
-<li>送られてきた誤差が小さくなるように各層のパラメータを変える</li>
-<li>パラメータの更新は各層で局所的にやってよいという性質<br />
+<li>送られてきた誤差が小さくなるように各層のパラメータを変える
+<ul>
+<li><span style="color:red">各層でやっても前ページの計算が成立</span><br />
 <img src="./figs/back_propagation.png" alt="" style="width:600px;" /></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
