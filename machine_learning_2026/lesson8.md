@@ -288,44 +288,18 @@ marp: true
 - $y_i = h(x_i)$なので<span style="color:red">$\Delta\mathcal{L}_x = y_i(1 - y_i)\Delta\mathcal{L}_y$</span>
 
 
-
 ---
 
 ### パラメータをどう変えるか?
 
-- 案1: 出力を間違えたらあてずっぽで変える
-    $\rightarrow$たくさんパラメータがあると正解は無理
-- 案2: ずれが小さくなるようにパラメータを変える
-    - $\rightarrow$少し$W$や$\mathcal{b}$を変えても$\boldsymbol{h}$に$0$か$1$にされるので効果が分からない
-        - ちょっと変えたらちょっとでもいいので
-        誤差が減ってほしい
-        （どうすればいいか議論してみましょう）
-
-![bg right:30% 100%](./figs/gradient_lost.png)
-
----
-
-### 対策
-
-- 方法1: 出力をアナログ値に（次のページ）
-- 方法2: たくさん入力して期待値をとる
-    - バッチ、ミニバッチと呼ばれる方法で方法1と共に使われる
-
-
+- 基本はこれ（再掲）
+    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>
+        - ひとつのデータで誤差を観測してパラメータを変更
+        - ある単位でまとめて更新することも（バッチ）
 
 ---
 
 
-### 単純な例
-
-- 送る誤差の大きさ
-    - ある層で誤差が$t$倍になるなら、$t$かけて上流に送る
-        - 上の層での値の違いが$t$倍だけ影響するので
-    - 右図上: 1入力1出力の単純なレイヤー
-        - $9/10$が入力されて$7/10$を出力
-        $\rightarrow$誤差$1/3$が返ってきた
-        （出力$7/10$はもっと小さいべき）
-        - $w=2$なので$2$倍して誤差を送信（$2/3$を返す）
 - パラメータの修正（計算式の根拠は次ページ）
     - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
     - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
@@ -333,20 +307,6 @@ marp: true
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
-
----
-
-### アフィンレイヤーの誤差逆伝播
-
-- 出力の誤差: $\partial L / \partial \boldsymbol{y}$と書ける
-    - 最終的な誤差$L$に対して$\boldsymbol{y}$が与える影響度
-- 入力（前の層の出力）の誤差: 同様に$\partial L / \partial \boldsymbol{x}$
-    - <span style="color:red">$\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} W^\top$</span>
-        - （行列の計算はさておき）重み$W$の分だけ影響力が増すので、これを上流に送る
-- シグモイドレイヤーも同様に計算すると
-    - $\dfrac{\partial L}{\partial \boldsymbol{x}} = \dfrac{\partial L}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial L }{\partial \boldsymbol{y}} y^2 e^{-x}$となる
-
-![bg right:35% 90%](./figs/back_propagation_affine.png)
 
 ---
 
