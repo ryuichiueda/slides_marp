@@ -225,10 +225,11 @@ marp: true
 ### 誤差の送り方
 
 - 1入力1出力の層の場合
-    - ある層の計算: $y = f(x | w_{1:n})$のとき（$x$: 入力、$y$: 出力）
+    - ある層の計算: $y = f(x | w_{1:n})$のとき
+    （$x$: 入力、$y$: 出力）
     - 上流に送る誤差: $\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$
         - 下流から来た誤差: $\Delta \mathcal{L}_y$
-    - 例: $f(x) = w x + b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
+    - 例: $f(x) = w x - b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
