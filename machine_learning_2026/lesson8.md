@@ -204,10 +204,7 @@ marp: true
 - 最小二乗法や回帰
     - 損失関数を定義$\mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} )$
     - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
-    - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは
-    <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>のとき
-        - 内積が最小になる
-    - 上記の赤字の式にしたがってパラメータを更新すればよい
+    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>でパラメータを変更$w_{1:n}$
 
 
 ---
