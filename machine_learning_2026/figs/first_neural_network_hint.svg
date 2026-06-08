@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550.46 307.53">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-1, .cls-14 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-2, .cls-15 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-3, .cls-16 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-4, .cls-17 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9, .cls-18 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-11, .cls-19, .cls-14 {
+        font-size: 14px;
+      }
+
+      .cls-20 {
+        stroke-dasharray: 1.93 1.93;
+      }
+
+      .cls-20, .cls-21, .cls-22, .cls-23 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-20, .cls-21, .cls-23 {
+        fill: none;
+      }
+
+      .cls-24 {
+        font-size: 12px;
+      }
+
+      .cls-24, .cls-25 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-21 {
+        stroke-dasharray: 2.01 2.01;
+      }
+
+      .cls-22 {
+        fill: #fff;
+      }
+
+      .cls-26 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      .cls-27 {
+        letter-spacing: -.5em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.48em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-30 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-31 {
+        letter-spacing: -.16em;
+      }
+
+      .cls-32 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-33 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-34 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-35 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-36 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-37, .cls-12 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-23" d="M271.55,213.27c-1.15-6.32,5.51-11.58,11.87-12.47,6.36-.89,12.82.9,19.22.4s13.5-4.69,13.53-11.11"/>
+    <circle class="cls-23" cx="320" cy="187.5" r="4.41"/>
+  </g>
+  <ellipse class="cls-22" cx="237.04" cy="221.42" rx="51.73" ry="47.09"/>
+  <g>
+    <path class="cls-23" d="M125.01,87.79c3.33-5.49,11.81-5,17.15-1.44,5.35,3.56,8.99,9.19,14.11,13.07,5.12,3.88,13.21,5.46,17.49.68"/>
+    <circle class="cls-23" cx="178.35" cy="100.71" r="4.41"/>
+  </g>
+  <path class="cls-23" d="M428.71,162.03c-10.6-8.16-25.26-10.76-38.02-6.74"/>
+  <circle class="cls-23" cx="202.12" cy="134.18" r="4.41"/>
+  <circle class="cls-23" cx="433.12" cy="162.03" r="4.41"/>
+  <path class="cls-23" d="M184.87,242.71c-5.89,2.86-12.28-2.72-16.03-8.64s-7.07-13.09-13.15-15.38c-6.4-2.42-13.17,1.61-18.99,5.5"/>
+  <path class="cls-23" d="M261.57,100.77c8.84-.1,15.17,4.28,16.21,8.41,1.03,4.12-1.38,8.28-1.08,12.43.61,8.52,13.92,16.5,31.38,18.83"/>
+  <circle class="cls-23" cx="312.55" cy="138.6" r="4.41"/>
+  <circle class="cls-22" cx="97.33" cy="94.33" r="38.85"/>
+  <g>
+    <path class="cls-23" d="M.21,78.45c3.33-5.49,11.81-5,17.15-1.44,5.35,3.56,8.99,9.19,14.11,13.07s13.21,5.46,17.49.68"/>
+    <circle class="cls-23" cx="53.55" cy="91.36" r="4.41"/>
+  </g>
+  <text transform="translate(37.82 110.14)"><tspan><tspan class="cls-26" x="0" y="0">x</tspan><tspan class="cls-24" x="8.88" y="2">1</tspan></tspan></text>
+  <text class="cls-19" transform="translate(74.08 81.89)"><tspan class="cls-13"><tspan x="0" y="0">入力が</tspan></tspan><tspan class="cls-25" x="0" y="16.8">0</tspan><tspan class="cls-8" x="6.86" y="16.8">以</tspan><tspan class="cls-13" x="20.58" y="16.8">上</tspan><tspan class="cls-7" x="0" y="33.6">な</tspan><tspan class="cls-4" x="13.02" y="33.6">ら</tspan><tspan class="cls-25" x="26.18" y="33.6">1</tspan></text>
+  <circle class="cls-22" cx="97.33" cy="219.73" r="38.85"/>
+  <g>
+    <path class="cls-23" d="M.21,203.85c3.33-5.49,11.81-5,17.15-1.44,5.35,3.56,8.99,9.19,14.11,13.07s13.21,5.46,17.49.68"/>
+    <circle class="cls-23" cx="53.55" cy="216.76" r="4.41"/>
+  </g>
+  <text transform="translate(37.82 235.54)"><tspan><tspan class="cls-26" x="0" y="0">x</tspan><tspan class="cls-24" x="8.88" y="2">2</tspan></tspan></text>
+  <text class="cls-19" transform="translate(74.08 207.29)"><tspan class="cls-13"><tspan x="0" y="0">入力が</tspan></tspan><tspan class="cls-25" x="0" y="16.8">0</tspan><tspan class="cls-8" x="6.86" y="16.8">以</tspan><tspan class="cls-13" x="20.58" y="16.8">上</tspan><tspan class="cls-7" x="0" y="33.6">な</tspan><tspan class="cls-4" x="13.02" y="33.6">ら</tspan><tspan class="cls-25" x="26.18" y="33.6">1</tspan></text>
+  <circle class="cls-22" cx="222.16" cy="97.01" r="38.85"/>
+  <path class="cls-23" d="M188.88,196.3c-5.06-20.37-10.43-41.4-23.81-58.11-5.37-6.71-12.24-13.26-12.84-21.63-.47-6.52,3.05-13.22.84-19.41"/>
+  <circle class="cls-22" cx="186.88" cy="198.18" r="4.41"/>
+  <circle class="cls-22" cx="184.87" cy="242.71" r="4.41"/>
+  <path class="cls-23" d="M197.71,136.18c-14.74,6.89-19.98,24.85-23.47,40.74-3.49,15.89-8.33,33.85-22.83,41.25"/>
+  <circle class="cls-22" cx="351.84" cy="158.69" r="38.85"/>
+  <text class="cls-19" transform="translate(328.59 146.25)"><tspan class="cls-13"><tspan class="cls-16" x="0" y="0">足</tspan><tspan class="cls-15" x="12.6" y="0">し</tspan><tspan class="cls-37" x="25.06" y="0">て</tspan></tspan><tspan class="cls-25" x="0" y="16.8">0.9</tspan><tspan class="cls-9" x="17.36" y="16.8">以</tspan><tspan class="cls-13" x="31.08" y="16.8">上</tspan><tspan class="cls-6" x="0" y="33.6">な</tspan><tspan class="cls-5" x="13.02" y="33.6">ら</tspan><tspan class="cls-25" x="26.18" y="33.6">1</tspan></text>
+  <text transform="translate(442.75 162.03)"><tspan><tspan class="cls-26" x="0" y="0">x</tspan><tspan class="cls-24" x="8.88" y="2">1</tspan><tspan class="cls-14" x="13.76" y="0">と</tspan><tspan class="cls-26" x="26.64" y="0">x</tspan><tspan class="cls-24" x="35.51" y="2">2</tspan><tspan class="cls-11" x="41.51" y="0">の符号が</tspan></tspan><tspan class="cls-19"><tspan class="cls-13" x="0" y="16.8">一</tspan><tspan class="cls-3" x="14" y="16.8">致</tspan><tspan class="cls-2" x="26.6" y="16.8">し</tspan><tspan class="cls-12" x="39.06" y="16.8">て</tspan><tspan class="cls-4" x="52.5" y="16.8">い</tspan><tspan class="cls-10" x="65.66" y="16.8">る</tspan><tspan class="cls-1" x="77.98" y="16.8">と</tspan><tspan class="cls-25" x="90.86" y="16.8">1</tspan></tspan></text>
+  <text class="cls-11" transform="translate(217.39 302.78)"><tspan class="cls-31" x="0" y="0">こ</tspan><tspan class="cls-29" x="11.76" y="0">こ</tspan><tspan x="24.5" y="0">の入力が両</tspan><tspan class="cls-38" x="94.5" y="0">方</tspan><tspan class="cls-18" x="108.36" y="0">ゼ</tspan><tspan class="cls-27" x="122.08" y="0">ロ</tspan><tspan class="cls-35" x="129.08" y="0">（</tspan><tspan class="cls-32" x="142.38" y="0">も</tspan><tspan class="cls-29" x="154.56" y="0">と</tspan><tspan x="167.3" y="0">の値が両</tspan><tspan class="cls-34" x="223.3" y="0">方</tspan><tspan class="cls-37" x="237.02" y="0">負</tspan><tspan class="cls-28" x="250.46" y="0">）</tspan><tspan class="cls-30" x="257.74" y="0">な</tspan><tspan class="cls-17" x="270.76" y="0">ら</tspan><tspan class="cls-34" x="283.92" y="0">1を</tspan><tspan x="305.08" y="0">出力</tspan></text>
+  <text class="cls-11" transform="translate(234.02 12.32)"><tspan class="cls-31" x="0" y="0">こ</tspan><tspan class="cls-29" x="11.76" y="0">こ</tspan><tspan x="24.5" y="0">の入力が両方</tspan><tspan class="cls-28" x="108.5" y="0">1</tspan><tspan class="cls-36" x="109.49" y="0">（</tspan><tspan class="cls-33" x="122.79" y="0">も</tspan><tspan class="cls-29" x="134.97" y="0">と</tspan><tspan x="147.71" y="0">の値が両方</tspan><tspan class="cls-18" x="217.71" y="0">正</tspan><tspan class="cls-28" x="231.43" y="0">）</tspan><tspan class="cls-30" x="238.71" y="0">な</tspan><tspan class="cls-17" x="251.73" y="0">ら</tspan><tspan class="cls-34" x="264.89" y="0">1を</tspan><tspan x="286.05" y="0">出力</tspan></text>
+  <g>
+    <line class="cls-23" x1="279.09" y1="22.2" x2="278.35" y2="22.87"/>
+    <line class="cls-21" x1="276.87" y1="24.23" x2="242.19" y2="56.13"/>
+    <line class="cls-23" x1="241.45" y1="56.81" x2="240.72" y2="57.49"/>
+  </g>
+  <g>
+    <line class="cls-23" x1="280.76" y1="297.46" x2="280.21" y2="296.63"/>
+    <line class="cls-20" x1="279.14" y1="295.02" x2="262.66" y2="270.15"/>
+    <line class="cls-23" x1="262.12" y1="269.34" x2="261.57" y2="268.51"/>
+  </g>
+</svg>

@@ -115,8 +115,13 @@ marp: true
 
 - 問題: 2つの数字$x_1$と$x_2$の符号が同じかどうかを調べる
     - 値が0の場合は正としましょう
-    * 答え
-<img width="700" src="./figs/first_neural_network.png" />
+    - 空白の人工ニューロンに条件を書き入れてみましょう
+<img width="700" src="./figs/first_neural_network_hint.svg" />
+
+---
+
+### 答え
+<img width="700" src="./figs/first_neural_network.svg" />
 
 ---
 
