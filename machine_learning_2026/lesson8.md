@@ -285,7 +285,7 @@ marp: true
 - $f$を（偏）微分してみましょう
     - $\dfrac{\partial f}{\partial x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
     $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
-- $y_i = h(x_i)$なので<span style="color:red">$\Delta\mathcal{L}_x = y_i(y_i - y_i)\Delta\mathcal{L}_y$</span>
+- $y_i = h(x_i)$なので<span style="color:red">$\Delta\mathcal{L}_x = y_i(1 - y_i)\Delta\mathcal{L}_y$</span>
 
 
 
