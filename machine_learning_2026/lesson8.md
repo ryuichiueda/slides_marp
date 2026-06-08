@@ -230,6 +230,7 @@ marp: true
     - 上流に送る誤差: $\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$
         - 下流から来た誤差: $\Delta \mathcal{L}_y$
     - 例: $f(x) = w x - b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
+        - 考え方: $w$倍になって出ていく層は入力の誤差の影響力が$w$倍
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
