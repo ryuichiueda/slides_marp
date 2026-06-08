@@ -123,6 +123,9 @@ marp: true
 ### 答え
 <img width="700" src="./figs/first_neural_network.svg" />
 
+- 上のニューロンの式: $x = x_1 + x_2 \ge 1.1$
+- 下のニューロンの式: $x = -x_1 + -x_2 \ge -0.9$
+
 ---
 
 ### （人工）ニューラルネットワーク
