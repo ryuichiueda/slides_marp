@@ -216,14 +216,24 @@ marp: true
 
 ### 学習の計算方法: <span style="color:red">損失関数</span>の値を減らしていく
 
-- 第6回のおさらい
-- 最小二乗法や回帰
+- 最小二乗法や回帰（第6回のおさらい）
     - 損失関数を定義$\mathcal{L}(w_{1:n} |$データ$)$
         - $w_{1:n}$: パラメータ（ANNの場合は$\boldsymbol{b}$も含まれる）
     - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
     - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
 - データは正解のものをたくさん準備
     - <span style="color:red">訓練データ</span>
+
+---
+
+### 損失関数の例
+
+- 2ページ前のものの場合
+    - ニューロンを関数で表すと$y = f(x_{1:3}| w_{1:3},b)$
+        - $y$は$0$か$1$
+- $\mathcal{L}(w_{1:3}, b | x_{1:3}, y) = f(x_{1:3}| w_{1:3},b) - y$
+
+![bg right:25% 90%](./figs/simple_ann_learning.png)
 
 ---
 
