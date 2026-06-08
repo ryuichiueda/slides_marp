@@ -226,7 +226,7 @@ marp: true
 
 - 1入力1出力の場合
     - ある層の計算: $y = f(x | w_{1:n})$のとき（$x$: 入力、$y$: 出力）
-    $\Delta\mathcal{L}_x = \dfrac{\partial y}{\partial x}\Delta\mathcal{L}_y$
+    $\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$
         - 下流から来た誤差: $\Delta \mathcal{L}_y$
         - 上流に送る誤差: $\Delta \mathcal{L}_x$
 
