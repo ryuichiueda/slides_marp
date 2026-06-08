@@ -216,9 +216,9 @@ marp: true
 
 - 出力側の誤差をどんどん入力側に送っていく
     - 送られてきた誤差が小さくなるように各層のパラメータを変える
-        - <span style="color:red">各層でやっても前ページの計算が成立</span>
+        - <span style="color:red">各層で偏微分しても前ページの計算が成立</span>
 
-<center><img width=600 src="./figs/back_propagation.png" /></center>
+<center><img width=700 src="./figs/back_propagation.png" /></center>
 
 ---
 
