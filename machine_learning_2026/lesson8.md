@@ -204,7 +204,7 @@ marp: true
 - 最小二乗法や回帰
     - 損失関数を定義$\mathcal{L}(w_{1:n} |$データ$)$
     - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
-    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>でパラメータを変更$w_{1:n}$
+    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更$w_{1:n}$
 
 
 ---
