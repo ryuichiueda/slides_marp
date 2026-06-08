@@ -137,7 +137,7 @@ marp: true
         - 手を動かして目の前のお菓子をとる（目→脳→腕や手の筋肉）
         - カレーの匂いがしたらよだれが出る（鼻→脳→よだれを出す器官）
         - 講義中にゲームをする（？）
-- コンピュータでも人工ニューロンで計算すれば or 人工ニューロンを実現するようなコンピュータを作れば、脳の計算が可能$\Longrightarrow$<span style="color:red">人工ニューラルネットワーク</span>
+- コンピュータでも人工ニューロンで計算すれば or 人工ニューロンを実現するようなコンピュータを作れば、脳の計算が可能$\Longrightarrow$<span style="color:red">人工ニューラルネットワーク（artificial neural networks、ANN）</span>
 
 ---
 
@@ -203,6 +203,7 @@ marp: true
 - 第6回のおさらい
 - 最小二乗法や回帰
     - 損失関数を定義$\mathcal{L}(w_{1:n} |$データ$)$
+        - $w_{1:n}$: パラメータ（）
     - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
     - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
 
