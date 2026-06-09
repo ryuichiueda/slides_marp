@@ -145,9 +145,9 @@ marp: true
 
 - やってることは単なる行列の演算
 - 先ほどの例の一番左の「層」
-    - 入力: $\boldsymbol{x} = (z_1 \ z_2)$と表現
+    - 入力: $\boldsymbol{x} = (x_1 \ x_2)$と表現
     - 重み: $W = \begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$
-        - 上、下のニューロンがそれぞれ$z_1, z_2$しか使わないという意味
+        - 上、下のニューロンがそれぞれ$x_1, x_2$しか使わないという意味
     - 出力の計算: $\boldsymbol{x}' = \boldsymbol{h}(\boldsymbol{x}W - \boldsymbol{b})$
         - $\boldsymbol{b}$は閾値: $\boldsymbol{b} = (0 \ 0)$
         - $\boldsymbol{h}$は閾値処理
