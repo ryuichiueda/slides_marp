@@ -57,12 +57,11 @@ marp: true
 
 ---
 
-### 答えの例2
+### 答えの例2（確率的な表現）
 
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
-    - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
-    - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
-        - $\boldsymbol{y}$は確率分布
+- $\boldsymbol{x}$: 同じ
+- $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
+    - $\boldsymbol{y}$は確率分布
 - 識別用のANNの出力はこの形式が一般的
     - ひとつに決めたければ確率最大のものを選択
 
