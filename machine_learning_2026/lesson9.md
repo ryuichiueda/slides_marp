@@ -229,7 +229,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - LeNet、AlexNet: 画像から物体を識別 
     - CNNにはさらなる用途が
 
-
 ---
 
 ## U-Netと潜在空間
