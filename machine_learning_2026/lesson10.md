@@ -25,20 +25,6 @@ marp: true
 - Transformer
 - Transformerの応用例
 
----
-
-### 本題に入る前に: ソフトマックス層
-
-- 入力を$y_i = \eta e^{x_i}$で正規化する層
-- 使用例: 画像に映ったものを判別
-    - 答えを確率分布で出力（例: 犬90%、猫9%、他1%）
-- softmax（softな最大値）: 1つに決めないということ
-    - 実世界は微妙な場面が多いので、1つに決めないで曖昧に出力したほうが都合よい
-- 数式
-    - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
-        - $\eta$は正規化定数
-
-![bg right:20% 95%](./figs/softmax_layer.png)
 
 ---
 

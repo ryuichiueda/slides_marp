@@ -59,13 +59,18 @@ marp: true
 
 ### 答えの例2（確率的な表現）
 
-- $\boldsymbol{x}$: 同じ
-- $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
-    - $\boldsymbol{y}$は確率分布
+- 右上図のような構造
+    - $\boldsymbol{x}$: 同じ
+    - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
+        - $\boldsymbol{y}$は確率分布
 - 識別用のANNの出力はこの形式が一般的
     - ひとつに決めたければ確率最大のものを選択
+- <span style="color:red">ソフトマックス層</span>を使う
+    - softmax: softな最大値という意味（断定しない）
+    - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>で正規化
 
-![bg right:30% 100%](./figs/prob_output.svg)
+![bg right:30% 95%](./figs/softmax_output.png)
+
 
 ---
 
