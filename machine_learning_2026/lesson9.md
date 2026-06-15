@@ -425,7 +425,7 @@ $\rightarrow$精緻な画像
             - 例: 犬と猫の中間のベクトルから、その中間のような動物の画像を出力したい
             $\rightarrow$単に足して2で割ったような不自然なものに
 
-![bg right:30% 100%](./figs/latent_space_problem.png)
+![bg right:30% 100%](../advanced_vision/figs/latent_space_problem.png)
 
 ---
 
