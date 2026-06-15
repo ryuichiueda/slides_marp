@@ -523,11 +523,11 @@ $\rightarrow$精緻な画像
 
 - 学習データ: 様々な画像$\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ (j=1,2,\dots,N)$</span>を準備
     - $i$回雑音をかけた画像を作る
-    - ANNを通さなくても計算で作れる
-        - 計算（雰囲気だけ）
-            - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
-                - $\alpha_i = 1-\beta_i$、$\bar\alpha_i = \prod_{k=1}^i \alpha_k$
-                - $\varepsilon \sim \mathcal{N}(0, 1)$
+- 重要: $i$回雑音をかけた画像はANNを通さなくても計算で作れる
+    - 計算（雰囲気だけ）
+        - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
+            - $\alpha_i = 1-\beta_i$、$\bar\alpha_i = \prod_{k=1}^i \alpha_k$
+            - $\varepsilon \sim \mathcal{N}(0, 1)$
 
 
 ![bg right:32% 100%](../advanced_vision/figs/ddpm_training_data.png)
