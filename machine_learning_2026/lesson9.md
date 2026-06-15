@@ -46,11 +46,10 @@ marp: true
 
 ### 答えの例1
 
-    - $\boldsymbol{x}$: 画素の値を並べたベクトル（すごく多次元）
-        - 次元: 縦の画素数$\times$横の画素数$\times$色のチャンネル（RGB: 3、RGBD: 4）
-    - $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
-        - 要素が1つだけ1になるので「<span style="color:red">ワンホットベクトル</span>」と呼ばれる
-    - $\boldsymbol{w}$: パラメータ（これもたくさん）
+- $\boldsymbol{x}$: 画素の値を並べたベクトル（すごく多次元）
+    - 次元: 縦の画素数$\times$横の画素数$\times$色のチャンネル（RGB: 3、RGBD: 4）
+- $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
+    - 要素が1つだけ1になるので「<span style="color:red">ワンホットベクトル</span>」と呼ばれる
 
 ![bg right:30% 100%](./figs/one_hot.svg)
 
