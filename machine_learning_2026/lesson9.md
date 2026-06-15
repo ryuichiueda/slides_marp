@@ -65,7 +65,7 @@ marp: true
         - $\boldsymbol{y}$は確率分布
 - 識別用のANNの出力はこの形式が一般的
     - ひとつに決めたければ確率最大のものを選択
-- <span style="color:red">ソフトマックス層</span>を使う
+- <span style="color:red">ソフトマックス層</span>を使う（右下図）
     - softmax: softな最大値という意味（断定しない）
     - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>で正規化
 
