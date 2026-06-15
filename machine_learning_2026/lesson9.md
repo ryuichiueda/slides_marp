@@ -33,9 +33,9 @@ marp: true
 
 ## そのまえに問題
 
-- 問題: デジタル画像の犬と猫（とそれ以外）を識別する人工ニューラルネットワークはどう数式で書けるでしょうか？
+- 問題: デジタル画像の犬と猫（とそれ以外）を識別する人工ニューラルネットワークはどう組むといいでしょうか?
     - 人工ニューラルネットワークを関数とみなす
-    - 入出力、パラメータはどう表現しますか？
+    - 入出力、パラメータはどう表現しますか?
 
 ![bg right:30% 100%](./figs/cat_and_dog.svg)
 
@@ -43,22 +43,9 @@ marp: true
 
 ### 答えの例1
 
-- $y = f(\boldsymbol{x} | \boldsymbol{w})$
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
     - $\boldsymbol{x}$: 画素の値を並べたベクトル（すごく多次元）
         - 次元: 縦の画素数$\times$横の画素数$\times$色のチャンネル（RGB: 3、RGBD: 4）
-    - $y = 0$: 犬、$y=1$: 猫、$y=2$: それ以外
-    - $\boldsymbol{w}$: パラメータを並べたベクトル（これも多次元）
-        - $y = f_\boldsymbol{w}(\boldsymbol{x})$と表記するときも（ANN界隈）
-        - $y = f(\boldsymbol{x} ; \boldsymbol{w})$と表記するときも（伝統的）
-
-問題: ニューラルネットワークの先から$0, 1, 2$というアナログ値が出せるか？
-
----
-
-### 答えの例2
-
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
-    - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
     - $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
         - 要素が1つだけ1になるので「<span style="color:red">ワンホットベクトル</span>」と呼ばれる
 
