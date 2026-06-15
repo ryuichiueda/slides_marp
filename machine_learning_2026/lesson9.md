@@ -478,7 +478,7 @@ $\rightarrow$精緻な画像
 
 ---
 
-### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)<br />Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
+## Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)<br />Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
 
 - 一般に（機械学習の文脈で）「拡散モデル」、「フローマッチング」と呼ばれるもの
 - 考え方: VAEと同じだが潜在空間に相当するものが画像と同次元
