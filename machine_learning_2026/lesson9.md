@@ -478,7 +478,7 @@ $\rightarrow$精緻な画像
 
 ---
 
-### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)
+### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)<br />Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
 
 - 一般に（機械学習の文脈で）「拡散モデル」と呼ばれるもの
 - 拡散モデル（拡散過程）
