@@ -67,7 +67,7 @@ marp: true
 
 ---
 
-### 埋め込みの方法1: skip-gram
+### 埋め込みの方法の例: skip-gram
 
 - 右図の構造のANNを準備
     - アフィン層2つとソフトマックス層
@@ -94,22 +94,6 @@ marp: true
         - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
 
 ![bg right:35% 100%](./figs/skip_gram.png)
-
----
-
-### 埋め込みの方法2: Continuous Bag-of-Words（CBoW）
-
-- 下図のANNに次の学習をさせる
-    - 文のなかの単語を隠して、周辺の$C$個の単語から隠した単語を当てる
-        - 例: "Tokyo Skytree is the __ tower in Japan."（$C=2$）
-        $\rightarrow$ is、the、tower、inからtallestを推測させる
-- ANNの入出力
-    - 入力: 前後$C$範囲内の単語のone-hotベクトルを平均したもの
-    - 出力: 各単語について、隠された文字である確率を記録したもの
-        - skip-gramと同じく次元は単語の種類の数
-- skip-gramと同様、<span style="color:red">$X$の各行が潜在表現のベクトルに</span>
-
-$\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
