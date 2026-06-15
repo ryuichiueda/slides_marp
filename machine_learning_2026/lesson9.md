@@ -546,7 +546,7 @@ $\rightarrow$精緻な画像
         - ベイズ推論の難しい式を解くと、二乗誤差がよいと導出される
 
 
-![bg right:28% 100%](../advanced_vision/figs/ddpm_training.png)
+![bg right:20% 100%](./figs/ddpm_training.png)
 
 
 ---
