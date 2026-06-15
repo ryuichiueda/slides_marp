@@ -52,21 +52,6 @@ marp: true
 
 ---
 
-### 埋め込みとこれまでの内容の関係
-
-- 分散表現の空間=潜在空間
-    - 入力をエンコーダで別の空間に写像
-    - （Word2vecの場合は確率は考えない）
-- 疑問
-    - 単語同士の類似度を潜在空間に作り出すには？
-        - エンコーダ側の構造は？
-        - デコーダ側の構造は？
-        - 何を学習させる？
-
-![bg right:40% 100%](./figs/word_latent.png)
-
----
-
 ### 分布仮説（distributional hypothesis）
 
 - "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
