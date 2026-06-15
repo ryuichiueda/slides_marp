@@ -431,16 +431,15 @@ $\rightarrow$精緻な画像
 
 ### 変分オートエンコーダでの潜在空間の扱い
 
-- 仮定
-    - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布に従う
-        - 空間が無限なのでデータが散らないように縛りを設ける
+- 空間が無限なのでデータが散らないように潜在空間のベクトル$\boldsymbol{z}$の分布を標準ガウス分布に
+    - 標準ガウス分布: 各変数の分散が1、平均が0
     - エンコーダへの入力$\boldsymbol{x}$に対し、$P(\boldsymbol{z}|\boldsymbol{x})$の分布も正規分布に従う
         - これは学習のための仮定
 - 仮定に基づいて学習すると
     - $\boldsymbol{z}$の隙間があかずに原点付近に集まる
     - $P(\boldsymbol{z})$の分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
 
-![bg right:40% 100%](./figs/latent_space_dist.png)
+![bg right:40% 100%](../advanced_vision/figs/latent_space_dist.png)
 
 ---
 
@@ -461,7 +460,7 @@ $\rightarrow$精緻な画像
     - 作りは簡単だがベイズ推論の理論が背景に
         - 確率ロボティクスの講義で一部説明
 
-![bg right:35% 100%](./figs/vae.png)
+![bg right:35% 100%](../advanced_vision/figs/vae.png)
 
 ---
 
@@ -477,7 +476,7 @@ $\rightarrow$精緻な画像
 - デコーダ: エンコーダと逆の変換を学習
     - 出力の分布: $p$（誤差あり）
 
-![bg right:38% 95%](./figs/autoenc_prob.png)
+![bg right:38% 95%](../advanced_vision/figs/autoenc_prob.png)
 
 ---
 
@@ -487,7 +486,7 @@ $\rightarrow$精緻な画像
 - 拡散モデル（拡散過程）
     - 集まっているものや模様がだんだん散らばっていく過程を定式化したもの
     - 下の例: 各画素に対し、同じガウス分布に従う雑音を繰り返し足したもの
-    ![w:800](./figs/noising.png)
+    ![w:800](../advanced_vision/figs/noising.png)
 
 <center>これがなんで生成と関係あるの？</center>
 
@@ -504,7 +503,7 @@ $\rightarrow$精緻な画像
 <span style="color:red">$\Longrightarrow Q$からノイズをドローして逆に拡散$\rightarrow$$P$から新たな絵がドローできる</span>
  
 
-![w:900](./figs/ddpm.svg)
+![w:900](../advanced_vision/figs/ddpm.svg)
 
 ---
 
@@ -536,7 +535,7 @@ $\rightarrow$精緻な画像
         - $\varepsilon \sim \mathcal{N}(0, 1)$
 
 
-![bg right:32% 100%](./figs/ddpm_training_data.png)
+![bg right:32% 100%](../advanced_vision/figs/ddpm_training_data.png)
 
 
 ---
@@ -554,7 +553,7 @@ $\rightarrow$精緻な画像
         - ベイズ推論の難しい式からに二乗誤差がよいと導出される
 
 
-![bg right:28% 100%](./figs/ddpm_training.png)
+![bg right:28% 100%](../advanced_vision/figs/ddpm_training.png)
 
 
 ---
@@ -606,7 +605,7 @@ $\rightarrow$精緻な画像
     - 線画をカラーの絵や写真のように（図: [[Isora 2016]](https://arxiv.org/abs/1611.07004)）
     - 葉に隠れた枝をつなぐ[[三上2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
 
-![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
+![bg right:20% 100%](../advanced_vision/figs/jrsj_vol_40_no_2_fig_14.png)
 
 ---
 
@@ -619,7 +618,7 @@ $\rightarrow$精緻な画像
     - 画像の生成の場合、画像の描き方に関する情報が潜在空間内に分布
     $\rightarrow$より出力にバリエーション
 
-![bg right:35% 100%](./figs/cvae.png)
+![bg right:35% 100%](../advanced_vision/figs/cvae.png)
 
 ---
 
