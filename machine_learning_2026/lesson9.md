@@ -328,42 +328,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ![bg right:30% 95%](./figs/autoenc2.png)
 
----
-
-## まとめ
-
-- CNNからオートエンコーダまで学習
-    - 画像の識別から生成までの流れを見てきた
-        - CNNによる物体の識別: エンコーダ+識別器
-        - U-Netによるセグメンテーション: オートエンコーダに似た構造
-    - 次回以降にいくつかの応用
-        - 台形の図がよく出てくる
-
-![bg right:30% 95%](./figs/autoenc2.png)
-
----
-marp: true
----
-
-<!-- footer: "アドバンストビジョン第3回" -->
-
-# アドバンストビジョン
-
-## 第4回: 画像の識別と生成の基礎II
-
-千葉工業大学 上田 隆一
-
-<br />
-
-<span style="font-size:70%">This work is licensed under a </span>[<span style="font-size:70%">Creative Commons Attribution-ShareAlike 4.0 International License</span>](https://creativecommons.org/licenses/by-sa/4.0/).
-![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
----
-
-<!-- paginate: true -->
-
-## 今日やること
-
 
 ---
 
