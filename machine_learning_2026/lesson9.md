@@ -551,11 +551,6 @@ $\rightarrow$精緻な画像
 
 ---
 
-### フローマッチング
-
-
----
-
 ### 例
 
 - [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
@@ -563,6 +558,16 @@ $\rightarrow$精緻な画像
     - [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
+
+---
+
+### フローマッチング（最適輸送問題に基づくもの）
+
+- 下図PとQを砂山に見立て、最小の労力で変換する方法を考える
+    - その変換方法の逆変換を学習するとQ$\rightarrow$Pというデコードが可能に
+- 最小の労力で変換する方法: 「最適輸送問題」と呼ばれる
+
+![w:900](./figs/ddpm.png)
 
 ---
 
