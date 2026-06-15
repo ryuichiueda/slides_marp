@@ -38,7 +38,7 @@ marp: true
     - 入出力、パラメータはどう表現しますか?
         - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
             - $\boldsymbol{x}, \boldsymbol{y}, \boldsymbol{w}$: それぞれ入出力、パラメータ
-            - パラメータは難しいのでとりあえず入出力だけ
+            - パラメータ（=ネットワークの構成）は難しいのでとりあえず入出力だけ
 
 ![bg right:30% 100%](./figs/cat_and_dog.svg)
 
