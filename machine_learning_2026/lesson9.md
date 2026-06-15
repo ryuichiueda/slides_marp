@@ -97,23 +97,6 @@ marp: true
 
 ![bg right:30% 100%](./figs/prob_output.svg)
 
----
-
-### 以前から触れていた話題
-
-- 動物は視覚をどう行動や判断に必要な情報に変えているか
-- それをコンピュータで再現できるか
-
-![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
-
-人工ニューラルネットワーク（ANN）でできる?$\rightarrow$できる
-
----
-
-### もうひとつの話題: なんか自動で絵を描くやつが出現
-
-- 実例は世の中に氾濫しているので各自調査を
-- こいつらはどういう仕組み?
 
 ---
 
