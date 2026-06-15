@@ -481,6 +481,17 @@ $\rightarrow$精緻な画像
 ### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)<br />Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
 
 - 一般に（機械学習の文脈で）「拡散モデル」、「フローマッチング」と呼ばれるもの
+- 考え方: VAEと同じだが潜在空間に相当するものが画像と同次元
+- エンコーダ: 画像の分布Pを同次元のガウス分布Qに変換
+- デコーダ: QからPへ変換
+    - Qから点を選んでPの空間へデコードすると画像が生成される
+
+
+![w:900](./figs/ddpm.png)
+
+
+---
+
 - 拡散モデル（拡散過程）
     - 集まっているものや模様がだんだん散らばっていく過程を定式化したもの
     - 下の例: 各画素に対し、同じガウス分布に従う雑音を繰り返し足したもの
@@ -501,7 +512,7 @@ $\rightarrow$精緻な画像
 <span style="color:red">$\Longrightarrow Q$からノイズをドローして逆に拡散$\rightarrow$$P$から新たな絵がドローできる</span>
  
 
-![w:900](../advanced_vision/figs/ddpm.png)
+![w:900](./figs/ddpm.png)
 
 ---
 
