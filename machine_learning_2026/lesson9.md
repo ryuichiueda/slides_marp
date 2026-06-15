@@ -572,61 +572,14 @@ $\rightarrow$精緻な画像
 
 ---
 
-## GAN、VAEの応用
-
-- CGAN
-- pix2pix
-- cVAE
-
----
-
-### 条件付きGAN（Conditional GAN、CGAN）[[Mirza2014]](https://arxiv.org/abs/1411.1784)
-
-- GANの生成ネットワークはランダムにデータを出力するだけ
-    - 何を出力するかコントロールしたい
-- 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
-    - 生成ネットワークに何を作って欲しいかラベルで指示
-        - データのもとになるベクトル$\boldsymbol{z}$と共にラベル$\boldsymbol{y}$を入力
-    - 識別ネットワークにも、生成ネットワークの出力と共に$\boldsymbol{y}$を入力
-        - 条件$\boldsymbol{y}$に合った生成データか判定
-- ラベルの表現: ワンホットベクトルがよく用いられる
-
----
-
-### pix2pix
-
-- CGANの一種とみなせる
-- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004)（構造は論文のFigure 2に）
-    - 生成ネットワーク: 入力にノイズではなく画像を入力し、画像を出力させる
-        - 入力をX、出力をYとしましょう
-    - 識別ネットワーク: XとYのペア、あるいはXと対応する学習用画像Y'のペアを入力して真贋を識別
-    $\rightarrow$画像を変換するように学習
-- どんなことができるか
-    - 線画をカラーの絵や写真のように（図: [[Isora 2016]](https://arxiv.org/abs/1611.07004)）
-    - 葉に隠れた枝をつなぐ[[三上2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
-
-![bg right:20% 100%](../advanced_vision/figs/jrsj_vol_40_no_2_fig_14.png)
-
----
-
-### 条件つき変分オートエンコーダ<br />（Conditional VAE、CVAE）
-
-- CGANと同様、エンコーダとデコーダにラベルも入力
-    - デコーダはラベルにしたがってデータを生成できる
-- <span style="color:red">入力の識別情報が、潜在空間内で必要なくなる</span>
-    - [VAEとCVAEの分布の比較の例](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
-    - 画像の生成の場合、画像の描き方に関する情報が潜在空間内に分布
-    $\rightarrow$より出力にバリエーション
-
-![bg right:35% 100%](../advanced_vision/figs/cvae.png)
-
----
-
 ## まとめ
 
 - 様々な生成方法
     - 敵対的生成ネットワーク（GAN）
-    - 変分オートエンコーダと拡散モデル$\rightarrow$確率分布の利用
-- GAN、VAEの応用
-    - ラベル付けして生成したいものを指示できる
-    - 画像から画像への変換ができる
+    - 変分オートエンコーダと拡散モデル、フローマッチング$\rightarrow$確率分布の利用
+- これらの「生成モデル」
+    - 人間や動物の記憶のモデル？
+        - いままで見たものなどを潜在空間に圧縮
+        - 潜在空間をつっつくといろんな記憶がよみがえる
+    - 現在の画像生成やロボットの動作生成に重要な役割
+        - ただし、記憶を自由自在によみがえらせて使う技術が必要（第11回か第12回でやります）
