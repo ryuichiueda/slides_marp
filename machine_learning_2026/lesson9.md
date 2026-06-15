@@ -27,6 +27,20 @@ marp: true
 
 ---
 
+### 本題に入る前に: ソフトマックス層
+
+- softmax（softな最大値）: 1つに決めないということ
+- 使用例: 画像に映ったものを判別
+    - 答えを断定せず確率で出力（例: 犬90%、猫9%、他1%）
+    - 実世界は微妙な場面が多いので、1つに決めないで曖昧に出力したほうが都合よ>い
+- 数式
+    - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
+        - $\eta$は正規化定数
+
+![bg right:20% 95%](./figs/softmax_layer.png)
+
+---
+
 ## Word2vec[[Mikolov2013]](https://arxiv.org/abs/1301.3781)
 
 - 単語をベクトル表現するためのモデル群や枠組み
@@ -63,8 +77,6 @@ marp: true
     - [Mikolov2013]では、この性質を利用した分散表現の作成方法が
     2つ示されている
  
-<center>2つのうち1つだけ見ましょう</center>
-
 ---
 
 ### 埋め込みの方法の例: skip-gram
