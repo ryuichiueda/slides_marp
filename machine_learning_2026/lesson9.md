@@ -107,6 +107,8 @@ marp: true
 
 ![bg right:35% 100%](./figs/skip_gram.png)
 
+<span style="color:red">予想するタスクをこなす$\rightarrow$単語の関係がANN内に</span>
+
 ---
 
 ## Transformer
