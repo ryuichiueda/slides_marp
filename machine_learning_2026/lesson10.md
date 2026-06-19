@@ -25,6 +25,17 @@ marp: true
 - Transformer
 - Transformerの応用例
 
+---
+
+## 補足: ReLU（Rectified Liner Unit）
+
+- 前回話をしたAlexNetでシグモイド関数に使用
+- 右図の赤い関数
+- この発明でANNが正しく収束しやすくなった
+- $0$のところで微分できないのはごまかす
+
+![bg right:30% 95%](../advanced_vision/figs/relu.png)
+
 
 ---
 
