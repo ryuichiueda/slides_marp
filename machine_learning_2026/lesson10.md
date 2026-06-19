@@ -330,7 +330,7 @@ marp: true
 - スキップ接続の有無: 初期の学習の容易さに影響
     - スキップ接続なし: 最初は$\boldsymbol{y}$がランダム
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
-- ResNet（2015年）
+- 前回のU-Netの接続もこうみなせる
 
 ![bg right:30% 90%](../advanced_vision/figs/skip.png)
 
