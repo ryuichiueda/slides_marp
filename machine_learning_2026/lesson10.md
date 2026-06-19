@@ -332,7 +332,7 @@ marp: true
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
 - ResNet（2015年）
 
-![bg right:30% 90%](./figs/skip.png)
+![bg right:30% 90%](../advanced_vision/figs/skip.png)
 
 ---
 
