@@ -404,7 +404,7 @@ marp: true
     - ドロップアウト: 学習の単位（バッチ）ごとに一定割合のニューロンを働かなくする処理
         - 特定のニューロンに特定の役割を背負わせないで過学習を防止
 
-![bg right:20% 95%](./figs/transformer_encoder_body.png)
+![bg right:20% 95%](../advanced_vision/figs/transformer_encoder_body.png)
 
 ---
 
