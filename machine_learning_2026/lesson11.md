@@ -40,7 +40,7 @@ marp: true
     - ベクトルのある番目の要素を強調したり弱くしたり（注目度を操作）
         - あとで$\gamma_i$、$\beta_i$を別の情報から学習する仕組みが出てきます
 
-![bg right:20% 100%](./figs/layer_normalization.png)
+![bg right:20% 100%](../advanced_vision/figs/layer_normalization.png)
 
 ---
 
@@ -151,7 +151,7 @@ marp: true
     - $P(w_i) =$softmax$(W\boldsymbol{h}_\text{<e>})$
     - クラストークンのように`<e>`の部分に読み込んだ文章の意味が集約されているという考え
 
-![bg right:20% 100%](./figs/gpt-1_pt.svg)
+![bg right:20% 100%](../advanced_vision/figs/gpt-1_pt.svg)
 
 ---
 
