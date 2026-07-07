@@ -460,7 +460,7 @@ marp: true
         - 学習の際、完成された翻訳例が入力されてくるので必要に
         - 例: 「This is」の次を考える訓練をするときに、「This is a pen.」が入力されてくるので、$W_X$の「a pen」に対応する要素にマスク
 - 交差注意機構
-    - デコーダの出力$H'_\text{enc}$を反映
+    - エンコーダの出力$H'_\text{enc}$を反映
 
 ![bg right:15% 100%](../advanced_vision/figs/transformer_decoder2.png)
 
