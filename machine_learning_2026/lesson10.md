@@ -462,7 +462,7 @@ marp: true
 - 交差注意機構
     - デコーダの出力$H'_\text{enc}$を反映
 
-![bg right:15% 100%](./figs/transformer_decoder2.png)
+![bg right:15% 100%](../advanced_vision/figs/transformer_decoder2.png)
 
 ---
 
