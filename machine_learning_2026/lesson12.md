@@ -61,7 +61,7 @@ marp: true
 - 終端状態$\boldsymbol{x}_\text{f}$とその価値$V(\boldsymbol{x}_\text{f})$
     - 一連の行動が終わった状態と、その状態の良さ
 
-![w:600](./figs/reward_model.png)
+![w:600](../machine_learning_and_stats/figs/reward_model.png)
 
 ---
 
@@ -76,7 +76,7 @@ marp: true
 - 問題: 授業中の行動をモデル化してみましょう！
     - 真面目に聞く、寝る、別のことをやる、...
 
-![w:500](./figs/reward_sum.png)
+![w:500](../machine_learning_and_stats/figs/reward_sum.png)
 
 ---
 
@@ -117,7 +117,7 @@ marp: true
     - $J(\Pi | \boldsymbol{x}) = \left\langle \ell_1 + \ell_2 + \dots + \ell_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
         - $\boldsymbol{x}$: 最初の状態
 
-![bg right:30% 100%](./figs/reward_model.png)
+![bg right:30% 100%](../machine_learning_and_stats/figs/reward_model.png)
 
 ---
 
@@ -131,7 +131,7 @@ marp: true
 - 記号などの定義: 右図
 - ある場所から出発したときに、損失の期待値を最小化したい（どうしましょう？）
 
-![bg right:40% 100%](./figs/q_env.png)
+![bg right:40% 100%](../machine_learning_and_stats/figs/q_env.png)
 
 ---
 
@@ -145,7 +145,7 @@ marp: true
     - $\Pi(\boldsymbol{x}^{(i)}) = \begin{cases}\text{右}\quad(i=1)\\\text{左}\quad(i=2,3,\dots,6)\end{cases}$
 - これをどうやってコンピュータに解かせましょう？
 
-![bg right:40% 100%](./figs/q_env.png)
+![bg right:40% 100%](../machine_learning_and_stats/figs/q_env.png)
 
 
 ---
@@ -163,7 +163,7 @@ marp: true
     関数$V^\Pi(\boldsymbol{x})$（<span style="color:red">状態価値関数</span>）を考える
 
 
-![bg right:30% 100%](./figs/value.png)
+![bg right:30% 100%](../machine_learning_and_stats/figs/value.png)
 
 ---
 
@@ -181,7 +181,7 @@ marp: true
 - もし別の行動をとって右辺のほうが左辺よりよかったら$\Rightarrow$<span style="color:red">もっと良い方策がある</span>
 
 
-![bg right:30% 100%](./figs/value.png)
+![bg right:30% 100%](../machine_learning_and_stats/figs/value.png)
 
 
 ---
@@ -199,7 +199,7 @@ marp: true
 
 <center style="color:red">これが強化学習の原理</center>
 
-![bg right:30% 100%](./figs/value.png)
+![bg right:30% 100%](../machine_learning_and_stats/figs/value.png)
 
 ---
 
@@ -213,7 +213,7 @@ marp: true
     - $V(\boldsymbol{x}) = \max_a Q(\boldsymbol{x}, a)$
 - まず、$Q$を初期化（右図）
 
-![bg right:45% 100%](./figs/q_init.png)
+![bg right:45% 100%](../machine_learning_and_stats/figs/q_init.png)
 
 ---
 
@@ -228,7 +228,7 @@ marp: true
 	        - $V(\boldsymbol{x}') = \min_{a'} Q(\boldsymbol{x}', a')$
 
 
-![bg right:35% 90%](./figs/q_update.png)
+![bg right:35% 90%](../machine_learning_and_stats/figs/q_update.png)
 
 
 ---
@@ -246,7 +246,7 @@ marp: true
     - 確率$(1-\varepsilon)$で$Q$値が一番良い行動をとる
     - 確率$\varepsilon$でランダムに行動選択
 
-![bg right:35% 100%](./figs/q_ng.png)
+![bg right:35% 100%](../machine_learning_and_stats/figs/q_ng.png)
 
 ---
 
@@ -255,7 +255,7 @@ marp: true
 - 100試行までには最適方策が得られている
 - $V$、$Q$はなかなか収束しない
 
-![bg right:35% 100%](./figs/q_result.png)
+![bg right:35% 100%](../machine_learning_and_stats/figs/q_result.png)
 
 ---
 
@@ -267,10 +267,10 @@ marp: true
 - 下図左: 方策（ロボットが左を向いている時のもの）
 - 下図右: 状態価値関数（同上）
 
-<img width="45%" src="./figs/init_policy.png" />
-<img width="45%" src="./figs/policy_evaluation_end_sweeps.png" />
+<img width="45%" src="../machine_learning_and_stats/figs/init_policy.png" />
+<img width="45%" src="../machine_learning_and_stats/figs/policy_evaluation_end_sweeps.png" />
 
-![bg right:30% 100%](./figs/puddle_world4.gif)
+![bg right:30% 100%](../machine_learning_and_stats/figs/puddle_world4.gif)
 
 
 ---
@@ -283,7 +283,7 @@ marp: true
 	- $Q(\boldsymbol{x}, a)\longleftarrow\alpha \{\ell + \min_{a'} Q(\boldsymbol{x}', a') \}$
     $\qquad\qquad\qquad + (1-\alpha) Q(\boldsymbol{x}, a)$
 
-![bg right:30% 100%](./figs/agent_on_q_learning.gif)
+![bg right:30% 100%](../machine_learning_and_stats/figs/agent_on_q_learning.gif)
 
 
 ---
@@ -292,7 +292,7 @@ marp: true
 
 - 時間はかかるがだんだん水たまりを避けるように
 
-![w:600](./figs/11.1.jpg)
+![w:600](../machine_learning_and_stats/figs/11.1.jpg)
 
 ---
 
@@ -300,7 +300,7 @@ marp: true
 
 - ゴールまでの損失が減っていく
 
-![w:600](./figs/11.2.jpg)
+![w:600](../machine_learning_and_stats/figs/11.2.jpg)
 
 ---
 
@@ -312,6 +312,8 @@ marp: true
 - [ゲームの学習方法](https://huggingface.co/blog/deep-rl-dqn)
     - 画像（全体の）をCNNに通して特徴で分類して状態に
     - $Q$の表現にも人工ニューラルネットワークを使用
+- ロボットの制御
+    - シミュレーション空間内でひたすら経験を積ませる（[動画](https://youtu.be/d9agnoab5h8?si=4-X6kU7IqJQ_BmSE)）
 
 
 ---
