@@ -274,7 +274,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
 - Stage 2: 入力文の後ろに符号列を生成するようにTransformerを学習
 
-![bg right:45% 100%](./figs/dall-e.svg)
+![bg right:45% 100%](../advanced_vision/figs/dall-e.svg)
 
 
 ---
@@ -321,7 +321,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 事前モデル（prior）とデコーダ（ほぼGLIDE）で構成
 
 <span style="font-size:70%">[画像: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
-![](./figs/unclip.png)
+![](../advanced_vision/figs/unclip.png)
 
 ---
 
