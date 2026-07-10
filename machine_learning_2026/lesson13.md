@@ -33,23 +33,6 @@ marp: true
 
 ---
 
-## FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
-
-（今回のための補足です）
-
-- あるレイヤーの出力を線形変換する仕組み
-    - [層正規化](./lesson7.html#3)と同じ仕組みで正規化しないで$\beta_i$、$\gamma_i$で線形変換
-    - $\beta_i$、$\gamma_i$を外の情報源から学習（内の情報でやることも）
-- 構造の例: 論文の図3
-    - 補足
-        - BN: バッチ正則化の層。やってませんが。
-        - GRU: Gated Recurrent Unit（Transformerで置き換えられる）
-- 役割: 各層、各チャンネルの出力の特定の要素を強調
-    - 例: 「青い・・・」とあったら青に対応する出力を強調するなど（図4）
-    - 実際は不要な情報にマスクをかける方向に働くことが多い（図5）
-
----
-
 ## Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
 - Transformerのエンコーダを画像に転用
