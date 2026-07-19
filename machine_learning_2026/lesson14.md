@@ -88,9 +88,7 @@ marp: true
 
 ---
 
-### Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
-
-（重要そうだけど概要だけ）
+### 補足1: Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
 
 - 文をベクトルにする
     - 似たような文のベクトルの内積が大きくなるように
