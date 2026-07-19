@@ -100,7 +100,7 @@ marp: true
 
 ---
 
-### Transformerより前の部分
+### 補足2: Transformerより前の部分
 
 - FiLM EfficientNet-B3とTokenLearnerの2つの部分
     - FiLM EfficientNet-B3: 各画像からトークンへの変換
@@ -115,7 +115,7 @@ marp: true
 
 ---
 
-### Transformerの部分
+### 補足3: Transformerの部分
 
 - 8個の自己注意機構の層、1900万パラメータ
 - 6枚の画像の各8トークンが順番に並べられて文のような入力に
