@@ -370,22 +370,6 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ---
 
-### フローマッチングの使い方
-
-- ニューラルネットの作るベクトル場の変数に観測データも入れて学習
-    - 損失関数: $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_{\boldsymbol{w}}(A_t^\tau,\boldsymbol{o}_t)  - \boldsymbol{u}(A_t^\tau | A_t) \}^2 \big\rangle_{q(A_t^\tau | A_t), p(A_t | \boldsymbol{o}_t ), \tau \sim \text{Beta}}$
-        - $\tau$がFMの時刻（$0 \le \tau \le 1$）
-            - $t$は実際の時刻（ロボットの動作のステップ）
-            - $\tau$が小さいときの損失関数を重視したい
-            $\rightarrow$ベータ分布でバイアスをかけて重み付き平均で評価
-        - $A_t$（時刻$t$での動作シーケンス）が訓練データ
-            - 観測や指示$\boldsymbol{o}_t$と対になっている
-        - $q(A_t^\tau | A_t ) = \mathcal{N}[\tau A_t, (1-\tau)I]$（最適輸送パス）
-- 使用（推論）時
-    - $A_t^0$に雑音を入れると$\boldsymbol{o}_t$に条件づけられた$\boldsymbol{v}_\boldsymbol{w}$に導かれて$A_t^1$が生成される
-
----
-
 ## まとめ
 
 - VLAというものができた
