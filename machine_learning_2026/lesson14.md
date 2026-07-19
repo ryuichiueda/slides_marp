@@ -308,7 +308,7 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
 - 構造（2種類ある）
-    - PaLIにいろいろくっつけたもの（RT-2-PaLI-X）
+    - PaLIというモデルにいろいろくっつけたもの（RT-2-PaLI-X）
     - PaLM-Eベースのもの（RT-2-PaLM-E）
         - 以後はPaLM-Eの使用を前提に話します
         - なんでもトークンにして突っ込めてトークンを話すモデル
