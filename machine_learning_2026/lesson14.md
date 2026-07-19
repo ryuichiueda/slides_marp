@@ -60,7 +60,8 @@ marp: true
 ### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
 - 構造・入出力の概要: 論文の図3
-    - Universal Sentence Encoder: [FiLM](lesson8.html#3)のパラメータを出力
+    - Universal Sentence Encoder
+        - 言葉の指示を下記FiLM EfficientNet-B3に反映
     - FiLM EfficientNet-B3とTokenLearner
         - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
         - 出力: 512次元の48個のトークン
@@ -250,7 +251,7 @@ marp: true
     - 「画像以外」: 内界センサなど。画像を抜くのは時短のため
 - デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} |\boldsymbol{z},$ 画像を含む$t$のセンサ値$)$
     - $\hat{\boldsymbol{a}}_{t:t+k}$: 復元した動作シーケンス
-$\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
+$\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ---
 
@@ -280,7 +281,7 @@ $\qquad\qquad\qquad$![w:600](./figs/act_enc_dec.svg)
     $\rightarrow$重み付き平均をとってアクチュエータに入力
 
 
-![bg right:25% 100%](./figs/act_dec_use.svg)
+![bg right:25% 100%](../advanced_vision/figs/act_dec_use.svg)
 
 ---
 
