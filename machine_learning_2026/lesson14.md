@@ -358,10 +358,10 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ### 構造（[このページ](https://arxiv.org/html/2410.24164v3)の図3）
 
-- PaliGemma
+- PaliGemmaを改造したもの
     - オープン、軽量なGoogleのVLM（30億パラメータ）
     - 入力: 画像と作業の指示
-    - 出力: トークン
+    - 出力: トークン（行動のタネのノイズ）
 - action expert
     - ロボットの動作のシーケンスを出力（3億パラメータ）
     - 入力: PaliGemmaからのトークンとロボットの状態
