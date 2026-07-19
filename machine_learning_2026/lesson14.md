@@ -335,6 +335,7 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
     - VLAのVL（VLM、vision language model）の部分の学習
     - 動作の学習
         - RT-1で使ったデータを使用
+        - RT-1のデータと動作の予測を比較して損失を求める
 - 動作の学習のほうは論文ではさらっと書いてあって、どちらかというとVLMの学習のほうを強調したい様子
 
 
