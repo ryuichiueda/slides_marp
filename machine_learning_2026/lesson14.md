@@ -71,18 +71,17 @@ marp: true
 
 ### RT-1の構造（少し詳しく）
 
-- 構造・入出力の概要
-    - Universal Sentence Encoder
-        - 言葉の指示を下記FiLM EfficientNet-B3に反映
-    - FiLM EfficientNet-B3とTokenLearner
-        - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
-        - 出力: 512次元の48個のトークン
-    - Transformer（デコーダー）
-        - 入力: 48個のトークンに位置埋め込みしたもの
-        - 出力: モバイルマニピュレータの行動（11次元の離散空間中の点）
-            - モバイルマニピュレータ: [Everyday Robots](https://x.company/projects/everyday-robots/)
-            - モード1次元、腕の動き7次元、位置・向き3次元
-            - 3Hz
+- Universal Sentence Encoder
+    - 言葉の指示を下記FiLM EfficientNet-B3に反映
+- FiLM EfficientNet-B3とTokenLearner
+    - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
+    - 出力: 512次元の48個のトークン
+- Transformer（デコーダー）
+    - 入力: 48個のトークンに位置埋め込みしたもの
+    - 出力: モバイルマニピュレータの行動（11次元の離散空間中の点）
+        - モバイルマニピュレータ: [Everyday Robots](https://x.company/projects/everyday-robots/)
+        - モード1次元、腕の動き7次元、位置・向き3次元
+        - 3Hz
 
 ---
 
