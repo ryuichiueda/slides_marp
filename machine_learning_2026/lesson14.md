@@ -358,15 +358,16 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ### 構造（[このページ](https://arxiv.org/html/2410.24164v3)の図3）
 
-- PaliGemmaを改造したもの
+- VLMにフローマッチングのモジュールがくっついた構造
+    - VLMの部分とフローマッチングの部分を別々の損失関数で学習（mixture of experts）
+- VLMパート: PaliGemmaを改造したもの
     - オープン、軽量なGoogleのVLM（30億パラメータ）
     - 入力: 画像と作業の指示
-    - 出力: トークン（行動のタネのノイズ）
-- action expert
+    - 出力: トークン
+- フローマッチングのパート: action expert
     - ロボットの動作のシーケンスを出力（3億パラメータ）
-    - 入力: PaliGemmaからのトークンとロボットの状態
+    - 入力: VLMのパートからのトークンとロボットの状態
     - 出力: 動作シーケンス
-        - <span style="color:red">フローマッチングで</span>
 
 ---
 
