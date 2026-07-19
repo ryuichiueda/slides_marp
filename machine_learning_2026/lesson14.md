@@ -334,7 +334,8 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 - 2つの学習
     - VLAのVL（VLM、vision language model）の部分の学習
     - 動作の学習
-        - RT-1で使ったデータを使用（論文ではさらっと書いてあって、どちらかというとVLMの学習のほうを強調したい様子）
+        - RT-1で使ったデータを使用
+- 動作の学習のほうは論文ではさらっと書いてあって、どちらかというとVLMの学習のほうを強調したい様子
 
 
 ---
