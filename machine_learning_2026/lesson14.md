@@ -59,7 +59,19 @@ marp: true
 
 ### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
-- 構造・入出力の概要: 論文の図3
+- 構造の要点（構造: 論文の図3）
+    - エンコーダで時系列で入力された画像の意味をトークンに変換
+        - ここで言うトークン: 潜在空間のベクトル
+        - 作業の指示を横から反映させる（FiLMという手法、構造）
+    - 画像から変換されたトークンを更に圧縮
+        - 学習しやすく・意味を濃く
+    - デコーダでトークンと動作を結びつけ
+
+---
+
+### RT-1の構造（少し詳しく）
+
+- 構造・入出力の概要
     - Universal Sentence Encoder
         - 言葉の指示を下記FiLM EfficientNet-B3に反映
     - FiLM EfficientNet-B3とTokenLearner
@@ -85,47 +97,6 @@ marp: true
     - 744タスク（論文は「skill」と表現）（論文の表1）
     - 13のロボット
     - 13万エピソード
-
----
-
-### 補足1: Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
-
-- 文をベクトルにする
-    - 似たような文のベクトルの内積が大きくなるように
-- 構造: Transformer（エンコーダ）or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
-- 学習方法
-    - 前後の文の予測
-    - 質問文への返答文の予測
-    - 前提と仮説の文が矛盾しているかどうか
-
----
-
-### 補足2: Transformerより前の部分
-
-- FiLM EfficientNet-B3とTokenLearnerの2つの部分
-    - FiLM EfficientNet-B3: 各画像からトークンへの変換
-        - EfficientNetというネットワークで画像の特徴量を抽出
-            - 言葉をFiLMで変換して特徴量に強弱をつける
-        - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
-    - TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
-        - トークンの数を減らす（圧縮する）役割
-            - もともとViTの入力ベクトル数を減らすためのもの
-        - $81\rightarrow8$（6枚の画像で48トークン。512次元）
-
-
----
-
-### 補足3: Transformerの部分
-
-- 8個の自己注意機構の層、1900万パラメータ
-- 6枚の画像の各8トークンが順番に並べられて文のような入力に
-    - これが何をすべきかを示す時系列情報に
-- 出力: 先述のようにロボットを動かすために必要な次元分のパラメータとモード
-    - モード: arm, base, terminate
-- 訓練データでの学習
-    - 言語による指示と画像から次のステップの行動を予測
-        - デコーダのマスク機能を使った学習と思われる
-        （注意: Transformerだけでなくモデル全体が学習）
 
 ---
 
@@ -325,3 +296,47 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
     - ACT
 - 今回の内容でまだできてないこと
     - 複数の種類のロボットが複数の種類のタスクをできるようにするには？
+
+
+
+---
+
+### RT-1の補足1: Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
+
+- 文をベクトルにする
+    - 似たような文のベクトルの内積が大きくなるように
+- 構造: Transformer（エンコーダ）or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
+- 学習方法
+    - 前後の文の予測
+    - 質問文への返答文の予測
+    - 前提と仮説の文が矛盾しているかどうか
+
+---
+
+### RT-2の補足2: Transformerより前の部分
+
+- FiLM EfficientNet-B3とTokenLearnerの2つの部分
+    - FiLM EfficientNet-B3: 各画像からトークンへの変換
+        - EfficientNetというネットワークで画像の特徴量を抽出
+            - 言葉をFiLMで変換して特徴量に強弱をつける
+        - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
+    - TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
+        - トークンの数を減らす（圧縮する）役割
+            - もともとViTの入力ベクトル数を減らすためのもの
+        - $81\rightarrow8$（6枚の画像で48トークン。512次元）
+
+
+---
+
+### RT-1の補足3: Transformerの部分
+
+- 8個の自己注意機構の層、1900万パラメータ
+- 6枚の画像の各8トークンが順番に並べられて文のような入力に
+    - これが何をすべきかを示す時系列情報に
+- 出力: 先述のようにロボットを動かすために必要な次元分のパラメータとモード
+    - モード: arm, base, terminate
+- 訓練データでの学習
+    - 言語による指示と画像から次のステップの行動を予測
+        - デコーダのマスク機能を使った学習と思われる
+        （注意: Transformerだけでなくモデル全体が学習）
+
