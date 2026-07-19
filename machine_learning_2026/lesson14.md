@@ -58,7 +58,7 @@ marp: true
 
 ---
 
-### Robotics Transformer-1（RT-1）[[Brohan 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
+### Robotics Transformer-1（RT-1）[[Google DeepMind 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
 - 構造の要点（構造: 論文の図3）
     - エンコーダで時系列で入力された画像の意味をトークンに変換
@@ -304,7 +304,7 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ---
 
-### Robotics Transformer 2（RT-2）[[Brohan2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
+### Robotics Transformer 2（RT-2）[[Google DeepMind 2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
 
 - この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
 - 構造（2種類ある）
@@ -341,7 +341,7 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ---
 
-### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)（[サイト](https://www.physicalintelligence.company/blog/pi0)）
+### $\pi_0$[[Physical Intelligence 2024]](https://arxiv.org/html/2410.24164v1)（[サイト](https://www.physicalintelligence.company/blog/pi0)）
 
 - Physical Intelligence社が開発したVLAモデル
 - 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
