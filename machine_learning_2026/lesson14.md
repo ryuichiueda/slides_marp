@@ -296,6 +296,7 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
     - ACT
 - 今回の内容でまだできてないこと
     - 複数の種類のロボットが複数の種類のタスクをできるようにするには？
+    - 言葉のさらなる活用
 
 
 ---
