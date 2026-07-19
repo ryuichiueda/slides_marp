@@ -340,41 +340,6 @@ $\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
 
 ---
 
-### OpenVLA[[Kim2024]](https://arxiv.org/abs/2406.09246)
-
-- その名の通りオープンなVLA
-- オープンにするときの要件
-    - ユーザーのロボットが違うのでファインチューニングしやすくすると便利
-$\Longrightarrow$<span style="color:red">LoRAが使えるようになっている</span>
-       - （補足: 多種のロボットの訓練データで学習したVLAは、ファインチューニングなしでも少しのロボットの違いをある程度吸収）
-
----
-
-### 構造（[[論文]](https://arxiv.org/abs/2406.09246)の図2）
-
-- 画像処理の部分: SigLIPとDINOv2という2つのモデルからそれぞれ独立にトークンを生成（詳細は論文の付録Dに）
-    - SigLIP[[Zhai2023]](https://arxiv.org/abs/2303.15343): ゼロショットで画像分類するモデル
-        - softmaxでの多数のものから物体を分類をするのではなく、画像と短文がどれだけ合っているか確率で出力
-        - 画像全体の説明をトークンに
-    - DINOv2[[Oquab2023]](https://arxiv.org/abs/2304.07193): 画像の基盤モデル
-        - 画像の低レベルの特徴量を抽出してトークンに
-- LLMのパート: Llama（Large Language Model Meta AI）
-    - 下のAction De-tokenizerに入力するトークンを出力
-- 行動の生成: 「Action De-tokenizer」（どんな実装か不明。コードを読め？）
-
-
----
-
-### 訓練データ・訓練方法
-
-- 事前学習の訓練データ: Open X-Embodiment dataset
-    - 70台、200万のロボットの軌道
-- ファインチューニング
-    - 訓練データはユーザーが用意
-    - 先述のようにLoRAが使える
-
----
-
 ### $\pi_0$[[Black 2024]](https://arxiv.org/html/2410.24164v1)（[サイト](https://www.physicalintelligence.company/blog/pi0)）
 
 - Physical Intelligence社が開発したVLAモデル
