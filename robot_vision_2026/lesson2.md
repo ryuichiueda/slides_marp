@@ -106,6 +106,10 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
+### 計算方法の導出
+
+とりあえず微分可能として、任意のパラメータ$w$をどう変化させるか考えてみましょう
+
 - ANNの一般的な表記: $\boldsymbol{f}(\boldsymbol{x}) =
 (\boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
