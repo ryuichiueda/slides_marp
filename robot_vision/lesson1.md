@@ -146,6 +146,7 @@ marp: true
         - 勾配消失問題の解消[[Nair, Hinton 2010]](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)、[[Krizhevsky+ 2017（発見は2012）]](https://dl.acm.org/doi/10.1145/3065386)
         - ...
     - 現在: ロボットが動くところまできている
+        - 例: https://www.youtube.com/watch?v=S_yFcSxHwU0
 
 ---
 
