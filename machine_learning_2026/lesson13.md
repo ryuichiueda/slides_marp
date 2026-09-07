@@ -6,7 +6,7 @@ marp: true
 
 # 機械学習
 
-## 第13回: 言語と人工ニューラルネットワーク
+## 第13回: 画像と人工ニューラルネットワークII
 
 千葉工業大学 上田 隆一
 
@@ -21,307 +21,334 @@ marp: true
 
 ## 今日やること
 
-- 機械学習での言葉の扱い方
-- Transformer
-- Transformerの応用例
+- 今回のための補足
+- Vision Transformer
+- Image GPT
+- Diffusion Transformer
+- CLIP
+- DALL·E
+- GLIDE
+- DALL·E 2（unCLIP）
+- Stable Diffusion
 
 ---
 
-## 機械学習での言葉の扱い方
+## Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
-- 単語の埋め込み
-    - 各単語を数百〜数千次元のベクトルに置き換え
-    - 近い単語は似たベクトルに（=内積の値を大きく）
-        - 例（適当。上記のように次元はもっと必要）
-            - おじさん$= (0.9, 0.32, 0.07)$
-            - おばさん$= (0.7, 0.55, 0.08)$
-            - 不動産$= (0.1, 0.05, 0.88)$
-- 埋め込むと類似度が内積で計算できる
-    - 次元が大きいので様々な切り口で類似度を計算可能
-- これらのベクトルや、それらを作ることを「埋め込み」と呼んでいる （どうやって作るか考えてみましょう）
-
-![bg right:20% 100%](./figs/embedding.png)
-
----
-
-## 埋め込みの方法（例: skip-gram）
-
-- [word2vec](https://arxiv.org/pdf/1301.3781)というモデル群のなかのひとつ
-- 右図のような人工ニューラルネットワーク
-    - ある単語$w$について、任意の文の左右の$j$単語前/後に単語$w'$がある確率を学習
-- 入力: $\mathcal{v} = (0\ 0\ \cdots\ 1\ 0\ \cdots\ 0)$
-    - ある単語について、その単語に対応する要素が$1$になったベクトル（one-hotベクトル）
-    - 単語の種類だけ次元がある
-- 出力: $j$の位置ごとに、入力と同じ次元のベクトルで、各単語が存在する確率を出力
-
-<center>これでどうやって埋め込みを作る？</center>
-
-![bg right:30% 100%](./figs/skip_gram.png)
-
----
-
-## skip-gramで埋め込みを作る
-
-- 学習: 大量の文章から$X$と$U_j$を学習
-- <span style="color:red">学習済み行列$X$=埋め込み</span>
-    - $X=[\boldsymbol{x}_{w_1}\ \boldsymbol{x}_{w_2}\ \dots\ \boldsymbol{x}_{w_N}]^\top$という行列
-    - ある単語$w_i$のone-hotベクトル$\boldsymbol{v}_{w_i}$を入力すると、$\boldsymbol{x}_{w_i}$が得られる
-    $\rightarrow$これが埋め込みのベクトル
-- $U_j$も使われることがある
-
-![bg right:30% 100%](./figs/skip_gram.png)
-
----
-
-### 埋め込みができればコンピュータが文章を認識する?
-
-・・・ことはできない
-
-- 最尤な単語をskip-gramで予想して並べていけばそれっぽい文は作れるけど、たぶん無意味な文ができる
-    - [マルコフ連鎖ジェネレータ](https://lorem.sabigara.com/?source=ginga-tetsudo&format=plain&sentence_count=5)のようなもの
-- 単純な埋め込みには限界
-    - 語順に関する情報は、完全にはない
-    - 文脈依存な情報を持っていない
-        - 同音異義語に1つのベクトル$\rightarrow$区別してない
-            - 例: チンチラ（げっ歯類にも猫にもいる）
-
-<center>どうしましょう？</center>
-
-![bg right:20% 100%](./figs/Chinchilla.jpg)
-
-
-<span style="font-size:70%">
-<a href="https://commons.wikimedia.org/wiki/Chinchilla_lanigera#/media/File:Chinchilla_lanigera_(Wroclaw_zoo)-2.JPG">写真上 by Guérin Nicolas（CC BY-SA 3.0）</a>
-<a href="https://commons.wikimedia.org/wiki/File:Chinchilla_cat_(3228221937).jpg">写真下 by allen watkin（CC BY-SA 2.0）</a>
-
----
-
-### どうすればいいか?
-
-- 埋め込みに語順と文脈の情報を付加してやるとよい
-    - 前ページのスライドを逆に考えると、そういうことになる
-- <span style="color:red">Transformer</span>（のエンコーダ）
-    - 入力: 埋め込みに位置情報を加えて変更したもの
-    - 出力: <span style="color:red">文脈化トークン埋め込み</span>
-        - 各単語の関係性（文脈）に応じて各ベクトルの位置を変更
-        - 次の単語の予測などにより有用な埋め込み（使い方はあとで）
-
-![w:1100](./figs/add_context_embedding.png)
-
----
-
-### Transformer
-
-- 翻訳のためにGoogleで開発された
-    - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
-- 正体: 右のような構造のニューラルネットワーク（あとから細かく見ていきます）
-    - GPT（Generative Pre-trained Transformer）などはこれの応用
-    - その他言葉を扱うアプリケーションもだいたいこれの応用
-- 画像にも応用されている
-    - ViT（Vision Transformer）
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
-
-[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
-
----
-
-## Transformerのエンコーダ: 入力
-
-
-- 入力: 文
-    - トークン（単語をより細かく文を区切ったもの）
-    に分けて、埋め込みのベクトルに変換
-        - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
-- 文への位置情報の付加（右図Positional Encoding）
-    - 行列$H = \sqrt{D}E + P = [\boldsymbol{h}_{w_1}\ \boldsymbol{h}_{w_2}\ \dots\ \boldsymbol{h}_{w_N}]^\top$を作成
-       - $D$: ベクトルの次元（正規化のため）
-       - $P$にはトークンが文の何番目にあるかの情報が入る
-           - 単純に「何番目か」ではなく三角関数を使ったややこしもの
-
-<center>とりあえずこれで入力に位置情報が加わる</center>
-
-![bg right:20% 100%](./figs/transformer_pos.png)
-
-
----
-
-### Transformerのエンコーダ: 文脈情報の付加1
-
-- <span style="color:red">自己注意機構</span>という仕組みで文脈の情報を付加
-    - 行列$W_Q, W_K, W_V$という3つの行列を使う
-        - これらの行列は学習の対象で、ここでは学習が済んでいると仮定
-    - $H$のなかのベクトル$\boldsymbol{h}_i$に対して次のベクトルを作成
-        - $\boldsymbol{k}_i = W_K\boldsymbol{h}_i$（キー埋め込み）
-        - $\boldsymbol{v}_i = W_V\boldsymbol{h}_i$（バリュー埋め込み）
-        - $\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$（クエリ埋め込み）
-    - 3つのベクトルを使う自己注意機構なので特に
-    「キー・クエリ・バリュー注意機構」と呼ばれる方法（次のスライドに続く）
-
-![bg right:20% 100%](./figs/transformer_kvq.png)
-
----
-
-### Transformerのエンコーダ: 文脈情報の付加2
-
-- $\boldsymbol{k}_i, \boldsymbol{v}_i, \boldsymbol{q}_i$から、文脈を考慮した埋め込みベクトルを計算
-    - 手順
-        - $i$番目のトークンと$j$番目のトークンの関連性の強さを次のように計算
-            - $s_{ij} = \boldsymbol{q}_i^\top \boldsymbol{k}_j/\sqrt{D}$（内積）
-        - $s_{ij}$をソフトマックス関数で合計1に正規化
-            - $\alpha_{ij} = e^{s_{ij}}/\sum_{j'=1}^Ne^{s_{ij'}}$
-        - 次の$\boldsymbol{o}_i$を$i$番目のトークンの埋め込みベクトルとして出力
-            - $\boldsymbol{o}_i = \sum_{j=1}^N \alpha_{ij} \boldsymbol{v}_j$
-
-![bg right:20% 100%](./figs/transformer_kvq.png)
-
----
-
-### Transformerのエンコーダ: 文脈情報の付加3
-
-- $\boldsymbol{o}_i$をフィードフォワード層に通す
-    - このあと2層のニューラルネットワークを通ってさらに文脈が強化された文脈化トークン埋め込みに
-
-- 全体で$O=[\boldsymbol{o}_{w_1}\ \boldsymbol{o}_{w_2}\ \dots\ \boldsymbol{o}_{w_N}]^\top$という行列が出力される
-
-![bg right:20% 100%](./figs/transformer_ff.png)
-
----
-
-## エンコーダの出力を使った翻訳
-
-- 問題の定式化: 条件付き確率の問題にする
-（例: 日本語から英語への翻訳）
-    - 問題1: 先頭のトークンを選ぶ
-        - $p(w_1 |$私 は 牛丼 を 食べ ます 。$)$
-    - 問題2: 2番目のトークンを選ぶ
-        - $p(w_2 |$私 は 牛丼 を 食べ ます 。, I$)$
-    - 問題3: 3番目のトークンを選ぶ
-        - $p(w_3 |$私 は 牛丼 を 食べ ます 。, I eat$)$
-- Transformerのデコーダがこれを解く
-$\Rightarrow$どうやって?
-
-![bg right:35% 100%](./figs/transformer_decoder.png)
-
-
----
-
-### デコーダ側の処理1
-
-- 自己注意機構で翻訳途中の文の文脈を埋め込みに反映
-    - 途中の文なので計算のときに少し細工が必要だけど、
-    エンコーダと同じ
-
-![bg right:15% 100%](./figs/transformer_dec_context.png)
-
-
----
-
-### デコーダ側の処理2: <span style="color:red">交差注意機構</span>
-
-- もとの言語の文脈を翻訳中の文に持ち込む
-    - クエリ埋め込み$\boldsymbol{q}_i = W_Q\boldsymbol{h}_i$だけデコーダの埋め込みから計算
-    - キー埋め込み、バリュー埋め込みは、エンコーダ側の出力から計算
-
-
-![bg right:15% 100%](./figs/transformer_cross.png)
-
-
----
-
-### デコーダ側の処理3: 次の単語の出力
-
-![bg right:15% 100%](./figs/transformer_output.png)
-
-- 全単語について次の単語になる確率を計算して、
-その確率が最も高いものを出力
-    - 文脈がしっかり考慮されているので、かつての
-    マルコフ連鎖ジェネレータのようにはならない
-    - その文脈に最もふさわしい単語が出てくる
-
----
-
-## Transformerの応用例
-
----
-
-### GPT（Generative Pre-trained Transformer）
-
-- 途中の文から次の単語を予測
-    - デコーダだけで構成
-- ChatGPTの一部に使われる
-
-[<span style="font-size:70%">画像: CC0 (public domain)</span>](https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg)
-
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg)
-
-
----
-
-### ChatGPT
-
-- GPTを使ってテキスト（人の質問や発言）に答える
-    - （構造に関する決定的な文献なし）
-
----
-
-### Vision Transformer (ViT）
-
-- Transformerを画像に転用
+- Transformerのエンコーダを画像に転用
     - 画像をブロック状に切って単語のように扱う（右図）
     - 右図のCLS: クラストークン
-        - 分類のためにくっつけるデータでこれを計算して出力する
-- 画像をブロック状に扱うのはCNNと同じだが、そのあとが違う
-    - CNNは遠くのブロックの関係性を見るのが苦手
+        - 文の分類と同じ
+        - 全結合層（MLP Head）に通す
+- 画像をブロック状に扱うのはCNNと同じだが、CNNは遠くのブロックの関係性を見るのが苦手
 
-[<span style="font-size:70%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)
+[<span style="font-size:60%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)<span style="font-size:70%">（[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)のFig.1にも構成図）</span>
 
 ![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
 
+
 ---
 
-### Contrastive Language-Image Pre-training (CLIP)
+### ViTの大きさ
 
-- テキストと画像の関連性を学習したモデル（[論文](https://arxiv.org/pdf/2103.00020)）
+- オリジナルの論文には大きさの異なる複数のモデル
+    - ViT-Base: 層の数12、ベクトルの次元: 768、パラメータ数: 8600万
+    - ViT-Large: 層の数24、ベクトルの次元: 1024、パラメータ数: 3.07億
+    - ViT-Huge: 層の数32、ベクトルの次元: 1280、パラメータ数: 6.32億
+
+---
+
+### トークンに対応するベクトルの作り方
+
+- 画像を$P \times P$画素のブロックに区切る
+    - 例: $P=16$: ベクトルの次元は$16\times 16 \times 3 = 768$に
+        - 3はチャンネルの数（RGB）
+    - 位置の埋め込みも行う
+        - ただし固定値ではなく、パラメータは学習対象
+- 画像の理解
+    - 局所的な理解: ベクトルの中
+    - 大域的な理解: 自己注意機構で学習
+
+---
+
+### 事前学習の方法 
+
+- 教師あり学習で分類問題を解く
+    - 言語と違って教師なし（BERTのような穴埋め）はあまり効果がない
+- オリジナルの論文で用いられた訓練データ
+    - JFT-300M
+        - 3億枚の画像、18291クラスのデータセット
+    - ImageNet-21k
+        - 1400万枚の画像、21841クラスのデータセット
+- 訓練データが多いと高い性能を発揮（JFT-300Mのほうがよかった）
+
+
+---
+
+### ViTの機能のしかた
+
+- 位置の埋め込みに関して
+    - [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)のFig. 7左
+    - 画像処理で使われる基底関数のようなものができている
+- どこを見て判断しているか
+    - [[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)のFig. 6、Fig. 7右
+    - 自己注意機構のヘッド（マルチヘッド注意機構のヘッド）には、入力に近い層ですでに大域的なものとローカルなものなどバリエーションが出る
+        - 大域的なものはCNNの入力に近い方のたたみ込み層に類似
+    - 入力から遠ざかるとより大域的に
+
+---
+
+## Image GPT[[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html)（[サイト](https://openai.com/ja-JP/index/image-gpt/)）（[動画](https://www.youtube.com/watch?v=7rFLnQdl22c)）
+
+- GPTの画像版
+    - GPT-2の構造を使用
+    - パラメータ数: iGPT-Lというモデルで$13.6$億
+- 画像を途中まで入力して、次の画素を当てさせる
+    - [PixelCNN](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson4-2.html#9)と同じ問題
+- GPT同様、ヘッドをつけてファインチューニングすると他のタスクに利用可能
+
+---
+
+### Image GPTの学習
+
+- 2種類の訓練方法
+    - 次の画素の予測（GPT的）
+    - 穴埋め問題（BERT的）
+- 埋め込みに相当するベクトル: 画像の解像度を下げて1列に並べたもの
+    - サイト: $32^2$, $48^2$ or $64^2$pixel
+    - 論文: $32^2$, $48^2$, $96^2$ or $192^2$pixel
+        - $32^2$ or $48^2$の時は色をRGBからカラーパレットに（昔の計算機の方式）
+        - $96^2$, $192^2$pixelのときはVQ-VAEで圧縮（それぞれ$16^2, 34^2$の符号列に）
+
+
+
+---
+
+## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
+
+- 拡散モデル+Transformer
+    - さらに潜在空間に情報を圧縮する潜在拡散モデルも使用
+    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
+- 構造
+    - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
+        - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
+            - 後者はadaLN-Zeroという仕組みで画像に作用させる
+        - 出力: 画素ごとのノイズの平均値と分散
+    - 画像のサイズを落とすためにVAEを使用
+
+
+---
+
+## CLIP（Contrastive Language-Image Pre-training）[[Radford 2021]](https://arxiv.org/abs/2103.00020)
+
+- contrastive: 「対照的な」という意味
+    - 対照学習（あとで説明）でテキストと画像を結びつけ
 - [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- 学習方法
-    1. 画像と画像の内容を説明する文を準備
-    2. ViTを使って画像をエンコーディング
-    3. Transformerを使って文をエンコーディング
-    4. エンコーディングされたデータ（埋め込み）同士の相関を学習
-$\rightarrow$画像から文、文から画像などの変換が可能
+- CLIPでできること
+    - 画像に何が写っているかを認識（ある意味ではラベルの数に制限がない）
+    - テキストから画像を生成するときの部品
+        - unCLIP（あとで扱います）
+
+---
+
+## CLIPに関する背景
+
+- よく行われてきた画像認識の方法の手順
+    1. 写真をあつめる
+    2. 写真に写っているものをラベル付けする
+    3. 学習
+- 上記方法の問題
+    - めんどくさい
+    - ラベルのあるものしか認識できない
+
+<center>なんとかラベルの付いている画像を集められないか？</center>
+
+---
+
+### ラベル（ではなくキャプション）のついた画像の収集
+
+- 画像にはキャプションのついたものがある（論文はそうですよね？）
+$\Longrightarrow$画像とキャプションをいろんなところから大量に集めてくることは可能
+    - 原論文: <span style="color:red">4億組の画像とキャプションのセットを収集</span>
+- 問題: キャプションは単語ではなく文や句になっている
+    - 単純なラベルではない
+
+<center>Transformerを使ってなんとかならないか？</center>
+
+---
+
+### CLIPの学習方法
+
+1. 前ページの方法で学習用のデータを準備
+2. ViTを使って画像をエンコーディング
+3. Transformerを使って文をエンコーディング
+4. エンコーディングされたデータ（埋め込み）同士の相関を学習
+$\Longrightarrow$画像から文、文から画像などの変換が可能なANNができる
+- 補足: 必ずしもViT、Transformerである必要はない（が、Transformerを使ったほうが性能が高くなる）
+
+---
+
+### CLIPの構造
+
+- [p.12の図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- image encoder: ViT
+    - 入力は画像
+    - クラストークンを出力として使う（数百次元のベクトル）
+- text encoder: Transformerのデコーダから交差注意機構を除いたもの
+    - 入力は画像のキャプション
+    - <span style="color:red">出力のフォーマットをimage encoderの出力に合わせる</span>
+-  数理的に重要な点: <span style="color:red">マルチモーダル</span>であること
+    - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
+        - キャプション（文、句）と画像が同じ空間に配置され、似たものが近くに配置される
+
+---
+
+### 評価方法（対照学習、contrastive learning）
+
+- $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
+    - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
+    - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
+- ペアとなっている画像とキャプションのベクトルを同じにしたい
+    - $\boldsymbol{i}_j$と$\boldsymbol{t}_j$のコサイン類似度を大きくしたい
+        - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
+- ペアでない画像とキャプションのベクトルを違うものにしたい
+    - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
+- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\mu_{j,k}
+e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}
+-\dfrac{1}{N} \sum_{k=1}^N \ln\mu_{j,k}
+e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$ 
+    - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
+    - $T$は「温度」で学習が進むにつれて下げていく
+
+---
+
+### 学習したモデルの使い方
+
+- 例: 画像の分類
+    - 分類したいものに対してラベルを$N$個準備
+    - 「a photo of <ラベル>」という句を$N$通り作って、それぞれをtext encoderに通して特徴ベクトル$T_{1:N}$を得る
+    - 画像をimage encoderに通して特徴ベクトル$I$を得る
+    - $I$と$T_i (i=1,2,\dots,N)$それぞれを比較し、最もコサイン類似度が高い$T_i$を選択
+
+---
+
+## DALL·E（ダリ）[[Ramesh 2021]](https://arxiv.org/abs/2102.12092)
+
+- 句や文から画像を生成
+    - [[Ramesh 2021]](https://arxiv.org/abs/2102.12092)の図2、図8
+    - https://openai.com/ja-JP/index/dall-e/
+- Transformerに、文章の続きとして画像を考えさせる
+- 使うもの
+    - Transformer（デコーダ）
+        - GPT-3の改造版
+        - 画像も埋め込みベクトルにして入力できるように
+    - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
+        - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
 
 
 ---
 
-### [Segment Anything](https://segment-anything.com/)
+### DALL·Eの学習
 
-- [コードや説明](https://github.com/facebookresearch/sam2)
-- プロンプトの指示で画像から特定の部分を切り出す（セグメンテーション）
-- 画像のエンコードにはViTを使う
-- プロンプトのエンコードにはCLIPを使う
+- キャプションと画像がペアになったものを訓練データに
+    - CLIPと同じ
+- Stage 1: 集めてきた画像を使ってdVAEに学習させる
+    - 学習済みのデコーダに[符号列](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#6)を入力すると画像が生成されるように
+- Stage 2: 入力文の後ろに符号列を生成するようにTransformerを学習
+
+![bg right:45% 100%](../advanced_vision/figs/dall-e.svg)
+
+
+---
+
+### DALL·Eによる画像の生成
+
+
+- 前ページステージ2の構成で
+    - https://openai.com/ja-JP/index/dall-e/ のサイト
+       - 512枚の画像を生成して、CLIPでランク付けして上位32枚を出力
+       - 遊んでみましょう
+
+---
+
+## GLIDE[[Nichol 2021]](https://arxiv.org/abs/2112.10741)
+
+- Guided Language to Image Diffusion for generation and Editingの頭文字
+    - generationがかわいそう
+    - 「言語で誘導された画像の生成、編集のための拡散モデル」
+- 自然言語+[分類器なしガイダンス](../advanced_vision/lesson4-2.html#5)で拡散モデルに画像を生成させる
+    - （他、「CLIPガイダンス」も試されたが分類器なしのほうが結果がよかった）
+    - 自然言語をエンコードしたものを分類器なしガイダンスのラベルに利用
+    - 構造はU-Net
+- 生成される画像: 論文の図1
+- ファインチューニングで画像の一部をテキストで改変できる（image inpainting）: 論文の図2, 3, 4
+
+---
+
+## DALL·E 2（[公式の動画](https://www.youtube.com/watch?v=qTgPSKKjfVg)）
+
+- DALL·Eの後継
+- 基本的なアイデア
+    - CLIPを使う
+    - テキストと画像が同じ潜在空間にいるので、
+    潜在空間のベクトル$\rightarrow$画像でテキストも画像に変換可能
+        - ただし、整った画像を出力するためにいろいろ工夫
+
+---
+
+### 構造
+
+- 点線の上: CLIP（学習のときに使う）
+- 点線の下: 生成の部分
+    - 事前モデル（prior）とデコーダ（ほぼGLIDE）で構成
+
+<span style="font-size:70%">[画像: CC-BY-4.0 by Ramesh et al.](https://www.researchgate.net/figure/A-high-level-overview-of-unCLIP-Above-the-dotted-line-we-depict-the-CLIP-training_fig2_359936873)</span>
+![](../advanced_vision/figs/unclip.png)
+
+---
+
+### 事前モデル+デコーダ（unCLIP[[Ramesh 2022]](https://arxiv.org/abs/2204.06125)）
+
+- テキスト$\boldsymbol{y}$からの画像$\boldsymbol{x}$の推定（生成）の問題を冗長化
+    - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
+    - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストのCLIPでの特徴ベクトル
+    - 数式上は冗長だが学習のときにヒントが増えて質が向上
+- 最後の項: $p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
+    - 後ろの確率分布: 事前モデル
+        - 質の高い画像の特徴ベクトルを出力
+        - 単にテキストの特徴ベクトルを出力するのではなく、テキストも入力して強化
+    - 前の確率分布: デコーダ
+        - こちらもテキストを再度入力
 
 ---
 
 ### Stable Diffusion
 
-- プロンプトを画像に変換
-    - プロンプトから画像のタネを作るためにCLIPを利用
-    - 画像を復元するときにも注意機構
-- [図](https://medium.com/data-science/what-are-stable-diffusion-models-and-why-are-they-a-step-forward-for-image-generation-aa1182801d46)
-
+- サービスのサイト: https://stablediffusionweb.com/ja
+- DALL·Eシリーズのライバル
+- 使いやすくて一気に普及
+- 50億枚の画像を訓練に使用
 
 ---
 
+### Stable Diffusion（v1）の構造（Latent Diffusion Models、LDM）[[Rombach 2021]](https://arxiv.org/abs/2112.10752)
+
+- [[Rombach 2021]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+    - 上部の$x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$の部分は訓練用
+        - 訓練画像を潜在空間のベクトルに変換してからDDPMで拡散
+            - 潜在空間: [[Esser 2020]](https://arxiv.org/abs/2012.09841)で提案された<span style="color:red">VQGAN</span>のもの
+                - 要はVQ-VAEのGAN版
+                - 図中のピンク色の部分がVQGAN（の変種）
+    - 下部の$\tilde{x}\leftarrow z_T$の部分が画像の生成部分
+        - ノイズを潜在空間のベクトル$z$に戻す（U-Net）
+        - テキストや画像の埋め込み（図の白枠内で生成）によるガイダンスを交差注意機構で行う
+            - 基本、行列の計算なのでU-Net内にも組み込める
+
+--- 
+
 ## まとめ
 
-- Transformer
-    - 埋め込みに文脈を反映させる仕組み
-- 埋め込み
-    - 次元の高いベクトルで、単語やトークンの様々な関係性を表現可能
-    - skip-gramなどの学習方法で実用性のある埋め込みが作成可能
-    - ViTなどでは画像に対しても作られる
-- 埋め込みを使うと性質の異なるデータを交差注意機構で関連させることが可能
-    - ある言語$\rightarrow$別の言語
-    - 画像$\leftrightarrow$言語
+- 言語処理の技術の画像への転用や画像処理との組み合わせを勉強
+- この間にもどんどん最新のサービスがリリースされている
+    - 新しい技術も開発されている
+- 扱っていないもの: 動画の理解や動画の生成

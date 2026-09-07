@@ -6,7 +6,7 @@ marp: true
 
 # 機械学習
 
-## 第14回: 強化学習
+## 第14回: ロボットと人工ニューラルネットワーク
 
 千葉工業大学 上田 隆一
 
@@ -21,307 +21,400 @@ marp: true
 
 ## 今日やること
 
-- なにかをやるということはどういうことかを考える
-- Q学習
+- ANNによるロボットの制御
+- VLA
 
 ---
 
-## 自分がやってることの根拠
-
-- あります?
-    - なんで朝飯食ったのか?
-    - なんで朝飯はそれを食ったのか?
-    - なんで大学来たのか
-    - なんで講義受けているのか/講義の途中にゲームやるのか・やらないのか
-- たぶん以下の理由でやってる
-    - そうすると良いことがありそうだから
-        - 良いこと: 楽しいなども含む
-    - そうしないと悪いことがありそうだから
+## ANNによるロボットの制御
 
 ---
 
-### 行動決定のモデル
+### 基本的な考え方
 
-- 「なにか行動をするといい/悪いことがある」を機械学習に取り入れるには？
-    - 数値化の必要あり
-- いいこと/悪いことの数値化（2種類）
-    - その時その時に良いこと/悪いことがある
-        - 食べている/勉強している/遊ぶ
-    - 行動の結果、よい/悪い状態になる
-        - 満腹になる/賢くなる/無意味に歳をとる
-
----
-
-### 記号化しましょう
-
-- 状態$\boldsymbol{x}$: 行動に関係する変数を並べたベクトル
-- 行動$a$: 状態を変えるなにか
-- 損失$\ell$: 行動$a$の結果被る（行動は疲れる）
-    - 一般的には$\ell$に$-1$をかけた報酬$r$で考えることが多い
-- 終端状態$\boldsymbol{x}_\text{f}$とその価値$V(\boldsymbol{x}_\text{f})$
-    - 一連の行動が終わった状態と、その状態の良さ
-
-![w:600](./figs/reward_model.png)
+- 様々な種類の情報を動作に変換するANNを構築
+    - 画像、センサ
+    - 言葉による指示
+    - 自身の内部状態や構造
+- 方針: これまでのvision-languageモデルを拡張して・・・
+    - 画像以外の情報を入力できるように
+    - 動作を出力できるように
 
 ---
 
-### 「よい行動」
+### ANNによるロボットの制御の課題
 
-- 状態$\boldsymbol{x}$、行動$a$、損失$\ell$、終端状態の価値$V(\boldsymbol{x}_\text{f})$でどう表現するか？
-- こたえ: 一連の行動がおわったときの$\ell$と$V(\boldsymbol{x}_\text{f})$の和
-    - たとえばある状態$\boldsymbol{x}_\text{f}$に行きつくのに10回行動が必要だった$\Rightarrow$
-    $\ell_1 + \ell_2 + \dots + \ell_{10} + V(\boldsymbol{x}_\text{f})$
-- あくまで主観
-    - ひとそれぞれ。何をやってもいつか死ぬので難しい話
-- 問題: 授業中の行動をモデル化してみましょう！
-    - 真面目に聞く、寝る、別のことをやる、...
-
-![w:500](./figs/reward_sum.png)
-
----
-
-### なにかを損してなにか得をする
-
-- 話を聞くか、寝るか、ゲームをするか、ほかの勉強をするか・・・
-    - その場のいいことは$\ell$がマイナスに（報酬）
-    - 最終的にいいことは$V(\boldsymbol{x}_\text{f})$が大きい
-    - <span style="color:red">最終的にあとに残るのは$\boldsymbol{x}_\text{f}$のみ（薬物依存とか）</span>
-- 講義以外でもいろいろありそう
-
+- 訓練データどうするの？
+    - たぶんCLIPのときのようなネットのデータはない
+    - <span style="color:red">先に答えを言うと、人間がひたすらデータを生成</span>
+    - もちろんシミュレータ（ディジタルツイン）も使える
+        - 上記2つの方法の例: https://www.youtube.com/watch?v=S4tvirlG8sQ
+- 方策（制御則）等の表現方法や出力方法
+    - アクチュエータへの出力？
+    - Transformerベースだと1つずつ順番に出していく？
+- 汎化
+    - 教えた動作から外れた動作もできる
+    - おそらく言葉の存在（意味の理解）が可能にする
 
 ---
 
-### 数値ひとつで行動が決められるのか？
+### Robotics Transformer-1（RT-1）[[Google DeepMind 2022]](https://arxiv.org/abs/2212.06817)（[動画](https://www.youtube.com/watch?v=UuKAp9a6wMs)）
 
-- 行動は同時にできず1つしか選べない
-    - なんらかの原因・理由があって今その行動をしているので
-    - 選んだ行動はなんらかの点数付けの上で選ばれていると解釈することは可能
-
-### 問題
-
-- 「行動のダメージが大きく、最終的な状態が良いけどその状態に到達できるかわからない」という問題に人間はどう立ち向かうべきか？（「根性」以外で）
-    * 楽しくやってダメージを小さくする仕組みを作る
-    * 途中にゴールを設定する
-    * 最終的な状態にはまだ到達できなくても、行動の結果「良い」状態になっていることを確認・実感する（後述のように強化学習の鍵）
+- 構造の要点（構造: 論文の図3）
+    - エンコーダで時系列で入力された画像の意味をトークンに変換
+        - ここで言うトークン: 潜在空間のベクトル
+        - 作業の指示を横から反映させる（FiLMという手法、構造）
+    - 画像から変換されたトークンを更に圧縮
+        - 学習しやすく・意味を濃く
+    - デコーダでトークンと動作を結びつけ
 
 ---
 
-## 強化学習
+### RT-1の構造（少し詳しく）
 
-- 評価がよりよくなる行動をコンピュータやロボットに選ばせるように学習させる仕組み
-    - ロボットには感情がないが、ステップ数が多く、行動の損失が大きい課題を解くのは難しい（計算が難しい）
-- 学習するもの: <span style="color:red">$\Pi$: 方策</span>
-    - ある状態$\boldsymbol{x}$でどの行動$a$を選ぶかを決める関数
-    - $a = \Pi(\boldsymbol{x})$
-- 損失関数
-    - $J(\Pi | \boldsymbol{x}) = \left\langle \ell_1 + \ell_2 + \dots + \ell_i + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
-        - $\boldsymbol{x}$: 最初の状態
-
-![bg right:30% 100%](./figs/reward_model.png)
-
----
-
-### 簡単な例題で考えましょう
-
-- タイルワールド（右図）の<span style="color:red">Q学習</span>を扱う
-- こんな問題
-    - ロボットは右か左どちらかを選択してサイコロを振って出たマスだけ移動
-        - 端より先には行けず、そこに停留
-    - ゴール or 穴のマスに止まれば終了
-- 記号などの定義: 右図
-- ある場所から出発したときに、損失の期待値を最小化したい（どうしましょう？）
-
-![bg right:40% 100%](./figs/q_env.png)
+- Universal Sentence Encoder
+    - 言葉の指示を下記FiLM EfficientNet-B3に反映
+- FiLM EfficientNet-B3とTokenLearner
+    - 入力: 時間差のある6枚の画像と言葉によるロボットへの指示
+    - 出力: 512次元の48個のトークン
+- Transformer（デコーダー）
+    - 入力: 48個のトークンに位置埋め込みしたもの
+    - 出力: モバイルマニピュレータの行動（11次元の離散空間中の点）
+        - モバイルマニピュレータ: [Everyday Robots](https://x.company/projects/everyday-robots/)
+        - モード1次元、腕の動き7次元、位置・向き3次元
+        - 3Hz
 
 ---
 
-### 一番よい方策（最適方策）
+### RT-1の訓練データ（力づく）
 
-- おそらくこれ
-（とにかく穴をさけたほうがよい）
-    - $\boldsymbol{x}^{(1)}$以外では「左」を選択
-    - $\boldsymbol{x}^{(1)}$で「右」を選択
-- 最適方策:
-    - $\Pi(\boldsymbol{x}^{(i)}) = \begin{cases}\text{右}\quad(i=1)\\\text{左}\quad(i=2,3,\dots,6)\end{cases}$
-- これをどうやってコンピュータに解かせましょう？
-
-![bg right:40% 100%](./figs/q_env.png)
-
-
----
-
-### 問題の性質
-
-- ある状態に対し、そこからスタートしたときの損失関数の期待値が計算可能
-    - 損失関数: $J(\Pi | \boldsymbol{x}) = \left\langle \sum_{j=1}^{i} r_j + V(\boldsymbol{x}_\text{f}) \right\rangle_{\Pi}$
-    - 右図: 計算したもの
-- $\boldsymbol{x}$は最初の状態でなくてもよい
-    - 別の状態からスタートしても、ある時点で$\boldsymbol{x}$にいたら、以後の$J$の期待値は右図の計算した値
-    - <span style="color:red">過去のことはこれからの行動選択には無関係</span>
-- <span style="color:red">損失関数の期待値を状態の関数にできる</span>
-    - 終端状態の価値を拡張して
-    関数$V^\Pi(\boldsymbol{x})$（<span style="color:red">状態価値関数</span>）を考える
-
-
-![bg right:30% 100%](./figs/value.png)
+- 図2のようなキッチン（3種類）やテーブルのような環境で
+ロボットを動かして訓練データを採取
+    - 人が遠隔操作
+    - やった作業に人間がテキストの解説をつける
+        - これで画像とテキストと動作のセットができる
+- 採取した訓練データ
+    - 744タスク（論文は「skill」と表現）（論文の表1）
+    - 13のロボット
+    - 13万エピソード
 
 ---
 
-### 状態価値関数の性質
+### RT-1の達成事項
 
-- 方策にしたがって行動をとったときに次の関係
-    - $V^\Pi(\boldsymbol{x}) = \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
-        - $\boldsymbol{x}$: ある状態
-        - $a$: 行動
-        - $\boldsymbol{x}'$: 行動をとったあとの状態
-        （複数の候補あり）
-    - $\ell(\boldsymbol{x}, a, \boldsymbol{x}')$: 行動に対する損失の関数
-- 右の例: 左端の2つの状態が分かりやすい
-    - 問題: 左から3つめの状態について計算を
-- もし別の行動をとって右辺のほうが左辺よりよかったら$\Rightarrow$<span style="color:red">もっと良い方策がある</span>
-
-
-![bg right:30% 100%](./figs/value.png)
-
+- 学習した種類のタスクを97\%の成功率で達成
+    - 動作の例: 論文の図5
+- ロバスト性
+    - 学習したキッチンと異なるキッチンでのタスク
+    - 様々なテーブルクロス
+- 学習したものより長い/抽象化されたタスクへの対応
+    - 例
+        - "how would you throw away all the items on the table?"
+        - "near a sink"などの直接的でない場所の指定
 
 ---
 
-### 方策の改善
+### PaLM-E[[Driess2023]](https://arxiv.org/abs/2303.03378)（[動画](https://research.google/blog/palm-e-an-embodied-multimodal-language-model/)）
 
-こういう方法が考えられる
-
-- 最初に適当な$V$を設定
-- $V^\Pi(\boldsymbol{x})$と$\big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$を比較
-- 後者のほうがよければ
-    - $\Pi(\boldsymbol{x})$の行動を変える
-    - $V^\Pi(\boldsymbol{x})\longleftarrow \big\langle \ell(\boldsymbol{x}, a, \boldsymbol{x}')  + V^\Pi(\boldsymbol{x}' )\big\rangle_{P(\boldsymbol{x}' | \boldsymbol{x}, a)}$
-    - ※ただし、偶然良かっただけかもしれないので慎重に
-
-<center style="color:red">これが強化学習の原理</center>
-
-![bg right:30% 100%](./figs/value.png)
+- 身体性マルチモーダル言語モデル
+    - 身体性: ロボットの身体の情報を織り込むということ
+- PaLMという大規模言語モデルに画像やロボットの知覚情報を入力できるようにして、タスクのやりかたを作文できるようにしたモデル
+    - 例（論文の図1から引用）
+        - 入力: "Given `<img>` Task: Sort colors into corners."
+            - `<img>`: 画像（この場合は机の上に様々な色の物体）
+        - 出力: "Step 1. Push the green star to the bottom left. Step 2. Push the green circle to the green star."
+- RT-1との違い: <span style="color:red">PaLMがすでに持っている言語的な知識を利用可能</span>
+    - 動作と関係なく「画像に何がある？」や「この画像とこの画像の間に何が起こった？」などの質問にも答えてくれる
 
 ---
 
-## Q学習
+### PaLM-E（PaLM-E-562B）の構成（[論文](https://arxiv.org/abs/2303.03378)の図1）（その1）
 
-- 先ほどの原理でロボットを
-学習させてみましょう
-- ただし、<span style="color:red">行動価値関数</span>というものを考える
-    - $Q(\boldsymbol{x}, a)$: $\boldsymbol{x}$で$a$をとるときの
-    状態$\boldsymbol{x}$の価値
-    - $V(\boldsymbol{x}) = \max_a Q(\boldsymbol{x}, a)$
-- まず、$Q$を初期化（右図）
+- PaLMへの入力の部分
+    - ViT（220億パラメータ）: 画像をPaLMへのトークンに変換
+    - 「?」: 他の情報をPaLMへのトークンに変換
+        - 入力のタイプによって変わるので、おそらく「?」と表記
+            - 基本、トークンが出力できればなんでもよい
+- 「?」に入力する情報の例
+    - 画像以外のセンサ値
+    - 画像中の物体にラベル付けしたり名前をつけたり、位置を推定した結果（[[Sajjadi2022]](https://arxiv.org/abs/2206.06922)などを使用）
+    - 他にもいろいろ入力できそう
 
-![bg right:45% 100%](./figs/q_init.png)
+---
+### PaLM-E（PaLM-E-562B）の構成（[論文](https://arxiv.org/abs/2303.03378)の図1）（その2）
+
+- 本体
+    - PaLM（5400億パラメータ）: 言葉をトークンで受けつけ
+        - 出力: 身体性（ロボット自身の体の構造）を考慮した作文
+            - 手順を出力できる
+- コントローラ: ロボットを動かしたかったら図の紫色の部分が必要
+    - [[Lynch2020]](https://arxiv.org/abs/2005.07648)やRT-1など
+    - アクチュエータへの指示をPaLMに直接出力させたかったら、そのように学習すればよいが、あんまり長いシーケンスはだせなさそう（論文を読んだ限りでは）
 
 ---
 
-### 値の更新
+### PaLM-Eの学習方法
 
-- ロボットに適当に動いてもらって$Q$の値を更新
-- 更新式
-	- もとの$Q$の値を少しだけ変更
-	- $Q(\boldsymbol{x}, a)\longleftarrow\alpha q(\boldsymbol{x}, a) + (1-\alpha) Q(\boldsymbol{x}, a)$
-        - $\alpha$: 学習率（右図の例だと$\alpha=0.1$）
-	    - $q(\boldsymbol{x}, a) = \ell + V(\boldsymbol{x}')$
-	        - $V(\boldsymbol{x}') = \min_{a'} Q(\boldsymbol{x}', a')$
+- 訓練データ（論文の表6）
+    - 文章と他のデータのセット
+        - 文章: 質問と答えをつなげたもの
+            - 何トークン目までがタスクの内容なのかを示す値も準備
+        - 画像やセンサのデータ
+            - 時系列で決められたセット数だけ入力
+- 損失関数: 答えと出力のクロスエントロピー誤差
+- 特記事項
+    - <span style="color:red">ほとんどが画像の内容を答えるもので、ロボット関連のものは10\%未満</span>
+        - [Webli]([[Chen2022]](https://arxiv.org/html/2410.23676v1))というデータセットのものが半分以上
 
+---
 
-![bg right:35% 90%](./figs/q_update.png)
+### ロボット関連の訓練データ
+
+3種類
+
+- Task and Motion Planning（TAMP）: 論文のB.1
+    - シミュレータ環境で、机の上の様々な色の積み木に対する質問に答える
+        - 物体の関係性
+        - プランニング
+- Language-Table: 論文のB.2（[[Lynch2022]](https://arxiv.org/abs/2210.06407)のデータ）
+    - マニピュレータの関節角の遷移と作業の様子の動画と説明文のセット
+    - [Lynch2022]では60万セットが作られた
+- キッチン環境のデータセット
+    - 上記2つは机の上の積み木しか見ないので、それを補うために
+    - [[Ahn2022]](https://arxiv.org/abs/2204.01691)の訓練データに類似
 
 
 ---
 
-### 方策の工夫
+## ALOHA, ACT[[Zhao2023]](https://arxiv.org/abs/2304.13705)
 
-- 方策が完全にランダムだとゴールに着かず
-学習が進まない
-- そのときに一番良い行動しかとらないと
-別の可能性が探れない
-    - 例: 右図のようになってしまうと$\boldsymbol{x}^{(3)}, \boldsymbol{x}^{(6)}$で左が選ばれなくなり学習が進まない
-    - こういうことは日常でないだろうか？
-- $\Rightarrow$方策を次のように確率的に
-（$\varepsilon$-グリーディー方策）
-    - 確率$(1-\varepsilon)$で$Q$値が一番良い行動をとる
-    - 確率$\varepsilon$でランダムに行動選択
-
-![bg right:35% 100%](./figs/q_ng.png)
+- 模倣学習の枠組みの提案
+    - 基本的に1つのタスクを学習
+- ALOHA: A Low-cost Open-source Hardware System for Bimanual Teleoperation
+    - 訓練データ取得用の遠隔操作システム
+        - [訓練データ取得の様子](https://youtu.be/VOpTZBwN7xs?si=IT14vfsjEirvKfKF&t=52)
+        - [買えるものの例](https://www.tegtks.net/products/case10.html)
+        - [移動マニピュレータ版](https://www.youtube.com/watch?v=zMNumQ45pJ8)
+- ACT: 次のページ
 
 ---
 
-### 学習の実行例
+### ACT: Action Chunking with Transformers
 
-- 100試行までには最適方策が得られている
-- $V$、$Q$はなかなか収束しない
-
-![bg right:35% 100%](./figs/q_result.png)
-
----
-
-### 少し大きな問題
-
-- 右のロボットが、水たまりを避けてゴールに
-行くように学習させたい
-    - いまのところ水たまりに一直線
-- 下図左: 方策（ロボットが左を向いている時のもの）
-- 下図右: 状態価値関数（同上）
-
-<img width="45%" src="./figs/init_policy.png" />
-<img width="45%" src="./figs/policy_evaluation_end_sweeps.png" />
-
-![bg right:30% 100%](./figs/puddle_world4.gif)
-
+- 離散ではなく連続量で制御を出力するモデル
+- 1ステップずつではなく、数ステップ先まで一度に出力して制御周期を上げ、滑らかな制御を実現
+- ロボットの動きの例
+    - [小さいカップの蓋を開ける](https://youtu.be/VOpTZBwN7xs?si=9tmS5TD94stPVUOF&t=214)
+    - [電池の挿入など](https://youtu.be/VOpTZBwN7xs?si=7zIrDrnEHrqJYWfx&t=252)
+    - https://www.youtube.com/watch?v=VUxFhtGWD7w
 
 ---
 
-### ロボットに行動させる
+### ACTの計算（学習時）
 
-- $\varepsilon$-グリーディ方策で
-- 水たまりに入ると損失を与える
-- Q学習の式で行動価値関数を書き換え
-	- $Q(\boldsymbol{x}, a)\longleftarrow\alpha \{\ell + \min_{a'} Q(\boldsymbol{x}', a') \}$
-    $\qquad\qquad\qquad + (1-\alpha) Q(\boldsymbol{x}, a)$
+構成: Transformerで作った条件付きVAE（CVAE, [[Zhao2023]](https://arxiv.org/abs/2304.13705)の図11上）
 
-![bg right:30% 100%](./figs/agent_on_q_learning.gif)
+- エンコーダの作る分布: $q_\phi(\boldsymbol{z}|\boldsymbol{a}_{t:t+k},$ 画像以外の時刻$t$のセンサ値$)$
+    - $\boldsymbol{z}$: 潜在空間のベクトル（スタイル変数と呼ばれる。後述。）
+    - $\boldsymbol{a}_{t:t+k}$: 時刻$t$から$t+k$までの動作シーケンス（位置埋め込みあり）
+    - 「画像以外」: 内界センサなど。画像を抜くのは時短のため
+- デコーダの作る分布: $\pi_\phi(\hat{\boldsymbol{a}}_{t:t+k} |\boldsymbol{z},$ 画像を含む$t$のセンサ値$)$
+    - $\hat{\boldsymbol{a}}_{t:t+k}$: 復元した動作シーケンス
+$\qquad\qquad\qquad$![w:600](../advanced_vision/figs/act_enc_dec.svg)
+
+---
+
+### 学習に関する補足
+
+- スタイル変数と潜在空間の役割
+    - 同じタスクでもロボットの動きが何通りもある（いくつもモードがある）ので、それらが混ざらないようにする
+        - エンコーダが潜在空間中のガウス分布に様々なモードを配置
+            - ガウス分布は共分散ゼロの単純なもの
+        - デコーダに$\boldsymbol{z} = \boldsymbol{0}$を指定$\rightarrow$潜在空間の中心の動作シーケンスが得られる
+            - 画像やセンサ値の条件付けでタスクに対して適切な動作に
+- 損失関数: $\hat{\boldsymbol{a}}_{t:t+k}$のL1誤差（誤差の絶対値を足したもの）
+    - 平均的に最適というより、最良のものを断定的に選ぶときに使われる（画像からの個人の特定など）
+        - 最適化の講義で習います
+        - ACTでの使用: ソリッドな動作を出力したいものと思われる
+
+---
+
+### ACTの計算（使用・推論時）
+
+[[Zhao2023]](https://arxiv.org/abs/2304.13705)の図11下
+
+- 前ページの説明通り、次のようにデコーダだけを使用
+    - $\hat{\boldsymbol{a}}_{t:t+k} \sim \pi_\phi(\boldsymbol{z} = \boldsymbol{0},$ 画像を含むセンサ値$)$
+- $\hat{\boldsymbol{a}}_{t:t+k}$の平滑化
+    - 出力された行動のシーケンスが終わるまでにデコーダからまた出力
+    $\rightarrow$重み付き平均をとってアクチュエータに入力
+
+
+![bg right:25% 100%](../advanced_vision/figs/act_dec_use.svg)
+
+---
+
+### ACTの実装
+
+- [論文](https://arxiv.org/abs/2304.13705)の図4、11
+- CVAEのエンコーダ: 「BART-like」なTransformerエンコーダ
+    - `[CLS]`を入力につけて、`[CLS]`の出力を$\boldsymbol{z}$に
+- CVAEのデコーダ: Transformerのエンコーダ・デコーダ構成
+    - デコーダにエンコーダが使われていてややこしい
+    - Transformerのエンコーダへの入力
+        - 4つのカメラ画像、2本のマニピュレータの関節角14個、スタイル変数$\boldsymbol{z}$
+            - 次ページで詳しく
+    - Transformerのデコーダへの入力: 位置埋め込みだけ
+        - <span style="color:red">交差注意機構でTransformerのエンコーダの出力を反映</span>
+    - Transformerデコーダの出力: $\hat{\boldsymbol{a}}_{t:t+k}$（$14$次元のベクトル$k$個）
+
+---
+
+### ACTの実装（Transformerエンコーダへの入力の詳細）
+
+- カメラ画像
+    - 4方向からの$480\times640$pixelのRGB画像
+        - 1枚あたりResNetで$300$個、$512$次元の埋め込みのベクトルに
+            - 全部で$1200$個のベクトルに
+- 関節角14個
+    - まとめて1つの$512$次元のベクトルに
+- スタイル変数$\boldsymbol{z}$
+    - これも1つの$512$次元のベクトル
+
+<center>以上、1202個の512次元ベクトルを入力</center>
 
 
 ---
 
-### 学習の進行: 行動の変化
+## ここまでのまとめ
 
-- 時間はかかるがだんだん水たまりを避けるように
+- ロボットが自然言語にしたがって作業できるようになった
+    - RT-1: ロボットの動きの生成
+    - PaLM-E: RT-1より上層の作業計画
+    - vision-languageモデルと組み合わせることで、新しい状況にも対応可能に
+- ロボットが細かい作業をできるようになった
+    - ACT
+- 今回の内容でまだできてないこと
+    - 複数の種類のロボットが複数の種類のタスクをできるようにするには？
+    - 言葉のさらなる活用
 
-![w:600](./figs/11.1.jpg)
 
 ---
 
-### 学習の進行: 状態価値関数の変化
-
-- ゴールまでの損失が減っていく
-
-![w:600](./figs/11.2.jpg)
+## VLA
 
 ---
 
-### もっと複雑な問題
+### Robotics Transformer 2（RT-2）[[Google DeepMind 2023]](https://arxiv.org/abs/2307.15818)（[サイト](https://robotics-transformer2.github.io/)）
 
-- DQN (Deep Q-Network) [[Mnih 2013]](https://arxiv.org/abs/1312.5602)
-    - ゲームをするエージェント（=コンピュータの中の体のないロボット）
-    を実現して騒ぎに
-- [ゲームの学習方法](https://huggingface.co/blog/deep-rl-dqn)
-    - 画像（全体の）をCNNに通して特徴で分類して状態に
-    - $Q$の表現にも人工ニューラルネットワークを使用
+- この論文の概要: "We refer to such category of models as vision-language-action models (VLA) and ..."ということで、ここでVLAという言葉が出現
+- 構造（2種類ある）
+    - PaLIというモデルにいろいろくっつけたもの（RT-2-PaLI-X）
+    - PaLM-Eベースのもの（RT-2-PaLM-E）
+        - 以後はPaLM-Eの使用を前提に話します
+        - なんでもトークンにして突っ込めてトークンを話すモデル
 
+<center style="padding-top:2em">だとしたらPaLM-EとRT-2の違いはなに？</center>
+
+---
+
+### PaLM-Eとの違い（VLAと呼ぶ理由）
+
+- ロボットの動作（言語レベルではなく<span style="color:red">数値レベル</span>のもの）も一緒に学習
+    - 数値レベル: 関節の回転角や移動量などのこと
+        - 例: 論文の図1の訓練データのペア（一番下のやつ）
+            - Q: What should the robot do to `<task>`?
+            - A: 変位: $(0.1, -0.2, 0)$、回転: $(10^\degree, 25^\degree, -7^\degree)$
+- $\Longrightarrow$ PaLM-Eと違って直接的にロボットの動作を出力可能
+    - 制御のレイヤーを考えるとRT-1の後継と考えることが妥当
+
+---
+
+### RT-2の学習
+
+- 2つの学習
+    - VLAのVL（VLM、vision language model）の部分の学習
+    - 動作の学習
+        - RT-1で使ったデータを使用
+        - RT-1のデータと動作の予測を比較して損失を求める
+- 動作の学習のほうは論文ではさらっと書いてあって、どちらかというとVLMの学習のほうを強調したい様子
+
+
+---
+
+### $\pi_0$[[Physical Intelligence 2024]](https://arxiv.org/html/2410.24164v1)（[サイト](https://www.physicalintelligence.company/blog/pi0)）
+
+- Physical Intelligence社が開発したVLAモデル
+- 片腕、双腕、移動マニピュレータなど多種のロボットのデータを一度に学習
+    - 68種のタスクの独自データセットとOpen X-Embodiment dataset
+        - それぞれ7種+22種のロボットのデータを含む
+        - 1万時間超の長さ
+- ACTで使われていたaction chunking architectureで50Hzの制御周期を達成
+    - ただし、CVAEではなくconditional flow matching（CFM）を使用
+- 使用例: 上記のサイトにいろいろ
+    - 洗濯物を洗濯機から取り出して畳むなど複雑で細かい動作を実現
+
+---
+
+### 構造（[このページ](https://arxiv.org/html/2410.24164v3)の図3）
+
+- VLMにフローマッチングのモジュールがくっついた構造
+    - VLMの部分とフローマッチングの部分を別々の損失関数で学習（mixture of experts）
+- VLMパート: PaliGemmaを改造したもの
+    - オープン、軽量なGoogleのVLM（30億パラメータ）
+    - 入力: 画像と作業の指示
+    - 出力: トークン
+- フローマッチングのパート: action expert
+    - ロボットの動作のシーケンスを出力（3億パラメータ）
+    - 入力: VLMのパートからのトークンとロボットの状態
+    - 出力: 動作シーケンス
 
 ---
 
 ## まとめ
 
-- 行動の評価方法（損失・価値）について
-    - そのときの行動に対する損失と、最終的な状態に与えられる価値がある
-        - 補足: 最終的な状態の価値の代わりにその直前の行動に対して与える場合もあるが等価
-- 強化学習、その中のQ学習を見てきた
-    - 行動と状態、損失の観察（=経験）から状態の「価値」を計算
+- VLAというものができた
+    - この2, 3年でロボットが人間の指示が分かるようになってしまった
+    - しかも相当細かい作業もできる
+    - 今は性能が出ないタスクでもそのうち出るようになる
+
+---
+
+### RT-1の補足1: Universal Sentence Encoder（[[Cer 2018]](https://arxiv.org/abs/1803.11175)）
+
+- 文をベクトルにする
+    - 似たような文のベクトルの内積が大きくなるように
+- 構造: Transformer（エンコーダ）or Deep Average Network Encoder（[[Iyyer 2015]](https://aclanthology.org/P15-1162/)）
+- 学習方法
+    - 前後の文の予測
+    - 質問文への返答文の予測
+    - 前提と仮説の文が矛盾しているかどうか
+
+---
+
+### RT-1の補足2: Transformerより前の部分
+
+- FiLM EfficientNet-B3とTokenLearnerの2つの部分
+    - FiLM EfficientNet-B3: 各画像からトークンへの変換
+        - EfficientNetというネットワークで画像の特徴量を抽出
+            - 言葉をFiLMで変換して特徴量に強弱をつける
+        - 1つの画像に対し、512次元の81個のベクトル（vision-language tokens）を出力
+    - TokenLearner[[Ryoo 2021]](https://research.google/pubs/tokenlearner-adaptive-space-time-tokenization-for-videos/)
+        - トークンの数を減らす（圧縮する）役割
+            - もともとViTの入力ベクトル数を減らすためのもの
+        - $81\rightarrow8$（6枚の画像で48トークン。512次元）
 
 
+---
+
+### RT-1の補足3: Transformerの部分
+
+- 8個の自己注意機構の層、1900万パラメータ
+- 6枚の画像の各8トークンが順番に並べられて文のような入力に
+    - これが何をすべきかを示す時系列情報に
+- 出力: 先述のようにロボットを動かすために必要な次元分のパラメータとモード
+    - モード: arm, base, terminate
+- 訓練データでの学習
+    - 言語による指示と画像から次のステップの行動を予測
+        - デコーダのマスク機能を使った学習と思われる
+        （注意: Transformerだけでなくモデル全体が学習）
