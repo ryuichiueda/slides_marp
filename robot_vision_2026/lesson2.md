@@ -146,6 +146,12 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 ### 計算方法の導出（続き）
 
 - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \left\{ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}'^{(n-1)})\cdots J_{\boldsymbol{f}^{(m)}}(\boldsymbol{x}'^{(m)}) \right\}^\top \boldsymbol{e}'$ 
+- $=
+J_{\boldsymbol{f}^{(m)}}(\boldsymbol{x}'^{(m)})^\top
+\cdots
+J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}'^{(n-1)})^\top
+J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
+\boldsymbol{e}'$ 
 
 ---
 
