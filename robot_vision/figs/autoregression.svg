@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187.08 111.43">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Times-Italic, Times;
+        font-size: 18px;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 12px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 1.94 1.94;
+      }
+
+      .cls-5 {
+        letter-spacing: -.48em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-3" x1="4.23" y1="85.55" x2="178.68" y2="85.55"/>
+    <path d="M181.7,85.55c-1.42.53-3.18,1.43-4.27,2.38l.86-2.38-.86-2.38c1.09.95,2.85,1.85,4.27,2.38Z"/>
+  </g>
+  <g>
+    <line class="cls-3" x1="17.45" y1="99.37" x2="17.45" y2="19.78"/>
+    <path d="M17.45,16.77c.53,1.42,1.43,3.18,2.38,4.27l-2.38-.86-2.38.86c.95-1.09,1.85-2.85,2.38-4.27Z"/>
+  </g>
+  <text class="cls-1" transform="translate(181.7 104)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-1" transform="translate(.47 28.68)"><tspan x="0" y="0">y</tspan></text>
+  <path class="cls-3" d="M30.75,77.03c1.76-8.32,4.24-16.49,7.4-24.39,1.6-3.99,5.37-8.71,9.17-6.71,1.84.97,2.61,3.15,3.96,4.72,3.8,4.42,11.29,2.96,15.68-.87s6.96-9.32,10.86-13.65c1.53-1.69,3.38-3.27,5.63-3.65,3.52-.59,6.87,1.94,8.88,4.89s3.2,6.42,5.33,9.29c5.67,7.62,16.93,9.15,25.93,6.12s16.28-9.62,23.27-16.05"/>
+  <g>
+    <path class="cls-3" d="M148.43,34.97c.28-.18.55-.37.83-.57"/>
+    <path class="cls-4" d="M150.81,33.24c2.71-2.12,5.14-4.59,7.2-7.34,1.73-2.3,3.38-4.95,6.08-5.95,2.66-.99,5.72-.06,7.97,1.66,1.73,1.32,3.08,3.05,4.32,4.85"/>
+    <path class="cls-3" d="M176.92,27.27c.19.28.37.56.55.84"/>
+  </g>
+  <text class="cls-2" transform="translate(155.95 10.56)"><tspan x="0" y="0">予測</tspan></text>
+  <text class="cls-2" transform="translate(57.8 67.08)"><tspan x="0" y="0">既存</tspan><tspan class="cls-9" x="24" y="0">の</tspan><tspan class="cls-12" x="35.76" y="0">デ</tspan><tspan class="cls-8" x="47.64" y="0">ー</tspan><tspan class="cls-10" x="58.92" y="0">タ</tspan><tspan class="cls-9" x="-5.76" y="14.4">（</tspan><tspan x="6" y="14.4">予測</tspan><tspan class="cls-11" x="30" y="14.4">に</tspan><tspan class="cls-6" x="41.88" y="14.4">使</tspan><tspan class="cls-7" x="52.8" y="14.4">う</tspan><tspan class="cls-5" x="63.48" y="14.4">）</tspan></text>
+</svg>

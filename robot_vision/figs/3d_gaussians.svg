@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263.25 170.11">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 1.98 1.98;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke-width: .5px;
+      }
+
+      .cls-2, .cls-7 {
+        stroke: red;
+      }
+
+      .cls-8 {
+        fill: #1d73a8;
+      }
+
+      .cls-8, .cls-9 {
+        opacity: .5;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        opacity: .8;
+      }
+
+      .cls-9 {
+        fill: #1ea57b;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 2.04 2.04;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 2.04 2.04;
+      }
+
+      .cls-7 {
+        fill: red;
+        opacity: .3;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" x="100.58" y=".5" width="162.17" height="122.78"/>
+  <rect class="cls-3" x="48.07" y="36.79" width="162.17" height="122.78"/>
+  <line class="cls-6" x1="48.07" y1="36.79" x2="100.58" y2=".5"/>
+  <line class="cls-6" x1="210.24" y1="36.79" x2="262.75" y2=".5"/>
+  <line class="cls-6" x1="210.24" y1="159.58" x2="262.75" y2="123.28"/>
+  <g>
+    <line class="cls-6" x1=".3" y1="169.55" x2="62.78" y2="121.89"/>
+    <line class="cls-6" x1=".3" y1="169.55" x2="98.37" y2="121.89"/>
+    <line class="cls-6" x1=".19" y1="169.62" x2="62.78" y2="150.4"/>
+    <line class="cls-6" x1=".25" y1="169.62" x2="98.37" y2="150.4"/>
+    <g>
+      <line class="cls-6" x1="62.78" y1="121.89" x2="62.78" y2="122.89"/>
+      <line class="cls-4" x1="62.78" y1="124.93" x2="62.78" y2="148.38"/>
+      <line class="cls-6" x1="62.78" y1="149.4" x2="62.78" y2="150.4"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="98.37" y1="150.4" x2="97.37" y2="150.4"/>
+      <line class="cls-1" x1="95.4" y1="150.4" x2="64.77" y2="150.4"/>
+      <line class="cls-6" x1="63.78" y1="150.4" x2="62.78" y2="150.4"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="98.37" y1="121.89" x2="97.37" y2="121.89"/>
+      <line class="cls-1" x1="95.4" y1="121.89" x2="64.77" y2="121.89"/>
+      <line class="cls-6" x1="63.78" y1="121.89" x2="62.78" y2="121.89"/>
+    </g>
+    <g>
+      <line class="cls-6" x1="98.37" y1="150.4" x2="98.37" y2="149.4"/>
+      <line class="cls-5" x1="98.37" y1="147.36" x2="98.37" y2="123.91"/>
+      <line class="cls-6" x1="98.37" y1="122.89" x2="98.37" y2="121.89"/>
+    </g>
+  </g>
+  <line class="cls-2" x1=".3" y1="169.55" x2="205.81" y2="87.01"/>
+  <ellipse class="cls-7" cx="195.53" cy="74.91" rx="6.89" ry="16.11" transform="translate(4.3 160.2) rotate(-45)"/>
+  <line class="cls-2" x1=".3" y1="169.55" x2="184.44" y2="62.5"/>
+  <ellipse class="cls-7" cx="79.42" cy="130.02" rx="3.86" ry="7.19" transform="translate(-68.67 94.24) rotate(-45)"/>
+  <ellipse class="cls-8" cx="146.51" cy="58.01" rx="16.06" ry="7.73" transform="translate(1.89 120.59) rotate(-45)"/>
+  <ellipse class="cls-9" cx="142.59" cy="28.99" rx="7.56" ry="19.81" transform="translate(11.64 92.43) rotate(-37.34)"/>
+  <ellipse class="cls-8" cx="159.12" cy="48.39" rx="16.06" ry="7.73" transform="translate(12.39 126.69) rotate(-45)"/>
+  <ellipse class="cls-9" cx="135.46" cy="30.59" rx="29.09" ry="4.05" transform="translate(-3.35 26.6) rotate(-11.08)"/>
+</svg>

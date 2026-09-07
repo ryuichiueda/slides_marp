@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.32 457.3">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #231815;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-width: .5px;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        font-size: 12px;
+      }
+
+      .cls-5, .cls-7 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-8 {
+        font-family: Times-Roman, Times;
+        font-size: 8px;
+      }
+
+      .cls-9 {
+        letter-spacing: .25em;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-10, .cls-7 {
+        fill: #231815;
+      }
+
+      .cls-6 {
+        font-family: Times-Italic, Times;
+        font-style: italic;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 2.01 2.01;
+      }
+
+      .cls-11 {
+        letter-spacing: -.5em;
+      }
+    </style>
+  </defs>
+  <circle class="cls-3" cx="41.89" cy="69.71" r="22.15"/>
+  <text class="cls-10" transform="translate(13.53 111.55)"><tspan class="cls-5" x="0" y="0">ガウス分布</tspan><tspan class="cls-6" x="60" y="-.65">p</tspan><tspan class="cls-8" x="66" y="3.09">0</tspan></text>
+  <text class="cls-10" transform="translate(135.32 112.99)"><tspan class="cls-5" x="0" y="0">なにか意味のある分布</tspan><tspan class="cls-6" x="120" y="-.65">p</tspan><tspan class="cls-8" x="126" y="3.09">1</tspan><tspan class="cls-5"><tspan x="11" y="20.68">（画像の分布など</tspan><tspan class="cls-11" x="107" y="20.68">）</tspan></tspan></text>
+  <path class="cls-1" d="M186.76,4.94c.33-1.37.96-2.71,2.05-3.6,3.69-3.01,8.92.81,12.07,4.38,2.79,3.17,5.76,7.51,3.79,11.25-.86,1.64-2.5,2.68-3.95,3.83-7.72,6.08-11.28,16.96-8.65,26.43.62,2.22,1.65,4.48,3.59,5.72,2.28,1.45,5.21,1.15,7.91,1.16,6.68.03,13.33,2.38,18.55,6.55,2.25,1.8,4.29,4.03,5.15,6.78,1.04,3.3.24,6.87-.56,10.24-1.17,4.95-2.52,10.2-6.26,13.65-4.98,4.58-13.07,4.47-18.93,1.09s-9.78-9.37-12.43-15.59c-8.77-20.57-3.55-39.36,5.45-58.43-4.71-2.69-9.21-7.45-7.78-13.45Z"/>
+  <g>
+    <line class="cls-2" x1="83.84" y1="69.71" x2="159.41" y2="56.57"/>
+    <path class="cls-10" d="M165.36,55.53c-2.62,1.52-5.78,3.9-7.61,6.15l.88-4.98-2.51-4.39c2.48,1.5,6.26,2.67,9.24,3.22Z"/>
+  </g>
+  <text class="cls-7" transform="translate(85.6 38.7)"><tspan x="0" y="0">変換（難しい</tspan><tspan class="cls-11" x="72" y="0">）</tspan></text>
+  <circle class="cls-3" cx="41.89" cy="237.02" r="17.72"/>
+  <text class="cls-10" transform="translate(1.08 269.54)"><tspan class="cls-5"><tspan class="cls-9" x="0" y="0">1</tspan><tspan x="9.61" y="0">つのデータの</tspan></tspan><tspan class="cls-5" x="-1.08" y="15.32">ガウス分布</tspan><tspan class="cls-6" x="58.92" y="14.68">p</tspan><tspan class="cls-8" x="64.92" y="18.41">0, X1</tspan></text>
+  <circle class="cls-10" cx="216.75" cy="248.09" r="2.66"/>
+  <text class="cls-10" transform="translate(173.29 270.27)"><tspan class="cls-5"><tspan class="cls-9" x="0" y="0">1</tspan><tspan x="9.61" y="0">つのデータの</tspan></tspan><tspan class="cls-5" x="-1.08" y="15.32">ガウス分布</tspan><tspan class="cls-6" x="58.92" y="14.68">p</tspan><tspan class="cls-8" x="64.92" y="18.41">1, X1</tspan><tspan class="cls-5"><tspan x="16.81" y="30">（縮退</tspan><tspan class="cls-11" x="52.81" y="30">）</tspan></tspan></text>
+  <line class="cls-1" x1="41.89" y1="219.3" x2="216.75" y2="245.43"/>
+  <line class="cls-1" x1="41.89" y1="254.74" x2="216.75" y2="250.09"/>
+  <text class="cls-7" transform="translate(85.66 202.58)"><tspan x="0" y="0">変換（簡単・途中の</tspan><tspan x="3" y="15">データも作成可能</tspan><tspan class="cls-11" x="99" y="15">）</tspan></text>
+  <circle class="cls-1" cx="39.05" cy="393.31" r="17.72"/>
+  <circle class="cls-10" cx="196.09" cy="350.61" r="2.66"/>
+  <g>
+    <path class="cls-1" d="M201.85,361.78c.14-.3.28-.6.42-.91-.29-.16-.57-.34-.86-.51"/>
+    <path class="cls-4" d="M199.78,359.21c-3.64-2.79-6.45-6.87-5.28-11.79.33-1.37.96-2.71,2.05-3.6,3.69-3.01,8.92.81,12.07,4.38,2.79,3.17,5.76,7.51,3.79,11.25-.86,1.64-2.5,2.68-3.95,3.83-7.72,6.08-11.28,16.96-8.65,26.43.62,2.22,1.65,4.48,3.59,5.72,2.28,1.45,5.21,1.15,7.91,1.16,6.68.03,13.33,2.38,18.55,6.55,2.25,1.8,4.29,4.03,5.15,6.78,1.04,3.3.24,6.87-.56,10.24-1.17,4.95-2.52,10.2-6.26,13.65-4.98,4.58-13.07,4.47-18.93,1.09-5.86-3.38-9.78-9.37-12.43-15.59-8.49-19.92-3.87-38.16,4.6-56.61"/>
+  </g>
+  <circle class="cls-10" cx="205.95" cy="348.2" r="2.66"/>
+  <circle class="cls-10" cx="206.61" cy="357.7" r="2.66"/>
+  <circle class="cls-10" cx="196.09" cy="378.53" r="2.66"/>
+  <circle class="cls-10" cx="211.27" cy="402" r="2.66"/>
+  <circle class="cls-10" cx="198.75" cy="402" r="2.66"/>
+  <circle class="cls-10" cx="221.21" cy="415.62" r="2.66"/>
+  <circle class="cls-10" cx="208.61" cy="415.62" r="2.66"/>
+  <circle class="cls-10" cx="214.17" cy="429.24" r="2.66"/>
+  <circle class="cls-10" cx="226.52" cy="426.59" r="2.66"/>
+  <circle class="cls-10" cx="223.79" cy="404.66" r="2.66"/>
+  <circle class="cls-1" cx="32.17" cy="406.6" r="17.72"/>
+  <circle class="cls-1" cx="53.33" cy="404.39" r="17.72"/>
+  <circle class="cls-1" cx="43.45" cy="416.68" r="17.72"/>
+  <circle class="cls-1" cx="46.89" cy="387.88" r="17.72"/>
+  <circle class="cls-1" cx="40.01" cy="401.16" r="17.72"/>
+  <circle class="cls-1" cx="60.17" cy="400.96" r="17.72"/>
+  <circle class="cls-1" cx="51.29" cy="411.24" r="17.72"/>
+  <line class="cls-1" x1="49.89" y1="378.53" x2="196.67" y2="350.06"/>
+  <line class="cls-1" x1="32.17" y1="388.88" x2="204.36" y2="349.06"/>
+  <line class="cls-1" x1="39.05" y1="394.75" x2="208.49" y2="357.62"/>
+  <line class="cls-1" x1="51.29" y1="400.96" x2="196.67" y2="378.46"/>
+  <line class="cls-1" x1="29.17" y1="407.32" x2="196.67" y2="402.62"/>
+  <line class="cls-1" x1="39.05" y1="411.03" x2="211.22" y2="403.62"/>
+  <line class="cls-1" x1="39.05" y1="411.03" x2="223.87" y2="405.44"/>
+  <line class="cls-1" x1="40.01" y1="418.88" x2="207.35" y2="415.98"/>
+  <line class="cls-1" x1="61.15" y1="416.68" x2="217.35" y2="414.51"/>
+  <line class="cls-1" x1="53.33" y1="421.11" x2="227.07" y2="426.73"/>
+  <line class="cls-1" x1="43.45" y1="426.73" x2="212.73" y2="430.23"/>
+  <text class="cls-7" transform="translate(21.22 453.23)"><tspan x="0" y="0">簡単な変換の重ね合わせで全体を変換</tspan></text>
+</svg>

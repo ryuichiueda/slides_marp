@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.13 146.04">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+        font-style: italic;
+      }
+
+      .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-10, .cls-6 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-10, .cls-5, .cls-11 {
+        font-size: 8px;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8, .cls-9 {
+        font-family: KozGoPr6N-Regular-90ms-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+    </style>
+  </defs>
+  <text class="cls-9" transform="translate(0 78.87)"><tspan x="0" y="0">入力</tspan></text>
+  <g>
+    <polyline class="cls-2" points="88.05 95.95 88.05 53.88 37.98 35.65 37.98 95.95"/>
+    <polyline class="cls-2" points="88.05 55.3 88.05 97.37 37.98 115.6 37.98 55.3"/>
+  </g>
+  <text class="cls-9" transform="translate(40.82 78.87)"><tspan x="0" y="0">encoder</tspan></text>
+  <text transform="translate(112.69 78.01)"><tspan><tspan class="cls-3" x="0" y="0">z</tspan><tspan class="cls-6" x="4.67" y="0" xml:space="preserve"> = (</tspan><tspan class="cls-3" x="21.43" y="0">z</tspan><tspan class="cls-10" x="26.1" y="4">1</tspan><tspan class="cls-6" x="30.1" y="0">,</tspan><tspan class="cls-8" x="33.1" y="0"> </tspan><tspan class="cls-3" x="35.9" y="0">z</tspan><tspan class="cls-10" x="40.57" y="4">2</tspan><tspan class="cls-6" x="44.57" y="0">,</tspan><tspan class="cls-9" x="47.57" y="0"> </tspan><tspan class="cls-3" x="50.36" y="0">...</tspan><tspan class="cls-6" x="59.36" y="0">,</tspan><tspan class="cls-9" x="62.36" y="0"> </tspan><tspan class="cls-3" x="65.16" y="0">z</tspan><tspan class="cls-5" x="69.83" y="4">K</tspan><tspan class="cls-6" x="75.17" y="0">)</tspan><tspan class="cls-9" x="79.16" y="0"> </tspan></tspan></text>
+  <g>
+    <line class="cls-1" x1="103.69" y1="37.65" x2="152.09" y2="37.65"/>
+    <polygon points="151.36 40.14 155.68 37.65 151.36 35.15 151.36 40.14"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="108.81" y1="44.77" x2="108.81" y2="15.71"/>
+    <polygon points="111.3 16.43 108.81 12.12 106.32 16.43 111.3 16.43"/>
+  </g>
+  <path class="cls-1" d="M110.32,33.32c2.86-.26,6.61-1.1,9.94-3.7,8.47-6.61,7.99-19.7,10.54-19.65,2.47.05,1.53,12.3,9.31,19.08,3.32,2.88,7.2,3.9,10.21,4.27"/>
+  <text transform="translate(154.13 47.62)"><tspan><tspan class="cls-3" x="0" y="0">z</tspan><tspan class="cls-10" x="4.67" y="4">1</tspan></tspan></text>
+  <text class="cls-3" transform="translate(98.22 9.97)"><tspan x="0" y="0">p</tspan></text>
+  <g>
+    <line class="cls-1" x1="139.37" y1="128.38" x2="187.77" y2="128.38"/>
+    <polygon points="187.04 130.88 191.36 128.38 187.04 125.89 187.04 130.88"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="144.49" y1="135.51" x2="144.49" y2="106.44"/>
+    <polygon points="146.98 107.17 144.49 102.86 141.99 107.17 146.98 107.17"/>
+  </g>
+  <path class="cls-1" d="M152.99,124.06c2.53-.26,5.85-1.1,8.8-3.7,7.5-6.61,7.07-19.7,9.33-19.65,2.19.05,1.35,12.3,8.25,19.08,2.93,2.88,6.38,3.9,9.04,4.27"/>
+  <text transform="translate(189.8 138.36)"><tspan><tspan class="cls-3" x="0" y="0">z</tspan><tspan class="cls-10" x="4.67" y="4">2</tspan></tspan></text>
+  <text class="cls-3" transform="translate(133.9 100.71)"><tspan x="0" y="0">p</tspan></text>
+  <g>
+    <line class="cls-1" x1="135.49" y1="67.9" x2="128.84" y2="45.29"/>
+    <polygon points="131.27 46.31 131.01 46.74 128.9 45.48 127.79 47.68 127.35 47.46 128.69 44.77 131.27 46.31"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="152.99" y1="84.59" x2="159.51" y2="102.35"/>
+    <polygon points="157.02 101.5 157.24 101.05 159.44 102.17 160.4 99.89 160.86 100.09 159.7 102.86 157.02 101.5"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="183.76" y1="70.87" x2="202.74" y2="49.56"/>
+    <polygon points="203.16 52.15 202.66 52.17 202.61 49.7 200.16 49.93 200.11 49.43 203.1 49.15 203.16 52.15"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="183.55" y1="43.25" x2="231.95" y2="43.25"/>
+    <polygon points="231.22 45.74 235.54 43.25 231.22 40.75 231.22 45.74"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="188.67" y1="50.38" x2="188.67" y2="21.31"/>
+    <polygon points="191.16 22.04 188.67 17.72 186.18 22.04 191.16 22.04"/>
+  </g>
+  <path class="cls-1" d="M181.71,38.92c3.64-.16,8.4-.67,12.65-2.25,10.77-4.01,10.16-11.95,13.41-11.92,3.14.03,1.95,7.46,11.85,11.57,4.22,1.75,9.16,2.36,12.98,2.59"/>
+  <text class="cls-4" transform="translate(233.95 53.22) scale(.91 1)"><tspan class="cls-7" x="0" y="0">z</tspan><tspan class="cls-11" x="4.67" y="4">K</tspan></text>
+  <text class="cls-3" transform="translate(178.08 15.57)"><tspan x="0" y="0">p</tspan></text>
+  <g>
+    <polyline class="cls-2" points="253.99 95.95 253.99 53.88 304.06 35.65 304.06 95.95"/>
+    <polyline class="cls-2" points="253.99 55.3 253.99 97.37 304.06 115.6 304.06 55.3"/>
+  </g>
+  <text class="cls-9" transform="translate(256.79 78.87)"><tspan x="0" y="0">decoder</tspan></text>
+  <text class="cls-9" transform="translate(313.13 78.87)"><tspan x="0" y="0">出力</tspan></text>
+</svg>
