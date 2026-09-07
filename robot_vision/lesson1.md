@@ -137,7 +137,15 @@ marp: true
 
 ---
 
-### 良い道具3: 人工ニューラルネットワーク
+### 良い道具3: 人工ニューラルネットワーク（artificial neural network, ANN）
+
+- 最適化+統計学
+    - 大量のデータからパラメータを調整
+    - 2000年代後半からいくつもの重要な進展
+        - 記憶や生成を司るANNの構造の発見[[Hinton 2006]](https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+        - 勾配消失問題の解消[[Nair, Hinton 2010]](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)、[[Krizhevsky+ 2017（発見は2012）]](https://dl.acm.org/doi/10.1145/3065386)
+        - ...
+    - 現在: ロボットが動くところまできている
 
 ---
 
