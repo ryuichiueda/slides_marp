@@ -143,7 +143,7 @@ marp: true
     - 大量のデータからパラメータを調整
     - 2000年代後半からいくつもの重要な進展
         - 記憶や生成を司るANNの構造の発見[[Hinton 2006]](https://www.cs.toronto.edu/~hinton/absps/science.pdf)
-        - 勾配消失問題の解消[[Nair, Hinton 2010]](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)、[[Krizhevsky+ 2017（発見は2012）]](https://dl.acm.org/doi/10.1145/3065386)
+        - 勾配消失問題の解消[[Nair, Hinton 2010]](https://www.cs.toronto.edu/~fritz/absps/reluICML.pdf)、[[Krizhevsky+ 2017（実装は2012）]](https://dl.acm.org/doi/10.1145/3065386)
         - ...
     - 現在: ロボットが動くところまできている
         - 例: https://www.youtube.com/watch?v=S_yFcSxHwU0
@@ -153,7 +153,9 @@ marp: true
 ### ということで
 
 - 本講義ではANNに基づいた画像処理を扱います
-- 途中言語も扱います
+    - 古典的な手法も重要ですがとりあえずこっちをやる
+- ビジョンだけではなく、言語や制御も扱います
+    - 言葉が画像処理に使われる
 
 ---
 
