@@ -58,7 +58,8 @@ marp: true
 - 損失関数の定義$\mathcal{L}(w_{1:n} |$データ$)$
     - $w_{1:n}$: パラメータ（前ページの例の場合は$b$も$w_4$などにして含める）
 - ずれの減らし方
-    - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
+    - 損失関数を微分すると増える方向がわかる
+        - $\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
     - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
 - データは正解のものをたくさん準備
     - <span style="color:red">訓練データ</span>
