@@ -127,6 +127,11 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
     - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x})}{\partial w}\{ f_i(\boldsymbol{x}) - y'_i \}$（$\leftarrow$内積になっている）
     $= \dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}\cdot (\boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y}')$ 
     $= \dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}\cdot$誤差のベクトル 
+- $\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w} =\dfrac{\partial}{\partial w} \boldsymbol{f}(\boldsymbol{x}) =
+    \dfrac{\partial}{\partial w}
+(\boldsymbol{f}^{(n)}\circ
+\boldsymbol{f}^{(n-1)}\circ\dots\circ
+\boldsymbol{f}^{(1)})(\boldsymbol{x})$
 
 ---
 
