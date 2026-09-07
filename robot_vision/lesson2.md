@@ -54,7 +54,7 @@ marp: true
 
 ### 学習の計算方法: <span style="color:red">損失関数</span>の値を減らしていく
 
-- 最小二乗法や回帰（第6回のおさらい）
+- 最小二乗法や回帰
     - 損失関数を定義$\mathcal{L}(w_{1:n} |$データ$)$
         - $w_{1:n}$: パラメータ（ANNの場合は$\boldsymbol{b}$も含まれる）
     - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
