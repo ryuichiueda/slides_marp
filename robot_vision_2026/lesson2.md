@@ -106,6 +106,16 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
+- ANNの一般的な表記: $\boldsymbol{f}(\boldsymbol{x}) =
+(\boldsymbol{f}^{(n)}\circ
+\boldsymbol{f}^{(n-1)}\circ\dots\circ
+\boldsymbol{f}^{(1)})(\boldsymbol{x})$
+    - $\boldsymbol{f}^{(n)}$: 入力から見て$n$層目
+        - $\boldsymbol{y}^{(n)} = \boldsymbol{f}^{(n)}(\boldsymbol{x}^{(n)})$
+            - $\boldsymbol{x}^{(n)}, \boldsymbol{y}^{(n)}$: $n$層目の入出力
+
+---
+
 ## ANNのパラメータ更新: <span style="color:red">誤差逆伝播法</span>
 
 
