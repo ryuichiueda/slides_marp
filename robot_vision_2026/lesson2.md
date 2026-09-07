@@ -124,6 +124,8 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
+### 計算方法の導出（続き）
+
 - $\boldsymbol{w}$のうち、ある層$m$にあるパラメータ$w$を動かしたい
     - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x}'}\{ f_i(\boldsymbol{x}') - y'_i \}$（$\leftarrow$内積になっている）
     $= J_{\boldsymbol{f}}(\boldsymbol{x}')^\top (\boldsymbol{f}(\boldsymbol{x}') - \boldsymbol{y}') = J_{\boldsymbol{f}}(\boldsymbol{x}') \boldsymbol{e}'$（$\boldsymbol{e}'$: 誤差のベクトル。縦ベクトル） 
@@ -136,6 +138,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
     {\partial w}\Big|_{\boldsymbol{x}^{(m)} = \boldsymbol{x}'^{(m)}}$
     $= \dfrac{\partial \boldsymbol{f}^{(n)}}{\partial \boldsymbol{x}^{(n)}} \dfrac{\partial (\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})(\boldsymbol{x}^{(m)}) }{\partial w}\Big|_{\boldsymbol{x}^{(n)}=\boldsymbol{x}'^{(n)}, \boldsymbol{x}^{(m)}=\boldsymbol{x}'^{(m)}}$
     $= J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})J_{\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)}}(\boldsymbol{x}'^{(m)})$
+    $= J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}'^{(n-1)})\cdots J_{\boldsymbol{f}^{(m)}}(\boldsymbol{x}'^{(m)})$ 
 
 ---
 
