@@ -93,9 +93,14 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ![bg right:25% 90%](../machine_learning_2026/figs/simple_ann_learning.png)
 
+
 ---
 
-### ANNのパラメータ更新: <span style="color:red">誤差逆伝播法</span>
+### 問題
+
+---
+
+## ANNのパラメータ更新: <span style="color:red">誤差逆伝播法</span>
 
 
 - 出力側の誤差をどんどん入力側に送っていく
