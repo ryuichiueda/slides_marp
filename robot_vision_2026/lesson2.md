@@ -133,8 +133,8 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 (\boldsymbol{x}_m')$
     $= \dfrac{\partial \boldsymbol{f}^{(n)}}{\partial \boldsymbol{x}^{(n)}}
     \dfrac{\partial 
-(\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(1)})
-    }{\partial w}(\boldsymbol{x}')$
+(\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})
+    }{\partial w}(\boldsymbol{x}_m')$
 
 ---
 
