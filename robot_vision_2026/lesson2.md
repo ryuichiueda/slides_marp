@@ -48,7 +48,7 @@ marp: true
 
 これを全ニューロンに対してやる（以後はレイヤー表記）
 
-![bg right:25% 90%](./figs/simple_ann_learning.png)
+![bg right:25% 90%](../machine_learning_2026/figs/simple_ann_learning.png)
 
 ---
 
@@ -72,7 +72,7 @@ marp: true
 - $\mathcal{L}(w_{1:3}, b | x'_{1:3}, y') = \{f(x'_{1:3}| w_{1:3},b) - y'\}^2$
     - 実際に観測された入出力$(x'_{1:3}, y')$に対し、$x'_{1:3}$に対する正解$f(x_{1:3}| w_{1:3},b)$との2乗誤差をとる
 
-![bg right:25% 90%](./figs/simple_ann_learning.png)
+![bg right:25% 90%](../machine_learning_2026/figs/simple_ann_learning.png)
 
 ---
 
@@ -83,7 +83,7 @@ marp: true
     - 送られてきた誤差が小さくなるように各層のパラメータを変える
         - <span style="color:red">各層で偏微分しても前ページの計算が成立</span>
 
-<center><img width=700 src="./figs/back_propagation.png" /></center>
+<center><img width=700 src="../machine_learning_2026/figs/back_propagation.png" /></center>
 
 ---
 
@@ -97,7 +97,7 @@ marp: true
 - アフィンレイヤーの例: $f(x) = w x - b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
     - 考え方: $w$倍になって出ていく層は入力の誤差の影響力が$w$倍
 
-![bg right:25% 90%](./figs/back_propagation_diff.png)
+![bg right:25% 90%](../machine_learning_2026/figs/back_propagation_diff.png)
 
 ---
 
@@ -108,7 +108,7 @@ marp: true
     - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
 
 
-![bg right:35% 90%](./figs/back_propagation_affine.svg)
+![bg right:35% 90%](../machine_learning_2026/figs/back_propagation_affine.svg)
 
 ---
 
@@ -119,10 +119,10 @@ marp: true
     - $y_i = \dfrac{1}{1 + e^{-x_i}}$（$i$: 入出力のインデックス）
 - 下図青線: シグモイド関数のグラフ
     - 緑はこれまでのステップ関数
-    ![w:300](./figs/sigmoid.png)
+    ![w:300](../machine_learning_2026/figs/sigmoid.png)
     - 注意: 現在は本来は微分できない関数も使用されることがある
 
-![bg right:30% 100%](./figs/sigmoid_layer.png)
+![bg right:30% 100%](../machine_learning_2026/figs/sigmoid_layer.png)
 
 ---
 
@@ -151,7 +151,7 @@ marp: true
     - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
 
 
-![bg right:25% 90%](./figs/back_propagation_diff.png)
+![bg right:25% 90%](../machine_learning_2026/figs/back_propagation_diff.png)
 
 
 ---
@@ -162,12 +162,12 @@ marp: true
     - $W  \longleftarrow  W -  \alpha\Delta \mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial W} = W- \alpha\boldsymbol{x}^\top \Delta \mathcal{L}_\boldsymbol{y}$
     - $\boldsymbol{b} \longleftarrow \boldsymbol{b} - \alpha \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{b}} =  \boldsymbol{b} + \alpha \Delta \mathcal{L}_\boldsymbol{y}$
 
-![bg right:35% 90%](./figs/back_propagation_affine.svg)
+![bg right:35% 90%](../machine_learning_2026/figs/back_propagation_affine.svg)
 
 ---
 
 
-### 問題: p. 15のニューラルネットワークのパラメータ修正
+### 問題: 先述のANNのパラメータ修正
 
 - $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
     - 右図上の状態から右図下の状態にもっていきたい
@@ -178,7 +178,7 @@ marp: true
 - $(x_1, x_2, x_3) = (1, 0, 0)$を入力してパラメータを修正してみましょう
 
 
-![bg right:25% 90%](./figs/simple_ann_learning.png)
+![bg right:25% 90%](../machine_learning_2026/figs/simple_ann_learning.png)
 
 
 ---
@@ -195,7 +195,7 @@ marp: true
     - $b = 2 + \alpha1 = 2.5$（$3$に近づく）
 - 次に$(x_1, x_2, x_3) = (0, 0, 1)$を入力すると？
 
-![bg right:30% 90%](./figs/simple_ann_learning_modify.png)
+![bg right:30% 90%](../machine_learning_2026/figs/simple_ann_learning_modify.png)
 
 ---
 
@@ -212,7 +212,7 @@ marp: true
         - $b$は$3$から遠ざかる。そういう場合もある。
 - できる人は前方のニューロンに送る誤差も計算を
 
-![bg right:30% 90%](./figs/simple_ann_learning_modify2.png)
+![bg right:30% 90%](../machine_learning_2026/figs/simple_ann_learning_modify2.png)
 
 
 ---
@@ -237,5 +237,5 @@ marp: true
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
 - ResNet（2015年）
 
-![bg right:30% 90%](./figs/skip.png)
+![bg right:30% 90%](../advanced_vision/figs/skip.png)
 
