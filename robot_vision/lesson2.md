@@ -25,20 +25,20 @@ marp: true
 
 ---
 
-### 前回のまとめ前のスライド
+### 前回残った問題: どう学習するか?
 
 - 動物は生まれたときにある程度プログラミングされた状態だが・・・
     - そのあと成長しても神経細胞は基本的に増えない
     - 猫を識別するにはニューラルネットワークに変更を加えないといけない
     - 頭を開けて配線するわけにはいかない
 
-<center style="color:red">どうやるの?</center>
+<center style="color:red">どうやるの?みなさんは普段どうしてます?これまでの講義を踏まえると?（話し合ってみましょう）</center>
 
 ---
 
 ### 学習の方法: パラメータを変える
 
-- 例題: $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力する人工ニューロン
+- 例題: $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力するように人工ニューロンを学習させたい
     - 最初、パラメータはあてずっぽ（右図上）
 - 基本的な方法
     1. 何か入力して出力と正解の「ずれ」を観測する
@@ -52,124 +52,126 @@ marp: true
 
 ---
 
+### 学習の計算方法: <span style="color:red">損失関数</span>の値を減らしていく
+
+- 最小二乗法や回帰（第6回のおさらい）
+    - 損失関数を定義$\mathcal{L}(w_{1:n} |$データ$)$
+        - $w_{1:n}$: パラメータ（ANNの場合は$\boldsymbol{b}$も含まれる）
+    - 損失関数を微分$\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
+    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
+- データは正解のものをたくさん準備
+    - <span style="color:red">訓練データ</span>
+
+---
+
+### 損失関数の例
+
+- 2ページ前のものの場合
+    - ニューロンを関数で表すと$y = f(x_{1:3}| w_{1:3},b)$
+        - $y$は$0$か$1$
+- $\mathcal{L}(w_{1:3}, b | x'_{1:3}, y') = \{f(x'_{1:3}| w_{1:3},b) - y'\}^2$
+    - 実際に観測された入出力$(x'_{1:3}, y')$に対し、$x'_{1:3}$に対する正解$f(x_{1:3}| w_{1:3},b)$との2乗誤差をとる
+
+![bg right:25% 90%](./figs/simple_ann_learning.png)
+
+---
+
+### ANNのパラメータ更新: <span style="color:red">誤差逆伝播法</span>
+
+
+- 出力側の誤差をどんどん入力側に送っていく
+    - 送られてきた誤差が小さくなるように各層のパラメータを変える
+        - <span style="color:red">各層で偏微分しても前ページの計算が成立</span>
+
+<center><img width=700 src="./figs/back_propagation.png" /></center>
+
+---
+
+### 誤差の送り方
+
+- 1入力1出力の層の場合
+    - ある層の計算: $y = f(x | w_{1:n})$のとき
+    （$x$: 入力、$y$: 出力）
+    - 上流に送る誤差: <span style="color:red">$\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$</span>
+        - 下流から来た誤差: $\Delta \mathcal{L}_y$
+- アフィンレイヤーの例: $f(x) = w x - b \Longrightarrow \Delta\mathcal{L}_x = w \Delta\mathcal{L}_y$
+    - 考え方: $w$倍になって出ていく層は入力の誤差の影響力が$w$倍
+
+![bg right:25% 90%](./figs/back_propagation_diff.png)
+
+---
+
+### 多入力・多出力のアフィンレイヤーの場合
+
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
+- 行列の計算に
+    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
+
+
+![bg right:35% 90%](./figs/back_propagation_affine.svg)
+
+---
+
+### 閾値処理の層の誤差逆伝播（1/2）
+
+- ステップ関数は微分できないので無理
+- 代わりにシグモイド関数で微妙にアナログに
+    - $y_i = \dfrac{1}{1 + e^{-x_i}}$（$i$: 入出力のインデックス）
+- 下図青線: シグモイド関数のグラフ
+    - 緑はこれまでのステップ関数
+    ![w:300](./figs/sigmoid.png)
+    - 注意: 現在は本来は微分できない関数も使用されることがある
+
+![bg right:30% 100%](./figs/sigmoid_layer.png)
+
+---
+
+### 閾値処理の層の誤差逆伝播（2/2）
+
+- シグモイド関数について、上流に送る誤差を計算してみましょう
+    - $y_i = f(x_i) = (1 + e^{-x_i})^{-1}$
+    - 上流に送る誤差（再掲）: $\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$
+- $f$を（偏）微分してみましょう
+    - $\dfrac{\partial f}{\partial x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
+    $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
+- $y_i = h(x_i)$なので<span style="color:red">$\Delta\mathcal{L}_x = y_i(1 - y_i)\Delta\mathcal{L}_y$</span>
+
+
+---
+
 ### パラメータをどう変えるか?
 
-- 案1: 出力を間違えたらあてずっぽで変える
-    $\rightarrow$たくさんパラメータがあると正解は無理
-- 案2: ずれが小さくなるようにパラメータを変える
-    - ニューロンはたくさんある
-    - どうやって？？
+- 伝播してきた誤差$\Delta \mathcal{L}_y$が減る方向にパラメータを変える
+- 1入力1出力の層の場合
+    - ある層の計算: $y = f(x | w_{1:n})$のとき
+    （$x$: 入力、$y$: 出力）
+    - パラメータの変更: $w_i \longleftarrow w_i - \alpha \dfrac{\partial f}{\partial w_i}\Bigg|_x \Delta \mathcal{L}_y$
+- 右のアフィンレイヤー（$y = wx - b$）の例
+    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
+    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
 
-<center>どうすればいいか議論してみましょう</center>
-
-![bg right:30% 100%](./figs/gradient_lost.png)
-
----
-
-## 誤差逆伝播法
-
-- 出力側の誤差（損失関数の値）をどんどん入力側に送っていく
-    - 値の大きさは、そのニューロン（層）の影響を考えて加減する
-        - 「影響を考えて」
-            - 例: ある層が入力を2倍して出力
-            $\rightarrow$その上流の値は結果に対して2倍の影響力
-- その後: 送られてきた誤差が一定の割合で小さくなる方向にパラメータを変更
-
-$\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
-
----
-
-### 単純な例
-
-- 右図上: 1入力1出力の単純なレイヤー
-    - $9/10$が入力されて$17/10$を出力
-    $\rightarrow y$の誤差$1/3$が返ってきた
-        （出力$17/10$はもっと小さいべき）
-        - $w=2$なので$2$倍して誤差を送信（$2/3$を返す）
-- 理屈: 偏微分（$x$が少し変化したときの$y$の変化）
-    - $y=2x-1/10$
-    - $\dfrac{\partial y}{\partial x}=2$
-
-質問: じゃあアフィンレイヤーはどうなる？
-
-![bg right:25% 90%](./figs/back_propagation_diff.png)
-
----
-
-### アフィン層の場合
-
-- 出力側の損失関数の増大率: $\partial \mathcal{L} / \partial \boldsymbol{y}$
-    - $\mathcal{L}$の増加に対して$\boldsymbol{y}$が与える影響度
-- 入力側の損失関数の誤差の拡大率: $\partial \mathcal{L} / \partial \boldsymbol{x}$
-    - <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}} W^\top$</span>
-        - 偏微分の連鎖律
-        - 重み$W$の分だけ影響力が増大
-        - $\partial \mathcal{L} / \partial \boldsymbol{y}$の値を$\mathcal{L}$の誤差に基づいて決定$\rightarrow$どの層でも具体的な値で誤差の大きさが決まる
-
-![bg right:35% 90%](./figs/back_propagation_affine.png)
-
----
-
-### 誤差逆伝播法のまとめ
-
-- （層の種類によらず）上流の層はどこでも連鎖律を利用して誤差を計算可能
-    - ただし微分できることが必要
-- ある層の誤差は下流の層から伝わってきた誤差に基づいて計算可能
-    - 各層は、自身の偏微分の式だけで誤差を計算可能
-
-
----
-
-### $n$個の入力のあるシグモイド層の場合
-
-- $\boldsymbol{y} = \text{Sigmoid}(\boldsymbol{x}) = \left[ h(x_1) \quad h(x_2) \quad \dots \quad h(x_n) \right]$
-    - $h(x) = (1 + e^{-x})^{-1}$
-- シグモイド関数$h$を（偏）微分してみましょう
-    * $\dfrac{\text{d} h}{\text{d} x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
-    $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
-- 各要素の具体的な値: $h$に出力値$y_i = h(x_i)$を代入したものなので・・・
-    - $\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{x}} = \left[ y_1(1-y_1) \quad y_2(1-y_2) \quad \dots \quad y_n(1-y_n) \right]$
-
-
----
-
-## パラメータの修正
-
-- 下流から伝わってきた誤差を小さくするように更新
-- ひとつのパラメータの更新式
-    - $w \longleftarrow w -  \alpha \dfrac{\partial \mathcal{L}}{\partial w} = w -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial w}$
-        - $\alpha$は割引率（ひとつの結果で一気にパラメータを修正しないように）
-- 単純な例（右図。$y=wx-b$、$\alpha = 0.1$とする）
-    - $\partial \boldsymbol{y}/ \partial w = x = 9/10$、$\partial \boldsymbol{y}/ \partial b = -1$
-    - $w \longleftarrow 2 - 1/10 \cdot 1/3 \cdot 9/10 = 1.97$（減少）
-    - $b \longleftarrow 1/10 - 1/10 \cdot 1/3 \cdot (-1) = 0.13$（増加）
 
 ![bg right:25% 90%](./figs/back_propagation_diff.png)
 
 
 ---
 
-### アフィンレイヤーのパラメータ修正
+### アフィンレイヤーでのパラメータ更新（一般的な式）
 
-- 誤差に対するパラメータの影響
-    - $W$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial W} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial W} = \boldsymbol{x}^\top\dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
-        - [なんで偏微分の順序が変わるか](https://qiita.com/kinkalow/items/2a229cf855df828e4c39)
-        （講師は未検証です。すみません！）
-    - $\boldsymbol{b}$について: <span style="color:red">$\dfrac{\partial \mathcal{L}}{\partial \boldsymbol{b}} = \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}} \dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{b}} = - \dfrac{\partial \mathcal{L} }{\partial \boldsymbol{y}}$</span>
-- 更新式（どんなレイヤーでも共通）
-    - $\boldsymbol{w} \longleftarrow \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{w}} = \boldsymbol{w} -  \alpha \dfrac{\partial \mathcal{L}}{\partial \boldsymbol{y}}\dfrac{\partial \boldsymbol{y}}{\partial \boldsymbol{w}}$
+- アフィンレイヤー（再掲）: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
+    - $W  \longleftarrow  W -  \alpha\Delta \mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial W} = W- \alpha\boldsymbol{x}^\top \Delta \mathcal{L}_\boldsymbol{y}$
+    - $\boldsymbol{b} \longleftarrow \boldsymbol{b} - \alpha \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{b}} =  \boldsymbol{b} + \alpha \Delta \mathcal{L}_\boldsymbol{y}$
 
-
-![bg right:35% 90%](./figs/back_propagation_affine.png)
-
+![bg right:35% 90%](./figs/back_propagation_affine.svg)
 
 ---
 
-### 問題: p. 14のニューラルネットワークのパラメータ修正
+
+### 問題: p. 15のニューラルネットワークのパラメータ修正
 
 - $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力させたい
     - 右図上の状態から右図下の状態にもっていきたい
-- 修正のための式（p. 11のもの）: 
+- 修正のための式（p. 23のもの）: 
     - $w_i \leftarrow w_i- \alpha$入力値$\cdot$誤差
     - $b \leftarrow b+ \alpha$誤差
 - $\alpha=0.5$で（早く収束させるため大きめ）
@@ -212,6 +214,16 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 
 ![bg right:30% 90%](./figs/simple_ann_learning_modify2.png)
 
+
+---
+
+## まとめ
+
+- 人工ニューラルネットワーク
+    - ニューロンの組み合わせでプログラムできる
+    - 誤差逆伝播で学習ができる
+- 次回以降で応用を見ていきましょう
+
 ---
 
 ## 補足: スキップ（残差）接続
@@ -226,13 +238,4 @@ $\qquad\qquad\qquad\qquad$![w:500](./figs/back_propagation.png)
 - ResNet（2015年）
 
 ![bg right:30% 90%](./figs/skip.png)
-
----
-
-## まとめ
-
-- 人工ニューラルネットワーク
-    - ニューロンの組み合わせでプログラムできる
-    - 誤差逆伝播で学習ができる
-- 以後の講義で応用を見ていきましょう
 
