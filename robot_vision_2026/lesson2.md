@@ -72,8 +72,8 @@ marp: true
 
 - 1つのデータの損失関数:
 $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'_3 - b) - y'\}^2$
-   - $w_i (i=1,2,3)$で偏微分
-   $\dfrac{\partial \mathcal{L}}{\partial w_i} = 2\dfrac{\partial h}{\partial w_i}x_i'\cdot$誤差
+- $w_i (i=1,2,3)$で偏微分: $\dfrac{\partial \mathcal{L}}{\partial w_i} = 2\dfrac{\partial h}{\partial w_i}x_i'\cdot$誤差
+- $b$で偏微分: $\dfrac{\partial \mathcal{L}}{\partial b} = -2\dfrac{\partial h}{\partial b}\cdot$誤差
 
 
 ![bg right:25% 90%](../machine_learning_2026/figs/simple_ann_learning.png)
