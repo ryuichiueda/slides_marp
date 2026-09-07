@@ -142,6 +142,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') = h( w_1x'_1 + w_2x'_2 + w_3x'_3 - b) - y'$
     - $\dfrac{\partial f}{\partial x} = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})$
     $= (1+e^{-x})^{-2}e^{-x} = h^2(h^{-1}-1) = h(1 - h)$
 - $y_i = h(x_i)$なので<span style="color:red">$\Delta\mathcal{L}_x = y_i(1 - y_i)\Delta\mathcal{L}_y$</span>
+    - $y$の値がどっちつかずの$0.5$のときに一番大きくなる
 
 
 ---
