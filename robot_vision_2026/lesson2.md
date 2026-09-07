@@ -61,6 +61,7 @@ marp: true
     - 損失関数を微分すると増える方向がわかる
         - $\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
     - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
+        - $\alpha$は小さな正の値
 - データは正解のものをたくさん準備
     - <span style="color:red">訓練データ</span>
 
