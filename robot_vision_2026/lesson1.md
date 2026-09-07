@@ -331,13 +331,12 @@ marp: true
 - 前のページの例: $\boldsymbol{x}$に対して次のような関数になっている
     - $\boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{h} \{ \boldsymbol{h} [ \boldsymbol{h}(\boldsymbol{x}W^{(1)} - \boldsymbol{b}^{(1)}) W^{(2)} - \boldsymbol{b}^{(2)} ]W^{(3)} - \boldsymbol{b}^{(3)} \}$
 $\qquad\qquad\qquad$![w:460](./figs/ann_layer_notation2.png)
-- 一般的な表記
-    - $\boldsymbol{f}(\boldsymbol{x}) =
+- 一般的な表記: $\boldsymbol{f}(\boldsymbol{x}) =
 \boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
 \boldsymbol{f}^{(1)}(\boldsymbol{x})$
-        - $\boldsymbol{f}^{(i)}$: $i$層目のアフィンレイヤと活性化関数層のペアに対応する関数
-            - 注意: アフィンレイヤが別のものに変わることも
+    - $\boldsymbol{f}^{(i)}$: 上の例では$i$層目のアフィンレイヤと活性化関数層のペアに対応する関数
+        - 注意: 別にアフィンレイヤと活性化関数層に分けてもいいし、なんならどんな層でもよい
 - これで任意の関数を表現可能
     - 活性化関数がないと行列の掛け算だけに$\Longrightarrow$非線形の関数が表現できない
 
