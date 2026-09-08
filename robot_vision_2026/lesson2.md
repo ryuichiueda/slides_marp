@@ -106,7 +106,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
-### 計算方法の導出
+### 計算方法の導出（1/3）
 
 とりあえず微分可能として、任意のパラメータ$w$をどう変化させるか考えてみましょう
 
@@ -124,7 +124,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
-### 計算方法の導出（続き）
+### 計算方法の導出（2/3）
 
 - $\boldsymbol{w}$のうち、ある層$m$にあるパラメータ$w$を動かしたい
     - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x}'}\{ f_i(\boldsymbol{x}') - y'_i \}$（$\leftarrow$内積になっている）
@@ -143,7 +143,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
-### 計算方法の導出（続き）
+### 計算方法の導出（3/3）
 
 - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}')$
 $= \left\{ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}'^{(n-1)})\cdots J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}'^{(m+1)})\dfrac{\partial \boldsymbol{f}^{(m)}}{\partial w}\Big|_{\boldsymbol{x}^{(m)}=\boldsymbol{x}'^{(m)}} \right\}^\top \boldsymbol{e}'$ 
@@ -157,6 +157,11 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
     - Step 1: 最終的な誤差のベクトル$\boldsymbol{e}'$に、最終層から$m+1$層までヤコビ行列をかけていく（$m$層の出力の次元の縦ベクトルに。これを$m$層の誤差とする）
     - Step 2: $m$層の誤差に、$m$層を$w$で偏微分した行列をかける（これも$m$層の出力の次元の縦ベクトルになるので、転置してかけるとスカラーになる）
 - <span style="color:red">重みの更新: $w \longleftarrow w - \alpha$($m$層の$w$での偏微分)$^\top$($m$層の誤差)</span>
+
+
+---
+
+### 導出のまとめ
 
 
 ---
