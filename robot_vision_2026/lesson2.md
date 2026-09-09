@@ -106,7 +106,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
-### 計算方法の導出（1/3）
+### 計算方法の導出（1/4）
 
 とりあえず微分可能として、任意のパラメータ$w$をどう変化させるか考えてみましょう
 
@@ -124,12 +124,20 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
-### 計算方法の導出（2/3）
+### 計算方法の導出（2/4）
 
 - $\boldsymbol{w}$（今の値$\boldsymbol{w}'$）のうち、ある層$m$にあるパラメータ$w$を動かしたい
     - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x}',\boldsymbol{w}'}\{ f_i(\boldsymbol{x}') - y'_i \}$（$\leftarrow$内積）
     $= J_{\boldsymbol{f}}(\boldsymbol{x}')^\top (\boldsymbol{f}(\boldsymbol{x}') - \boldsymbol{y}') = J_{\boldsymbol{f}}(\boldsymbol{x}')^\top \boldsymbol{e}'$（$\boldsymbol{e}'$: 誤差のベクトル。縦ベクトル） 
         - $J_{\boldsymbol{f}}(\boldsymbol{x}') = \dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x} = \boldsymbol{x}'} = \left( \dfrac{\partial{f}_1(\boldsymbol{x})}{\partial w} \ \dfrac{\partial{f}_2(\boldsymbol{x})}{\partial w} \dots \dfrac{\partial{f}_k(\boldsymbol{x})}{\partial w} \right)^\top\Big|_{\boldsymbol{x} = \boldsymbol{x}'}$
+
+
+
+---
+
+### 計算方法の導出（3/4）
+
+
 - $J_\boldsymbol{f}(\boldsymbol{x}') =
     \dfrac{\partial
 (\boldsymbol{f}^{(n)}\circ \boldsymbol{f}^{(n-1)}\circ\dots\circ \boldsymbol{f}^{(m)})
@@ -143,7 +151,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 ---
 
-### 計算方法の導出（3/3）
+### 計算方法の導出（4/4）
 
 - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}')$
 $= \left\{ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}'^{(n-1)})\cdots J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}'^{(m+1)})\dfrac{\partial \boldsymbol{f}^{(m)}}{\partial w}\Big|_{\boldsymbol{x}^{(m)}=\boldsymbol{x}'^{(m)}} \right\}^\top \boldsymbol{e}'$ 
