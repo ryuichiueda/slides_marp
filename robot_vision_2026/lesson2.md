@@ -268,8 +268,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
         - 活性化関数の層ではベクトルで考えなくても各要素ごとに考えれば良い
             - $\partial h_i/\partial x_i \cdot e_i$を上に送る
 - $h(x) = (1 + e^{-x})^{-1}$を偏微分（$i$を省略）
-    - $\partial h/\partial x = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})= (1+e^{-x})^{-2}e^{-x}$
-    $= y^2(y^{-1}-1) =$<span style="color:red">$y(1 - y)$</span>
+    - $\partial h/\partial x = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})= -1\cdot y^2(1-y^{-1}) =$<span style="color:red">$y(1 - y)$</span>
         - $x$と$y$のどっちの値を使ってもよいので$y^{-1} = 1+ e^{-x}$を利用して簡略化
 - 送る量: $y(1-y)e$
     - $y$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
