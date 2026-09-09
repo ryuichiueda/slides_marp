@@ -266,6 +266,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
     - ヤコビ行列: $J_\boldsymbol{h}(\boldsymbol{x}) = \text{diag}(\partial h_1/\partial x_1 \ \ \partial h_2/\partial x_2 \ \cdots \ \partial h_n/\partial x_n)$
     - 送る誤差の量: $J_\boldsymbol{h}(\boldsymbol{x}) \boldsymbol{e}= (\partial h_1/\partial x_1 \cdot e_1 \ \ \partial h_2/\partial x_2 \cdot e_2 \ \cdots \ \partial h_n/\partial x_n \cdot e_n)^\top$
         - 活性化関数の層ではベクトルで考えなくても各要素ごとに考えれば良い
+            - $\partial h_i/\partial x_i \cdot e_i$を上に送る
     - $h(x_i) = (1 + e^{-x_i})^{-1}$を偏微分
         - $\dfrac{\partial h}{\partial x_i} = -1\cdot(1 + e^{-x_i})^{-2}(-e^{-x_i})= (1+e^{-x_i})^{-2}e^{-x_i}$
     $= y_i^2(y_i^{-1}-1) =$<span style="color:red">$y_i(1 - y_i)$</span>
