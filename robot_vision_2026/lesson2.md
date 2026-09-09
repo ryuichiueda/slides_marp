@@ -266,10 +266,10 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
         - $\dfrac{\partial f}{\partial x_i} = -1\cdot(1 + e^{-x_i})^{-2}(-e^{-x_i})= (1+e^{-x_i})^{-2}e^{-x_i}$
     $= y_i^2(y_i^{-1}-1) =$<span style="color:red">$y_i(1 - y_i)$</span>
             - $y_i^{-1} = 1+ e^{-x_i}$を利用
-    - $x_i$と$y_i$のどっちの値を使ってもよいので計算しやすい$y_i$を利用
-    - $y_i$の値がどっちつかずの$0.5$のときに一番大きくなる
 - 送る誤差の量: $\text{diag}\big(y_1(1-y_1) \ \ y_2(1-y_2) \ \cdots \ y_n(1-y_n) \big) \boldsymbol{e}$
     $=\big(y_1(1-y_1)e_1 \ \ y_2(1-y_2)e_2 \ \cdots \ y_n(1-y_n)e_n \big)^\top$
+    - $x_i$と$y_i$のどっちの値を使ってもよいので計算しやすい$y_i$を利用
+    - $y_i$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
 
 
 ---
