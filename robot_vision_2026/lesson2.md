@@ -283,15 +283,15 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 - 右図のような活性化関数
 - 各要素に適用する式
     - $h(x) = \begin{cases}
-0 & (x<0) \\
-x & (x \ge 0)
+0 & (x \le 0) \\
+x & (x > 0)
 \end{cases}$
         - $x=0$での微分値は$0$など適当に近似
 - これが2010年代はじめに使われ初めて大規模なANNが収束しだした
 - ReLUの偏微分
     - $\partial h / \partial x= \begin{cases}
-0 & (x<0) \\
-1 & (x \ge 0)
+0 & (x \le 0) \\
+1 & (x > 0)
 \end{cases}$
 
 ![bg right:30% 95%](./figs/relu.png)
