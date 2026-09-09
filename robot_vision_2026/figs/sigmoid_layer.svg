@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 202.19 209.57">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Times-Roman, Times;
+      }
+
+      .cls-1, .cls-2 {
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 1.97 1.97;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 14px;
+      }
+
+      .cls-6 {
+        font-size: 24px;
+      }
+
+      .cls-6, .cls-2 {
+        font-family: Times-Italic, Times;
+        font-style: italic;
+      }
+
+      .cls-7 {
+        letter-spacing: -.48em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.17em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-21 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <line class="cls-4" x1="34.44" y1="22.3" x2="48.11" y2="22.3"/>
+  <line class="cls-4" x1="33.99" y1="111.6" x2="47.65" y2="111.6"/>
+  <rect class="cls-4" x="47.96" y=".5" width="18.78" height="130.25"/>
+  <image width="78" height="115" transform="translate(49.19 136.53) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAB0CAYAAAAvvtTrAAAACXBIWXMAADddAAA3XQEZgEZdAAAFBUlEQVR4nO2dX2iVZRzHP7VdnXCwq47klZG0XWSS/bmoLGZTV6Nmg/5h1pBCYjDI/t9JWEIjqSCQkOiq4qSBNd0y6K9oGtbNLC2vNnZkUjHIK2NdvPuhez3vzvk+53k9Z/D73O31ed734bfPnr+/9xUciatmZ2dnG92IxcTVjW7AYsMDJuIBE/GAiXjARDxgIh4wEQ+YiAdMxAMm4gET8YCJeMBEPGAiHjARD5iIB0zEAybiARPxgIl4wEQ8YCIeMBEPmIgHTKQ15s0mJiYBGDk4Ou96uXx23s9TZ5Ofz/97HoDCNYWk3FR5XrknHnsEgP6H+2I2sy7cMJGouRVbB4cAOHBgtErJ2mhvbwfgxLHDUe4XAzdMJGofFssso+/B3qj3i4EbJhLVsA0b1gFw/PjPALS0JLcvl8uZdRYbbpjIFclA3PbiKwCU9n4u1fvhm0MALFt2XfQ2heKGiUTtw7IYP/mbVN7mX81kluGGieRqmK0tVcOacf5luGEi+Ro2ORlUr1i8NnJL4uGGieRq2NhXXwfV61m/LnJL4uGGieRq2IlffpXKN/P8y3DDRHIxzOZfqmHNPP8y3DCRfAwLnH+1tS2J3JL4uGEiuRgWOv/q36idP1pfmSbPUdYNE8nFsFjzr/1fjAAwMjo277qdGUxPn6t4v1U3rwSguLQIwMDmTQDcuvoWqV2VcMNEou7pW59y5z1rpXoDTz0JQPd9XQBsf/0NQN9Hq8b1y5cD8OaO7UCYcW6YSNQ+7MjRn4LqWZ+358OPaiq/es6M/y5cAGD6XNKXZY2axp9nzgDwyaclAJYWkz5OGVXdMJGohoX2OVmj6pq77wKgf+NDAPQ+0FOxnJm97aVXgeqm2fnoihU3APDMloGa2+qGiUQ1bOTgWPVCC1Cc61Nee/kFINuoNHfcflvQ8348fARww3IlimHWZ9SbpbNreCcQbozVK03sq6n8zMyM/Aw3TCSKYaHzL+PdXcNAuFnG+PhJqXzIvp0bJhLFsND5l60dax0NY7fD5nkKbphIFMPU+Zet3Xa//16Mx7P7gz1hFQM2atwwkboMC51/2dowFqdOnQ6q19nZIddxw0TqMyzw/DE26uhofWj32i75WW6YSF2GXanzxyxCc2htRRFyfumGidRlWKPzv0p7a9uVSNO2JDyHww0TCTIsNP9r86bHQx6Xye+n/wiqZ+egIbhhImGGNXj+ZYarbwAXA84h07hhIkGGlT4LG51izb9CR8ee9d0L/rvldOz/MskaslyMt3buABIz3TCRIMMa/f6jusKw52aNjpaHls7tsPyzqbndGDcsAMmwRr//GPp823/LMjyd4WjYX8aleWRumIhkmDqzj03o+WehUKh4/dhcrmzWfG7rs1suu+aGiUiGffvd90EPqWftdimWQaiS9f7l8NvvVLxuK4JKWT1umIhkWKPnX50d2ilPeu1oo+zg0PPA5X1yOj+tEm6YiGSYZSvXSte9a6Ty1bA3PDo7bgSqG2/npX39jwLZo/zFPutpYOFcDzdMRHoTpNavNJkJ+0of19G06nR13w+Ej54hObVumEjQu0Y9vcm+1l9//wNAa2sLcPG8b2jwOSD/rwPYqDd2KNm9sF0H2xFOfyHPvqC3auVNgJY9bbhhInW9zWa/4Wb9zkQe7XPDRPx/YRZxw0Q8YCIeMBEPmIgHTMQDJuIBE/GAiXjARDxgIh4wEQ+YyP+ALo3/H2Lt0QAAAABJRU5ErkJggg=="/>
+  <line class="cls-4" x1="67.41" y1="22.3" x2="91.68" y2="22.3"/>
+  <line class="cls-4" x1="67.3" y1="111.6" x2="91.8" y2="111.6"/>
+  <g>
+    <line class="cls-4" x1="61.79" y1="112.52" x2="62.49" y2="113.23"/>
+    <line class="cls-3" x1="63.88" y1="114.63" x2="99.1" y2="150.27"/>
+    <line class="cls-4" x1="99.79" y1="150.97" x2="100.5" y2="151.68"/>
+  </g>
+  <text class="cls-5" transform="translate(67.51 171.23)"><tspan class="cls-13" x="0" y="0">それ</tspan><tspan x="27.44" y="0">ぞれ</tspan><tspan class="cls-21" x="55.44" y="0">に</tspan><tspan class="cls-9" x="69.3" y="0">対</tspan><tspan class="cls-10" x="81.9" y="0">し</tspan><tspan class="cls-16" x="94.36" y="0">て</tspan><tspan class="cls-8" x="-.14" y="16.8">シ</tspan><tspan class="cls-19" x="12.6" y="16.8">グ</tspan><tspan class="cls-17" x="26.46" y="16.8">モ</tspan><tspan class="cls-12" x="40.04" y="16.8">イ</tspan><tspan class="cls-13" x="51.66" y="16.8">ド</tspan><tspan x="65.38" y="16.8">関</tspan><tspan class="cls-13" x="79.38" y="16.8">数を</tspan><tspan x="106.82" y="16.8">通</tspan><tspan class="cls-20" x="120.82" y="16.8">す</tspan><tspan class="cls-13" x="-6.44" y="33.6">（</tspan><tspan x="7.28" y="33.6">0~1</tspan><tspan class="cls-15" x="32.14" y="33.6">の</tspan><tspan class="cls-11" x="45.58" y="33.6">ア</tspan><tspan class="cls-14" x="58.46" y="33.6">ナ</tspan><tspan class="cls-8" x="71.76" y="33.6">ロ</tspan><tspan x="84.5" y="33.6">グ値</tspan><tspan class="cls-18" x="112.5" y="33.6">に</tspan><tspan class="cls-7" x="126.08" y="33.6">）</tspan></text>
+  <line class="cls-4" x1="33.99" y1="62.44" x2="47.65" y2="62.44"/>
+  <text class="cls-5" transform="translate(61.79 92.65) rotate(-90)"><tspan x="0" y="0">sigmoid</tspan></text>
+  <line class="cls-4" x1="67.04" y1="62.44" x2="91.68" y2="62.44"/>
+  <text class="cls-6" transform="translate(11.03 29.99)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-1" transform="translate(20.83 33.93)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-6" transform="translate(11.04 66.31)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-1" transform="translate(20.83 70.25)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-6" transform="translate(11.04 116.31)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-2" transform="translate(20.83 120.25)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-6" transform="translate(19.83 96.65) rotate(-90)"><tspan x="0" y="0">...</tspan></text>
+  <text class="cls-6" transform="translate(96.21 30.15)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-1" transform="translate(106.01 34.09)"><tspan x="0" y="0">1</tspan></text>
+  <text class="cls-6" transform="translate(96.22 66.47)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-1" transform="translate(106.02 70.42)"><tspan x="0" y="0">2</tspan></text>
+  <text class="cls-6" transform="translate(96.22 116.47)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-2" transform="translate(106.02 120.42)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-6" transform="translate(105.01 96.82) rotate(-90)"><tspan x="0" y="0">...</tspan></text>
+</svg>
