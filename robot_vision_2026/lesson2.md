@@ -254,7 +254,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
     - 緑はこれまでのステップ関数
     ![w:300](../machine_learning_2026/figs/sigmoid.png)
 
-![bg right:30% 100%](./figs/sigmoid_layer.svg)
+![bg right:25% 100%](./figs/sigmoid_layer.svg)
 
 ---
 
