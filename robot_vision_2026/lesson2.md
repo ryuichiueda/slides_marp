@@ -260,16 +260,17 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ### 活性化関数の層の誤差逆伝播（シグモイドの場合2/2）
 
-- シグモイド関数について、上流に送る誤差を計算してみましょう
-    - $J_\boldsymbol{h}(\boldsymbol{x}) = \text{diag}(\partial h_1/\partial x_1 \ \ \partial h_2/\partial x_2 \ \cdots \ \partial h_n/\partial x_n)$
+シグモイド関数について、上流に送る誤差を計算してみましょう
+
+- 前提
+    - ヤコビ行列: $J_\boldsymbol{h}(\boldsymbol{x}) = \text{diag}(\partial h_1/\partial x_1 \ \ \partial h_2/\partial x_2 \ \cdots \ \partial h_n/\partial x_n)$
+    - 送る誤差の量: $J_\boldsymbol{h}(\boldsymbol{x}) \boldsymbol{e}= (\partial h_1/\partial x_1 \cdot e_1 \ \ \partial h_2/\partial x_2 \cdot e_2 \ \cdots \ \partial h_n/\partial x_n \cdot e_n)^\top$
+        - 活性化関数の層ではベクトルで考えなくても各要素ごとに考えれば良い
     - $h(x_i) = (1 + e^{-x_i})^{-1}$を偏微分
         - $\dfrac{\partial h}{\partial x_i} = -1\cdot(1 + e^{-x_i})^{-2}(-e^{-x_i})= (1+e^{-x_i})^{-2}e^{-x_i}$
     $= y_i^2(y_i^{-1}-1) =$<span style="color:red">$y_i(1 - y_i)$</span>
             - $y_i^{-1} = 1+ e^{-x_i}$を利用
             - $x_i$と$y_i$のどっちの値を使ってもよいので計算しやすい$y_i$を利用
-- 送る誤差の量: $\text{diag}\big(y_1(1-y_1) \ \ y_2(1-y_2) \ \cdots \ y_n(1-y_n) \big) \boldsymbol{e}$
-    $=\big(y_1(1-y_1)e_1 \ \ y_2(1-y_2)e_2 \ \cdots \ y_n(1-y_n)e_n \big)^\top$
-    - わざわざベクトルで考えなくても各要素ごとに考えれば良い
     - $y_i$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
 
 
