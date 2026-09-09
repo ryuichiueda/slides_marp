@@ -157,7 +157,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})
 J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}^{(n-1)})
 \cdots
 J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})
-\dfrac{\partial}{\partial w}\boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
+\dfrac{\partial\boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})}{\partial w}$
     - ここで$J_{\boldsymbol{f}^{(a)}}(\boldsymbol{x}^{(a)}) = \dfrac{\partial \boldsymbol{f}^{(a)}(\boldsymbol{x}^{(a)})}{\partial \boldsymbol{x}^{(a)}}$（上の式では分母のカッコを省略）
 
 
@@ -165,10 +165,10 @@ J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})
 
 ### 計算方法の導出（4/4）
 
-- $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}')$
-$= \left\{ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}'^{(n-1)})\cdots J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}'^{(m+1)})\dfrac{\partial \boldsymbol{f}^{(m)}}{\partial w}\Big|_{\boldsymbol{x}^{(m)}=\boldsymbol{x}'^{(m)}} \right\}^\top \boldsymbol{e}'$ 
+- $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y})$
+$= \left\{ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}^{(n-1)})\cdots J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})\dfrac{\partial \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})}{\partial w}\right\}^\top \boldsymbol{e}$ 
 $=
-\dfrac{\partial \boldsymbol{f}^{(m)}}{\partial w}^\top\Big|_{\boldsymbol{x}^{(m)}=\boldsymbol{x}'^{(m)}}
+\dfrac{\partial \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})}{\partial w}^\top
 J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}'^{(m+1)})^\top
 \cdots
 J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
