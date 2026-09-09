@@ -118,16 +118,18 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
         - $\boldsymbol{y}^{(m)} = \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
             - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
 - 損失関数を定義
-    - $\mathcal{L}(\boldsymbol{w}| \boldsymbol{x}',\boldsymbol{y}') = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x}') - y'_i \}^2$
+    - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x}) - y_i \}^2$
+        - $\boldsymbol{w}$: パラメータを並べたベクトル。ある時点である値が入っている。
         - $f_i$: $\boldsymbol{f}$の$i$番目の要素
         - $1/2$は計算の都合でつけただけ
+        - あとから教示データの入出力ペア$(\boldsymbol{x}', \boldsymbol{y}')$を代入すると値が確定
 
 ---
 
 ### 計算方法の導出（2/4）
 
-- $\boldsymbol{w}$（今の値$\boldsymbol{w}'$）のうち、ある層$m$にあるパラメータ$w$を動かしたい
-    - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x}',\boldsymbol{w}'}\{ f_i(\boldsymbol{x}') - y'_i \}$（$\leftarrow$内積）
+- $\boldsymbol{w}$のうち、ある層$m$にあるパラメータ$w$を動かしたい
+    - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}, \boldsymbol{y}) = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x},\boldsymbol{w}}\{ f_i(\boldsymbol{x}) - y_i \}$（$\leftarrow$内積）
     $= J_{\boldsymbol{f}}(\boldsymbol{x}')^\top (\boldsymbol{f}(\boldsymbol{x}') - \boldsymbol{y}') = J_{\boldsymbol{f}}(\boldsymbol{x}')^\top \boldsymbol{e}'$（$\boldsymbol{e}'$: 誤差のベクトル。縦ベクトル） 
         - $J_{\boldsymbol{f}}(\boldsymbol{x}') = \dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}\Big|_{\boldsymbol{x} = \boldsymbol{x}'} = \left( \dfrac{\partial{f}_1(\boldsymbol{x})}{\partial w} \ \dfrac{\partial{f}_2(\boldsymbol{x})}{\partial w} \dots \dfrac{\partial{f}_k(\boldsymbol{x})}{\partial w} \right)^\top\Big|_{\boldsymbol{x} = \boldsymbol{x}'}$
 
@@ -136,7 +138,6 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 ---
 
 ### 計算方法の導出（3/4）
-
 
 - $J_\boldsymbol{f}(\boldsymbol{x}') =
     \dfrac{\partial
