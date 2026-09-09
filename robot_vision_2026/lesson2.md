@@ -127,7 +127,8 @@ $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
 
 ### 計算方法の導出（2/4）
 
-- $\boldsymbol{w}$のうち、ある層$m$にあるパラメータ$w$を動かしたい
+$\boldsymbol{w}$のうち、ある層$m$にあるパラメータ$w$を動かしたい
+
 - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y}) = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x} | \boldsymbol{w})}{\partial w}\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}$（$\leftarrow$内積）
 $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y})=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  \boldsymbol{e}$
     - $\boldsymbol{e} = \boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y}$: 誤差のベクトル。縦ベクトルとしましょう
@@ -144,7 +145,7 @@ $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol
 \dfrac{\partial
 (\boldsymbol{f}^{(n)}\circ \boldsymbol{f}^{(n-1)}\circ\dots\circ \boldsymbol{f}^{(m)})
 (\boldsymbol{x}^{(m)})}{\partial w}$
-- $\uparrow w$の存在する$m$層目の入力$\boldsymbol{x}^{(m)}$から後段の層だけ考える
+    - $\uparrow w$の存在する$m$層目の入力$\boldsymbol{x}^{(m)}$から後段の層だけ考える
 - $= \dfrac{\partial \boldsymbol{f}^{(n)}}{\partial \boldsymbol{x}^{(n)}} \dfrac{\partial (\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})(\boldsymbol{x}^{(m)}) }{\partial w}$
     - $\uparrow \boldsymbol{x}^{(n)} = \boldsymbol{y}^{(n-1)} = (\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})(\boldsymbol{x}^{(m)})$
 - $= 
@@ -173,9 +174,9 @@ J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})^\top
 J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 \boldsymbol{e}$ 
 - $w$の更新は次のように可能
-- Step 1: 誤差のベクトル$\boldsymbol{e}$に、最終層から$m+1$層までヤコビ行列をかけていく（$m$層の出力の次元の縦ベクトルに。これを$m$層の誤差とする）
-    - 各ヤコビ行列の値は各層の入出力の値で決まる
-- Step 2: <span style="color:red">$w \longleftarrow w - \alpha$($m$層の$w$での偏微分)$^\top$($m$層の誤差)</span>
+    - Step 1: 誤差のベクトル$\boldsymbol{e}$に、最終層から$m+1$層までヤコビ行列をかけていく（$m$層の出力の次元の縦ベクトルに。これを$m$層の誤差とする）
+        - 各ヤコビ行列の値は各層の入出力の値で決まる
+    - Step 2: <span style="color:red">$w \longleftarrow w - \alpha$($m$層の$w$での偏微分)$^\top$($m$層の誤差)</span>
 
 
 ---
