@@ -240,7 +240,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
         \end{pmatrix} = W$
 
 
-<img width=400 src="./figs/back_propagation_affine.svg" />
+<img align=right width=400 src="./figs/back_propagation_affine.svg" />
 
 ---
 
