@@ -244,7 +244,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 閾値処理の層の誤差逆伝播（1/2）
+### 閾値処理の層の誤差逆伝播（シグモイドの場合1/2）
 
 - 伝統的な方法: シグモイド関数を使って微分可能に
     - $y_i = f_i(x_i) = \dfrac{1}{1 + e^{-x_i}}$
@@ -258,7 +258,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 閾値処理の層の誤差逆伝播（2/2）
+### 閾値処理の層の誤差逆伝播（シグモイドの場合2/2）
 
 - シグモイド関数について、上流に送る誤差を計算してみましょう
     - $J_\boldsymbol{f}(\boldsymbol{x}) = \text{diag}(\partial f_1/\partial x_1 \ \ \partial f_2/\partial x_2 \ \cdots \ \partial f_n/\partial x_n)$
@@ -271,6 +271,20 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
     - $x_i$と$y_i$のどっちの値を使ってもよいので計算しやすい$y_i$を利用
     - $y_i$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
 
+
+---
+
+### 閾値処理の層の誤差逆伝播（ReLU 1/2）
+
+
+- ReLU（Rectified Liner Unit。右図赤線）
+    - $h(x) = \begin{cases}
+0 & (x<0) \\
+x & (x \ge 0)
+\end{cases}$
+            - $x=0$での微分値は$0$など適当に近似
+
+![bg right:30% 95%](./figs/relu.png)
 
 ---
 
@@ -359,25 +373,6 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ![bg right:30% 90%](../machine_learning_2026/figs/simple_ann_learning_modify2.png)
 
 
----
-
-### 活性化関数層のバリエーション
-
-- 先ほどの簡単な例なら$\boldsymbol{h}$はステップ関数で十分
-- 学習が必要なもの、複雑なものになると不十分
-    - $0$と$1$しか出力できない（表現力が乏しい）
-    - 微分できない
-- $\boldsymbol{h}$として使われる基本的なもの
-    - シグモイド関数（右図青線）
-        - $h(x) = \dfrac{1}{1 + e^{-x}}$
-    - ReLU（Rectified Liner Unit。右図赤線）
-        - $h(x) = \begin{cases}
-0 & (x<0) \\
-x & (x \ge 0)
-\end{cases}$
-            - $x=0$での微分値は$0$など適当に近似
-
-![bg right:30% 95%](./figs/relu.png)
 
 
 ---
