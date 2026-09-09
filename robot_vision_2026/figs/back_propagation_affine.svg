@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.91 172.93">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-style: italic;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: TimesNewRomanPS-BoldItalicMT, 'Times New Roman';
+        font-weight: 700;
+      }
+
+      .cls-4, .cls-5 {
+        font-size: 16px;
+      }
+
+      .cls-4, .cls-6 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-7 {
+        font-family: Symbol, Symbol;
+      }
+
+      .cls-8, .cls-3 {
+        font-size: 20px;
+      }
+
+      .cls-9 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-10, .cls-11 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        fill: #231815;
+      }
+
+      .cls-11 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-10" x="81.45" y="42.17" width="89.39" height="130.25"/>
+  <line class="cls-10" x1="170.84" y1="97.3" x2="230" y2="97.3"/>
+  <g>
+    <line class="cls-11" x1="230.52" y1="32.07" x2="188.19" y2="32.07"/>
+    <path d="M175.51,32.07c5.96-2.21,13.36-5.99,17.95-9.99l-3.61,9.99,3.61,9.99c-4.59-4-11.99-7.77-17.95-9.99Z"/>
+  </g>
+  <g>
+    <line class="cls-11" x1="77.89" y1="32.07" x2="41.25" y2="32.07"/>
+    <path d="M28.58,32.07c5.96-2.21,13.36-5.99,17.95-9.99l-3.61,9.99,3.61,9.99c-4.59-4-11.99-7.77-17.95-9.99Z"/>
+  </g>
+  <text class="cls-4" transform="translate(188.8 15.24)"><tspan x="0" y="0">誤差 </tspan></text>
+  <text class="cls-5" transform="translate(38.83 14.08)"><tspan class="cls-6" x="0" y="0">誤差</tspan><tspan class="cls-7" x="32" y="0"> </tspan></text>
+  <text class="cls-8" transform="translate(90.59 102.16)"><tspan class="cls-2" x="0" y="0">y </tspan><tspan class="cls-9" x="13.88" y="0">=</tspan><tspan class="cls-1" x="25.16" y="0">W</tspan><tspan class="cls-2" x="41.82" y="0">x</tspan><tspan class="cls-7" x="51.82" y="0">-</tspan><tspan class="cls-2" x="62.79" y="0">b</tspan></text>
+  <text class="cls-3" transform="translate(.92 101.67)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-3" transform="translate(251.03 101.67)"><tspan x="0" y="0">y</tspan></text>
+  <line class="cls-10" x1="170.84" y1="63.09" x2="230" y2="63.09"/>
+  <line class="cls-10" x1="170.84" y1="152.39" x2="230" y2="152.39"/>
+  <text class="cls-3" transform="translate(203.01 129.24) rotate(-90)"><tspan x="0" y="0">...</tspan></text>
+  <line class="cls-10" x1="22.29" y1="91.21" x2="81.45" y2="91.21"/>
+  <line class="cls-10" x1="22.29" y1="57" x2="81.45" y2="57"/>
+  <line class="cls-10" x1="22.29" y1="146.3" x2="81.45" y2="146.3"/>
+  <text class="cls-3" transform="translate(54.46 123.14) rotate(-90)"><tspan x="0" y="0">...</tspan></text>
+  <line class="cls-10" x1="21.92" y1="74.1" x2="81.08" y2="74.1"/>
+</svg>

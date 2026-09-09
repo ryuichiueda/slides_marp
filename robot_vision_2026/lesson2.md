@@ -217,11 +217,30 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b}$
     - 注意: $\boldsymbol{x}$と$\boldsymbol{y}$が縦ベクトル（前回と逆）
         - 式全体を転置すると前回の式に（$\boldsymbol{x}$と$W$の位置が入れ替わる）
-- 行列の計算に
-    - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
+- $J_\boldsymbol{f}(\boldsymbol{x})$を求める
+    - いきなり計算してもいいのですが、確認のために$2\times 2$の場合で考えましょう
+        - $\boldsymbol{f}(\boldsymbol{x}) =
+        \begin{pmatrix}
+        w_{11} \ w_{12} \\
+        w_{12} \ w_{22}
+        \end{pmatrix}
+        \begin{pmatrix}
+        x_{1} \\ x_{2} 
+        \end{pmatrix} - \boldsymbol{b}
+        =
+        \begin{pmatrix}
+        w_{11}x_1 + w_{12}x_2 \\
+        w_{12}x_1 +  w_{22}x_2
+        \end{pmatrix} - \boldsymbol{b}
+        $
+        - $J_\boldsymbol{f}(\boldsymbol{x}) = 
+        \begin{pmatrix}
+        \partial f_1/\partial x_1  \  \partial f_1/\partial x_2 \\
+        \partial f_2/\partial x_1 \ \partial f_2/\partial x_2
+        \end{pmatrix} = W$
 
 
-![bg right:35% 90%](../machine_learning_2026/figs/back_propagation_affine.svg)
+<img width=400 src="./figs/back_propagation_affine.svg" />
 
 ---
 
