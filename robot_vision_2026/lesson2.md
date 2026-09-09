@@ -175,6 +175,13 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
 
 
 - 出力側の誤差をどんどん入力側に送っていく
+    - 第$a$層が$a-1$層に送る誤差: $\boldsymbol{e}'^{(a-1)} = J_\boldsymbol{f}^{(a)}(\boldsymbol{x}'^{(a)})^\top \boldsymbol{e}'^{(a)}$
+$=
+\dfrac{\partial \boldsymbol{f}^{(m)}}{\partial w}^\top\Big|_{\boldsymbol{x}^{(m)}=\boldsymbol{x}'^{(m)}}
+J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}'^{(m+1)})^\top
+\cdots
+J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
+\boldsymbol{e}'$ 
 
 <center><img width=700 src="../machine_learning_2026/figs/back_propagation.png" /></center>
 
