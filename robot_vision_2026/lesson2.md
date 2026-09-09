@@ -269,7 +269,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
             - $\partial h_i/\partial x_i \cdot e_i$を上に送る
 - $h(x) = (1 + e^{-x})^{-1}$を偏微分（$i$を省略）
     - $\partial h/\partial x = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})= -1\cdot y^2(1-y^{-1}) =$<span style="color:red">$y(1 - y)$</span>
-        - 入出力どっちの値を使ってもよいので$y^{-1} = 1+ e^{-x}$を利用して簡略化
+        - 入出力値のどっちを使ってもよいので$y^{-1} = 1+ e^{-x}$を利用して簡略化
 - 送る量: $y(1-y)e$
     - $y$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
 
