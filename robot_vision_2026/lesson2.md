@@ -282,7 +282,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 0 & (x<0) \\
 x & (x \ge 0)
 \end{cases}$
-            - $x=0$での微分値は$0$など適当に近似
+        - $x=0$での微分値は$0$など適当に近似
 
 ![bg right:30% 95%](./figs/relu.png)
 
