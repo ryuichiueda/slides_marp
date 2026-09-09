@@ -28,9 +28,9 @@ marp: true
 ### 前回残った問題: どう学習するか?
 
 - 動物は生まれたときにある程度プログラミングされた状態だが・・・
-- そのあと成長しても神経細胞は基本的に増えない
-- 猫を識別するにはニューラルネットワークに変更を加えないといけない
-- 頭を開けて配線するわけにはいかない
+    - そのあと成長しても神経細胞は基本的に増えない
+    - 猫を識別するにはニューラルネットワークに変更を加えないといけない
+    - 頭を開けて配線するわけにはいかない
 
 <center style="color:red">どうやるの?</center>
 
@@ -39,12 +39,12 @@ marp: true
 ### 学習の方法: パラメータを変える
 
 - 例題: $x_1 + 2 x_2 + 3 x_3 \ge 3$なら$1$を出力、そうでなければ$0$を出力するように人工ニューロンを学習させたい
-- 最初、パラメータはあてずっぽ（右図上）
+    - 最初、パラメータはあてずっぽ（右図上）
 - 基本的な方法
-1. 何か入力して出力と正解の「<span style="color:red">ずれ</span>」を観測する
-    - 例えば上のニューロンに$(x_1, x_2, x_3) = (1, 0, 0)$を入れると$1$が出てくる（$0$が出てきてほしいのに）
-2. ずれを小さくするようにパラメータを変える
-    - この場合はたとえば$w_1 = 1.9$とすると$0$に
+    1. 何か入力して出力と正解の「<span style="color:red">ずれ</span>」を観測する
+        - 例えば上のニューロンに$(x_1, x_2, x_3) = (1, 0, 0)$を入れると$1$が出てくる（$0$が出てきてほしいのに）
+    2. ずれを小さくするようにパラメータを変える
+        - この場合はたとえば$w_1 = 1.9$とすると$0$に
 
 これを全ニューロンに対してやる
 
@@ -54,15 +54,15 @@ marp: true
 
 ### ずれ: <span style="color:red">損失関数</span>
 
-- 損失関数の定義$\mathcal{L}(w_{1:n} |$データ$)$
-- $w_{1:n}$: パラメータ（前ページの例の場合は$b$も$w_4$などにして含める）
+- 損失関数の定義$\mathcal{L}(\boldsymbol{w} |$データ$)$
+    - $\boldsymbol{w}$: パラメータを並べたベクトル（$b$も要素にして含める）
 - ずれの減らし方
-- 損失関数を微分すると増える方向がわかる
-    - $\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
-- <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
-    - $\alpha$は小さな正の値
-- データは正解のものをたくさん準備
-- <span style="color:red">訓練データ</span>
+    - 損失関数を微分すると増える方向がわかる
+        - $\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
+    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
+        - $\alpha$は小さな正の値
+    - データは正解のものをたくさん準備
+        - <span style="color:red">訓練データ</span>
 
 ---
 
