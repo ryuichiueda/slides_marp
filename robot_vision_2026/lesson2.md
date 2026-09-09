@@ -244,9 +244,9 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 閾値処理の層の誤差逆伝播（シグモイドの場合1/2）
+### 活性化関数の層の誤差逆伝播（シグモイドの場合1/2）
 
-- 伝統的な方法: シグモイド関数を使って微分可能に
+- 微分可能にする伝統的な方法: シグモイド関数の利用
     - $y_i = h_i(x_i) = \dfrac{1}{1 + e^{-x_i}}$
         - $i=1,2,\dots,n$（$n$: 入出力の次元）
     - $\boldsymbol{h}(\boldsymbol{x}) = (h_1(x_1)\  \ h_2(x_2) \  \dots \ h_n(x_n))^\top$
@@ -258,7 +258,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 閾値処理の層の誤差逆伝播（シグモイドの場合2/2）
+### 活性化関数の層の誤差逆伝播（シグモイドの場合2/2）
 
 - シグモイド関数について、上流に送る誤差を計算してみましょう
     - $J_\boldsymbol{h}(\boldsymbol{x}) = \text{diag}(\partial h_1/\partial x_1 \ \ \partial h_2/\partial x_2 \ \cdots \ \partial h_n/\partial x_n)$
@@ -266,9 +266,10 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
         - $\dfrac{\partial h}{\partial x_i} = -1\cdot(1 + e^{-x_i})^{-2}(-e^{-x_i})= (1+e^{-x_i})^{-2}e^{-x_i}$
     $= y_i^2(y_i^{-1}-1) =$<span style="color:red">$y_i(1 - y_i)$</span>
             - $y_i^{-1} = 1+ e^{-x_i}$を利用
+            - $x_i$と$y_i$のどっちの値を使ってもよいので計算しやすい$y_i$を利用
 - 送る誤差の量: $\text{diag}\big(y_1(1-y_1) \ \ y_2(1-y_2) \ \cdots \ y_n(1-y_n) \big) \boldsymbol{e}$
     $=\big(y_1(1-y_1)e_1 \ \ y_2(1-y_2)e_2 \ \cdots \ y_n(1-y_n)e_n \big)^\top$
-    - $x_i$と$y_i$のどっちの値を使ってもよいので計算しやすい$y_i$を利用
+    - わざわざベクトルで考えなくても各要素ごとに考えれば良い
     - $y_i$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
 
 
@@ -284,6 +285,7 @@ x & (x \ge 0)
 \end{cases}$
         - $x=0$での微分値は$0$など適当に近似
 - これが2010年代はじめに使われ初めて大規模なANNが収束しだした
+- ReLUの偏微分
 
 ![bg right:30% 95%](./figs/relu.png)
 
