@@ -276,7 +276,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 活性化関数の層の誤差逆伝播（ReLU 1/2）
+### 活性化関数の層の誤差逆伝播（ReLU）
 
 
 - ReLU: Rectified Liner Unit
@@ -293,6 +293,7 @@ x & (x > 0)
 0 & (x \le 0) \\
 1 & (x > 0)
 \end{cases}$
+- 誤差逆伝播: $e$が正ならそのまま送り、負なら0を送る
 
 ![bg right:30% 95%](./figs/relu.png)
 
