@@ -120,7 +120,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 - 損失関数を定義
     - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x}) - y_i \}^2$
         - $\boldsymbol{w}$: パラメータを並べたベクトル。ある時点である値が入っている。
-        - $f_i$: $\boldsymbol{f}$の$i$番目の要素
+        - $f_i, y_i$: それぞれ$\boldsymbol{f}, \boldsymbol{y}$の$i$番目の要素
         - $1/2$は計算の都合でつけただけ
         - あとから教示データの入出力ペア$(\boldsymbol{x}', \boldsymbol{y}')$を代入すると値が確定
 
