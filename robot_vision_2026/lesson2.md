@@ -281,6 +281,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 - ReLU: Rectified Liner Unit
 - 右図のような活性化関数
+- 各要素に適用する式
     - $h(x) = \begin{cases}
 0 & (x<0) \\
 x & (x \ge 0)
