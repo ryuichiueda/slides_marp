@@ -130,7 +130,9 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 
 - $\boldsymbol{w}$のうち、ある層$m$にあるパラメータ$w$を動かしたい
     - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y}) = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x} | \boldsymbol{w})}{\partial w}\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}$（$\leftarrow$内積）
-    $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y}) = J_{\boldsymbol{f}}(\boldsymbol{x})^\top \boldsymbol{e}$（$\boldsymbol{e}$: 誤差のベクトル。縦ベクトル） 
+    $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y})=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  \boldsymbol{e}$
+        - $\boldsymbol{e} = \boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y}$: 誤差のベクトル。縦ベクトルとしましょう
+        - $\boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$は$\boldsymbol{f}(\boldsymbol{x})$と省略
         - $\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}= \left( \dfrac{\partial{f}_1(\boldsymbol{x})}{\partial w} \ \dfrac{\partial{f}_2(\boldsymbol{x})}{\partial w} \dots \dfrac{\partial{f}_k(\boldsymbol{x})}{\partial w} \right)^\top$
 
 
