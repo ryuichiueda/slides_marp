@@ -175,8 +175,6 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
 
 
 - 出力側の誤差をどんどん入力側に送っていく
-    - 送られてきた誤差が小さくなるように各層のパラメータを変える
-        - <span style="color:red">各層で偏微分しても計算が成立</span>
 
 <center><img width=700 src="../machine_learning_2026/figs/back_propagation.png" /></center>
 
