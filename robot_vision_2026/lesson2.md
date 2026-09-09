@@ -196,7 +196,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 
 - 出力側の誤差をどんどん入力側に送っていく
-    - 第$a$層が$a-1$層に送る誤差: $\boldsymbol{e}'^{(a-1)} = J_\boldsymbol{f}^{(a)}(\boldsymbol{x}'^{(a)})^\top \boldsymbol{e}'^{(a)}$
+    - 第$a$層が$a-1$層に送る誤差: $\boldsymbol{e}^{(a-1)} = J_\boldsymbol{f}^{(a)}(\boldsymbol{x}^{(a)})^\top \boldsymbol{e}^{(a)}$
 
 <center><img width=700 src="../machine_learning_2026/figs/back_propagation.png" /></center>
 
