@@ -276,10 +276,11 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 閾値処理の層の誤差逆伝播（ReLU 1/2）
+### 活性化関数の層の誤差逆伝播（ReLU 1/2）
 
 
-- ReLU（Rectified Liner Unit。右図赤線）
+- ReLU: Rectified Liner Unit
+- 右図のような活性化関数
     - $h(x) = \begin{cases}
 0 & (x<0) \\
 x & (x \ge 0)
