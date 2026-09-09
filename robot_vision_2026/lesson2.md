@@ -289,6 +289,10 @@ x & (x \ge 0)
         - $x=0$での微分値は$0$など適当に近似
 - これが2010年代はじめに使われ初めて大規模なANNが収束しだした
 - ReLUの偏微分
+    - $\partial h / \partial x= \begin{cases}
+0 & (x<0) \\
+1 & (x \ge 0)
+\end{cases}$
 
 ![bg right:30% 95%](./figs/relu.png)
 
