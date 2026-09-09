@@ -247,9 +247,9 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ### 閾値処理の層の誤差逆伝播（シグモイドの場合1/2）
 
 - 伝統的な方法: シグモイド関数を使って微分可能に
-    - $y_i = f_i(x_i) = \dfrac{1}{1 + e^{-x_i}}$
+    - $y_i = h_i(x_i) = \dfrac{1}{1 + e^{-x_i}}$
         - $i=1,2,\dots,n$（$n$: 入出力の次元）
-    - $\boldsymbol{f}(\boldsymbol{x}) = (f_1(x_1)\  \ f_2(x_2) \  \dots \ f_n(x_n))^\top$
+    - $\boldsymbol{h}(\boldsymbol{x}) = (h_1(x_1)\  \ h_2(x_2) \  \dots \ h_n(x_n))^\top$
 - 下図青線: シグモイド関数のグラフ
     - 緑はこれまでのステップ関数
     ![w:300](../machine_learning_2026/figs/sigmoid.png)
@@ -261,9 +261,9 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ### 閾値処理の層の誤差逆伝播（シグモイドの場合2/2）
 
 - シグモイド関数について、上流に送る誤差を計算してみましょう
-    - $J_\boldsymbol{f}(\boldsymbol{x}) = \text{diag}(\partial f_1/\partial x_1 \ \ \partial f_2/\partial x_2 \ \cdots \ \partial f_n/\partial x_n)$
-    - $f(x_i) = (1 + e^{-x_i})^{-1}$を偏微分
-        - $\dfrac{\partial f}{\partial x_i} = -1\cdot(1 + e^{-x_i})^{-2}(-e^{-x_i})= (1+e^{-x_i})^{-2}e^{-x_i}$
+    - $J_\boldsymbol{h}(\boldsymbol{x}) = \text{diag}(\partial h_1/\partial x_1 \ \ \partial h_2/\partial x_2 \ \cdots \ \partial h_n/\partial x_n)$
+    - $h(x_i) = (1 + e^{-x_i})^{-1}$を偏微分
+        - $\dfrac{\partial h}{\partial x_i} = -1\cdot(1 + e^{-x_i})^{-2}(-e^{-x_i})= (1+e^{-x_i})^{-2}e^{-x_i}$
     $= y_i^2(y_i^{-1}-1) =$<span style="color:red">$y_i(1 - y_i)$</span>
             - $y_i^{-1} = 1+ e^{-x_i}$を利用
 - 送る誤差の量: $\text{diag}\big(y_1(1-y_1) \ \ y_2(1-y_2) \ \cdots \ y_n(1-y_n) \big) \boldsymbol{e}$
