@@ -252,7 +252,6 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 - 下図青線: シグモイド関数のグラフ
     - 緑はこれまでのステップ関数
     ![w:300](../machine_learning_2026/figs/sigmoid.png)
-    - 注意: 現在は本来は微分できない関数も使用されることがある
 
 ![bg right:30% 100%](../machine_learning_2026/figs/sigmoid_layer.png)
 
