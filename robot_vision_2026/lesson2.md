@@ -214,7 +214,9 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ### 多入力・多出力のアフィンレイヤーの場合
 
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b}$
+    - 注意: $\boldsymbol{x}$と$\boldsymbol{y}$が縦ベクトルなので前回と違います
+        - 式全体を転置すると前回の式に（$\boldsymbol{x}$と$W$の位置が入れ替わる）
 - 行列の計算に
     - <span style="color:red">$\Delta\mathcal{L}_\boldsymbol{x} = \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{x}} = \Delta\mathcal{L}_\boldsymbol{y} W^\top$</span>
 
