@@ -248,6 +248,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 - 伝統的な方法: シグモイド関数を使って微分可能に
     - $y_i = f_i(x_i) = \dfrac{1}{1 + e^{-x_i}}$
+        - $i=1,2,\dots,n$（$n$: 入出力の次元）
 - 下図青線: シグモイド関数のグラフ
     - 緑はこれまでのステップ関数
     ![w:300](../machine_learning_2026/figs/sigmoid.png)
