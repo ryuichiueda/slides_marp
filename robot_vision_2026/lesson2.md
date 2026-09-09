@@ -261,7 +261,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ### 閾値処理の層の誤差逆伝播（2/2）
 
 - シグモイド関数について、上流に送る誤差を計算してみましょう
-    - $J_\boldsymbol{f}$
+    - $J_\boldsymbol{f} = \text{diag}(\partial f_1/\partial x_1 \ \partial f_2/\partial x_2 \cdots \partial f_n/\partial x_n)$
     - $y_i = f(x_i) = (1 + e^{-x_i})^{-1}$
     - 上流に送る誤差（再掲）: $\Delta\mathcal{L}_x = \dfrac{\partial f}{\partial x}\Delta\mathcal{L}_y$
 - $f$を（偏）微分してみましょう
