@@ -58,8 +58,8 @@ marp: true
     - $\boldsymbol{w}$: パラメータを並べたベクトル（$b$も要素にして含める）
 - ずれの減らし方
     - 損失関数を微分すると増える方向がわかる
-        - $\nabla \mathcal{L}(w_{1:n} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
-    - <span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n}|$データ$)$</span>でパラメータを変更
+        - $\nabla \mathcal{L}(\boldsymbol{w} |$データ$) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
+    - <span style="color:red">$\Delta \boldsymbol{w} = - \alpha \nabla \mathcal{L}(\boldsymbol{w}|$データ$)$</span>でパラメータを変更
         - $\alpha$は小さな正の値
     - データは正解のものをたくさん準備
         - <span style="color:red">訓練データ</span>
@@ -119,7 +119,6 @@ $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
             - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
 - 損失関数を定義
     - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}^2$
-        - $\boldsymbol{w}$: パラメータを並べたベクトル。ある時点である値が入っている。
         - $f_i, y_i$: それぞれ$\boldsymbol{f}, \boldsymbol{y}$の$i$番目の要素
         - $1/2$は計算の都合でつけただけ
         - あとから教示データの入出力ペア$(\boldsymbol{x}', \boldsymbol{y}')$を代入すると値が確定
