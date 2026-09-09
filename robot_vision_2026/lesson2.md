@@ -202,10 +202,10 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 ---
 
-### 誤差を送る具体例
+### 誤差を送る具体例（1入力1出力の簡単な例）
 
 - 右の層: $f(x) = wx - b$
-- $J_f = w$
+    - $J_f = w$
 - つまり下流から誤差$e$が来たら$we$を上流へ 
 
 ![bg right:25% 90%](../machine_learning_2026/figs/back_propagation_diff.png)
@@ -215,8 +215,8 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ### 多入力・多出力のアフィンレイヤーの場合
 
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b}$
-- 注意: $\boldsymbol{x}$と$\boldsymbol{y}$が縦ベクトル（前回と逆）
-    - 式全体を転置すると前回の式に（$\boldsymbol{x}$と$W$の位置が入れ替わる）
+    - 注意: $\boldsymbol{x}$と$\boldsymbol{y}$が縦ベクトル（前回と逆）
+        - 式全体を転置すると前回の式に（$\boldsymbol{x}$と$W$の位置が入れ替わる）
 - $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
     - $\boldsymbol{f}(\boldsymbol{x}) =
     \begin{pmatrix}
@@ -237,7 +237,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
     \partial f_1/\partial x_1  \  \partial f_1/\partial x_2 \\
     \partial f_2/\partial x_1 \ \partial f_2/\partial x_2
     \end{pmatrix} = W$
-    - つまり$W\boldsymbol{e}$を上流へ送る
+- つまり$W\boldsymbol{e}$を上流へ送る
 
 
 <img align=right width=400 src="./figs/back_propagation_affine.svg" />
