@@ -84,11 +84,11 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 ### パラメータの更新（2ページ前のニューロンについて）
 
 - パラメータを更新する際の増分は
-- $\Delta( w_1, w_2, w_3, b) = - \alpha' \nabla \mathcal{L}$
+    - $\Delta( w_1, w_2, w_3, b) = - \alpha' \nabla \mathcal{L}$
 $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
 - 時間のあるときにやってみましょう
-- 適当に$x_{1:3}$を選んで出力を観測
-- 上の式でパラメータを変更
+    - 適当に$x_{1:3}$を選んで出力を観測
+    - 上の式でパラメータを変更
 
 
 ![bg right:25% 90%](../machine_learning_2026/figs/simple_ann_learning.png)
