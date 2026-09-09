@@ -285,8 +285,9 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 0 & (x \le 0) \\
 x & (x > 0)
 \end{cases}$
-        - $x=0$での微分値は$0$など適当に近似
+    - $x=0$での微分値は$0$など適当に近似
 - これが2010年代はじめに使われ初めて大規模なANNが収束しだした
+    - 最古の事例は[Fukushima 1969]
 - ReLUの偏微分: $\partial h / \partial x= \begin{cases}
 0 & (x \le 0) \\
 1 & (x > 0)
