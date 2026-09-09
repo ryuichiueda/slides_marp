@@ -169,10 +169,10 @@ J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})
 $= \left\{ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}^{(n-1)})\cdots J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})\dfrac{\partial \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})}{\partial w}\right\}^\top \boldsymbol{e}$ 
 $=
 \dfrac{\partial \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})}{\partial w}^\top
-J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}'^{(m+1)})^\top
+J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})^\top
 \cdots
-J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}'^{(n)})^\top
-\boldsymbol{e}'$ 
+J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
+\boldsymbol{e}$ 
 - 重みを変えたときの誤差の変化について上の式から次のように計算できる
     - Step 1: 最終的な誤差のベクトル$\boldsymbol{e}'$に、最終層から$m+1$層までヤコビ行列をかけていく（$m$層の出力の次元の縦ベクトルに。これを$m$層の誤差とする）
     - Step 2: $m$層の誤差に、$m$層を$w$で偏微分した行列をかける（これも$m$層の出力の次元の縦ベクトルになるので、転置してかけるとスカラーになる）
