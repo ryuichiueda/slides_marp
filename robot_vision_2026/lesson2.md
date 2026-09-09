@@ -283,6 +283,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 x & (x \ge 0)
 \end{cases}$
         - $x=0$での微分値は$0$など適当に近似
+- これが2010年代はじめに使われ初めて大規模なANNが収束しだした
 
 ![bg right:30% 95%](./figs/relu.png)
 
