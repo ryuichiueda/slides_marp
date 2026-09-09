@@ -336,6 +336,26 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ![bg right:30% 90%](../machine_learning_2026/figs/simple_ann_learning_modify2.png)
 
 
+---
+
+### 活性化関数層のバリエーション
+
+- 先ほどの簡単な例なら$\boldsymbol{h}$はステップ関数で十分
+- 学習が必要なもの、複雑なものになると不十分
+    - $0$と$1$しか出力できない（表現力が乏しい）
+    - 微分できない
+- $\boldsymbol{h}$として使われる基本的なもの
+    - シグモイド関数（右図青線）
+        - $h(x) = \dfrac{1}{1 + e^{-x}}$
+    - ReLU（Rectified Liner Unit。右図赤線）
+        - $h(x) = \begin{cases}
+0 & (x<0) \\
+x & (x \ge 0)
+\end{cases}$
+            - $x=0$での微分値は$0$など適当に近似
+
+![bg right:30% 95%](./figs/relu.png)
+
 
 ---
 
