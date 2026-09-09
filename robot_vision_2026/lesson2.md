@@ -116,7 +116,7 @@ $\mathcal{L}(w_{1:3},b|x'_{1:3},y') =$誤差$^2$$=\{h( w_1x'_1 + w_2x'_2 + w_3x'
 \boldsymbol{f}^{(1)})(\boldsymbol{x})$
     - $\boldsymbol{f}^{(m)}$: 入力から見て$m$層目
         - $\boldsymbol{y}^{(m)} = \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
-            - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力
+            - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
 - 損失関数を定義
     - $\mathcal{L}(\boldsymbol{w} | \boldsymbol{x}', \boldsymbol{y}') = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x}') - y'_i \}^2$
         - $f_i$: $\boldsymbol{f}$の$i$番目の要素
