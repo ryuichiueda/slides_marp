@@ -147,7 +147,7 @@ $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol
 (\boldsymbol{x}^{(m)})}{\partial w}$
 - $\uparrow w$の存在する$m$層目の入力$\boldsymbol{x}^{(m)}$から後段の層だけ考える
 - $= \dfrac{\partial \boldsymbol{f}^{(n)}}{\partial \boldsymbol{x}^{(n)}} \dfrac{\partial (\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})(\boldsymbol{x}^{(m)}) }{\partial w}$
-- $\uparrow \boldsymbol{x}^{(n)} = \boldsymbol{y}^{(n-1)} = (\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})(\boldsymbol{x}^{(m)})$
+    - $\uparrow \boldsymbol{x}^{(n)} = \boldsymbol{y}^{(n-1)} = (\boldsymbol{f}^{(n-1)}\circ \boldsymbol{f}^{(n-2)}\circ\dots\circ \boldsymbol{f}^{(m)})(\boldsymbol{x}^{(m)})$
 - $= 
 \dfrac{\partial \boldsymbol{f}^{(n)}}{\partial \boldsymbol{x}^{(n)}}
 \dfrac{\partial \boldsymbol{f}^{(n-1)}}{\partial \boldsymbol{x}^{(n-1)}}
@@ -158,7 +158,7 @@ J_{\boldsymbol{f}^{(n-1)}}(\boldsymbol{x}^{(n-1)})
 \cdots
 J_{\boldsymbol{f}^{(m+1)}}(\boldsymbol{x}^{(m+1)})
 \dfrac{\partial\boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})}{\partial w}$
-- ここで$J_{\boldsymbol{f}^{(a)}}(\boldsymbol{x}^{(a)}) = \dfrac{\partial \boldsymbol{f}^{(a)}(\boldsymbol{x}^{(a)})}{\partial \boldsymbol{x}^{(a)}}$（上の式では分母のカッコを省略）
+    - ここで$J_{\boldsymbol{f}^{(a)}}(\boldsymbol{x}^{(a)}) = \dfrac{\partial \boldsymbol{f}^{(a)}(\boldsymbol{x}^{(a)})}{\partial \boldsymbol{x}^{(a)}}$（上の式では分母のカッコを省略）
 
 
 ---
