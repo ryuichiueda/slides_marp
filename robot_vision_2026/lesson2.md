@@ -114,15 +114,15 @@ $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
 (\boldsymbol{f}^{(n)}\circ
 \boldsymbol{f}^{(n-1)}\circ\dots\circ
 \boldsymbol{f}^{(1)})(\boldsymbol{x})$
-- $\boldsymbol{f}^{(m)}$: 入力から見て$m$層目
-    - $\boldsymbol{y}^{(m)} = \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
-        - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
+    - $\boldsymbol{f}^{(m)}$: 入力から見て$m$層目
+        - $\boldsymbol{y}^{(m)} = \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
+            - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
 - 損失関数を定義
-- $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}^2$
-    - $\boldsymbol{w}$: パラメータを並べたベクトル。ある時点である値が入っている。
-    - $f_i, y_i$: それぞれ$\boldsymbol{f}, \boldsymbol{y}$の$i$番目の要素
-    - $1/2$は計算の都合でつけただけ
-    - あとから教示データの入出力ペア$(\boldsymbol{x}', \boldsymbol{y}')$を代入すると値が確定
+    - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}^2$
+        - $\boldsymbol{w}$: パラメータを並べたベクトル。ある時点である値が入っている。
+        - $f_i, y_i$: それぞれ$\boldsymbol{f}, \boldsymbol{y}$の$i$番目の要素
+        - $1/2$は計算の都合でつけただけ
+        - あとから教示データの入出力ペア$(\boldsymbol{x}', \boldsymbol{y}')$を代入すると値が確定
 
 ---
 
