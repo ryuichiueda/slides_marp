@@ -331,27 +331,6 @@ x & (x > 0)
 \end{pmatrix}$
     - $\partial \boldsymbol{f} / \partial w_{ij} = (0 \ 0 \cdots x_j \cdots 0)^\top$（$j$番目の要素が$x_j$）
     - $\partial \boldsymbol{f} / \partial b_j = (0 \ 0 \cdots -1 \cdots 0)^\top$（$j$番目の要素が$-1$）
-- $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
-    - $\boldsymbol{f}(\boldsymbol{x}) =
-    \begin{pmatrix}
-    w_{11} \ w_{12} \\
-    w_{12} \ w_{22}
-    \end{pmatrix}
-    \begin{pmatrix}
-    x_{1} \\ x_{2} 
-    \end{pmatrix} - \boldsymbol{b}
-    =
-    \begin{pmatrix}
-    w_{11}x_1 + w_{12}x_2 \\
-    w_{12}x_1 +  w_{22}x_2
-    \end{pmatrix} - \boldsymbol{b}
-    $
-    - $J_\boldsymbol{f}(\boldsymbol{x}) = 
-    \begin{pmatrix}
-    \partial f_1/\partial x_1  \  \partial f_1/\partial x_2 \\
-    \partial f_2/\partial x_1 \ \partial f_2/\partial x_2
-    \end{pmatrix} = W$
-- つまり$W\boldsymbol{e}$を上流へ送る
 
 
 <img align=right width=400 src="./figs/back_propagation_affine.svg" />
