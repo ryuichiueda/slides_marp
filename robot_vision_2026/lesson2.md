@@ -307,7 +307,12 @@ x & (x > 0)
 - あるパラメータの更新則（おさらい）
     - $w \longleftarrow w - \alpha$($m$層の$w$での偏微分)$^\top$($m$層の誤差)
 - 1入力1出力の例
-    - $f(x) = wx - b \quad \Longrightarrow \quad \partial f /\partial w = x$
+    - $f(x) = wx - b$
+        - $\partial f /\partial w = x$、$\partial f /\partial b = -1$
+    - $(w,b) \longleftarrow (w - \alpha x e, b - \alpha e)$
+- 右図の例
+    - $w \longleftarrow 2 - \alpha 9/10 \cdot 1/3 = 2 - 3\alpha/10$
+    - 誤差が正なので出力が小さくなるほうに変更
 
 ![bg right:25% 90%](./figs/back_propagation_diff.svg)
 
