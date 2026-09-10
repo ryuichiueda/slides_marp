@@ -329,7 +329,7 @@ x & (x > 0)
 \end{pmatrix} - \begin{pmatrix}
     b_1 \\ b_2 \\ \vdots  \\ b_\ell
 \end{pmatrix}$
-    - $\partial \boldsymbol{f} / \partial w_{ij} =$
+    - $\partial \boldsymbol{f} / \partial w_{ij} = (0 \ 0 \cdots x_j \cdots 0)^\top$
 - $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
     - $\boldsymbol{f}(\boldsymbol{x}) =
     \begin{pmatrix}
