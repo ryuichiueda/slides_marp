@@ -330,9 +330,9 @@ x & (x > 0)
     b_1 \\ b_2 \\ \vdots  \\ b_\ell
 \end{pmatrix}$
     - $\partial \boldsymbol{f} / \partial w_{ij} = (0 \ 0 \cdots x_j \cdots 0)^\top$（$i$番目の要素が$x_j$）
-    - $\partial \boldsymbol{f} / \partial b_j = (0 \ 0 \cdots -1 \cdots 0)^\top$（$j$番目の要素が$-1$）
+    - $\partial \boldsymbol{f} / \partial b_i = (0 \ 0 \cdots -1 \cdots 0)^\top$（$i$番目の要素が$-1$）
 - 更新
-    - $w_{ij}\ \verb|-=| \ \alpha(0 \ 0 \cdots x_j \cdots 0) \boldsymbol{e}$
+    - $w_{ij}\ \verb|-=| \ \alpha(0 \ 0 \cdots x_j \cdots 0) \boldsymbol{e} = \alpha x_j e_i$
     
 
 
