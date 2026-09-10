@@ -319,9 +319,17 @@ x & (x > 0)
 
 ---
 
-### アフィンレイヤーでのパラメータ更新（一般的な式）
+### アフィンレイヤーでのパラメータ更新
 
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b}$
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b} = \begin{pmatrix}
+    w_{11}x_1 + w_{12}x_2 + \cdots + w_{1k}w_k \\
+    w_{12}x_1 + w_{22}x_2 + \cdots + w_{2k}w_k \\
+    \vdots \\
+    w_{\ell2}x_1 + w_{\ell2}x_2 + \cdots + w_{\ell k}w_k \\
+\end{pmatrix} - \begin{pmatrix}
+    b_1 \\ b_2 \\ \vdots  \\ b_\ell
+\end{pmatrix}$
+    - $\partial \boldsymbol{f} / \partial w_{ij} =$
 - $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
     - $\boldsymbol{f}(\boldsymbol{x}) =
     \begin{pmatrix}
