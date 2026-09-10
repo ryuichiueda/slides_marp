@@ -101,10 +101,12 @@ $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
 ### いろいろ問題がある
 
 - 閾値処理が微分できない
-- ニューロンをたくさん連結すると計算が大変
+- レイヤーをたくさん連結すると計算が大変
 
+<center><img width=600 src="./figs/ann_layer_notation3.svg" /></center>
 
 <center style="padding:40pt">どうしましょう</center>
+
 
 ---
 
@@ -302,8 +304,12 @@ x & (x > 0)
 
 ## パラメータの更新
 
-- あるパラメータの更新則
+- あるパラメータの更新則（おさらい）
     - $w \longleftarrow w - \alpha$($m$層の$w$での偏微分)$^\top$($m$層の誤差)
+- 1入力1出力の例
+    - $f(x) = wx - b \quad \Longrightarrow \quad \partial f /\partial w = x$
+
+![bg right:25% 90%](./figs/back_propagation_diff.svg)
 
 ---
 

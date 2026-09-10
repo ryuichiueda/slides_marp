@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478.29 172.5">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Times-BoldItalic, Times;
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 18px;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.21em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <line class="cls-3" x1="21.69" y1="51.92" x2="70.45" y2="51.92"/>
+  <line class="cls-3" x1="22.69" y1="115.27" x2="71.45" y2="115.27"/>
+  <rect class="cls-3" x="71.04" y="23.12" width="43.48" height="130.25"/>
+  <line class="cls-3" x1="115.07" y1="51.92" x2="128.74" y2="51.92"/>
+  <line class="cls-3" x1="115.35" y1="101.27" x2="129.02" y2="101.27"/>
+  <rect class="cls-3" x="128.59" y="23.12" width="29.24" height="130.25"/>
+  <line class="cls-3" x1="157.83" y1="62.92" x2="186.16" y2="62.92"/>
+  <line class="cls-3" x1="158.41" y1="115.27" x2="186.74" y2="115.27"/>
+  <rect class="cls-3" x="186.34" y="23.12" width="62.03" height="130.25"/>
+  <line class="cls-3" x1="248.36" y1="51.92" x2="262.03" y2="51.92"/>
+  <line class="cls-3" x1="248.64" y1="115.27" x2="262.31" y2="115.27"/>
+  <rect class="cls-3" x="261.88" y="23.12" width="18.78" height="130.25"/>
+  <line class="cls-3" x1="280.66" y1="51.92" x2="313.62" y2="51.92"/>
+  <line class="cls-3" x1="281.34" y1="121.03" x2="314.3" y2="121.03"/>
+  <rect class="cls-3" x="313.9" y="23.12" width="62.03" height="130.25"/>
+  <line class="cls-3" x1="375.92" y1="51.92" x2="389.59" y2="51.92"/>
+  <line class="cls-3" x1="376.2" y1="102.27" x2="389.87" y2="102.27"/>
+  <rect class="cls-3" x="389.44" y="23.12" width="18.78" height="130.25"/>
+  <line class="cls-3" x1="408.52" y1="100.25" x2="457.28" y2="100.25"/>
+  <text class="cls-1" transform="translate(.24 101.27)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-1" transform="translate(468.52 93.44)"><tspan x="0" y="0">y</tspan></text>
+  <line class="cls-3" x1="21.69" y1="94.45" x2="70.45" y2="94.45"/>
+  <line class="cls-3" x1="21.69" y1="140.52" x2="70.45" y2="140.52"/>
+  <line class="cls-3" x1="114.67" y1="136.09" x2="128.34" y2="136.09"/>
+  <line class="cls-3" x1="249.25" y1="140.52" x2="261.88" y2="140.52"/>
+  <line class="cls-3" x1="280.66" y1="83.59" x2="313.9" y2="83.59"/>
+  <line class="cls-3" x1="408.52" y1="78.45" x2="457.28" y2="78.45"/>
+  <line class="cls-3" x1="375.47" y1="123.09" x2="389.14" y2="123.09"/>
+  <line class="cls-3" x1="376.2" y1="81.45" x2="389.87" y2="81.45"/>
+  <text class="cls-2" transform="translate(114.52 15.84)"><tspan x="0" y="0">各層</tspan><tspan class="cls-11" x="36" y="0">に</tspan><tspan class="cls-5" x="53.82" y="0">た</tspan><tspan class="cls-8" x="70.38" y="0">く</tspan><tspan class="cls-6" x="84.6" y="0">さ</tspan><tspan class="cls-10" x="101.34" y="0">ん</tspan><tspan x="119.16" y="0">の</tspan><tspan class="cls-9" x="137.16" y="0">パ</tspan><tspan class="cls-4" x="154.26" y="0">ラ</tspan><tspan class="cls-9" x="170.64" y="0">メ</tspan><tspan class="cls-7" x="187.74" y="0">ー</tspan><tspan class="cls-9" x="204.66" y="0">タ</tspan></text>
+</svg>

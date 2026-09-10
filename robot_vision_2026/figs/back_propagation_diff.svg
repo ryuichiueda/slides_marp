@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.88 169.85">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+        font-style: italic;
+      }
+
+      .cls-3 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 16px;
+      }
+
+      .cls-4, .cls-5, .cls-2 {
+        font-size: 20px;
+      }
+
+      .cls-4, .cls-6 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-7, .cls-8 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-8 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <line class="cls-7" x1="17.27" y1="104.22" x2="66.03" y2="104.22"/>
+  <rect class="cls-7" x="66.63" y="39.09" width="82.39" height="130.25"/>
+  <line class="cls-7" x1="149.02" y1="104.22" x2="208.18" y2="104.22"/>
+  <g>
+    <line class="cls-8" x1="208.7" y1="28.98" x2="166.36" y2="28.98"/>
+    <path d="M153.69,28.98c5.96-2.21,13.36-5.99,17.95-9.99l-3.61,9.99,3.61,9.99c-4.59-4-11.99-7.77-17.95-9.99Z"/>
+  </g>
+  <text class="cls-3" transform="translate(149.02 14.08)"><tspan x="0" y="0">誤差1/3</tspan></text>
+  <text class="cls-5" transform="translate(73.13 98.46)"><tspan class="cls-1" x="0" y="0">w </tspan><tspan class="cls-6" x="18.34" y="0">= 2</tspan><tspan class="cls-1" x="0" y="24">b </tspan><tspan class="cls-6" x="15" y="24">= 1/10</tspan></text>
+  <text class="cls-2" transform="translate(.7 109.46)"><tspan x="0" y="0">x</tspan></text>
+  <text class="cls-2" transform="translate(215 109.46)"><tspan x="0" y="0">y</tspan></text>
+  <text class="cls-4" transform="translate(21.78 98.46)"><tspan x="0" y="0">9/10</tspan></text>
+  <text class="cls-4" transform="translate(162.85 98.46)"><tspan x="0" y="0">17/10</tspan></text>
+</svg>
