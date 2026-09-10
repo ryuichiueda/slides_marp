@@ -309,10 +309,10 @@ x & (x > 0)
 - 1入力1出力の例
     - $f(x) = wx - b$
         - $\partial f /\partial w = x$、$\partial f /\partial b = -1$
-    - $(w,b) \longleftarrow (w - \alpha x e, b - \alpha e)$
+    - $(w,b) \longleftarrow (w - \alpha x e, b + \alpha e)$
 - 右図の例
     - $w \longleftarrow 2 - \alpha 9/10 \cdot 1/3 = 2 - 3\alpha/10$
-    - $b \longleftarrow 1/10 - \alpha \cdot 1/3 = 1/10 - \alpha/10$
+    - $b \longleftarrow 1/10 + \alpha \cdot 1/3 = 1/10 + \alpha/10$
         - 誤差が正なので出力が小さくなるほうに変更
 
 ![bg right:25% 90%](./figs/back_propagation_diff.svg)
