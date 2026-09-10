@@ -321,11 +321,31 @@ x & (x > 0)
 
 ### アフィンレイヤーでのパラメータ更新（一般的な式）
 
-- アフィンレイヤー（再掲）: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
-    - $W  \longleftarrow  W -  \alpha\Delta \mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial W} = W- \alpha\boldsymbol{x}^\top \Delta \mathcal{L}_\boldsymbol{y}$
-    - $\boldsymbol{b} \longleftarrow \boldsymbol{b} - \alpha \Delta\mathcal{L}_\boldsymbol{y} \dfrac{\partial \boldsymbol{f}}{\partial \boldsymbol{b}} =  \boldsymbol{b} + \alpha \Delta \mathcal{L}_\boldsymbol{y}$
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b}$
+- $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
+    - $\boldsymbol{f}(\boldsymbol{x}) =
+    \begin{pmatrix}
+    w_{11} \ w_{12} \\
+    w_{12} \ w_{22}
+    \end{pmatrix}
+    \begin{pmatrix}
+    x_{1} \\ x_{2} 
+    \end{pmatrix} - \boldsymbol{b}
+    =
+    \begin{pmatrix}
+    w_{11}x_1 + w_{12}x_2 \\
+    w_{12}x_1 +  w_{22}x_2
+    \end{pmatrix} - \boldsymbol{b}
+    $
+    - $J_\boldsymbol{f}(\boldsymbol{x}) = 
+    \begin{pmatrix}
+    \partial f_1/\partial x_1  \  \partial f_1/\partial x_2 \\
+    \partial f_2/\partial x_1 \ \partial f_2/\partial x_2
+    \end{pmatrix} = W$
+- つまり$W\boldsymbol{e}$を上流へ送る
 
-![bg right:35% 90%](../machine_learning_2026/figs/back_propagation_affine.svg)
+
+<img align=right width=400 src="./figs/back_propagation_affine.svg" />
 
 ---
 
