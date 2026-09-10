@@ -319,21 +319,6 @@ x & (x > 0)
 
 ---
 
-- 伝播してきた誤差$\Delta \mathcal{L}_y$が減る方向にパラメータを変える
-- 1入力1出力の層の場合
-    - ある層の計算: $y = f(x | w_{1:n})$のとき
-    （$x$: 入力、$y$: 出力）
-    - パラメータの変更: $w_i \longleftarrow w_i - \alpha \dfrac{\partial f}{\partial w_i}\Bigg|_x \Delta \mathcal{L}_y$
-- 右のアフィンレイヤー（$y = wx - b$）の例
-    - $w = 2$<span style="color:red">$- \alpha 9/10\cdot 1/3$</span>（重みが減る）
-    - $b = 1/10$<span style="color:red">$+ \alpha 1/3$</span>（閾値が上がる）
-
-
-![bg right:25% 90%](../machine_learning_2026/figs/back_propagation_diff.png)
-
-
----
-
 ### アフィンレイヤーでのパラメータ更新（一般的な式）
 
 - アフィンレイヤー（再掲）: $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = \boldsymbol{x}W - \boldsymbol{b}$
