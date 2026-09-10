@@ -321,23 +321,25 @@ x & (x > 0)
 
 ### アフィンレイヤーでのパラメータ更新
 
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b} = \begin{pmatrix}
-    w_{11}x_1 + w_{12}x_2 + \cdots + w_{1k}x_k \\
-    w_{21}x_1 + w_{22}x_2 + \cdots + w_{2k}x_k \\
+- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b} =
+    \sum_{j=1}^k 
+\begin{pmatrix}
+    w_{1j}x_j \\
+    w_{2j}x_j \\
     \vdots \\
-    w_{\ell1}x_1 + w_{\ell2}x_2 + \cdots + w_{\ell k}x_k \\
+    w_{\ell j}x_j
 \end{pmatrix} - \begin{pmatrix}
     b_1 \\ b_2 \\ \vdots  \\ b_\ell
 \end{pmatrix}$
-    - $\partial \boldsymbol{f} / \partial w_{ij} = (0 \ 0 \cdots x_j \cdots 0)^\top$（$i$番目の要素が$x_j$）
-    - $\partial \boldsymbol{f} / \partial b_i = (0 \ 0 \cdots -1 \cdots 0)^\top$（$i$番目の要素が$-1$）
+    - $\partial \boldsymbol{f} / \partial w_{ij} = (0  \cdots x_j \cdots 0)^\top$（$i$番目の要素が$x_j$）
+    - $\partial \boldsymbol{f} / \partial b_i = (0  \cdots -1 \cdots 0)^\top$（$i$番目の要素が$-1$）
 - 更新
     - $w_{ij}\ \verb|-=| \ \alpha(0 \ 0 \cdots x_j \cdots 0) \boldsymbol{e} = \alpha x_j e_i$
     - $b_i \ \verb|+=| \ \alpha(0 \ 0 \cdots 1 \cdots 0) \boldsymbol{e} = \alpha e_i$
     
 
 
-<img align=right width=400 src="./figs/back_propagation_affine.svg" />
+![bg right:25% 90%](./figs/back_propagation_affine.svg)
 
 ---
 
