@@ -66,7 +66,8 @@ marp: true
 ### 出力の例（2/2）
 
 - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
-    - $\boldsymbol{y}$は確率分布
+    - $P_\text{x}$は、対象が$\text{x}$である<span style="color:red">確率</span>
+    - $\boldsymbol{y}$は確率分布とみなせる
 - 識別用のANNの出力はこの形式が一般的
     - ひとつに決めたければ確率最大のものを選択
 
