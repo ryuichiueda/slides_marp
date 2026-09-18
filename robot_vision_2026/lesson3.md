@@ -48,13 +48,7 @@ marp: true
 
 ### 出力の例1
 
-- $y = f(\boldsymbol{x} | \boldsymbol{w})$
-    - $\boldsymbol{x}$: 画素の値を並べたベクトル（すごく多次元）
-        - 次元: 縦の画素数$\times$横の画素数$\times$色のチャンネル（RGB: 3、RGBD: 4）
-    - $y = 0$: 犬、$y=1$: 猫、$y=2$: それ以外
-    - $\boldsymbol{w}$: パラメータを並べたベクトル（これも多次元）
-        - $y = f_\boldsymbol{w}(\boldsymbol{x})$と表記するときも（ANN界隈）
-        - $y = f(\boldsymbol{x} ; \boldsymbol{w})$と表記するときも（伝統的）
+- $y = 0$: 犬、$y=1$: 猫、$y=2$: それ以外
 
 問題: ニューラルネットワークの先から$0, 1, 2$というアナログ値が出せるか？
 
