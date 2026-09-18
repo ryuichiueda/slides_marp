@@ -82,6 +82,12 @@ marp: true
 - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
     - $\eta$は正規化定数
         - $\sum_{i=1}^n y_i = 1$にする
+- 損失関数: <span style="color:red">交差エントロピー</span>を使用
+   - $\mathcal{L}(\boldsymbol{w}) = H(\boldsymbol{y}^*, \boldsymbol{y}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
+        - 出力: $\boldsymbol{y} = (\hat{P}_1, \hat{P}_2, \dots, \hat{P}_N)$
+        - 正解: $\boldsymbol{y}^* = (P_1, P_2, \dots, P_N)$
+    - 正解がワンホットベクトルだと$\mathcal{L}(\boldsymbol{w}) = - \log \hat{P}_i$
+        - $i$が正解の元
 
 ![bg right:20% 95%](./figs/softmax_layer.png)
 
@@ -92,8 +98,6 @@ marp: true
 
 - 学習のときの損失関数はどうする？
     - 前ページの例3で考えてみましょう
-    - 出力: $\boldsymbol{y} = (\hat{P}_1, \hat{P}_2, \dots, \hat{P}_N)$
-    - 正解: $\boldsymbol{y}^* = (P_1, P_2, \dots, P_N)$
         - 正解については、正解に対応する要素$=1$のワンホットベクトルになることが多い
 
 ![bg right:30% 100%](./figs/prob_output.svg)
@@ -103,7 +107,6 @@ marp: true
 ### 一般的な答え
 
 - <span style="color:red">交差エントロピー</span>を使用
-   - $\mathcal{L}(\boldsymbol{w}) = H(\boldsymbol{y}^*, \boldsymbol{y}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
        - $\log$は自然対数（底が$e$）
    - 数学好きな人への補足: カルバック・ライブラー情報量を最小化するのと等価
 - 正解に対する確率が高い場合（例: $0.9$）と低い場合（例: $0.1$）について計算してみましょう
