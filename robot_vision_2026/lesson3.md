@@ -39,14 +39,14 @@ marp: true
     - かつては問題に応じて専用のANNを準備することが必須だった（今日はこの話）
 - 問題: 識別のためのANNを数式で定義してみましょう
     - $\boldsymbol{x} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$
-        - $\boldsymbol{x}$はデータだけど$\boldsymbol{y}$はなに？
+        - $\boldsymbol{x}$はデータだけど出力$\boldsymbol{y}$の形式は？
 
 ![bg right:30% 100%](./figs/cat_and_dog.svg)
 
 
 ---
 
-### 答えの例1
+### 出力の例1
 
 - $y = f(\boldsymbol{x} | \boldsymbol{w})$
     - $\boldsymbol{x}$: 画素の値を並べたベクトル（すごく多次元）
