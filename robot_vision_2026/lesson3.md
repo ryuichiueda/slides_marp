@@ -79,9 +79,9 @@ marp: true
 ### ソフトマックス層
 
 - softmax（softな最大値）: 1つに決めないということ
-- 数式
-    - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
-        - $\eta$は正規化定数
+- 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
+    - $\eta$は正規化定数
+        - $\sum_{i=1}^n y_i = 1$にする
 
 ![bg right:20% 95%](./figs/softmax_layer.png)
 
