@@ -86,7 +86,7 @@ marp: true
    - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}|\boldsymbol{y}') = H(\boldsymbol{y}', \boldsymbol{y}) = -\sum_{i=1}^N y_i' \log y_i$
        - $\boldsymbol{y}$が出力、$\boldsymbol{y}'$が正解
        - <span style="font-size:70%">注意: $\boldsymbol{w}$はほかの層のパラメータ</span>
-    - 正解がワンホットベクトルだと$\mathcal{L}(\boldsymbol{w}) = - \log y_i$
+    - 正解がワンホットベクトルだと$\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}| \boldsymbol{y}') = - \log y_i$
         - $i$が正解の元
 
 ![bg right:20% 95%](./figs/softmax_layer.png)
