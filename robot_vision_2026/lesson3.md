@@ -96,7 +96,8 @@ marp: true
 
 ### ソフトマックス層の誤差逆伝播
 
-- $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x} | \boldsymbol{w})}{\partial w}\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i' \}$（$\leftarrow$内積）
+- $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}|\boldsymbol{y}') = H(\boldsymbol{y}', \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})) = -\sum_{i=1}^N y_i' \log f_i(\boldsymbol{x}|\boldsymbol{w})$
+- $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x} | \boldsymbol{w})}{\partial w}\dfrac{y_i'}{f_i(\boldsymbol{x}|\boldsymbol{w})}$
 
 ---
 
