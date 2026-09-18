@@ -39,7 +39,7 @@ marp: true
     - かつては問題に応じて専用のANNを準備することが必須だった（今日はこの話）
 - 問題: どういうふうに出力層を作りますか？
     - 入力: データ$\boldsymbol{x}$
-    - 出力: $\boldsymbol{y}$👈なに
+    - 出力: $\boldsymbol{y}$👈どういう形式にするか
 
 ![bg right:30% 100%](./figs/cat_and_dog.svg)
 
