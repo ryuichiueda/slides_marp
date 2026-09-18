@@ -83,11 +83,10 @@ marp: true
     - $\eta$は正規化定数
         - $\sum_{i=1}^n y_i = 1$にするための定数（のようなもの）
 - 損失関数: <span style="color:red">交差エントロピー</span>を使用
-   - $\mathcal{L}(\boldsymbol{w}) = H(\boldsymbol{y}^*, \boldsymbol{y}) = -\sum_{i=1}^N P_i \log \hat{P}_i$
-       - 出力: $\boldsymbol{y} = (\hat{P}_1, \hat{P}_2, \dots, \hat{P}_N)$
-       - 正解: $\boldsymbol{y}^* = (P_1, P_2, \dots, P_N)$
+   - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}|\boldsymbol{y}') = H(\boldsymbol{y}', \boldsymbol{y}) = -\sum_{i=1}^N y_i' \log y_i$
+       - $\boldsymbol{y}$が出力、$\boldsymbol{y}'$が正解
        - <span style="font-size:70%">注意: $\boldsymbol{w}$はほかの層のパラメータ</span>
-    - 正解がワンホットベクトルだと$\mathcal{L}(\boldsymbol{w}) = - \log \hat{P}_i$
+    - 正解がワンホットベクトルだと$\mathcal{L}(\boldsymbol{w}) = - \log y_i$
         - $i$が正解の元
 
 ![bg right:20% 95%](./figs/softmax_layer.png)
@@ -97,6 +96,7 @@ marp: true
 
 ### ソフトマックス層の誤差逆伝播
 
+- $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x} | \boldsymbol{w})}{\partial w}\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i' \}$（$\leftarrow$内積）
 
 ---
 
