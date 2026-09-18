@@ -46,7 +46,7 @@ marp: true
 
 ---
 
-### 出力の例
+### 出力の例（1/2）
 
 たとえば、「犬、猫、それ以外」を識別したい場合
 
@@ -63,24 +63,10 @@ marp: true
 
 ---
 
-### 答えの例2
+### 出力の例（2/2）
 
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
-    - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
-    - $\boldsymbol{y} = ($猫の場合1$,$ 犬の場合1$,$ それ以外の場合1$)$
-        - 要素が1つだけ1になるので「<span style="color:red">ワンホットベクトル</span>」と呼ばれる
-
-
-問題: 微妙なときに言い切っちゃっていいの？
-
----
-
-### 答えの例3
-
-- $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x} | \boldsymbol{w})$
-    - $\boldsymbol{x}$、$\boldsymbol{w}$: 同じ
-    - $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
-        - $\boldsymbol{y}$は確率分布
+- $\boldsymbol{y} = (P_\text{猫}, P_\text{犬}, P_\text{それ以外})$
+    - $\boldsymbol{y}$は確率分布
 - 識別用のANNの出力はこの形式が一般的
     - ひとつに決めたければ確率最大のものを選択
 
