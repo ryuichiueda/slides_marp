@@ -169,42 +169,6 @@ marp: true
 
 ---
 
-### 以前から触れていた話題
-
-- 動物は視覚をどう行動や判断に必要な情報に変えているか
-- それをコンピュータで再現できるか
-
-![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
-
-人工ニューラルネットワーク（ANN）でできる?$\rightarrow$できる
-
----
-
-## 視覚・画像とANN（CNN）
-
-- 映像、画像の特性に特化したANNが存在
-    - 画像の特性
-       - 2次元（深度があれば3次元、動画でも時間軸を入れると3次元）
-       - ある画素の周囲に似た画素がある
-- おさらい: ディジタル画像
-    - 平面が格子状に分割されて、数字の大小で色の濃さが表される
-    （例: 右図。数字はてきとう）
-    - カラーの場合はR、G、Bそれぞれについて格子状の数値データ
-
-
----
-
-### 画像認識の難しさ
-
-- 同じものが大きく写ったり小さく写ったり回転して写ったり
-- 変形したり抽象化されたりデフォルメされたり
-
-![](./figs/dots_varisous.png)
-
-![bg right:30% 90%](./figs/cat_back.png)
-
----
-
 ### CNN（convolutional neural network）
 
 - テレビ局ではないです
