@@ -112,8 +112,9 @@ marp: true
 
 ### ソフトマックス層の誤差逆伝搬（1/2）
 
-- 前の層に送る誤差（おさらい）: $J_{\boldsymbol{f}}(\boldsymbol{x})^\top\boldsymbol{e}$
-- $i$番目の出力の関数: $f_i(\boldsymbol{x}) = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1}$
+- おさらい
+    - 前の層に送る誤差: $J_{\boldsymbol{f}}(\boldsymbol{x})^\top\boldsymbol{e}'$
+    - ソフトマックス層の$i$番目の出力の関数: $f_i(\boldsymbol{x}) = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1}$
 - ヤコビ行列をつくるための偏微分（正規化定数の部分も偏微分しないといけないので大変です）
     - $\partial f_i(\boldsymbol{x}) / \partial x_i = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1} - e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-2}e^{x_i}= y_i - y_i^2$
     - $\partial f_i(\boldsymbol{x}) /\partial x_j = - e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-2}e^{x_j}= - y_i y_j$
@@ -121,13 +122,22 @@ marp: true
 
 ---
 
-- $J_{\boldsymbol{f}}(\boldsymbol{x}) = \begin{pmatrix}
-    y_1 - y_1^2 & -y_1y_2 & \dots & -y_1y_k \\
-    -y_1y_2 & y_2 - y_2^2 & \dots & -y_2y_k  \\
-    \vdots  & \vdots & \ddots & \vdots  \\
-    -y_1y_k & -y_2y_k & \dots & -y_ky_k 
-    \end{pmatrix}$
-- $J_{\boldsymbol{f}}(\boldsymbol{x})^\top\boldsymbol{e} = (y_1'-y_1 \ \ y_2'-y_2 \ \ \dots \ \ y_k'-y_k)^\top$
+### ソフトマックス層の誤差逆伝搬（2/2）
+
+- できたヤコビ行列を使って送る誤差を計算
+    - $J_{\boldsymbol{f}}(\boldsymbol{x})\boldsymbol{e}' = \begin{pmatrix}
+        y_1 - y_1^2 & -y_1y_2 & \dots & -y_1y_k \\
+        -y_1y_2 & y_2 - y_2^2 & \dots & -y_2y_k  \\
+        \vdots  & \vdots & \ddots & \vdots  \\
+        -y_1y_k & -y_2y_k & \dots & -y_ky_k \end{pmatrix}
+        \begin{pmatrix}
+    y_1'/y_1 \\
+    y_2'/y_2 \\ 
+    \vdots \\ 
+    y_k'/y_k
+        \end{pmatrix}$
+- 送る誤差は次のようにスッキリした形に
+    - $J_{\boldsymbol{f}}(\boldsymbol{x})^\top\boldsymbol{e} = (y_1'-y_1 \ \ y_2'-y_2 \ \ \dots \ \ y_k'-y_k)^\top$
     - ↑たとえば1行目の計算: $(y_1 - y_1^2 \ \  -y_1y_2 \ \  \dots \ \  -y_1y_k)(y_1'/y_1 \ \ y_2'/y_2 \ \ \dots \ \ y_k'/y_k)^\top$
     $y_1' - y_1y_1' - y_1y_2' - y_1y_3' - \cdots y_1 y_k'$
 
