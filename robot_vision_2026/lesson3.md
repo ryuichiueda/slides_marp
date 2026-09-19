@@ -114,6 +114,7 @@ marp: true
 
 - $f_i(\boldsymbol{x}) = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1}$
     - $\dfrac{\partial f_i(\boldsymbol{x})}{\partial x_i} = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1} - e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-2}e^{x_i}= y_i - y_i^2$
+    - $\dfrac{\partial f_i(\boldsymbol{x})}{\partial x_j} = - e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-2}e^{x_j}= y_i y_j$
 - $J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})$
 
 ---
