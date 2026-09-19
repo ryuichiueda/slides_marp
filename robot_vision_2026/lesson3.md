@@ -112,8 +112,8 @@ marp: true
 
 ### ソフトマックス層の誤差逆伝搬（1/2）
 
-- 正規化定数の部分も偏微分しないといけないので大変です
-- $f_i(\boldsymbol{x}) = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1}$
+- $i$番目の出力の関数: $f_i(\boldsymbol{x}) = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1}$
+- 各要素の偏微分（正規化定数の部分も偏微分しないといけないので大変です）
     - $\partial f_i(\boldsymbol{x}) / \partial x_i = e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-1} - e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-2}e^{x_i}= y_i - y_i^2$
     - $\partial f_i(\boldsymbol{x}) /\partial x_j = - e^{x_i} (\sum_{j=1}^k e^{x_j}) ^{-2}e^{x_j}= - y_i y_j$
 
