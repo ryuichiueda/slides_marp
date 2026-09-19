@@ -155,7 +155,8 @@ marp: true
 
 ## 視覚・画像とANN（CNN）
 
-- いままでの講義: 入力を$\boldsymbol{x}$
+- いままでの講義: 入力を$\boldsymbol{x}$（つまり1列に数値をならべたもの）として扱ってきた
+    $\Longrightarrow$画像だともったいなくない？
 
 ---
 
