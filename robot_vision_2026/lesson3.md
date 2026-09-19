@@ -112,6 +112,10 @@ marp: true
 
 ### ソフトマックス層の誤差逆伝搬
 
+- $f_i(\boldsymbol{x}) = e^{x_i}/\sum_{j=1}^k e^{x_j}$
+    - $\dfrac{\partial f_i(\boldsymbol{x})}{\partial x_i} = e^{x_i}/\sum_{j=1}^k e^{x_j}$
+- $J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})$
+
 ---
 
 ## もうひとつ問題
