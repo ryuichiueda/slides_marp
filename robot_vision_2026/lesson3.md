@@ -86,6 +86,7 @@ marp: true
    - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}|\boldsymbol{y}') = H(\boldsymbol{y}', \boldsymbol{y}) = -\sum_{i=1}^N y_i' \log y_i$
        - $\boldsymbol{y}$が出力、$\boldsymbol{y}'$が正解
        - <span style="font-size:70%">注意: $\boldsymbol{w}$はほかの層のパラメータ</span>
+       - 数学好きな人への補足: カルバック・ライブラー情報量を最小化するのと等価
     - 正解がワンホットベクトルだと$\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}| \boldsymbol{y}') = - \log y_i$
         - $i$が正解の元
 
@@ -148,29 +149,6 @@ marp: true
         y_k' - y_k 
     \end{pmatrix}$</span>
     - とてもスッキリ
-
----
-
-## もうひとつ問題
-
-- 学習のときの損失関数はどうする？
-    - 前ページの例3で考えてみましょう
-        - 正解については、正解に対応する要素$=1$のワンホットベクトルになることが多い
-
-![bg right:30% 100%](./figs/prob_output.svg)
-
----
-
-### 一般的な答え
-
-- <span style="color:red">交差エントロピー</span>を使用
-       - $\log$は自然対数（底が$e$）
-   - 数学好きな人への補足: カルバック・ライブラー情報量を最小化するのと等価
-- 正解に対する確率が高い場合（例: $0.9$）と低い場合（例: $0.1$）について計算してみましょう
-    - 答えは省略
-- $\mathcal{L}$の値（損失）が$0$に近づくように$\boldsymbol{w}$を調整していくことがANNの学習の本質
-
-![bg right:30% 100%](./figs/prob_output.svg)
 
 ---
 
