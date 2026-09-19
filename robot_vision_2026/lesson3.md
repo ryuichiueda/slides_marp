@@ -210,11 +210,14 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### フィルタの計算式
 
-- $y = \sum_{i=1}^n\sum_{j=1}^n w_{(i,j)}x_{(i,j)} + b$
-    - $(i,j)$: フィルタの座標系での画素の位置
-    - $x_{(i,j)}$: 画素の値
-    - $w_{(i,j)}$: 重み（<span style="color:red">学習対象</span>）
-    - $b$: バイアス（<span style="color:red">学習対象</span>）
+- ひとつの畳み込み演算
+    - $y = \sum_{i=-m}^m\sum_{j=-m}^m w_{(i,j)}x_{(i,j)} + b$
+        - $(i,j)$: フィルタの座標系での画素の位置
+        - $x_{(i,j)}$: 画素の値
+        - $w_{(i,j)}$: 重み（<span style="color:red">学習対象</span>）
+        - $b$: バイアス（<span style="color:red">学習対象</span>）
+- 全体の操作
+    - $y_{(i,j)} = \sum_{i'=-m+i}^{m+i}\sum_{j'=-m+j}^{m+i} w_{(i',j')}x_{(i',j')} + b$
 - 2次元になっただけでこれまでと同じ
     - ただし「全結合」ではない
     - アフィン層（+活性化関数層）のことを「全結合層」ということがある
