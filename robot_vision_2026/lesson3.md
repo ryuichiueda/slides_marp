@@ -217,7 +217,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
         - $w_{(i,j)}$: 重み（<span style="color:red">学習対象</span>）
         - $b$: バイアス（<span style="color:red">学習対象</span>）
 - 全体の操作
-    - $y_{(i,j)} = \sum_{i'=-m+i}^{m+i}\sum_{j'=-m+j}^{m+j} w_{(i',j')}x_{(i',j')} + b$
+    - $y_{(i,j)} = \sum_{i'=-m}^{m}\sum_{j'=-m}^{m} w_{(i',j')}x_{(i'+i,j'+j)} + b$
 - 2次元になっただけでこれまでと同じ
     - ただし「全結合」ではない
     - アフィン層（+活性化関数層）のことを「全結合層」ということがある
