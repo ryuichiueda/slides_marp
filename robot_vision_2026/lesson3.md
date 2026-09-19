@@ -99,10 +99,10 @@ marp: true
 - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}|\boldsymbol{y}') = H(\boldsymbol{y}', \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})) = -\sum_{i=1}^N y_i' \log f_i(\boldsymbol{x}|\boldsymbol{w})$
 - $\dfrac{\partial}{\partial w}\mathcal{L}(\boldsymbol{w} , \boldsymbol{x} | \boldsymbol{y}') = \sum_{i=1}^k \dfrac{\partial f_i(\boldsymbol{x} | \boldsymbol{w})}{\partial w}\dfrac{y_i'}{f_i(\boldsymbol{x}|\boldsymbol{w})}=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})}{\partial w}^\top  \boldsymbol{e}'$
     - $\boldsymbol{e}' = (
-    y_1'/x_1' \  \ 
-    y_2'/x_2' \  \ 
+    y_1'/y_1 \  \ 
+    y_2'/y_2 \  \ 
     \dots \ 
-    y_k'/x_k'
+    y_k'/y_k
 )^\top$
 - 前回の2乗誤差のときと同じ式
     - $\boldsymbol{e}'$だけ形が違うが、各値が決まったベクトルなので問題ない
