@@ -129,7 +129,7 @@ marp: true
         y_1 - y_1^2 & -y_1y_2 & \dots & -y_1y_k \\
         -y_1y_2 & y_2 - y_2^2 & \dots & -y_2y_k  \\
         \vdots  & \vdots & \ddots & \vdots  \\
-        -y_1y_k & -y_2y_k & \dots & -y_ky_k \end{pmatrix}
+        -y_1y_k & -y_2y_k & \dots & y_k  - y_k^2 \end{pmatrix}
         \begin{pmatrix}
     y_1'/y_1 \\
     y_2'/y_2 \\ 
