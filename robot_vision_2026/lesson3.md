@@ -125,7 +125,7 @@ marp: true
 ### ソフトマックス層の誤差逆伝搬（2/2）
 
 - できたヤコビ行列を使って送る誤差を計算
-    - $J_{\boldsymbol{f}}(\boldsymbol{x})\boldsymbol{e}' = \begin{pmatrix}
+    - $J_{\boldsymbol{f}}(\boldsymbol{x})^\top \boldsymbol{e}' = \begin{pmatrix}
         y_1 - y_1^2 & -y_1y_2 & \dots & -y_1y_k \\
         -y_1y_2 & y_2 - y_2^2 & \dots & -y_2y_k  \\
         \vdots  & \vdots & \ddots & \vdots  \\
