@@ -150,6 +150,13 @@ marp: true
     \end{pmatrix}$</span>
     - とてもスッキリ
 
+
+---
+
+## 視覚・画像とANN（CNN）
+
+- いままでの講義: 入力を$\boldsymbol{x}$
+
 ---
 
 ### 以前から触れていた話題
@@ -160,13 +167,6 @@ marp: true
 ![w:400](./figs/Retina-diagram.svg.png)<span style="font-size:40%">（https://commons.wikimedia.org/wiki/File:Retina-diagram.svg, by S. R. Y. Cajal and Chrkl, CC-BY-SA 3.0）</span>
 
 人工ニューラルネットワーク（ANN）でできる?$\rightarrow$できる
-
----
-
-### もうひとつの話題: なんか自動で絵を描くやつが出現
-
-- 実例は世の中に氾濫しているので各自調査を
-- こいつらはどういう仕組み?
 
 ---
 
