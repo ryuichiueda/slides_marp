@@ -141,12 +141,13 @@ marp: true
         y_2' - y_2(y_1' + y_2' + \cdots + y_k') \\
         \cdots \\
         y_k' - y_k(y_1' + y_2' + \cdots + y_k') 
-    \end{pmatrix} =\begin{pmatrix}
+    \end{pmatrix} =$<span style="color:red">$\begin{pmatrix}
         y_1' - y_1 \\
         y_2' - y_2 \\
         \cdots \\
         y_k' - y_k 
-    \end{pmatrix}$
+    \end{pmatrix}$</span>
+    - とてもスッキリ
 
 ---
 
