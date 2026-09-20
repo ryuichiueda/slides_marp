@@ -213,7 +213,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - $\odot$の両側の行列の要素をそれぞれ1列に並べてベクトルに
     - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
-    - $\boldsymbol{w}$に対応する入力画素を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
+    - $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
 - 出力の1画素$y$の値に対する誤差逆伝播
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
@@ -221,7 +221,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - ある入力画素1画素の誤差逆伝播の量: 
     - 出力全画素分について$we_y$を足せばよい
 
-![bg right:20% 90%](./figs/cnn_conv.png)
+![bg right:30% 96%](./figs/cnn_conv_bp.svg)
 
 ---
 
