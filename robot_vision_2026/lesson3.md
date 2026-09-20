@@ -218,7 +218,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
 - ある入力の画素$x$で送る誤差
-    - $J_{f}(\boldsymbol{x})$
+    - $y$の出力に使った重みに誤差をかけて足したもの
 
 
 ---
