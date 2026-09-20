@@ -217,7 +217,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - 出力の1画素$y$の値
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
-    - $y$に関して送る量: $(x_1 \ \ x_2 \ \dots \ x_n)^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
+    - この画素$y$の誤差$e_y$に関して送る量: $(x_1 \ \ x_2 \ \dots \ x_n)^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
         - $x$で送る誤差（出力1画素分）: $y$の計算に使った$w$と$e_y$の積$we_y$
         - 出力全画素分はこれを足せばよい
 
