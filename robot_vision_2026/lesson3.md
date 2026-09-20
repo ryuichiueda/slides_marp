@@ -212,9 +212,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 畳み込み層の誤差逆伝播
 
 - $\odot$の両側の行列の要素をそれぞれ1列に並べてベクトルに
-    - フィルタに対応するベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$
-    - それに対応する入力画素のベクトル$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$
-- 出力の1画素$y$の値
+    - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
+    - $\boldsymbol{w}$に対応する入力画素を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
+- 出力の1画素$y$の値に対する誤差逆伝播
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
     - この画素$y$の誤差$e_y$に関して送る量: $(x_1 \ \ x_2 \ \dots \ x_n)^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
