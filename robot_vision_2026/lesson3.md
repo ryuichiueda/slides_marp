@@ -219,7 +219,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
     - この画素$y$の誤差$e_y$に関して送る量: $(x_1 \ \ x_2 \ \dots \ x_n)^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
 - ある入力画素1画素の誤差逆伝播の量: 
-    - 出力全画素分については$we_y$を足せばよい
+    - 出力全画素分について$we_y$を足せばよい
 
 ![bg right:20% 90%](./figs/cnn_conv.png)
 
