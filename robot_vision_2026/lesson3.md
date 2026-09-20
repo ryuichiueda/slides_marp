@@ -211,7 +211,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### 畳み込み層の誤差逆伝播
 
-- $\odot$の両側の行列の要素をそれぞれ1列に並べてベクトルに
+- $\odot$の両側の各行列の要素を1列に並べてベクトルに
     - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
     - $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
 - 出力の1画素$y$の値に対する誤差逆伝播
