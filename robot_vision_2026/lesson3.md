@@ -211,7 +211,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### 畳み込み層の誤差逆伝播
 
-- アダマール積の両側の行列の要素をそれぞれ1列に並べてベクトルを作る
+- $\odot$の両側の行列の要素をそれぞれ1列に並べてベクトルに
     - フィルタに対応するベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$
     - フィルタにかけられる部分の画素のベクトル$\boldsymbol{x} = (x_1 \ \ x_2 \ \ \dots \ x_n)^\top$
 - 出力の1画素$y$の値
@@ -221,7 +221,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
         - $x$で送る誤差（出力1画素分）: $y$の計算に使った$w$と$e_y$の積$we_y$
         - 出力全画素分はこれを足せばよい
 
-![w:700](./figs/cnn_filter.png)
+![bg right:20% 90%](./figs/cnn_conv.png)
 
 ---
 
