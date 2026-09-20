@@ -215,7 +215,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - フィルタに対応するベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$
     - フィルタにかけられる部分の画素のベクトル$\boldsymbol{x} = (x_1 \ \ x_2 \ \ \dots \ x_n)^\top$
 - 出力の1画素の値
-    - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n$
+    - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
         - ある出力1画素$y$に対する入力1画素$x$の誤差逆伝播の量: $w_1$〜$w_n$のうち、使った重みに$y$の誤差をかけたもの
 - 入力1画素$x$で送る誤差: 上の値を足したもの
