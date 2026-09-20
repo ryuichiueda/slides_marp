@@ -209,10 +209,13 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 --- 
 
-### フィルタの計算
+### フィルタの誤差逆伝播
 
-- 出力のある画素の値
-    - $y = f(X, W) = W\odot X = w_1x_1 + w_2x_2 + \cdots w_nx_n$
+- アダマール積の両側の行列の要素をそれぞれ1列に並べてベクトルを作る
+    - フィルタに対応するベクトル$\boldsymbol{w} = (w_1,w_2,\dots,w_n)$
+    - フィルタにかけられる部分の画素のベクトル$\boldsymbol{x} = (x_1,x_2,\dots,x_n)$
+- 出力の1画素の値
+    - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n$
         - $W$: フィルタの表す行列
         - $X$: フィルタにかける入力の画像の一部
         - $w_1, w_2, \dots, w_n$: $W$の要素を1列に並べたもの
