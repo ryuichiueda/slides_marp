@@ -216,10 +216,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - フィルタにかけられる部分の画素のベクトル$\boldsymbol{x} = (x_1,x_2,\dots,x_n)$
 - 出力の1画素の値
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n$
-        - $W$: フィルタの表す行列
-        - $X$: フィルタにかける入力の画像の一部
-        - $w_1, w_2, \dots, w_n$: $W$の要素を1列に並べたもの
-        - $x_1, x_2, \dots, x_n$: $X$の要素を1列に並べたもの
+    - $J_{f}(\boldsymbol{x}) = \text{diag}(w_1, w_2, \cdots, w_n)$
+- 送る誤差
 
 
 ---
