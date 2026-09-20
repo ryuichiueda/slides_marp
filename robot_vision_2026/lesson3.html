@@ -294,9 +294,14 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="16" style="--footer:ロボットビジョン第3回;--paginate:true;--marpit-advanced-background-split:23%;" data-marpit-pagination-total="28" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/cnn_pooling.png&quot;);background-size:90%;"></figure></div></section></foreignObject><foreignObject width="77%" height="720"><section id="16" data-footer="ロボットビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="16" style="--footer:ロボットビジョン第3回;--paginate:true;--marpit-advanced-background-split:23%;" data-marpit-pagination-total="28" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="cnn%E3%81%AE%E9%83%A8%E5%93%812-%E3%83%97%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0%E5%B1%A4%E3%82%B5%E3%83%96%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E5%B1%A4">CNNの部品2: プーリング層（サブサンプリング層）</h3>
 <ul>
-<li>窓のなかで特徴の高い画素だけを残して画素数を減らす層
+<li>画素数を減らして特徴を強調する層
 <ul>
-<li>最大値を残す「maxプーリング」が主に使われる</li>
+<li>よく使われるもの
+<ul>
+<li>最大値を残すmaxプーリング</li>
+<li>平均値を計算して送る平均値プーリング</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>学習はしない</li>
