@@ -214,7 +214,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - $\odot$の両側の各行列の要素を1列に並べてベクトルに
     - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
     - $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
-- 出力の1画素$y$の値の誤差$e_y$に対する誤差逆伝播
+- 出力の1画素$y$の誤差$e_y$に対する誤差逆伝播
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
     - この画素に関して送る量: $(e_{x_1} \ \ e_{x_2} \ \dots \ e_{x_n})^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
@@ -228,7 +228,11 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### 畳み込み層のパラメータ更新
 
-- 出力の1画素$y$の値に対する更新
+- 出力の1画素$y$の誤差$e_y$に対する更新
+    - $\partial y/\partial w_i = x_i$、$\partial y/\partial b = 1$なので
+        - $w_i \verb|-=| \alpha x_ie_y$
+        - $b \verb|-=| \alpha e_y$
+- 全出力に関して、上の2式の更新を行えばよい
 
 ---
 
