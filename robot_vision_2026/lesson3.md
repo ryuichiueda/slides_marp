@@ -214,14 +214,21 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - $\odot$の両側の各行列の要素を1列に並べてベクトルに
     - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
     - $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
-- 出力の1画素$y$の値に対する誤差逆伝播
+- 出力の1画素$y$の値の誤差$e_y$に対する誤差逆伝播
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
-    - この画素$y$の誤差$e_y$に関して送る量: $(x_1 \ \ x_2 \ \dots \ x_n)^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
+    - この画素に関して送る量: $(e_{x_1} \ \ e_{x_2} \ \dots \ e_{x_n})^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
 - ある入力画素1画素の誤差逆伝播の量: 
     - 出力全画素分について$we_y$を足せばよい
 
 ![bg right:30% 96%](./figs/cnn_conv_bp.svg)
+
+
+--- 
+
+### 畳み込み層のパラメータ更新
+
+- 出力の1画素$y$の値に対する更新
 
 ---
 
