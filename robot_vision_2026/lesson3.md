@@ -213,7 +213,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - $\odot$の両側の行列の要素をそれぞれ1列に並べてベクトルに
     - フィルタに対応するベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$
-    - フィルタにかけられる部分の画素のベクトル$\boldsymbol{x} = (x_1 \ \ x_2 \ \ \dots \ x_n)^\top$
+    - それに対応する入力画素のベクトル$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$
 - 出力の1画素$y$の値
     - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
     - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
