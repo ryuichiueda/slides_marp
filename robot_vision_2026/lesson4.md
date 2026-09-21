@@ -61,7 +61,7 @@ marp: true
             - なんで？？（講義後半で）
     - 出力: 画像
 - 出力の画像は最初はでたらめ
-    - ある訓練をすると画像が生成されるように
+    - <span style="color:red">ある訓練</span>をすると画像が生成されるように
 
 
 ![bg right:40% 100%](./figs/dcgan-cc-by-4.0-by_zhang.png)
