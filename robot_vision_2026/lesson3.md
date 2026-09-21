@@ -304,9 +304,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
 - 次の技術で多層化が実現（次ページ、次々ページ）
     - 図に多数の「迂回」: <span style="color:red">スキップ（残差）接続</span>
-    - 学習データのミニバッチごとに正則化
+    - 学習データのミニバッチごとに正則化（batch normalization）
         - バッチ: ある数の教示データ
         - 少量のバッチごとにパラメータ変更を行う「ミニバッチ」という手法がある
+        - 畳み込み層のあと、活性化関数の前に層として挿入
 
 ![bg right:15% 100%](https://upload.wikimedia.org/wikipedia/commons/6/6f/Resnet-18_architecture.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
 
@@ -329,6 +330,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ---
 
 ### バッチ正則化[[Ioffe+ 2015]](https://proceedings.mlr.press/v37/ioffe15.pdf)
+
+- ある入力のセット$B = {\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_n}$について
+    - 平均値$\mu_B$と分散$\sigma_B^2$を計算
 
 ---
 
