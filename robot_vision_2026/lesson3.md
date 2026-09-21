@@ -302,8 +302,25 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - ResNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
     - 右図のようにとても多層（152層）
         - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
+    - 図に多数の「迂回」: <span style="color:red">スキップ（残差）接続</span>
+        - これで多層化が実現（次ページ）
 
 ![bg right:15% 100%](https://upload.wikimedia.org/wikipedia/commons/6/6f/Resnet-18_architecture.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
+
+---
+
+### スキップ（残差）接続
+
+- あるレイヤーの出力を次の層だけでなく、
+別の層にも入力する接続方法
+    - 入力に挟まれた層は入出力の差分を
+    学習することに
+- スキップ接続の有無: 初期の学習の容易さに影響
+    - スキップ接続なし: 最初は$\boldsymbol{y}$がランダム
+    - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
+
+![bg right:30% 90%](../advanced_vision/figs/skip.png)
+
 
 
 ---
@@ -328,22 +345,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 
 ![bg right:25% 90%](https://github.com/ryuichiueda/jrsj_color_figs/blob/main/vol_40_no_2/fig_11.png?raw=true)
-
----
-
-### その前に補足: スキップ（残差）接続
-
-- あるレイヤーの出力を次の層だけでなく、
-別の層にも入力する接続方法
-    - 入力に挟まれた層は入出力の差分を
-    学習することに
-- スキップ接続の有無: 初期の学習の容易さに影響
-    - スキップ接続なし: 最初は$\boldsymbol{y}$がランダム
-    - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
-- ResNet（2015年）
-
-![bg right:30% 90%](../advanced_vision/figs/skip.png)
-
 
 ---
 
