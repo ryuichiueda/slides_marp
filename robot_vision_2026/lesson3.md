@@ -203,8 +203,8 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### フィルタの意味
 
 - フィルタ: 従来の画像処理に使われてきたものと同じ
-    - 局所的な特徴（エッジなど）を検出
-    - 畳み込み層の学習=フィルタの学習
+- 局所的な特徴（エッジなど）を検出
+- 畳み込み層の学習=フィルタの学習
 ![w:700](./figs/cnn_filter.png)
 
 
@@ -213,14 +213,14 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 畳み込み層の誤差逆伝播
 
 - $\odot$の両側の各行列の要素を1列に並べてベクトルに
-    - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
-    - $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
+- フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
+- $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
 - 出力の1画素$y$の誤差$e_y$に対する誤差逆伝播
-    - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
-    - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
-    - この画素に関して送る量: $(e_{x_1} \ \ e_{x_2} \ \dots \ e_{x_n})^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
+- $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
+- $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
+- この画素に関して送る量: $(e_{x_1} \ \ e_{x_2} \ \dots \ e_{x_n})^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
 - ある入力画素1画素の誤差逆伝播の量: 
-    - 出力全画素分について$we_y$を足せばよい
+- 出力全画素分について$we_y$を足せばよい
 
 ![bg right:30% 96%](./figs/cnn_conv_bp.svg)
 
@@ -230,9 +230,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 畳み込み層のパラメータ更新
 
 - 出力の1画素$y$の誤差$e_y$に対する更新
-    - $\partial y/\partial w_i = x_i$、$\partial y/\partial b = 1$なので
-        - $w_i \verb|-=| \alpha x_ie_y$
-        - $b \verb|-=| \alpha e_y$
+- $\partial y/\partial w_i = x_i$、$\partial y/\partial b = 1$なので
+    - $w_i \verb|-=| \alpha x_ie_y$
+    - $b \verb|-=| \alpha e_y$
 - 全出力に関して、上の2式の更新を行えばよい
 
 ---
@@ -240,9 +240,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### CNNの部品2: プーリング層（サブサンプリング層） 
 
 - 画素数を減らして特徴を強調する層
-    - よく使われるもの
-        - 最大値を残すmaxプーリング
-        - 平均値を計算して送る平均値プーリング
+- よく使われるもの
+    - 最大値を残すmaxプーリング
+    - 平均値を計算して送る平均値プーリング
 - 学習はしない
 - 後段（ものを分類するネットワークなど）が学習しやすく
 - 誤差逆伝播
@@ -257,12 +257,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### チャンネル
 
 - 1層に複数の画像がある場合、多チャンネルに
-    - カラー（RGB）画像を扱う場合: 3チャンネル
-    - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
+- カラー（RGB）画像を扱う場合: 3チャンネル
+- 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
 - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
-    - 画像から手書きの数字を識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
-    - チャンネル数だけの種類の特徴を捉えることが可能
-         ![w:800](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
+- 画像から手書きの数字を識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
+- チャンネル数だけの種類の特徴を捉えることが可能
+     ![w:800](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
 
 
 ---
@@ -270,9 +270,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### チャンネルとフィルタ（イレギュラーな構成でない場合）
 
 - 畳み込み層: $c$チャンネルの入力に対し、$c \times n \times n$の3次元形状のフィルタを適用
-    - $n\times n$:画素のフィルタを$c$個用意してそれぞれのチャンネルに適用
-    - 各チャンネルの出力を足し込んで1チャンネルに
-        ![w:500](./figs/cnn_conv_multi_ch.svg)
+- $n\times n$:画素のフィルタを$c$個用意してそれぞれのチャンネルに適用
+- 各チャンネルの出力を足し込んで1チャンネルに
+    ![w:500](./figs/cnn_conv_multi_ch.svg)
 - プーリング層: チャンネル数は不変
 
 
@@ -281,15 +281,15 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 代表的なCNN（1/2）
 
 - LeNet[[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code): 手書き文字を識別
-    - 畳み込み・プーリング$\rightarrow$全結合層
-        - シグモイド関数を活性化関数に使用
+- 畳み込み・プーリング$\rightarrow$全結合層
+    - シグモイド関数を活性化関数に使用
 - AlexNet[[Krizhevsky2012]](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf): 畳み込みを5層に深く
 （当時としては深い）
-    - 右図: LeNet（左）とAlexNet（右）の比較
-    - LeRUを活性化関数に使用
-    - 1000種類の識別
-    - [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-        - 学習した中間層や認識結果が見られる
+- 右図: LeNet（左）とAlexNet（右）の比較
+- LeRUを活性化関数に使用
+- 1000種類の識別
+- [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+    - 学習した中間層や認識結果が見られる
 
 ![bg right:33% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
@@ -297,14 +297,16 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### 代表的なCNN（2/2）
+### 代表的なCNN（2/2）: ResNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
-- ResNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-    - 性能と層の多さが当時圧倒的
-    - 右図のようにとても多層（152層）
-        - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
+- 性能と層の多さが当時圧倒的
+- 右図のようにとても多層（152層）
+    - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
+- 次の技術で多層化が実現（次ページ、次々ページ）
     - 図に多数の「迂回」: <span style="color:red">スキップ（残差）接続</span>
-        - これで多層化が実現（次ページ）
+    - 学習データのミニバッチごとに正則化
+        - バッチ: ある数の教示データ
+        - 少量のバッチごとにパラメータ変更を行う「ミニバッチ」という手法がある
 
 ![bg right:15% 100%](https://upload.wikimedia.org/wikipedia/commons/6/6f/Resnet-18_architecture.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
 
