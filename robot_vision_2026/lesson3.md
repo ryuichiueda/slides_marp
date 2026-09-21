@@ -332,8 +332,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### バッチ正則化層[[Ioffe+ 2015]](https://proceedings.mlr.press/v37/ioffe15.pdf)
 
 - ある入力のセット$B = \{\boldsymbol{x}^{(j)} = (x_1^{(j)}, x_2^{(j)}, \dots, x_n^{(j)} ) | j = 1,2, \dots, m\}$
-に対し、次の計算
-    - 平均値$\mu_i^B = \dfrac{1}{m}\sum_{j=1}^m x_i^{(j)}$
+に対し、次の値を計算
+    - 平均値$\mu_1, \mu_2, \dots, \mu_n$（ベクトルの各元に対して計算）
+    - 分散$\sigma^2_1, \sigma^2_2, \dots, \sigma^2_n$（同上）
     - ベクトルの各元の分散$\boldsymbol{V}$を計算
     - $B$の各データを次のように変換
         - $\hat{\boldsymbol{x}}$
