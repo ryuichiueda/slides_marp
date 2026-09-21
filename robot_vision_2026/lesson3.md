@@ -278,12 +278,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### 代表的なCNN
+### 代表的なCNN（1/2）
 
 - LeNet[[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code): 手書き文字を識別
     - 畳み込み・プーリング$\rightarrow$全結合層
         - シグモイド関数を活性化関数に使用
-- AlexNet: 畳み込みを5層に深く
+- AlexNet[[Krizhevsky2012]](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf): 畳み込みを5層に深く
 （当時としては深い）
     - 右図: LeNet（左）とAlexNet（右）の比較
     - LeRUを活性化関数に使用
@@ -294,6 +294,14 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ![bg right:33% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
 <a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:AlexNet_block_diagram.svg">右図: Zhang et al., CC BY-SA 4.0</a>
+
+---
+
+### 代表的なCNN（2/2）
+
+- RezNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+
+
 
 ---
 
