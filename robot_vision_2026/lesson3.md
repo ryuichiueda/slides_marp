@@ -300,7 +300,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 代表的なCNN（2/2）
 
 - ResNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-    - 右図のようにとても多層
+    - 右図のようにとても多層（152層）
         - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
 
 ![bg right:15% 100%](https://upload.wikimedia.org/wikipedia/commons/6/6f/Resnet-18_architecture.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original)
