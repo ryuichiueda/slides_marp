@@ -255,7 +255,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### チャンネル
 
-- 1層に複数の画像の入力がある場合、他チャンネルに
+- 1層に複数の画像がある場合、多チャンネルに
     - カラー（RGB）画像を扱う場合: 3チャンネル
     - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
     - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
