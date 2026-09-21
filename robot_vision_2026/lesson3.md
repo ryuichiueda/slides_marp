@@ -359,9 +359,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - 画像の画素ごとに識別
 - U-Net: CNNの後ろに逆向きのCNNをつけたもの
-    - 当初の用途: セグメンテーション
-        - 画像に写っているものごとに画像の領域を分割
-        （右図: [[三上他 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)）
+    - （右図: [[三上他 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)）
 - 「逆向きのCNN」
     - 「転置畳み込み（後から説明）」という操作で画像を大きくしていく（構造は次ページ）
 
