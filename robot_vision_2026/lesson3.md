@@ -331,7 +331,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### バッチ正則化[[Ioffe+ 2015]](https://proceedings.mlr.press/v37/ioffe15.pdf)
 
-- ある入力のセット$B = {\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_n}$について
+- ある入力のセット$B = \{\boldsymbol{x}_1, \boldsymbol{x}_2, \dots, \boldsymbol{x}_n\}$について
     - 平均値$\mu_B$と分散$\sigma_B^2$を計算
 
 ---
