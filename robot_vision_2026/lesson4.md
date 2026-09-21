@@ -105,8 +105,9 @@ $\rightarrow$精緻な画像
 
 - 生成ネットワークの評価関数（損失関数に$-1$をかけたもの）
     - $V_D(G) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
-        - $G(\boldsymbol{z}^{(i)})$: 生成ネットワークが生成したデータ（$m$個用意）
+        - $G(\boldsymbol{z}^{(i)})$: 生成画像（$m$個用意）
         - $D(\boldsymbol{x})$: 識別ネットワークの識別結果（確率）
+            - 識別ネットワークが間違えるほど評価が高く
 - 識別ネットワークの評価関数
     - $V_G(D)= \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
         - $\boldsymbol{x}^{(i)}$: 訓練データ（こちらも$m$個用意）
