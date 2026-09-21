@@ -213,14 +213,14 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### 畳み込み層の誤差逆伝播
 
 - $\odot$の両側の各行列の要素を1列に並べてベクトルに
-- フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
-- $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
+    - フィルタをベクトル$\boldsymbol{w} = (w_1\ \ w_2 \ \dots\ w_n)^\top$に
+    - $\boldsymbol{w}$に対応する入力を$\boldsymbol{x} = (x_1 \ \ x_2 \ \dots \ x_n)^\top$に
 - 出力の1画素$y$の誤差$e_y$に対する誤差逆伝播
-- $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
-- $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
-- この画素に関して送る量: $(e_{x_1} \ \ e_{x_2} \ \dots \ e_{x_n})^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
+    - $y = f(\boldsymbol{x}| \boldsymbol{w}) = w_1x_1 + w_2x_2 + \cdots w_nx_n + b$
+    - $J_{f}(\boldsymbol{x}) = (w_1 \ \  w_2 \ \cdots \  w_n)^\top$
+    - この画素に関して送る量: $(e_{x_1} \ \ e_{x_2} \ \dots \ e_{x_n})^\top = (w_1 \ \  w_2 \ \cdots \  w_n)^\top e_y$
 - ある入力画素1画素の誤差逆伝播の量: 
-- 出力全画素分について$we_y$を足せばよい
+    - 出力全画素分について$we_y$を足せばよい
 
 ![bg right:30% 96%](./figs/cnn_conv_bp.svg)
 
@@ -257,10 +257,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ### チャンネル
 
 - 1層に複数の画像がある場合、多チャンネルに
-- カラー（RGB）画像を扱う場合: 3チャンネル
-- 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
+    - カラー（RGB）画像を扱う場合: 3チャンネル
+    - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
 - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
-- 画像から手書きの数字を識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
+    - 画像から手書きの数字を識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
 - チャンネル数だけの種類の特徴を捉えることが可能
      ![w:800](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
 
