@@ -299,7 +299,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### 代表的なCNN（2/2）
 
-- RezNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+- ResNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
 
 
