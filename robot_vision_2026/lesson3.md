@@ -358,7 +358,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ## セグメンテーション技術
 
 - 画像の画素ごとに識別
-- 代表的な手法: U-Net
+- 代表的な手法: U-Net[[Ronneberger+ 2015]](https://arxiv.org/pdf/1505.04597)
     - 例: [[三上他 2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)（右図）
         - 葉、茎、背景を識別
     - 構造
