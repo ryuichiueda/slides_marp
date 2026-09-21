@@ -46,7 +46,7 @@ marp: true
 ### ネットワーク構造の例（DCGAN）
 
 - Deep Convlutional GAN（DCGAN）[[Radford 2015]](https://arxiv.org/pdf/1511.06434) <a href="https://www.researchgate.net/figure/The-architecture-of-the-generator-and-the-discriminator-in-a-DCGAN-model-FSC-is-the_fig4_343597759"><span style="font-size:70%">画像: Zhang et al. CC-BY 4.0</span></a>
-    - 上: 生成ネットワーク<span style="font-size:70%">（FSC: fractionally-strided convolution)</span>
+    - 上: 生成ネットワーク<span style="font-size:70%">（FSC: fractionally-strided convolution、つまり転置畳み込み)</span>
     - 下: 識別ネットワーク
 ![w:800](./figs/dcgan-cc-by-4.0-by_zhang.png)
 
