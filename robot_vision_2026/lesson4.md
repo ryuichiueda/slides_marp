@@ -110,7 +110,7 @@ $\rightarrow$精緻な画像
             - 識別ネットワークが間違えるほど評価が高く
 - 識別ネットワークの評価関数
     - $V_G(D)= \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
-        - $\boldsymbol{x}^{(i)}$: 訓練データ（こちらも$m$個用意）
+        - $\boldsymbol{x}^{(i)}$: 訓練画像（こちらも$m$個用意）
         - $V_D(G)$に訓練データに対する識別の成績の項も加算
 
 ---
