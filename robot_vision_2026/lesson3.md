@@ -335,9 +335,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 に対し、次の値を計算
     - 平均値$\mu_1, \mu_2, \dots, \mu_n$（ベクトルの各元に対して計算）
     - 分散$\sigma^2_1, \sigma^2_2, \dots, \sigma^2_n$（同上）
-    - ベクトルの各元の分散$\boldsymbol{V}$を計算
-    - $B$の各データを次のように変換
-        - $\hat{\boldsymbol{x}}$
+- ある元の入力を次のように正規化
+    - $\hat{x_i}^{(j)} = (x_i^{(j)} - \mu_i)/\sqrt{\sigma^2_i + \varepsilon}$
+        - $\varepsilon$: ゼロ割り防止の微少量
+- パラメータ（学習対象）$\gamma_i$、$\beta_i$で、その元に強弱、シフトを付加
+    - $y_i^{(j)} = \gamma_i \hat{x_i}^{(j)} + \beta_i$
+    - 注意: 畳み込み層のうしろに置く時は$\gamma$、$\beta$はチャネルごとに1個ずつ
 
 ---
 
