@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 827 172.76">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 2.25px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #e71f19;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        stroke-miterlimit: 8;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke: #040000;
+      }
+
+      .cls-6, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 3 1;
+      }
+
+      .cls-8 {
+        fill: #040000;
+      }
+
+      .cls-9 {
+        fill: #231815;
+      }
+
+      .cls-9, .cls-7, .cls-10 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 24px;
+      }
+
+      .cls-11, .cls-10 {
+        fill: #e71f19;
+      }
+    </style>
+  </defs>
+  <path class="cls-8" d="M577.57,163.76l9,4.51-9,4.49v-9ZM.5,166.26l578.56.5v3S.5,169.26.5,169.26v-3Z"/>
+  <rect class="cls-8" x=".5" y="111.76" width="95" height="56.5"/>
+  <rect class="cls-3" x=".5" y="111.76" width="95" height="56.5"/>
+  <path class="cls-8" d="M99.43,79.83l-4.35-9.07-4.65,8.93,9,.15ZM95,168.16l1.46-89.88-3-.05-1.46,89.88,3,.05Z"/>
+  <path class="cls-1" d="M338.25,167.01c5.52-21.99,11.04-43.98,15.56-54.23,4.52-10.24,6.92-10.91,11.57-7.23,4.66,3.68,16.36,29.32,16.36,29.32"/>
+  <line class="cls-1" x1="381.25" y1="135.51" x2="586.19" y2="135.51"/>
+  <ellipse class="cls-5" cx="233.75" cy="110.01" rx="10.25" ry="8.75"/>
+  <line class="cls-5" x1="234" y1="117.76" x2="234.18" y2="146.47"/>
+  <line class="cls-5" x1="233.72" y1="129.46" x2="219.5" y2="122.26"/>
+  <line class="cls-5" x1="234" y1="129.46" x2="251.78" y2="122.26"/>
+  <line class="cls-5" x1="235.5" y1="146.26" x2="251.22" y2="169.86"/>
+  <line class="cls-5" x1="234.22" y1="143.76" x2="220.5" y2="169.49"/>
+  <line class="cls-5" x1="508.84" y1="151.76" x2="242.5" y2="152.38"/>
+  <rect class="cls-5" x="509" y="125.76" width="49" height="34"/>
+  <ellipse class="cls-6" cx="527" cy="155.26" rx="12" ry="11.5"/>
+  <ellipse class="cls-5" cx="527" cy="155.26" rx="12" ry="11.5"/>
+  <ellipse class="cls-6" cx="550.75" cy="163.51" rx="4.25" ry="3.75"/>
+  <ellipse class="cls-5" cx="550.75" cy="163.51" rx="4.25" ry="3.75"/>
+  <line class="cls-1" x1="95.75" y1="165.51" x2="338.49" y2="165.51"/>
+  <text class="cls-7" transform="translate(55.78 151.76)"><tspan x="0" y="0">壁</tspan></text>
+  <text class="cls-10" transform="translate(394.18 125.76)"><tspan x="0" y="0">尤度関数</tspan></text>
+  <text class="cls-9" transform="translate(258.3 147.47)"><tspan x="0" y="0">センサの値</tspan></text>
+  <text class="cls-9" transform="translate(181.96 21.12)"><tspan x="0" y="0">人がいないという前提では</tspan><tspan x="0" y="28">ここの尤度が高い</tspan></text>
+  <g>
+    <line class="cls-4" x1="322.01" y1="61.47" x2="347.11" y2="93.45"/>
+    <path class="cls-8" d="M350.84,98.2c-2.58-1.58-6.17-3.25-9.02-3.79l4.8-1.58,2.68-4.29c-.15,2.89.61,6.78,1.54,9.66Z"/>
+  </g>
+  <text class="cls-9" transform="translate(515 21.12)"><tspan x="0" y="0">ここの尤度も高くないと</tspan><tspan x="0" y="28">人が通ったときに位置推定が</tspan><tspan x="0" y="56">おかしくなる</tspan></text>
+  <g>
+    <line class="cls-11" x1="606.36" y1="86.28" x2="575.49" y2="128.91"/>
+    <g>
+      <line class="cls-2" x1="606.36" y1="86.28" x2="579.03" y2="124.02"/>
+      <path class="cls-11" d="M575.49,128.91c.81-2.92,1.42-6.83,1.16-9.71l2.84,4.18,4.86,1.39c-2.82.65-6.35,2.45-8.86,4.14Z"/>
+    </g>
+  </g>
+</svg>
