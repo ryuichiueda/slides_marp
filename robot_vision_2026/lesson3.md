@@ -297,7 +297,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### 代表的なCNN（2/2）: ResNet[[He2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+### 代表的なCNN（2/2）: ResNet[[He+ 2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
 - 性能と層の多さが当時圧倒的
 - 右図のようにとても多層（152層）
@@ -325,6 +325,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ![bg right:30% 90%](../advanced_vision/figs/skip.png)
 
 
+
+---
+
+### バッチ正則化[[Ioffe+ 2015]](https://proceedings.mlr.press/v37/ioffe15.pdf)
 
 ---
 
