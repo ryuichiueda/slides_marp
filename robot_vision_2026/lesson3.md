@@ -284,6 +284,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - 畳み込み・プーリング$\rightarrow$全結合層
         - シグモイド関数を活性化関数に使用
 - AlexNet: 畳み込みを5層に深く
+（当時としては深い）
     - 右図: LeNet（左）とAlexNet（右）の比較
     - LeRUを活性化関数に使用
     - 1000種類の識別
