@@ -280,7 +280,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ### 代表的なCNN
 
-- LeNet: 前ページの構成で手書き文字を識別
+- LeNet[[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code): 手書き文字を識別
     - 畳み込み・プーリング$\rightarrow$全結合層
         - シグモイド関数を活性化関数に使用
 - AlexNet: 畳み込みを5層に深く
