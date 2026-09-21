@@ -28,6 +28,69 @@ marp: true
 
 ---
 
+## オートエンコーダと潜在空間
+
+---
+
+### オートエンコーダ
+
+- 入力と出力を一致させるように学習されたANN [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+    - 損失関数: 入出力の平均二乗誤差（MSE, mean square error）
+        - 学習のためのラベル付けは不要（教師無し）
+    - 構成はCNNでも全結合でもよいが、U-Net状に中間の次元を小さく
+        - 入力側: どんどん情報を落としていく
+        - 出力側: どんどん情報を増やしていく
+    - 疑問: 何の意味があるの？
+![w:900](./figs/autoenc.png)
+
+---
+
+### 入力側（<span style="color:red">エンコーダ</span>）のやっていること
+
+- 入力されたデータの分類
+    - （学習がうまくいった場合は）似たような画像から似たような出力が得られる
+    - うしろに全結合層（とソフトマックス層）をくっつけて追加で学習させると分類器に
+- 右図の例: 出力を2次元まで縮小した場合の
+出力の分布の例
+（注意: 実用的なものはもっと高次元）
+    - 分布している空間を<span style="color:red">潜在空間</span>と言う
+
+![bg right:35% 95%](./figs/encoder.png)
+
+
+---
+
+### 出力側（<span style="color:red">デコーダ</span>）のやっていること
+
+- 潜在空間のベクトルからデータを復元
+    - 例: 「犬」のベクトルが来たら犬の写真や絵を描画
+    - 復元方法（絵の描き方）を学習
+        - 転置畳み込みのフィルタなどのパラメータに
+    - 復元しやすいようにエンコーダ側が学習される
+        - 潜在空間でのベクトルの分布が決まる
+
+![w:800](./figs/decoder.png)
+
+
+---
+
+### オートエンコーダの利用
+
+- エンコーダとデコーダを分離して利用
+- エンコーダ
+    - 先に前結合層などを取り付けて分類器に
+    - 先に別のデコーダを取り付けると別のものが<span style="color:red">生成</span>される
+- デコーダ
+    - 学習に用いたもの以外のエンコーダを取り付けると変換器に
+        - 例「犬」と入力$\rightarrow$犬の絵を<span style="color:red">生成</span>
+
+<center>ちまたで<span style="color:red">生成AI</span>と言われるものの原型</center>
+
+![bg right:30% 95%](./figs/autoenc2.png)
+
+
+---
+
 ## GAN（generative adversarial networks）[[Goodfellow2014]](https://papers.nips.cc/paper_files/paper/2014/file/f033ed80deb0234979a61f95710dbe25-Paper.pdf)
 
 - 敵対的生成ネットワーク
