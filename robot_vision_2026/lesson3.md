@@ -285,11 +285,11 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - シグモイド関数を活性化関数に使用
 - AlexNet[[Krizhevsky2012]](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf): 畳み込みを5層に深く
 （当時としては深い）
-- 右図: LeNet（左）とAlexNet（右）の比較
-- LeRUを活性化関数に使用
-- 1000種類の識別
-- [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
-    - 学習した中間層や認識結果が見られる
+    - 右図: LeNet（左）とAlexNet（右）の比較
+    - LeRUを活性化関数に使用
+    - 1000種類の識別
+    - [AlexNetの論文](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
+        - 学習した中間層や認識結果が見られる
 
 ![bg right:33% 90%](https://upload.wikimedia.org/wikipedia/commons/a/ad/AlexNet_block_diagram.svg)
 
