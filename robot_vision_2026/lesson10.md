@@ -30,19 +30,6 @@ marp: true
 
 ---
 
-### FMのアイデア
-
-- ガウス分布$p_0$と画像の分布など意味のある分布$p_1$の相互変換
-    - <span style="color:red">ベクトル場</span>$\boldsymbol{u}_t$（$0\le t \le 1$）で考える
-        - 各時刻で分布をひっぱる速度場を仮定
-    - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
-    - $\boldsymbol{v}_t(\boldsymbol{w})$と$\boldsymbol{u}_t$の差（2乗誤差）を損失関数に
-- 問題としては最適輸送問題をANNに解かせることに
-    - 最適輸送問題: 分布を一番楽な方法で変形する問題
-$\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
-
----
-
 ### 問題の分解: 条件つきフローマッチング
 
 - 拡散モデル同様、途中の$t$の画像（やデータ）が必要

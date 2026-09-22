@@ -410,16 +410,23 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - 訓練画像の分布をガウス分布に変換・逆変換
         - 変換にはノイズを乗せていく方法が取られた
 - FM: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
+    - ただし、任意の時刻のノイズ画像を生成しないと学習できない
 
 ![w:900](./figs/ddpm.svg)
 
 ---
 
-### 前ページのアイデアの問題
+### FMのアイデア
 
-- 任意の時刻のノイズ画像が生成できない
-    - 各時刻の学習に支障
-- FMはこれをなんとかした
+- ガウス分布$p_0$と画像の分布など意味のある分布$p_1$の相互変換
+    - <span style="color:red">ベクトル場</span>$\boldsymbol{u}_t$（$0\le t \le 1$）で考える
+        - 各時刻で分布をひっぱる速度場を仮定
+    - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
+    - $\boldsymbol{v}_t(\boldsymbol{w})$と$\boldsymbol{u}_t$の差（2乗誤差）を損失関数に
+- 問題としては最適輸送問題をANNに解かせることに
+    - 最適輸送問題: 分布を一番楽な方法で変形する問題
+$\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
+
 
 ---
 
