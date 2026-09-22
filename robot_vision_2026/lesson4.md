@@ -368,7 +368,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - 訓練画像$\boldsymbol{x}_0^{(j)} \ (j=1,2,\dots)$を集め、拡散過程を計算するプログラムを準備
     - いつでも$i$回雑音を加えた画像$\boldsymbol{x}_i^{(j)}\ (i=1,2,\dots,T)$を作れるようにしておく
 - デコーダに時刻$i$の画像から時刻$i-1$の画像を復元させる（$i=1,2,\dots,T$）
-    - 時刻$i$の画像と時刻を入力$\longrightarrow$出力を当該の訓練画像と比較
+    - 時刻$i$の画像と時刻を入力$\longrightarrow$出力を当該の訓練画像と比較（2乗誤差）
 
 ![w:500](./figs/ddpm_training_data2.png)$\qquad$![w:400](./figs/ddpm_training.png)
 
