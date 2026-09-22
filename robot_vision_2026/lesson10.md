@@ -27,16 +27,6 @@ marp: true
 - VLA（vision-language-action model）、ロボット基盤モデル
     - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
 
----
-
-### 前ページのアイデアの問題
-
-- 任意の時刻のノイズ画像が生成できない
-    - 下図（再掲）
-    - 各時刻の学習に支障
-- FMはこれをなんとかした
-
-![bg right:32% 100%](./figs/ddpm_training_data.png)
 
 ---
 

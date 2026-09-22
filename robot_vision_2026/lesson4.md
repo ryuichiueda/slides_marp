@@ -413,6 +413,13 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ![w:900](./figs/ddpm.svg)
 
+---
+
+### 前ページのアイデアの問題
+
+- 任意の時刻のノイズ画像が生成できない
+    - 各時刻の学習に支障
+- FMはこれをなんとかした
 
 ---
 
