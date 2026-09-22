@@ -312,6 +312,8 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### VAEの損失関数
 
+ベイズ推定の式を解いていくと次のようになる（らしいがまだ把握してません）
+
 - ある1つの訓練データ$\boldsymbol{x}$に対して、次の値が大きいほうがよい
     - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
         - $m$: $\boldsymbol{z}$の次元
