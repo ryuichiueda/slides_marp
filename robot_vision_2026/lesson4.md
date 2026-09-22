@@ -273,9 +273,11 @@ $\rightarrow$精緻な画像
     - 重要: Qからは確率の高いデータが選びやすい
 - Qから高確率のデータ$\boldsymbol{q}'$を選んでPの空間へ逆変換（$\boldsymbol{p}'$を得る）
     - <span style="color:red">$\boldsymbol{p}'$はPで確率の高い点で、意味のある画像になっている</span>
-- そんなことできるの？$\Rightarrow$<span style="color:red">できるんです</span>
 
 ![w:900](./figs/vae_prob.svg)
+
+<center>そんなことできるの？→<span style="color:red">できる</span></center>
+
 
 ---
 
