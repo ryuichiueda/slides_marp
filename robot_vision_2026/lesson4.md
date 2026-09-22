@@ -322,6 +322,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
             - バッチで学習するなら$L=1$でよさそう
     - 最初の項: 平均値も分散も小さい方がよい$\rightarrow Q$の分布が中央に集まる
     - 次の項: デコーダの$\hat{\boldsymbol{x}}$と元の$\boldsymbol{x}$の比較の項
+        - 具体的にどう計算するのかはまだ未調査（すんません）
 
 ---
 
