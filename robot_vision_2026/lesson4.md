@@ -361,7 +361,18 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### DDPMの学習方法（訓練用のデータの準備）
+### DDPMの学習方法（概要）
+
+- 注意: デコーダしか学習しない
+- 訓練データの用意
+    - 細かいノイズを$0, 1,2, \dots, T$回加えた画像をそれぞれ準備
+- デコーダに時刻$i$の画像から時刻$i-1$の画像を復元させる（$i=1,2,\dois,T$）
+
+![w:500](./figs/ddpm_training_data2.png)$\qquad$![w:400](./figs/ddpm_training.png)
+
+---
+
+### DDPMの訓練データ
 
 - 学習データ: 様々な画像$\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ (j=1,2,\dots,N)$</span>を準備
 - 拡散させかたの定義
