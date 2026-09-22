@@ -298,7 +298,10 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### VAEの構造（右図）
 
-- エンコーダの先に雑音の層を追加
+- エンコーダの先に標準正規分布に従う雑音を加える層を追加
+    - エンコーダ: 条件付き確率$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$
+        - 具体的な計算: $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu}, I)$
+            - 平均値$\boldsymbol{\mu}$に標準正規分布に従う雑音を付加
 - $Q(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
 - 作りは簡単だがベイズ推論の理論が背景に
     - 大学院の確率ロボティクスの講義でお会いしましょう
@@ -312,11 +315,10 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 - ある1つの訓練データ$\boldsymbol{x}$に対して、次の値が大きいほうがよい
     - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^J ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
+        - $J$: $\boldsymbol{z}$の次元
         - $\boldsymbol{\phi}, \boldsymbol{\theta}$: それぞれエンコーダ/デコーダのパラメータ
         - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2 )$
-        - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\varepsilon}^{(\ell)}$（ここで$\boldsymbol{\varepsilon}^{(\ell)} \sim \mathcal{N}(\boldsymbol{0}, I)$）
         - $L$: ランダムな試行の回数
-        - $J$: $\boldsymbol{z}$の次元
 
 
 ---
