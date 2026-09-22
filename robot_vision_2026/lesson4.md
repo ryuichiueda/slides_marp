@@ -284,7 +284,7 @@ $\rightarrow$精緻な画像
 
 ## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational AE、VAE）
 
-- 仮定を置いて
+- 仮定を置く
     - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）に従う
     - $\boldsymbol{z}$を画像$\boldsymbol{x}$の原因と考え、原因の不確かさの正規分布$Q(\boldsymbol{z}|\boldsymbol{x})$を考える
 - 仮定に基づいて学習すると
@@ -296,16 +296,14 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### VAEの構造（右図）
+### AEからの改良（右図）
 
-- エンコーダの先に標準正規分布に従う雑音を加える層を追加
+- 改良1: エンコーダの先に標準正規分布に従う雑音を加える層を追加
     - エンコーダ: 条件付き確率$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$
         - 具体的な計算: $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu}, I)$
             - 平均値$\boldsymbol{\mu}$に標準正規分布に従う雑音を付加
     - デコーダ: 条件付き確率$P_{\boldsymbol{\theta}}(\boldsymbol{x} |\boldsymbol{z})$
 - $Q(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
-- 作りは簡単だがベイズ推論の理論が背景に
-    - 大学院の確率ロボティクスの講義でお会いしましょう
 
 ![bg right:35% 100%](./figs/vae.png)
 
