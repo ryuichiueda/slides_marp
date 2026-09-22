@@ -290,7 +290,7 @@ $\rightarrow$精緻な画像
     - $\boldsymbol{z}$全体はガウス分布$P(\boldsymbol{z})$に
     - $P(\boldsymbol{z})$の分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
 
-![w:900](./figs/latent_space_dist2.svg)
+$\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
