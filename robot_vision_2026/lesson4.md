@@ -302,6 +302,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - 平均値$\boldsymbol{\mu}$（$n$次元）
         - 分散$\boldsymbol{\sigma}^2$（$n$次元）
 - デコーダ（パラメータ$\boldsymbol{\theta}$）: $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
+    - 理論上は確率的な表現となるが、$\hat{\boldsymbol{x}} = \boldsymbol{f}(\boldsymbol{z})$のように決定論的にもできる
 
 ![bg right:35% 100%](./figs/vae.png)
 
