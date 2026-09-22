@@ -317,6 +317,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - $m$: $\boldsymbol{z}$の次元
         - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma}\odot\boldsymbol{\varepsilon}^{(\ell)} \ (\ell = 1,2,\dots,L)$
             - $L$回試行を繰り返すということ
+            - バッチで学習するなら$L=1$でよさそう
 
 ---
 
