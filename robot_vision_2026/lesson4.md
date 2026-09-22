@@ -286,7 +286,7 @@ $\rightarrow$精緻な画像
 
 - 仮定を置いて
     - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）に従う
-    - エンコーダへの入力$\boldsymbol{x}$に対し、$P(\boldsymbol{z}|\boldsymbol{x})$の分布も正規分布に従う
+    - $\boldsymbol{z}$を画像$\boldsymbol{x}$の原因と考え、原因の不確かさの正規分布$Q(\boldsymbol{z}|\boldsymbol{x})$を考える
 - 仮定に基づいて学習すると
     - $\boldsymbol{z}$全体は標準正規分布$Q(\boldsymbol{z})$に
     - $Q(\boldsymbol{z})$の分布のなかに$Q(\boldsymbol{z}|$物の種別$)$のような分布ができる
