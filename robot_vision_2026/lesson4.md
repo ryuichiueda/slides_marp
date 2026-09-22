@@ -164,6 +164,16 @@ $\rightarrow$精緻な画像
 
 ---
 
+### 疑問
+
+- なんで我々は風景を覚えていられるのか？
+    - 前来た場所を懐かしいと思える（たまに忘れる）
+    - 自分のいた教室と違う教室でも懐かしいと思う
+- 話し合ってみましょう
+
+
+---
+
 ### オートエンコーダ
 
 - 入力と出力を一致させるように学習されたANN [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
