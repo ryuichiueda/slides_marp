@@ -178,9 +178,9 @@ $\rightarrow$精緻な画像
 
 ---
 
-### オートエンコーダ
+### オートエンコーダ（autoencoder、AE）
 
-- 入力と出力を一致させるように学習されたANN [[Hinton 2006]](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+- 入力と出力を一致させるように学習されたANN [[Hinton 2006]](https://www.cs.toronto.edu/~hinton/absps/science.pdf)
     - 損失関数: 入出力の平均二乗誤差（MSE, mean square error）
         - 学習のためのラベル付けは不要（教師無し）
     - 構成はCNNでも全結合でもよいが、U-Net状に中間の次元を小さく
@@ -235,6 +235,14 @@ $\rightarrow$精緻な画像
 
 ![bg right:30% 95%](./figs/autoenc2.png)
 
+---
+
+### オートエンコーダのまとめ
+
+- 風景（数百万次元の画素値のベクトル）を数十次元のベクトルに圧縮
+    - 人間もそうしてる？
+- 潜在空間のベクトルを狙って/適当にデコードすると画像になる
+    - 人間もそうやって風景を思い出したり幻想を見たりする？
 
 ---
 
