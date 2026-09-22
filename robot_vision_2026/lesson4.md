@@ -301,7 +301,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - 改良1: エンコーダの先に標準正規分布に従う雑音を加える層を追加
     - エンコーダ: 条件付き確率$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$
         - 具体的な計算: $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu}, I)$
-            - 平均値$\boldsymbol{\mu}$に標準正規分布に従う雑音を付加
+            - 別の表記: $\boldsymbol{z} = \boldsymbol{\mu} + \boldsymbol{\varepsilon}, \boldsymbol{\varepsilon} \sim \boldsymbol{N}(\boldsymbol{0}, I)$
     - デコーダ: 条件付き確率$P_{\boldsymbol{\theta}}(\boldsymbol{x} |\boldsymbol{z})$
 - $Q(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
 
