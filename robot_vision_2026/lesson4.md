@@ -318,6 +318,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma}\odot\boldsymbol{\varepsilon}^{(\ell)} \ (\ell = 1,2,\dots,L)$
             - $L$回試行を繰り返すということ
             - バッチで学習するなら$L=1$でよさそう
+    - 最初の項: 平均値も分散も小さい方がよい$\rightarrow Q$の分布が中央に集まる
 
 ---
 
