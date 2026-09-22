@@ -296,13 +296,10 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### VAEのエンコーダ/デコーダ
 
-- エンコーダ: 
+- エンコーダ（パラメータ$\boldsymbol{\phi}$）: 
     - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
         - 具体的に: $n$次元の入力$\boldsymbol{x}$に対し平均値$\boldsymbol{\mu}$と分散$\boldsymbol{\sigma}^2$を出力（合計$2n$次元）
-- 改良1: エンコーダの先に標準正規分布に従う雑音を加える層を追加
-    - エンコーダ: 条件付き確率$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$
-        - 具体的な計算: $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu}, I)$
-            - 別の表記: $\boldsymbol{z} = \boldsymbol{\mu} + \boldsymbol{\varepsilon}, \boldsymbol{\varepsilon} \sim \boldsymbol{N}(\boldsymbol{0}, I)$
+- デコーダ（パラメータ$\boldsymbol{\theta}$）: 
     - デコーダ: 条件付き確率$P_{\boldsymbol{\theta}}(\boldsymbol{x} |\boldsymbol{z})$
 - $Q(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
 
