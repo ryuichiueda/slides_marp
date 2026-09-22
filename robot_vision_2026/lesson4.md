@@ -299,13 +299,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - エンコーダ（パラメータ$\boldsymbol{\phi}$）: 
     - $\boldsymbol{z} \sim P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
     - 具体的には
-        - $n$次元の入力$\boldsymbol{x}$に対して次の$2n$次元のベクトルを出力して・・・
-            - 平均値$\boldsymbol{\mu}$（$n$次元）
-            - 分散$\boldsymbol{\sigma}^2$（$n$次元。対数で）
-        - $\boldsymbol{z} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\varepsilon}$を出力
+        - $\boldsymbol{z}$の平均値$\boldsymbol{\mu}$、各元の分散$\boldsymbol{\sigma}^2$（の対数）を出力し、
+        - 次の層で$\boldsymbol{z} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\varepsilon}$を出力
             - $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0}, I)$
 - デコーダ（パラメータ$\boldsymbol{\theta}$）: $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
-    - 理論上は確率的な表現となるが、$\hat{\boldsymbol{x}} = \boldsymbol{f}(\boldsymbol{z})$のように決定論的にもできる
+    - 理論上は確率的な表現となるが、$\hat{\boldsymbol{x}} = \boldsymbol{f}_\boldsymbol{\theta}(\boldsymbol{z})$のように決定論的にもできる
 
 ![bg right:35% 100%](./figs/vae.png)
 
