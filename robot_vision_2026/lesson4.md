@@ -305,6 +305,12 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ![bg right:35% 100%](./figs/vae.png)
 
+
+---
+
+### VAEの損失関数
+
+
 ---
 
 ### 隙間の問題の解決
