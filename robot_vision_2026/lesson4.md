@@ -314,13 +314,14 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ベイズ推定の式を解いていくと次のようになる（らしいがまだ把握してません）
 
-- ある1つの訓練データ$\boldsymbol{x}$に対して、次の値が大きいほうがよい
+- ある1つの訓練画像$\boldsymbol{x}$に対して、次の値が大きいほうがよい
     - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
         - $m$: $\boldsymbol{z}$の次元
         - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma}\odot\boldsymbol{\varepsilon}^{(\ell)} \ (\ell = 1,2,\dots,L)$
             - $L$回試行を繰り返すということ
             - バッチで学習するなら$L=1$でよさそう
     - 最初の項: 平均値も分散も小さい方がよい$\rightarrow Q$の分布が中央に集まる
+    - 次の項: デコーダの$\hat{\boldsymbol{x}}$と元の$\boldsymbol{x}$の比較に
 
 ---
 
