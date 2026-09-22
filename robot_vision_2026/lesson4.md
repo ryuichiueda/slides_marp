@@ -313,12 +313,10 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 ### VAEの損失関数
 
 - ある1つの訓練データ$\boldsymbol{x}$に対して、次の値が大きいほうがよい
-    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^J ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
-        - $J$: $\boldsymbol{z}$の次元
-        - $\boldsymbol{\phi}, \boldsymbol{\theta}$: それぞれエンコーダ/デコーダのパラメータ
-        - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2 )$
-        - $L$: ランダムな試行の回数
-
+    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
+        - $m$: $\boldsymbol{z}$の次元
+        - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma}\odot\boldsymbol{\varepsilon}^{(\ell)} \ (\ell = 1,2,\dots,L)$
+            - $L$回試行を繰り返すということ
 
 ---
 
