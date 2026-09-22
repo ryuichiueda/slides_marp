@@ -115,17 +115,17 @@ $\rightarrow$精緻な画像
 
 ---
 
-### 条件付きGAN（Conditional GAN、CGAN）[[Mirza2014]](https://arxiv.org/abs/1411.1784)
+### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
 
 - GANの生成ネットワークはランダムにデータを出力するだけ
     - 何を出力するかコントロールしたい
 - 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
     - 生成ネットワークに何を作って欲しいかラベルで指示
         - データのもとになるベクトル$\boldsymbol{z}$と共にラベル$\boldsymbol{y}$を入力
+            - $\boldsymbol{y}$はワンホットベクトル
     - 識別ネットワークにも、生成ネットワークの出力と共に$\boldsymbol{y}$を入力
         - 条件$\boldsymbol{y}$に合った生成データか判定
 - 補足: ラベルの表現
-    - $\boldsymbol{y}=(0,0,\dots,1,\dots,0,0,0)$という<span style="color:red">one-hot ベクトル</span>がよく用いられる
         - $1$が立っている位置を特定のものと対応づけ
             - 例: 1番目が猫、2番目が犬、など
     - 他のANNでもよく用いられる
