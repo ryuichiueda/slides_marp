@@ -409,7 +409,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - 拡散モデル（下図。再掲）
     - 訓練画像の分布をガウス分布に変換・逆変換
         - 変換にはノイズを乗せていく方法が取られた
-- FM: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
+- FM: <span style="color:red">別にノイズを乗せなくても砂山のように変形していけばいいんじゃないか？</span>
     - ただし、任意の時刻のノイズ画像を生成しないと学習できない
 
 ![w:900](./figs/ddpm.svg)
