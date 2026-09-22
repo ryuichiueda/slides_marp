@@ -301,8 +301,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - 具体的には: $n$次元の入力$\boldsymbol{x}$に対して次の$2n$次元のベクトルを出力
         - 平均値$\boldsymbol{\mu}$（$n$次元）
         - 分散$\boldsymbol{\sigma}^2$（$n$次元）
-- デコーダ（パラメータ$\boldsymbol{\theta}$）: 
-    - $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
+- デコーダ（パラメータ$\boldsymbol{\theta}$）: $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
 
 ![bg right:35% 100%](./figs/vae.png)
 
