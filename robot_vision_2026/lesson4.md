@@ -401,6 +401,18 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - [[Ho+ 2020]](https://arxiv.org/abs/2006.11239)の図14など
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
+---
+
+### Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
+
+- 拡散モデルとは別のアプローチで分布の変換を実現
+- 拡散モデル（下図。再掲）
+    - 訓練画像の分布をガウス分布に変換・逆変換
+        - 変換にはノイズを乗せていく方法が取られた
+- FM: <span style="color:red">別にノイズを乗せなくても変形していけばいいんじゃないか？</span>
+
+![w:900](./figs/ddpm.svg)
+
 
 ---
 
