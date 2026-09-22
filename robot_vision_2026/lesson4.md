@@ -349,13 +349,9 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### 拡散モデルを使った生成の考え方
 
-- 画像: 人間がなにか意味のある画像だと思う画像の分布$P$からドローされたもの
-    - $\boldsymbol{x} \sim P$（$\boldsymbol{x}$: 画素を並べたベクトル）
-- $P$の拡散
-    - 何度も同じガウス分布状の雑音を何度も足していくと
-    最終的にガウス分布$Q$に
-<span style="color:red">$\Longrightarrow$逆（逆拡散過程）をすれば$P$が復元できる（どうやって？）</span>
-<span style="color:red">$\Longrightarrow Q$からノイズをドローして逆に拡散$\rightarrow$$P$から新たな絵がドローできる</span>
+- 同じ次元の空間で$P \Leftrightarrow Q$の変換をする
+- 拡散過程: $P$を雑音の分布$Q$に近づけていくこと
+- 逆拡散過程: $Q$から$\boldsymbol{z}$を取り出して$P$のどこかに写像
  
 
 ![w:900](./figs/ddpm.svg)
