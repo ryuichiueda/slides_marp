@@ -302,6 +302,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - エンコーダ: 条件付き確率$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$
         - 具体的な計算: $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu}, I)$
             - 平均値$\boldsymbol{\mu}$に標準正規分布に従う雑音を付加
+    - デコーダ: 条件付き確率$P_{\boldsymbol{\theta}}(\boldsymbol{x} |\boldsymbol{z})$
 - $Q(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
 - 作りは簡単だがベイズ推論の理論が背景に
     - 大学院の確率ロボティクスの講義でお会いしましょう
