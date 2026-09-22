@@ -361,20 +361,6 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### 理論的な裏付け
-
-- 先ほど用いた拡散過程: 同じガウス分布を$T$回適用
-    - 少しずつの雑音であれば、$T$回、同じノイズ除去の処理を繰り返すと元に戻すことができる（時間を巻き戻すことができる）
-        - 非平衡熱力学の知見から
-- DDPM
-    - <span style="color:red">「ノイズの除去処理」をANNに学習させる</span>
-    $\rightarrow$このANNに雑音を$T$回通すと画像が生成される
-    （Stable Diffusionなどに用いられるなど高品質）
-    - 集めた画像でノイズの除去処理を訓練
-
-
----
-
 ### DDPMの学習方法（訓練用のデータの準備）
 
 - 学習データ: 様々な画像$\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ (j=1,2,\dots,N)$</span>を準備
