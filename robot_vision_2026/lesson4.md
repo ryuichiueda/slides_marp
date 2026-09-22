@@ -366,7 +366,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - 注意: デコーダしか学習しない
 - 訓練データの用意
     - 細かいノイズを$0, 1,2, \dots, T$回加えた画像をそれぞれ準備
-- デコーダに時刻$i$の画像から時刻$i-1$の画像を復元させる（$i=1,2,\dois,T$）
+- デコーダに時刻$i$の画像から時刻$i-1$の画像を復元させる（$i=1,2,\dots,T$）
 
 ![w:500](./figs/ddpm_training_data2.png)$\qquad$![w:400](./figs/ddpm_training.png)
 
