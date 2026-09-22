@@ -266,6 +266,12 @@ $\rightarrow$精緻な画像
 
 ---
 
+### 分布の変換
+
+![w:900](./figs/vae_prob.svg)
+
+---
+
 ## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational autoencoder、VAE）
 
 - 仮定
