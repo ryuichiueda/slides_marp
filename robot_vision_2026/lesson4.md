@@ -287,7 +287,6 @@ $\rightarrow$精緻な画像
 - 仮定を置く
     - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）$Q$に従う
     - $\boldsymbol{z}$を画像$\boldsymbol{x}$の原因と考え、原因の不確かさの正規分布$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$を考える
-        - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}(\boldsymbol{\mu}_\boldsymbol{x}, \boldsymbol{\sigma}^2_\boldsymbol{x} I)$
 - 仮定に基づいて学習$\rightarrow Q(\boldsymbol{z})$の分布のなかに$Q(\boldsymbol{z}|$物の種別$)$のような分布
 
 $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
@@ -295,8 +294,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### AEからの改良（右図）
+### VAEのエンコーダ/デコーダ
 
+- エンコーダ: 
+    - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
+        - 具体的に: $n$次元の入力$\boldsymbol{x}$に対し平均値$\boldsymbol{\mu}$と分散$\boldsymbol{\sigma}^2$を出力（合計$2n$次元）
 - 改良1: エンコーダの先に標準正規分布に従う雑音を加える層を追加
     - エンコーダ: 条件付き確率$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$
         - 具体的な計算: $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu}, I)$
