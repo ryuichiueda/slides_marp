@@ -287,7 +287,7 @@ $\rightarrow$精緻な画像
     - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）に従う
     - エンコーダへの入力$\boldsymbol{x}$に対し、$P(\boldsymbol{z}|\boldsymbol{x})$の分布も正規分布に従う
 - 仮定に基づいて学習すると
-    - $\boldsymbol{z}$の隙間があかずに原点付近に集まる
+    - $\boldsymbol{z}$全体はガウス分布$P(\boldsymbol{z})$に
     - $P(\boldsymbol{z})$の分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
 
 ![w:900](./figs/latent_space_dist2.svg)
