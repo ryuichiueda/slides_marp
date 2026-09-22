@@ -271,6 +271,7 @@ $\rightarrow$精緻な画像
 - Pを簡単な分布Q（ガウス分布）に変換
     - Pの点$\boldsymbol{p}$をQの点$\boldsymbol{q}$に対応づけ
     - 重要: Qからは確率の高いデータが選びやすい
+    - 補足: Qの分布が原因でPの点が発生すると考えることも可能
 - Qから高確率のデータ$\boldsymbol{q}'$を選んでPの空間へ逆変換（$\boldsymbol{p}'$を得る）
     - <span style="color:red">$\boldsymbol{p}'$はPで確率の高い点で、意味のある画像になっている</span>
 
