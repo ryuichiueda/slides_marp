@@ -317,6 +317,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - $\boldsymbol{\phi}$: エンコーダのパラメータ
         - $\boldsymbol{\theta}$: デコーダのパラメータ
         - $L$: ランダムな試行の回数
+        - $J$: $\boldsymbol{z}$の次元
 
 
 ---
