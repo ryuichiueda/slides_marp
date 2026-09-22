@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 663.54 186.91">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: TimesNewRomanPS-ItalicMT, 'Times New Roman';
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-style: italic;
+      }
+
+      .cls-2 {
+        font-size: 18px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: Times-Italic, Times;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: Times-Roman, Times;
+      }
+
+      .cls-5, .cls-7 {
+        font-size: 12px;
+      }
+
+      .cls-8, .cls-9 {
+        font-size: 14px;
+      }
+
+      .cls-8, .cls-10 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+      }
+
+      .cls-11 {
+        stroke: red;
+      }
+
+      .cls-11, .cls-12, .cls-13, .cls-14 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-15 {
+        font-size: 16px;
+      }
+
+      .cls-9 {
+        fill: red;
+      }
+
+      .cls-12, .cls-13 {
+        stroke: #000;
+      }
+
+      .cls-12, .cls-14 {
+        stroke-width: .5px;
+      }
+
+      .cls-4 {
+        font-family: Times-BoldItalic, Times;
+        font-weight: 700;
+      }
+
+      .cls-16 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-18 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.14em;
+      }
+
+      .cls-23 {
+        letter-spacing: -.15em;
+      }
+
+      .cls-24 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-14 {
+        stroke: #666;
+      }
+    </style>
+  </defs>
+  <g>
+    <line class="cls-12" x1="6" y1="98.49" x2="180.45" y2="98.49"/>
+    <path d="M183.47,98.49c-1.42.53-3.18,1.43-4.27,2.38l.86-2.38-.86-2.38c1.09.95,2.85,1.85,4.27,2.38Z"/>
+  </g>
+  <g>
+    <line class="cls-12" x1="90.83" y1="157.54" x2="90.83" y2="27.48"/>
+    <path d="M90.83,24.46c.53,1.42,1.43,3.18,2.38,4.27l-2.38-.86-2.38.86c.95-1.09,1.85-2.85,2.38-4.27Z"/>
+  </g>
+  <text transform="translate(190.82 100.21)"><tspan><tspan class="cls-2" x="0" y="0">y</tspan><tspan class="cls-5" x="7.99" y="4">1</tspan></tspan></text>
+  <text transform="translate(83.1 14.87)"><tspan><tspan class="cls-2" x="0" y="0">y</tspan><tspan class="cls-5" x="7.99" y="4">2</tspan></tspan></text>
+  <circle cx="129.14" cy="32.47" r="3.54"/>
+  <circle cx="149.35" cy="49.78" r="3.54"/>
+  <circle cx="120.51" cy="53.32" r="3.54"/>
+  <text class="cls-7" transform="translate(137.16 36.47)"><tspan class="cls-10" x="0" y="0">犬</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(156.38 54.99)"><tspan class="cls-10" x="0" y="0">犬</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(125.6 65.34)"><tspan class="cls-10" x="0" y="0">犬</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <circle cx="51.33" cy="126.46" r="3.54"/>
+  <circle cx="49.54" cy="142.78" r="3.54"/>
+  <text class="cls-7" transform="translate(59.35 130.47)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(56.57 147.99)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <circle cx="108.2" cy="102.25" r="3.54"/>
+  <text class="cls-7" transform="translate(115.23 107.46)"><tspan class="cls-10" x="0" y="0">狸</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <circle cx="97.98" cy="89.05" r="3.54"/>
+  <text class="cls-7" transform="translate(105 94.27)"><tspan class="cls-10" x="0" y="0">狸</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <circle cx="132.48" cy="92.59" r="3.54"/>
+  <text class="cls-7" transform="translate(139.51 97.8)"><tspan class="cls-10" x="0" y="0">狸</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <circle cx="63.13" cy="41.46" r="3.54"/>
+  <text class="cls-7" transform="translate(70.15 46.68)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <circle cx="20.13" cy="126.46" r="3.54"/>
+  <text class="cls-7" transform="translate(27.15 131.68)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <circle cx="14.56" cy="38.6" r="3.54"/>
+  <text class="cls-7" transform="translate(21.58 43.81)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">4</tspan></text>
+  <circle cx="29.33" cy="24.46" r="3.54"/>
+  <text class="cls-7" transform="translate(36.36 29.67)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <circle cx="42.2" cy="54.99" r="3.54"/>
+  <text class="cls-7" transform="translate(49.22 60.2)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <circle cx="40.45" cy="98.49" r="3.54"/>
+  <text class="cls-7" transform="translate(47.48 103.7)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">4</tspan></text>
+  <g>
+    <line class="cls-12" x1="223.66" y1="98.88" x2="398.11" y2="98.88"/>
+    <path d="M401.12,98.88c-1.42.53-3.18,1.43-4.27,2.38l.86-2.38-.86-2.38c1.09.95,2.85,1.85,4.27,2.38Z"/>
+  </g>
+  <g>
+    <line class="cls-12" x1="308.48" y1="163.21" x2="308.48" y2="27.86"/>
+    <path d="M308.48,24.84c.53,1.42,1.43,3.18,2.38,4.27l-2.38-.86-2.38.86c.95-1.09,1.85-2.85,2.38-4.27Z"/>
+  </g>
+  <text transform="translate(408.47 100.6)"><tspan><tspan class="cls-2" x="0" y="0">y</tspan><tspan class="cls-5" x="7.99" y="4">1</tspan></tspan></text>
+  <text transform="translate(300.75 15.26)"><tspan><tspan class="cls-2" x="0" y="0">y</tspan><tspan class="cls-5" x="7.99" y="4">2</tspan></tspan></text>
+  <text class="cls-7" transform="translate(339.38 75.86)"><tspan class="cls-10" x="0" y="0">犬</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(353.04 98.38)"><tspan class="cls-10" x="0" y="0">犬</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(317.64 100.6)"><tspan class="cls-10" x="0" y="0">犬</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(285.59 142.8)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(300.28 114.92)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(334.24 139.86)"><tspan class="cls-10" x="0" y="0">狸</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(322.66 121.65)"><tspan class="cls-10" x="0" y="0">狸</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(357.16 125.19)"><tspan class="cls-10" x="0" y="0">狸</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(307.79 74.8)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">2</tspan></text>
+  <text class="cls-7" transform="translate(270.81 121.06)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(280.24 70.8)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">4</tspan></text>
+  <text class="cls-7" transform="translate(296.06 58.2)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">1</tspan></text>
+  <text class="cls-7" transform="translate(263.82 88.16)"><tspan class="cls-10" x="0" y="0">狐</tspan><tspan class="cls-6" x="12" y="0">3</tspan></text>
+  <text class="cls-7" transform="translate(277.62 99.24)"><tspan class="cls-10" x="0" y="0">猫</tspan><tspan class="cls-6" x="12" y="0">4</tspan></text>
+  <g>
+    <line class="cls-12" x1="441.9" y1="99.55" x2="616.35" y2="99.55"/>
+    <path d="M619.37,99.55c-1.42.53-3.18,1.43-4.27,2.38l.86-2.38-.86-2.38c1.09.95,2.85,1.85,4.27,2.38Z"/>
+  </g>
+  <g>
+    <line class="cls-12" x1="526.72" y1="166.85" x2="526.72" y2="28.54"/>
+    <path d="M526.72,25.52c.53,1.42,1.43,3.18,2.38,4.27l-2.38-.86-2.38.86c.95-1.09,1.85-2.85,2.38-4.27Z"/>
+  </g>
+  <text transform="translate(626.71 101.27)"><tspan><tspan class="cls-2" x="0" y="0">y</tspan><tspan class="cls-5" x="7.99" y="4">1</tspan></tspan></text>
+  <text transform="translate(518.99 15.93)"><tspan><tspan class="cls-2" x="0" y="0">y</tspan><tspan class="cls-5" x="7.99" y="4">2</tspan></tspan></text>
+  <circle class="cls-11" cx="527.06" cy="99.55" r="59.65"/>
+  <text class="cls-9" transform="translate(564.56 39.9)"><tspan class="cls-10" x="0" y="0">全体</tspan><tspan class="cls-3" x="28" y="0">: </tspan><tspan class="cls-1" x="36.16" y="0">P</tspan><tspan class="cls-10" x="44.71" y="0">(</tspan><tspan class="cls-4" x="49.05" y="0">z</tspan><tspan class="cls-10" x="54.5" y="0">)</tspan></text>
+  <text class="cls-15" transform="translate(477.38 74.83)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan class="cls-10" x="9.77" y="0">(</tspan><tspan class="cls-4" x="14.73" y="0">z</tspan><tspan class="cls-6" x="20.96" y="0">|</tspan><tspan class="cls-10" x="24.16" y="0">狐)</tspan></text>
+  <text class="cls-15" transform="translate(474.76 123.24)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan class="cls-10" x="9.77" y="0">(</tspan><tspan class="cls-4" x="14.73" y="0">z</tspan><tspan class="cls-6" x="20.96" y="0">|</tspan><tspan class="cls-10" x="24.16" y="0">猫)</tspan></text>
+  <text class="cls-15" transform="translate(540.28 88.42)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan class="cls-10" x="9.77" y="0">(</tspan><tspan class="cls-4" x="14.73" y="0">z</tspan><tspan class="cls-6" x="20.96" y="0">|</tspan><tspan class="cls-10" x="24.16" y="0">犬)</tspan></text>
+  <path class="cls-13" d="M537.15,77.67c3.51-9.82,6.86-21.36,1.16-30.1-4.57-7.01-13.44-9.63-21.62-11.37-5.93-1.27-12.16-2.34-17.98-.63-6.06,1.78-10.84,6.34-15.35,10.76-8.44,8.3-16.89,16.84-22.73,27.14-2.08,3.68-3.84,8.1-2.28,12.03,2.44,6.13,10.61,6.77,17.16,7.59,8.99,1.14,17.56,4.47,26.44,6.27,20.92,4.24,28.5-3.01,35.19-21.7Z"/>
+  <path class="cls-13" d="M474.36,137.71c-9.56-8.22-18.25-18.82-19.35-31.37-.15-1.71-.14-3.51.68-5.02.6-1.1,1.58-1.94,2.57-2.7,9.68-7.42,22.6-9.55,34.74-8.38,12.14,1.18,23.76,5.36,35.23,9.51,3.27,1.18,6.72,2.49,8.87,5.22,3.64,4.61,2.24,11.29.43,16.88-3.58,11.09-8.16,34.29-21.34,35.1-14.74.91-31.28-10.16-41.84-19.24Z"/>
+  <path class="cls-13" d="M530.67,100.2c-2.31-1.16-4.79-2.73-5.54-5.47-.49-1.79-.12-3.72.25-5.55,1.37-6.79,2.74-13.57,4.23-20.33,1.97-8.96,4.85-18.89,12.16-22.98,2.97-1.66,6.35-2.12,9.65-2.5,5-.57,10.1-1.01,15,.24,15.02,3.83,34.93,33.14,26.83,51.09-9.37,20.77-48.27,12.65-62.57,5.49Z"/>
+  <path class="cls-13" d="M545.45,157.48c-5.38-2.31-10.82-5.13-14.92-10.23-7.85-9.76-9.02-25.31-9.46-39.44-.07-2.43-.12-5.01.81-7.13.86-1.97,2.43-3.24,4.04-4.09,5.04-2.67,10.72-1.96,16.12-1.13,7.81,1.2,15.6,2.58,23.39,3.96,7.31,1.3,14.72,2.62,21.56,6.22,3.53,1.86,6.94,4.36,9.52,8.01,8.57,12.1,4.9,33.75-5.26,42.1-13.32,10.93-31.81,7.75-45.8,1.73Z"/>
+  <text class="cls-15" transform="translate(543.82 125.43)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan class="cls-10" x="9.77" y="0">(</tspan><tspan class="cls-4" x="14.73" y="0">z</tspan><tspan class="cls-6" x="20.96" y="0">|</tspan><tspan class="cls-10" x="24.16" y="0">狸)</tspan></text>
+  <text class="cls-8" transform="translate(241.46 180.72)"><tspan class="cls-29" x="0" y="0">V</tspan><tspan x="8.18" y="0">AEの場合は分布</tspan><tspan class="cls-29" x="108.71" y="0">に</tspan><tspan x="122.57" y="0">ぼか</tspan><tspan class="cls-29" x="150.57" y="0">す</tspan></text>
+  <text class="cls-8" transform="translate(436.88 182.16)"><tspan x="0" y="0">学習が進</tspan><tspan class="cls-20" x="56" y="0">む</tspan><tspan class="cls-23" x="68.88" y="0">と</tspan><tspan class="cls-16" x="80.78" y="0">こ</tspan><tspan class="cls-21" x="93.52" y="0">の</tspan><tspan class="cls-22" x="106.68" y="0">よ</tspan><tspan class="cls-17" x="118.72" y="0">う</tspan><tspan x="131.46" y="0">な分布</tspan><tspan class="cls-27" x="173.46" y="0">が</tspan><tspan class="cls-24" x="187.04" y="0">で</tspan><tspan class="cls-19" x="200.76" y="0">き</tspan><tspan class="cls-26" x="213.22" y="0">る</tspan></text>
+  <ellipse class="cls-14" cx="302.31" cy="50.15" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="289.45" cy="68.63" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="271.21" cy="80.75" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="314.43" cy="71.86" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="288.01" cy="96.13" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="277.92" cy="117.07" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="308.08" cy="109.91" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="295.28" cy="134.75" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="348.09" cy="71.86" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="327.18" cy="94.53" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="362.22" cy="96.13" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="329.29" cy="114.25" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="367.19" cy="121.65" rx="19.1" ry="15.38"/>
+  <ellipse class="cls-14" cx="339.11" cy="137.03" rx="19.1" ry="15.38"/>
+  <text class="cls-8" transform="translate(0 180.72)"><tspan x="0" y="0">普通のA</tspan><tspan class="cls-28" x="51.18" y="0">E</tspan><tspan x="58.11" y="0">で</tspan><tspan class="cls-18" x="72.11" y="0">作</tspan><tspan class="cls-25" x="84.71" y="0">っ</tspan><tspan x="98.01" y="0">た潜在空間の分布</tspan></text>
+</svg>

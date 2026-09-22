@@ -281,18 +281,16 @@ $\rightarrow$精緻な画像
 
 ---
 
-## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational autoencoder、VAE）
+## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational AE、VAE）
 
-- 仮定
-    - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布に従う
-        - 空間が無限なのでデータが散らないように縛りを設ける
+- 仮定を置いて
+    - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）に従う
     - エンコーダへの入力$\boldsymbol{x}$に対し、$P(\boldsymbol{z}|\boldsymbol{x})$の分布も正規分布に従う
-        - これは学習のための仮定
 - 仮定に基づいて学習すると
     - $\boldsymbol{z}$の隙間があかずに原点付近に集まる
     - $P(\boldsymbol{z})$の分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
 
-![bg right:40% 100%](./figs/latent_space_dist.png)
+![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
