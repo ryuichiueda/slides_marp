@@ -292,14 +292,6 @@ $\rightarrow$精緻な画像
 
 $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
----
-
-### 隙間の問題の解決
-
-- デコーダで生成されるデータに隙間ができにくい
-    - [[Kingma 2013]](https://arxiv.org/abs/1312.6114)の中の図4
-    - [Kingma氏のデモサイトの例](https://dpkingma.com/sgvb_mnist_demo/demo.html)
-- ただしGANよりぼやけやすい
 
 ---
 
@@ -315,19 +307,12 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### AE、VAE学習の確率的な解釈
+### 隙間の問題の解決
 
-- 確率分布$p$の圧縮と復元を学習している
-    - なんの分布？: データや画像の数値を並べたベクトル$\boldsymbol{x}$
-    - 訓練に使うデータや画像の$\boldsymbol{x}$は、$p$にしたがって選ばれる（$\boldsymbol{x} \sim p$）
-        - $p$: 人間の興味で決まる
-            - 例: 猫の絵を生成したいなら猫の画像ばかりになるなど
-- エンコーダ: $p$を潜在空間の分布$q$に変換
-    - AEの場合は$p$からの点を潜在空間に写像
-- デコーダ: エンコーダと逆の変換を学習
-    - 出力の分布: $p$（誤差あり）
-
-![bg right:38% 95%](./figs/autoenc_prob.png)
+- デコーダで生成されるデータに隙間ができにくい
+    - [[Kingma 2013]](https://arxiv.org/abs/1312.6114)の中の図4
+    - [Kingma氏のデモサイトの例](https://dpkingma.com/sgvb_mnist_demo/demo.html)
+- ただしGANよりぼやけやすい
 
 ---
 
