@@ -311,7 +311,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 ### VAEの損失関数
 
 - ある1つの訓練データ$\boldsymbol{x}$に対して
-    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^J \left\{ 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 \right\} + \dfrac{1}{L}\sum_{\ell=1}^L \log p_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
+    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^J ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log p_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
         - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\varepsilon}^{(\ell)}$
             - $\boldsymbol{\varepsilon}^{(\ell)} \sim \mathcal{N}(\boldsymbol{0}, I)$
         - $\boldsymbol{\phi}$: エンコーダのパラメータ
