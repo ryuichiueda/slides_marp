@@ -271,8 +271,8 @@ $\rightarrow$精緻な画像
 - 方法
     - Pを簡単な分布Q（ガウス分布）に変換
         - Pの点$\boldsymbol{p}$をQの点$\boldsymbol{q}$に対応づけ
-    - Qからは確率の高いデータが選びやすい
-    - Qからデータを選んでPの空間に逆変換
+        - 重要: Qからは確率の高いデータが選びやすい
+    - Qからデータ$\boldsymbol{q}'$を選んでPの空間へ逆変換（$\boldsymbol{p}'$を得る）
 
 ![w:900](./figs/vae_prob.svg)
 
