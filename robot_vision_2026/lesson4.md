@@ -298,10 +298,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 - エンコーダ（パラメータ$\boldsymbol{\phi}$）: 
     - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
-        - 具体的に: $n$次元の入力$\boldsymbol{x}$に対し平均値$\boldsymbol{\mu}$と分散$\boldsymbol{\sigma}^2$を出力（合計$2n$次元）
+    - 具体的には: $n$次元の入力$\boldsymbol{x}$に対して次の$2n$次元のベクトルを出力
+        - 平均値$\boldsymbol{\mu}$（$n$次元）
+        - 分散$\boldsymbol{\sigma}^2$（$n$次元）
 - デコーダ（パラメータ$\boldsymbol{\theta}$）: 
-    - デコーダ: 条件付き確率$P_{\boldsymbol{\theta}}(\boldsymbol{x} |\boldsymbol{z})$
-- $Q(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
+    - $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
 
 ![bg right:35% 100%](./figs/vae.png)
 
