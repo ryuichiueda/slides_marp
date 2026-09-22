@@ -418,7 +418,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### FMのアイデア
 
-- ガウス分布$p_0$と画像の分布など意味のある分布$p_1$の相互変換
+- ガウス分布$p_0 (=Q)$と画像の分布など意味のある分布$p_1 (=P)$の相互変換
     - <span style="color:red">ベクトル場</span>$\boldsymbol{u}_t$（$0\le t \le 1$）で考える
         - 各時刻で分布をひっぱる速度場を仮定
     - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
