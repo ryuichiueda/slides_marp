@@ -184,7 +184,8 @@ $\rightarrow$精緻な画像
     - うしろに全結合層（とソフトマックス層）をくっつけて追加で学習させると分類器に
 - 右図の例: 出力を2次元まで縮小した場合の
 出力の分布の例
-（注意: 実用的なものはもっと高次元）
+    - 注意: 実用的なものはもっと高次元
+        - [Hinton 2026]は30次元
     - 分布している空間を<span style="color:red">潜在空間</span>と言う
 
 ![bg right:35% 95%](./figs/encoder.png)
@@ -216,7 +217,7 @@ $\rightarrow$精緻な画像
     - 学習に用いたもの以外のエンコーダを取り付けると変換器に
         - 例「犬」と入力$\rightarrow$犬の絵を<span style="color:red">生成</span>
 
-<center>ちまたで<span style="color:red">生成AI</span>と言われるものの原型</center>
+<center>GANとともに、ちまたで<span style="color:red">生成AI</span>と言われるものの原型</center>
 
 ![bg right:30% 95%](./figs/autoenc2.png)
 
