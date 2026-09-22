@@ -115,6 +115,16 @@ $\rightarrow$精緻な画像
 
 ---
 
+### GANのまとめ
+
+- 2つのネットワークを競わせる
+- 話さなかったこと
+    - 絵の変換にも使われる[[Isora 2017]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.pdf)
+        - pix2pixと呼ばれる技術
+        - ネットワークはConditional GAN（CGAN）と呼ばれる構造
+
+---
+
 ## オートエンコーダと潜在空間
 
 ---
