@@ -282,7 +282,7 @@ $\rightarrow$精緻な画像
 
 ---
 
-## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational AE、VAE）
+### 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational AE、VAE）
 
 - 仮定を置く
     - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）$Q$に従う
