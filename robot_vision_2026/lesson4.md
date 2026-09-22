@@ -297,10 +297,13 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 ### VAEのエンコーダ/デコーダ
 
 - エンコーダ（パラメータ$\boldsymbol{\phi}$）: 
-    - $P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
-    - 具体的には: $n$次元の入力$\boldsymbol{x}$に対して次の$2n$次元のベクトルを出力
-        - 平均値$\boldsymbol{\mu}$（$n$次元）
-        - 分散$\boldsymbol{\sigma}^2$（$n$次元）
+    - $\boldsymbol{z} \sim P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
+    - 具体的には
+        - $n$次元の入力$\boldsymbol{x}$に対して次の$2n$次元のベクトルを出力して・・・
+            - 平均値$\boldsymbol{\mu}$（$n$次元）
+            - 分散$\boldsymbol{\sigma}^2$（$n$次元。対数で）
+        - $\boldsymbol{z} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\varepsilon}$を出力
+            - $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0}, I)$
 - デコーダ（パラメータ$\boldsymbol{\theta}$）: $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
     - 理論上は確率的な表現となるが、$\hat{\boldsymbol{x}} = \boldsymbol{f}(\boldsymbol{z})$のように決定論的にもできる
 
