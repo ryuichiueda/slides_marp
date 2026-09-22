@@ -335,7 +335,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)
+### Denoising Diffusion Probabilistic Models（DDPM）[[Ho+ 2020]](https://arxiv.org/abs/2006.11239)
 
 - 一般に（機械学習の文脈で）「拡散モデル」と呼ばれるもの
 - 拡散モデル（拡散過程）
@@ -364,9 +364,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 ### DDPMの学習方法（概要）
 
 - 注意: デコーダしか学習しない
+    - [Ho+ 2020]のデコーダはU-Netベースのもの
 - 訓練データの用意
     - 細かいノイズを$0, 1,2, \dots, T$回加えた画像をそれぞれ準備
 - デコーダに時刻$i$の画像から時刻$i-1$の画像を復元させる（$i=1,2,\dots,T$）
+    - 時刻$i$の画像と時刻を入力$\longrightarrow$出力を当該の訓練画像と比較
 
 ![w:500](./figs/ddpm_training_data2.png)$\qquad$![w:400](./figs/ddpm_training.png)
 
@@ -413,7 +415,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 - [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
 - 出力例
-    - [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
+    - [[Ho+ 2020]](https://arxiv.org/abs/2006.11239)の図14など
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
 
