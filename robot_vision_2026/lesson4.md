@@ -424,7 +424,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
     - $\boldsymbol{v}_t(\boldsymbol{w})$と$\boldsymbol{u}_t$の差（2乗誤差）を損失関数に
 - 問題としては最適輸送問題をANNに解かせることに
-    - 最適輸送問題: 分布を一番楽な方法で変形する問題
+    - 最適輸送問題: 分布（砂山）を一番楽な方法で変形する問題
 $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 
