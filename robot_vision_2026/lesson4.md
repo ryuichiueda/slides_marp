@@ -261,7 +261,7 @@ $\rightarrow$精緻な画像
 - こういう操作をする
     - Pを、分布の山の相対的な関係を保ったまま低次元のガウス分布Qに固める
 
-![w:900](./figs/vae_prob.svg)
+![w:400](./figs/vae_sparce.svg)
 
 ---
 
