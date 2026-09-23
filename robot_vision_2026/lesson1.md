@@ -126,7 +126,7 @@ marp: true
 - 機械学習の理論的背景
 - 方法、原理が単純
     - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$に対し$\arg\!\min_{\boldsymbol{w}} \mathcal{L}(\boldsymbol{w} |(x,y)'_{1:M})$を解くだけ（大変だけど）
-        - $\mathcal{L}$: <span style="color:red">損失関数</span>: 入力$\boldsymbol{x}$に対して$\boldsymbol{y}$が欲しい出力からどれだけずれているか数値化する関数
+        - $\mathcal{L}$: <span style="color:red">損失関数</span>: 入力$\boldsymbol{x}$に対して出力$\boldsymbol{y}$がデータからどれだけずれているか数値化する関数
         - $\boldsymbol{w} = \{w_1, w_2, \dots, w_N\}$: パラメータ
         - $(x,y)'_{1:M} = \{ (x,y)'_1, (x,y)'_2, \dots, (x,y)'_M\}$: データ
     - パラメータ
