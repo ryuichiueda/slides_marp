@@ -518,7 +518,7 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
     $=- D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z})]
     +\langle \log P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(3)
-- 変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に（変分推論）
+- 変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に（<span style="color:red">変分推論</span>と同じ）
     - (1)の$D_\text{KL}$は学習が進むと$0$になるので
 
 ---
