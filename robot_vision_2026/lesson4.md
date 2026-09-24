@@ -515,7 +515,6 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     - ここで
         - ベイズの定理から$P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x}) = P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z})P_\boldsymbol{\theta}(\boldsymbol{z})/P_{\boldsymbol{\theta}}(\boldsymbol{x})$（不明）
         - 変分下界$\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
-    = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
     $=- D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z})]
     +\langle \log P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(3)
 - 変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に（<span style="color:red">変分推論</span>の技法）
@@ -536,6 +535,14 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 ### サンプリング版の変分下界
 
+
+---
+
+### ボツ式
+
+- 変分下界$\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
+    = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
 - (2)から
     - $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L\{ \log P_\boldsymbol{\theta}(\boldsymbol{x}, \boldsymbol{z}^{(\ell)})  - \log P_\boldsymbol{\phi}(\boldsymbol{z}^{(\ell)} | \boldsymbol{x}) \}$ ---(6)
         - ここで$\boldsymbol{z}^{(\ell)} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x}), \boldsymbol{\varepsilon}^{(\ell)} \sim p$
+
