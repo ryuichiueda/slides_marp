@@ -477,7 +477,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - つまり訓練データのあるところの確率を高くしたい
 - ここで、ひとつの入力$\boldsymbol{x}$に対して計算するとたぶんこうなる<span style="font-size:70%">（要確認）</span>
 $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x})$（論文の(1)）
-    - 右辺第一項の$P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})$はわからんけど0以上で、学習が進むと0になる
+    - 右辺第一項の$P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})$は0以上で、学習が進むと0になる
     - 右辺第二項の$\mathcal{L}$は変分下界
         - $\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
     =- D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z})]
