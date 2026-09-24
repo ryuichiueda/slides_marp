@@ -528,3 +528,4 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 - エンコーダ$P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})$の入出力を次のようにモデル化
     - $\tilde{\boldsymbol{z}} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x})\quad$ with $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0}, I)$
+        - $g_\boldsymbol{\phi}$は普通のAEのエンコーダ
