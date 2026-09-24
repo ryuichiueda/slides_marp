@@ -477,14 +477,12 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - つまり訓練データのあるところの確率を高くしたい
 - ここで、ひとつの入力$\boldsymbol{x}$に対して計算するとたぶんこうなる<span style="font-size:70%">（要確認）</span>
 $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x})$（論文の(1)）
-    - ここで
-        - 右辺第一項の$P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})$はわからん
-        - 右辺第二項の$\mathcal{L}$は変分下界
-            - $\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
+    - 右辺第一項の$P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})$はわからんけど0以上で、学習が進むと0になる
+    - 右辺第二項の$\mathcal{L}$は変分下界
+        - $\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
     =- D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z})]
     +\langle \log P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(3)
 - 変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に（<span style="color:red">変分推論</span>の技法）
-    - (1)の$D_\text{KL}$は学習が進むと分布が一致して$0$になるので
 
 ---
 
