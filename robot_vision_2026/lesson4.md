@@ -512,3 +512,4 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - つまり訓練データのあるところの確率を高くしたい
     - ここで、ひとつの入力に対して（計算するとたぶん）
     $\log P_\boldsymbol{\theta}(\boldsymbol{x}_i) = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x})$
+        - $P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x}) = P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z})P(\boldsymbol{z})/P(\boldsymbol{x})$
