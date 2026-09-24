@@ -530,8 +530,8 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 ### 正則化項の計算
 
 - 正則化項: $D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ]$
-    - $P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i)$
-    - $P_\boldsymbol{\theta}(\boldsymbol{z})$
+    - $P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) = \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2I)$
+    - $P_\boldsymbol{\theta}(\boldsymbol{z}) =\mathcal{N}(\boldsymbol{0}, I)$
 
 ---
 
