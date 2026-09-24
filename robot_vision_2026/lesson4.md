@@ -538,4 +538,4 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 - 変分下界$\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
     = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
-- $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L$
+- $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L\{ \log P_\boldsymbol{\theta}(\boldsymbol{x}, \boldsymbol{z}^{(\ell)}) \}$
