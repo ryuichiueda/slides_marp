@@ -524,6 +524,11 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
         - $P_\boldsymbol{\theta}(\boldsymbol{z})$: 標準正規分布などと決めてよい
         - (8)式中の2つの分布は一致しないが、バッチ$\boldsymbol{x}_{1:M}$から得られる$\boldsymbol{z}_{1:M}$が決めた分布に従うと$D_\text{KL}$の合計が小さく
 
+
+---
+
+### 正則化項の計算
+
 ---
 
 ### ボツ式
