@@ -1,8 +1,8 @@
 
 - [第1回: ガイダンス・イントロダクション](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson1.html)
-- [第2回: ](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson2.html)
-- [第3回: ](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson3.html)
-- [第4回: ](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson4.html)
+- [第2回: 人工ニューラルネットワークの学習](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson2.html)
+- [第3回: 画像の識別とセグメンテーション](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson3.html)
+- [第4回: 画像の記憶と再生・生成](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson4.html)
 
 ## 参考: 2025年度の大学院講義
 
