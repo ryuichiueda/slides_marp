@@ -501,3 +501,12 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - VAE、拡散モデル、フローマッチング
     - 画像以外にも様々な応用
     - VAEについてはエンコーダが記憶のモデルでもあり重要
+
+
+---
+
+## 補足: VAEの損失関数の求め方
+
+- やりたいこと: デコーダの分布$P_\boldsymbol{\theta}$が訓練データの背景にある分布をよく表すように
+    - 周辺尤度の対数$\log P_\boldsymbol{\theta}(\boldsymbol{x}_{1:N}) = \sum_{i=1}^N\log P_\boldsymbol{\theta}(\boldsymbol{x}_i)$を最大化したい
+        - つまり訓練データのあるところの確率を高くしたい
