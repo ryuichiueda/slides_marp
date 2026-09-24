@@ -31,6 +31,38 @@ marp: true
 
 ---
 
+### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
+
+- GANの生成ネットワークはランダムにデータを出力するだけ
+    - 何を出力するかコントロールしたい
+- 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
+    - 生成ネットワークに何を作って欲しいかラベルで指示
+        - データのもとになるベクトル$\boldsymbol{z}$と共にラベル$\boldsymbol{y}$を入力
+            - $\boldsymbol{y}$はワンホットベクトル
+                - $\boldsymbol{y} = (0 \ \ 0 \ \dots 1 \dots \ 0)$という形で対応するラベルを$1$に
+    - 識別ネットワークにも、生成ネットワークの出力と共に$\boldsymbol{y}$を入力
+        - 条件$\boldsymbol{y}$に合った生成データか判定
+
+---
+
+### pix2pix
+
+- CGANの一種とみなせる
+- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004)（構造は論文のFigure 2に）
+    - 生成ネットワーク: 入力にノイズではなく画像を入力し、画像を出力させる
+        - U-Netがベース
+        - 入力をX、出力をYとしましょう
+    - 識別ネットワーク: XとYのペア、あるいはXと対応する学習用画像Y'のペアを入力して真贋を識別
+    $\rightarrow$画像を変換するように学習
+- どんなことができるか
+    - 線画をカラーの絵や写真のように（図: [[Isora 2016]](https://arxiv.org/abs/1611.07004)）
+    - 葉に隠れた枝をつなぐ[[三上2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
+
+![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
+
+
+---
+
 ## 拡散モデルの誘導
 
 - 拡散モデルでも出力をコントロールしたい
