@@ -539,11 +539,8 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     - $\tilde{\mathcal{L}}^\text{B}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) =
     -D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}) ]
     +\dfrac{1}{L}\sum_{\ell}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$ ---(7)
+        - ここで$\boldsymbol{z}^{(\ell)} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x}), \boldsymbol{\varepsilon}^{(\ell)} \sim p$
 
-
-- $\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
-    =- D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z})]
-    +\langle \log P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(3)
 
 ---
 
@@ -553,5 +550,4 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
 - (2)から
     - $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L\{ \log P_\boldsymbol{\theta}(\boldsymbol{x}, \boldsymbol{z}^{(\ell)})  - \log P_\boldsymbol{\phi}(\boldsymbol{z}^{(\ell)} | \boldsymbol{x}) \}$ ---(6)
-        - ここで$\boldsymbol{z}^{(\ell)} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x}), \boldsymbol{\varepsilon}^{(\ell)} \sim p$
 
