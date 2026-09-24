@@ -511,7 +511,9 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     +\log P_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{z})\big\}$ ---(8)
         - ここで$\boldsymbol{z} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x}), \boldsymbol{\varepsilon} \sim p$
 - (8)の右辺の$\sum$の中
-    - 第1項: 
+    - 第1項: $P_\boldsymbol{\phi}(\boldsymbol{z} | \boldsymbol{x}_{1:M})$を決めた分布$P_\boldsymbol{\theta}(\boldsymbol{z})$に一致させる正則化項
+        - $P_\boldsymbol{\theta}(\boldsymbol{z})$: 標準正規分布などと決めてよい
+        - (8)式中の2つの分布は一致しないが、バッチ$\boldsymbol{x}_{1:M}$から得られる$\boldsymbol{z}_{1:M}$が決めた分布に従うと$D_\text{KL}$が最小に
 
 ---
 
