@@ -533,9 +533,10 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     - $P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) = \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2I)$
     - $P_\boldsymbol{\theta}(\boldsymbol{z}) =\mathcal{N}(\boldsymbol{0}, I)$
 - 各項を計算
-    - $\langle \log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)  \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)} = -J/2 \log 2\pi - 1/2 \sum_{j=1}^J(1+\log \sigma_j^2)$
-    - $\langle \log P_\boldsymbol{\theta}(\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)} = -J/2 \log 2\pi - 1/2 \sum_{j=1}^J(\mu_i^2 + \sigma_j^2)$
-- したがって正則化項: $-D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ] = 1/2\sum_{j=1}^J\{  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 \}$
+    - $\langle \log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)  \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)} = -\frac{J}{2} \log 2\pi - \frac{1}{2} \sum_{j=1}^J(1+\log \sigma_j^2)$
+    - $\langle \log P_\boldsymbol{\theta}(\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)} = -\frac{J}{2} \log 2\pi - \frac{1}{2} \sum_{j=1}^J(\mu_i^2 + \sigma_j^2)$
+- したがって正則化項: $-D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ]$
+$= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ---
 
