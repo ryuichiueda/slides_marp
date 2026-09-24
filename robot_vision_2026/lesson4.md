@@ -508,7 +508,7 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 - ミニバッチ版（$M$を大きくとれば$L=1$で済む）
     - $\tilde{\mathcal{L}}^\text{B}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}_{1:M})$
     $= \sum_{i=1}^M \big\{ - D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ]
-    +\log P_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{z}^{(\ell)})\big\}$ ---(8)
+    +\log P_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{z})\big\}$ ---(8)
         - ここで$\boldsymbol{z} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x}), \boldsymbol{\varepsilon} \sim p$
 
 ---
