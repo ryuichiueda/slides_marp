@@ -510,6 +510,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - やりたいこと: デコーダの分布$P_\boldsymbol{\theta}$が訓練データの背景にある分布をよく表すように
     - 周辺尤度の対数$\log P_\boldsymbol{\theta}(\boldsymbol{x}_{1:N}) = \sum_{i=1}^N\log P_\boldsymbol{\theta}(\boldsymbol{x}_i)$を最大化したい
         - つまり訓練データのあるところの確率を高くしたい
-- ここで、ひとつの入力に対して（計算するとたぶん）
-$\log P_\boldsymbol{\theta}(\boldsymbol{x}') = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}') || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x}')] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x}')$（論文の(2)）
+- ここで、ひとつの入力$\boldsymbol{x}$に対して（計算するとたぶん）
+$\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x})$（論文の(2)）
     - $P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x}) = P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z})P(\boldsymbol{z})/P(\boldsymbol{x})$
+    - $\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
+    = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$
