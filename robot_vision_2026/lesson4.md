@@ -531,4 +531,4 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
         - VAEのエンコーダはこの構造
 - これで任意の関数$f(\boldsymbol{z})$の期待値がサンプリングで計算可能に
     - $\big\langle f(\boldsymbol{z}) \big\rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})} = \dfrac{1}{L}\sum_{\ell=1}^L f\circ g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x})$ ---(5)
-        - $L$: ドローの回数（標本数）
+        - $\boldsymbol{\varepsilon}^{(\ell)}$: $\ell$回目にドローされた雑音
