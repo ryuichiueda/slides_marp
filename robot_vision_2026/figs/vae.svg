@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245.83 101.02">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-7 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-8 {
+        font-family: SymbolMT, Symbol;
+        font-size: 16px;
+      }
+    </style>
+  </defs>
+  <line class="cls-6" x1="100.69" y1="63.36" x2="121.56" y2="39.37"/>
+  <line class="cls-6" x1="66.05" y1="29.13" x2="115.16" y2="30.86"/>
+  <line class="cls-6" x1="78.21" y1="50.51" x2="100.69" y2="63.36"/>
+  <text class="cls-2" transform="translate(0 43.93)"><tspan x="0" y="0">入力</tspan></text>
+  <g>
+    <polyline class="cls-5" points="78.05 61.02 78.05 18.94 27.98 .71 27.98 61.02"/>
+    <polyline class="cls-5" points="78.05 20.36 78.05 62.43 27.98 80.66 27.98 20.36"/>
+  </g>
+  <text class="cls-2" transform="translate(30.82 43.93)"><tspan x="0" y="0">encoder</tspan></text>
+  <g>
+    <polyline class="cls-5" points="161.87 61.02 161.87 18.94 211.94 .71 211.94 61.02"/>
+    <polyline class="cls-5" points="161.87 20.36 161.87 62.43 211.94 80.66 211.94 20.36"/>
+  </g>
+  <text class="cls-2" transform="translate(164.67 43.93)"><tspan x="0" y="0">decoder</tspan></text>
+  <text class="cls-2" transform="translate(221.83 43.93)"><tspan x="0" y="0">出力</tspan></text>
+  <text class="cls-2" transform="translate(132.94 37.93)"><tspan x="0" y="0">潜在</tspan><tspan x="0" y="14.4">空間</tspan></text>
+  <text class="cls-8" transform="translate(81.21 73.24)"><tspan x="0" y="0">s</tspan></text>
+  <rect class="cls-5" x="94.9" y="43.81" width="11.58" height="39.11"/>
+  <rect class="cls-5" x="115.77" y="19.82" width="11.58" height="39.11"/>
+  <text class="cls-8" transform="translate(89.45 20.36) scale(1.13 1)"><tspan x="0" y="0">m</tspan></text>
+  <text transform="translate(75.98 96.96)"><tspan><tspan class="cls-8" x="0" y="0">e</tspan><tspan class="cls-1" x="6.78" y="0">を</tspan><tspan class="cls-2" x="18.54" y="0">か</tspan><tspan class="cls-4" x="30.54" y="0">け</tspan><tspan class="cls-3" x="41.58" y="0">る</tspan></tspan></text>
+  <text class="cls-2" transform="translate(110.16 17.28)"><tspan x="0" y="0">足</tspan><tspan class="cls-7" x="12" y="0">す</tspan></text>
+</svg>

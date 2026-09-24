@@ -2,11 +2,11 @@
 marp: true
 ---
 
-<!-- footer: "ロボットビジョン第3回" -->
+<!-- footer: "ロボットビジョン第4回" -->
 
 # ロボットビジョン
 
-## 第4回: 画像の識別と生成の基礎II
+## 第4回: 画像の記憶と再生・生成
 
 千葉工業大学 上田 隆一
 
@@ -22,9 +22,11 @@ marp: true
 ## 今日やること
 
 - 敵対的生成ネットワーク（GAN）
+- オートエンコーダ（AE）
 - 変分オートエンコーダ（VAE）
 - 拡散モデル（DDPM）
-- GAN、VAEの応用
+- フローマッチング（FM）
+
 
 ---
 
@@ -44,22 +46,22 @@ marp: true
 ### ネットワーク構造の例（DCGAN）
 
 - Deep Convlutional GAN（DCGAN）[[Radford 2015]](https://arxiv.org/pdf/1511.06434) <a href="https://www.researchgate.net/figure/The-architecture-of-the-generator-and-the-discriminator-in-a-DCGAN-model-FSC-is-the_fig4_343597759"><span style="font-size:70%">画像: Zhang et al. CC-BY 4.0</span></a>
-    - 上: 生成ネットワーク<span style="font-size:70%">（FSC: fractionally-strided convolution)</span>
+    - 上: 生成ネットワーク<span style="font-size:70%">（FSC: fractionally-strided convolution、つまり転置畳み込み)</span>
     - 下: 識別ネットワーク
 ![w:800](./figs/dcgan-cc-by-4.0-by_zhang.png)
 
 
 ---
 
-### DCGANの生成ネットワーク
+### DCGANの生成ネットワーク（右図の上）
 
-- 構造: オートエンコーダのデコーダ
+- 構造: U-Netの出力側
     - 入力: ランダムなベクトル（100次元）
-        - <span style="color:red">潜在空間のベクトルに相当</span>
-            - ↑わからん人は前回のオートエンコーダに戻りましょう
+        - つまり雑音を入力
+            - なんで？？（講義後半で）
     - 出力: 画像
 - 出力の画像は最初はでたらめ
-    - ある訓練をすると画像が生成されるように
+    - <span style="color:red">ある訓練</span>をすると画像が生成されるように
 
 
 ![bg right:40% 100%](./figs/dcgan-cc-by-4.0-by_zhang.png)
@@ -69,12 +71,13 @@ marp: true
 ### DCGANの識別ネットワーク
 
 - 構造: エンコーダに似ているが出力は1bit
-    - 入力: 生成ネットワークの画像 or 訓練のために用意した画像
-    - 出力: 「本物（訓練に用意した画像）」である確率
-        - 偽物: 生成ネットワークの出力
-- 出力は最初はでたらめ
-    - 当てずっぽう
-
+    - 入力: 次のどちらか
+        - 生成画像: 生成ネットワークから
+        - 訓練画像: 顔なら顔、風景なら風景の画像セット数千枚〜
+    - 出力: 訓練画像である確率
+        - 偽物: 生成画像
+        - 最終層（シグモイド）が$0\sim 1$を出力
+        - 最初は当てずっぽう
 
 ![bg right:40% 100%](./figs/dcgan-cc-by-4.0-by_zhang.png)
 
@@ -102,42 +105,224 @@ $\rightarrow$精緻な画像
 
 - 生成ネットワークの評価関数（損失関数に$-1$をかけたもの）
     - $V_D(G) = \frac{1}{m}\sum_{i=1}^m \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \}$
-        - $G(\boldsymbol{z}^{(i)})$: 生成ネットワークが生成したデータ（$m$個用意）
+        - $G(\boldsymbol{z}^{(i)})$: 生成画像（$m$個用意）
         - $D(\boldsymbol{x})$: 識別ネットワークの識別結果（確率）
+            - 識別ネットワークが間違えるほど評価が高く
 - 識別ネットワークの評価関数
     - $V_G(D)= \frac{1}{m}\sum_{i=1}^m \Big[ \log\{ D(\boldsymbol{\boldsymbol{x}}^{(m)}) \} + \log \{ 1 - D[G(\boldsymbol{z}^{(m)})]\ \} \Big]$
-        - $\boldsymbol{x}^{(i)}$: 訓練データ（こちらも$m$個用意）
+        - $\boldsymbol{x}^{(i)}$: 訓練画像（こちらも$m$個用意）
         - $V_D(G)$に訓練データに対する識別の成績の項も加算
 
 ---
 
-## 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)
+### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
 
-- オートエンコーダをより表現力豊かにする方法
-- 改善したいオートエンコーダの性質
-    - 潜在空間でのベクトルの分布に隙間
-        - 訓練データに対応するベクトルの間に
-    - 隙間の問題
-        - 隙間のベクトルをデコーダに渡すと、中間というよりは重ね合わせのような出力
-            - 例: 犬と猫の中間のベクトルから、その中間のような動物の画像を出力したい
-            $\rightarrow$単に足して2で割ったような不自然なものに
-
-![bg right:30% 100%](./figs/latent_space_problem.png)
+- GANの生成ネットワークはランダムにデータを出力するだけ
+    - 何を出力するかコントロールしたい
+- 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
+    - 生成ネットワークに何を作って欲しいかラベルで指示
+        - データのもとになるベクトル$\boldsymbol{z}$と共にラベル$\boldsymbol{y}$を入力
+            - $\boldsymbol{y}$はワンホットベクトル
+                - $\boldsymbol{y} = (0 \ \ 0 \ \dots 1 \dots \ 0)$という形で対応するラベルを$1$に
+    - 識別ネットワークにも、生成ネットワークの出力と共に$\boldsymbol{y}$を入力
+        - 条件$\boldsymbol{y}$に合った生成データか判定
 
 ---
 
-### 変分オートエンコーダでの潜在空間の扱い
+### pix2pix
 
-- 仮定
-    - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布に従う
-        - 空間が無限なのでデータが散らないように縛りを設ける
-    - エンコーダへの入力$\boldsymbol{x}$に対し、$P(\boldsymbol{z}|\boldsymbol{x})$の分布も正規分布に従う
-        - これは学習のための仮定
-- 仮定に基づいて学習すると
-    - $\boldsymbol{z}$の隙間があかずに原点付近に集まる
-    - $P(\boldsymbol{z})$の分布のなかに$P(\boldsymbol{z}|$物の種別$)$のような分布ができる
+- CGANの一種とみなせる
+- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004)（構造は論文のFigure 2に）
+    - 生成ネットワーク: 入力にノイズではなく画像を入力し、画像を出力させる
+        - U-Netがベース
+        - 入力をX、出力をYとしましょう
+    - 識別ネットワーク: XとYのペア、あるいはXと対応する学習用画像Y'のペアを入力して真贋を識別
+    $\rightarrow$画像を変換するように学習
+- どんなことができるか
+    - 線画をカラーの絵や写真のように（図: [[Isora 2016]](https://arxiv.org/abs/1611.07004)）
+    - 葉に隠れた枝をつなぐ[[三上2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
 
-![bg right:40% 100%](./figs/latent_space_dist.png)
+![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
+
+
+---
+
+### GANのまとめ
+
+- GAN
+    - 2つのネットワークを競わせる
+    - 入力がノイズのことがある
+    - 画像を生成（生成モデルと呼ばれるものの先祖の1つ）
+        - 基本、画像やベクトルにできるデータならなんでも出力可能
+- CGAN
+    - 出力させたいものをラベルや下書きで提示
+    - （もうちょい言葉で指示が出せるとよい）
+
+---
+
+## オートエンコーダと潜在空間
+
+---
+
+### 疑問
+
+- なんで我々の頭にはSSDがついてないのに、風景をたくさん覚えていられるのか？
+    - 前来た場所を懐かしいと思える（たまに忘れる）
+    - 自分のいた教室と違う教室でも懐かしいと思う
+- 頭のなかで風景や動きを再生できる
+    - 見たことのあるもの
+    - 見たことのないものの空想/夢や病気での幻想
+
+<center>話し合ってみましょう</center>
+
+
+---
+
+### オートエンコーダ（autoencoder、AE）
+
+- 入力と出力を一致させるように学習されたANN [[Hinton 2006]](https://www.cs.toronto.edu/~hinton/absps/science.pdf)
+    - 損失関数: 入出力の平均二乗誤差（MSE, mean square error）
+        - 学習のためのラベル付けは不要（教師無し）
+    - 構成はCNNでも全結合でもよいが、U-Net状に中間の次元を小さく
+        - 入力側: どんどん情報を落としていく
+        - 出力側: どんどん情報を増やしていく
+    - 疑問: 何の意味があるの？
+![w:900](./figs/autoenc.png)
+
+---
+
+### 入力側（<span style="color:red">エンコーダ</span>）のやっていること
+
+- 入力されたデータの分類
+    - （学習がうまくいった場合は）似たような画像から似たような出力が得られる
+    - うしろに全結合層（とソフトマックス層）をくっつけて追加で学習させると分類器に
+- 右図の例: 出力を2次元まで縮小した場合の
+出力の分布の例
+    - 注意: 実用的なものはもっと高次元
+        - [Hinton 2026]は30次元
+    - 分布している空間を<span style="color:red">潜在空間</span>と言う
+
+![bg right:35% 95%](./figs/encoder.png)
+
+
+---
+
+### 出力側（<span style="color:red">デコーダ</span>）のやっていること
+
+- 潜在空間のベクトルからデータを復元
+    - 例: 「犬」のベクトルが来たら犬の写真や絵を描画
+    - 復元方法（絵の描き方）を学習
+        - 転置畳み込みのフィルタなどのパラメータに
+    - 復元しやすいようにエンコーダ側が学習される
+        - 潜在空間でのベクトルの分布が決まる
+
+![w:800](./figs/decoder.png)
+
+
+---
+
+### オートエンコーダの利用
+
+- エンコーダとデコーダを分離して利用
+- エンコーダ
+    - 先に前結合層などを取り付けて分類器に
+    - 先に別のデコーダを取り付けると別のものが<span style="color:red">生成</span>される
+- デコーダ
+    - 学習に用いたもの以外のエンコーダを取り付けると変換器に
+        - 例「犬」と入力$\rightarrow$犬の絵を<span style="color:red">生成</span>
+
+<center>GANとともに、ちまたで<span style="color:red">生成AI</span>と言われるものの原型</center>
+
+![bg right:30% 95%](./figs/autoenc2.png)
+
+---
+
+### オートエンコーダのまとめ
+
+- 画像（数百万次元の画素値のベクトル）を数十次元のベクトルに圧縮
+    - 人間もそうしてる？
+- 潜在空間のベクトルを狙って/適当にデコードすると画像になる
+    - 人間もそうやって風景を思い出したり幻想を見たりする？
+- まだこれでは不完全
+    - 風景にも統計的な性質（確率分布）があるが、生かしきれていない
+        - 潜在空間に点を打っているだけ
+        - 点と点の間は「なにもない」ことに
+    - 統計的な性質
+        - 同じ漫画家の書く人の絵は似ているとか猫の画像は互いに似ているとか
+
+---
+
+### 確率・統計で考える画像の分布
+
+- こういう仮定を考える: 訓練画像はなんらかの確率分布Pにしたがって選ばれる
+    - 訓練画像を選ぶ人の嗜好や置かれた環境を反映した確率分布
+- Pの性質: 確率（の密度）の高いところに、訓練に適切だが選ばれなかった画像が無数に存在
+    - <span style="color:red">選べると新しい画像が生成可能</span>
+        - サイコロを振るように
+    - <span style="color:red">問題: Pの分布の形が不明で選べない</span>
+        - 超多次元空間の超絶にスパース（疎）な分布
+
+![bg right:35% 100%](./figs/vae_sparce.svg)
+
+---
+
+### 分布の変換・逆変換の試み
+
+- Pを簡単な分布Q（ガウス分布）に変換
+    - Pの点$\boldsymbol{p}$をQの点$\boldsymbol{q}$に対応づけ
+    - 重要: Qからは確率の高いデータが選びやすい
+    - 補足: QがPの原因と考えることも可能（後述のVAEの論文など）
+- Qから高確率のデータ$\boldsymbol{q}'$を選んでPの空間へ逆変換（$\boldsymbol{p}'$を得る）
+    - <span style="color:red">$\boldsymbol{p}'$はPで確率の高い点で、意味のある画像になっている</span>
+
+![w:900](./figs/vae_prob.svg)
+
+<center>そんなことできるの？→<span style="color:red">できる</span></center>
+
+
+---
+
+### 変分オートエンコーダ[[Kingma 2013]](https://arxiv.org/abs/1312.6114)（variational AE、VAE）
+
+- 仮定を置く
+    - 潜在空間のベクトル$\boldsymbol{z}$の分布は標準正規分布（ガウス分布）$Q$に従う
+    - $\boldsymbol{z}$を画像$\boldsymbol{x}$の原因と考え、原因の不確かさの正規分布$P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x})$を考える
+- 仮定に基づいて学習$\rightarrow Q(\boldsymbol{z})$の分布のなかに$Q(\boldsymbol{z}|$物の種別$)$のような分布
+
+$\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
+
+
+---
+
+### VAEのエンコーダ/デコーダ
+
+- エンコーダ（パラメータ$\boldsymbol{\phi}$）: 
+    - $\boldsymbol{z} \sim P_{\boldsymbol{\phi}}(\boldsymbol{z}|\boldsymbol{x}) = \mathcal{N}[\boldsymbol{\mu}(\boldsymbol{x}), \boldsymbol{\sigma}^2(\boldsymbol{x}) I]$を出力
+    - 具体的には
+        - $\boldsymbol{z}$の平均値$\boldsymbol{\mu}$、各元の分散$\boldsymbol{\sigma}^2$（の対数）を出力し、
+        - 次の層で$\boldsymbol{z} = \boldsymbol{\mu} + \boldsymbol{\sigma} \odot \boldsymbol{\varepsilon}$を出力
+            - $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0}, I)$
+- デコーダ（パラメータ$\boldsymbol{\theta}$）: $P_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{z})$
+    - 理論上は確率的な表現となるが、$\hat{\boldsymbol{x}} = \boldsymbol{f}_\boldsymbol{\theta}(\boldsymbol{z})$のように決定論的にもできる
+
+![bg right:35% 100%](./figs/vae.png)
+
+
+---
+
+### VAEの損失関数
+
+ベイズ推定の式を解いていくと次のようになる（らしいがまだ把握してません）
+
+- ある1つの訓練画像$\boldsymbol{x}$に対して、次の値が大きいほうがよい
+    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
+        - $m$: $\boldsymbol{z}$の次元
+        - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma}\odot\boldsymbol{\varepsilon}^{(\ell)} \ (\ell = 1,2,\dots,L)$
+            - $L$回試行を繰り返すということ
+            - バッチで学習するなら$L=1$でよさそう
+    - 最初の項: 平均値も分散も小さい方がよい$\rightarrow Q$の分布が中央に集まる
+    - 次の項: デコーダの$\hat{\boldsymbol{x}}$と元の$\boldsymbol{x}$の比較の項
+        - 具体的にどう計算するのかはまだ未調査（すんません）
 
 ---
 
@@ -150,35 +335,7 @@ $\rightarrow$精緻な画像
 
 ---
 
-### 変分オートエンコーダの構造
-
-- 右図
-    - エンコーダの先に雑音の層を追加
-    - $P(\boldsymbol{z})$を標準正規分布に制限するための項を損失関数に追加
-    - 作りは簡単だがベイズ推論の理論が背景に
-        - 確率ロボティクスの講義で一部説明
-
-![bg right:35% 100%](./figs/vae.png)
-
----
-
-### AE、VAE学習の確率的な解釈
-
-- 確率分布$p$の圧縮と復元を学習している
-    - なんの分布？: データや画像の数値を並べたベクトル$\boldsymbol{x}$
-    - 訓練に使うデータや画像の$\boldsymbol{x}$は、$p$にしたがって選ばれる（$\boldsymbol{x} \sim p$）
-        - $p$: 人間の興味で決まる
-            - 例: 猫の絵を生成したいなら猫の画像ばかりになるなど
-- エンコーダ: $p$を潜在空間の分布$q$に変換
-    - AEの場合は$p$からの点を潜在空間に写像
-- デコーダ: エンコーダと逆の変換を学習
-    - 出力の分布: $p$（誤差あり）
-
-![bg right:38% 95%](./figs/autoenc_prob.png)
-
----
-
-### Denoising Diffusion Probabilistic Models（DDPM）[[Ho2020]](https://arxiv.org/abs/2006.11239)
+### Denoising Diffusion Probabilistic Models（DDPM）[[Ho+ 2020]](https://arxiv.org/abs/2006.11239)
 
 - 一般に（機械学習の文脈で）「拡散モデル」と呼ばれるもの
 - 拡散モデル（拡散過程）
@@ -192,34 +349,32 @@ $\rightarrow$精緻な画像
 
 ### 拡散モデルを使った生成の考え方
 
-- 画像: 人間がなにか意味のある画像だと思う画像の分布$P$からドローされたもの
-    - $\boldsymbol{x} \sim P$（$\boldsymbol{x}$: 画素を並べたベクトル）
-- $P$の拡散
-    - 何度も同じガウス分布状の雑音を何度も足していくと
-    最終的にガウス分布$Q$に
-<span style="color:red">$\Longrightarrow$逆（逆拡散過程）をすれば$P$が復元できる（どうやって？）</span>
-<span style="color:red">$\Longrightarrow Q$からノイズをドローして逆に拡散$\rightarrow$$P$から新たな絵がドローできる</span>
+- 同じ次元の空間で$P \Leftrightarrow Q$の変換をする
+- 拡散過程: $P$をガウス分布$Q$に近づけていくこと
+    - 雑音を加えていく=特徴のないガウス分布にしていく
+    - 注意: エンコーダはなく、雑音を加えた訓練画像を人が準備
+- 逆拡散過程: $Q$から$\boldsymbol{z}$を取り出して$P$のどこかに写像
+    - デコーダを訓練
  
 
 ![w:900](./figs/ddpm.svg)
 
 ---
 
-### 理論的な裏付け
+### DDPMの学習方法（概要）
 
-- 先ほど用いた拡散過程: 同じガウス分布を$T$回適用
-    - 少しずつの雑音であれば、$T$回、同じノイズ除去の処理を繰り返すと元に戻すことができる（時間を巻き戻すことができる）
-        - 非平衡熱力学の知見から
-- DDPM
-    - <span style="color:red">「ノイズの除去処理」をANNに学習させる</span>
-    $\rightarrow$このANNに雑音を$T$回通すと画像が生成される
-    （Stable Diffusionなどに用いられるなど高品質）
-    - 集めた画像でノイズの除去処理を訓練
+- 注意: デコーダしか学習しない
+    - [Ho+ 2020]のデコーダはU-Netベースのもの
+- 訓練画像$\boldsymbol{x}_0^{(j)} \ (j=1,2,\dots)$を集め、拡散過程を計算するプログラムを準備
+    - いつでも$i$回雑音を加えた画像$\boldsymbol{x}_i^{(j)}\ (i=1,2,\dots,T)$を作れるようにしておく
+- デコーダに時刻$i$の画像から時刻$i-1$の画像を復元させる（$i=1,2,\dots,T$）
+    - 時刻$i$の画像と時刻を入力$\longrightarrow$出力を当該の訓練画像と比較（2乗誤差）
 
+![w:500](./figs/ddpm_training_data2.png)$\qquad$![w:400](./figs/ddpm_training.png)
 
 ---
 
-### DDPMの学習方法（訓練用のデータの準備）
+### 拡散過程の計算
 
 - 学習データ: 様々な画像$\boldsymbol{x}^{(j)}_0$<span style="font-size:70%">$\ (j=1,2,\dots,N)$</span>を準備
 - 拡散させかたの定義
@@ -227,7 +382,8 @@ $\rightarrow$精緻な画像
         - $x_{i+1}^{(j)} \sim \mathcal{N}(\sqrt{1-\beta_i}x_{i}^{(j)}, \beta_i)$
             - $x_{i+1}^{(j)}$: $\boldsymbol{x}_{i+1}^{(j)}$の任意の画素
             - $\beta_i$: 拡散率（原著では$T=1000$までに$0.0001$から$0.02$まで線形に増加）
-- 任意の段階の画像を生成できるプログラムを作成
+- 上の定義から任意の段階の雑音画像を作れる
+（のでDDPMが実用できる）
     - $x_{i}^{(j)} \leftarrow \sqrt{\bar{\alpha_i}}x_0^{(j)} + \sqrt{1-\bar{\alpha_i}}\ \varepsilon$
         - $\alpha_i = 1-\beta_i$、$\bar\alpha_i = \prod_{k=1}^i \alpha_k$
         - $\varepsilon \sim \mathcal{N}(0, 1)$
@@ -238,85 +394,100 @@ $\rightarrow$精緻な画像
 
 ---
 
-### DDPMの学習方法（ANN）
-
-- U-Netを拡張したものを準備
-（Transformerを使ったものについては後日）
-    - 元の画像からどれだけ拡散したか（時刻）も入力できるように
-    - 他にも仕掛け
-- 損失関数と学習
-    - ノイズ画像の1ステップ前を出力するよう学習
-    - 前ページのプログラムで作ったノイズ画像と↑を比較（二乗誤差）
-        - 互いに$\boldsymbol{x}_0^{(j)}$の値を引くとノイズ同士の比較に
-        - ベイズ推論の難しい式からに二乗誤差がよいと導出される
-
-
-![bg right:28% 100%](./figs/ddpm_training.png)
-
-
----
-
 ### 例
 
 - [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
 - 出力例
-    - [[Ho2020]](https://arxiv.org/abs/2006.11239)の図14など
+    - [[Ho+ 2020]](https://arxiv.org/abs/2006.11239)の図14など
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
+---
+
+### Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
+
+- 拡散モデルとは別のアプローチで分布の変換を実現
+- 拡散モデル（下図。再掲）
+    - 訓練画像の分布をガウス分布に変換・逆変換
+        - 変換にはノイズを乗せていく方法が取られた
+- FM: <span style="color:red">別にノイズを乗せなくても砂山のように変形していけばいいんじゃないか？</span>
+    - ただし、任意の時刻のノイズ画像を生成しないと学習できない
+
+![w:900](./figs/ddpm.svg)
 
 ---
 
-## GAN、VAEの応用
+### FMのアイデア
 
-- CGAN
-- pix2pix
-- cVAE
-
----
-
-### 条件付きGAN（Conditional GAN、CGAN）[[Mirza2014]](https://arxiv.org/abs/1411.1784)
-
-- GANの生成ネットワークはランダムにデータを出力するだけ
-    - 何を出力するかコントロールしたい
-- 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
-    - 生成ネットワークに何を作って欲しいかラベルで指示
-        - データのもとになるベクトル$\boldsymbol{z}$と共にラベル$\boldsymbol{y}$を入力
-    - 識別ネットワークにも、生成ネットワークの出力と共に$\boldsymbol{y}$を入力
-        - 条件$\boldsymbol{y}$に合った生成データか判定
-- 補足: ラベルの表現
-    - $\boldsymbol{y}=(0,0,\dots,1,\dots,0,0,0)$という<span style="color:red">one-hot ベクトル</span>がよく用いられる
-        - $1$が立っている位置を特定のものと対応づけ
-            - 例: 1番目が猫、2番目が犬、など
-    - 他のANNでもよく用いられる
+- ガウス分布$p_0 (=Q)$と画像の分布など意味のある分布$p_1 (=P)$の相互変換
+    - <span style="color:red">ベクトル場</span>$\boldsymbol{u}_t$（$0\le t \le 1$）で考える
+        - 各時刻で分布をひっぱる速度場を仮定
+    - このベクトル場を再現する関数$\boldsymbol{v}_t(\boldsymbol{w})$をANNが学習
+    - $\boldsymbol{v}_t(\boldsymbol{w})$と$\boldsymbol{u}_t$の差（2乗誤差）を損失関数に
+- 問題としては最適輸送問題をANNに解かせることに
+    - 最適輸送問題: 分布（砂山）を一番楽な方法で変形する問題
+$\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-### pix2pix
+### 問題の分解: 条件つきフローマッチング
 
-- CGANの一種とみなせる
-- pix2pix[[Isora 2016]](https://arxiv.org/abs/1611.07004)（構造は論文のFigure 2に）
-    - 生成ネットワーク: 入力にノイズではなく画像を入力し、画像を出力させる
-        - 入力をX、出力をYとしましょう
-    - 識別ネットワーク: XとYのペア、あるいはXと対応する学習用画像Y'のペアを入力して真贋を識別
-    $\rightarrow$画像を変換するように学習
-- どんなことができるか
-    - 線画をカラーの絵や写真のように（図: [[Isora 2016]](https://arxiv.org/abs/1611.07004)）
-    - 葉に隠れた枝をつなぐ[[三上2022]](https://www.jstage.jst.go.jp/article/jrsj/40/2/40_40_143/_article/-char/ja)
+- 拡散モデル同様、途中の$t$の画像（やデータ）が必要
+    - 分布全体で考えると難しい
+- $p_t$を条件付き確率に分解
+    - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
+        - $q$: 訓練データの分布
+            - $\boldsymbol{x}_1$の添え字: データの番号ではなく時刻
+            - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
+- 全体のベクトル場$\boldsymbol{u}_t$も個々のもの（後述）が分かれば計算できる（重み付き平均）
+    - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
 
-![bg right:20% 100%](./figs/jrsj_vol_40_no_2_fig_14.png)
+![bg right:27% 95%](./figs/flow_matching_method.svg)
+
 
 ---
 
-### 条件つき変分オートエンコーダ<br />（Conditional VAE、CVAE）
+### フローの設計
 
-- CGANと同様、エンコーダとデコーダにラベルも入力
-    - デコーダはラベルにしたがってデータを生成できる
-- <span style="color:red">入力の識別情報が、潜在空間内で必要なくなる</span>
-    - [VAEとCVAEの分布の比較の例](https://towardsdatascience.com/conditional-variational-autoencoders-for-text-to-image-generation-1996da9cefcb/)
-    - 画像の生成の場合、画像の描き方に関する情報が潜在空間内に分布
-    $\rightarrow$より出力にバリエーション
+- ひとつの条件付き確率に対し、途中の経路（分布）の定式化が必要
+- とりあえずガウス分布を選択
+    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
+        - 境界条件
+            - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
+            - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
+    - フローはこうなる: $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
+        - $t=0$の様々な箇所の$\boldsymbol{x}$が$\boldsymbol{x}_1$に向かう（右図）
+        - まだ$\sigma_t(\boldsymbol{x}_1), \boldsymbol{\mu}_t(\boldsymbol{x}_1)$の形は決まっていない
+            - 補足: いずれも$\boldsymbol{x}_1$ではなく時間の関数
 
-![bg right:35% 100%](./figs/cvae.png)
+![bg right:27% 95%](./figs/conditional_flow.svg)
+
+---
+
+### 最適輸送による設計
+
+- この図のような一番素直なフローで分布を移したい$\Longrightarrow$最適輸送問題
+   ![w:400](./figs/conditional_flow.svg)
+- 条件つき最適輸送パス
+    - フロー: $\boldsymbol{\psi}_t(\boldsymbol{x}) = \{1 - ( 1 - \sigma_\min)t\}\boldsymbol{x} + t \boldsymbol{x}_1$
+        - $\boldsymbol{\mu}_t(\boldsymbol{x}_1)=t \boldsymbol{x}_1, \sigma_t(\boldsymbol{x}_1)=1 - (1- \sigma_\text{min})t$
+- このときのベクトル場
+    - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) = \dfrac{\sigma_t'(\boldsymbol{x}_1)}{\sigma_t(\boldsymbol{x}_1)}\{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \} + \boldsymbol{\mu}_t'(\boldsymbol{x}_1) = \dfrac{\boldsymbol{x}_1 - (1-\sigma_\min)\boldsymbol{x}}{1-(1-\sigma_\min)t}$
+- 損失関数
+    - $\mathcal{L}_\text{CFM}(\boldsymbol{w}) = \big\langle \{ \boldsymbol{v}_t(\boldsymbol{\psi}_t(\boldsymbol{x}_0))  - [ \boldsymbol{x}_1 - (1 - \sigma_\min)\boldsymbol{x}_0 ] \}^2 \big\rangle_{t \sim \mathcal{U},q(\boldsymbol{x}_1), p(\boldsymbol{x}_0 )}$
+
+
+
+
+---
+
+### FMでできること
+
+- [[Lipman 2022]](https://arxiv.org/abs/2210.02747)の図1、6、11〜
+    - アルゴリズムの説明のための図だけど図4も面白い
+- Stable Diffusion 3
+- ロボットの制御
+- 補足
+    - 最適輸送の場合しか説明しませんでしたが、他にもいろいろ設計の余地があります
 
 ---
 
@@ -324,7 +495,9 @@ $\rightarrow$精緻な画像
 
 - 様々な生成方法
     - 敵対的生成ネットワーク（GAN）
+    - オートエンコーダ
     - 変分オートエンコーダと拡散モデル$\rightarrow$確率分布の利用
-- GAN、VAEの応用
-    - ラベル付けして生成したいものを指示できる
-    - 画像から画像への変換ができる
+        - 背後に統計
+- VAE、拡散モデル、フローマッチング
+    - 画像以外にも様々な応用
+    - VAEについてはエンコーダが記憶のモデルでもあり重要
