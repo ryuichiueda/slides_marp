@@ -537,5 +537,5 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 ### サンプリング版の変分下界
 
 - (2)から
-    - $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L\{ \log P_\boldsymbol{\theta}(\boldsymbol{x}, \boldsymbol{z}^{(\ell)})  - \log P_\boldsymbol{\phi}(\boldsymbol{z}^{(\ell)} | \boldsymbol{x}) \}$
-        - where $\boldsymbol{z}^{(\ell)} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x}), \boldsymbol{\varepsilon}^{(\ell)} \sim p$
+    - $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L\{ \log P_\boldsymbol{\theta}(\boldsymbol{x}, \boldsymbol{z}^{(\ell)})  - \log P_\boldsymbol{\phi}(\boldsymbol{z}^{(\ell)} | \boldsymbol{x}) \}$ ---(6)
+        - ここで$\boldsymbol{z}^{(\ell)} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x}), \boldsymbol{\varepsilon}^{(\ell)} \sim p$
