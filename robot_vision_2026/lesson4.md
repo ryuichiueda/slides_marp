@@ -526,3 +526,5 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 ### $\boldsymbol{z}$のモデル
 
+- エンコーダの表す分布$P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})$からの潜在空間のベクトルのドローイングを次のようにモデル化
+
