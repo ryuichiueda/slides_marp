@@ -510,6 +510,8 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     $= \sum_{i=1}^M \big\{ - D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ]
     +\log P_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{z})\big\}$ ---(8)
         - ここで$\boldsymbol{z} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x}), \boldsymbol{\varepsilon} \sim p$
+- (8)の右辺の$\sum$の中
+    - 第1項: 
 
 ---
 
