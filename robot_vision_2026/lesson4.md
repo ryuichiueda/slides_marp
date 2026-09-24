@@ -277,7 +277,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### VAEの損失関数
 
-ベイズ推定の式を解いていくと次のようになる（らしいがまだ把握してません）
+ベイズ推定の式を解いていくと次のようになる（スライドのうしろで補足）
 
 - ある1つの訓練画像$\boldsymbol{x}$に対して、次の値が大きいほうがよい
     - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)})$
@@ -529,13 +529,13 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 ### 正則化項の計算（論文の付録B。論文の添字まちがってる疑惑）
 
-- 正則化項: $D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ] = \langle \log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i) - \log P_\boldsymbol{\theta}(\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)}$
+- $D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ] = \langle \log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i) - \log P_\boldsymbol{\theta}(\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)}$
     - $P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) = \mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2I)$
     - $P_\boldsymbol{\theta}(\boldsymbol{z}) =\mathcal{N}(\boldsymbol{0}, I)$
 - 各項を計算
     - $\langle \log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)  \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)} = -J/2 \log 2\pi - 1/2 \sum_{j=1}^J(1+\log \sigma_j^2)$
     - $\langle \log P_\boldsymbol{\theta}(\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}_i)} = -J/2 \log 2\pi - 1/2 \sum_{j=1}^J(\mu_i^2 + \sigma_j^2)$
--
+- したがって正則化項: $-D_\text{KL} [ P_\boldsymbol{\phi}(\boldsymbol{z}| \boldsymbol{x}_i) || P_\boldsymbol{\theta}(\boldsymbol{z}) ] = 1/2\sum_{j=1}^J\{  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 \}$
 
 ---
 
