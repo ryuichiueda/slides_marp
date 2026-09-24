@@ -531,3 +531,11 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 - これで任意の関数$f(\boldsymbol{z})$の期待値がサンプリングで計算可能に
     - $\big\langle f(\boldsymbol{z}) \big\rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})} = \dfrac{1}{L}\sum_{\ell=1}^L f\circ g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}^{(\ell)}, \boldsymbol{x})$ ---(5)
         - $\boldsymbol{\varepsilon}^{(\ell)}$: $\ell$回目にドローされた雑音
+
+---
+
+### サンプリング版の変分下界
+
+- 変分下界$\mathcal{L}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x})
+    = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
+- $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L$
