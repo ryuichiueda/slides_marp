@@ -519,4 +519,4 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
     $=- D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z})]
     +\langle \log P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(3)
 
-(1)の$D_\text{KL}$は括弧内の分布が一致すると勝手に0になるので、変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に
+変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に（$D_\text{KL}$は学習が進むと$0$になるので）
