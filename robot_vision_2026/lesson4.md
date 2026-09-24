@@ -529,4 +529,4 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 - エンコーダ$P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})$の入出力を次のようにモデル化
     - $\tilde{\boldsymbol{z}} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x})\quad$ with $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0}, I)$ ---(4)
         - $g_\boldsymbol{\phi}$は普通のAEのエンコーダ
-- これで、なにか関数$f(\boldsymbol{z})$があったら、次のようにサンプリングで期待値計算が可能
+- これで任意の関数$f(\boldsymbol{z})$の期待値がサンプリングで計算可能に
