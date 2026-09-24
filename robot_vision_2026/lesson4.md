@@ -521,3 +521,8 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 変分下界$\mathcal{L}$を大きくすることが1個の$\boldsymbol{x}$に対する学習に
 （(1)の$D_\text{KL}$は学習が進むと$0$になるので）
+
+---
+
+### $\boldsymbol{z}$のモデル
+
