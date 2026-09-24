@@ -524,10 +524,10 @@ $\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\b
 
 ---
 
-### $\boldsymbol{z}$のモデル
+### VAEのエンコーダからの期待値計算
 
 - エンコーダ$P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})$の入出力を次のようにモデル化
     - $\tilde{\boldsymbol{z}} = g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x})\quad$ with $\boldsymbol{\varepsilon} \sim p$ ---(4)
         - VAEのエンコーダはこの構造
 - これで任意の関数$f(\boldsymbol{z})$の期待値がサンプリングで計算可能に
-    - $\big\langle f(\boldsymbol{z}) \big\rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(5)
+    - $\big\langle f(\boldsymbol{z}) \big\rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})} = \dfrac{1}{L}\sum_{\ell=1}^L f\circ g_\boldsymbol{\phi}(\boldsymbol{\varepsilon}, \boldsymbol{x})$ ---(5)
