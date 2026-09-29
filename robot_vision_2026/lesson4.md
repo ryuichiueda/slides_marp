@@ -376,6 +376,15 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - [[Ho+ 2020]](https://arxiv.org/abs/2006.11239)の図14など
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
+
+---
+
+### DDPMの学習方法（詳細）
+
+- 学習するのはノイズ除去ではなく、ノイズの推定能力
+    - $\boldsymbol{\varepsilon}$だけノイズの乗った画像について、$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$を出力
+
+
 ---
 
 ### Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
