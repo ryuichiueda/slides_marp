@@ -364,19 +364,6 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 ![bg right:32% 100%](./figs/ddpm_training_data.png)
 
 
----
-
-### 何を学習しているのか
-
-- 前のスライドの拡散過程（画像全体）
-    - 1ステップ分の遷移: $P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_i) = \mathcal{N}[ \sqrt{1-\beta_i}\boldsymbol{x}_i, \beta_i I]$
-    - 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
-- 逆拡散過程$P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})$を学習すると$Q$から$P$への遷移が分かる
-    - ステップ分だけデコーダに出力を入力し続けると画像に
-    - 拡散過程: $t$から時刻$t+1$に移ると分布がぼやけてガウス分布に近づく
-        - $P_{t+1}(\boldsymbol{x}) = \langle P_{t\rightarrow t+1}(\boldsymbol{x} |  \boldsymbol{x}') \rangle_{P_t (\boldsymbol{x})'}$
-            - $P_{t \rightarrow t+1}$はガウス分布
-
 
 ---
 
@@ -491,7 +478,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ---
 
-## 補足: VAEの損失関数の求め方
+## 補足1: VAEの損失関数の求め方
 
 - やりたいこと: デコーダの分布$P_\boldsymbol{\theta}$が訓練データの背景にある分布をよく表すように
     - 周辺尤度の対数$\log P_\boldsymbol{\theta}(\boldsymbol{x}_{1:N}) = \sum_{i=1}^N\log P_\boldsymbol{\theta}(\boldsymbol{x}_i)$を最大化したい
@@ -568,4 +555,15 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
     = \langle -\log P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) +\log P_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{z}) \rangle_{P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x})}$ ---(2)
 - (2)から
     - $\tilde{\mathcal{L}}^\text{A}(\boldsymbol{\theta},\boldsymbol{\phi}|\boldsymbol{x}) = \dfrac{1}{L}\sum_{\ell}^L\{ \log P_\boldsymbol{\theta}(\boldsymbol{x}, \boldsymbol{z}^{(\ell)})  - \log P_\boldsymbol{\phi}(\boldsymbol{z}^{(\ell)} | \boldsymbol{x}) \}$ ---(6)
+
+
+---
+
+## 補足2: DDPMの学習の数理的な背景
+
+- 画像に雑音を乗せる処理（拡散過程、画像全体）
+    - 1ステップ分の遷移: $P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_i) = \mathcal{N}[ \sqrt{1-\beta_i}\boldsymbol{x}_i, \beta_i I]$
+    - 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
+- 逆拡散過程$P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})$を学習すると$Q$から$P$への遷移が分かる
+    - ステップ分だけデコーダに出力を入力し続けると画像に
 
