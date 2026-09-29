@@ -78,7 +78,6 @@ marp: true
     - デコーダ: $\boldsymbol{x} \sim P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{y})$
     - 計算は基本的に変わらない
 
-$\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x})$（論文の(1)）
 
 
 ---
