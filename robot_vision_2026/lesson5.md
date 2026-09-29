@@ -21,17 +21,11 @@ marp: true
 
 ## 内容
 
-- さらに次の技術、モデルを見ていきましょう
-    - 拡散モデルの誘導
-    - discrete VAE
-    - PixelCNN 
-    - VQ-VAE
-- なんで？
-    - 実用されている画像の生成モデルで使われる技術なので
+- 条件付きGAN
 
 ---
 
-### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
+## 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
 
 - GANの生成ネットワークはランダムにデータを出力するだけ
     - 何を出力するかコントロールしたい
