@@ -576,7 +576,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ### $\boldsymbol{\mu}_\boldsymbol{\theta}$の分解
 
-- $\boldsymbol{\mu}_\boldsymbol{\theta}$
+- $\boldsymbol{\mu}_\boldsymbol{\theta}$は下記$\alpha_i, \bar{\alpha}_i$を使って雑音とそれ以外に分解可能
 
 ---
 
@@ -590,4 +590,3 @@ $\mathcal{L} = \langle -\log P_\theta(\boldsymbol{x} | \boldsymbol{z}) \rangle_{
 
 ### ボツ数式
 
-- 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
