@@ -577,6 +577,8 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 ### $\boldsymbol{\mu}_\boldsymbol{\theta}$の分解
 
 - $\boldsymbol{\mu}_\boldsymbol{\theta}$は下記$\alpha_i, \bar{\alpha}_i$を使って雑音とそれ以外に分解可能
+    - $\alpha_i = 1-\beta_i$、$\bar\alpha_i = \prod_{k=1}^i \alpha_k$
+    - 分解: $\boldsymbol{\mu}_\boldsymbol{\theta} = \dfrac{1}{\sqrt{\alpha_i}}\left\{ \boldsymbol{x}_i - \dfrac{\beta_i}{\sqrt{1-\bar{\alpha}_i}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i, i) \right\}$
 
 ---
 
