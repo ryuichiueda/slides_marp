@@ -68,6 +68,19 @@ marp: true
 
 ![bg right:35% 100%](./figs/cvae.png)
 
+
+---
+
+### CVAEの数理
+
+- VAEの確率モデルの条件にラベル$\boldsymbol{y}$が入る
+    - エンコーダ: $\boldsymbol{z} \sim P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{y})$
+    - デコーダ: $\boldsymbol{x} \sim P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{y})$
+    - 計算は基本的に変わらない
+
+$\log P_\boldsymbol{\theta}(\boldsymbol{x}) = D_\text{KL}[P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{x}) || P_\boldsymbol{\theta}(\boldsymbol{z}|\boldsymbol{x})] + \mathcal{L}(\boldsymbol{\theta}, \boldsymbol{\phi} | \boldsymbol{x})$（論文の(1)）
+
+
 ---
 
 ## 拡散モデルの誘導
