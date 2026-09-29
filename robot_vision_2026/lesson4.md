@@ -574,6 +574,12 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ---
 
+### $\boldsymbol{\mu}_\boldsymbol{\theta}$の分解
+
+- $\boldsymbol{\mu}_\boldsymbol{\theta}$
+
+---
+
 ### 評価関数
 
 
