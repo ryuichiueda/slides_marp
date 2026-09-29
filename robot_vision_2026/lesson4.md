@@ -366,6 +366,16 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
+### 何を学習しているのか
+
+- 逆拡散過程を学習
+    - 拡散過程: $t$から時刻$t+1$に移ると分布がぼやけてガウス分布に近づく
+        - $P_{t+1}(\boldsymbol{x}) = \langle P_{t\rightarrow t+1}(\boldsymbol{x} |  \boldsymbol{x}_{t}) \rangle_{P_t (\boldsymbol{x})}$
+            - $P_{t \rightarrow t+1}$はガウス分布
+
+
+---
+
 ### 例
 
 - [実装例](https://qiita.com/pocokhc/items/5a015ee5b527a357dd67)
