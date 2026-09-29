@@ -566,9 +566,9 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
     - 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
 - 逆拡散過程$P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})$を学習すると$Q$から$P$への遷移が分かる
     - ステップ分だけデコーダに出力を入力し続けると画像に
-    - $P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1}) = \mathcal{N}\left[\boldsymbol{x}_i | \boldsymbol{\mu}_{\boldsymbol{\theta}}(\boldsymbol{x}_{i+1}, i+1), \Sigma_{\boldsymbol{\theta}}({\boldsymbol{x}_{i+1}}, i+1)\right]$
+    - $P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1}) = \mathcal{N}\left[\boldsymbol{x}_i | \boldsymbol{\mu}_{\boldsymbol{\theta}}(\boldsymbol{x}_{i+1}, i+1), \beta_{i+1} I\right]$
         - $\boldsymbol{\theta}$はデコーダのパラメータ
-        - $\boldsymbol{\mu}_\boldsymbol{\theta}, \Sigma_\boldsymbol{\theta}$の2番目の引数$i+1$は時刻
+        - $\beta_{i+1}$の代わりに別の値をつかうことも（論文参照）。結果は同じらしい。
     - $\boldsymbol{\mu}_\boldsymbol{\theta}$がガウス分布$Q$に峰を作って$P$にしていく
     - なんで逆拡散過程がガウス分布？
         - 分散が小さい場合に証明されている（講師未確認）
