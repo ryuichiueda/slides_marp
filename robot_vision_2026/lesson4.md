@@ -298,7 +298,9 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - $\log$の中が$0$になるときはその項を$0$に
 - 全体のBCE: $-\sum_{i=1}^N \{y_i'\log y_i + (1-y_i') \log (1-y_i) \}$
 
-### 隙間の問題の解決
+---
+
+### 例
 
 - デコーダで生成されるデータに隙間ができにくい
     - [[Kingma 2013]](https://arxiv.org/abs/1312.6114)の中の図4
