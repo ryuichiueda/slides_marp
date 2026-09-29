@@ -563,7 +563,6 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 - 画像に雑音を乗せる処理（拡散過程、画像全体）
     - 1ステップ分の遷移: $P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_i) = \mathcal{N}[ \sqrt{1-\beta_i}\boldsymbol{x}_i, \beta_i I]$
-    - 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
 - 逆拡散過程$P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})$を学習すると$Q$から$P$への遷移が分かる
     - ステップ分だけデコーダに出力を入力し続けると画像に
     - $P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1}) = \mathcal{N}\left[\boldsymbol{x}_i | \boldsymbol{\mu}_{\boldsymbol{\theta}}(\boldsymbol{x}_{i+1}, i+1), \beta_{i+1} I\right]$
@@ -579,3 +578,10 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 
 $\mathcal{L} = \langle -\log P_\theta(\boldsymbol{x} | \boldsymbol{z}) \rangle_{Q(\boldsymbol{z})}$
+
+
+---
+
+### ボツ数式
+
+- 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
