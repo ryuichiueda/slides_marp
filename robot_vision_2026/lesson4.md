@@ -371,7 +371,8 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - 前のスライドの拡散過程（画像全体）
     - 1ステップ分の遷移: $P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_i) = \mathcal{N}[ \sqrt{1-\beta_i}\boldsymbol{x}_i, \beta_i I]$
     - 画像から任意時刻への遷移: $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
-- 逆拡散過程を学習すると$Q$から$P$への遷移が分かる
+- 逆拡散過程$P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})$を学習すると$Q$から$P$への遷移が分かる
+    - ステップ分だけデコーダに出力を入力し続けると画像に
     - 拡散過程: $t$から時刻$t+1$に移ると分布がぼやけてガウス分布に近づく
         - $P_{t+1}(\boldsymbol{x}) = \langle P_{t\rightarrow t+1}(\boldsymbol{x} |  \boldsymbol{x}') \rangle_{P_t (\boldsymbol{x})'}$
             - $P_{t \rightarrow t+1}$はガウス分布
