@@ -284,7 +284,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - $m$: $\boldsymbol{z}$の次元
         - $\boldsymbol{z}^{(\ell)} = \boldsymbol{\mu} + \boldsymbol{\sigma}\odot\boldsymbol{\varepsilon}^{(\ell)} \ (\ell = 1,2,\dots,L)$
             - $L$回試行を繰り返すということ
-            - バッチで学習するなら$L=1$でよさそう
+            - バッチで学習するなら$L=1$でよい
     - 最初の項: 平均値も分散も小さい方がよい$\rightarrow Q$の分布が中央に集まる
     - 次の項: デコーダの$\hat{\boldsymbol{x}}$と元の$\boldsymbol{x}$の比較の項
         - 具体的にどう計算するのかはまだ未調査（すんません）
