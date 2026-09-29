@@ -377,27 +377,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
 
----
+### 注意
 
-### DDPMの学習方法（詳細: 損失関数の求め方）
-
-<span style="font-size:70%">参考: 原著と [@iitachi_tdse 氏の記事](https://qiita.com/iitachi_tdse/items/6cdd706efd0005c4a14a)</span>
-
-- 準備: 条件付き逆拡散過程の計算
-    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0)$（画像$\boldsymbol{x}_0$に関する逆拡散過程）を求める
-    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i}, \boldsymbol{x}_0)P(\boldsymbol{x}_i| \boldsymbol{x}_0)/ P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)$
-        （ベイズの定理）
-    $= P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i})P(\boldsymbol{x}_i| \boldsymbol{x}_0) P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)^{-1}$（余計な条件の除去）
-         - （順方向の）拡散過程の掛け算に
-    - 計算すると$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$とガウス分布に
-         - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
-         - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
-
----
-
-- 学習するのはノイズ除去ではなく、ノイズの推定能力
+- 実際にデコーダが学習するのはノイズ除去ではなく、ノイズの推定能力
     - $\boldsymbol{\varepsilon}$だけノイズの乗った画像について、$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$を出力
-        - どういうことか見ていきましょう
+        - 詳しくは補足2で
 
 
 ---
@@ -597,6 +581,23 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
         - なんで逆拡散過程がガウス分布？
             - 分散が小さい場合に証明されている（講師未確認）
     - $\boldsymbol{\mu}_\boldsymbol{\theta}$が分布に多峰性、画像に模様を形成
+
+---
+
+### DDPMの学習方法（詳細: 損失関数の求め方）
+
+<span style="font-size:70%">参考: 原著と [@iitachi_tdse 氏の記事](https://qiita.com/iitachi_tdse/items/6cdd706efd0005c4a14a)</span>
+
+- 準備: 条件付き逆拡散過程の計算
+    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0)$（画像$\boldsymbol{x}_0$に関する逆拡散過程）を求める
+    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i}, \boldsymbol{x}_0)P(\boldsymbol{x}_i| \boldsymbol{x}_0)/ P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)$
+        （ベイズの定理）
+    $= P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i})P(\boldsymbol{x}_i| \boldsymbol{x}_0) P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)^{-1}$（余計な条件の除去）
+         - （順方向の）拡散過程の掛け算に
+    - 計算すると$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$とガウス分布に
+         - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
+         - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
+
 
 ---
 
