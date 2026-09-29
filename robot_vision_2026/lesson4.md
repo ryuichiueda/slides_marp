@@ -387,7 +387,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         （ベイズの定理）
     $= P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i})P(\boldsymbol{x}_i| \boldsymbol{x}_0) P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)^{-1}$（余計な条件の除去）
          - （順方向の）拡散過程の掛け算に
-    - 計算すると$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$
+    - 計算すると$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$とガウス分布に
          - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
          - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t$
 
