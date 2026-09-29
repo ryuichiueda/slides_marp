@@ -570,8 +570,8 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
         - $\boldsymbol{\theta}$はデコーダのパラメータ
         - $\boldsymbol{\mu}_\boldsymbol{\theta}, \Sigma_\boldsymbol{\theta}$の2番目の引数$i+1$は時刻
     - $\boldsymbol{\mu}_\boldsymbol{\theta}$がガウス分布$Q$に峰を作って$P$にしていく
-        - 画素のもやもやを解釈して雑音除去
-    - なんで逆拡散過程がガウス分布?: 分散が小さい場合にそうなる（講師未確認）
+    - なんで逆拡散過程がガウス分布？
+        - 分散が小さい場合に証明されている（講師未確認）
 
 ---
 
