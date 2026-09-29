@@ -381,8 +381,15 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### DDPMの学習方法（詳細）
 
+- $Q$から$P$はいきなり推定できないが、画像が指定されると推定（パラメータ更新）できる
+    - 条件付き逆拡散仮定
+
+
+---
+
 - 学習するのはノイズ除去ではなく、ノイズの推定能力
     - $\boldsymbol{\varepsilon}$だけノイズの乗った画像について、$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$を出力
+        - どういうことか見ていきましょう
 
 
 ---
