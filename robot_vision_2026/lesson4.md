@@ -379,11 +379,14 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ---
 
-### DDPMの学習方法（詳細）
+### DDPMの学習方法（詳細: 損失関数の求め方）
 
-- $Q$から$P$はいきなり推定できないが、画像が指定されると推定（パラメータ更新）できる
-    - 条件付き逆拡散仮定
+- 準備: 条件付き逆拡散過程の計算
+    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0)$（画像$\boldsymbol{x}_0$に関する逆拡散過程）を求める
+    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i}, \boldsymbol{x}_0)P(\boldsymbol{x}_i| \boldsymbol{x}_0)/ P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)$
+        （ベイズの定理）
 
+<span style="font-size:70%">参考: 原著と [@iitachi_tdse 氏の記事](https://qiita.com/iitachi_tdse/items/6cdd706efd0005c4a14a)</span>
 
 ---
 
