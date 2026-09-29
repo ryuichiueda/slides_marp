@@ -391,7 +391,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
          - （順方向の）拡散過程の掛け算に
     - 計算すると$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$とガウス分布に
          - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
-         - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t\qquad$（$\tilde{\boldsymbol{\mu}}, \tilde{\beta}$ともに計算可能）
+         - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
 
 ---
 
