@@ -568,7 +568,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
     - $P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1}) = \mathcal{N}\left[\boldsymbol{x}_i | \boldsymbol{\mu}_{\boldsymbol{\theta}}(\boldsymbol{x}_{i+1}, i+1), \beta_{i+1} I\right]$
         - $\boldsymbol{\theta}$はデコーダのパラメータ
         - $\beta_{i+1}$の代わりに別の値をつかうことも（論文参照。結果は同じらしい）
-    - $\boldsymbol{\mu}_\boldsymbol{\theta}$がガウス分布$Q$に峰を作って$P$にしていく
+    - $\boldsymbol{\mu}_\boldsymbol{\theta}$が分布に多峰性、画像に模様を形成
     - なんで逆拡散過程がガウス分布？
         - 分散が小さい場合に証明されている（講師未確認）
 
