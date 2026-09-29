@@ -567,3 +567,9 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 - 逆拡散過程$P(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})$を学習すると$Q$から$P$への遷移が分かる
     - ステップ分だけデコーダに出力を入力し続けると画像に
 
+---
+
+### 評価関数
+
+
+$\mathcal{L} = \langle -\log P_\theta(\boldsymbol{x} | \boldsymbol{z}) \rangle_{Q(\boldsymbol{z})}$
