@@ -82,7 +82,7 @@ marp: true
 - 入力$\boldsymbol{x} = (x_1, x_2, \dots, x_n)$に対し<span style="color:red">$y_i = \eta e^{x_i}$</span>を出力
     - $\eta$は正規化定数
         - $\sum_{i=1}^n y_i = 1$にするための定数（のようなもの）
-- 損失関数: <span style="color:red">交差エントロピー</span>を使用
+- 損失関数: <span style="color:red">交差（クロス）エントロピー</span>を使用
    - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x}|\boldsymbol{y}') = H(\boldsymbol{y}', \boldsymbol{y}) = -\sum_{i=1}^N y_i' \log y_i$
        - $\boldsymbol{y}$が出力、$\boldsymbol{y}'$が正解
        - <span style="font-size:70%">注意: $\boldsymbol{w}$はほかの層のパラメータ</span>
