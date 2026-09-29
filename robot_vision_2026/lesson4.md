@@ -368,9 +368,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### 何を学習しているのか
 
+- 前のスライドの拡散過程（画像全体）
+    - $P(\boldsymbol{x}_i | \boldsymbol{x}_0) = \mathcal{N}[ \sqrt{\bar{\alpha_i}}\boldsymbol{x}_0, (1- \bar{\alpha_i})I]$
 - 逆拡散過程を学習
     - 拡散過程: $t$から時刻$t+1$に移ると分布がぼやけてガウス分布に近づく
-        - $P_{t+1}(\boldsymbol{x}) = \langle P_{t\rightarrow t+1}(\boldsymbol{x} |  \boldsymbol{x}_{t}) \rangle_{P_t (\boldsymbol{x})}$
+        - $P_{t+1}(\boldsymbol{x}) = \langle P_{t\rightarrow t+1}(\boldsymbol{x} |  \boldsymbol{x}') \rangle_{P_t (\boldsymbol{x})'}$
             - $P_{t \rightarrow t+1}$はガウス分布
 
 
