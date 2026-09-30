@@ -624,7 +624,7 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 
 ---
 
-### $L_i$をノイズの比較の損失関数に
+### $L_i$をノイズの比較の損失関数に/デコーダをノイズの推定器（1/2）
 
 - 時刻$i+1$の訓練の入力$\boldsymbol{x}_{i+1}$は拡散過程の計算式から
     - $\boldsymbol{x}_{i+1}(\boldsymbol{x}_0,\boldsymbol{\varepsilon}) = \sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{i+1}} \boldsymbol{\varepsilon}\quad$ with $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0},I)$
@@ -638,6 +638,14 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
     - $\boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1) = \frac{1}{\sqrt{\alpha_t}}[\boldsymbol{x}_{i+1} - \frac{\beta_{i+1}}{\sqrt{1-\bar{\alpha}_{i+1}}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}, i+1)]$
         - <span style="color:red">$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$（画像$\boldsymbol{x}_{i+1}$に乗った雑音の量）をANNに推定させる</span>
 
+
+---
+
+### $L_i$をノイズの比較の損失関数に/デコーダをノイズの推定器（2/2）
+
+
+- $L_i=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)\big|\big|^2 + C$
+$=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{1+1}}\boldsymbol{\varepsilon},i+1)\big|\big|^2 + C$
 
 ---
 
