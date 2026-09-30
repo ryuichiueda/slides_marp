@@ -606,6 +606,8 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
     - $L_i = D_\text{KL}[P(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, \boldsymbol{x}_0)||P_\boldsymbol{\theta}(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})]$（式(6)の再現）
     - $L_0 = - \log P_\boldsymbol{\theta}(\boldsymbol{x}_0 | \boldsymbol{x}_1)$（訓練画像と生成された画像の比較。VAEの式(8)の第2項と同じ）
 
+最後のノイズ除去は$L_0$、途中のノイズ除去は$L_i\ (i=1,2,\dots,T-1)$を最小化するように評価
+
 ---
 
 ### $\boldsymbol{\mu}_\boldsymbol{\theta}$の分解
