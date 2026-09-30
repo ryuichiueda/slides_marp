@@ -609,6 +609,15 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 
 ---
 
+### $L_i$の簡略化（デコーダの形が決まる）
+
+- デコーダでの逆拡散過程について、分散を学習対象外に
+    - $P_\boldsymbol{\theta}(\boldsymbol{x}_i|\boldsymbol{x}_{i+1}) = \mathcal{N}(\boldsymbol{x}_i | \boldsymbol{\mu}_\boldsymbol{\theta}, \tilde{\beta}_{i+1}I)$
+
+
+
+---
+
 ### $\boldsymbol{\mu}_\boldsymbol{\theta}$の分解
 
 - $\boldsymbol{\mu}_\boldsymbol{\theta}$は下記$\alpha_i, \bar{\alpha}_i$を使って雑音とそれ以外に分解可能
