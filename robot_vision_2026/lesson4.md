@@ -575,11 +575,10 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 - 準備: 条件付き逆拡散過程の計算
     -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0)$（画像$\boldsymbol{x}_0$に関する逆拡散過程）を求める
-    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i}, \boldsymbol{x}_0)P(\boldsymbol{x}_i| \boldsymbol{x}_0)/ P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)$
-        （ベイズの定理）
+    -  $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i}, \boldsymbol{x}_0)P(\boldsymbol{x}_i| \boldsymbol{x}_0)/ P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)$（ベイズの定理）
     $= P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i})P(\boldsymbol{x}_i| \boldsymbol{x}_0) P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)^{-1}$（余計な条件の除去）
          - （順方向の）拡散過程の掛け算に
-    - 計算すると$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$とガウス分布に
+    - $\Longrightarrow P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$（論文の(6)）
          - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
          - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
 
