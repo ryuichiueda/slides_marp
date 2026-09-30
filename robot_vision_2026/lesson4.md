@@ -613,7 +613,8 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 
 - デコーダでの逆拡散過程について、分散を学習対象外に
     - $P_\boldsymbol{\theta}(\boldsymbol{x}_i|\boldsymbol{x}_{i+1}) = \mathcal{N}[\boldsymbol{x}_i | \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1), \tilde{\beta}_{i+1}I]$
-        - $\boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)$: 雑音の混ざった画像$\boldsymbol{x}_{i+1}$と時刻$i+1$を入力すると、雑音が除去された画像の平均値を出力
+        - $\boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)$: 雑音の混ざった画像$\boldsymbol{x}_{i+1}$と時刻$i+1$を入力すると、
+        雑音が除去された画像の平均値を出力
 
 
 
