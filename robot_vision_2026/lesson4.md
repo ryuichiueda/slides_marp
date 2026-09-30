@@ -647,7 +647,7 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 - $L_i=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)\big|\big|^2 + C$
 $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{1+1}}\boldsymbol{\varepsilon},i+1)\big|\big|^2 + C$
 - DDPMでは$L_i= \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{1+1}}\boldsymbol{\varepsilon},i+1)\big|\big|^2$と簡略化してデコーダに学習させる
-- 以上の変換で、デコーダは画像に乗った雑音の量を推定するもので置き換え可能
+- 以上の変換で、デコーダは画像$\boldsymbol{x}_{i+1}$に乗った雑音の量を推定するもので置き換え可能
     - その方が学習に有利（とのこと）
     - 画像は雑音の推定量をノイズ画像から引けば作れる
 
