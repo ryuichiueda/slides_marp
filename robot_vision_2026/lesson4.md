@@ -624,7 +624,7 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 
 ---
 
-### $L_i$をノイズの比較の損失関数に/デコーダをノイズの推定器（1/2）
+### $L_i$をノイズの比較の損失関数に/デコーダをノイズの推定器に（1/2）
 
 - 時刻$i+1$の訓練の入力$\boldsymbol{x}_{i+1}$は拡散過程の計算式から
     - $\boldsymbol{x}_{i+1}(\boldsymbol{x}_0,\boldsymbol{\varepsilon}) = \sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{i+1}} \boldsymbol{\varepsilon}\quad$ with $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0},I)$
