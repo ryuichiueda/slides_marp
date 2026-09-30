@@ -618,7 +618,8 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
             - 平均値じゃない$\boldsymbol{x}_i$が欲しければ、雑音を足してやると良い
 - こうなると$\boldsymbol{\mu}_\boldsymbol{\theta}$と式(7-1)の$\tilde{\boldsymbol{\mu}}$を比べればいいやということになる
     - $L_i$をKLダイバージェンスから画像の画素値の違いの2乗（つまり分散）の比較に書き直し（たぶん真面目に計算してもこうなる）
-         - $L_i = \frac{1}{2\tilde{\beta}_{i+1}} || \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)||^2$ + C
+         - $L_i = \frac{1}{2\tilde{\beta}_{i+1}} || \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)||^2 + C$
+             - $||\cdot||^2$: L2ノルム（距離の2乗。ここでは画素の差の2乗値を足したもの）
 
 
 
