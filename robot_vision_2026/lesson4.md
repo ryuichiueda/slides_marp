@@ -616,6 +616,9 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
         - $\boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)$: 雑音の混ざった画像$\boldsymbol{x}_{i+1}$と時刻$i+1$を入力すると、
         雑音が除去された画像の平均値を出力
             - 平均値じゃない$\boldsymbol{x}_i$が欲しければ、雑音を足してやると良い
+- こうなると$\boldsymbol{\mu}_\boldsymbol{\theta}$と式(7-1)の$\tilde{\boldsymbol{\mu}}$を比べればいいやということになる
+    - $L_i$をKLダイバージェンスから画像の画素値の違いの2乗（つまり分散）の比較に書き直し
+         - $L_i = 2\tilde{\beta}_{i+1}^{-1} || \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)||^2$
 
 
 
