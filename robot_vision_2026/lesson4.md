@@ -587,7 +587,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ### デコーダに何をさせるか
 
-- 少なくとも各訓練データ$\boldsymbol{x}_0$に対して$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$をしっかり再現させる
+- 少なくとも各訓練データ$\boldsymbol{x}_0$に対して式(6)をしっかり再現させる
      - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0)$と同じように雑音をとっていく
 - 全体ではデコーダの出力の分布を訓練データの分布に合わせる
      - $- \dfrac{1}{N} \sum_{j=1}^N \log P_\boldsymbol{\theta}(\boldsymbol{x}_0^{(j)})$を最小化
