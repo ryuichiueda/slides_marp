@@ -569,7 +569,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ---
 
-## 補足2: DDPMの学習方法（詳細: 損失関数の求め方）
+## 補足2: DDPMの学習方法（詳細: 損失関数とデコーダの求め方）
 
 <span style="font-size:70%">参考: 原著と [@iitachi_tdse 氏の記事](https://qiita.com/iitachi_tdse/items/6cdd706efd0005c4a14a)</span>
 
