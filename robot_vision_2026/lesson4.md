@@ -579,8 +579,8 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
     $= P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_{i})P(\boldsymbol{x}_i| \boldsymbol{x}_0) P(\boldsymbol{x}_{i+1} | \boldsymbol{x}_0)^{-1}$（余計な条件の除去）
          - （順方向の）拡散過程の掛け算に
     - $\Longrightarrow P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$（論文の(6)）
-         - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
-         - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
+         - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$ ---(7-1)
+         - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t$ ---(7-2)$\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
 
 
 ---
@@ -588,7 +588,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 ### デコーダに何をさせるか
 
 - 少なくとも各訓練データ$\boldsymbol{x}_0$に対して式(6)をしっかり再現させる
-     - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0)$と同じように雑音をとっていく
+     - 式(7-1)のように雑音をとっていく
 - 全体ではデコーダの出力の分布を訓練データの分布に合わせる
      - $- \dfrac{1}{N} \sum_{j=1}^N \log P_\boldsymbol{\theta}(\boldsymbol{x}_0^{(j)})$を最小化
          - VAEのときと符号と最大/最小化が入れ替わってるだけで同じ
