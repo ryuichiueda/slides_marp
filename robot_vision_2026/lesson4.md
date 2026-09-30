@@ -634,7 +634,7 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
         - やったこと: 上の式を使い関数の引数以外の$\boldsymbol{x}_0$を消す/式(7-1)を適用
 - $\boldsymbol{x}_{i+1}$は実際に入力される画像なので関数の形で表さなくて良いので
     $L_i=\frac{1}{2\tilde{\beta}_{i+1}} \big|\big| \frac{1}{\sqrt{\alpha_t}}(\boldsymbol{x}_{i+1}- \frac{\beta_{i+1}}{\sqrt{1-\bar{\alpha}}_{i+1}}\boldsymbol{\varepsilon}) - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)\big|\big|^2 + C$
-- $\boldsymbol{\mu}_\boldsymbol{\theta}$も次のように解釈
+- $\boldsymbol{\mu}_\boldsymbol{\theta}$も次のように解釈<span style="font-size:70%">（これも手計算で要確認）</span>
     - $\boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1) = \frac{1}{\sqrt{\alpha_t}}[\boldsymbol{x}_{i+1} - \frac{\beta_{i+1}}{\sqrt{1-\bar{\alpha}_{i+1}}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}, i+1)]$
         - <span style="color:red">$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$（画像$\boldsymbol{x}_{i+1}$に乗った雑音の量）をANNに推定させる</span>
 
