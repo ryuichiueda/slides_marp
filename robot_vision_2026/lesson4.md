@@ -628,9 +628,14 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 
 - 時刻$i+1$の訓練の入力$\boldsymbol{x}_{i+1}$は拡散過程の計算式から
     - $\boldsymbol{x}_{i+1}(\boldsymbol{x}_0,\boldsymbol{\varepsilon}) = \sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{i+1}} \boldsymbol{\varepsilon}\quad$ with $\boldsymbol{\varepsilon} \sim \mathcal{N}(\boldsymbol{0},I)$
-- 上の式を$L_i$の式に代入すると<span style="font-size:70%">（メモ: 手計算て未検証）</span>
+- 上の2式を$L_i$の式に代入すると<span style="font-size:70%">（メモ: 手計算て未検証）</span>
     - $L_i = \frac{1}{2\tilde{\beta}_{i+1}} || \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)||^2 + C$
-    $=$
+    $=\frac{1}{2\tilde{\beta}_{i+1}} \big|\big| \frac{1}{\sqrt{\alpha_t}}[\boldsymbol{x}_{i+1}(\boldsymbol{x}_0,\boldsymbol{\varepsilon}) - \frac{\beta_{i+1}}{\sqrt{1-\bar{\alpha}}_{i+1}}\boldsymbol{\varepsilon}] - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)\big|\big|^2 + C$
+        - やったこと: 上の式を使い関数の引数以外の$\boldsymbol{x}_0$を消す/式(7-1)を適用
+- $\boldsymbol{x}_{i+1}$は実際に入力される画像なので関数の形で表さなくて良いので
+    $L_i=\frac{1}{2\tilde{\beta}_{i+1}} \big|\big| \frac{1}{\sqrt{\alpha_t}}(\boldsymbol{x}_{i+1}- \frac{\beta_{i+1}}{\sqrt{1-\bar{\alpha}}_{i+1}}\boldsymbol{\varepsilon}) - \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)\big|\big|^2 + C$
+- $\boldsymbol{\mu}_\boldsymbol{\theta}$も次のように解釈
+    - $\boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1) = \frac{1}{\sqrt{\alpha_t}}[\boldsymbol{x}_{i+1} - \frac{\beta_{i+1}}{\sqrt{1-\bar{\alpha}_{i+1}}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}, i+1)]$
 
 
 ---
