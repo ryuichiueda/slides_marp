@@ -586,6 +586,12 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ---
 
+### デコーダに何をさせるか
+
+- 各訓練データ$\boldsymbol{x}_0$に対して$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_i, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$をしっかり再現させる
+
+---
+
 ### $\boldsymbol{\mu}_\boldsymbol{\theta}$の分解
 
 - $\boldsymbol{\mu}_\boldsymbol{\theta}$は下記$\alpha_i, \bar{\alpha}_i$を使って雑音とそれ以外に分解可能
