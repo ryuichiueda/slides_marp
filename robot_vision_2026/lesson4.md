@@ -641,7 +641,7 @@ $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_
 
 ---
 
-### $L_i$をノイズの比較の損失関数に/デコーダをノイズの推定器（2/2）
+### $L_i$をノイズの比較の損失関数に/デコーダをノイズの推定器に（2/2）
 
 
 - $L_i=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1)\big|\big|^2 + C$
