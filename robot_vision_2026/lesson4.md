@@ -604,7 +604,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 - 1つの訓練画像あたりの変分下界の値: $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_i + L_0$
     - $L_t = D_\text{KL}[P(\boldsymbol{x}_T | \boldsymbol{x}_0)] || P(\boldsymbol{x}_T)]$（無視してよい）
     - $L_i = D_\text{KL}[P(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, \boldsymbol{x}_0)||P_\boldsymbol{\theta}(\boldsymbol{x}_i|\boldsymbol{x}_{i+1})]$
-    - $L_0 = - \log P_\boldsymbol{\theta}(\boldsymbol{x}_0 | \boldsymbol{x}_1)$
+    - $L_0 = - \log P_\boldsymbol{\theta}(\boldsymbol{x}_0 | \boldsymbol{x}_1)$（訓練画像と生成された画像の比較。VAEの式(8)の第2項と同じ）
 
 ---
 
