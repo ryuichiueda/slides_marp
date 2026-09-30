@@ -599,7 +599,7 @@ $= \dfrac{1}{2}\sum_{j=1}^J(  1 + \log\sigma_j^2  - \mu_i^2 -  \sigma_j^2 )$
 
 ### 評価関数の計算
 
-（変分下界の計算は省略）
+（変分下界の導出は省略。[@iitachi_tdse 氏の記事](https://qiita.com/iitachi_tdse/items/6cdd706efd0005c4a14a)にあり）
 
 - 1つの訓練画像あたりの変分下界の値: $\mathcal{L}(\boldsymbol{\theta} | \boldsymbol{x}_0) = L_T + \sum_{i=1}^{T-1} L_i + L_0$
     - $L_t = D_{KL}[P(\boldsymbol{x}_T | \boldsymbol{x}_0)] || P(\boldsymbol{x}_T)]$（無視してよい）
