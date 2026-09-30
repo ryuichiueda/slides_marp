@@ -213,7 +213,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 どれが壊れても問題ないようにしました。a$_{1:3}$はハブa$_4$につながれています。
 ![w:700](./figs/redundant_a1.gif)
     - 起動率はどう計算するんでしょうか？（こんどは掛け算にはならない）
-        - a$_4$の起動率を$\alpha$としましょう。他は$0.8$
+        - a$_4$の起動率を$\alpha$としましょう
+        - 他は$0.8$
 
 ---
 
