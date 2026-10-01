@@ -240,7 +240,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
     \partial f_1/\partial x_1  \  \partial f_1/\partial x_2 \\
     \partial f_2/\partial x_1 \ \partial f_2/\partial x_2
     \end{pmatrix} = W$
-* つまり$W\boldsymbol{e}$を上流へ送る
+* つまり$W^\top\boldsymbol{e}$を上流へ送る
 
 
 <img align=right width=400 src="./figs/back_propagation_affine.svg" />
