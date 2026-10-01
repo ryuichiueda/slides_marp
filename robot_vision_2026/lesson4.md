@@ -379,7 +379,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - <span style="color:red">数値で具体的に分布が求まっているので既知の過程を学習することに</span>
 - 全体では条件のない逆拡散過程$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1})$を学習
     - 上の条件付き逆拡散過程の重ね合わせ
-- 注意: デコーダは$\boldsymbol{x}_i$ではなく、$\boldsymbol{x}_{i+1}$と$\boldsymbol{x}_i$の差分（ノイズ）を出力するように実装される（補足2参照のこと）
+- 注意: 実際のデコーダは$\boldsymbol{x}_i$ではなく、$\boldsymbol{x}_{i+1}$と$\boldsymbol{x}_i$の差分（ノイズ）を出力するように実装される（補足2参照のこと）
 
 
 ---
