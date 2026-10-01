@@ -121,6 +121,7 @@ $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
     - $\boldsymbol{f}^{(m)}$: 入力から見て$m$層目
         - $\boldsymbol{y}^{(m)} = \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
             - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
+    - $f_i$: $\boldsymbol{f}$の$i$番目の元
 - 損失関数を定義
     - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}^2$
         - $f_i, y_i$: それぞれ$\boldsymbol{f}, \boldsymbol{y}$の$i$番目の要素
@@ -138,7 +139,6 @@ $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol
     - $\boldsymbol{e} = \boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y}$: 誤差のベクトル。縦ベクトルとしましょう
     - $\boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$は$\boldsymbol{f}(\boldsymbol{x})$と省略
     - $\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}= \left( \dfrac{\partial{f}_1(\boldsymbol{x})}{\partial w} \ \dfrac{\partial{f}_2(\boldsymbol{x})}{\partial w} \dots \dfrac{\partial{f}_k(\boldsymbol{x})}{\partial w} \right)^\top$
-        - $f_i$は$\boldsymbol{f}$の$i$番目の元
 
 
 ---
