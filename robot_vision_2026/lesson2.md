@@ -138,7 +138,7 @@ $=\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}^\top  (\boldsymbol
     - $\boldsymbol{e} = \boldsymbol{f}(\boldsymbol{x}) - \boldsymbol{y}$: 誤差のベクトル。縦ベクトルとしましょう
     - $\boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$は$\boldsymbol{f}(\boldsymbol{x})$と省略
     - $\dfrac{\partial \boldsymbol{f}(\boldsymbol{x})}{\partial w}= \left( \dfrac{\partial{f}_1(\boldsymbol{x})}{\partial w} \ \dfrac{\partial{f}_2(\boldsymbol{x})}{\partial w} \dots \dfrac{\partial{f}_k(\boldsymbol{x})}{\partial w} \right)^\top$
-
+        - $f_i$は$\boldsymbol{f}$の$i$番目の元
 
 
 ---
