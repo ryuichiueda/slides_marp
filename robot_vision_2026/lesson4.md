@@ -374,6 +374,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - 各訓練画像に対して、次の条件付き逆拡散過程を学習
     - $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$
          - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$ ---(7-1)
+             - 訓練画像$\boldsymbol{x}_0$と$\boldsymbol{x}_{i+1}$を重みをつけて足すとちょっと雑音がとれる
          - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t$ ---(7-2)$\qquad$<span style="color:red">数値で具体的に分布が求まる</span>
 
 
