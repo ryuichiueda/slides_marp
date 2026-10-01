@@ -121,7 +121,6 @@ $= - \alpha (x'_1, x'_2, x'_3, -1)\cdot$誤差
     - $\boldsymbol{f}^{(m)}$: 入力から見て$m$層目
         - $\boldsymbol{y}^{(m)} = \boldsymbol{f}^{(m)}(\boldsymbol{x}^{(m)})$
             - $\boldsymbol{x}^{(m)}, \boldsymbol{y}^{(m)}$: $m$層目の入出力、$\boldsymbol{y}^{(m)} = \boldsymbol{x}^{(m+1)}$
-    - $f_i$: $\boldsymbol{f}$の$i$番目の元
 - 損失関数を定義
     - $\mathcal{L}(\boldsymbol{w}, \boldsymbol{x} | \boldsymbol{y}) = \dfrac{1}{2}\sum_{i=1}^k\{ f_i(\boldsymbol{x} | \boldsymbol{w}) - y_i \}^2$
         - $f_i, y_i$: それぞれ$\boldsymbol{f}, \boldsymbol{y}$の$i$番目の要素
@@ -209,7 +208,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 ### 誤差を送る具体例（1入力1出力の簡単な例）
 
 - 右の層: $f(x) = wx - b$
-    - $J_f = w$
+    * $J_f = w$
 - つまり下流から誤差$e$が来たら$we$を上流へ 
 
 ![bg right:25% 90%](../machine_learning_2026/figs/back_propagation_diff.png)
@@ -221,7 +220,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}) = W\boldsymbol{x} - \boldsymbol{b}$
     - 注意: $\boldsymbol{x}$と$\boldsymbol{y}$が縦ベクトル（前回と逆）
         - 式全体を転置すると前回の式に（$\boldsymbol{x}$と$W$の位置が入れ替わる）
-- $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
+* $J_\boldsymbol{f}(\boldsymbol{x})$を求める（自明ですが、確認のために$2\times 2$の場合で考えましょう）
     - $\boldsymbol{f}(\boldsymbol{x}) =
     \begin{pmatrix}
     w_{11} \ w_{12} \\
@@ -241,7 +240,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
     \partial f_1/\partial x_1  \  \partial f_1/\partial x_2 \\
     \partial f_2/\partial x_1 \ \partial f_2/\partial x_2
     \end{pmatrix} = W$
-- つまり$W\boldsymbol{e}$を上流へ送る
+* つまり$W\boldsymbol{e}$を上流へ送る
 
 
 <img align=right width=400 src="./figs/back_propagation_affine.svg" />
@@ -266,15 +265,15 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 
 シグモイド関数について、上流に送る誤差を計算してみましょう
 
-- 前提
+* 前提
     - ヤコビ行列: $J_\boldsymbol{h}(\boldsymbol{x}) = \text{diag}(\partial h_1/\partial x_1 \ \ \partial h_2/\partial x_2 \ \cdots \ \partial h_n/\partial x_n)$
     - 送る誤差の量: $J_\boldsymbol{h}(\boldsymbol{x}) \boldsymbol{e}= (\partial h_1/\partial x_1 \cdot e_1 \ \ \partial h_2/\partial x_2 \cdot e_2 \ \cdots \ \partial h_n/\partial x_n \cdot e_n)^\top$
         - 活性化関数の層ではベクトルで考えなくても各要素ごとに考えれば良い
             - $\partial h_i/\partial x_i \cdot e_i$を上に送る
-- $h(x) = (1 + e^{-x})^{-1}$を偏微分（$i$を省略）
+* $h(x) = (1 + e^{-x})^{-1}$を偏微分（$i$を省略）
     - $\partial h/\partial x = -1\cdot(1 + e^{-x})^{-2}(-e^{-x})= -1\cdot y^2(1-y^{-1}) =$<span style="color:red">$y(1 - y)$</span>
         - 入出力値のどっちを使ってもよいので$y^{-1} = 1+ e^{-x}$を利用して簡略化
-- $i$番目の要素で送る量: $y_i(1-y_i)e_i$
+* $i$番目の要素で送る量: $y_i(1-y_i)e_i$
     - $y_i$の値がどっちつかずの$0.5$のときに一番大きくなる（あまりよくない）
 
 
