@@ -437,12 +437,10 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 条件付きフローの設計
 
-- ひとつの条件付き確率に対し、途中の経路（分布）の定式化が必要
-- とりあえずガウス分布を選択
+- ガウス分布が、ガウス分布を保ったまま、訓練画像$\boldsymbol{x}_1$周辺の縮退したガウス分布に移動すると考える
     - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
-        - 境界条件
-            - $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}, \sigma_0(\boldsymbol{x}_1) = 1$
-            - $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1, \sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
+        - スタート: $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}$、$\sigma_0(\boldsymbol{x}_1) = 1$
+        - ゴール: $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1$、$\sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
     - フローはこうなる: $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
         - $t=0$の様々な箇所の$\boldsymbol{x}$が$\boldsymbol{x}_1$に向かう（右図）
         - まだ$\sigma_t(\boldsymbol{x}_1), \boldsymbol{\mu}_t(\boldsymbol{x}_1)$の形は決まっていない
