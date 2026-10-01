@@ -424,13 +424,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - 拡散モデル同様、途中の$t$の画像（やデータ）が必要
     - 分布全体で考えると難しい
-- $p_t$を条件付き確率に分解
-    - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
-        - $q$: 訓練データの分布
-            - $\boldsymbol{x}_1$の添え字: データの番号ではなく時刻
-            - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
-- 全体のベクトル場$\boldsymbol{u}_t$も個々のもの（後述）が分かれば計算できる（重み付き平均）
-    - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
+    <span style="color:red">$\Longrightarrow$条件付き逆拡散過程と同じように考える</span>
+
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
 
@@ -660,3 +655,12 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     - 画像は雑音の推定量をノイズ画像から引けば作れる
 
 
+## 補足3: 条件付きフローマッチング
+
+- $p_t$を条件付き確率に分解
+    - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
+        - $q$: 訓練データの分布
+            - $\boldsymbol{x}_1$の添え字: データの番号ではなく時刻
+            - <span style="color:red">訓練データごとに損失関数を最小化しても全体の損失関数を最小化できる</span>
+- 全体のベクトル場$\boldsymbol{u}_t$も個々のもの（後述）が分かれば計算できる（重み付き平均）
+    - $\boldsymbol{u}_t(\boldsymbol{x}) = \int_{X_1} \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \dfrac{p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1)}{p_t(\boldsymbol{x})} \text{d}\boldsymbol{x}_1$
