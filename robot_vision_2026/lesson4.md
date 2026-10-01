@@ -375,7 +375,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - $P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \mathcal{N}[ \boldsymbol{x}_i | \tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0), \tilde{\beta}_{i+1}I ]$
          - $\tilde{\boldsymbol{\mu}}_{i+1}(\boldsymbol{x}_{i+1}, \boldsymbol{x}_0) = \dfrac{\bar{\alpha}_i \beta_{i+1}}{1 - \bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \dfrac{\sqrt{\alpha}_{i+1}(1-\bar{\alpha}_i)}{1-\bar{\alpha}_{i+1}}\boldsymbol{x}_{i+1}$
          - $\tilde{\beta}_{i+1} = \dfrac{1-\bar{\alpha}_i }{1-\bar{\alpha}_{i+1}}\beta_t$
-         $\Longrightarrow \boldsymbol{x}_{i+1}$に元のノイズのない訓練画像$\boldsymbol{x}_0$を重みをつけてちょっと足すと雑音がちょっと取れる
+         $\Longrightarrow \boldsymbol{x}_{i+1}$に元のノイズのない訓練画像$\boldsymbol{x}_0$を重みをつけてちょっと足すと雑音がちょっと取れる、という過程
     - <span style="color:red">数値で具体的に分布が求まっているので既知の過程を学習することに</span>
 - 全体では条件のない逆拡散過程$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1})$を学習
     - これは分からないけど、上の条件付き逆拡散過程を多くの訓練画像で学習していくと学習できる
