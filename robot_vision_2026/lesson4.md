@@ -432,7 +432,6 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
 
-
 ---
 
 ### フローの設計
