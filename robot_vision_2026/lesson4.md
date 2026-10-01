@@ -425,7 +425,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 - 拡散モデル同様、途中の$t$の画像（やデータ）が必要
     - 分布全体で考えると難しい
     <span style="color:red">$\Longrightarrow$条件付き逆拡散過程と同じように考える</span>
-    - 条件付きフローマッチングの足し算$\longrightarrow$全体のフローマッチング
+    - 条件付きフローマッチングの足し算
+    $\longrightarrow$全体のフローマッチング
         - なんでそう考えられるかは補足3に
         - 直観的には拡散モデルと同じ
 
