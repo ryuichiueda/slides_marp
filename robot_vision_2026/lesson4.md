@@ -392,13 +392,6 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - https://learnopencv.com/denoising-diffusion-probabilistic-models/
 
 
-### 注意
-
-- 実際にデコーダが学習するのはノイズ除去ではなく、ノイズの推定能力
-    - $\boldsymbol{\varepsilon}$だけノイズの乗った画像について、$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$を出力
-        - 詳しくは補足2で
-
-
 ---
 
 ### Flow matching（FM）[[Lipman 2022]](https://arxiv.org/abs/2210.02747)
