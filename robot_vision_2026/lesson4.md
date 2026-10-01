@@ -438,7 +438,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 ### 条件付きフローの設計
 
 - ガウス分布が、ガウス分布を保ったまま、訓練画像$\boldsymbol{x}_1$周辺の縮退したガウス分布に移動すると考える
-    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I)$
+    - $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}[\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I]$
         - スタート: $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}$、$\sigma_0(\boldsymbol{x}_1) = 1$
         - ゴール: $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1$、$\sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
     - フローはこうなる: $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
