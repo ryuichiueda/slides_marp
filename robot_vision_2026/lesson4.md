@@ -666,7 +666,10 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
             - $P(\boldsymbol{x}_1)$: 訓練データの分布
         - 考え方的には$p_t(\boldsymbol{x}) \approx \frac{1}{N}\sum_{i=1}^N p_t(\boldsymbol{x}|\boldsymbol{x}_1^{(i)})\qquad$（$\boldsymbol{x}_1^{(1:N)}$: 訓練データ）
     - 速度場
-        - $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})}$
+        - $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})} = \langle 
+        \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
+        p_t(\boldsymbol{x}|\boldsymbol{x}_1) / p_t(\boldsymbol{x})
+        \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
             - ある時刻$t$、ある場所の$\boldsymbol{x}$での速度場は、$\boldsymbol{x}$がどの訓練データ$\boldsymbol{x}_1$から流れ着いた点なのかで行き先が決まる
 
 ---
