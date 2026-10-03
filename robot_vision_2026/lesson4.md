@@ -726,3 +726,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 - $\boldsymbol{x}_t$を$p_1(\boldsymbol{x}| \boldsymbol{x}_1)$からサンプリングする代わりに$\boldsymbol{x}_0 \sim \mathcal{N}(\boldsymbol{0}, I)$でよい
 
 - $\mathcal{L}(\boldsymbol{\theta}) = \langle ||\boldsymbol{v}_t(\boldsymbol{x}) - \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) ||^2 \rangle_{t,\boldsymbol{x},\boldsymbol{x}_1}$
+$= \langle ||\boldsymbol{v}_t[\boldsymbol{\psi}_t(\boldsymbol{x}_0)] + (1-\sigma_\min)\boldsymbol{x}_0 - \boldsymbol{x}_1 ||^2 \rangle_{t,\boldsymbol{x},\boldsymbol{x}_1}$
+    - 以下を使用
+        - $\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$
+        - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = - (1-\sigma_\text{min})\boldsymbol{x}_0 + \boldsymbol{x}_1$
