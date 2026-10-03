@@ -422,7 +422,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 問題の分解: 条件つきフローマッチング
 
-- 拡散モデル同様、途中の$t$の画像（やデータ）が必要
+- 拡散モデル同様、途中の$t$の$\boldsymbol{u}_t$が必要
     - 分布全体で考えると難しい
     <span style="color:red">$\Longrightarrow$条件付き逆拡散過程と同じように考える</span>
     - 各訓練画像$\boldsymbol{x}_1$の条件付きフロー$\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$の足し算
