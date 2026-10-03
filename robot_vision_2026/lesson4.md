@@ -706,7 +706,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ---
 
-### $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_t)$の計算
+### $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$の計算
 
 - 次の2式が成り立つ
     - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \text{d}\boldsymbol{x}(t)/\text{d}t = \sigma_t'(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
@@ -721,5 +721,5 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ---
 
-### 最適輸送を用いた場合の$\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_t)$の具体的な式
+### 最適輸送を用いた場合の$\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$の具体的な式
 
