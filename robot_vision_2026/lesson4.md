@@ -660,6 +660,10 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ## 補足3: 条件付きフローマッチング
 
+- 訓練データの条件付きの式から条件のない式への変換
+
+---
+
 - $p_t$を条件付き確率に分解
     - $p_t(\boldsymbol{x}) = \int_{X_1} p_t(\boldsymbol{x} | \boldsymbol{x}_1)q(\boldsymbol{x}_1) \text{d}\boldsymbol{x}_1$
         - $q$: 訓練データの分布
