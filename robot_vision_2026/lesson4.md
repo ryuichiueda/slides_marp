@@ -685,7 +685,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = \eta p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)$を代入
     - 論文の(8)にある$p_t(\boldsymbol{x})$は使わない
         - $t$と$\boldsymbol{x}$と$\boldsymbol{x}_1$をサンプリングして平均すると$\boldsymbol{u}_t(\boldsymbol{x})$が求まる
-        $\Longrightarrow$サンプリング+$\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$を使って$\boldsymbol{v}_t$を学習していく
+        $\Longrightarrow$サンプリングと$\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$を使って$\boldsymbol{v}_t$を学習していく
             - $\mathcal{L}(\boldsymbol{\theta}) = \langle ||\boldsymbol{v}_t(\boldsymbol{x}) - \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) ||^2 \rangle_{t,\boldsymbol{x},\boldsymbol{x}_1}$
 - (8)に基づく学習に必要なこと
     - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1), p_t(\boldsymbol{x}|\boldsymbol{x}_1)$は特に決まってないので設計が必要
