@@ -723,3 +723,14 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ### 最適輸送を用いた場合の$\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$の具体的な式
 
+- 次のように単純に考える
+    - $\boldsymbol{\mu}_t(\boldsymbol{x}_1)=t \boldsymbol{x}_1$
+    - $\sigma_t(\boldsymbol{x}_1)=1 - (1- \sigma_\text{min})t$
+- 微分
+    - $\boldsymbol{\mu}_t'(\boldsymbol{x}_1)=\boldsymbol{x}_1$
+    - $\sigma_t'(\boldsymbol{x}_1)=-1+ \sigma_\text{min}$
+- 式(15)
+    - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \dfrac{- 1 + \sigma_\text{min}}{1 - (1- \sigma_\text{min})t}
+    (\boldsymbol{x} - t \boldsymbol{x}_1 ) +\boldsymbol{x}_1
+    = \dfrac{\boldsymbol{x}_1 - (1 - \sigma_\text{min})\boldsymbol{x}}{1 - (1- \sigma_\text{min})t}$
+        - これで学習すべき具体的なベクトル場が決定
