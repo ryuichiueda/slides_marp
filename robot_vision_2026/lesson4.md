@@ -683,4 +683,4 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
         \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
         p_t(\boldsymbol{x}|\boldsymbol{x}_1) / p_t(\boldsymbol{x})
         \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
-- 右辺: ベイズの定理で$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を適用
+    - ベイズの定理で$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を適用
