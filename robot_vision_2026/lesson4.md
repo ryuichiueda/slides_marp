@@ -429,6 +429,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
     $\longrightarrow$全体のフロー$\boldsymbol{u}_t(\boldsymbol{x})$に
         - なんでそう考えられるかは補足3に
         - 直観的には拡散モデルと同じ
+- 1回（ある訓練データ$\boldsymbol{x}_1$、時刻$t$）の$\boldsymbol{v}_t$の学習:
+    - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$にしたがって速度場を求め、$\boldsymbol{v}_t$がそれを真似るようにパラメータ変更
 
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
