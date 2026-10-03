@@ -718,4 +718,4 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     \{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}
     +\boldsymbol{\mu}_t'(\boldsymbol{x}_1)$ ---(15)
 - 注意: $\boldsymbol{x}(t)$の$(t)$の扱い（上の式で省略していることについて）
-    - $\boldsymbol{u}_t$の$t$が決まると$\boldsymbol{x}$の時刻が決まるので不要
+    - ちょっとモヤモヤしているものの、1本の$\boldsymbol{\psi}_t$で考えると$\boldsymbol{x}$は$t$の関数となるが、$\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$を1つの分布$p_t(\boldsymbol{x}|\boldsymbol{x}_1)$の動きだと考えると妥当？
