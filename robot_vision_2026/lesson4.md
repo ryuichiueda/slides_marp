@@ -422,7 +422,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ### 問題の分解: 条件つきフローマッチング
 
-- 拡散モデル同様、途中の速度場$\boldsymbol{u}_t$が必要
+- 拡散モデル同様、途中のベクトル場$\boldsymbol{u}_t$が必要
     - 分布全体で考えると難しい
     <span style="color:red">$\Longrightarrow$条件付き逆拡散過程と同じように考える</span>
     - 各訓練画像$\boldsymbol{x}_1$の条件付きフロー$\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$の足し算
@@ -430,7 +430,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - なんでそう考えられるかは補足3に
         - 直観的には拡散モデルと同じ
 - 1回（ある訓練データ$\boldsymbol{x}_1$、時刻$t$）の$\boldsymbol{v}_t$の学習:
-    - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$にしたがって速度場を求め、$\boldsymbol{v}_t$がそれを真似るようにパラメータ変更
+    - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$にしたがってベクトル場を求め、$\boldsymbol{v}_t$がそれを真似るようにパラメータ変更
 
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
