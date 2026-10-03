@@ -681,5 +681,5 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
         \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
         p_t(\boldsymbol{x}|\boldsymbol{x}_1) / p_t(\boldsymbol{x})
         \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
-    - ベイズの定理で$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を適用
+    - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を代入
 - 式(8)から分かる、ある時刻$t$、ある場所$\boldsymbol{x}$の学習方法
