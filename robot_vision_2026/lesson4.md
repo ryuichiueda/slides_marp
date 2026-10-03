@@ -718,4 +718,4 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     \{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}
     +\boldsymbol{\mu}_t'(\boldsymbol{x}_1)$ ---(15)
 - 注意: $\boldsymbol{x}(t)$の$(t)$の扱い（上の式で省略していることについて）
-    - $(t)$をつけたままにしてもいいけど、場として考えると省略しても問題ない（自信なし）
+    - $(t)$をつけたままにしてもいいけど、$\boldsymbol{u}_t$にも$t$がついているから省略してもよい（たぶん）
