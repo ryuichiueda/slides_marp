@@ -706,40 +706,23 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ---
 
-### $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$の計算
+### $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$の計算と最適輸送による確定
 
-- 次の2式が成り立つ
-    - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \text{d}\boldsymbol{x}(t)/\text{d}t = \sigma_t'(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
-        - 前ページの最後の式から
-    - $\boldsymbol{x}_0 = \{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}/\sigma_t(\boldsymbol{x}_1)$
-- $\boldsymbol{x}_0$を消去
-    - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \dfrac{\sigma_t'(\boldsymbol{x}_1)}{\sigma_t(\boldsymbol{x}_1)}
-    \{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}
-    +\boldsymbol{\mu}_t'(\boldsymbol{x}_1)$ ---(15)
-- 注意: $\boldsymbol{x}(t)$の$(t)$の扱い（上の式で省略していることについて）
-    - $(t)$をつけたままにしてもいいけど、$\boldsymbol{u}_t$にも$t$がついているから省略してもよい（たぶん）
-
----
-
-### 最適輸送を用いた場合の$\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$の具体的な式
-
-- 次のように単純に考える
+- $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \text{d}\boldsymbol{x}(t)/\text{d}t = \sigma_t'(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
+- 次のように簡単に考える（最適輸送問題を解くとこうなるらしい）
     - $\boldsymbol{\mu}_t(\boldsymbol{x}_1)=t \boldsymbol{x}_1$
     - $\sigma_t(\boldsymbol{x}_1)=1 - (1- \sigma_\text{min})t$
-- 微分
-    - $\boldsymbol{\mu}_t'(\boldsymbol{x}_1)=\boldsymbol{x}_1$
-    - $\sigma_t'(\boldsymbol{x}_1)=-1+ \sigma_\text{min}$
-- 式(15)
-    - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \dfrac{- 1 + \sigma_\text{min}}{1 - (1- \sigma_\text{min})t}
-    (\boldsymbol{x} - t \boldsymbol{x}_1 ) +\boldsymbol{x}_1
-    = \dfrac{\boldsymbol{x}_1 - (1 - \sigma_\text{min})\boldsymbol{x}}{1 - (1- \sigma_\text{min})t}$ ---(21)
-        - これで学習すべき具体的なベクトル場が決定
+- $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = - (1-\sigma_\text{min})\boldsymbol{x}_0 + \boldsymbol{x}_1$
+    - $\boldsymbol{x}= \boldsymbol{\psi}_t(\boldsymbol{x}_0) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1) = \{1 - (1- \sigma_\text{min})t\}\boldsymbol{x}_0  + t\boldsymbol{x}_1$
+
+
+論文には難しい式がたくさん書いてあるけどこれでよし
+
 
 ---
 
-### さらに簡単に
+### 損失関数の確定
 
-- $\sigma_t(\boldsymbol{x}_1)$の定義を$\boldsymbol{\psi}_t(\boldsymbol{x})$に
-    - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \{ 1- (1-\sigma_\text{min})t\}\boldsymbol{x} + t\boldsymbol{x}_1$
-- $\boldsymbol{x}$のサンプリングの代わりに$\boldsymbol{x}_0$を$\mathcal{N}(\boldsymbol{0}, I)$からサンプリングしてもよいので、$\boldsymbol{x}_0$を使う前提で損失関数を書き直し
+- $\boldsymbol{x}_t$を$p_1(\boldsymbol{x}| \boldsymbol{x}_1)$からサンプリングする代わりに$\boldsymbol{x}_0 \sim \mathcal{N}(\boldsymbol{0}, I)$でよい
 
+- $\mathcal{L}(\boldsymbol{\theta}) = \langle ||\boldsymbol{v}_t(\boldsymbol{x}) - \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) ||^2 \rangle_{t,\boldsymbol{x},\boldsymbol{x}_1}$
