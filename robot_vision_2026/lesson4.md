@@ -698,5 +698,6 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     - ゴール: $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1$、$\sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
 - さらに、この分布の遷移の中での点の動き（フロー）を次のように仮定
     - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
+    - 分布のなかの点の動きは分布の動きを定義しても一意に決まらないのでこの仮定が必要
 
-![bg right:35% 95%](./figs/conditional_flow_and_flow@1600x.png)
+![bg right:32% 95%](./figs/conditional_flow_and_flow@1600x.png)
