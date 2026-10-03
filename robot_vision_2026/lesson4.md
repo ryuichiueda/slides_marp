@@ -671,7 +671,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
         p_t(\boldsymbol{x}|\boldsymbol{x}_1) / p_t(\boldsymbol{x})
         \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
             - 中辺: ある時刻$t$、ある場所の$\boldsymbol{x}$での速度場は、$\boldsymbol{x}$がどの訓練データ$\boldsymbol{x}_1$から流れ着いた点なのかで行き先が決まる（確率的に）
-                - $p_t(\boldsymbol{x}_1|\boldsymbol{x})$: $\boldsymbol{x}_1$が点$\boldsymbol{x}$の速度に与える影響の割合と解釈できる
+                - $p_t(\boldsymbol{x}_1|\boldsymbol{x})$: 「$\boldsymbol{x}_1$が点$\boldsymbol{x}$の速度に与える影響の割合」と解釈
             - 右辺: ベイズの定理で$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を適用
 
 ---
