@@ -686,6 +686,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = \eta p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)$を代入
     - 論文の(8)にある$p_t(\boldsymbol{x})$は使わない
         - $\boldsymbol{x}$と$\boldsymbol{x}_1$をサンプリングして平均すると$\boldsymbol{u}_t(\boldsymbol{x})$が求まる
+        $\Longrightarrow \boldsymbol{x}$と$\boldsymbol{x}_1$を適切にサンプリングして$\boldsymbol{v}_t$のパラメータを学習で変えていくと$\boldsymbol{u}_t$と一致
 - 式(8)から分かること
     - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$の$\boldsymbol{u}_t(\boldsymbol{x})$への寄与
 - 、ある時刻$t$、ある場所$\boldsymbol{x}$の学習方法
