@@ -696,26 +696,25 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 - ベタにガウス分布で$p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}[\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I ]$とする
     - スタート: $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}$、$\sigma_0(\boldsymbol{x}_1) = 1$
     - ゴール: $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1$、$\sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
-- さらに、この分布の遷移の中での点の動き（フロー）を次のように仮定
+- さらに、この分布の遷移の中での点の動き（フロー）を次のように限定
     - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
-    - 分布のなかの点の動きは分布の動きを定義しても一意に決まらないのでこの仮定が必要
+        - 分布の動きを定義しても、ともに動く点の動きは定まらないのでこの仮定が必要
+- $\boldsymbol{\psi}_t(\boldsymbol{x})$: 実は$\boldsymbol{x}$ではなく時間の関数（$\sigma_t$も$\boldsymbol{\mu}_t$も）
+    - $\boldsymbol{x}_0$を決めて$\boldsymbol{\psi}_t(\boldsymbol{x}_0) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$としておきましょう
 
 ![bg right:32% 95%](./figs/conditional_flow_and_flow@1600x.png)
 
 ---
 
 
-### フローを使った速度場と評価関数の定義
+### $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_t)$の計算
 
+- 次の2式が成り立つ
+    - $\boldsymbol{u}_t(\boldsymbol{x}_t | \boldsymbol{x}_1) = \text{d}\boldsymbol{x}_t/\text{d}t$
+        - $\boldsymbol{x}$を時間$t$の関数と考えると、その微分が速度場
+- $t=0$のノイズ$\boldsymbol{x}_0$を適当に決めて消去すると求まる
 - $\boldsymbol{x}_0$を適当に（$\mathcal{N}(\boldsymbol{0}, I)$から）決めると$\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$が決まる
-    - $\boldsymbol{x}_t = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$より
-    $\boldsymbol{x}_0 = \{ \boldsymbol{x}_t - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}\sigma_t(\boldsymbol{x}_1)^{-1}$
-- フロー$\boldsymbol{\psi}_t(\boldsymbol{x})$上のベクトル場はフローの微分
-    - $
-    \boldsymbol{u}_t( \boldsymbol{\psi}_t(\boldsymbol{x}_0) | \boldsymbol{x}_1)
-    =
-    \dfrac{\text{d}}{\text{d}t}\boldsymbol{\psi}_t(\boldsymbol{x}_0)
-    = 
-    \dfrac{\text{d}}{\text{d}t}\{\sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)\}
-    \quad$ ---(13)
+- 計算で$\boldsymbol{x}_0$を消去
+    - $\dfrac{\text{d}}{\text{d}t}\boldsymbol{x}_t = \dfrac{\text{d}}{\text{d}t}\{\sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)\}= \sigma_t'(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
+    - $\boldsymbol{x}_0 = \{ \boldsymbol{x}_t - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}/\sigma_t(\boldsymbol{x}_1)$を代入すると
 
