@@ -729,4 +729,4 @@ $= \langle ||\boldsymbol{v}_t[\boldsymbol{\psi}_t(\boldsymbol{x}_0)] + (1-\sigma
     - 以下を使用
         - $\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$（上式の$\boldsymbol{x}$は$\boldsymbol{x}_t$のこと）
         - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = - (1-\sigma_\text{min})\boldsymbol{x}_0 + \boldsymbol{x}_1$
-- つまり、ある訓練画像$\boldsymbol{x}_1$を選び、次に$t$や$\boldsymbol{x}_0$をそれぞれ一様分布、標準正規分布から選んで$\boldsymbol{v}_t$を学習していくとデコーダが学習できる
+- つまり、ある訓練画像$\boldsymbol{x}_1$を選び、次に$t$と$\boldsymbol{x}_0$をそれぞれ一様分布、標準正規分布から選んで$\boldsymbol{v}_t$を学習していくとデコーダが学習できる
