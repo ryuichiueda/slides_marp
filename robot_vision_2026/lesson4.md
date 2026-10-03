@@ -700,7 +700,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
         - 分布の動きを定義しても、ともに動く点の動きは定まらないのでこの仮定が必要
 - $\boldsymbol{\psi}_t(\boldsymbol{x})$: 実は$\boldsymbol{x}$ではなく時間の関数（$\sigma_t$も$\boldsymbol{\mu}_t$も）
-    - $\boldsymbol{x}_0$を決めると$\boldsymbol{x}$の動き$\boldsymbol{x} = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$となる
+    - $\boldsymbol{x}_0$を決めると$\boldsymbol{x}$の動きの関数$\boldsymbol{x}(t) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$となる
 
 ![bg right:32% 95%](./figs/conditional_flow_and_flow@1600x.png)
 
