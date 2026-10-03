@@ -661,6 +661,9 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 ## 補足3: 条件付きフローマッチング
 
 - 訓練データの条件付きの式から条件のない式への変換
+    - 時刻$t$の分布
+        - $p_t(\boldsymbol{x}) = \langle p_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{P(\boldsymbol{x}_1)}$
+            - $P(\boldsymbol{x}_1)$: 訓練データの分布
 
 ---
 
