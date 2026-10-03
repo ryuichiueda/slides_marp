@@ -662,7 +662,7 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 - 訓練データの条件付きの式から条件のない式への変換
     - 時刻$t$の分布
-        - $p_t(\boldsymbol{x}) = \langle p_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{P(\boldsymbol{x}_1)}$
+        - $p_t(\boldsymbol{x}) = \langle p_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{P(\boldsymbol{x}_1)}$ ---論文の式(6)
             - $P(\boldsymbol{x}_1)$: 訓練データの分布
         - 考え方的には$p_t(\boldsymbol{x}) \approx \frac{1}{N}\sum_{i=1}^N p_t(\boldsymbol{x}|\boldsymbol{x}_1^{(i)})\qquad$（$\boldsymbol{x}_1^{(1:N)}$: 訓練データ）
     - 速度場
