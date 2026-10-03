@@ -732,5 +732,14 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 - 式(15)
     - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \dfrac{- 1 + \sigma_\text{min}}{1 - (1- \sigma_\text{min})t}
     (\boldsymbol{x} - t \boldsymbol{x}_1 ) +\boldsymbol{x}_1
-    = \dfrac{\boldsymbol{x}_1 - (1 - \sigma_\text{min})\boldsymbol{x}}{1 - (1- \sigma_\text{min})t}$
+    = \dfrac{\boldsymbol{x}_1 - (1 - \sigma_\text{min})\boldsymbol{x}}{1 - (1- \sigma_\text{min})t}$ ---(21)
         - これで学習すべき具体的なベクトル場が決定
+
+---
+
+### さらに簡単に
+
+- $\sigma_t(\boldsymbol{x}_1)$の定義を$\boldsymbol{\psi}_t(\boldsymbol{x})$に
+    - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \{ 1- (1-\sigma_\text{min})t\}\boldsymbol{x} + t\boldsymbol{x}_1$
+- $\boldsymbol{x}$のサンプリングの代わりに$\boldsymbol{x}_0$を$\mathcal{N}(\boldsymbol{0}, I)$からサンプリングしてもよいので、$\boldsymbol{x}_0$を使う前提で損失関数を書き直し
+
