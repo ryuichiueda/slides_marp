@@ -711,7 +711,6 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
     - $
     \boldsymbol{u}_t( \boldsymbol{\psi}_t(\boldsymbol{x}) | \boldsymbol{x}_1)
     =
-    \dfrac{\text{d}}{\text{d}t}\boldsymbol{\psi}_t(\boldsymbol{x})
-    $
+    \dfrac{\text{d}}{\text{d}t}\boldsymbol{\psi}_t(\boldsymbol{x})$ ---(13)
 - $\boldsymbol{x}_0$を適当にドローすると$\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$が決まる
 
