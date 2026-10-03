@@ -708,4 +708,6 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 ### フローを使った速度場と評価関数の定義
 
 - $\boldsymbol{x}_0$を適当にドローすると$\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$が決まる
+- 速度場はフローの微分
+    - $\boldsymbol{u}_t(\boldsymbol{x}_t | \boldsymbol{x}_1) = \dfrac{\text{d}}{\text{d}t}\boldsymbol{\psi}_t$
 
