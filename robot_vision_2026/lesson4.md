@@ -707,7 +707,9 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ### フローを使った速度場と評価関数の定義
 
-- $\boldsymbol{x}_0$を適当にドローすると$\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$が決まる
+- $\boldsymbol{x}_0$を適当に（$\mathcal{N}(\boldsymbol{0}, I)$から）決めると$\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$が決まる
+    - $\boldsymbol{x}_t = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$より
+    $\boldsymbol{x}_0 = \{ \boldsymbol{x}_t - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}\sigma_t(\boldsymbol{x}_1)^{-1}$
 - フロー$\boldsymbol{\psi}_t(\boldsymbol{x})$上のベクトル場はフローの微分
     - $
     \boldsymbol{u}_t( \boldsymbol{\psi}_t(\boldsymbol{x}_0) | \boldsymbol{x}_1)
