@@ -462,7 +462,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - $\boldsymbol{\psi}_t(\boldsymbol{x}_0)$: $\boldsymbol{x}_0$を選んだ時の時刻$t$の$\boldsymbol{x}$の位置
             - $\boldsymbol{x} = \boldsymbol{\psi}_t(\boldsymbol{x}_0) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1) = \{1 - (1- \sigma_\text{min})t\}\boldsymbol{x}_0  + t\boldsymbol{x}_1$
         - $- (1-\sigma_\text{min})\boldsymbol{x}_0 + \boldsymbol{x}_1 =\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$: $\boldsymbol{v}_t$のお手本のベクトル場
-- つまり、ある訓練画像$\boldsymbol{x}_1$を選び、次に$t$や$\boldsymbol{x}_0$をそれぞれ一様分布、標準正規分布から選んで$\boldsymbol{v}_t$を学習していくとデコーダが学習できる
+- つまり、ある訓練画像$\boldsymbol{x}_1$を選び、次に$t$と$\boldsymbol{x}_0$をそれぞれ一様分布、標準正規分布から選んで$\boldsymbol{v}_t$を学習していくとデコーダが学習できる
 
 
 
