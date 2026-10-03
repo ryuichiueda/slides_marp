@@ -431,6 +431,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - 直観的には拡散モデルと同じ
 - 1回（ある訓練データ$\boldsymbol{x}_1$、時刻$t$）の$\boldsymbol{v}_t$の学習:
     - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$にしたがってベクトル場を求め、$\boldsymbol{v}_t$がそれを真似るようにパラメータ変更
+    - 具体的な学習方法はもうちょっと凝ってるので補足3参照のこと
 
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
