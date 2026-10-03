@@ -684,8 +684,8 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
         p_t(\boldsymbol{x}|\boldsymbol{x}_1)}\right\rangle_{P(\boldsymbol{x}_1)}$ ---(8)
     - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = \eta p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)$を代入
     - 論文の(8)にある$p_t(\boldsymbol{x})$は使わない
-        - $\boldsymbol{x}$と$\boldsymbol{x}_1$をサンプリングして平均すると$\boldsymbol{u}_t(\boldsymbol{x})$が求まる
-        $\Longrightarrow \boldsymbol{x}$と$\boldsymbol{x}_1$を適切にサンプリングして$\boldsymbol{v}_t$を学習していくと$\boldsymbol{u}_t$に近づく
+        - $t$と$\boldsymbol{x}$と$\boldsymbol{x}_1$をサンプリングして平均すると$\boldsymbol{u}_t(\boldsymbol{x})$が求まる
+        $\Longrightarrow$この$\boldsymbol{u}_t(\boldsymbol{x})$を使って$\boldsymbol{v}_t$を学習していくと$\boldsymbol{u}_t$に近づく
             - $\mathcal{L}(\boldsymbol{\theta}) = \langle ||\boldsymbol{v}_t(\boldsymbol{x}) - \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) ||^2 \rangle_{t,\boldsymbol{x},\boldsymbol{x}_1}$
 - (8)に基づく学習に必要なこと
     - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1), p_t(\boldsymbol{x}|\boldsymbol{x}_1)$は特に決まってないので設計が必要
