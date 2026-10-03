@@ -672,7 +672,6 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
             - ある時刻$t$、ある場所の$\boldsymbol{x}$での速度場は、$\boldsymbol{x}$がどの訓練データ$\boldsymbol{x}_1$から流れ着いた点なのかで行き先が決まる（確率的に）
                 - $p_t(\boldsymbol{x}_1|\boldsymbol{x})$: 「$\boldsymbol{x}_1$が点$\boldsymbol{x}$の速度に与える影響の割合」と解釈
 
-
 ---
 
 ### 式(8)の導出と解釈
@@ -689,3 +688,9 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
             - $\mathcal{L}(\boldsymbol{\theta}) = \langle ||\boldsymbol{v}_t(\boldsymbol{x}) - \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) ||^2 \rangle_{t,\boldsymbol{x},\boldsymbol{x}_1}$
 - (8)に基づく学習に必要なこと
     - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1), p_t(\boldsymbol{x}|\boldsymbol{x}_1)$は特に決まってないので設計が必要
+
+---
+
+### $p_t(\boldsymbol{x}|\boldsymbol{x}_1)$の設計
+
+- ベタにガウス分布で$p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}[\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I ]$とする
