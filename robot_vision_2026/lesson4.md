@@ -677,9 +677,14 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ### 式(8)の導出と解釈
 
-- $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})} = \langle 
+- $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})} 
+= \eta \langle 
         \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
-        p_t(\boldsymbol{x}|\boldsymbol{x}_1) / p_t(\boldsymbol{x})
+        p_t(\boldsymbol{x}|\boldsymbol{x}_1) 
         \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
-    - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を代入
-- 式(8)から分かる、ある時刻$t$、ある場所$\boldsymbol{x}$の学習方法
+    - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = \eta p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)$を代入
+- 式(8)から分かること
+    - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$の$\boldsymbol{u}_t(\boldsymbol{x})$への寄与
+- 、ある時刻$t$、ある場所$\boldsymbol{x}$の学習方法
+    - 訓練データから$\boldsymbol{x}_1$をランダムに選ぶ
+    - $\boldsymbol{x} \sim p_t(\boldsymbol{x}|\boldsymbol{x}_1)$
