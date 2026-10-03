@@ -660,19 +660,26 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ---
 
-## 補足3: 条件付きフローマッチング
+## 補足3: フローマッチングの学習方法の導出
 
-- 訓練データの条件付きの式と条件のない式の関係
+- 準備: 訓練データの条件付きの式と条件のない式の関係の導出
     - 時刻$t$の分布
         - $p_t(\boldsymbol{x}) = \langle p_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{P(\boldsymbol{x}_1)}$ ---論文の式(6)
             - $P(\boldsymbol{x}_1)$: 訓練データの分布
         - 考え方的には$p_t(\boldsymbol{x}) \approx \frac{1}{N}\sum_{i=1}^N p_t(\boldsymbol{x}|\boldsymbol{x}_1^{(i)})\qquad$（$\boldsymbol{x}_1^{(1:N)}$: 訓練データ）
     - 速度場（<span style="color:red">学習の対象</span>）
-        - $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})} = \langle 
+        - $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})}$ ---(8の前段階の式)
+            - ある時刻$t$、ある場所の$\boldsymbol{x}$での速度場は、$\boldsymbol{x}$がどの訓練データ$\boldsymbol{x}_1$から流れ着いた点なのかで行き先が決まる（確率的に）
+                - $p_t(\boldsymbol{x}_1|\boldsymbol{x})$: 「$\boldsymbol{x}_1$が点$\boldsymbol{x}$の速度に与える影響の割合」と解釈
+
+
+---
+
+### ある時刻$t$、ある場所$\boldsymbol{x}$の学習
+
+- 
+- $\boldsymbol{u}_t(\boldsymbol{x}) = \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})} = \langle 
         \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
         p_t(\boldsymbol{x}|\boldsymbol{x}_1) / p_t(\boldsymbol{x})
         \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
-            - 中辺: ある時刻$t$、ある場所の$\boldsymbol{x}$での速度場は、$\boldsymbol{x}$がどの訓練データ$\boldsymbol{x}_1$から流れ着いた点なのかで行き先が決まる（確率的に）
-                - $p_t(\boldsymbol{x}_1|\boldsymbol{x})$: 「$\boldsymbol{x}_1$が点$\boldsymbol{x}$の速度に与える影響の割合」と解釈
-            - 右辺: ベイズの定理で$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を適用
-
+- 右辺: ベイズの定理で$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)/p_t(\boldsymbol{x})$を適用
