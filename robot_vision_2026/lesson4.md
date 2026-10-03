@@ -681,6 +681,11 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 = \eta \langle 
         \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
         p_t(\boldsymbol{x}|\boldsymbol{x}_1) 
+        \rangle_{P(\boldsymbol{x}_1)}$
+$= \langle \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1) \rangle_{p_t(\boldsymbol{x}_1|\boldsymbol{x})} 
+= \eta \langle 
+        \boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)
+        p_t(\boldsymbol{x}|\boldsymbol{x}_1) 
         \rangle_{P(\boldsymbol{x}_1)}$ ---(8)
     - ベイズの定理を使い、$p_t(\boldsymbol{x}_1|\boldsymbol{x}) = \eta p(\boldsymbol{x}|\boldsymbol{x}_1)P(\boldsymbol{x}_1)$を代入
     - 論文の(8)にある$p_t(\boldsymbol{x})$は使わない
