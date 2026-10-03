@@ -691,13 +691,13 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 
 ---
 
-### $p_t(\boldsymbol{x}|\boldsymbol{x}_1)$の設計
+### $p_t(\boldsymbol{x}|\boldsymbol{x}_1)$と$\boldsymbol{x}$の動き（フロー）の設計
 
-- ベタにガウス分布で$p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}[\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I ]$とする
+- ベタにガウス分布で$p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}[\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I ]$ ---(10)
     - スタート: $\boldsymbol{\mu}_0(\boldsymbol{x}_1) = \boldsymbol{0}$、$\sigma_0(\boldsymbol{x}_1) = 1$
     - ゴール: $\boldsymbol{\mu}_1(\boldsymbol{x}_1) = \boldsymbol{x}_1$、$\sigma_1(\boldsymbol{x}_1) = \sigma_\text{min}$
 - さらに、この分布の遷移の中での点の動き（フロー）を次のように限定
-    - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
+    - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$ ---(11)
         - 分布の動きを定義しても、ともに動く点の動きは定まらないのでこの仮定が必要
 - $\boldsymbol{\psi}_t(\boldsymbol{x})$: 実は$\boldsymbol{x}$ではなく時間の関数（$\sigma_t$も$\boldsymbol{\mu}_t$も）
     - $\boldsymbol{x}_0$を決めると$\boldsymbol{x}$の動きの関数$\boldsymbol{x}(t) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$となる
