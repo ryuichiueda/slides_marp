@@ -699,4 +699,4 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 - さらに、この分布の遷移の中での点の動き（フロー）を次のように仮定
     - $\boldsymbol{\psi}_t(\boldsymbol{x}) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x} + \boldsymbol{\mu}_t(\boldsymbol{x}_1)$
 
-![bg right:27% 95%](./figs/conditional_flow_and_flow@1600x.png)
+![bg right:35% 95%](./figs/conditional_flow_and_flow@1600x.png)
