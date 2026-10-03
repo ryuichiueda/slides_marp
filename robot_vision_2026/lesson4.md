@@ -710,11 +710,12 @@ $=\frac{\beta_{i+1}^2}{2\tilde{\beta}_{i+1}\alpha_{i+1}(1-\bar{\alpha}_{i+1})} \
 ### $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_t)$の計算
 
 - 次の2式が成り立つ
-    - $\boldsymbol{u}_t(\boldsymbol{x}_t | \boldsymbol{x}_1) = \text{d}\boldsymbol{x}_t/\text{d}t$
-        - $\boldsymbol{x}$を時間$t$の関数と考えると、その微分が速度場
-- $t=0$のノイズ$\boldsymbol{x}_0$を適当に決めて消去すると求まる
-- $\boldsymbol{x}_0$を適当に（$\mathcal{N}(\boldsymbol{0}, I)$から）決めると$\boldsymbol{x}_t = \boldsymbol{\psi}_t(\boldsymbol{x}_0)$が決まる
-- 計算で$\boldsymbol{x}_0$を消去
-    - $\dfrac{\text{d}}{\text{d}t}\boldsymbol{x}_t = \dfrac{\text{d}}{\text{d}t}\{\sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1)\}= \sigma_t'(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
-    - $\boldsymbol{x}_0 = \{ \boldsymbol{x}_t - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}/\sigma_t(\boldsymbol{x}_1)$を代入すると
-
+    - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \text{d}\boldsymbol{x}(t)/\text{d}t = \sigma_t'(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t'(\boldsymbol{x}_1)$
+        - 前ページの最後の式から
+    - $\boldsymbol{x}_0 = \{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}/\sigma_t(\boldsymbol{x}_1)$
+- $\boldsymbol{x}_0$を消去
+    - $\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1) = \dfrac{\sigma_t'(\boldsymbol{x}_1)}{\sigma_t(\boldsymbol{x}_1)}
+    \{ \boldsymbol{x} - \boldsymbol{\mu}_t(\boldsymbol{x}_1) \}
+    +\boldsymbol{\mu}_t'(\boldsymbol{x}_1)$ ---(15)
+- 注意: $\boldsymbol{x}(t)$の$(t)$の扱い（上の式で省略していることについて）
+    - $\boldsymbol{u}_t$の$t$が決まると$\boldsymbol{x}$の時刻が決まるので不要
