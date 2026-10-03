@@ -431,10 +431,39 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
         - 直観的には拡散モデルと同じ
 - 1回（ある訓練データ$\boldsymbol{x}_1$、時刻$t$）の$\boldsymbol{v}_t$の学習:
     - $\boldsymbol{u}_t(\boldsymbol{x}|\boldsymbol{x}_1)$にしたがってベクトル場を求め、$\boldsymbol{v}_t$がそれを真似るようにパラメータ変更
-    - 具体的な学習方法はもうちょっと凝ってるので補足3参照のこと
 
 
 ![bg right:27% 95%](./figs/flow_matching_method.svg)
+
+---
+
+### 最適輸送問題の解に基づく実装（1/2）（導出は補足3参照のこと）
+
+（注意: 他の実装方法もある）
+
+- この図のような一番素直なフローで分布を移したい$\Longrightarrow$最適輸送問題
+![w:400](./figs/conditional_flow.svg)
+- ベタにガウス分布を最適輸送で移す
+    - ガウス分布: $p_t(\boldsymbol{x}|\boldsymbol{x}_1) = \mathcal{N}[\boldsymbol{x} | \boldsymbol{\mu}_t(\boldsymbol{x}_1), \sigma_t(\boldsymbol{x}_1)^2I ]$
+        - $\boldsymbol{\mu}_t(\boldsymbol{x}_1)=t \boldsymbol{x}_1$
+        - $\sigma_t(\boldsymbol{x}_1)=1 - (1- \sigma_\text{min})t$
+- 問題がこのように簡単に
+    - 次ページ
+
+---
+
+### 最適輸送問題の解に基づく実装（2/2）
+
+- 損失関数: $\mathcal{L}(\boldsymbol{\theta}) = \langle ||\boldsymbol{v}_t[\boldsymbol{\psi}_t(\boldsymbol{x}_0)] + (1-\sigma_\min)\boldsymbol{x}_0 - \boldsymbol{x}_1 ||^2 \rangle_{t,\boldsymbol{x}_0,\boldsymbol{x}_1}$
+    - ここで
+        - $\boldsymbol{x}_0$: $t=0$の分布（標準正規分布）からドローされた点
+        - $\boldsymbol{x}_1$: ある訓練画像
+        - $\boldsymbol{\psi}_t(\boldsymbol{x}_0)$: $\boldsymbol{x}_0$を選んだ時の時刻$t$の$\boldsymbol{x}$の位置
+            - $\boldsymbol{x} = \boldsymbol{\psi}_t(\boldsymbol{x}_0) = \sigma_t(\boldsymbol{x}_1)\boldsymbol{x}_0 + \boldsymbol{\mu}_t(\boldsymbol{x}_1) = \{1 - (1- \sigma_\text{min})t\}\boldsymbol{x}_0  + t\boldsymbol{x}_1$
+        - $- (1-\sigma_\text{min})\boldsymbol{x}_0 + \boldsymbol{x}_1 =\boldsymbol{u}_t(\boldsymbol{x} | \boldsymbol{x}_1)$: $\boldsymbol{v}_t$のお手本のベクトル場
+- つまり、ある訓練画像$\boldsymbol{x}_1$を選び、次に$t$や$\boldsymbol{x}_0$をそれぞれ一様分布、標準正規分布から選んで$\boldsymbol{v}_t$を学習していくとデコーダが学習できる
+
+
 
 ---
 
