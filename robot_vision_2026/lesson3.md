@@ -254,26 +254,26 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### チャンネル
+### チャネル
 
-- 1層に複数の画像がある場合、多チャンネルに
-    - カラー（RGB）画像を扱う場合: 3チャンネル
-    - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
+- 1層に複数の画像がある場合、多チャネルに
+    - カラー（RGB）画像を扱う場合: 3チャネル
+    - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャネルに
 - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
     - 画像から手書きの数字を識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
-- チャンネル数だけの種類の特徴を捉えることが可能
+- チャネル数だけの種類の特徴を捉えることが可能
      ![w:800](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
 
 
 ---
 
-### チャンネルとフィルタ（イレギュラーな構成でない場合）
+### チャネルとフィルタ（イレギュラーな構成でない場合）
 
-- 畳み込み層: $c$チャンネルの入力に対し、$c \times n \times n$の3次元形状のフィルタを適用
-   - $n\times n$:画素のフィルタを$c$個用意してそれぞれのチャンネルに適用
-   - 各チャンネルの出力を足し込んで1チャンネルに
+- 畳み込み層: $c$チャネルの入力に対し、$c \times n \times n$の3次元形状のフィルタを適用
+   - $n\times n$:画素のフィルタを$c$個用意してそれぞれのチャネルに適用
+   - 各チャネルの出力を足し込んで1チャネルに
     ![w:500](./figs/cnn_conv_multi_ch.svg)
-- プーリング層: チャンネル数は不変
+- プーリング層: チャネル数は不変
 
 
 ---
@@ -336,12 +336,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - その1: 3x3のCNN$\rightarrow$ReLU $\rightarrow$ 3x3のCNNをバイパス
 - その2（ボトルネックビルディングブロック）:
     - 1x1のCNN $\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
-        - 最初の1x1 CNNでチャンネル数を1/4に
-        - 最後の1x1 CNNでチャンネル数を4倍に
+        - 最初の1x1 CNNでチャネル数を1/4に
+        - 最後の1x1 CNNでチャネル数を4倍に
     - 計算量削減用
-- その3（画像を小さくしてチャンネル数を増やす）:
+- その3（画像を小さくしてチャネル数を増やす）:
     - その1の前段のCNNをストライド2に
-    - スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャンネル数を合わせる
+    - スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャネル数を合わせる
         - 後者の場合、足りない次元は0パディング（らしい）
 
 ---
