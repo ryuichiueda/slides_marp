@@ -254,26 +254,26 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### チャンネル
+### チャネル
 
-- 1層に複数の画像がある場合、多チャンネルに
-    - カラー（RGB）画像を扱う場合: 3チャンネル
-    - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャンネルに
+- 1層に複数の画像がある場合、多チャネルに
+    - カラー（RGB）画像を扱う場合: 3チャネル
+    - 1つの画像に$n$個のフィルタ$\rightarrow n$個のチャネルに
 - 下図[LeNet[LeCun1989]](https://direct.mit.edu/neco/article-abstract/1/4/541/5515/Backpropagation-Applied-to-Handwritten-Zip-Code)の構造<span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
     - 画像から手書きの数字を識別するCNN（1ch $\rightarrow$ 6ch $\rightarrow$ 16ch）
-- チャンネル数だけの種類の特徴を捉えることが可能
+- チャネル数だけの種類の特徴を捉えることが可能
      ![w:800](https://upload.wikimedia.org/wikipedia/commons/3/35/LeNet-5_architecture.svg)
 
 
 ---
 
-### チャンネルとフィルタ（イレギュラーな構成でない場合）
+### チャネルとフィルタ（イレギュラーな構成でない場合）
 
-- 畳み込み層: $c$チャンネルの入力に対し、$c \times n \times n$の3次元形状のフィルタを適用
-   - $n\times n$:画素のフィルタを$c$個用意してそれぞれのチャンネルに適用
-   - 各チャンネルの出力を足し込んで1チャンネルに
+- 畳み込み層: $c$チャネルの入力に対し、$c \times n \times n$の3次元形状のフィルタを適用
+   - $n\times n$:画素のフィルタを$c$個用意してそれぞれのチャネルに適用
+   - 各チャネルの出力を足し込んで1チャネルに
     ![w:500](./figs/cnn_conv_multi_ch.svg)
-- プーリング層: チャンネル数は不変
+- プーリング層: チャネル数は不変
 
 
 ---
@@ -302,7 +302,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - 性能と層の多さが当時圧倒的
 - 右図のようにとても多層（152層）
     - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
-- 次の技術で多層化が実現（次ページ、次々ページ）
+- 次の技術で多層化が実現（次ページ以降で説明）
     - 図に多数の「迂回」: <span style="color:red">スキップ（残差）接続</span>
     - 学習データのミニバッチごとに正則化（batch normalization）
         - バッチ: ある数の教示データ
@@ -322,10 +322,27 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - スキップ接続の有無: 初期の学習の容易さに影響
     - スキップ接続なし: 最初は$\boldsymbol{y}$がランダム
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
+- スキップと残差
+    - 接続の遠いものは残差接続とは呼ばれない
+    - ResNetに使われた構造に近いもの（次ページ）が残差接続
 
 ![bg right:30% 90%](../advanced_vision/figs/skip.png)
 
 
+---
+
+### ResNetでの残差接続（論文[[He+ 2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)の図5）
+
+- その1: 3x3のCNN$\rightarrow$ReLU $\rightarrow$ 3x3のCNNをバイパス
+- その2（ボトルネックビルディングブロック）:
+    - 1x1のCNN $\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
+        - 最初の1x1 CNNでチャネル数を1/4に
+        - 最後の1x1 CNNでチャネル数を4倍に
+    - 計算量削減用
+- その3（画像を小さくしてチャネル数を増やす）:
+    - その1の前段のCNNをストライド2に
+    - スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャネル数を合わせる
+        - 後者の場合、足りない次元は0パディング（らしい）
 
 ---
 
@@ -365,7 +382,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - 左半分: CNN（物体の識別のような処理）
 - 右半分: 逆向きのCNN（識別結果からの画像の構築）
 - スキップ接続を使用
-    - 途中で次元が落ちているので単なる差分学習以上の意味
+    - 左半分の情報が透かしのように入る
 
 <img width="700" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png" />
 <a style="font-size:70%" href="https://commons.wikimedia.org/wiki/File:Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png">画像: Mehrdad Yazdani, CC BY-SA 4.0</a>

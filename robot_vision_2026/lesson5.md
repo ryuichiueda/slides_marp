@@ -21,14 +21,16 @@ marp: true
 
 ## 内容
 
-- DDPMの構造と新出のレイヤー
+- オリジナルのDDPMの要素について補足
 - 生成モデルの出力をコントロールしたい
-   - 条件付きGAN
-   - 条件付きVAE
+    - 条件付きGAN
+    - 条件付きVAE
+    - 分類器なしガイダンス
 
----
+### DDPMの構造
 
 https://vizuara.substack.com/p/diffusion-model-visual-breakdown
+
 
 ---
 
