@@ -331,18 +331,17 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ---
 
-### ResNetでの残差接続
+### ResNetでの残差接続（論文[[He+ 2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)の図5）
 
-- 論文[[He+ 2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)の図5
-    - その1: 3x3のCNN$\rightarrow$ReLU $\rightarrow$ 3x3のCNNをバイパス
-    - その2（ボトルネックビルディングブロック）:
-        - 1x1のCNN $\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
-            - 最初の1x1 CNNでチャンネル数を1/4に
-            - 最後の1x1 CNNでチャンネル数を4倍に
-        - 計算量削減用
-    - その3（画像を小さくしてチャンネル数を増やす）:
-        - その1の前段のCNNをストライド2に
-        - スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャンネル数を合わせる（後者の場合、足りない次元は0パディング。講師はよく分からんけど）
+- その1: 3x3のCNN$\rightarrow$ReLU $\rightarrow$ 3x3のCNNをバイパス
+- その2（ボトルネックビルディングブロック）:
+    - 1x1のCNN $\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
+        - 最初の1x1 CNNでチャンネル数を1/4に
+        - 最後の1x1 CNNでチャンネル数を4倍に
+    - 計算量削減用
+- その3（画像を小さくしてチャンネル数を増やす）:
+    - その1の前段のCNNをストライド2に
+    - スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャンネル数を合わせる（後者の場合、足りない次元は0パディング。講師はよく分からんけど）
 
 ---
 

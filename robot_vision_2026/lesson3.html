@@ -420,9 +420,7 @@
 <footer>ロボットビジョン第3回</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="" data-marpit-pagination-total="27" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="ロボットビジョン第3回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:ロボットビジョン第3回;--paginate:true;" data-marpit-pagination-total="27">
-<h3 id="resnet%E3%81%A7%E3%81%AE%E6%AE%8B%E5%B7%AE%E6%8E%A5%E7%B6%9A">ResNetでの残差接続</h3>
-<ul>
-<li>論文<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">[He+ 2016]</a>の図5
+<h3 id="resnet%E3%81%A7%E3%81%AE%E6%AE%8B%E5%B7%AE%E6%8E%A5%E7%B6%9A%E8%AB%96%E6%96%87he-2016%E3%81%AE%E5%9B%B35">ResNetでの残差接続（論文<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf">[He+ 2016]</a>の図5）</h3>
 <ul>
 <li>その1: 3x3のCNN<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container>ReLU <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1000 522"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2192" d="M56 237T56 250T70 270H835Q719 357 692 493Q692 494 692 496T691 499Q691 511 708 511H711Q720 511 723 510T729 506T732 497T735 481T743 456Q765 389 816 336T935 261Q944 258 944 250Q944 244 939 241T915 231T877 212Q836 186 806 152T761 85T740 35T732 4Q730 -6 727 -8T711 -11Q691 -11 691 0Q691 7 696 25Q728 151 835 230H70Q56 237 56 250Z"></path></g></g></g></svg></mjx-container> 3x3のCNNをバイパス</li>
 <li>その2（ボトルネックビルディングブロック）:
@@ -440,8 +438,6 @@
 <ul>
 <li>その1の前段のCNNをストライド2に</li>
 <li>スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャンネル数を合わせる（後者の場合、足りない次元は0パディング。講師はよく分からんけど）</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
