@@ -339,6 +339,10 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
         - 1x1のCNN $\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
             - 最初の1x1 CNNでチャンネル数を1/4に
             - 最後の1x1 CNNでチャンネル数を4倍に
+        - 計算量削減用
+    - その3（画像を小さくしてチャンネル数を増やす）:
+        - その1の前段のCNNをストライド2に
+        - スキップ接続がそのままできないので、1x1のCNN or 直結でストライド2にしてチャンネル数を合わせる（後者の場合、足りない次元は0パディング。講師はよく分からんけど）
 
 ---
 
