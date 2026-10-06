@@ -324,7 +324,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
 - スキップと残差
     - 接続の遠いものは残差接続とは呼ばれない
-    - ResNetに使われたときの機能に近いものが残差接続
+    - ResNetに使われた構造に近いもの（次ページ）が残差接続
 
 ![bg right:30% 90%](../advanced_vision/figs/skip.png)
 
