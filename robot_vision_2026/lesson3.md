@@ -302,7 +302,7 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - 性能と層の多さが当時圧倒的
 - 右図のようにとても多層（152層）
     - <span style="font-size:70%">（画像: Zhang et al. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）</span>
-- 次の技術で多層化が実現（次ページ、次々ページ）
+- 次の技術で多層化が実現（次ページ以降で説明）
     - 図に多数の「迂回」: <span style="color:red">スキップ（残差）接続</span>
     - 学習データのミニバッチごとに正則化（batch normalization）
         - バッチ: ある数の教示データ
@@ -322,8 +322,16 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - スキップ接続の有無: 初期の学習の容易さに影響
     - スキップ接続なし: 最初は$\boldsymbol{y}$がランダム
     - スキップ接続あり: （途中の層の出力が最初ゼロだと）最初は$\boldsymbol{y}=\boldsymbol{x}$に
+- スキップと残差
+    - 接続の遠いものは残差接続とは呼ばれない
+    - ResNetに使われたときの機能に近いものが残差接続
 
 ![bg right:30% 90%](../advanced_vision/figs/skip.png)
+
+
+---
+
+### ResNetでの残差接続
 
 
 
