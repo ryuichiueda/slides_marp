@@ -28,7 +28,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## マニピュレータの研究
 
 - リアルなCGを用いた植物の茎と葉の識別
-    - 三上他: 密生した圃場における一部が隠れた果菜類の主茎の検出 ―写実的なCG画像で学習した深層畳み込みニューラルネットワークによるImage-to-Image変換―, 日本ロボット学会誌, Vol. 40, No. 2, 2022. 
+    - [三上他: 密生した圃場における一部が隠れた果菜類の主茎の検出 ―写実的なCG画像で学習した深層畳み込みニューラルネットワークによるImage-to-Image変換―, 日本ロボット学会誌, Vol. 40, No. 2, 2022.](https://www.rsj.or.jp/pub/jrsj/advpub/400201.html)
         - [図](https://github.com/ryuichiueda/jrsj_color_figs/tree/main/vol_40_no_2)
 - 混合ガウス分布の変分推論を用いた物体の把持位置検出
     - 下鳥他: 2指ハンドとハンドアイカメラを持つ多自由度マニピュレータのための3次元点群からの把持位置検出, 日本ロボット学会誌, Vol. 43, 2026. (to appear)
