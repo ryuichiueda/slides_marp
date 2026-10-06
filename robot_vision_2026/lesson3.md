@@ -336,7 +336,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 - 論文[[He+ 2016]](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)の図5
     - その1: 3x3のCNN$\rightarrow$ReLU $\rightarrow$ 3x3のCNNをバイパス
     - その2（ボトルネックビルディングブロック）:
-        - 1x1のCNN$\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
+        - 1x1のCNN $\rightarrow$ ReLU $\rightarrow$ 3x3のCNN $\rightarrow$ ReLU $\rightarrow$ 1x1のCNNをバイパス
+            - 最初の1x1 CNNでチャンネル数を1/4に
+            - 最後の1x1 CNNでチャンネル数を4倍に
 
 ---
 
