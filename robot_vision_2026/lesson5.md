@@ -21,10 +21,14 @@ marp: true
 
 ## 内容
 
-生成モデルの出力をコントロールしたい
+- DDPMの構造と新出のレイヤー
+- 生成モデルの出力をコントロールしたい
+   - 条件付きGAN
+   - 条件付きVAE
 
-- 条件付きGAN
-- 条件付きVAE
+---
+
+https://vizuara.substack.com/p/diffusion-model-visual-breakdown
 
 ---
 
