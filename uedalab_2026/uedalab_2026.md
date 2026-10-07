@@ -32,8 +32,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### リアルなCGを用いた植物の茎と葉の識別
 
 - CGをつかって人工ニューラルネットワークを学習
-- 畑の密集した作物から葉と茎を抽出
-- 葉に隠れた茎を推定し、木の構造を抽出
+- 畑の密集した作物から葉と茎の画素を検出
+- 葉に隠れた茎を推定し、木の構造を再構築
 - [論文](https://www.rsj.or.jp/pub/jrsj/advpub/400201.html)（日本ロボット学会誌論文賞）
     - [論文に掲載した図](https://github.com/ryuichiueda/jrsj_color_figs/tree/main/vol_40_no_2)
 
