@@ -92,5 +92,5 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 自己位置推定に用いる地図をベクトル量子化で圧縮
 - 文献
-    - [船井+ 2025]（ロボティクスシンポジア賞ファイナリスト）
+    - [[船井+ 2025]](https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502273621899691)（ロボティクスシンポジア賞ファイナリスト）
 
