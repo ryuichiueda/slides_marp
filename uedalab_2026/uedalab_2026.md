@@ -22,6 +22,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - マニピュレータの研究
 - 移動ロボットの研究
+- 宇宙関連
 
 ---
 
