@@ -34,7 +34,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - CGをつかって人工ニューラルネットワークを学習
 - 畑の密集した作物から葉と茎を抽出
 - 葉に隠れた茎を推定し、木の構造を抽出
-- [論文](https://www.rsj.or.jp/pub/jrsj/advpub/400201.html)
+- [論文](https://www.rsj.or.jp/pub/jrsj/advpub/400201.html)（日本ロボット学会誌論文賞）
     - [図](https://github.com/ryuichiueda/jrsj_color_figs/tree/main/vol_40_no_2)
 
 ![bg right:40% 95%](https://github.com/ryuichiueda/jrsj_color_figs/blob/main/vol_40_no_2/fig_10.png?raw=true)
