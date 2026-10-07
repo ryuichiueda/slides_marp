@@ -86,7 +86,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 文献
     - [[Ueda+ 2023]](https://www.fujipress.jp/jrm/rb/robot003500061489/)
 - [動画](https://www.youtube.com/watch?v=9a1O16LMtdg)（大きな袋小路の回避）
-
+- [動画](https://www.youtube.com/watch?v=n7LXx50gl9g)（実機実験1）
+- [動画](https://www.youtube.com/watch?v=zgGllngvIMw)（実機実験2。間違った地図を与えて修正させる）
 
 ---
 
