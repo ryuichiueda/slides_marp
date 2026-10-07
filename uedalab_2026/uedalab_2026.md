@@ -62,3 +62,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - [動画](https://github.com/ryuichiueda/jrsj_color_figs/tree/main/vol_43_xx)
 
 ---
+
+### 透明な小袋の検出
+
+- 身の回りにあるもので最も画像から検出することが難しもののひとつ
+
