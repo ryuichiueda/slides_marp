@@ -91,6 +91,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 地図の圧縮
 
 - 自己位置推定に用いる地図をベクトル量子化で圧縮
+    - 例: 右の地図（7.16GB）を31.9MBに圧縮（1:0.0045）
 - 文献
     - [[船井+ 2025]](https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502273621899691)（ロボティクスシンポジア賞ファイナリスト）
 
+![bg right:40% 95%](./figs/tsudanuma_gridmap.svg)
