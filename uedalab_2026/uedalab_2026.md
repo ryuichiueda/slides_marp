@@ -44,6 +44,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ### 畑のシミュレーション
 
 - 前ページのCGをさらに発展させて、畑のシミュレータを作り、そこから学習データを得る
+- 枝の生え方、葉のつきかたのバリエーションを出す
+- 予稿
     - Zander Polson, Yasuo Hayashibara, Ryuichi Ueda: Pipeline for Scalable Synthetic Crop Generation using L-systems, Toward Structurally Grounded Synthetic Data for Agricultural Robotics, 日本機械学会ロボティクス・メカトロニクス講演会2026講演論文集, 1A1-K04, 2026.
 
 
