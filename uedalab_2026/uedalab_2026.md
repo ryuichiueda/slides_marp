@@ -82,6 +82,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 - 環境の全地点、ロボットの向きからのゴールまでの所要時間・その他コストを計算し続ける
     - 進路変更をスムーズにできる
+    - 無限ループを回避
     - 移動物体に進路を阻まれても大きく迂回できる
 - 文献
     - [[Ueda+ 2023]](https://www.fujipress.jp/jrm/rb/robot003500061489/)
