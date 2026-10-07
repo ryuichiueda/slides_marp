@@ -85,6 +85,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 移動物体に進路を阻まれても大きく迂回できる
 - 文献
     - [[Ueda+ 2023]](https://www.fujipress.jp/jrm/rb/robot003500061489/)
+- [動画](https://www.youtube.com/watch?v=9a1O16LMtdg)（大きな袋小路の回避）
+
 
 ---
 
