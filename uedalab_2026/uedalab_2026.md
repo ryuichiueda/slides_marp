@@ -27,6 +27,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 宇宙関連
 - 上田個人技
     - 出版・連載 / 確率ロボティクス関係の昔話 / 制御の変遷についての解説 / 子育て・働き方
+- 今後
 
 ---
 
@@ -162,3 +163,9 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 ### 子育て・働き方
 
 - 上田隆一: [育児休業に関する二つのケースと考察](https://www.jstage.jst.go.jp/article/jrsj/42/4/42_42_352/_article/-char/ja), 日本ロボット学会誌, Vol. 42, No. 4, pp. 352-355, 2024.
+
+---
+
+## 今後
+
+- VLAへのシフト
