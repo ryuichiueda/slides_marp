@@ -28,6 +28,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 - 上田個人技
     - 出版・連載 / 確率ロボティクス関係の昔話 / 制御の変遷についての解説 / 子育て・働き方
 - 今後
+    - VLAへのシフト
 
 ---
 
