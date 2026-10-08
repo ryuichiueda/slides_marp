@@ -154,7 +154,7 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
     - [現行の資料](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2026)
 - ロボットビジョン
     - [現行の資料](https://github.com/ryuichiueda/slides_marp/tree/master/robot_vision_2026)
-        - 全編ニューラルネットワーク+機械学習のものに刷新中（試行錯誤）
+        - 全編ニューラルネットワークに刷新中（試行錯誤中）
 
 ---
 
