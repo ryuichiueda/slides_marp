@@ -21,7 +21,14 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ## 内容
 
 - マニピュレータの研究
+    - リアルなCGを用いた植物の茎と葉の識別
+    - 畑のシミュレーション
+    - 混合ガウス分布の変分推論を用いた物体の把持位置検出
+    - 透明な小袋の検出
 - 移動ロボットの研究
+    - 価値反復による行動計画
+    - 地図の圧縮
+    - 小型計算機を使ったナビゲーション
 - 宇宙関連
 
 ---
@@ -102,3 +109,19 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 ![bg right:30% 95%](./figs/compression.png)
 
 $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
+
+
+---
+
+### 小型計算機を使ったナビゲーション
+
+- 特に研究ではないが、最近の人は計算機が強くないとロボットが動かないと思っているので動かしてみせる
+- [動画](https://www.youtube.com/watch?v=qe8uV68QFvE&t)
+
+---
+
+## 宇宙関連
+
+
+---
+
