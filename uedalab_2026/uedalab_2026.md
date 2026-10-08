@@ -140,3 +140,5 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
     - 2025年12月のロボット学会のセミナー「自律移動と最適制御」（[スライド](https://www.docswell.com/s/ryuichiueda/K37XMM-2025-12-02-rsj-seminar#p1)）
     - 上田: 計測とロボット, 日本ロボット学会学術講演会, 2026（[スライド](https://www.docswell.com/s/ryuichiueda/ZQ24N7-2026-09-02-rsj2026)）
     - 解説1件を執筆中
+- 子育て・働き方
+    - 上田隆一: [育児休業に関する二つのケースと考察](https://www.jstage.jst.go.jp/article/jrsj/42/4/42_42_352/_article/-char/ja), 日本ロボット学会誌, Vol. 42, No. 4, pp. 352-355, 2024.
