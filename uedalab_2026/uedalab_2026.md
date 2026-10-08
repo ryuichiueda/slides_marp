@@ -140,6 +140,7 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 - 連載
     - 魅惑の自作シェルの世界
         - Software Design（技術評論社）, 2022年12月〜
+        - Rustでシェルを作るという内容
 
 ---
 
