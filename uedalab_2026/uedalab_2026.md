@@ -122,6 +122,7 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 
 ## 宇宙関連
 
+- 2028年に小惑星に探査機を放出（するお手伝い）
 
 ---
 
