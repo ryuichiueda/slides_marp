@@ -115,7 +115,7 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 
 ### 小型計算機を使ったナビゲーション
 
-- 特に研究ではないが、最近の人は計算機が強くないとロボットが動かないと思っているので動かしてみせる
+- 特に研究ではないが、最近の人は計算機が強くないとロボットが動かないと思っているので動かしてYouTubeに掲載
 - [動画](https://www.youtube.com/watch?v=qe8uV68QFvE&t)
 
 ---
