@@ -26,7 +26,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
     - 価値反復による行動計画 / 地図の圧縮 / 小型計算機を使ったナビゲーション 
 - 宇宙関連
 - 上田個人技
-    - 出版・連載 / 確率ロボティクス関係の昔話 / 制御の変遷についての解説 / 子育て・働き方
+    - 出版・連載 / 講義資料 / 確率ロボティクス関係の昔話 / 制御の変遷についての解説 / 子育て・働き方
 - 今後
     - VLAへのシフト
 
@@ -146,6 +146,18 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 
 ---
 
+### 講義資料
+
+- [スライド集](https://github.com/ryuichiueda/slides_marp)
+- 確率ロボティクス
+    - [YouTube動画](https://www.youtube.com/watch?v=tlbeAu8yHEc&list=PLbUh9y6MXvjfOLwmuuBbXKUX45rZsM8iH)
+    - [現行の資料](https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2026)
+- ロボットビジョン
+    - [現行の資料](https://github.com/ryuichiueda/slides_marp/tree/master/robot_vision_2026)
+        - 全編ニューラルネットワーク+機械学習のものに刷新中（試行錯誤）
+
+---
+
 ### 確率ロボティクス関係の昔話
 
 - 長沢　伸也 (編集): イノベーションの創出―仕組み、社会実装、技術― (横幹〈知の挑戦〉シリーズ), 晃洋書房, 2024.
@@ -170,4 +182,5 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 ## 今後
 
 - VLAへのシフト
+    - 確率ロボティクスのときと同じようなブレイクスルーを経験中
     - いろいろ試行中
