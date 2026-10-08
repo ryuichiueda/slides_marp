@@ -137,6 +137,6 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
     - 長沢　伸也 (編集): イノベーションの創出―仕組み、社会実装、技術― (横幹〈知の挑戦〉シリーズ), 晃洋書房, 2024.
     - 上田隆一: 技術チャレンジの中で育った確率ロボティクス, 日本ロボット学会誌, Vol. 41, No. 5, pp. 443-450, 2023.
 - 制御の変遷と人工ニューラルネットワークで制御することについての解説
-    - 2025年12月のロボット学会のセミナー「自律移動と最適制御」（[スライド](https://www.docswell.com/s/ryuichiueda/K37XMM-2025-12-02-rsj-seminar#p1)
+    - 2025年12月のロボット学会のセミナー「自律移動と最適制御」（[スライド](https://www.docswell.com/s/ryuichiueda/K37XMM-2025-12-02-rsj-seminar#p1)）
     - 上田: 計測とロボット, 日本ロボット学会学術講演会, 2026（[スライド](https://www.docswell.com/s/ryuichiueda/ZQ24N7-2026-09-02-rsj2026)）
     - 解説1件を執筆中
