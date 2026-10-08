@@ -170,3 +170,4 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 ## 今後
 
 - VLAへのシフト
+    - いろいろ試行中
