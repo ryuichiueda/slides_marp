@@ -123,6 +123,9 @@ $\qquad\qquad\quad$![w:300](./figs/tsudanuma_gridmap.svg)
 ## 宇宙関連
 
 - 2028年に小惑星に探査機を放出（するお手伝い）
+- 文献
+    - Washio Yusaku et al.: CubeLander: 6U CubeSat-Based Lander Design for Apophis, JpGU-AGU Joint Meeting, PPS09-P04, 2026.
+    - Tomoko Arai et al.: Project Apophis: the world's first Academic-Commercial collaboration asteroid mission, JpGU-AGU Joint Meeting, PPS09-P06, 2026.
 
 ---
 
