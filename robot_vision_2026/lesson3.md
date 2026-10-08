@@ -38,7 +38,7 @@ marp: true
 - ANNでよく扱われてきた問題
     - かつては問題に応じて専用のANNを準備することが必須だった（今日はこの話）
 - 問題: 識別のためのANNを数式で定義してみましょう
-    - $\boldsymbol{x} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$
+    - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$
         - $\boldsymbol{x}$はデータだけど出力$\boldsymbol{y}$の形式は？
 
 ![bg right:30% 100%](./figs/cat_and_dog.svg)
