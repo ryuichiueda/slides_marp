@@ -41,7 +41,7 @@ marp: true
     - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$
         - $\boldsymbol{x}$はデータだけど出力$\boldsymbol{y}$の形式は？
 
-![bg right:30% 100%](./figs/cat_and_dog.svg)
+![bg right:25% 100%](./figs/cat_and_dog.svg)
 
 
 ---
