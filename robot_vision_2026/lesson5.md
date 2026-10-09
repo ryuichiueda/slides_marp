@@ -40,7 +40,7 @@ marp: true
 
 ---
 
-### sinusoidal embedding、正弦波エンコーディング
+### sinusoidal embedding、正弦波エンコーディング（[図](https://www.m1ke.org/p/transformer%E3%81%AEpositional-encoding%E3%81%AE%E8%A7%A3%E9%87%88/)）
 
 - $\boldsymbol{p}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
    - $p_{t,i} = \begin{cases}
