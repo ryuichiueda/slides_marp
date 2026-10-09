@@ -36,7 +36,7 @@ marp: true
     - U-Net状
     - 畳み込み層と残差接続層
     - 時刻の「Sin/Cos Time Embedding (=sinusoidal embedding)」（後述）
-    - 「Self Attention」（後述）
+    - 「Self Attention（自己注意機構）」（後述）
 
 ---
 
@@ -57,7 +57,6 @@ marp: true
     - 相対位置$j$だけに依存<span style="font-size:70%">（$j=0$$\rightarrow$ $2$、$j=1$、$1.54$、$j=2$$\rightarrow$ $0.58$、$j=3$$\rightarrow$ $0.01$, $j=4$$\rightarrow$ $0.35$）</span>
     - $j$の値が大きくなると増減するものの減少していく
 
-
 ---
 
 ### DDPMでのsinusoidal embeddingの使い方
@@ -70,6 +69,11 @@ marp: true
     - 文章の解析の場合、単語の位置（語順）を表すのに使われる
     - 様々な時刻・位置のエンコーディング方法がある
         - 参考: https://qiita.com/AITLND/items/cbc9441285b6eaa65c11
+
+
+---
+
+### 自己注意機構
 
 
 ---
