@@ -147,7 +147,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### 例、補足
+### 例・補足
 
 - 画像の注意の例（言葉に対するものなので先取り）
     - https://wazalabo.com/vlm-attention-visualization.html
