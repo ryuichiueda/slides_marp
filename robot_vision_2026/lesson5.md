@@ -35,7 +35,7 @@ marp: true
 - ポイント
     - U-Net状
     - 畳み込み層と残差接続層
-    - 時刻の「Sin/Cos Time Embedding」（後述）
+    - 時刻の「Sin/Cos Time Embedding (=sinusoidal embedding)」（後述）
     - 「Self Attention」（後述）
 
 ---
