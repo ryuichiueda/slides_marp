@@ -62,8 +62,10 @@ marp: true
 
 ### DDPMでのsinusoidal embeddingの使い方
 
-- sinusoidal embeddingで作ったベクトルを全結合層に通して各残差接続のところで足す
-    - 詳細は未調査（だれかー！）
+- 手順
+    - sinusoidal embeddingで作ったベクトルを作る
+    - 全結合層に通して各残差接続のところで足す
+        - 詳細は未調査（だれかー！）
 
 
 ---
