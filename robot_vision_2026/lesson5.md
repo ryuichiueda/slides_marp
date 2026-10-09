@@ -136,7 +136,7 @@ style: |
     - クエリ: $Q= XW_Q$
     - キー: $K= XW_K$
     - バリュー: $V= XW_V$
-    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{d}}\Big)V$
 
 ---
 
