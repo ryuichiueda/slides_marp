@@ -144,6 +144,15 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ![bg right:30% 100%](./figs/attention.png)
 
+
+---
+
+### 例、補足
+
+- 画像の注意の例（言葉に対するものなので先取り）
+    - https://wazalabo.com/vlm-attention-visualization.html
+
+
 ---
 
 ## 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
