@@ -138,7 +138,7 @@ style: |
         （いずれも$n$行$d$列の行列に）
     - $A = QK^\top / \sqrt{d}$を計算（$n$行$n$列行列に）
     - 出力: $X'=$Softmax$(A)V$
-        - $A$のSoftmaxは行単位で適用
+        - Softmaxは$A$の行単位で適用
 
 ---
 
