@@ -32,6 +32,11 @@ marp: true
 ### DDPMの構造
 
 - [この図](https://vizuara.substack.com/i/203080645/17-why-u-nets-became-the-classic-denoiser)が分かりやすい
+- ポイント
+    - U-Net状
+    - 畳み込み層と残差接続層
+    - 「Sin/Cos Time Embedding」（後述）
+    - 「Self Attention」（後述）
 
 
 ---
