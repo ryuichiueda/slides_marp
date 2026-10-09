@@ -132,11 +132,11 @@ style: |
 
 - パラメータ: $d\times d$次元の3つの行列$W_Q,W_K, W_V$
     - 「$Q, K, V$」: それぞれ<span style="color:red">クエリ、キー、バリュー</span>と呼ぶ
-- 具体的な計算
-    - クエリ: $Q= XW_Q$
-    - キー: $K= XW_K$
-    - バリュー: $V= XW_V$
-    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{d}}\Big)V$
+- 計算
+    - クエリ、キー、バリュー行列を計算
+        - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
+        （いずれも$n$行$d$列の行列に）
+    - 出力: $X'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{d}}\Big)V$
 
 ---
 
