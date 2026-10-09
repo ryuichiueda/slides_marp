@@ -60,6 +60,13 @@ marp: true
 
 ---
 
+### DDPMでのsinusoidal embeddingの使い方
+
+- sinusoidal embeddingで作ったベクトルを全結合層に通して各残差接続のところで足す
+
+
+---
+
 ## 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
 
 - GANの生成ネットワークはランダムにデータを出力するだけ
