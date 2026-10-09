@@ -133,8 +133,7 @@ style: |
 - パラメータ: $d\times d$次元の3つの行列$W_Q,W_K, W_V$
     - 「$Q, K, V$」: それぞれ<span style="color:red">クエリ、キー、バリュー</span>と呼ぶ
 - 計算
-    - クエリ、キー、バリュー行列を計算
-        - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
+    - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
         （いずれも$n$行$d$列の行列に）
     - $A = QK^\top / \sqrt{d}$を計算（$n$行$n$列行列に）
     - 出力: $X'=$Softmax$(A)V$
@@ -142,6 +141,8 @@ style: |
         - $V$の各要素をSoftmax$(A)$で重み付け
 
 $n$個のデータの行列中の位置に関係なく重み付けできる計算になっている
+
+![bg right:30% 100%](./figs/attention.png)
 
 ---
 
