@@ -131,7 +131,7 @@ style: |
 ### 自己注意機構のパラメータと計算
 
 - パラメータ: $d\times d$次元の3つの行列$W_Q,W_K, W_V$
-    - 「$Q, K, V$」: それぞれ<span style="color:red">クエリ、キー、バリュー</span>と呼ぶ
+    - 「$Q, K, V$」: それぞれ<span style="color:red">クエリ、キー、バリュー</span>
 - 計算
     - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
         （いずれも$n$行$d$列の行列に）
