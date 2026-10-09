@@ -27,9 +27,11 @@ marp: true
     - 条件付きVAE
     - 分類器なしガイダンス
 
+---
+
 ### DDPMの構造
 
-https://vizuara.substack.com/p/diffusion-model-visual-breakdown
+- [この図](https://vizuara.substack.com/p/diffusion-model-visual-breakdown)が分かりやすい
 
 
 ---
