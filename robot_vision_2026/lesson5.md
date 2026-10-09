@@ -43,6 +43,7 @@ style: |
     - 畳み込み層と残差接続層
     - 時刻の「Sin/Cos Time Embedding (=sinusoidal embedding)」（後述）
     - 「Self Attention（自己注意機構）」（後述）
+- 今はU-Netでないものも使われる（何回か先の講義で）
 
 ---
 
