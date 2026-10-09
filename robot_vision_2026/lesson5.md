@@ -128,13 +128,14 @@ style: |
 
 ---
 
-### （自己）注意機構（DDPMを例にした説明）（2/2）
+### 自己注意機構の計算
 
+- パラメータ: $d\times d$次元の3つの行列$W_Q,W_K, W_V$
+    - 「$Q, K, V$」: それぞれ<span style="color:red">クエリ、キー、バリュー</span>と呼ぶ
 - 具体的な計算
-- 仕組み: Q、K、Vをすべて自身への入力から作成
-    - クエリ: $Q= W_\text{Q}H$
-    - キー: $K= W_\text{K}H$
-    - バリュー: $V= W_\text{V}H$
+    - クエリ: $Q= XW_Q$
+    - キー: $K= XW_K$
+    - バリュー: $V= XW_V$
     - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
 ---
