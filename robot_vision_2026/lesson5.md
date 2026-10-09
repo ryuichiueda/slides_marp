@@ -35,8 +35,22 @@ marp: true
 - ポイント
     - U-Net状
     - 畳み込み層と残差接続層
-    - 「Sin/Cos Time Embedding」（後述）
+    - 時刻の「Sin/Cos Time Embedding」（後述）
     - 「Self Attention」（後述）
+
+---
+
+### 時刻の注入
+
+- $\boldsymbol{v}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
+   - $p_{t,i} = \begin{cases}
+        \sin ( t \beta^{-i/D})  & (i\%2 = 0) \\
+        \cos ( t \beta^{-(i-1)/D}) & (i\%2 = 1) 
+\end{cases}$
+- 例
+<img width="700" src="./figs/position_enc.png" />
+    - $\beta=10$。原著では$\beta = 10000$
+- 内積をとると位置が近いほど値が大きい[[山田2023]](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
 
 ---
