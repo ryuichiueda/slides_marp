@@ -92,7 +92,7 @@ style: |
     - 右図の内容を答える問題に対して
         - 3隅にある団子、笹、月が強調される
 
-![bg right:20% 95%](./figs/tsukimi.png)
+![bg right:18% 95%](./figs/tsukimi.png)
 
 ---
 
