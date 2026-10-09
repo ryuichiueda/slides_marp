@@ -31,7 +31,7 @@ marp: true
 
 ### DDPMの構造
 
-- [この図](https://vizuara.substack.com/p/diffusion-model-visual-breakdown)が分かりやすい
+- [この図](https://vizuara.substack.com/i/203080645/17-why-u-nets-became-the-classic-denoiser)が分かりやすい
 
 
 ---
