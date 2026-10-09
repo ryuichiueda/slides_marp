@@ -136,6 +136,7 @@ style: |
     - クエリ、キー、バリュー行列を計算
         - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
         （いずれも$n$行$d$列の行列に）
+    - $A = QK^\top / \sqrt{d}$を計算（$n$行$n$列行列に）
     - 出力: $X'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{d}}\Big)V$
 
 ---
