@@ -75,6 +75,11 @@ marp: true
 
 ### 自己注意機構
 
+- 仕組み: Q、K、Vをすべて自身への入力から作成
+    - クエリ: $Q= W_\text{Q}H$
+    - キー: $K= W_\text{K}H$
+    - バリュー: $V= W_\text{V}H$
+    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
 ---
 
