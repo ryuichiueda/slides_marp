@@ -40,7 +40,7 @@ marp: true
 
 ---
 
-### 時刻の注入
+### 時刻の注入（sinusoidal embedding、正弦波エンコーディング）
 
 - $\boldsymbol{v}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
    - $p_{t,i} = \begin{cases}
