@@ -47,6 +47,8 @@ marp: true
         \sin ( t \beta^{-i/D})  & (i\%2 = 0) \\
         \cos ( t \beta^{-(i-1)/D}) & (i\%2 = 1) 
 \end{cases}$
+        - $D$はベクトルの次元
+        - $\beta$の値は$10,000$など
 - 例
 <img width="700" src="./figs/position_enc.png" />
     - $\beta=10$。原著では$\beta = 10000$
