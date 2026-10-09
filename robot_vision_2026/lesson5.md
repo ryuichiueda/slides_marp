@@ -42,16 +42,16 @@ marp: true
 
 ### 時刻の注入（sinusoidal embedding、正弦波エンコーディング）
 
-- $\boldsymbol{v}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
+- $\boldsymbol{p}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
    - $p_{t,i} = \begin{cases}
         \sin ( t \beta^{-i/D})  & (i\%2 = 0) \\
         \cos ( t \beta^{-(i-1)/D}) & (i\%2 = 1) 
 \end{cases}$
-        - $D$はベクトルの次元
-        - $\beta$の値は$10,000$など
-- 例
-<img width="700" src="./figs/position_enc.png" />
-    - $\beta=10$。原著では$\beta = 10000$
+        - $D$はベクトルの次元、$\beta$の値は$10,000$など
+- 例（$D=5, \beta=10000$）
+    - $\boldsymbol{p}_0 = (0.00 \ \ \ \ \ \   \ 1.00 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
+    - $\boldsymbol{p}_1 = (0.91 \ \ -0.42 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
+    - $\boldsymbol{p}_2 = (0.14 \ \ -0.99 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
 - 内積をとると位置が近いほど値が大きい[[山田2023]](https://gihyo.jp/book/2023/978-4-297-13633-8)
 
 
