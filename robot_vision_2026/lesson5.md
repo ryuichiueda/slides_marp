@@ -54,7 +54,7 @@ marp: true
     - $\boldsymbol{p}_2 = (0.14 \ \ -0.99 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
     - $\cdots$
 - 性質: 内積$p_i\cdot p_{i+j}$の値が
-    - 相対位置$j$だけに依存<span style="font-size:70%">（$j=0$: $2$、$j=1$、$1.54$、$j=2$: $0.58$、$j=3$: $0.01$）</span>
+    - 相対位置$j$だけに依存<span style="font-size:70%">（$j=0$$\rightarrow$ $2$、$j=1$、$1.54$、$j=2$$\rightarrow$ $0.58$、$j=3$$\rightarrow$ $0.01$, $j=4$$\rightarrow$ $0.35$）</span>
     - $j$の値が大きくなると増減するものの減少していく
 
 
