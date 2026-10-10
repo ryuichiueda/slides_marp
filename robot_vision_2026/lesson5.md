@@ -302,6 +302,17 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{x}_i) = \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i) - \sqrt{1- \bar\alpha_i}\boldsymbol{g}$
 
+
+---
+
+### 具体的な生成アルゴリズム
+
+1. ノイズ画像$\boldsymbol{x}_T$をえらぶ
+2. $i=T$から$i=0$まで雑音除去
+    - $\boldsymbol{g} \longleftarrow \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1})$
+    - $\hat{\boldsymbol{\varepsilon}} \longleftarrow \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}) - \sqrt{1-\bar\alpha_i}\boldsymbol{g}$
+    - $\boldsymbol{x}_i \longleftarrow \sqrt{\bar\alpha_{i}}\dfrac{\boldsymbol{x}_{i+1} - \sqrt{1- \bar\alpha_{i+1}}\hat{\boldsymbol{\varepsilon}}}{\sqrt{\bar\alpha_{i+1}}} + \sqrt{1-\bar\alpha_i}\hat{\boldsymbol{\varepsilon}}$
+
 ---
 
 ### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598): 方法・アイデア
