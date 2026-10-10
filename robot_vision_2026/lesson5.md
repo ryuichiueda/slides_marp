@@ -270,6 +270,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
   $= \log p(\boldsymbol{z}) + C_4$
     - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
 
+$\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を選ぶとラベルが効力発揮
+
 ---
 
 - 準備: 訓練データ（雑音入り）を分類してラベルを出力する分類器を学習
