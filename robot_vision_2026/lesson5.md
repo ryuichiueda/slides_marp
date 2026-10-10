@@ -84,7 +84,8 @@ https://vizuara.substack.com/p/diffusion-model-visual-breakdown
 - VAEの確率モデルの条件にラベル$\boldsymbol{y}$が入るだけで計算は基本的に変わらない
     - エンコーダ: $\boldsymbol{z} \sim P_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{y})$
     - デコーダ: $\boldsymbol{x} \sim P_\boldsymbol{\phi}(\boldsymbol{z}|\boldsymbol{y})$
-    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}, \boldsymbol{y}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 ) + \dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)}, \boldsymbol{y})$
+    - $\mathcal{L}(\boldsymbol{\phi}, \boldsymbol{\theta} | \boldsymbol{x}, \boldsymbol{y}) = \dfrac{1}{2}\sum_{j=1}^m ( 1 + \log \sigma_j^2 - \mu_j^2 - \sigma_j^2 )$
+    $\qquad\qquad\qquad\qquad+\dfrac{1}{L}\sum_{\ell=1}^L \log P_\boldsymbol{\theta}(\boldsymbol{x} | \boldsymbol{z}^{(\ell)}, \boldsymbol{y})$
 
 
 
