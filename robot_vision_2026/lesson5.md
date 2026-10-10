@@ -227,51 +227,48 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): 考え方
+### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): 方法・アイデア
 
-- 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分解
+- 学習済みのデコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$を準備
+- 識別器$p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$を（難しいけど）作る
+    - 雑音画像$\boldsymbol{x}_i$からラベル$y$を分類
+- デコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$の出力を識別器を使ってずらす
+    - $y$のラベルを持つ画像の分布の方向へ誘導
+- ガイダンスの例: 論文の図3
+
+---
+
+### ずらし方の導出（1/2）
+
+- 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分類器とデコーダに分解
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) 
     = \eta p(y| \boldsymbol{x}_i, \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})
-    = \eta p(y| \boldsymbol{x}_i)p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-- 分解された確率分布をANNと考える
-    - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
-    \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-        - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$: 雑音画像からラベルを推定する分類器
-            - 本当は入力が$\boldsymbol{x}_{i+1}$のはずなので時刻がずれてるような気がしないでもない
-        - $p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$: 拡散モデルのデコーダ
-
-雑音画像からラベルを推定する分類器が（難しいけど）でき、上の式をアルゴリズムに落とし込めれば逆拡散過程をコントロールできそう
-
----
-
-### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): アルゴリズム導出の準備
-
+    = \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
+    $\Longrightarrow \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
+    \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
 - 分類器の分布の式の対数をテイラー展開
-    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
-    $\qquad\qquad\qquad+(\boldsymbol{x}_{i}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}
-    = C + (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}$
-        - $C$: 定数
-        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。拡散過程の計算で既知）
-        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
-- $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
-    - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる
-    （たぶん。ここらへん未調査）
+    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
+    $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
+        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。デコーダで出力可能）
+        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{\mu}$において$y$に対して識別器が出す確率の対数の勾配ベクトル
+            - 誤差逆伝播に使う各層のヤコビ行列の積から$y$に対応する特定の列 or 行を取り出すと計算できる（たぶん。ここらへん未調査）
 
 ---
 
-### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): アルゴリズム導出
+### ずらし方の導出（2/2）
 
-- やること: ラベル付きの分布と等価な分布を$g$から作る
-    - 等価な分布からデータをドローするとラベルに基づいた画像が出てくる
-- $\log [ p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})]$
-  $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu})
-  +(\boldsymbol{x}_i - \boldsymbol{\mu})^\top \boldsymbol{g} + C_2$
-  $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g}) + C_3$
-  $= \log p(\boldsymbol{z}) + C_4$
-    - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
-    - （$p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1})$の代わりに$p_\boldsymbol{\phi}(y|\boldsymbol{x}_i)$を使っているようにも見えるので誰か教えて）
-
-$\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を選ぶとラベルが効力発揮
+- $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
+    \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
+  $\qquad\qquad\qquad\qquad= 
+  (\boldsymbol{x}_i - \boldsymbol{\mu})^\top \boldsymbol{g}
+  -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu})
+  +$定数
+  $\qquad\qquad\qquad\qquad= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})+$定数
+  $\qquad\qquad\qquad\qquad= \log \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$+定数
+- $\Longrightarrow p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
+    - つまり、ずらす量は$\Sigma \boldsymbol{g}$
+        - ラベル$y$の確率が上がる方向にずらす
+    - DDPMのデコーダでは$\Sigma$は時刻に対して固定
 
 ---
 
@@ -279,26 +276,28 @@ $\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を�
 
 1. ノイズ画像$\boldsymbol{x}_T$をえらぶ
 2. $i=T$から$i=0$まで雑音除去
-    - $\boldsymbol{\mu}, \Sigma \longleftarrow \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}), \Sigma_\boldsymbol{\theta}(\boldsymbol{x}_{i+1})$
-    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
+    - $\boldsymbol{\mu}, \Sigma \longleftarrow \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}), \Sigma_\boldsymbol{\theta}(\boldsymbol{x}_{i+1})$（普通のデコーダの出力）
+    - $\boldsymbol{g} \longleftarrow \nabla_{\boldsymbol{x}_{i}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i})$
+    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \boldsymbol{g},\Sigma]$
         - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
             - $s=0.0$だとラベルが無効に
-            - （スケールがあると時刻のずれがどうでもいいような気がしないでもない）
+
+※ ノイズの予測のみのバージョンもある（次ページで軽く説明）
 
 ---
 
-- ADM-G[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
-    - ADM: ablated diffusion model; G: with classifier guidance
-    - 生成の例: 論文の図3, 6
-        - ラベルをどれだけ反映するかをパラメータで指定可能
-    - U-Netを大きくしたり各部分を改良したりして
-    当時のGANより良い画像を生成
+### ノイズ予測版
+
+- DDPMでなくDDIMというものをガイダンス
+- 算出（$\boldsymbol{x}_{i+1}$は条件から外れる）
+    - ガイダンスなし: $\nabla_{\boldsymbol{x}_i}\log p_{\boldsymbol{\theta}}(\boldsymbol{x}_i) = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
+    - ガイダンスあり: $\nabla_{\boldsymbol{x}_i}\log [p_\boldsymbol{\theta}(\boldsymbol{x}_i) p_{\boldsymbol{\phi}}(y | \boldsymbol{x}_i)] = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
 
 ---
 
-### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598)
+### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598): 方法・アイデア
 
-- 前ページの分類器を使わない（不要にする）
+- 分類器を使わない（不要にする）
 - 方法
     1. ラベルを入力できる拡散モデルを用意
     2. ラベルがない（ゼロベクトルを入れる）場合とある場合を学習
