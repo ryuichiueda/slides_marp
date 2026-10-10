@@ -232,6 +232,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 考え方
     - 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分解
         - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \eta p(y| \boldsymbol{x}_i, \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
+        $= \eta p(y| \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
+            - 論文は$p(y|\boldsymbol{x}_i)$と書いてあるがたぶん$p(y| \boldsymbol{x}_{i+1})$
 - 準備: 訓練データ（雑音入り）を分類してラベルを出力する分類器を学習
     - $\log$
 - 分類器が出力するラベルに応じてデコーダに入力するノイズを少しいじる
