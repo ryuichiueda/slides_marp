@@ -283,6 +283,7 @@ $\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を�
     - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
         - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
             - $s=0.0$だとラベルが無効に
+            - （スケールがあると時刻のずれがどうでもいいような気がしないでもない）
 
 ---
 
