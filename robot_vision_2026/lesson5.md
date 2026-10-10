@@ -1,5 +1,11 @@
 ---
 marp: true
+style: |
+    .columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    }
 ---
 
 <!-- footer: "ロボットビジョン第4.5回" -->
@@ -27,9 +33,129 @@ marp: true
     - 条件付きVAE
     - 分類器なしガイダンス
 
+---
+
 ### DDPMの構造
 
-https://vizuara.substack.com/p/diffusion-model-visual-breakdown
+- [この図](https://vizuara.substack.com/i/203080645/17-why-u-nets-became-the-classic-denoiser)が分かりやすい
+- ポイント
+    - U-Net状
+    - 畳み込み層と残差接続層
+    - 時刻の「Sin/Cos Time Embedding (=sinusoidal embedding)」（後述）
+    - 「Self Attention（自己注意機構）」（後述）
+- 今はU-Netでないものも使われる（何回か先の講義で）
+
+---
+
+### sinusoidal embedding、正弦波エンコーディング（[図](https://www.m1ke.org/p/transformer%E3%81%AEpositional-encoding%E3%81%AE%E8%A7%A3%E9%87%88/)）
+
+- $\boldsymbol{p}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
+   - $p_{t,i} = \begin{cases}
+        \sin ( t \beta^{-i/D})  & (i\%2 = 0) \\
+        \cos ( t \beta^{-(i-1)/D}) & (i\%2 = 1) 
+\end{cases}$
+        - $D$はベクトルの次元（前ページの図では64）、$\beta$の値は$10,000$など
+- 例（$D=5, \beta=10000$）
+    - $\boldsymbol{p}_0 = (0.00 \ \ \ \ \ \   \ 1.00 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
+    - $\boldsymbol{p}_1 = (0.91 \ \ -0.42 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
+    - $\boldsymbol{p}_2 = (0.14 \ \ -0.99 \ \ 0.00  \ \ 1.00 \ \ 0.00)^\top$
+    - $\cdots$
+- 性質: 内積$p_i\cdot p_{i+j}$の値が
+    - 相対位置$j$だけに依存<span style="font-size:70%">（$j=0$$\rightarrow$ $2$、$j=1$、$1.54$、$j=2$$\rightarrow$ $0.58$、$j=3$$\rightarrow$ $0.01$, $j=4$$\rightarrow$ $0.35$）</span>
+    - $j$の値が大きくなると増減するものの減少していく
+
+---
+
+### DDPMでのsinusoidal embeddingの使い方
+
+- 手順
+    - sinusoidal embeddingで作ったベクトルを作る
+    - 全結合層に通して各残差接続のところで足す
+        - 詳細は未調査（だれかー！）
+- DDPM関係ないけど補足
+    - 文章の解析の場合、単語の位置（語順）を表すのに使われる
+    - 様々な時刻・位置のエンコーディング方法がある
+        - 参考: https://qiita.com/AITLND/items/cbc9441285b6eaa65c11
+
+
+---
+
+### 自己注意機構（役割）
+
+- 問題を解きやすいように入力に強弱をつけて出力する層
+    - 作文の処理や画像処理で使用される
+    - 語順や場所の遠いところ同士を関連づけ可能
+        - CNNには苦手なこと
+- 例（例なのであからさまに分かりやすいもの）
+    - 問題:「次の文で掘られたのは何？『私は彼のために穴を掘りました。』」
+        - 質問から遠い「穴」を私、彼よりも強調
+    - 問題: 右図は何の絵？
+        - 3隅にある団子、笹、月が強調される
+
+![bg right:18% 95%](./figs/tsukimi.png)
+
+---
+
+### 自己注意機構の入出力
+
+<div class="columns">
+<div>
+
+- 入力: $d$次元の横ベクトルを長さ$n$個だけ積んだ行列$X$
+    - 先述の図のDDPMの場合（U-Netの谷底で使用）
+        - $d$次元: チャネルの数（$128$）
+        - 「$n$個の入力」: 各画素
+        （$14\times 14= 196$個）
+- 出力: 同じ大きさの行列$X'$
+    - 問題が解きやすい値に変化
+
+</div>
+<div style="font-size:80%">
+
+- $X$の形
+    - 下の表がそのまま行列に
+    - 画素は1列に並べる
+        ||ch1|ch2|...|ch128|
+        |:---:|:---:|:---:|:---:|:---:|
+        |画素(1,1)|||...||
+        |画素(1,2)|||...||
+        |画素(1,3)|||...||
+        |...|||...||
+        |画素(14,14)|||...||
+
+</div>
+</div>
+
+
+---
+
+### 自己注意機構のパラメータと計算
+
+- パラメータ: $d\times d$次元の3つの行列$W_Q,W_K, W_V$
+    - 「$Q, K, V$」: それぞれ<span style="color:red">クエリ、キー、バリュー</span>
+- 計算
+    - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
+        （いずれも$n$行$d$列の行列に）
+    - $A = QK^\top / \sqrt{d}$を計算（$n$行$n$列行列に）
+    - 出力: $X'=$Softmax$(A)V$
+        - Softmaxは$A$の行単位で適用
+        - $V$の各要素をSoftmax$(A)$で重み付け
+
+$n$個のデータの行列中の位置に関係なく重み付け可能
+
+![bg right:30% 100%](./figs/attention.png)
+
+
+---
+
+### 例・補足
+
+- 言葉を反映した画像の注意の例（先取り）
+    - https://wazalabo.com/vlm-attention-visualization.html
+- マルチヘッド注意機構（細かいことは未調査）
+    - $Q, K, V$を$h$分割してあとから結果を重み付けの行列$W_0$にかけて連結
+    - それぞれの分割（ヘッド）で別の切り口で各データの関連性を計算
+    - $W_0$の分だけパラメータが増える
 
 
 ---
@@ -103,9 +229,17 @@ https://vizuara.substack.com/p/diffusion-model-visual-breakdown
 
 ### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
 
+- 考え方
+    - 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分解
+        - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \eta p(y| \boldsymbol{x}_i, \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
 - 準備: 訓練データ（雑音入り）を分類してラベルを出力する分類器を学習
+    - $\log$
 - 分類器が出力するラベルに応じてデコーダに入力するノイズを少しいじる
     - ラベルに対応する画像が生成されやすくなる（ように学習）
+
+
+---
+
 - ADM-G[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
     - ADM: ablated diffusion model; G: with classifier guidance
     - 生成の例: 論文の図3, 6
