@@ -237,7 +237,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
         - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$: 雑音画像からラベルを推定する分類器
-            - 本当は入力が$$\boldsymbol{x}_{i+1}$のはずなので時刻がずれてるような気がしないでもない
+            - 本当は入力が$\boldsymbol{x}_{i+1}$のはずなので時刻がずれてるような気がしないでもない
         - $p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$: 拡散モデルのデコーダ
 
 雑音画像からラベルを推定する分類器が（難しいけど）でき、上の式をアルゴリズムに落とし込めれば逆拡散過程をコントロールできそう
