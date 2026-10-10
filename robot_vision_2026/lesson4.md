@@ -396,6 +396,10 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 
 ### 推論（画像の生成）
 
+- 通常の生成
+    - $\boldsymbol{x}_T \sim \mathcal{N}(\boldsymbol{0},I)$
+    - 繰り返し
+        $\boldsymbol{z} \sim \boldsymbol{N}(\boldsymbol{0}, I)$（最後の時刻は$\boldsymbol{z} = \boldsymbol{0}$）
 
 ---
 
