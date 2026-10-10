@@ -264,8 +264,9 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
   +$定数
   $\qquad\qquad\qquad\qquad= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})+$定数
   $\qquad\qquad\qquad\qquad= \log \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$+定数
+    - つまり、ずらす量は$\Sigma \boldsymbol{g}$
+    - DDPMのデコーダでは$\Sigma$は$t$に対して固定
 
-$\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を選ぶとラベルが効力発揮
 
 ---
 
