@@ -265,10 +265,9 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
   $\qquad\qquad\qquad\qquad= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})+$定数
   $\qquad\qquad\qquad\qquad= \log \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$+定数
     - つまり、ずらす量は$\Sigma \boldsymbol{g}$
-    - DDPMのデコーダでは$\Sigma$は$t$に対して固定
+    - DDPMのデコーダでは$\Sigma$は時刻に対して固定
 
 
----
 
 ### 具体的なアルゴリズム
 
@@ -278,7 +277,6 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
         - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
             - $s=0.0$だとラベルが無効に
-            - （スケールがあると時刻のずれがどうでもいいような気がしないでもない）
 
 ---
 
