@@ -252,10 +252,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
         - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。デコーダで出力可能）
-        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
-- $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
-    - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる
-    （たぶん。ここらへん未調査）
+        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{\mu}$において$y$に対して識別器が出す確率の対数の勾配ベクトル
+            - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる（たぶん。ここらへん未調査）
 
 ---
 
