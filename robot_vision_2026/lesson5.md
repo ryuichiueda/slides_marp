@@ -233,6 +233,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - 学習済みのデコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$を準備
     - 識別器$p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$を（難しいけど）作る
         - 雑音画像$\boldsymbol{x}_i$からラベル$y$を分類
+    - デコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$の出力をずらす
+        - より$y$のラベルを持つ画像の分布の方向へ
 
 ---
 
