@@ -237,7 +237,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### ずらし方の導出
+### ずらし方の導出（1/2）
 
 - 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分類器とデコーダに分解
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) 
@@ -254,17 +254,16 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): アルゴリズム導出
+### ずらし方の導出（2/2）
 
-- やること: ラベル付きの分布と等価な分布を$g$から作る
-    - 等価な分布からデータをドローするとラベルに基づいた画像が出てくる
-- $\log [ p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})]$
-  $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu})
-  +(\boldsymbol{x}_i - \boldsymbol{\mu})^\top \boldsymbol{g} + C_2$
-  $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g}) + C_3$
-  $= \log p(\boldsymbol{z}) + C_4$
-    - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
-    - （$p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1})$の代わりに$p_\boldsymbol{\phi}(y|\boldsymbol{x}_i)$を使っているようにも見えるので誰か教えて）
+- $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
+    \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
+  $\qquad\qquad\qquad\qquad= 
+  (\boldsymbol{x}_i - \boldsymbol{\mu})^\top \boldsymbol{g}
+  -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu})
+  +$定数
+  $\qquad\qquad\qquad\qquad= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})+$定数
+  $\qquad\qquad\qquad\qquad= \log \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$+定数
 
 $\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を選ぶとラベルが効力発揮
 
