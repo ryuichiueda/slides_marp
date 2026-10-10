@@ -237,11 +237,13 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
+### ずらし方の導出
+
 - 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分解
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) 
     = \eta p(y| \boldsymbol{x}_i, \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})
     = \eta p(y| \boldsymbol{x}_i)p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-- 分解された確率分布をANNと考える
+- 分解された確率分布は識別器とデコーダで置き換えられる
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
         - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$: 雑音画像からラベルを推定する分類器
