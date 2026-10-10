@@ -227,14 +227,13 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
+### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): 方法・アイデア
 
-- 方法
-    - 学習済みのデコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$を準備
-    - 識別器$p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$を（難しいけど）作る
-        - 雑音画像$\boldsymbol{x}_i$からラベル$y$を分類
-    - デコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$の出力を識別器を使ってずらす
-        - $y$のラベルを持つ画像の分布の方向へ誘導
+- 学習済みのデコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$を準備
+- 識別器$p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$を（難しいけど）作る
+    - 雑音画像$\boldsymbol{x}_i$からラベル$y$を分類
+- デコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$の出力を識別器を使ってずらす
+    - $y$のラベルを持つ画像の分布の方向へ誘導
 
 ---
 
