@@ -267,14 +267,15 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - つまり、ずらす量は$\Sigma \boldsymbol{g}$
     - DDPMのデコーダでは$\Sigma$は時刻に対して固定
 
-
+---
 
 ### 具体的なアルゴリズム
 
 1. ノイズ画像$\boldsymbol{x}_T$をえらぶ
 2. $i=T$から$i=0$まで雑音除去
-    - $\boldsymbol{\mu}, \Sigma \longleftarrow \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}), \Sigma_\boldsymbol{\theta}(\boldsymbol{x}_{i+1})$
-    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
+    - $\boldsymbol{\mu}, \Sigma \longleftarrow \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}), \Sigma_\boldsymbol{\theta}(\boldsymbol{x}_{i+1})$（普通のデコーダの出力）
+    - $\boldsymbol{g} \longleftarrow \nabla_{\boldsymbol{x}_{i}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i})$
+    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \boldsymbol{g},\Sigma]$
         - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
             - $s=0.0$だとラベルが無効に
 
