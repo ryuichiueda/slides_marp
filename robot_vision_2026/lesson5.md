@@ -291,7 +291,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - DDPMでなくDDIMというものをガイダンス
 - 算出
     - ガイダンスなし: $\nabla_{\boldsymbol{x}_i}\log p_{\boldsymbol{\theta}}(\boldsymbol{x}_i) = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
-    - ガイダンスあり: $\nabla_{\boldsymbol{x}_i}\log [p_\boldsymbol{\theta}(\boldsymbol{x}_i) p_{\boldsymbol{\phi}}(y | \boldsymbol{x}_i)] = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
+    - ガイダンスあり: $\nabla_{\boldsymbol{x}_i}\log [p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) p_{\boldsymbol{\phi}}(y | \boldsymbol{x}_i)] = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
 
 ---
 
