@@ -247,18 +247,11 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
     $\Longrightarrow \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
-    \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) + C$
-
----
-
-### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): アルゴリズム導出の準備
-
+    \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
 - 分類器の分布の式の対数をテイラー展開
-    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
-    $\qquad\qquad\qquad+(\boldsymbol{x}_{i}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}
-    = C + (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}$
-        - $C$: 定数
-        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。拡散過程の計算で既知）
+    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
+    $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
+        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。デコーダで出力可能）
         - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
 - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる
