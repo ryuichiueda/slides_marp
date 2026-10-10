@@ -255,6 +255,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる
     （たぶん）
+    - $\boldsymbol{\mu}$は拡散過程から求まる
 
 ---
 
