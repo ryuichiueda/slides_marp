@@ -274,11 +274,12 @@ $\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を�
 
 ---
 
-- 準備: 訓練データ（雑音入り）を分類してラベルを出力する分類器を学習
-    - $\log$
-- 分類器が出力するラベルに応じてデコーダに入力するノイズを少しいじる
-    - ラベルに対応する画像が生成されやすくなる（ように学習）
+### 具体的なアルゴリズム
 
+1. ノイズ画像$\boldsymbol{x}_T$をえらぶ
+2. $i=T$から$i=0$まで雑音除去
+    - $\boldsymbol{\mu}, \Sigma \longleftarrow \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}), \Sigma_\boldsymbol{\theta}(\boldsymbol{x}_{i+1})$
+    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_t}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
 
 ---
 
