@@ -286,15 +286,6 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-- ADM-G[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
-    - ADM: ablated diffusion model; G: with classifier guidance
-    - 生成の例: 論文の図3, 6
-        - ラベルをどれだけ反映するかをパラメータで指定可能
-    - U-Netを大きくしたり各部分を改良したりして
-    当時のGANより良い画像を生成
-
----
-
 ### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598)
 
 - 前ページの分類器を使わない（不要にする）
