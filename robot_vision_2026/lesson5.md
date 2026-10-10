@@ -236,7 +236,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 分解された確率分布をANNと考える
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     = \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_{i+1})p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-        - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_{i+1})$: 雑音画像からラベルを推定する識別器
+        - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_{i+1})$: 雑音画像からラベルを推定する分類器
         - $p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$: 拡散モデルのデコーダ
 
 ---
