@@ -279,7 +279,9 @@ $\mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$から画像を�
 1. ノイズ画像$\boldsymbol{x}_T$をえらぶ
 2. $i=T$から$i=0$まで雑音除去
     - $\boldsymbol{\mu}, \Sigma \longleftarrow \boldsymbol{\mu}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}), \Sigma_\boldsymbol{\theta}(\boldsymbol{x}_{i+1})$
-    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_t}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
+    - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1}),\Sigma]$
+        - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
+            - $s=0.0$だとラベルが無効に
 
 ---
 
