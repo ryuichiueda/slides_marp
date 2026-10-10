@@ -248,6 +248,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 準備: 分類器の分布の式の対数をテイラー展開
     - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
     $+ (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
+    $= C + (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
 - $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \log \eta + \log p(y| \boldsymbol{x}_{i+1}) + \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
 $= \log \eta + \log p(y| \boldsymbol{x}_{i+1}) - \dfrac{1}{2}(\boldsymbol{x}_t - \boldsymbol{\mu} - \Sigma$
 
