@@ -254,8 +254,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
         - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
 - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる
-    （たぶん）
-    - 訓練中は、特定の訓練画像の$\boldsymbol{\mu}$は拡散過程から求まる（たぶん）
+    （たぶん。ここらへん未調査）
 
 ---
 
@@ -265,11 +264,10 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - 等価な分布からデータをドローするとラベルに基づいた画像が出てくる
 - $\log [ p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})]$
   $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu})
-  +(\boldsymbol{x}_{i+1}- \boldsymbol{\mu})^\top \boldsymbol{g} + C_2$
+  +(\boldsymbol{x}_i - \boldsymbol{\mu})^\top \boldsymbol{g} + C_2$
   $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g}) + C_3$
-- $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \log \eta + \log p(y| \boldsymbol{x}_{i+1}) + \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-$= \log \eta + \log p(y| \boldsymbol{x}_{i+1}) - \dfrac{1}{2}(\boldsymbol{x}_t - \boldsymbol{\mu} - \Sigma$
-
+  $= \log p(\boldsymbol{z}) + C_4$
+      - $\boldsymbol{z} = \mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
 
 ---
 
