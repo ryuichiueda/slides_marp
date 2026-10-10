@@ -230,13 +230,14 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 ### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): 考え方
 
 - 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分解
-    - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \eta p(y| \boldsymbol{x}_i, \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-    $= \eta p(y| \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-        - 論文は$p(y|\boldsymbol{x}_i)$と書いてあるがたぶん$p(y| \boldsymbol{x}_{i+1})$
+    - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) 
+    = \eta p(y| \boldsymbol{x}_i, \boldsymbol{x}_{i+1})p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})
+    = \eta p(y| \boldsymbol{x}_i)p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
 - 分解された確率分布をANNと考える
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
-    = \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_{i+1})p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-        - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_{i+1})$: 雑音画像からラベルを推定する分類器
+    \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
+        - $p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)$: 雑音画像からラベルを推定する分類器
+            - $\boldsymbol{x}_i$はデコーダの出力なので入力には使えない（あとから対処）
         - $p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$: 拡散モデルのデコーダ
 
 雑音画像からラベルを推定する分類器が（難しいけど）でき、上の式をアルゴリズムに落とし込めれば逆拡散過程をコントロールできそう
@@ -246,19 +247,26 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 ### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): アルゴリズム導出の準備
 
 - 分類器の分布の式の対数をテイラー展開
-    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
-    $+ (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
-    $= C + (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})^\top g$
+    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
+    $\qquad\qquad\qquad+(\boldsymbol{x}_{i}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}
+    = C + (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}$
         - $C$: 定数
-        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i+1}$の分布の平均値（縦ベクトル。拡散過程の計算で既知）
-        - $g = \nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i+1}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
-- $g = \nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
+        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。拡散過程の計算で既知）
+        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
+- $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     - 分類器の各層のヤコビ行列の掛け算の特定の列 or 行として計算できる
     （たぶん）
 
 ---
 
+### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): アルゴリズム導出
 
+- やること: ラベル付きの分布と等価な分布を$g$から作る
+    - 等価な分布からデータをドローするとラベルに基づいた画像が出てくる
+- $\log [ p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})]$
+  $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu})
+  +(\boldsymbol{x}_{i+1}- \boldsymbol{\mu})^\top \boldsymbol{g} + C_2$
+  $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g}) + C_3$
 - $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \log \eta + \log p(y| \boldsymbol{x}_{i+1}) + \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
 $= \log \eta + \log p(y| \boldsymbol{x}_{i+1}) - \dfrac{1}{2}(\boldsymbol{x}_t - \boldsymbol{\mu} - \Sigma$
 
