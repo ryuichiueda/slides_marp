@@ -282,7 +282,16 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
         - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
             - $s=0.0$だとラベルが無効に
 
-※ ノイズの予測のみのバージョンもある（論文のAlgorithm 2）
+※ ノイズの予測のみのバージョンもある（次ページで軽く説明）
+
+---
+
+### ノイズ予測版
+
+- DDPMでなくDDIMというものをガイダンス
+- 算出
+    - $\nabla_{\boldsymbol{x}_i}\log p_{\boldsymbol{\theta}}(\boldsymbol{x}_i) = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
+- $\nabla_{\boldsymbol{x}_i} \log $
 
 ---
 
