@@ -267,7 +267,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
   +(\boldsymbol{x}_i - \boldsymbol{\mu})^\top \boldsymbol{g} + C_2$
   $= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g}) + C_3$
   $= \log p(\boldsymbol{z}) + C_4$
-      - $\boldsymbol{z} = \mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
+    - $\boldsymbol{z} \sim \mathcal{N}(\boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
 
 ---
 
