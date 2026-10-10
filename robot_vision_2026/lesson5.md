@@ -271,7 +271,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### 具体的なアルゴリズム
+### 具体的な生成アルゴリズム
 
 1. ノイズ画像$\boldsymbol{x}_T$をえらぶ
 2. $i=T$から$i=0$まで雑音除去
@@ -287,8 +287,17 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### ノイズ予測版
 
-- DDPMでなくDDIMというものをガイダンス
-- 算出（$\boldsymbol{x}_{i+1}$は条件から外れる）
+- DDPMでなくDDIMを想定
+- 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分類器とデコーダに分解
+    - $p(\boldsymbol{\varepsilon} | \boldsymbol{x}_{i}, y) 
+    = \eta p(y| \boldsymbol{x}_i, \boldsymbol{\varepsilon})p(\boldsymbol{x}_i | \boldsymbol{\varepsilon})
+    = \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i)$
+    $\Longrightarrow \log p(\boldsymbol{\varepsilon} | \boldsymbol{x}_{i}, y) =
+    \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i) +$定数
+        - （なんとなく書いてますがあんまり自信ありません）
+- 勾配の関係に変換
+    - $\nabla_{{\boldsymbol{x}}_i} \log p(\boldsymbol{\varepsilon} | \boldsymbol{x}_{i}, y) = \nabla_{{\boldsymbol{x}_i}} \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \nabla_{\boldsymbol{x}_i}\log p_\boldsymbol{\theta}(\boldsymbol{x}_i)$
+- 算出（次の画像ではなく乗っている雑音の量を予測するので$\boldsymbol{x}_i, \boldsymbol{x}_{i+1}$のうち片方がなくなる）
     - ガイダンスなし: $\nabla_{\boldsymbol{x}_i}\log p_{\boldsymbol{\theta}}(\boldsymbol{x}_i) = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
     - ガイダンスあり: $\nabla_{\boldsymbol{x}_i}\log [p_\boldsymbol{\theta}(\boldsymbol{x}_i) p_{\boldsymbol{\phi}}(y | \boldsymbol{x}_i)] = - \dfrac{1}{\sqrt{1- \bar{\alpha}_i}}\hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
 
