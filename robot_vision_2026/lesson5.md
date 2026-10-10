@@ -245,6 +245,10 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): $\boldsymbol{x}$の変化量の算出
 
+- ラベル付きで雑音をとるときの$\boldsymbol{x}$の変化量を求める
+- 前提: 通常のDDPMの雑音の予測器には次の性質（講師は未検証）
+    - $\nabla_{\boldsymbol{x}_i} \log p_{\boldsymbol{\theta}}(\boldsymbol{x}_i) = - \dfrac{1}{\sqrt{1 - \bar\alpha_i}}\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_i)$
+
 
 ---
 
