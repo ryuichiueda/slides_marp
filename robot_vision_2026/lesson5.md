@@ -246,7 +246,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 分解された確率分布は識別器とデコーダで置き換えられる
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
-    - $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
+    $\Longrightarrow \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) + C$
 
 ---
