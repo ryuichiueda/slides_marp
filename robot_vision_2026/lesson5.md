@@ -248,7 +248,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 分類器の分布の式の対数をテイラー展開
     - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
     $+ (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})\nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$
-    $= C + (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})g$
+    $= C + (\boldsymbol{x}_{i+1}- \boldsymbol{\mu})^\top g$
         - $C$: 定数
         - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i+1}$の分布の平均値
         - $g = \nabla_{\boldsymbol{x}_{i+1}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i+1})|_{\boldsymbol{x}_{i+1}=\boldsymbol{\mu}}$: $\boldsymbol{x}_{i+1}$を入力したときにラベル$y$に対して識別器が出す確率の対数の勾配ベクトル
