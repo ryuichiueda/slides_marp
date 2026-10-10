@@ -390,6 +390,11 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - $\boldsymbol{\varepsilon}$: 画像$\boldsymbol{x}_{i+1}$に乗った雑音（計算可能）
         - デコーダ$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$: 画像$\boldsymbol{x}_{i+1}$に乗った雑音の推定器
             - デコーダの第一引数: デコーダに入力する画像$\boldsymbol{x}_{i+1}$
+    - 各訓練画像、各時刻でこれを学習していく
+
+---
+
+### 推論（画像の生成）
 
 
 ---
