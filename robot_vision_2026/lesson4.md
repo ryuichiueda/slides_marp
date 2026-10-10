@@ -402,7 +402,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
         - $\boldsymbol{z} \sim \boldsymbol{N}(\boldsymbol{0}, I)$（最後の時刻は$\boldsymbol{z} = \boldsymbol{0}$）
         - $\boldsymbol{x}_i = \frac{1}{\sqrt{\alpha_{i+1}}}\left\{ \boldsymbol{x}_{i+1}- \frac{1-\alpha_{i+1}}{\sqrt{1-\bar\alpha_{i+1}}} \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1) \right\} + \sigma_{i+1}\boldsymbol{z}$
 - DDIM（denoising diffusion implicit model）という方法も（雑な説明）
-    - $\sigma_{i+1} = 0$にする（各ステップで雑音を乗せない）
+    - $\sigma_{i+1}$を割り引く（$0$にすると同じノイズから同じ画像が出てくるように）
     - 各時刻を真面目に追わない（スキップする）
 
 ---
