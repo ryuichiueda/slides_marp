@@ -343,11 +343,11 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 - 1つのデコーダに条件付きと条件なしの学習を両方させると、分類器が不要になる
 - 方法（講師の雑な解釈）
     - さっき出てきたスケールつきの分類器ありガイダンスの式を用意
-        - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^{w+1}$（$s$を$w+1$に変更）
+        - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(\boldsymbol{c}|\boldsymbol{x})^{w+1}$（$y$を$\boldsymbol{c}$、$s$を$w+1$に変更）
     - この式を上の式に代入
-        - $p_\boldsymbol{\phi}(y|\boldsymbol{x}) = p(\boldsymbol{x}|y)p(y)/p(\boldsymbol{x}) \approx p(\boldsymbol{x}|y)p(\boldsymbol{x}) = p_\boldsymbol{\theta}(\boldsymbol{x}|y)p_\boldsymbol{\theta}(\boldsymbol{x})$
+        - $p_\boldsymbol{\phi}(\boldsymbol{c}|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{c})p(\boldsymbol{c})/p(\boldsymbol{x}) \approx p(\boldsymbol{x}|\boldsymbol{c})p(\boldsymbol{x}) = p_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c})p_\boldsymbol{\theta}(\boldsymbol{x})$
             - 最後に$\boldsymbol{\theta}$をつけたのはデコーダに置き換えるという意味
-    - $\Longrightarrow \hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})^{-w}p_\boldsymbol{\phi}(\boldsymbol{x}|y)^{w+1}$
+    - $\Longrightarrow \hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})^{-w}p_\boldsymbol{\phi}(\boldsymbol{x}|\boldsymbol{c})^{w+1}$
 
 
 
