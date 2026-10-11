@@ -337,7 +337,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 
 ---
 
-### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598): 方法・アイデア
+### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598): アイデア
 
 - 1つのデコーダに条件付きと条件なしの学習を両方させると、分類器が不要になる
 - 方法（講師の雑な解釈）
@@ -351,20 +351,14 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
         - 対数にして勾配をとると<span style="color:red">$\hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x})$</span>
 
 
+---
+
+### 分類器なしガイダンス: 方法
+
+- 前ページ最後の式$\Longrightarrow \hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{0})$
 
 ---
 
-1. ラベルを入力できる拡散モデルを用意
-    2. ラベルがない（ゼロベクトルを入れる）場合とある場合を学習
-    <span style="color:red">$\Rightarrow$ラベルがある/ない場合の雑音除去量の差$\times$係数で、
-    ラベルの影響を制御可能</span>（と、ベイズの定理から導出できる）
-- 係数を$\lambda$としましょう（$0 \le \lambda \le 1$）
-    - $\lambda = 0$: 画像をランダムに生成
-    - $\lambda = 1$: ラベルに対応する画像を生成
-    - $0 < \lambda < 1$: 中間的な画像を生成
-- 出力: 論文の図1
-
----
 
 ## discrete VAE[[Rolfe 2017]](https://arxiv.org/abs/1609.02200)
 
