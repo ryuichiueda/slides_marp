@@ -230,8 +230,9 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### adaptive $\circ\circ$ normalization
 
-- 正則化
+- 正則化の際に適用するスケールとシフトをラベルの関数に
     - $\boldsymbol{y} = \boldsymbol{\gamma}(c) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(c)$
+        - $c$: ラベル
 
 
 ---
