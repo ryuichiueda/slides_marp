@@ -342,7 +342,13 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 
 - 分類器を使わない（不要にする）
 - 方法
-    1. ラベルを入力できる拡散モデルを用意
+    - さっき出てきたスケールつきの分類器ありガイダンスの式から
+        - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^w$（$s$を$w$に変更）
+
+
+---
+
+1. ラベルを入力できる拡散モデルを用意
     2. ラベルがない（ゼロベクトルを入れる）場合とある場合を学習
     <span style="color:red">$\Rightarrow$ラベルがある/ない場合の雑音除去量の差$\times$係数で、
     ラベルの影響を制御可能</span>（と、ベイズの定理から導出できる）
