@@ -235,15 +235,11 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - 式: $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \boldsymbol{x} + \boldsymbol{\beta}(\boldsymbol{c})$
 - adaptive $\circ\circ$ normalization（Ada$\circ\circ$）
     - 正則化+FiLM
-        - $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(\boldsymbol{c})$
-        - $c$: ラベルやなにか入力（拡散モデルの時刻など）
-        - $\boldsymbol{\gamma}(\boldsymbol{c}), \boldsymbol{\beta}(\boldsymbol{c})$: なんらかのANNで表現
-- 様々な正則化に適用可能（Ada$\circ\circ$と略称される）
-    - AdaBN: 適応的バッチ正則化
-    - AdaGN: 適応的グループ正則化
-        - グループ正則化: ひとつの入力$\boldsymbol{x}$内の要素ををいくつかのグループに分けてそれぞれで正則化
-    - AdaLN: 適応的レイヤー正則化
-        - レイヤー正則化: ひとつの入力$\boldsymbol{x}$内の要素を正則化（グループ分けしない）
+        - AdaBN: 適応的バッチ正則化
+        - AdaGN: 適応的グループ正則化
+            - グループ正則化: ひとつの入力$\boldsymbol{x}$内の要素ををいくつかのグループに分けてそれぞれで正則化
+        - AdaLN: 適応的レイヤー正則化
+            - レイヤー正則化: ひとつの入力$\boldsymbol{x}$内の要素を正則化（グループ分けしない）
 
 
 ![bg right:20% 90%](./figs/ada.png)
