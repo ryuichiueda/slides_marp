@@ -236,7 +236,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - adaptive $\circ\circ$ normalization（Ada$\circ\circ$）
     - $\boldsymbol{x}$を正則化してFiLM
         - AdaBN: 適応的バッチ正則化
-        - AdaGN: 適応的グループ正則化
+        - AdaGN: 適応的グループ正則化[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
             - グループ正則化: ひとつの入力$\boldsymbol{x}$内の要素ををいくつかのグループに分けてそれぞれで正則化
         - AdaLN: 適応的レイヤー正則化
             - レイヤー正則化: ひとつの入力$\boldsymbol{x}$内の要素を正則化（グループ分けしない）
