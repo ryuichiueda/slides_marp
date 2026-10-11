@@ -301,6 +301,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - $\boldsymbol{x}_i \sim \mathcal{N}[\boldsymbol{\mu} + s\Sigma \boldsymbol{g},\Sigma]$
         - $s$: スケール（論文では$0.0, 1.0, 10.0$などが試されている）
             - $s=0.0$だとラベルが無効に
+- 補足: スケールが入った推定
+    - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^s$という分布の勾配を使っていることに（分類器なしガイダンスで使う）
 
 ※ ノイズの予測のみのバージョンもある（次ページで軽く説明）
 
