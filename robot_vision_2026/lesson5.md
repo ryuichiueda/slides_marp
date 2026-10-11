@@ -356,9 +356,12 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 
 ### 分類器なしガイダンス: 方法
 
-- ラベル（あるいは何らかのベクトル）を入力とする学習前の
+- ラベル（あるいは何らかのベクトル）を入力として受け付ける学習前の
 デコーダ$\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_t,\boldsymbol{c})$を用意
     - （今更ながら）時刻$t$も引数だけど省略
+- 学習
+    - $\boldsymbol{c}$と画像のペアを訓練データとして用意
+    - たまに$\boldsymbol{c}$の代わりにゼロベクトルを与えて学習
 - 前ページ最後の式$\Longrightarrow \hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x},\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{0})$
 
 ---
