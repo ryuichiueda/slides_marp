@@ -232,7 +232,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 - 正則化の際に適用するスケールとシフトをラベルの関数に
     - $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(\boldsymbol{c})$
-        - $c$: ラベルやなにか入力
+        - $c$: ラベルやなにか入力（拡散モデルの時刻など）
         - $\boldsymbol{\gamma}(\boldsymbol{c}), \boldsymbol{\beta}(\boldsymbol{c})$: なんらかのANNで表現
 - 様々な正則化に適用可能（Ada$\circ\circ$と略称される）
     - AdaBN: 適応的バッチ正則化
