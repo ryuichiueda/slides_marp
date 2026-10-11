@@ -231,8 +231,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 ### adaptive $\circ\circ$ normalization
 
 - 正則化の際に適用するスケールとシフトをラベルの関数に
-    - $\boldsymbol{y} = \boldsymbol{\gamma}(c) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(c)$
-        - $c$: ラベル
+    - $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(\boldsymbol{c})$
+        - $c$: ラベルやなにかのベクトル
 - 様々な正則化に適用可能（Ada$\circ\circ$と略称される）
     - AdaBN: 適応的バッチ正則化
     - AdaGN: 適応的グループ正則化
