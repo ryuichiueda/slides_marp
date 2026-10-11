@@ -303,9 +303,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
             - $s=0.0$だとラベルが無効に
             - $s=1.0$でも実用上は弱い
 - 補足: スケールが入った推定
-    - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^s$という分布の勾配を使っていることに（分類器なしガイダンスで使う）
-
-※ ノイズの予測のみのバージョンもある（次ページで軽く説明）
+    - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^s$という分布の勾配を使っていることに（分類器なしガイダンスでこの式を使う）
 
 ---
 
