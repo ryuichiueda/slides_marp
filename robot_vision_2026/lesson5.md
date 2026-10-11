@@ -219,10 +219,20 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ## 拡散モデルの誘導
 
-- 拡散モデルでも出力をコントロールしたい
+拡散モデルでも出力をコントロールしたい
+
+- adaptive $\circ\circ$ normalization
 - 生成したいものが生成されるようにノイズを誘導
     - 分類器あり
     - 分類器なし（こっちが主流）
+
+---
+
+### adaptive $\circ\circ$ normalization
+
+- 正則化
+    - $\boldsymbol{y} = \boldsymbol{\gamma}(c) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(c)$
+
 
 ---
 
