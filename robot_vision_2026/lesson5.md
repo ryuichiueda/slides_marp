@@ -234,7 +234,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     - 入力$\boldsymbol{c}$（ラベルやその他入力）に応じて強弱をつける
     - 式: $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \boldsymbol{x} + \boldsymbol{\beta}(\boldsymbol{c})$
 - adaptive $\circ\circ$ normalization（Ada$\circ\circ$）
-    - 正則化+FiLM
+    - $\boldsymbol{x}$を正則化してFiLM
         - AdaBN: 適応的バッチ正則化
         - AdaGN: 適応的グループ正則化
             - グループ正則化: ひとつの入力$\boldsymbol{x}$内の要素ををいくつかのグループに分けてそれぞれで正則化
