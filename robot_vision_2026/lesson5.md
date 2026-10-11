@@ -228,10 +228,14 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### adaptive $\circ\circ$ normalization
+### FiLM / adaptive $\circ\circ$ normalization 
 
-- 正則化の際に適用するスケールとシフトをラベルの関数に
-    - $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(\boldsymbol{c})$
+- FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
+    - 入力$\boldsymbol{c}$（ラベルやその他入力）に応じて強弱をつける
+    - 式: $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \boldsymbol{x} + \boldsymbol{\beta}(\boldsymbol{c})$
+- adaptive $\circ\circ$ normalization（Ada$\circ\circ$）
+    - 正則化+FiLM
+        - $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \hat{\boldsymbol{x}} + \boldsymbol{\beta}(\boldsymbol{c})$
         - $c$: ラベルやなにか入力（拡散モデルの時刻など）
         - $\boldsymbol{\gamma}(\boldsymbol{c}), \boldsymbol{\beta}(\boldsymbol{c})$: なんらかのANNで表現
 - 様々な正則化に適用可能（Ada$\circ\circ$と略称される）
@@ -242,7 +246,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
         - レイヤー正則化: ひとつの入力$\boldsymbol{x}$内の要素を正則化（グループ分けしない）
 
 
-
+![bg right:20% 90%](./figs/ada.png)
 
 ---
 
