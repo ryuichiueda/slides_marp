@@ -348,13 +348,15 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
             - 最後に$\boldsymbol{\theta}$をつけたのはデコーダに置き換えるという意味
             - $\boldsymbol{c}$が外からやってくる定数と仮定して$p(\boldsymbol{c})$を$\eta$に（珍しい変換）
     - $\Longrightarrow \hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})^{-w}p_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c})^{w+1}$
-        - 対数にして勾配をとると<span style="color:red">$\hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x})$</span>
+        - 対数にして勾配をとると<span style="color:red">$\hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x},\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x})$</span>
+            - $\boldsymbol{\varepsilon}$は関数なので$\boldsymbol{c}$は条件だけど関数の引数として表記
 
 
 ---
 
 ### 分類器なしガイダンス: 方法
 
+- ラベル（あるいは何らかのベクトル）を入力とするデコーダ$\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{c},t)$
 - 前ページ最後の式$\Longrightarrow \hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{0})$
 
 ---
