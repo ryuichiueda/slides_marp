@@ -340,7 +340,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 
 ### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598): 方法・アイデア
 
-- 分類器を使わない（不要にする）
+- 1つのデコーダに条件付きと条件なしの学習を両方させると、分類器が不要になる
 - 方法（講師の雑な解釈）
     - さっき出てきたスケールつきの分類器ありガイダンスの式を用意
         - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^{w+1}$（$s$を$w+1$に変更）
