@@ -345,7 +345,9 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - さっき出てきたスケールつきの分類器ありガイダンスの式を用意
         - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^w$（$s$を$w$に変更）
     - この式を上の式に代入
-        - $p_\boldsymbol{\phi}(y|\boldsymbol{x}) = p(\boldsymbol{x}|y)p(y)/p(\boldsymbol{x}) \approx p(\boldsymbol{x}|y)p(\boldsymbol{x})$
+        - $p_\boldsymbol{\phi}(y|\boldsymbol{x}) = p(\boldsymbol{x}|y)p(y)/p(\boldsymbol{x}) \approx p(\boldsymbol{x}|y)p(\boldsymbol{x}) = p_\boldsymbol{\theta}(\boldsymbol{x}|y)p_\boldsymbol{\theta}(\boldsymbol{x})$
+            - 最後に$\boldsymbol{\theta}$をつけたのはデコーダに置き換えるという意味
+
 
 
 ---
