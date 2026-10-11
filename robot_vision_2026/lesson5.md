@@ -344,9 +344,9 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - さっき出てきたスケールつきの分類器ありガイダンスの式を用意
         - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(\boldsymbol{c}|\boldsymbol{x})^{w+1}$（$y$を$\boldsymbol{c}$、$s$を$w+1$に変更）
     - この式を上の式に代入
-        - $p_\boldsymbol{\phi}(\boldsymbol{c}|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{c})p(\boldsymbol{c})/p(\boldsymbol{x}) \approx p(\boldsymbol{x}|\boldsymbol{c})p(\boldsymbol{x}) = p_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c})p_\boldsymbol{\theta}(\boldsymbol{x})$
+        - $p_\boldsymbol{\phi}(\boldsymbol{c}|\boldsymbol{x}) = p(\boldsymbol{x}|\boldsymbol{c})p(\boldsymbol{c})/p(\boldsymbol{x}) = \eta p(\boldsymbol{x}|\boldsymbol{c})p(\boldsymbol{x}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c})p_\boldsymbol{\theta}(\boldsymbol{x})$
             - 最後に$\boldsymbol{\theta}$をつけたのはデコーダに置き換えるという意味
-            - $p(\boldsymbol{c})$はここでは一様分布を仮定
+            - $p(\boldsymbol{c})$はここでは外からやってくる定数と仮定して$\eta$に（珍しい変換）
     - $\Longrightarrow \hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})^{-w}p_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c})^{w+1}$
         - 対数にして勾配をとると<span style="color:red">$\hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x})$</span>
 
