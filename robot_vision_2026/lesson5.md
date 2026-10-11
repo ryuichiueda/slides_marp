@@ -349,7 +349,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
             - $\boldsymbol{c}$が外からやってくる定数と仮定して$p(\boldsymbol{c})$を$\eta$に（珍しい変換）
     - $\Longrightarrow \hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|\boldsymbol{c}) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})^{-w}p_\boldsymbol{\theta}(\boldsymbol{x}|\boldsymbol{c})^{w+1}$
         - 対数にして勾配をとると<span style="color:red">$\hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x},\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x})$</span>
-            - $\boldsymbol{\varepsilon}$は関数なので$\boldsymbol{c}$は条件だけど関数の引数として表記
+            - $\boldsymbol{c}$は条件だけど、ここでは関数$\boldsymbol{\varepsilon}$の引数として表記
 
 
 ---
