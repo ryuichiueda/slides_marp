@@ -341,9 +341,11 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 ### 分類器なしガイダンス[[Ho 2022]](https://arxiv.org/abs/2207.12598): 方法・アイデア
 
 - 分類器を使わない（不要にする）
-- 方法
+- 方法（講師の雑な解釈）
     - さっき出てきたスケールつきの分類器ありガイダンスの式から
         - $\hat p_{\boldsymbol{\theta}}(\boldsymbol{x}|y) = \eta p_\boldsymbol{\theta}(\boldsymbol{x})p_\boldsymbol{\phi}(y|\boldsymbol{x})^w$（$s$を$w$に変更）
+    - この式を上の式に代入
+        - $p_\boldsymbol{\phi}(y|\boldsymbol{x}) = p(\boldsymbol{x}|y)p(y)/p(\boldsymbol{x}) \approx p(\boldsymbol{x}|y)p(\boldsymbol{x})$
 
 
 ---
