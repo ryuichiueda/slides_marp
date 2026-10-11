@@ -358,7 +358,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 
 - ラベル（あるいは何らかのベクトル）を入力とする学習前の
 デコーダ$\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_t,\boldsymbol{c})$を用意
-    - 時刻$t$も引数だけど省略
+    - （今更ながら）時刻$t$も引数だけど省略
 - 前ページ最後の式$\Longrightarrow \hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x},\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{0})$
 
 ---
