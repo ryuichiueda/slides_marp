@@ -175,7 +175,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
 
-- 条件付きGAN [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
+- [図](https://www.researchgate.net/figure/Architecture-of-the-Conditional-adversarial-net_fig3_366684170)
     - 生成ネットワークに何を作って欲しいかラベルで指示
         - データのもとになるベクトル$\boldsymbol{z}$と共にラベル$\boldsymbol{y}$を入力
             - $\boldsymbol{y}$はワンホットベクトル
