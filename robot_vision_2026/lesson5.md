@@ -35,9 +35,9 @@ style: |
 
 ---
 
-### DDPMの構造
+## オリジナルのDDPMの要素について補足
 
-- [この図](https://vizuara.substack.com/i/203080645/17-why-u-nets-became-the-classic-denoiser)が分かりやすい
+- 構造: [この図](https://vizuara.substack.com/i/203080645/17-why-u-nets-became-the-classic-denoiser)が分かりやすい
 - ポイント
     - U-Net状
     - 畳み込み層と残差接続層
@@ -160,7 +160,14 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-## 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
+## 生成モデルの出力のコントロール
+
+- 前回紹介したモデルのデコーダは何が出力されるか分からない
+    - 特にDDPM、FM
+
+---
+
+### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
 
 - GANの生成ネットワークはランダムにデータを出力するだけ
     - 何を出力するかコントロールしたい
@@ -334,6 +341,13 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - $\boldsymbol{g} \longleftarrow \nabla_{\boldsymbol{x}_{i+1}}\log p_\boldsymbol{\phi}(y|\boldsymbol{x}_{i+1})$
     - $\hat{\boldsymbol{\varepsilon}} \longleftarrow \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1}) - \sqrt{1-\bar\alpha_i}\boldsymbol{g}$
     - $\boldsymbol{x}_i \longleftarrow \sqrt{\bar\alpha_{i}}\dfrac{\boldsymbol{x}_{i+1} - \sqrt{1- \bar\alpha_{i+1}}\hat{\boldsymbol{\varepsilon}}}{\sqrt{\bar\alpha_{i+1}}} + \sqrt{1-\bar\alpha_i}\hat{\boldsymbol{\varepsilon}}$
+
+---
+
+### ここまでのまとめ
+
+- ラベルの与え方 
+    - そのままワンホットベクトルを
 
 ---
 
