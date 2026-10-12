@@ -861,11 +861,21 @@ gap: 1rem;
 ;" data-marpit-pagination-total="26">
 <h3 id="%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E3%81%BE%E3%81%A8%E3%82%81">ここまでのまとめ</h3>
 <ul>
-<li>ラベルの与え方
+<li>出力への指示の与え方
 <ul>
 <li>そのままワンホットベクトルを与える</li>
 <li>FiLMのように横から与える</li>
 <li>分類器ありガイダンスで入力に細工する</li>
+</ul>
+</li>
+<li>ひとつ重要なこと
+<ul>
+<li>ワンホットベクトルや素朴な分類器ありガイダンスだと次元の数しかものを区別できない
+<ul>
+<li>「<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0.124ex;" xmlns="http://www.w3.org/2000/svg" width="2.262ex" height="0.88ex" role="img" focusable="false" viewBox="0 -444 1000 389"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2218" d="M55 251Q55 328 112 386T249 444T386 388T444 249Q444 171 388 113T250 55Q170 55 113 112T55 251ZM245 403Q188 403 142 361T96 250Q96 183 141 140T250 96Q284 96 313 109T354 135T375 160Q403 197 403 250Q403 313 360 358T245 403Z"></path></g><g data-mml-node="mo" transform="translate(500,0)"><path data-c="2218" d="M55 251Q55 328 112 386T249 444T386 388T444 249Q444 171 388 113T250 55Q170 55 113 112T55 251ZM245 403Q188 403 142 361T96 250Q96 183 141 140T250 96Q284 96 313 109T354 135T375 160Q403 197 403 250Q403 313 360 358T245 403Z"></path></g></g></g></svg></mjx-container>する犬」などのバリエーションは無限なので無理</li>
+</ul>
+</li>
+<li>そうでないベクトルには別のANNの出力を使える</li>
 </ul>
 </li>
 </ul>
