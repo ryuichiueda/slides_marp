@@ -361,7 +361,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - （今更ながら）時刻$t$も引数だけど省略
 - 学習
     - $\boldsymbol{c}$と画像のペアを訓練データとして用意
-    - たまに$\boldsymbol{c}$の代わりにゼロベクトルを与えて学習
+    - たまに（$10$や$20$\%程度）$\boldsymbol{c}$の代わりにゼロベクトルを与えて学習
         - $\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_t,\boldsymbol{c})$に$\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_t,\boldsymbol{0})$<span style="color:red">$=\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x})$</span>も学習させる
 - 前ページ最後の式$\Longrightarrow \hat{\boldsymbol{\varepsilon}}_{\boldsymbol{\theta}}(\boldsymbol{x},\boldsymbol{c}) = (1+w)\boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{c}) - w \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x},\boldsymbol{0})$
 
