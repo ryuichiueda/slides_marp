@@ -358,7 +358,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - ラベルを使うと有限の数しかものを区別できない
         - 「$\circ\circ$する犬」などのバリエーションは無限なので無理
     - FiLMに与えた$\boldsymbol{c}$のようなベクトルなら、別のANNの出力がそのまま使える（一緒に学習できる）
-        - 「$\circ\circ$する犬」をベクトルに変換できれば細かい指示を出せるかも
+        - 「$\circ\circ$する犬」のような細かい指示をベクトルにできれば指示にバリエーションが出る
 
 ---
 
