@@ -165,6 +165,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 前回紹介したモデルのデコーダは何が出力されるか分からない
     - 特にDDPM、FM
 
+<center>どうやってコントロールしましょう？</center>
+
 ---
 
 ### 条件付きGAN（Conditional GAN、CGAN）[[Mirza+ 2014]](https://arxiv.org/abs/1411.1784)
