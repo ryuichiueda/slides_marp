@@ -351,7 +351,9 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 ### ここまでのまとめ
 
 - ラベルの与え方 
-    - そのままワンホットベクトルを
+    - そのままワンホットベクトルを与える
+    - FiLMのように横から与える
+    - 分類器ありガイダンスで入力に細工する
 
 ---
 
