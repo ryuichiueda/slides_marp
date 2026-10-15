@@ -521,6 +521,8 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 - 定義: $D_\text{KL}(P || Q) = \int_X P(\boldsymbol{x})\log \dfrac{P(\boldsymbol{x})}{Q(\boldsymbol{x})}\text{d}\boldsymbol{x} = \big\langle \log P(\boldsymbol{x}) - \log Q(\boldsymbol{x}) \big\rangle_{P(\boldsymbol{x})}$
     - $P$と$Q$が一致したら$0$に
+        - 距離のような尺度なのでカルバックライブラー距離とも
+        （非対称なので距離ではない）
 
 
 ---
