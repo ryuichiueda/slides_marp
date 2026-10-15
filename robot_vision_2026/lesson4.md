@@ -519,7 +519,7 @@ $\qquad\qquad$![w:700](./figs/flow_matching_problem.svg)
 
 ## 補足0: カルバックライブラー情報量
 
-- 定義: $D_\text{KL}(P || Q) = \int_X P(\boldsymbol{x})\log \dfrac{P(\boldsymbol{x})}{Q(\boldsymbol{x})}\text{d}\boldsymbol{x} = \big\langle P(\boldsymbol{x})/Q(\boldsymbol{x}) \big\rangle_{P(\boldsymbol{x})}$
+- 定義: $D_\text{KL}(P || Q) = \int_X P(\boldsymbol{x})\log \dfrac{P(\boldsymbol{x})}{Q(\boldsymbol{x})}\text{d}\boldsymbol{x} = \big\langle \log P(\boldsymbol{x}) - \log Q(\boldsymbol{x}) \big\rangle_{P(\boldsymbol{x})}$
 
 
 ---
