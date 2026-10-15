@@ -420,6 +420,6 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 ## 補足
 
 - T君から教えてもらったサイト: https://playground.tensorflow.org/
-    - 2次元のデータ$\boldsymbol{x} =(x_1, x_2)$を入力して分別
+    - デフォルトの挙動: 2次元のデータ$\boldsymbol{x} =(x_1, x_2)$を入力して分別
         - $x_1^2$や$\sin x_1$なども入力に使える
 
