@@ -305,6 +305,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 - デコーダで生成されるデータに隙間ができにくい
     - [[Kingma 2013]](https://arxiv.org/abs/1312.6114)の中の図4
     - [Kingma氏のデモサイトの例](https://dpkingma.com/sgvb_mnist_demo/demo.html)
+        - たぶん次回やるラベル付きのVAE
 - ただしGANよりぼやけやすい
 
 ---
