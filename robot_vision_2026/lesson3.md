@@ -414,3 +414,12 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
         - 見方を変えると画像の変換を行なっている
         - 画像を縮約して伸長
 
+
+---
+
+## 補足
+
+- T君から教えてもらったサイト: https://playground.tensorflow.org/
+    - 2次元のデータ$\boldsymbol{x} =(x_1, x_2)$を入力して分別
+        - $x_1^2$なども入力に使える
+
