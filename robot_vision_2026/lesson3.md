@@ -419,9 +419,9 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 ## 補足
 
-- T君から教えてもらったサイト: https://playground.tensorflow.org/
+- Tさんから教えてもらったサイト: https://playground.tensorflow.org/
     - デフォルトの挙動: 2次元のデータ$\boldsymbol{x} =(x_1, x_2)$を入力して分別
         - $x_1^2$や$\sin x_1$なども入力に使える
-- T君から教えてもらったサイトその2: https://cs.stanford.edu/people/karpathy/convnetjs/demo/mnist.html
+- Tさんから教えてもらったサイトその2: https://cs.stanford.edu/people/karpathy/convnetjs/demo/mnist.html
     - CNNの動きを観察できる
 
