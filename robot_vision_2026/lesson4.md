@@ -387,7 +387,7 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
 ### 最終的な学習アルゴリズム
 
 - 補足2後半の計算をすると、ある時刻$i$の評価関数が次のように簡単に
-    - $L_i= \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{1+1}}\boldsymbol{\varepsilon},i+1)\big|\big|^2$
+    - $L_i= \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{i+1}}\boldsymbol{\varepsilon},i+1)\big|\big|^2$
         - $\boldsymbol{\varepsilon}$: 画像$\boldsymbol{x}_{i+1}$に乗った雑音（計算可能）
         - デコーダ$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$: 画像$\boldsymbol{x}_{i+1}$に乗った雑音の推定器
             - デコーダの第一引数: デコーダに入力する画像$\boldsymbol{x}_{i+1}$
