@@ -164,7 +164,7 @@ $\rightarrow$精緻な画像
 - 右図の例: 出力を2次元まで縮小した場合の
 出力の分布の例
     - 注意: 実用的なものはもっと高次元
-        - [Hinton 2026]は30次元
+        - [Hinton 2006]は30次元
     - 分布している空間を<span style="color:red">潜在空間</span>と言う
 
 ![bg right:35% 95%](./figs/encoder.png)
