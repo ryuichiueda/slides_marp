@@ -38,10 +38,10 @@ marp: true
 - ANNでよく扱われてきた問題
     - かつては問題に応じて専用のANNを準備することが必須だった（今日はこの話）
 - 問題: 識別のためのANNを数式で定義してみましょう
-    - $\boldsymbol{x} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$
+    - $\boldsymbol{y} = \boldsymbol{f}(\boldsymbol{x}|\boldsymbol{w})$
         - $\boldsymbol{x}$はデータだけど出力$\boldsymbol{y}$の形式は？
 
-![bg right:30% 100%](./figs/cat_and_dog.svg)
+![bg right:25% 100%](./figs/cat_and_dog.svg)
 
 
 ---
@@ -421,5 +421,5 @@ $\qquad\qquad$![w:660](./figs/cnn_calc.png)
 
 - T君から教えてもらったサイト: https://playground.tensorflow.org/
     - 2次元のデータ$\boldsymbol{x} =(x_1, x_2)$を入力して分別
-        - $x_1^2$なども入力に使える
+        - $x_1^2$や$\sin x_1$なども入力に使える
 

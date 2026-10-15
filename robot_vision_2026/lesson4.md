@@ -379,8 +379,31 @@ $\qquad\qquad\qquad$![w:900](./figs/latent_space_dist2.svg)
     - <span style="color:red">数値で具体的に分布が求まっているので既知の過程を学習することに</span>
 - 全体では条件のない逆拡散過程$P(\boldsymbol{x}_i| \boldsymbol{x}_{i+1})$を学習
     - 上の条件付き逆拡散過程の重ね合わせ
-- 注意: 実際のデコーダは$\boldsymbol{x}_i$ではなく、$\boldsymbol{x}_{i+1}$と$\boldsymbol{x}_i$の差分（ノイズ）を出力するように実装される（補足2参照のこと）
+- 注意: 実際のデコーダは$\boldsymbol{x}_i$ではなく、$\boldsymbol{x}_{i+1}$と$\boldsymbol{x}_i$の差分（ノイズ）を出力するように実装される（次ページ）
 
+---
+
+### 最終的な学習アルゴリズム
+
+- 補足2後半の計算をすると、ある時刻$i$の評価関数が次のように簡単に
+    - $L_i= \big|\big| \boldsymbol{\varepsilon} - \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\sqrt{\bar{\alpha}_{i+1}}\boldsymbol{x}_0 + \sqrt{1-\bar{\alpha}_{1+1}}\boldsymbol{\varepsilon},i+1)\big|\big|^2$
+        - $\boldsymbol{\varepsilon}$: 画像$\boldsymbol{x}_{i+1}$に乗った雑音（計算可能）
+        - デコーダ$\boldsymbol{\varepsilon}_\boldsymbol{\theta}$: 画像$\boldsymbol{x}_{i+1}$に乗った雑音の推定器
+            - デコーダの第一引数: デコーダに入力する画像$\boldsymbol{x}_{i+1}$
+    - 各訓練画像、各時刻でこれを学習していく
+
+---
+
+### 画像の生成（推論）
+
+- 通常の生成
+    - $\boldsymbol{x}_T \sim \mathcal{N}(\boldsymbol{0},I)$
+    - 繰り返し
+        - $\boldsymbol{z} \sim \boldsymbol{N}(\boldsymbol{0}, I)$（最後の時刻は$\boldsymbol{z} = \boldsymbol{0}$）
+        - $\boldsymbol{x}_i = \frac{1}{\sqrt{\alpha_{i+1}}}\left\{ \boldsymbol{x}_{i+1}- \frac{1-\alpha_{i+1}}{\sqrt{1-\bar\alpha_{i+1}}} \boldsymbol{\varepsilon}_\boldsymbol{\theta}(\boldsymbol{x}_{i+1},i+1) \right\} + \sigma_{i+1}\boldsymbol{z}$
+- DDIM（denoising diffusion implicit model）という方法も（雑な説明）
+    - $\sigma_{i+1}$を割り引く（$0$にすると同じノイズから同じ画像が出てくるように）
+    - 各時刻を真面目に追わない（スキップする）
 
 ---
 
