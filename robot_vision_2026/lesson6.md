@@ -259,7 +259,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
-### 層正則化（layer normalization）
+### 層正則化（layer normalization。既出）
 
 - 図中に3つある「Norm」
 - 各ベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の要素を正規化してベクトルごとの影響力を揃える
