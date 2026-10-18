@@ -32,7 +32,7 @@ marp: true
 ## Word2vec[[Mikolov2013]](https://arxiv.org/abs/1301.3781)
 
 - 単語をベクトル表現するためのモデル群や枠組み
-- Word2vecで作られたベクトル表現はTransformerの入力に
+- Word2vecで作られたベクトル表現が言語を扱うANNの入力に
 
 ---
 
