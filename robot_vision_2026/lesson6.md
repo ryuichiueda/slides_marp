@@ -218,41 +218,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - エンコーダに入力する$E$の各トークンに、文章中での位置情報（位置符号）を付加
     - $H = \sqrt{D}E + P$
         - 位置情報: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
-- 位置情報のつけかた
-    - オリジナルのTransformer: 固定値（次ページ）
-    - 学習させる方法も
+- 位置情報のつけかたはDDPMのときの説明のとおり
+    - 学習させる方法もある
 
 ![bg right:30% 100%](./figs/position_encoding.png)
-
----
-
-### オリジナルのTransformerの位置符号
-
-- 位置情報: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
-    - $p_i = (p_{i,0} \quad p_{i,1} \quad \cdots \quad p_{i,D})^\top$
-       - $p_{i,j} = \begin{cases}
-            \sin ( i \beta^{-j/D})  & (i\%2 = 0) \\
-            \cos ( i \beta^{-(j-1)/D}) & (i\%2 = 1) 
-\end{cases}$
-- 例
-<img width="700" src="./figs/position_enc.png" />
-    - $\beta=10$。原著では$\beta = 10000$
-- 内積をとると位置が近いほど値が大きい[[山田2023]](https://gihyo.jp/book/2023/978-4-297-13633-8)
-
----
-
-### 文脈の考慮の必要性
-
-- 必要な例
-    - 例1: 「ガラス窓を割ったのは私です。」を英語に翻訳
-        - "It's me who broke the ..."まで翻訳したとき、次に注目すべきは壊れるもの（=ガラス）
-    - 例2: 右上の丸を月と認識させたい
-- 既存の時系列情報や画像を扱うANNは苦手
-    - 「近い位置にある=関連性が大きい」と捉えるので
-        - 日本語と英語で語順が違っているので難しい
-        - 丸が他の手がかりと離れていて難しい
-
-![bg right:20% 95%](./figs/tsukimi.png)
 
 ---
 
