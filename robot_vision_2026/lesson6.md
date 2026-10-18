@@ -94,7 +94,7 @@ marp: true
 - アフィン層間のベクトル$\boldsymbol{x}$: 数百〜数千次元
     - <span style="color:red">これが分散表現に</span>
 - 出力: 入力と同じ次元のベクトル
-    - 各単語に対応する確率
+    - 各単語に対応する確率（<span style="color:red">学習対象</span>）
 
 ![bg right:35% 100%](./figs/skip_gram.png)
 
