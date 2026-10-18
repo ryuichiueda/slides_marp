@@ -214,7 +214,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### 位置情報の追加
 
-- DDPMで使ったもの（というよりTransformerでの使用のほうが早い）
+- DDPMで使ったもの（というよりTransformerでの使用のほうが歴史的に早い）
 - エンコーダに入力する$E$の各トークンに、文章中での位置情報（位置符号）を付加
     - $H = \sqrt{D}E + P$
         - 位置情報: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
