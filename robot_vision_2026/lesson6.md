@@ -183,6 +183,21 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 [<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
 
+---
+
+### エンコーダ
+
+- @@@構成の概要を説明@@@
+- 濃い黄色の枠が本体
+    - 「Nx layers」: 何個も連結するということ
+    - 詳しくは次のページ以降で
+- 入力（図の下方）: $H_\text{enc} = \sqrt{D}E + P$
+    - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
+        - 文（$D$次元ベクトルで表現されたトークンを並べたもの）
+- 出力: デコーダでの仕事に応じて重みの変わった$H_\text{enc}'$
+    - 文脈が反映されている
+
+![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
 
@@ -193,6 +208,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 右の例では省略されているが`<EOS>`（文の終わり）などの特殊なトークンも入力として並べる
 
 ![bg right:30% 95%](./figs/sentence.png)
+
 
 ---
 
@@ -240,21 +256,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
 
 [<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
-
----
-
-### エンコーダ
-
-- 濃い黄色の枠が本体
-    - 「Nx layers」: 何個も連結するということ
-    - 詳しくは次のページ以降で
-- 入力（図の下方）: $H_\text{enc} = \sqrt{D}E + P$
-    - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
-        - 文（$D$次元ベクトルで表現されたトークンを並べたもの）
-- 出力: デコーダでの仕事に応じて重みの変わった$H_\text{enc}'$
-    - 文脈が反映されている
-
-![bg right:28% 95%](./figs/transformer_encoder.png)
 
 
 ---
