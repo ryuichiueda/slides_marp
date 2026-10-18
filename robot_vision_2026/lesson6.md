@@ -171,7 +171,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### Transformer
 
-- 翻訳のためにGoogleで開発された
+- もともと翻訳のためにGoogleが開発
     - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)
 - 正体: 右のような構造のANN
     - エンコーダ（左側）とデコーダ（右側）で構成
