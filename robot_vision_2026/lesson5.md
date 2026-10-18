@@ -396,7 +396,7 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
 ### 分類器なしガイダンスの出力の例
 
 - [[Ho 2022]](https://arxiv.org/abs/2207.12598)
-    - 図3: ガイドなしと$w=3$の比較
+    - 図3, 8: ガイドなしと$w=3$の比較
     - 図6: ガイドなしと$w=1,3$の比較
 
 
