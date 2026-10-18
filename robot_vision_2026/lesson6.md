@@ -21,36 +21,11 @@ marp: true
 
 ## 今日やること
 
-- なんでビジョンの講義で言葉（自然言語）を扱うのか
+- 自然言語と人工ニューラルネットワーク
+    - 言葉で画像や処理内容を理解するモデルの存在
+- 扱うもの
 - Word2vec
 - Transformer
-- Transformerの応用例
-
----
-
-## GAN、VAEの応用
-
-- CGAN
-- pix2pix
-- cVAE
-
-
----
-
-## なんでビジョンの講義で自然言語を扱うのか
-
-- 画像$\leftrightarrow$言葉のアプリケーションの存在
-    - 画像説明文生成
-    - プロンプトへの指示$\rightarrow$画像の生成や指定した物体の認識
-        - Stable Diffusion
-        - Segment Anything Model
-        ↑いずれも今回扱うTransformerを使用
-- 言語処理の手法の画像処理への転用
-    - Transformer$\rightarrow$Vision Transformer
-    - データの種類が異なるだけで本質的な違いは少ない（？）
-- Transformerの普及: 上記のように様々なところで利用
-
-<center>やらざるをえない</center>
 
 ---
 
