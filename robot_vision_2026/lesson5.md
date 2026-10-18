@@ -410,5 +410,5 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - FiLMやAda$\circ\circ$など
         - ラベルやベクトルを横から反映
         - ある層の出力を強弱したりシフトしたり
-    - 分類器ありよりはなしが使われる
+    - 分類器ありからなしへ
 
