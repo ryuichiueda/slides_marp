@@ -407,6 +407,8 @@ $\Longrightarrow \hat{\boldsymbol{\varepsilon}}_\boldsymbol{\theta}(\boldsymbol{
     - 正弦波エンコーディングによる時刻の埋め込み
     - 自己注意機構
 - 生成モデルの出力のコントロール
-    - ラベルやベクトルを横から反映
-    - ある層の出力を強弱したりシフトしたり
+    - FiLMやAda$\circ\circ$など
+        - ラベルやベクトルを横から反映
+        - ある層の出力を強弱したりシフトしたり
+    - 分類器ありよりはなしが使われる
 
