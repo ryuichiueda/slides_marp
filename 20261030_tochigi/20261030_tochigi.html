@@ -165,7 +165,7 @@ $ <span class="hljs-built_in">sudo</span> apt install ros-jazzy-usb-cam python3-
 <h3 id="%E7%AB%8B%E3%81%A1%E4%B8%8A%E3%81%92">立ち上げ</h3>
 <ul>
 <li>カメラのノードの立ち上げ<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chmod</span> 666 /dev/video*
-$ ros2 run usb_cam usb_cam_node_exe --ros-args –remap video_device:=/dev/video0
+$ ros2 run usb_cam usb_cam_node_exe --ros-args --remap video_device:=/dev/video0
 </code></pre>
 </li>
 <li>web_video_serverの立ち上げ（別端末）<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ ros2 run web_video_server web_video_server
