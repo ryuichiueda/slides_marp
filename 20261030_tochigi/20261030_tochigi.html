@@ -344,16 +344,7 @@ gap: 1rem;
 ;" data-marpit-pagination-total="13">
 <h2 id="%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E3%81%AE%E4%BD%93%E9%A8%93">画像処理の体験</h2>
 <ul>
-<li>OpenCVのインストール
-<ul>
-<li>おそらくインストール済み</li>
-<li>以下インストールされてないときのメモ<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">sudo</span> apt install python3-opencv
-$ <span class="hljs-built_in">sudo</span> apt install ros-jazzy-cv-bridge  <span class="hljs-comment">#たぶんインストール済み</span>
-$ <span class="hljs-built_in">sudo</span> apt install ros-jazzy-image-transport-plugins <span class="hljs-comment">#たぶんインストール済み</span>
-</code></pre>
-</li>
-</ul>
-</li>
+<li>お題: ウェブカメラを使って顔の検出ソフトを作成</li>
 </ul>
 <footer>栃木県産業技術センター様</footer>
 </section>
@@ -368,11 +359,24 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 gap: 1rem;
 }
 ;" data-marpit-pagination-total="13">
-<h3 id="%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%9C%E6%88%90">パッケージの作成</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cd</span> ~/ros2_ws/src
+<h3 id="%E6%89%8B%E9%A0%8612">手順（1/2）</h3>
+<ul>
+<li>OpenCVのインストール
+<ul>
+<li>おそらくインストール済み</li>
+<li>以下インストールされてないときのメモ<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">sudo</span> apt install python3-opencv
+$ <span class="hljs-built_in">sudo</span> apt install ros-jazzy-cv-bridge  <span class="hljs-comment">#たぶんインストール済み</span>
+$ <span class="hljs-built_in">sudo</span> apt install ros-jazzy-image-transport-plugins <span class="hljs-comment">#たぶんインストール済み</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li>パッケージの作成<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">$ <span class="hljs-built_in">cd</span> ~/ros2_ws/src
 $ ros2 pkg create imgproc --build-type ament_python
 <span class="hljs-comment">### 前半の知識を活かして設定 ###</span>
 </code></pre>
+</li>
+</ul>
 <footer>栃木県産業技術センター様</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="栃木県産業技術センター様" data-paginate="true" data-style=".columns {
@@ -396,14 +400,22 @@ grid-template-columns: repeat(2, minmax(0, 1fr));
 gap: 1rem;
 }
 ;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="13" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
-<h3 id="%E3%83%8E%E3%83%BC%E3%83%89%E3%81%AE%E4%BD%9C%E6%88%90">ノードの作成</h3>
+<h3 id="%E6%89%8B%E9%A0%8622">手順（2/2）</h3>
+<ul>
+<li>ノードの作成
 <ul>
 <li><a href="https://gist.github.com/ryuichiueda/eb0e560587d39db5352b43873ba2ac5b">コードの例</a>（顔の検出）
 <ul>
 <li><code>setup.py</code>などの設定とファイル名などを合わせましょう</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>動作確認
+<ul>
 <li>web_video_serverから見ると右図のように見えます</li>
+</ul>
+</li>
 </ul>
 <footer>栃木県産業技術センター様</footer>
 </section>
