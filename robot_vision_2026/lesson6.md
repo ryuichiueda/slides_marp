@@ -169,9 +169,9 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
-### Transformer
+### オリジナル（翻訳用途）のTransformer
 
-- もともと翻訳のためにGoogleが開発
+- Googleが開発
     - [使ってみましょう](https://translate.google.co.jp/?hl=ja&sl=en&tl=ja&op=translate)（たぶん当時と違うものだけど）
 - 正体: 右のような構造のANN
     - エンコーダ（左側）とデコーダ（右側）で構成
@@ -187,17 +187,27 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### エンコーダ
 
-- @@@構成の概要を説明@@@
-- 濃い黄色の枠が本体
-    - 「Nx layers」: 何個も連結するということ
-    - 詳しくは次のページ以降で
+- 入力: サブワードの埋め込み表現の列
+    - サブワード: ingなど単語の部品まで分解した語
+    - 文の順番に並べて入力
+- 出力: 文脈に応じて値が変化した埋め込み表現の列
+    - 列のなかのサブワードの数は不変
+    - 接続先で問題が解きやすいようにベクトルが変化
+- 構造（入力が通る層）
+    - 入り口で位置埋め込みされる
+    - その後「正則化->自己注意機構->正則化->全結合層」という$N$個のユニットを通る
+    - 最後に正則化
+
+![bg right:28% 95%](./figs/transformer_encoder.png)
+
+---
+
 - 入力（図の下方）: $H_\text{enc} = \sqrt{D}E + P$
     - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
         - 文（$D$次元ベクトルで表現されたトークンを並べたもの）
 - 出力: デコーダでの仕事に応じて重みの変わった$H_\text{enc}'$
     - 文脈が反映されている
 
-![bg right:28% 95%](./figs/transformer_encoder.png)
 
 ---
 
