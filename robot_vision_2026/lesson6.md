@@ -312,7 +312,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### デコーダの本体
 
-- （自己注意機構+交差注意機構+フィードフォワード層）$\times N$
+- （自己注意機構+<span style="color:red">交差注意機構</span>+フィードフォワード層）$\times N$
 - 自己注意機構
     - 翻訳途中の文の文脈を考慮して$H_\text{dec}$を操作
     - 図中の「Masked」の意味: 文の後半にマスクをかける仕組み
