@@ -329,15 +329,12 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ### 具体的な計算
 
-- クエリ: $Q= W_\text{Q}H_\text{dec}$という行列
-    - 以下、$W_\text{X}$は学習で獲得する行列
-- キー: クエリに反応するトークンを選択
-    - $K= W_\text{K}H_\text{enc}'$を用意して$QK^\top$を計算
-- バリュー: 重み付けの値
-    - $V= W_\text{V}H_\text{enc}'$
+- 次のようにクエリ、キー、バリューの行列を作成
+    - $Q= W_\text{Q}H_\text{dec}$
+    - $K= W_\text{K}H_\text{enc}'$<span style="color:red">$\leftarrow$エンコーダの出力を使用</span>
+    - $V= W_\text{V}H_\text{enc}'$<span style="color:red">$\leftarrow$同上</span>
 - 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
 
-そうしろと人間が言ってるわけではないが、こういう構造を用意してあげるとそういうふうに学習
 
 ![bg right:35% 95%](./figs/kvq.png)
 
