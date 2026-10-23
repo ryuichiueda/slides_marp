@@ -249,52 +249,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
-### <span style="color:red">自己注意機構</span>
-
-- 自分自身の情報でトークンのベクトルを変える
-    - 文脈が反映される（詳しくは次ページ）
-- 仕組み: Q、K、Vをすべて自身への入力から作成
-    - クエリ: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span>（前回は$H_\text{dec}$だった）
-    - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>（同上）
-    - バリュー: $V= W_\text{V}H_\text{enc}$
-    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
-- 前回の注意機構は<span style="color:red">交差注意機構</span>
-
-![bg right:20% 100%](./figs/transformer_kvq.png)
-
----
-
-### 自己注意機構の補足[[Google2017]](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
-
-- 単に代名詞と名詞を関連づけるだけなら、
-次の「it」は「dog」か「street」か分からない
-    - 1: The animal didn't cross the street because it was too tired. 
-        - it: dog
-    - 2: The animal didn't cross the street because it was too wide.
-        - it: street
-- KVQ: クエリ（it）に対して、名詞だけではなく行列$K$で全てのトークンを作用させることで、itがどちらに近いかまでを計算可能に
-    - "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)（再掲）
-
-
----
-
-### マルチヘッド注意機構
-
-- Transformerの実装では注意機構が複数に分割される
-    - $W_\text{K}, W_\text{V}, W_\text{Q}$（$D \times D$行列）が分割される
-        - $Q^{(m)}= W_\text{Q}^{(m)}H$
-        - $K^{(m)}= W_\text{K}^{(m)}H$
-        - $V^{(m)}= W_\text{V}^{(m)}H\quad$（$m=1,2,\dots,M$）
-            - $W_X^{(m)}$: $W_X$を横に切った$(D/M) \times D$行列
-    - ANN的には、$m$ごとに結合が切れて独立
-        - それぞれが文の解釈方法を変える
-        （ように学習されるらしい）
-- 出力の$Q^{(m)}, K^{(m)}, V^{(m)}$を結合$\rightarrow$元の$D \times D$行列に
-
-![bg right:20% 100%](./figs/transformer_kvq.png)
-
----
-
 ### フィードフォワード層（全結合層）
 
 - 自己注意機構を通った文が通される
@@ -480,3 +434,50 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 学習させる方法もある
 
 ![bg right:30% 100%](./figs/position_encoding.png)
+
+---
+
+### <span style="color:red">自己注意機構</span>
+
+- 自分自身の情報でトークンのベクトルを変える
+    - 文脈が反映される（詳しくは次ページ）
+- 仕組み: Q、K、Vをすべて自身への入力から作成
+    - クエリ: $Q= W_\text{Q}H$<span style="color:red">$_\text{enc}$</span>（前回は$H_\text{dec}$だった）
+    - キー: $K= W_\text{K}H$<span style="color:red">$_\text{enc}$</span>（同上）
+    - バリュー: $V= W_\text{V}H_\text{enc}$
+    - 出力: $H'=$Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+- 前回の注意機構は<span style="color:red">交差注意機構</span>
+
+![bg right:20% 100%](./figs/transformer_kvq.png)
+
+---
+
+### 自己注意機構の補足[[Google2017]](https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/)
+
+- 単に代名詞と名詞を関連づけるだけなら、
+次の「it」は「dog」か「street」か分からない
+    - 1: The animal didn't cross the street because it was too tired. 
+        - it: dog
+    - 2: The animal didn't cross the street because it was too wide.
+        - it: street
+- KVQ: クエリ（it）に対して、名詞だけではなく行列$K$で全てのトークンを作用させることで、itがどちらに近いかまでを計算可能に
+    - "You shall know a word by the company it keeps!" [[Firth1957]](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)（再掲）
+
+
+---
+
+### マルチヘッド注意機構
+
+- Transformerの実装では注意機構が複数に分割される
+    - $W_\text{K}, W_\text{V}, W_\text{Q}$（$D \times D$行列）が分割される
+        - $Q^{(m)}= W_\text{Q}^{(m)}H$
+        - $K^{(m)}= W_\text{K}^{(m)}H$
+        - $V^{(m)}= W_\text{V}^{(m)}H\quad$（$m=1,2,\dots,M$）
+            - $W_X^{(m)}$: $W_X$を横に切った$(D/M) \times D$行列
+    - ANN的には、$m$ごとに結合が切れて独立
+        - それぞれが文の解釈方法を変える
+        （ように学習されるらしい）
+- 出力の$Q^{(m)}, K^{(m)}, V^{(m)}$を結合$\rightarrow$元の$D \times D$行列に
+
+![bg right:20% 100%](./figs/transformer_kvq.png)
+
