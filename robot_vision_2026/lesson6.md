@@ -290,8 +290,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 自己注意機構と全結合層で$H_\text{enc}$中の各ベクトルを文脈にあわせて操作
         - ↑繰り返し
     - 文脈の反映された$H'_\text{enc}$を出力
-- 受け取る逆伝播誤差がどんなものかは
-デコーダ側による
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
