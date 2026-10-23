@@ -300,9 +300,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 - 本体は緑の枠内
     - 翻訳途中の文に対応する行列$H_\text{dec}$を受け取り
+    - 横から$H_\text{enc}'$が入る
 - デコーダの先に具体的な仕事をするためのANNが接続される
     - 翻訳の場合は次の単語を予測するための全結合層
-    - デコーダはこの仕事がしやすいように$H_\text{dec}$を$H'_\text{dec}$に変更
+    - デコーダは仕事がしやすいように$H_\text{dec}$を$H'_\text{dec}$に変更
 
 
 ![bg right:50% 100%](./figs/transformer_decoder.png)
