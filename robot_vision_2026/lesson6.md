@@ -387,7 +387,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - エンコーダで構成可能[[中井2025]](https://gihyo.jp/book/2025/978-4-297-14972-7)
     - 文の先頭に`[CLS]`というトークン（クラストークン）を加えて学習
     - 学習すると出力のクラストークンに分析のための情報が集まるように
-- Vision Transformerによる物体認識は基本この構造がこのまま使える（次回）
+- 画像中の物体認識は基本この構造がこのまま使える
+    - Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
 ![bg right:30% 100%](./figs/sentiment_analysis.png)
 
