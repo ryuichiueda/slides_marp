@@ -17,7 +17,7 @@
 <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="" /></p>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="2" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="2" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h2 id="%E4%BB%8A%E6%97%A5%E3%82%84%E3%82%8B%E3%81%93%E3%81%A8">今日やること</h2>
 <ul>
 <li>Vision Transformer</li>
@@ -26,7 +26,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="25" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="3" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="25" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="27" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="3" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="27" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2 id="vision-transformervitdosovitskiy-2020">Vision Transformer（ViT）<a href="https://arxiv.org/abs/2010.11929">[Dosovitskiy 2020]</a></h2>
 <ul>
 <li>Transformerのエンコーダを画像に転用
@@ -45,7 +45,46 @@
 <p><a href="https://commons.wikimedia.org/wiki/File:Vision_Transformer.png"><span style="font-size:60%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span></a><span style="font-size:70%">（<a href="https://arxiv.org/abs/2010.11929">[Dosovitskiy 2020]</a>のFig.1にも構成図）</span></p>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="" data-marpit-pagination-total="25" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="3" style="" data-marpit-pagination-total="27" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="4" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
+<h3 id="vit%E3%81%AE%E5%A4%A7%E3%81%8D%E3%81%95">ViTの大きさ</h3>
+<ul>
+<li>オリジナルの論文には大きさの異なる複数のモデル
+<ul>
+<li>ViT-Base: 層の数12、ベクトルの次元: 768、パラメータ数: 8600万</li>
+<li>ViT-Large: 層の数24、ベクトルの次元: 1024、パラメータ数: 3.07億</li>
+<li>ViT-Huge: 層の数32、ベクトルの次元: 1280、パラメータ数: 6.32億</li>
+</ul>
+</li>
+</ul>
+<footer>ロボットビジョン第7回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
+<h3 id="%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B%E3%83%99%E3%82%AF%E3%83%88%E3%83%AB%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">トークンに対応するベクトルの作り方</h3>
+<ul>
+<li>画像を<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="6.164ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 2724.4 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mo" transform="translate(973.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mi" transform="translate(1973.4,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g></g></g></svg></mjx-container>画素のブロックに区切る
+<ul>
+<li>例: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="6.979ex" height="1.731ex" role="img" focusable="false" viewBox="0 -683 3084.6 765"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mo" transform="translate(1028.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(2084.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path></g></g></g></svg></mjx-container>: ベクトルの次元は<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="17.598ex" height="1.715ex" role="img" focusable="false" viewBox="0 -676 7778.4 758"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path></g><g data-mml-node="mo" transform="translate(1222.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(2222.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path></g><g data-mml-node="mo" transform="translate(3444.7,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="mn" transform="translate(4444.9,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(5222.7,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(6278.4,0)"><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z" transform="translate(1000,0)"></path></g></g></g></svg></mjx-container>に
+<ul>
+<li>3はチャンネルの数（RGB）</li>
+</ul>
+</li>
+<li>位置の埋め込みも行う
+<ul>
+<li>ただし固定値ではなく、パラメータは学習対象</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>画像の理解
+<ul>
+<li>局所的な理解: ベクトルの中</li>
+<li>大域的な理解: 自己注意機構で学習</li>
+</ul>
+</li>
+</ul>
+<footer>ロボットビジョン第7回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h2 id="bertbidirectional-encoder-representations-from-transformersdevlin2019"><a href="https://aclanthology.org/N19-1423/">BERT</a>（Bidirectional Encoder Representations from Transformers）[Devlin2019]</h2>
 <ul>
 <li>Transformerのエンコーダを用いたモデル
@@ -72,7 +111,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="5" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="%E5%85%A5%E5%8A%9B%E3%81%AE%E5%BD%A2%E5%BC%8F">入力の形式</h3>
 <ul>
 <li>通常の位置埋め込みの他に、何文目かを表すセグメント埋め込みを各トークンに付与
@@ -91,7 +130,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="6" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="%E4%BA%8B%E5%89%8D%E5%AD%A6%E7%BF%92">事前学習</h3>
 <ul>
 <li>masked LM（双方向タスクとも）: Transformerのエンコーダに文章の穴埋め問題を解かせる
@@ -110,7 +149,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="7" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="bert%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">BERTの使い方</h3>
 <p>様々で、用途にあわせて<span style="color:red">ファインチューニング</span>される（<a href="https://wandb.ai/mukilan/BERT_Sentiment_Analysis/reports/An-Introduction-to-BERT-And-How-To-Use-It--VmlldzoyNTIyOTA1">参考</a>）</p>
 <ul>
@@ -137,7 +176,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="8" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="bert%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9%E7%B6%9A%E3%81%8D">BERTの使い方（続き）</h3>
 <ul>
 <li>抽出型要約
@@ -155,7 +194,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="9" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="11" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h2 id="gptgenerative-pre-trained-transformer">GPT（Generative Pre-trained Transformer）</h2>
 <ul>
 <li>GPT-1</li>
@@ -169,7 +208,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="25" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="10" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="25" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="27" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://upload.wikimedia.org/wikipedia/commons/5/51/Full_GPT_architecture.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="12" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:40%;" data-marpit-pagination-total="27" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="gpt-1-radford2018"><a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">GPT-1 [Radford2018]</a></h3>
 <ul>
 <li>TransformerのデコーダにBERTのように仕事をさせる
@@ -186,7 +225,7 @@
 <p><a href="https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg"><span style="font-size:70%">画像: CC0 (public domain)</span></a></p>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="10" style="" data-marpit-pagination-total="25" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="11" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="" data-marpit-pagination-total="27" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="13" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-1%E3%81%AE%E5%AD%A6%E7%BF%92%E6%96%B9%E6%B3%95%E4%BA%8B%E5%89%8D%E5%AD%A6%E7%BF%92%E3%81%9D%E3%81%AE1">GPT-1の学習方法（事前学習その1）</h3>
 <ul>
 <li>事前学習のデータ: 様々なジャンルの7000冊の未発表書籍からの4.5GBのテキスト（<a href="https://github.com/soskek/bookcorpus">BookCorpus</a>）</li>
@@ -205,7 +244,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="25" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/gpt-1_pt.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="12" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="25" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="14" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="27" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./figs/gpt-1_pt.svg&quot;);background-size:100%;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="14" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="14" style="--footer:ロボットビジョン第7回;--paginate:true;--marpit-advanced-background-split:20%;" data-marpit-pagination-total="27" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h3 id="gpt-1%E3%81%AE%E5%AD%A6%E7%BF%92%E6%96%B9%E6%B3%95%E4%BA%8B%E5%89%8D%E5%AD%A6%E7%BF%92%E3%81%9D%E3%81%AE2">GPT-1の学習方法（事前学習その2）</h3>
 <ul>
 <li>特殊トークンの付加: 文章の始まりに<code>&lt;s&gt;</code>、終わりに<code>&lt;e&gt;</code></li>
@@ -219,7 +258,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="12" style="" data-marpit-pagination-total="25" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="13" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="14" style="" data-marpit-pagination-total="27" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="15" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-1%E3%81%AE%E5%AD%A6%E7%BF%92%E6%96%B9%E6%B3%95%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%81%E3%83%A5%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0">GPT-1の学習方法（ファインチューニング）</h3>
 <ul>
 <li>事前学習後のデコーダの<code>&lt;e&gt;</code>に対応する部分にヘッドをつけて特定の仕事に特化
@@ -235,7 +274,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="14" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="16" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="span-stylecolorred%E3%82%BC%E3%83%AD%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88span%E3%81%A7%E3%81%AE%E4%BD%BF%E7%94%A8%E3%81%AE%E6%A4%9C%E8%A8%8E"><span style="color:red">ゼロショット</span>での使用の検討</h3>
 <ul>
 <li>ファインチューニングなしでGPTを利用</li>
@@ -254,7 +293,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="15" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="17" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-2-radford2019"><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">GPT-2 [Radford2019]</a></h3>
 <ul>
 <li>GPT-1をスケールアップ
@@ -277,7 +316,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="16" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-2%E3%81%AE%E8%83%BD%E5%8A%9B">GPT-2の能力</h3>
 <ul>
 <li>先述のように、「◯◯:」とタスクの指示を入力として受け取って応答
@@ -291,7 +330,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="17" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="19" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-3-brown-2020"><a href="https://arxiv.org/abs/2005.14165">GPT-3 [Brown 2020]</a></h3>
 <ul>
 <li>モデルを大きく、学習量をさらに増やす
@@ -321,7 +360,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="18" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="20" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="%E8%B3%AA%E5%95%8F%E3%81%AE%E6%96%B9%E6%B3%95%E3%81%AE%E8%80%83%E6%A1%88">質問の方法の考案</h3>
 <ul>
 <li>論文ではGPT-3へ質問を次のように分けて入力
@@ -346,7 +385,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="19" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-3%E3%81%AE%E6%88%90%E6%9E%9C">GPT-3の成果</h3>
 <ul>
 <li>少数ショットで4則演算ができるように</li>
@@ -366,7 +405,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="20" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt-4-openai"><a href="https://arxiv.org/abs/2303.08774">GPT-4 [OpenAI]</a></h3>
 <ul>
 <li>社会的な影響から構造が非公開に
@@ -382,7 +421,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="21" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="reinforcement-learning-from-human-feedback-rlhf-christiano-2017">Reinforcement Learning from Human Feedback (RLHF) <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf">[Christiano 2017]</a></h3>
 <ul>
 <li>GPT-4で導入された<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf">（[Ouyang 2022]？）</a>仕組み
@@ -407,7 +446,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="gpt%E3%81%B8%E3%81%AErlhf%E3%81%AE%E9%81%A9%E7%94%A8">GPTへのRLHFの適用</h3>
 <p>論文にあるものはGPT-3で実験</p>
 <ul>
@@ -421,7 +460,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="23" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h3 id="%E3%83%8F%E3%83%AB%E3%82%B7%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%B9%BB%E8%A6%9A">「ハルシネーション（幻覚）」</h3>
 <ul>
 <li>突然変なことを言い始める</li>
@@ -435,7 +474,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="24" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="26" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
 <ul>
 <li>Transformerの応用をみてきた
@@ -452,7 +491,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="25">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="27" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="27">
 <ul>
 <li>参考文献
 <ul>
