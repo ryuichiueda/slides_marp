@@ -205,6 +205,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### 入力と位置情報の追加
 
 - 位置情報を付加する前の入力: $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
+    - 右の例では省略されているが`<EOS>`（文の終わり）などの特殊なトークンも入力として並べる
 - 付加後の入力: $H_\text{enc} = \sqrt{D}E + P$
    - $D$: $\boldsymbol{e}$の次元
 - 位置情報の加え方（おさらい）
@@ -216,16 +217,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 \end{cases}$
 
 ![bg right:25% 95%](./figs/sentence.png)
-
----
-
-### Transformerへの入力（エンコーダ）
-
-- 文章: サブワード単位のトークン（単語をより細かく文を区切って埋め込みをしたもの）の分散表現でのベクトルを並べたもの
-    - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$という行列に
-    - 右の例では省略されているが`<EOS>`（文の終わり）などの特殊なトークンも入力として並べる
-
-![bg right:30% 95%](./figs/sentence.png)
 
 
 ---
