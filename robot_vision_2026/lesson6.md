@@ -241,11 +241,9 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### 層正則化（layer normalization。既出）
 
 - 図中に3つある「Norm」
-- 各サブワードのベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の元の合計と分散を正規化して元ごとの影響力を揃える
-    - どう正規化するか？
-        - 1: $h_{1:D}$の平均値が$0$、標準偏差が$1$に
-        - 2: $h_i$ごとに$\gamma_i, \beta_i$（学習対象）というパラメータを用意して$\gamma_ih_i + \beta_i$に変換
-            - 要素の位置ごとに重要度が異なるため
+- 方法
+    - 各サブワードのベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の元の合計と分散を正規化して元ごとの影響力を揃える
+    - 各元ごとに拡大率$\gamma_i$、シフト量$\beta_i$を学習して影響力を調整
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
