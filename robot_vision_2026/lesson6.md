@@ -236,39 +236,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ![bg right:25% 95%](./figs/sentence.png)
 
 
-
----
-
-### 位置情報の追加
-
-- DDPMで使ったもの（というよりTransformerでの使用のほうが歴史的に早い）
-- エンコーダに入力する$E$の各トークンに、文章中での位置情報（位置符号）を付加
-    - $H = \sqrt{D}E + P$
-        - 位置情報: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
-- 位置情報のつけかたはDDPMのときの説明のとおり
-    - 学習させる方法もある
-
-![bg right:30% 100%](./figs/position_encoding.png)
-
----
-
-## Transformer（翻訳用途）の構造
-
-- エンコーダ、デコーダで構成される
-    - 右図の左: エンコーダ
-        - 入力: 翻訳前の文
-        （例: これはペンです。）
-    - 右図の右: デコーダ
-        - 入力: 「翻訳開始」を表すトークンあるいは途中まで翻訳した文（例: This is）
-        - 出力: 次の単語（例: a）
-
-<center style="padding-top:0.5em">順に見ていきましょう</center>
-
-![bg right:45% 100%](https://upload.wikimedia.org/wikipedia/commons/3/34/Transformer%2C_full_architecture.png)
-
-[<span style="font-size:70%">画像: CC-BY-4.0 by dvgodoy</span>](https://commons.wikimedia.org/wiki/File:Transformer,_full_architecture.png)
-
-
 ---
 
 ### 層正則化（layer normalization。既出）
@@ -500,3 +467,18 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 次の入力: `<SOS> I want`
     - ・・・と文ができていく
     （実際はエンコーダと同じく行列$E$を入力）
+
+---
+
+---
+
+### 位置情報の追加
+
+- DDPMで使ったもの（というよりTransformerでの使用のほうが歴史的に早い）
+- エンコーダに入力する$E$の各トークンに、文章中での位置情報（位置符号）を付加
+    - $H = \sqrt{D}E + P$
+        - 位置情報: $P = [\boldsymbol{p}_1\ \boldsymbol{p}_2\ \dots\ \boldsymbol{p}_N]^\top$
+- 位置情報のつけかたはDDPMのときの説明のとおり
+    - 学習させる方法もある
+
+![bg right:30% 100%](./figs/position_encoding.png)
