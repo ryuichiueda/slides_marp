@@ -326,6 +326,22 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
+### 具体的な計算
+
+- クエリ: $Q= W_\text{Q}H_\text{dec}$という行列
+    - 以下、$W_\text{X}$は学習で獲得する行列
+- キー: クエリに反応するトークンを選択
+    - $K= W_\text{K}H_\text{enc}'$を用意して$QK^\top$を計算
+- バリュー: 重み付けの値
+    - $V= W_\text{V}H_\text{enc}'$
+- 出力: Softmax$\Big(\dfrac{QK^\top}{\sqrt{D}}\Big)V$
+
+そうしろと人間が言ってるわけではないが、こういう構造を用意してあげるとそういうふうに学習
+
+![bg right:35% 95%](./figs/kvq.png)
+
+---
+
 ### デコーダの先
 
 - 全結合層でデーコーダの入力の次の単語を予測
