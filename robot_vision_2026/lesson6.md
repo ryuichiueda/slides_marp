@@ -185,17 +185,11 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
-### 翻訳Transformerの使い方
+### 翻訳Transformerの使われ方
 
-- デコーダの場合は途中までの文を入力
-    - `<SOS> I want to eat`など
-        - （`<SOS>`: start of sentence）
-- `<SOS>`から始めて、翻訳したものを次に入力に回す
-    - 最初の入力: `<SOS>`
-    - 次の入力: `<SOS> I`
-    - 次の入力: `<SOS> I want`
-    - ・・・と文ができていく
-    （実際はエンコーダと同じく行列$E$を入力）
+- 例: 日本語「牛丼が食べたい」の英訳
+- エンコーダ側に日本語の文を入力
+
 
 ![bg right:30% 95%](./figs/translate.png)
 
@@ -487,3 +481,15 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 学習の際にマスク
 - その他の参考文献: [[菊田2025]](https://gihyo.jp/book/2025/978-4-297-15078-5)
 
+
+---
+
+- デコーダの場合は途中までの文を入力
+    - `<SOS> I want to eat`など
+        - （`<SOS>`: start of sentence）
+- `<SOS>`から始めて、翻訳したものを次に入力に回す
+    - 最初の入力: `<SOS>`
+    - 次の入力: `<SOS> I`
+    - 次の入力: `<SOS> I want`
+    - ・・・と文ができていく
+    （実際はエンコーダと同じく行列$E$を入力）
