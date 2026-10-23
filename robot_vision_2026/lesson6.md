@@ -253,6 +253,9 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 - 自己注意機構
     - 注目すべきサブワードを強調
+    - おさらい
+        - 出力: $X'=$Softmax$(QK^\top / \sqrt{D})V$
+            - $Q= XW_Q$、$K= XW_K$、$V= XW_V$
 - フィードフォワード層
     - 要はアフィン+活性化関数層
         - 自己注意機構を通った文が通される
