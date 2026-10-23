@@ -190,6 +190,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - 例: 日本語「牛丼が食べたい」の英訳
 - エンコーダ側に日本語の文を入力
 - デコーダ側に次のように作りかけの文を何度も入力
+    - 入力:「」-> 出力: 「I」
+    - 入力:「I」-> 出力: 「want」
+    - 入力:「I want」-> 出力: 「to」
+    - ・・・
 
 
 ![bg right:30% 95%](./figs/translate.png)
