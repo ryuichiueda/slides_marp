@@ -208,10 +208,10 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - 付加後の入力: $H_\text{enc} = \sqrt{D}E + P$
    - $D$: $\boldsymbol{e}$の次元
    - $P = [\boldsymbol{p}_1 \ \boldsymbol{p}_2 \ \dots \ \boldsymbol{p}_N]^\top$
-- $\boldsymbol{p}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
-   - $p_{t,i} = \begin{cases}
-        \sin ( t \beta^{-i/D})  & (i\%2 = 0) \\
-        \cos ( t \beta^{-(i-1)/D}) & (i\%2 = 1) 
+        - $\boldsymbol{p}_t = (p_{t,0} \quad p_{t,1} \quad \cdots \quad p_{t,D})^\top$
+           - $p_{t,i} = \begin{cases}
+                \sin ( t \beta^{-i/D})  & (i\%2 = 0) \\
+                \cos ( t \beta^{-(i-1)/D}) & (i\%2 = 1) 
 \end{cases}$
 
 ![bg right:25% 95%](./figs/sentence.png)
