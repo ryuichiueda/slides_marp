@@ -202,12 +202,15 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
+### 入力と位置情報の追加
+
+- 位置情報を付加する前の入力: $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
 - 入力（図の下方）: $H_\text{enc} = \sqrt{D}E + P$
-    - $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
         - 文（$D$次元ベクトルで表現されたトークンを並べたもの）
 - 出力: デコーダでの仕事に応じて重みの変わった$H_\text{enc}'$
     - 文脈が反映されている
 
+![bg right:25% 95%](./figs/sentence.png)
 
 ---
 
