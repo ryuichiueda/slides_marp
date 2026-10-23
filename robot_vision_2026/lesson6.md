@@ -399,7 +399,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 - 右図の構成で訓練すると文章をランダムに生成していける
     - 文脈が考慮されているので、かなり自然な出力が得られる（内容が正しい保証はなにもなし）
-- GPTはデコーダを使用（次々回以降にやります）
+- GPTはデコーダを使用（次回にやります）
 
 ![bg right:20% 90%](./figs/transformer_encoder_generator.png)
 
