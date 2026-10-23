@@ -389,13 +389,9 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 文の先頭に`[CLS]`というトークン（クラストークン）を加えて学習
     - 学習すると出力のクラストークンに分析のための情報が集まるように
 - 画像中の物体認識は基本この構造がこのまま使える
-    - 次ページ
+    - Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)（次回）
 
 ![bg right:30% 100%](./figs/sentiment_analysis.png)
-
----
-
-### Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
 ---
 
@@ -405,7 +401,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 - 右図の構成で訓練すると文章をランダムに生成していける
     - 文脈が考慮されているので、かなり自然な出力が得られる（内容が正しい保証はなにもなし）
-- GPTはデコーダを使用（次回にやります）
+- GPTはデコーダを使用（これも次回）
 
 ![bg right:20% 90%](./figs/transformer_encoder_generator.png)
 
