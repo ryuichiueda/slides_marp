@@ -185,6 +185,22 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 
 ---
 
+### 翻訳Transformerの使い方
+
+- デコーダの場合は途中までの文を入力
+    - `<SOS> I want to eat`など
+        - （`<SOS>`: start of sentence）
+- `<SOS>`から始めて、翻訳したものを次に入力に回す
+    - 最初の入力: `<SOS>`
+    - 次の入力: `<SOS> I`
+    - 次の入力: `<SOS> I want`
+    - ・・・と文ができていく
+    （実際はエンコーダと同じく行列$E$を入力）
+
+![bg right:30% 95%](./figs/translate.png)
+
+---
+
 ### エンコーダ
 
 - 入力: サブワードの埋め込み表現の列
@@ -219,21 +235,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ![bg right:25% 95%](./figs/sentence.png)
 
 
----
-
-### Transformerへの入力（デコーダ）
-
-- デコーダの場合は途中までの文を入力
-    - `<SOS> I want to eat`など
-        - （`<SOS>`: start of sentence）
-- `<SOS>`から始めて、翻訳したものを次に入力に回す
-    - 最初の入力: `<SOS>`
-    - 次の入力: `<SOS> I`
-    - 次の入力: `<SOS> I want`
-    - ・・・と文ができていく
-    （実際はエンコーダと同じく行列$E$を入力）
-
-![bg right:30% 95%](./figs/translate.png)
 
 ---
 
