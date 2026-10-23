@@ -205,7 +205,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### 入力と位置情報の追加
 
 - 位置情報を付加する前の入力: $E=[\boldsymbol{e}_{w_1}\ \boldsymbol{e}_{w_2}\ \dots\ \boldsymbol{e}_{w_N}]^\top$
-- 入力（図の下方）: $H_\text{enc} = \sqrt{D}E + P$
+- 付加後の入力: $H_\text{enc} = \sqrt{D}E + P$
     - $D$: $\boldsymbol{e}$の次元
 
 ![bg right:25% 95%](./figs/sentence.png)
