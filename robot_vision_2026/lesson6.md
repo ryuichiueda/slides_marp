@@ -330,6 +330,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### 交差注意機構
 
 - デコーダの入力をクエリとしてエンコーダの値を重み付けして出力
+    - 途中までの翻訳文より元の全文のほうが重要っぽい
 - 次のようにクエリ、キー、バリューの行列を作成
     - $Q= W_\text{Q}H_\text{dec}$
     - $K= W_\text{K}H_\text{enc}'$<span style="color:red">$\leftarrow$エンコーダの出力を使用</span>
