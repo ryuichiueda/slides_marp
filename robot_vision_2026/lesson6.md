@@ -320,7 +320,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 翻訳途中の文の文脈を考慮して$H_\text{dec}$を操作
     - 図中の「Masked」: 学習の際に答えを隠す機能
         - 学習では次の単語の予測を1単語ずつではなく一気に行うので、答えを教えないようにパラメータにマスクがけ
-            - 例「This is a pen.」
+            - 例「`<BOS>` This is a pen.」を入力して「This is a pen. `<EOS>`」を予測させるときに、isの予測のところでis a pen.の情報を隠す
 - 交差注意機構（次ページ）
     - エンコーダの出力$H'_\text{enc}$を反映
 
@@ -331,7 +331,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### 交差注意機構
 
 - デコーダの入力（途中までの翻訳文）をクエリとしてエンコーダの値を重み付けして出力
-    - 途中までの翻訳文より元の全文のほうが重要っぽい
 - 次のようにクエリ、キー、バリューの行列を作成
     - $Q= W_\text{Q}H_\text{dec}$
     - $K= W_\text{K}H_\text{enc}'$<span style="color:red">$\leftarrow$エンコーダの出力を使用</span>
