@@ -346,15 +346,11 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### デコーダの先
 
 - 全結合層でデーコーダの入力の次の単語を予測
-    - skip-gramのように学習可能
+    - 入力: デコーダの出力の最後のトークン
     - 出力は各トークンが次にくる確率
         - トークンの種類だけ次元がある
 - この部分の誤差を逆伝播することで学習が進行
     - 損失関数: 交差エントロピー
-        - $-\sum_{i=1}^{N_\text{token}} P(\boldsymbol{e}_i)\log Q(\boldsymbol{e}_i)$
-        $= - \log Q(\boldsymbol{e}^*)$
-            - $P$が正解で$Q$が出力
-            - $\boldsymbol{e}^*$: 正解のトークン
 
 ![bg right:40% 125%](./figs/transformer_prediction.png)
 
