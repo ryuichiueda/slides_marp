@@ -48,21 +48,6 @@ marp: true
     - 例: 「青い・・・」とあったら青に対応する出力を強調するなど（図4）
     - 実際は不要な情報にマスクをかける方向に働くことが多い（図5）
 
----
-
-## Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
-
-- Transformerのエンコーダを画像に転用
-    - 画像をブロック状に切って単語のように扱う（右図）
-    - 右図のCLS: クラストークン
-        - 文の分類と同じ
-        - 全結合層（MLP Head）に通す
-- 画像をブロック状に扱うのはCNNと同じだが、CNNは遠くのブロックの関係性を見るのが苦手
-
-[<span style="font-size:60%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)<span style="font-size:70%">（[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)のFig.1にも構成図）</span>
-
-![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
-
 
 ---
 

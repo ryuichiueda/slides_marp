@@ -21,26 +21,25 @@ marp: true
 
 ## 今日やること
 
-- 前回の補足
+- Vision Transformer
 - BERT
 - GPT
 
-
 ---
 
-## 層正規化（前回の補足）
+## Vision Transformer（ViT）[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)
 
-- あるレイヤーの出力を正規化して出力
-- 方法: 渡された各ベクトル$\boldsymbol{x}=(x_1, x_2, \dots, x_d)$に対し
-    - ベクトルの要素の平均値$0$、分散$1$になるように正規化
-    - $i$番目の要素を$\gamma_i$倍して$\beta_i$だけシフト
-        - $\gamma_i$、$\beta_i$は学習対象のパラメータ
-- 役割
-    - 値が極端にならないようにする
-    - ベクトルのある番目の要素を強調したり弱くしたり（注目度を操作）
-        - あとで$\gamma_i$、$\beta_i$を別の情報から学習する仕組みが出てきます
+- Transformerのエンコーダを画像に転用
+    - 画像をブロック状に切って単語のように扱う（右図）
+    - 右図のCLS: クラストークン
+        - 文の分類と同じ
+        - 全結合層（MLP Head）に通す
+- 画像をブロック状に扱うのはCNNと同じだが、CNNは遠くのブロックの関係性を見るのが苦手
 
-![bg right:20% 100%](./figs/layer_normalization.png)
+[<span style="font-size:60%">画像: CC-BY-4.0 by Daniel Voigt Godoy</span>](https://commons.wikimedia.org/wiki/File:Vision_Transformer.png)<span style="font-size:70%">（[[Dosovitskiy 2020]](https://arxiv.org/abs/2010.11929)のFig.1にも構成図）</span>
+
+![bg right:40% 100%](https://upload.wikimedia.org/wikipedia/commons/9/93/Vision_Transformer.png)
+
 
 ---
 
