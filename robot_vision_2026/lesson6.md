@@ -313,13 +313,13 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ### デコーダの本体
 
 - （自己注意機構+<span style="color:red">交差注意機構</span>+フィードフォワード層）$\times N$
-- 自己注意機構
+- 自己注意機構の役割
     - 翻訳途中の文の文脈を考慮して$H_\text{dec}$を操作
     - 図中の「Masked」の意味: 文の後半にマスクをかける仕組み
         - 学習の際、完成された翻訳例が入力されてくるので必要に
         - 例: 「This is」の次を考える訓練をするときに、「This is a pen.」が入力されてくるので、$W_X$の「a pen」に対応する要素にマスク
-- 交差注意機構
-    - デコーダの出力$H'_\text{enc}$を反映
+- 交差注意機構（次ページ）
+    - エンコーダの出力$H'_\text{enc}$を反映
 
 ![bg right:15% 100%](./figs/transformer_decoder2.png)
 
