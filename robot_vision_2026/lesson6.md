@@ -195,6 +195,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 入力:「I want」-> 出力: 「to」
     - ・・・
 
+デコーダ側は1単語ずつ推論（実際はingなどのサブワード単位でスペースなども推論で出力）
+
 
 ![bg right:30% 95%](./figs/translate.png)
 
