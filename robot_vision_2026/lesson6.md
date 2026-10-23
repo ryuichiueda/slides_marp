@@ -244,6 +244,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 - 方法
     - 各サブワードのベクトル$\boldsymbol{h}=(h_1 \ h_2 \ \cdots \ h_D)^\top$の元の合計と分散を正規化して元ごとの影響力を揃える
     - 各元ごとに拡大率$\gamma_i$、シフト量$\beta_i$を学習して影響力を調整
+- 補足: オリジナルのモデルと右図では位置が違う
+    - オリジナル: 青、黄色の層のあと
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
 
