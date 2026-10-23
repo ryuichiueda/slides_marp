@@ -260,6 +260,8 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 要はアフィン+活性化関数層
         - 自己注意機構を通った文が通される
         - 非線形な活性化関数（オリジナルはReLU）を通して特徴をより強調
+- 図のようにスキップ接続を使用
+    - 深いので使用しないと学習無理
 
 
 ![bg right:28% 95%](./figs/transformer_encoder.png)
