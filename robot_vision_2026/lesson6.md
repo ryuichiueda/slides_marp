@@ -373,7 +373,6 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
 ## Transformerの応用
 
 - 感情分析
-- 画像処理
 - 文章生成
 
 （より高度なものは次回以降）
