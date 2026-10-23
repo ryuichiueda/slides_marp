@@ -257,6 +257,20 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
+## FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
+
+- 構造の例: 論文の図3
+    - 補足
+        - BN: バッチ正則化の層。やってませんが。
+        - GRU: Gated Recurrent Unit（Transformerで置き換えられる）
+- 役割: 各層、各チャンネルの出力の特定の要素を強調
+    - 例: 「青い・・・」とあったら青に対応する出力を強調するなど（図4）
+    - 実際は不要な情報にマスクをかける方向に働くことが多い（図5）
+
+
+
+---
+
 ### 分類器ありガイダンス[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233): 方法・アイデア
 
 - 学習済みのデコーダ$p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$を準備
