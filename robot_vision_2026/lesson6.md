@@ -196,7 +196,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - ・・・
         - `<BOS>`: beginning of sentenceを表す記号
 - デコーダ側は続きを1つずつ推論
-    - 「1つずつ」の単位: ingなどのサブワードやスペース、`<EOS>`（文末）など
+    - 「1つずつ」の種類: ingなどのサブワードやスペース、`<EOS>`（文末）など
 
 
 ![bg right:30% 95%](./figs/translate.png)
