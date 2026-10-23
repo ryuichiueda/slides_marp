@@ -96,7 +96,7 @@ marp: true
 
 - Transformerのエンコーダを用いたモデル
     - 応用: Google検索
-- BERT<span style="font-size:60%;vertical-align:-5pt">BASE</span>、BERT<span style="font-size:60%;vertical-align:-5pt">LARGE</span>がある
+- BERT<span style="font-size:60%;vertical-align:-5pt">BASE</span>、BERT<span style="font-size:60%;vertical-align:-5pt">LARGE</span>があった
     - エンコーダの数: 前者が12、後者が24
     - パラメータの数: 前者が110M、後者が340M
 - 訓練方法（ANNの構成: [原著のFig.1](https://aclanthology.org/N19-1423.pdf)）
