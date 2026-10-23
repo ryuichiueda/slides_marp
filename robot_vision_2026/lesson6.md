@@ -321,6 +321,7 @@ $\qquad\qquad\qquad\qquad$![w:600](./figs/cbow.png)
     - 図中の「Masked」: 学習の際に答えを隠す機能
         - 学習では次の単語の予測を1単語ずつではなく一気に行うので、答えを教えないようにパラメータにマスクがけ
             - 例「`<BOS>` This is a pen.」を入力して「This is a pen. `<EOS>`」を予測させるときに、isの予測のところでis a pen.の情報を隠す
+                - `<EOS>`: end of sentence
 - 交差注意機構（次ページ）
     - エンコーダの出力$H'_\text{enc}$を反映
 
