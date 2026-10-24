@@ -463,15 +463,44 @@
 <li>パラメータ: GPT-3の数倍〜数十倍？（単位が兆の可能性）</li>
 </ul>
 </li>
-<li><span style="color:red">画像も入力可能に</span>
+<li><span style="color:red">画像も入力可能に</span></li>
+<li>際どい回答を避けるために強化学習が使われる
 <ul>
-<li>画像+テキストについては次回</li>
+<li>次回</li>
 </ul>
 </li>
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="25" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
+<ul>
+<li>Transformerの応用をみてきた
+<ul>
+<li>画像も扱える</li>
+<li>社会に大きな影響（混乱？）を与えている</li>
+<li>データとパラメータが増えるほど賢く
+<ul>
+<li>地球上で生み出された文章を全部読み込むと一段落？？？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<footer>ロボットビジョン第7回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="26" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
+<ul>
+<li>参考文献
+<ul>
+<li>山田他: 大規模言語モデル入門, 技術評論社, 2023.</li>
+<li>菊田 遥平: 原論文から解き明かす生成AI, 技術評論社, 2025.</li>
+</ul>
+</li>
+</ul>
+<footer>ロボットビジョン第7回</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="27" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
 <h3 id="reinforcement-learning-from-human-feedback-rlhf-christiano-2017">Reinforcement Learning from Human Feedback (RLHF) <a href="https://proceedings.neurips.cc/paper_files/paper/2017/file/d5e2c0adad503c91f91df240d0cd4e49-Paper.pdf">[Christiano 2017]</a></h3>
 <ul>
 <li>GPT-4で導入された<a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/b1efde53be364a73914f58805a001731-Paper-Conference.pdf">（[Ouyang 2022]？）</a>仕組み
@@ -496,7 +525,7 @@
 </ul>
 <footer>ロボットビジョン第7回</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="26" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="28" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
 <h3 id="gpt%E3%81%B8%E3%81%AErlhf%E3%81%AE%E9%81%A9%E7%94%A8">GPTへのRLHFの適用</h3>
 <p>論文にあるものはGPT-3で実験</p>
 <ul>
@@ -505,34 +534,6 @@
 <li>ステップ1: プロンプトを選んで、人（精鋭部隊）が回答を作成して入出力の例を作り、事前学習で作ったモデルが入出力を再現するようにファインチューニング</li>
 <li>ステップ2: ステップ1のモデルがひとつのプロンプトに対して出力する数種類の文を人間が点数づけ。さらにステップ1のモデルのヘッドをかえて報酬値を出力するようにして、文に対する好ましさを報酬として出力するモデルを作成。人間の点数付けを教師にして学習</li>
 <li>ステップ3: ステップ2で作った報酬モデル（報酬関数として機能）を使い、報酬が高い出力ができるようにモデルを強化学習</li>
-</ul>
-</li>
-</ul>
-<footer>ロボットビジョン第7回</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="27" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
-<h2 id="%E3%81%BE%E3%81%A8%E3%82%81">まとめ</h2>
-<ul>
-<li>Transformerの応用をみてきた
-<ul>
-<li>画像も扱える</li>
-<li>社会に大きな影響（混乱？）を与えている</li>
-<li>データとパラメータが増えるほど賢く
-<ul>
-<li>地球上で生み出された文章を全部読み込むと一段落？？？</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<footer>ロボットビジョン第7回</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-footer="ロボットビジョン第7回" data-paginate="true" lang="ja-JP" data-marpit-pagination="28" style="--footer:ロボットビジョン第7回;--paginate:true;" data-marpit-pagination-total="28">
-<ul>
-<li>参考文献
-<ul>
-<li>山田他: 大規模言語モデル入門, 技術評論社, 2023.</li>
-<li>菊田 遥平: 原論文から解き明かす生成AI, 技術評論社, 2025.</li>
 </ul>
 </li>
 </ul>
