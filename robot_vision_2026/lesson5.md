@@ -232,7 +232,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 拡散モデルでも出力をコントロールしたい
 
-- adaptive $\circ\circ$ normalization
+- FiLM / adaptive $\circ\circ$ normalization
+    - 注意: 拡散モデル以外でも使う
 - 生成したいものが生成されるようにノイズを誘導
     - 分類器あり
     - 分類器なし（こっちが主流）
