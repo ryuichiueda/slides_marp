@@ -246,6 +246,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - 式: $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \boldsymbol{x} + \boldsymbol{\beta}(\boldsymbol{c})$
 - 構造の例: 論文の図3
     - 補足
+        - 各残差接続のブロックごとに$\boldsymbol{\gamma},\boldsymbol{\beta}$を学習
         - GRU: Gated Recurrent Unit（言葉をベクトルに変換。今は別のもので置き換えられる）
 - 役割: 各層、各チャンネルの出力の特定の要素を強調
     - 例: 「青い・・・」とあったら青に対応する出力を強調するなど（図4）
