@@ -240,33 +240,33 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### FiLM / adaptive $\circ\circ$ normalization 
+### FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
 
-- FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
-    - 入力$\boldsymbol{c}$（ラベルやその他入力）に応じて強弱をつける
-    - 式: $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \boldsymbol{x} + \boldsymbol{\beta}(\boldsymbol{c})$
-- adaptive $\circ\circ$ normalization（Ada$\circ\circ$）
-    - $\boldsymbol{x}$を正則化してFiLM
-        - AdaBN: 適応的バッチ正則化
-        - AdaGN: 適応的グループ正則化[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
-            - グループ正則化: ひとつの入力$\boldsymbol{x}$内の要素ををいくつかのグループに分けてそれぞれで正則化
-        - AdaLN: 適応的レイヤー正則化
-            - レイヤー正則化: ひとつの入力$\boldsymbol{x}$内の要素を正則化（グループ分けしない）
+- 入力$\boldsymbol{c}$（ラベルやその他入力）に応じて強弱をつける
+- 式: $\boldsymbol{y} = \boldsymbol{\gamma}(\boldsymbol{c}) \odot \boldsymbol{x} + \boldsymbol{\beta}(\boldsymbol{c})$
+- 構造の例: 論文の図3
+    - 補足
+        - GRU: Gated Recurrent Unit（言葉をベクトルに変換。今は別のもので置き換えられる）
+- 役割: 各層、各チャンネルの出力の特定の要素を強調
+    - 例: 「青い・・・」とあったら青に対応する出力を強調するなど（図4）
+    - 実際は不要な情報にマスクをかける方向に働くことが多い（図5）
 
 
 ![bg right:20% 90%](./figs/ada.png)
 
 ---
 
-## FiLM（Feature-wise Linear Modulation）[[Perez 2017]](https://arxiv.org/abs/1709.07871)
+### adaptive $\circ\circ$ normalization（Ada$\circ\circ$）
 
-- 構造の例: 論文の図3
-    - 補足
-        - BN: バッチ正則化の層。やってませんが。
-        - GRU: Gated Recurrent Unit（Transformerで置き換えられる）
-- 役割: 各層、各チャンネルの出力の特定の要素を強調
-    - 例: 「青い・・・」とあったら青に対応する出力を強調するなど（図4）
-    - 実際は不要な情報にマスクをかける方向に働くことが多い（図5）
+- $\boldsymbol{x}$を正則化してFiLM
+    - AdaBN: 適応的バッチ正則化
+    - AdaGN: 適応的グループ正則化[[Dhariwal 2021]](https://arxiv.org/abs/2105.05233)
+        - グループ正則化: ひとつの入力$\boldsymbol{x}$内の要素ををいくつかのグループに分けてそれぞれで正則化
+    - AdaLN: 適応的レイヤー正則化
+        - レイヤー正則化: ひとつの入力$\boldsymbol{x}$内の要素を正則化（グループ分けしない）
+
+
+![bg right:20% 90%](./figs/ada.png)
 
 
 
