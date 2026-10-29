@@ -293,7 +293,8 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     $\Longrightarrow \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
     - この式が成り立つように$\boldsymbol{x}_i$をいじる（ずらす）
-        - 具体的にはDDPMが出してきた$\boldsymbol{x}_i$に$p_{\phi}$のANNの出力を作用させる
+        - 具体的にはデコーダが出してきた$\boldsymbol{x}_i$に$p_{\phi}$のANNの出力を作用させる
+        - 次ページではデコーダの出力を$\boldsymbol{\mu}$、ずらしたあとの画像を$\boldsymbol{x}_i$で表現
 
 ---
 
