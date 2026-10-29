@@ -320,6 +320,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
   $\qquad\qquad\qquad\qquad= -\frac{1}{2}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})^\top\Sigma^{-1}(\boldsymbol{x}_i - \boldsymbol{\mu} - \Sigma \boldsymbol{g})+$定数
   $\qquad\qquad\qquad\qquad= \log \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$+定数
 - $\Longrightarrow p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
+    - 分布の中心が$\boldsymbol{\mu}$から$\boldsymbol{\mu} + \Sigma \boldsymbol{g}$に移動
     - つまり、ずらす量は$\Sigma \boldsymbol{g}$
         - ラベル$y$の確率が上がる方向にずらす
     - DDPMのデコーダでは$\Sigma$は時刻に対して固定
