@@ -8,7 +8,7 @@ style: |
     }
 ---
 
-<!-- footer: "ロボットビジョン第4.5回" -->
+<!-- footer: "ロボットビジョン第5回" -->
 
 # ロボットビジョン
 
@@ -284,7 +284,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### ずらし方の導出（1/2）
+### ずらし方の導出（1/3）
 
 - 逆拡散過程をラベル$y$で条件付けしてベイズの定理で分類器とデコーダに分解
     - $p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) 
@@ -292,6 +292,12 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     = \eta p_\boldsymbol{\phi}(y| \boldsymbol{x}_i)p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1})$
     $\Longrightarrow \log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
+    - この式が成り立つように$\boldsymbol{x}_i$をいじる（ずらす）
+
+---
+
+### ずらし方の導出（2/3）
+
 - 分類器の分布の式の対数をテイラー展開
     - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
@@ -301,7 +307,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ---
 
-### ずらし方の導出（2/2）
+### ずらし方の導出（3/3）
 
 - $\log p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) =
     \log p_\boldsymbol{\phi}(y| \boldsymbol{x}_i) + \log p_\boldsymbol{\theta}(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}) +$定数
