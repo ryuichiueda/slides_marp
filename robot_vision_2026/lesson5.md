@@ -306,7 +306,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
     $\ \quad\qquad\qquad= (\boldsymbol{x}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
         - $\boldsymbol{\mu}$: デコーダの出力
         - $\boldsymbol{g} = \nabla_{\boldsymbol{x}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}$: 左辺の値が一番増える$\boldsymbol{x}$の向き
-- $\boldsymbol{g}$の計算方法: $y$を指定して、識別器の出力を誤差逆伝播
+- $\boldsymbol{g}$の計算方法: $y$を指定して、識別器の出力（確率の対数）を誤差逆伝播
     - $\boldsymbol{g} = 
 J_{\boldsymbol{f}^{(1)}}(\boldsymbol{x}^{(1)})^\top
 \cdots
