@@ -328,7 +328,7 @@ J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
 - $\Longrightarrow p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
     - 分布の中心が$\boldsymbol{\mu}$から$\boldsymbol{\mu} + \Sigma \boldsymbol{g}$に移動$\Longrightarrow$ずらす量は$\Sigma \boldsymbol{g}$
         - ラベル$y$の確率が上がる方向にずらす
-    - DDPMのデコーダでは$\Sigma$は時刻に対して固定なので既知
+    - DDPMのデコーダでは$\Sigma$が時刻に対して固定なので既知
 
 ---
 
