@@ -300,12 +300,12 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### ずらし方の導出（2/3）
 
-- 分類器の分布の式の対数をテイラー展開
+- $\boldsymbol{x}_i$を$\boldsymbol{\mu}$から少しずらしたときに、指定したラベル$y$の確率の変化量を計算できるように、$\boldsymbol{\mu}$まわりでテイラー展開
     - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
     $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
         - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。デコーダで出力可能）
-        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{\mu}$において$y$に対して識別器が出す確率の対数の勾配ベクトル
-            - 誤差逆伝播に使う各層のヤコビ行列の積から$y$に対応する特定の列 or 行を取り出すと計算できる（たぶん。ここらへん未調査）
+        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{\mu}$において、ラベルが$y$である確率の対数を
+        - に対して識別器が出す確率の対数の勾配ベクトル
 
 ---
 
