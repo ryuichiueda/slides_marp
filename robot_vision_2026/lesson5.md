@@ -300,12 +300,13 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### ずらし方の導出（2/3）
 
-- $\boldsymbol{x}_i$を$\boldsymbol{\mu}$から少しずらしたときの、指定したラベル$y$の確率の変化量を計算できるように、$\boldsymbol{\mu}$まわりでテイラー展開
-    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) \approx \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
-    $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
+- $\log p_\boldsymbol{\phi}(y | \boldsymbol{x})$を近似
+    - $\boldsymbol{x}$の空間で$\boldsymbol{\mu}$まわりでテイラー展開
+    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}) \approx \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}+(\boldsymbol{x}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}$
+    $\ \quad\qquad\qquad= (\boldsymbol{x}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
         - $\boldsymbol{\mu}$: デコーダの出力
-        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{\mu}$において、ラベルが$y$である確率の対数を
-        - に対して識別器が出す確率の対数の勾配ベクトル
+        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}$: 左辺の値が一番増える$\boldsymbol{x}$の向き
+- $\boldsymbol{g}$の計算方法
 
 ---
 
