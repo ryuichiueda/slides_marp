@@ -300,12 +300,18 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 
 ### ずらし方の導出（2/3）
 
-- 分類器の分布の式の対数をテイラー展開
-    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i}) = \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}+(\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$
-    $\ \quad\qquad\qquad= (\boldsymbol{x}_{i}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
-        - $\boldsymbol{\mu}$: $\boldsymbol{x}_{i}$の分布の平均値（縦ベクトル。デコーダで出力可能）
-        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}_{i}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x}_{i})|_{\boldsymbol{x}_{i}=\boldsymbol{\mu}}$: $\boldsymbol{\mu}$において$y$に対して識別器が出す確率の対数の勾配ベクトル
-            - 誤差逆伝播に使う各層のヤコビ行列の積から$y$に対応する特定の列 or 行を取り出すと計算できる（たぶん。ここらへん未調査）
+- $\log p_\boldsymbol{\phi}(y | \boldsymbol{x})$を近似
+    - $\boldsymbol{x}$の空間で$\boldsymbol{\mu}$まわりでテイラー展開
+    - $\log p_\boldsymbol{\phi}(y | \boldsymbol{x}) \approx \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}+(\boldsymbol{x}- \boldsymbol{\mu})^\top \nabla_{\boldsymbol{x}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}$
+    $\ \quad\qquad\qquad= (\boldsymbol{x}- \boldsymbol{\mu})^\top \boldsymbol{g}+$定数
+        - $\boldsymbol{\mu}$: デコーダの出力
+        - $\boldsymbol{g} = \nabla_{\boldsymbol{x}} \log p_\boldsymbol{\phi}(y | \boldsymbol{x})|_{\boldsymbol{x}=\boldsymbol{\mu}}$: 左辺の値が一番増える$\boldsymbol{x}$の向き
+- $\boldsymbol{g}$の計算方法: $y$を指定して、識別器の出力（確率の対数）を誤差逆伝播
+    - $\boldsymbol{g} = 
+J_{\boldsymbol{f}^{(1)}}(\boldsymbol{x}^{(1)})^\top
+\cdots
+J_{\boldsymbol{f}^{(n)}}(\boldsymbol{x}^{(n)})^\top
+\boldsymbol{e}$ 
 
 ---
 
@@ -322,7 +328,7 @@ $n$個のデータの行列中の位置に関係なく重み付け可能
 - $\Longrightarrow p(\boldsymbol{x}_i | \boldsymbol{x}_{i+1}, y) = \mathcal{N}(\boldsymbol{x}_{i} | \boldsymbol{\mu} + \Sigma \boldsymbol{g}, \Sigma)$
     - 分布の中心が$\boldsymbol{\mu}$から$\boldsymbol{\mu} + \Sigma \boldsymbol{g}$に移動$\Longrightarrow$ずらす量は$\Sigma \boldsymbol{g}$
         - ラベル$y$の確率が上がる方向にずらす
-    - DDPMのデコーダでは$\Sigma$は時刻に対して固定なので既知
+    - DDPMのデコーダでは$\Sigma$が時刻に対して固定なので既知
 
 ---
 
