@@ -6,7 +6,7 @@ marp: true
 
 # ロボットビジョン
 
-## 第8回: 画像処理と言語処理の融合
+## 第8回: 画像処理/生成の進化と言語処理との融合
 
 千葉工業大学 上田 隆一
 
@@ -21,14 +21,103 @@ marp: true
 
 ## 今日やること
 
-- CLIP
-    - 画像と言葉の行き来
 - VAEや拡散モデルの進歩
     - VQ-VAE / VQGAN
     - 潜在拡散モデル
     - Diffusion Transformer
-- Image GPT
-- DALL·E
+- 画像と言葉
+    - CLIP
+    - DALL·E
+
+---
+
+## VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)（Vector Quantizatized Variational Autoencoder）
+
+- 構造: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
+    - discrete VAEの一種
+- ベクトル量子化（Vector Quantization、VQ）を利用（次ページ）
+- 出力の画像をぼやけさせずシャープに
+    - 例: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図2
+
+
+---
+
+### ベクトル量子化
+
+- 画像をパッチワーク状に区切って似たものをまとめて圧縮する方法
+    - 講師の博士論文でも使った
+- 画像は次の2つのデータで表現される
+    - コードブック
+        - 全パッチを記録したデータ
+            - 図の2段目にある色付きの正方形や棒状の画像の切れ端
+    - 符号列
+        - どこにどのパッチを当てはめるかを指示する配列
+            - 図の2段目左にある数字の表
+
+<span style="font-size:70%">図: [上田博論2007]から</span>
+
+![bg right:40% 100%](./figs/vq_map2.svg)
+
+---
+
+### 潜在空間、コードブック、損失関数
+
+- 潜在空間: 符号列の空間
+    - 右上の画像状の配列をベクトル$\boldsymbol{z}$とみなす
+- VQ以外のレイヤーとVQのレイヤーで別々に学習
+    - VQ以外のレイヤーの損失関数: 入力$\boldsymbol{x}$の再現度
+    - VQのレイヤーの損失関数: K-means法とほぼ同じ
+
+![bg right:20% 100%](./figs/vq_latent.svg)
+
+---
+
+## VQGAN[[Esser+ 2021]](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf)
+
+- VQ-VAEの出力をGANの仕組みでよりシャープに
+    - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
+- 他の工夫
+    - 符号列をランダムにではなくTransformerに出力させることで意味のある画像を増やす
+        - PixelCNN [[Oord 2016]](https://arxiv.org/abs/1601.06759)
+            - 1画素ずつ画素値を予想しながら画像を生成するモデル
+            - [過去の講義の資料](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson4-2.html#9)
+
+---
+
+## 潜在拡散モデル[[Rombach+ 2022]](https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf)
+
+- 圧縮比の低いVAEの潜在ベクトルに対して拡散モデルを適用
+    - 拡散モデルで画素数の大きい画像を扱わなくてよい
+- 用途の例: [Stable Diffusion](https://stablediffusionweb.com/ja)
+    - 文章で生成する画像を指示できる画像生成サービス
+    - 使いやすくて一気に普及（し、一気に見なくなった）
+    - 次のページのモデルを50億枚の画像で訓練
+
+---
+
+### Stable Diffusion（v1）の構造
+
+- [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+    - 画像左側の赤枠: VQGAN
+        - まずこれを学習
+    - 中央の緑枠: 拡散モデル
+        - ノイズを潜在空間のベクトル$z$に戻す（U-Net）
+    - 右の白枠: 条件付け
+        - テキストや画像を入力してCLIPのようなベクトルに
+
+---
+
+## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
+
+- Transformerを拡散モデルで構成
+    - さらに潜在拡散モデルも使用
+    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
+- 構造
+    - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
+        - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
+            - 後者はadaLN-Zeroという仕組みで画像に作用させる
+                - FiLMにもうひとつパラメータを足したようなもの
+        - 出力: 画素ごとのノイズの平均値と分散
 
 ---
 
@@ -131,96 +220,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 同じ空間に画像と文からできるベクトルをプロット
 - 単体で使うよりも、大きなモデルで言葉と画像の変換器として利用される
     - これからいくつか出てきます
-
----
-
-## VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)（Vector Quantizatized Variational Autoencoder）
-
-- 構造: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
-    - discrete VAEの一種
-- ベクトル量子化（Vector Quantization、VQ）を利用（次ページ）
-- 出力の画像をぼやけさせずシャープに
-    - 例: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図2
-
-
----
-
-### ベクトル量子化
-
-- 画像をパッチワーク状に区切って似たものをまとめて圧縮する方法
-    - 講師の博士論文でも使った
-- 画像は次の2つのデータで表現される
-    - コードブック
-        - 全パッチを記録したデータ
-            - 図の2段目にある色付きの正方形や棒状の画像の切れ端
-    - 符号列
-        - どこにどのパッチを当てはめるかを指示する配列
-            - 図の2段目左にある数字の表
-
-<span style="font-size:70%">図: [上田博論2007]から</span>
-
-![bg right:40% 100%](./figs/vq_map2.svg)
-
----
-
-### 潜在空間、コードブック、損失関数
-
-- 潜在空間: 符号列の空間
-    - 右上の画像状の配列をベクトル$\boldsymbol{z}$とみなす
-- VQ以外のレイヤーとVQのレイヤーで別々に学習
-    - VQ以外のレイヤーの損失関数: 入力$\boldsymbol{x}$の再現度
-    - VQのレイヤーの損失関数: K-means法とほぼ同じ
-
-![bg right:20% 100%](./figs/vq_latent.svg)
-
----
-
-## VQGAN[[Esser+ 2021]](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf)
-
-- VQ-VAEの出力をGANの仕組みでよりシャープに
-    - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
-- 他の工夫
-    - 符号列をランダムにではなくTransformerに出力させることで意味のある画像を増やす
-        - PixelCNN [[Oord 2016]](https://arxiv.org/abs/1601.06759)
-            - 1画素ずつ画素値を予想しながら画像を生成するモデル
-            - [過去の講義の資料](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson4-2.html#9)
-
----
-
-## 潜在拡散モデル[[Rombach+ 2022]](https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf)
-
-- 圧縮比の低いVAEの潜在ベクトルに対して拡散モデルを適用
-    - 拡散モデルで画素数の大きい画像を扱わなくてよい
-- 用途の例: [Stable Diffusion](https://stablediffusionweb.com/ja)
-    - 文章で生成する画像を指示できる画像生成サービス
-    - 使いやすくて一気に普及（し、一気に見なくなった）
-    - 次のページのモデルを50億枚の画像で訓練
-
----
-
-### Stable Diffusion（v1）の構造
-
-- [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
-    - 画像左側の赤枠: VQGAN
-        - まずこれを学習
-    - 中央の緑枠: 拡散モデル
-        - ノイズを潜在空間のベクトル$z$に戻す（U-Net）
-    - 右の白枠: 条件付け
-        - テキストや画像を入力してCLIPのようなベクトルに
-
----
-
-## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
-
-- Transformerを拡散モデルで構成
-    - さらに潜在拡散モデルも使用
-    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
-- 構造
-    - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
-        - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
-            - 後者はadaLN-Zeroという仕組みで画像に作用させる
-                - FiLMにもうひとつパラメータを足したようなもの
-        - 出力: 画素ごとのノイズの平均値と分散
 
 
 ---
