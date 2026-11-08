@@ -68,9 +68,8 @@ marp: true
 - 潜在空間: 符号列の空間
     - 右上の画像状の配列をベクトル$\boldsymbol{z}$とみなす
 - VQ以外のレイヤーとVQのレイヤーで別々に学習
-    - VQ以外のレイヤー: $\mathcal{L} = \log p(\boldsymbol{x} | \boldsymbol{z}(\boldsymbol{x}))$
-        - 入力$\boldsymbol{x}$の再現度
-    - VQのレイヤー: K-means法とほぼ同じ
+    - VQ以外のレイヤーの損失関数: 入力$\boldsymbol{x}$の再現度
+    - VQのレイヤーの損失関数: K-means法とほぼ同じ
 
 ![bg right:20% 100%](./figs/vq_latent.svg)
 
