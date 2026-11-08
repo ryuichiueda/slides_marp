@@ -21,16 +21,110 @@ marp: true
 
 ## 今日やること
 
+- CLIP
 - VAEや拡散モデルの進歩
     - VQ-VAE
     - 潜在拡散モデル
     - Diffusion Transformer
 - Image GPT
-- CLIP
 - DALL·E
 - GLIDE
 - DALL·E 2（unCLIP）
 - Stable Diffusion
+
+---
+
+## CLIP（Contrastive Language-Image Pre-training）[[Radford 2021]](https://arxiv.org/abs/2103.00020)
+
+- contrastive: 「対照的な」という意味
+    - 対照学習（あとで説明）でテキストと画像を結びつけ
+- [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- CLIPでできること
+    - 画像に何が写っているかを認識（ある意味ではラベルの数に制限がない）
+    - テキストから画像を生成するときの部品
+        - unCLIP（あとで扱います）
+
+---
+
+### CLIPに関する背景
+
+- よく行われてきた画像認識の方法の手順
+    1. 写真をあつめる
+    2. 写真に写っているものをラベル付けする
+    3. 学習
+- 上記方法の問題
+    - めんどくさい
+    - ラベルのあるものしか認識できない
+
+<center>なんとかラベルの付いている画像を集められないか？</center>
+
+---
+
+### ラベル（ではなくキャプション）のついた画像の収集
+
+- 画像にはキャプションのついたものがある（論文はそうですよね？）
+$\Longrightarrow$画像とキャプションをいろんなところから大量に集めてくることは可能
+    - 原論文: <span style="color:red">4億組の画像とキャプションのセットを収集</span>
+- 問題: キャプションは単語ではなく文や句になっている
+    - 単純なラベルではない
+
+<center>Transformerを使ってなんとかならないか？</center>
+
+---
+
+### CLIPの学習方法
+
+1. 前ページの方法で学習用のデータを準備
+2. ViTを使って画像をエンコーディング
+3. Transformerを使って文をエンコーディング
+4. エンコーディングされたデータ（埋め込み）同士の相関を学習
+$\Longrightarrow$画像から文、文から画像などの変換が可能なANNができる
+- 補足: 必ずしもViT、Transformerである必要はない（が、Transformerを使ったほうが性能が高くなる）
+
+---
+
+### CLIPの構造
+
+- [p.12の図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
+- image encoder: ViT
+    - 入力は画像
+    - クラストークンを出力として使う（数百次元のベクトル）
+- text encoder: Transformerのデコーダから交差注意機構を除いたもの
+    - 入力は画像のキャプション
+    - <span style="color:red">出力のフォーマットをimage encoderの出力に合わせる</span>
+-  数理的に重要な点: <span style="color:red">マルチモーダル</span>であること
+    - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
+        - キャプション（文、句）と画像が同じ空間に配置され、似たものが近くに配置される
+
+---
+
+### 評価方法（対照学習、contrastive learning）
+
+- $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
+    - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
+    - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
+- ペアとなっている画像とキャプションのベクトルを同じにしたい
+    - $\boldsymbol{i}_j$と$\boldsymbol{t}_j$のコサイン類似度を大きくしたい
+        - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
+- ペアでない画像とキャプションのベクトルを違うものにしたい
+    - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
+- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\mu_{j,k}
+e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}
+-\dfrac{1}{N} \sum_{k=1}^N \ln\mu_{j,k}
+e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$ 
+    - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
+    - $T$は「温度」で学習が進むにつれて下げていく
+
+---
+
+### 学習したモデルの使い方
+
+- 例: 画像の分類
+    - 分類したいものに対してラベルを$N$個準備
+    - 「a photo of <ラベル>」という句を$N$通り作って、それぞれをtext encoderに通して特徴ベクトル$T_{1:N}$を得る
+    - 画像をimage encoderに通して特徴ベクトル$I$を得る
+    - $I$と$T_i (i=1,2,\dots,N)$それぞれを比較し、最もコサイン類似度が高い$T_i$を選択
+
 
 ---
 
@@ -135,99 +229,6 @@ marp: true
                 - FiLMにもうひとつパラメータを足したようなもの
         - 出力: 画素ごとのノイズの平均値と分散
 
-
----
-
-## CLIP（Contrastive Language-Image Pre-training）[[Radford 2021]](https://arxiv.org/abs/2103.00020)
-
-- contrastive: 「対照的な」という意味
-    - 対照学習（あとで説明）でテキストと画像を結びつけ
-- [図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- CLIPでできること
-    - 画像に何が写っているかを認識（ある意味ではラベルの数に制限がない）
-    - テキストから画像を生成するときの部品
-        - unCLIP（あとで扱います）
-
----
-
-## CLIPに関する背景
-
-- よく行われてきた画像認識の方法の手順
-    1. 写真をあつめる
-    2. 写真に写っているものをラベル付けする
-    3. 学習
-- 上記方法の問題
-    - めんどくさい
-    - ラベルのあるものしか認識できない
-
-<center>なんとかラベルの付いている画像を集められないか？</center>
-
----
-
-### ラベル（ではなくキャプション）のついた画像の収集
-
-- 画像にはキャプションのついたものがある（論文はそうですよね？）
-$\Longrightarrow$画像とキャプションをいろんなところから大量に集めてくることは可能
-    - 原論文: <span style="color:red">4億組の画像とキャプションのセットを収集</span>
-- 問題: キャプションは単語ではなく文や句になっている
-    - 単純なラベルではない
-
-<center>Transformerを使ってなんとかならないか？</center>
-
----
-
-### CLIPの学習方法
-
-1. 前ページの方法で学習用のデータを準備
-2. ViTを使って画像をエンコーディング
-3. Transformerを使って文をエンコーディング
-4. エンコーディングされたデータ（埋め込み）同士の相関を学習
-$\Longrightarrow$画像から文、文から画像などの変換が可能なANNができる
-- 補足: 必ずしもViT、Transformerである必要はない（が、Transformerを使ったほうが性能が高くなる）
-
----
-
-### CLIPの構造
-
-- [p.12の図](https://en.wikipedia.org/wiki/Contrastive_Language-Image_Pre-training)
-- image encoder: ViT
-    - 入力は画像
-    - クラストークンを出力として使う（数百次元のベクトル）
-- text encoder: Transformerのデコーダから交差注意機構を除いたもの
-    - 入力は画像のキャプション
-    - <span style="color:red">出力のフォーマットをimage encoderの出力に合わせる</span>
--  数理的に重要な点: <span style="color:red">マルチモーダル</span>であること
-    - text encoderとimage encoderの出力が同じ潜在空間にプロットされる
-        - キャプション（文、句）と画像が同じ空間に配置され、似たものが近くに配置される
-
----
-
-### 評価方法（対照学習、contrastive learning）
-
-- $N$ペア（バッチ）の画像とキャプションをエンコーダに入力
-    - image encoderの出力: ベクトル$\boldsymbol{i}_1, \boldsymbol{i}_2, \dots, \boldsymbol{i}_N$
-    - text encoderの出力: ベクトル$\boldsymbol{t}_1, \boldsymbol{t}_2, \dots, \boldsymbol{t}_N$
-- ペアとなっている画像とキャプションのベクトルを同じにしたい
-    - $\boldsymbol{i}_j$と$\boldsymbol{t}_j$のコサイン類似度を大きくしたい
-        - コサイン類似度: $\boldsymbol{i}_j\cdot \boldsymbol{t}_j/(|\boldsymbol{i}_j| |\boldsymbol{t}_j|)$
-- ペアでない画像とキャプションのベクトルを違うものにしたい
-    - $\boldsymbol{i}_j$と$\boldsymbol{t}_k (i\neq k)$のコサイン類似度を小さく
-- $\Rightarrow$損失関数: $\mathcal{L} = -\dfrac{1}{N} \sum_{j=1}^N \ln\mu_{j,k}
-e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_j /T}
--\dfrac{1}{N} \sum_{k=1}^N \ln\mu_{j,k}
-e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$ 
-    - $\mu(j,k) = (\sum_{k=1}^N e^{\boldsymbol{i}_j\cdot\boldsymbol{t}_k /T})^{-1}$
-    - $T$は「温度」で学習が進むにつれて下げていく
-
----
-
-### 学習したモデルの使い方
-
-- 例: 画像の分類
-    - 分類したいものに対してラベルを$N$個準備
-    - 「a photo of <ラベル>」という句を$N$通り作って、それぞれをtext encoderに通して特徴ベクトル$T_{1:N}$を得る
-    - 画像をimage encoderに通して特徴ベクトル$I$を得る
-    - $I$と$T_i (i=1,2,\dots,N)$それぞれを比較し、最もコサイン類似度が高い$T_i$を選択
 
 ---
 
