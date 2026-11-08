@@ -182,6 +182,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - VQ-VAEの出力をGANの仕組みでよりシャープに
     - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
+- 他の工夫
+    - 符号列をランダムにではなくTransformerに出力させることで意味のある画像を増やす
+        - PixelCNN [[Oord 2016]](https://arxiv.org/abs/1601.06759)
+            - 1画素ずつ画素値を予想しながら画像を生成するモデル
 
 ---
 
