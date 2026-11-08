@@ -185,7 +185,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 拡散モデルで画素数の大きい画像を扱わなくてよい
 - 用途: [Stable Diffusion](https://stablediffusionweb.com/ja)
     - 文章で生成する画像を指示できる画像生成サービス
-        - 使いやすくて一気に普及
+        - 使いやすくて一気に普及（し、一気に見なくなった）
         - 50億枚の画像を訓練に使用
 
 ---
