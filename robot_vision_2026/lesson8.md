@@ -183,10 +183,14 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - 圧縮比の低いVAEの潜在ベクトルに対して拡散モデルを適用
     - 拡散モデルで画素数の大きい画像を扱わなくてよい
+- 用途: [Stable Diffusion](https://stablediffusionweb.com/ja)
+    - 文章で生成する画像を指示できる画像生成サービス
+        - 使いやすくて一気に普及
+        - 50億枚の画像を訓練に使用
 
 ---
 
-### 構造
+### Stable Diffusion（v1）の構造
 
 - [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
     - 上部の$x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$の部分は訓練用
@@ -330,14 +334,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - 前の確率分布: デコーダ
         - こちらもテキストを再度入力
 
----
-
-### Stable Diffusion
-
-- サービスのサイト: https://stablediffusionweb.com/ja
-- DALL·Eシリーズのライバル
-- 使いやすくて一気に普及
-- 50億枚の画像を訓練に使用
 
 ---
 
