@@ -21,11 +21,11 @@ marp: true
 
 ## 今日やること
 
-- 補足
+- VAEや拡散モデルの進歩
     - VQ-VAE
     - 潜在拡散モデル
+    - Diffusion Transformer
 - Image GPT
-- Diffusion Transformer
 - CLIP
 - DALL·E
 - GLIDE
@@ -77,6 +77,23 @@ marp: true
 ---
 
 ## 潜在拡散モデル[[Rombach+ 2022]](https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf)
+
+- 圧縮比の低いVAEの潜在ベクトルに対して拡散モデルを適用
+
+---
+
+### 構造
+
+- [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+    - 上部の$x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$の部分は訓練用
+        - 訓練画像を潜在空間のベクトルに変換してからDDPMで拡散
+            - 潜在空間: [[Esser 2020]](https://arxiv.org/abs/2012.09841)で提案された<span style="color:red">VQGAN</span>のもの
+                - 要はVQ-VAEのGAN版
+                - 図中のピンク色の部分がVQGAN（の変種）
+    - 下部の$\tilde{x}\leftarrow z_T$の部分が画像の生成部分
+        - ノイズを潜在空間のベクトル$z$に戻す（U-Net）
+        - テキストや画像の埋め込み（図の白枠内で生成）によるガイダンスを交差注意機構で行う
+            - 基本、行列の計算なのでU-Net内にも組み込める
 
 ---
 
@@ -313,18 +330,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
-### Stable Diffusion（v1）の構造（Latent Diffusion Models、LDM）[[Rombach 2021]](https://arxiv.org/abs/2112.10752)
-
-- [[Rombach 2021]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
-    - 上部の$x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$の部分は訓練用
-        - 訓練画像を潜在空間のベクトルに変換してからDDPMで拡散
-            - 潜在空間: [[Esser 2020]](https://arxiv.org/abs/2012.09841)で提案された<span style="color:red">VQGAN</span>のもの
-                - 要はVQ-VAEのGAN版
-                - 図中のピンク色の部分がVQGAN（の変種）
-    - 下部の$\tilde{x}\leftarrow z_T$の部分が画像の生成部分
-        - ノイズを潜在空間のベクトル$z$に戻す（U-Net）
-        - テキストや画像の埋め込み（図の白枠内で生成）によるガイダンスを交差注意機構で行う
-            - 基本、行列の計算なのでU-Net内にも組み込める
 
 --- 
 
