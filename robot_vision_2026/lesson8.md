@@ -32,6 +32,47 @@ marp: true
 - DALL·E 2（unCLIP）
 - Stable Diffusion
 
+---
+
+### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)（Vector Quantizatized Variational Autoencoder）
+
+- 構造: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
+    - discrete VAEの一種
+- ベクトル量子化（Vector Quantization、VQ）を利用（次ページ）
+- 出力の画像をぼやけさせずシャープに
+    - 例: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図2
+
+
+---
+
+### ベクトル量子化
+
+- 画像をパッチワーク状に区切って似たものをまとめて圧縮する方法
+    - 講師の博士論文でも使った
+- 画像は次の2つのデータで表現される
+    - コードブック
+        - 全パッチを記録したデータ
+            - 図の2段目にある色付きの正方形や棒状の画像の切れ端
+    - 符号列
+        - どこにどのパッチを当てはめるかを指示する配列
+            - 図の2段目左にある数字の表
+
+<span style="font-size:70%">図: [上田博論2007]から</span>
+
+![bg right:40% 100%](./figs/vq_map2.svg)
+
+---
+
+### 潜在空間とコードブック
+
+- 潜在空間: 符号列の空間
+    - 右上の画像状の配列をベクトル$\boldsymbol{z}$とみなす
+- コードブックに相当するものはPixelCNNで作成
+    - 畳み込み層から、各パッチの領域に対応する画素のパラメータを集めてベクトルに（右下の棒）
+        - つまり、そのパッチの画素を予測する分布のパラメータでベクトルを構成
+
+![bg right:20% 100%](./figs/vq_latent.svg)
+
 
 ---
 
