@@ -183,7 +183,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 - 圧縮比の低いVAEの潜在ベクトルに対して拡散モデルを適用
     - 拡散モデルで画素数の大きい画像を扱わなくてよい
-- 用途: [Stable Diffusion](https://stablediffusionweb.com/ja)
+- 用途の例: [Stable Diffusion](https://stablediffusionweb.com/ja)
     - 文章で生成する画像を指示できる画像生成サービス
     - 使いやすくて一気に普及（し、一気に見なくなった）
     - 次のページのモデルを50億枚の画像で訓練
