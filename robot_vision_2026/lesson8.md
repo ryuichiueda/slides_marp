@@ -24,7 +24,7 @@ marp: true
 - CLIP
     - 画像と言葉の行き来
 - VAEや拡散モデルの進歩
-    - VQ-VAE
+    - VQ-VAE / VQGAN
     - 潜在拡散モデル
     - Diffusion Transformer
 - Image GPT
@@ -176,6 +176,12 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ![bg right:20% 100%](./figs/vq_latent.svg)
 
+---
+
+## VQGAN[[Esser+ 2021]](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf)
+
+- VQ-VAEの出力をGANの仕組みでよりシャープに
+    - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
 
 ---
 
@@ -193,6 +199,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ### Stable Diffusion（v1）の構造
 
 - [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+    - 画像左側の背景が赤の枠: VAE
     - 上部の$x\rightarrow\varepsilon\rightarrow z\rightarrow$Diffusion Process$\rightarrow z_T$の部分は訓練用
         - 訓練画像を潜在空間のベクトルに変換してからDDPMで拡散
             - 潜在空間: [[Esser 2020]](https://arxiv.org/abs/2012.09841)で提案された<span style="color:red">VQGAN</span>のもの
