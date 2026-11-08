@@ -213,6 +213,20 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 
 ---
 
+## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
+
+- Transformerを拡散モデルで構成
+    - さらに潜在拡散モデルも使用
+    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
+- 構造
+    - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
+        - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
+            - 後者はadaLN-Zeroという仕組みで画像に作用させる
+                - FiLMにもうひとつパラメータを足したようなもの
+        - 出力: 画素ごとのノイズの平均値と分散
+
+---
+
 ## Image GPT[[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html)（[サイト](https://openai.com/ja-JP/index/image-gpt/)）（[動画](https://www.youtube.com/watch?v=7rFLnQdl22c)）
 
 - GPTの画像版
@@ -236,21 +250,6 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
         - $96^2$, $192^2$pixelのときはVQ-VAEで圧縮（それぞれ$16^2, 34^2$の符号列に）
     - 各画素は値が1つだが、内部で512次元などに伸ばされる（単語$\rightarrow$トークンと同じ考え方）
 
-
-
----
-
-## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
-
-- 拡散モデル+Transformer
-    - さらに潜在拡散モデルも使用
-    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
-- 構造
-    - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
-        - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ
-            - 後者はadaLN-Zeroという仕組みで画像に作用させる
-                - FiLMにもうひとつパラメータを足したようなもの
-        - 出力: 画素ごとのノイズの平均値と分散
 
 
 ---
