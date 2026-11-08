@@ -21,8 +21,6 @@ marp: true
 
 ## 今日やること
 
-- 今回のための補足
-- Vision Transformer
 - Image GPT
 - Diffusion Transformer
 - CLIP
