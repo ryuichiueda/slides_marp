@@ -21,6 +21,9 @@ marp: true
 
 ## 今日やること
 
+- 補足
+    - VQ-VAE
+    - 潜在拡散モデル
 - Image GPT
 - Diffusion Transformer
 - CLIP
@@ -61,7 +64,7 @@ marp: true
 ## Diffusion Transformer（DiT）[[Peebles 2022]](https://arxiv.org/abs/2212.09748)
 
 - 拡散モデル+Transformer
-    - さらに潜在空間に情報を圧縮する潜在拡散モデルも使用
+    - さらに潜在拡散モデルも使用
     - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
 - 構造
     - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
@@ -69,7 +72,6 @@ marp: true
             - 後者はadaLN-Zeroという仕組みで画像に作用させる
                 - FiLMにもうひとつパラメータを足したようなもの
         - 出力: 画素ごとのノイズの平均値と分散
-    - 画像のサイズを落とすためにVAEを使用
 
 
 ---
