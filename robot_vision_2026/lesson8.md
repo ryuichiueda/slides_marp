@@ -29,9 +29,6 @@ marp: true
     - Diffusion Transformer
 - Image GPT
 - DALL·E
-- GLIDE
-- DALL·E 2（unCLIP）
-- Stable Diffusion
 
 ---
 
