@@ -182,6 +182,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 ## 潜在拡散モデル[[Rombach+ 2022]](https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf)
 
 - 圧縮比の低いVAEの潜在ベクトルに対して拡散モデルを適用
+    - 拡散モデルで画素数の大きい画像を扱わなくてよい
 
 ---
 
