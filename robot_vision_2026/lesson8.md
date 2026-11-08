@@ -78,9 +78,7 @@ marp: true
     - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
 - 他の工夫
     - 符号列をランダムにではなくTransformerに出力させることで意味のある画像を増やす
-        - PixelCNN [[Oord 2016]](https://arxiv.org/abs/1601.06759)
-            - 1画素ずつ画素値を予想しながら画像を生成するモデル
-            - [過去の講義の資料](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson4-2.html#9)
+        - 理屈はImage GPTと同じ（前後関係は未調査です）
 
 ---
 
