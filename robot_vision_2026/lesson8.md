@@ -70,7 +70,7 @@ marp: true
 - VQ以外のレイヤーとVQのレイヤーで別々に学習
     - VQ以外のレイヤー: $\mathcal{L} = \log p(\boldsymbol{x} | \boldsymbol{z}(\boldsymbol{x}))$
         - 入力$\boldsymbol{x}$の再現度
-    - VQのレイヤー: K-meansとほぼ同じ
+    - VQのレイヤー: K-means法とほぼ同じ
 
 ![bg right:20% 100%](./figs/vq_latent.svg)
 
