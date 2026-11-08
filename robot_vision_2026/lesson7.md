@@ -307,7 +307,7 @@ marp: true
     - GPT-2の構造を使用
     - パラメータ数: iGPT-Lというモデルで$13.6$億
 - 画像を途中まで入力して、次の画素を当てさせる
-    - 以前はCNNで同じ問題が扱われた（[PixelCNN/RNN](https://arxiv.org/pdf/2304.05440v1)）
+    - 以前はCNNやRNNで同じ問題が扱われた（[PixelCNN/RNN](https://arxiv.org/pdf/1606.05328)
 - GPT同様、ヘッドをつけてファインチューニングすると他のタスクに利用可能
 
 ---
