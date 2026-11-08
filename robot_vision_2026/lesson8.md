@@ -34,7 +34,7 @@ marp: true
 
 ---
 
-### VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)（Vector Quantizatized Variational Autoencoder）
+## VQ-VAE[[Oord 2017]](https://arxiv.org/abs/1711.00937)（Vector Quantizatized Variational Autoencoder）
 
 - 構造: [[Oord 2017]](https://arxiv.org/abs/1711.00937)の図1
     - discrete VAEの一種
@@ -73,6 +73,10 @@ marp: true
 
 ![bg right:20% 100%](./figs/vq_latent.svg)
 
+
+---
+
+## 潜在拡散モデル[[Rombach+ 2022]](https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf)
 
 ---
 
