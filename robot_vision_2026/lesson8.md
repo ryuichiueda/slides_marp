@@ -319,7 +319,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
         - CLIPは確率的ではないので確率分布を学習しなおし
         $\Rightarrow$ 質の高い画像の特徴ベクトル$\boldsymbol{z}_x$を出力可能に
     - 前の確率分布: デコーダ
-        - こちらもテキストを再度入力
+        - テキストを再度入力してガイダンス
 
 
 --- 
