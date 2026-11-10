@@ -443,8 +443,19 @@
 <footer>ロボットビジョン第8回</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-footer="ロボットビジョン第8回" data-paginate="true" lang="ja-JP" data-marpit-pagination="22" style="--footer:ロボットビジョン第8回;--paginate:true;" data-marpit-pagination-total="26">
+<h3 id="glide%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88">GLIDEのインペイント</h3>
 <ul>
-<li>ファインチューニングで画像の一部をテキストで改変できる（image inpainting）: 論文の図2, 3, 4</li>
+<li>インペイント: 画像の指定された部分を書き換え
+<ul>
+<li>例: 論文の図2, 3, 4</li>
+</ul>
+</li>
+<li>方法: 拡散モデルの入力チャンネルを増やしてファインチューニング
+<ul>
+<li>3チャンネル: 元の画像</li>
+<li>1チャンネル: どの部分を改変するか指定するマスク</li>
+</ul>
+</li>
 </ul>
 <footer>ロボットビジョン第8回</footer>
 </section>
