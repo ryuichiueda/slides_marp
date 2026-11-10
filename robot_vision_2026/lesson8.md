@@ -314,10 +314,10 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 - テキスト$\boldsymbol{y}$からの画像$\boldsymbol{x}$の推定（生成）の問題を冗長化
     - $p(\boldsymbol{x}|\boldsymbol{y}) = p(\boldsymbol{x}, \boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}) = p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
     - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストのCLIPでの特徴ベクトル
-    - CLIPは確率的ではないので確率分布を学習しなおし
 - 最後の項: $p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
-    - 後ろの確率分布: 事前モデル（拡散モデルで実装）
-        - 質の高い画像の特徴ベクトルを出力
+    - 後ろの確率分布: prior（拡散モデルで実装）
+        - CLIPは確率的ではないので確率分布を学習しなおし
+        $\Rightarrow$ 質の高い画像の特徴ベクトル$\boldsymbol{z}_x$を出力可能に
         - 単にテキストの特徴ベクトルを出力するのではなく、テキストも入力して強化
     - 前の確率分布: デコーダ
         - こちらもテキストを再度入力
