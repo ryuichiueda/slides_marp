@@ -316,8 +316,9 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
     - $\boldsymbol{z}_x, \boldsymbol{z}_y$: それぞれ、画像とテキストのCLIPでの特徴ベクトル
     - 数式上は冗長だが学習のときにヒントが増えて質が向上
 - 最後の項: $p(\boldsymbol{x} |  \boldsymbol{z}_x, \boldsymbol{y})p(\boldsymbol{z}_x | \boldsymbol{y}, \boldsymbol{z}_y)$
-    - 後ろの確率分布: 事前モデル
+    - 後ろの確率分布: 事前モデル（拡散モデルで実装）
         - 質の高い画像の特徴ベクトルを出力
+            - CLIPのエンコーダは確率分布になってないので、拡散モデルで学習しなおし
         - 単にテキストの特徴ベクトルを出力するのではなく、テキストも入力して強化
     - 前の確率分布: デコーダ
         - こちらもテキストを再度入力
