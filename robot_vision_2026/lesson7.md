@@ -188,7 +188,7 @@ marp: true
     - 損失関数: $\mathcal{L}(\boldsymbol{\Theta}) = -\sum_i \log P(w_i | w_{{i-k}:{i-1}}, \boldsymbol{\Theta})$
         - $w_i$: 予測したいトークン
         - $w_{i-k:i-1}$: 予測に使うトークン
-        - $k$: 過去のトークンを読ませる範囲（打ち切りの閾値）
+        - $k$: 過去のトークンを読ませる範囲（打ち切りの閾値。$k=512$など）
 
 
 ![bg right:20% 100%](./figs/gpt-1_pt.svg)
