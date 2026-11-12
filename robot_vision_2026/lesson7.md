@@ -24,6 +24,7 @@ marp: true
 - Vision Transformer
 - BERT
 - GPT
+- Image GPT
 
 ---
 
@@ -297,6 +298,33 @@ marp: true
 - <span style="color:red">画像も入力可能に</span>
 - 際どい回答を避けるために強化学習が使われる
     - また今度扱います
+
+---
+
+## Image GPT[[Chen 2020]](https://proceedings.mlr.press/v119/chen20s.html)（[サイト](https://openai.com/ja-JP/index/image-gpt/)）（[動画](https://www.youtube.com/watch?v=7rFLnQdl22c)）
+
+- GPTの画像版
+    - GPT-2の構造を使用
+    - パラメータ数: iGPT-Lというモデルで$13.6$億
+- 画像を途中まで入力して、次の画素を当てさせる
+    - 以前はCNNやRNNで同じ問題が扱われた（[PixelCNN/RNN](https://arxiv.org/pdf/1606.05328)）
+- GPT同様、ヘッドをつけてファインチューニングすると他のタスクに利用可能
+
+---
+
+### Image GPTの学習
+
+- 2種類の訓練方法
+    - 次の画素の予測（GPT的）
+    - 穴埋め問題（BERT的）
+- 埋め込みに相当するベクトル: 画像の解像度を下げて1列に並べたもの
+    - サイト: $32^2$, $48^2$ or $64^2$pixel
+    - 論文: $32^2$, $48^2$, $96^2$ or $192^2$pixel
+        - $32^2$ or $48^2$の時は色をRGBからカラーパレットに（昔の計算機の方式）
+        - $96^2$, $192^2$pixelのときはVQ-VAEで圧縮（それぞれ$16^2, 34^2$の符号列に）
+    - 各画素は値が1つだが、内部で512次元などに伸ばされる（単語$\rightarrow$トークンと同じ考え方）
+
+
 
 ---
 
