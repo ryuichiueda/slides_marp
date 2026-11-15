@@ -151,7 +151,7 @@ marp: true
     - ガウス分布: $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \frac{1}{\sqrt{(2\pi)^n |\Sigma|}}
 	\exp\left\{-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
        - 3次元中で楕円状にぼやっと広がる色の塊
-- 人工ニューラルネットワークは使わない（使う必要がなかった）
+- ANNは使わない（使う必要がなかった）
    - 講師の解釈: たぶん局所的な計算で済むのでそんなに複雑な関数（ANN）の表現が不要
    - 計算時間も少ない（論文の図1）: NeRFの48時間に対して6分
 
