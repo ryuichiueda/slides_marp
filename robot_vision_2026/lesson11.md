@@ -152,6 +152,8 @@ marp: true
        - 講師の解釈: たぶん局所的な計算で済むのでそんなに複雑な関数（ANN）の表現が不要
        - 計算時間も少ない（論文の図1）: NeRFの48時間に対して6分
 
+![bg right:25% 90%](figs/3d_gaussians.svg)
+
 ---
 
 ### 3DGSの使用例
@@ -162,7 +164,6 @@ marp: true
    - 作り方も見せてくれてます
 - [NVIDIAのチュートリアル](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
 
-![bg right:25% 90%](figs/3d_gaussians.svg)
 
 ---
 
