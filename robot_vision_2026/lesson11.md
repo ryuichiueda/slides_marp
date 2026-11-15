@@ -190,11 +190,16 @@ marp: true
 
 - 計算には$\Sigma = RSS^\top R^\top$という表現を使用
     - $S$: スケーリング行列（3次元の対角行列なので3パラメータ）
+        - $S = \begin{pmatrix}
+            \sigma_1 & 0 & 0 \\
+            0 & \sigma_2 & 0 \\
+             0 & 0 & \sigma_3
+        \end{pmatrix}$
     - $R$: 回転行列（クォータニオンでパラメータづけられ4パラメータ）
-- 理由: 共分散行列として必要な要件を満たすように
-    - なんでこれが共分散行列として適切なのか
-        - $SS^\top$: 対角成分が$0$以上の行列に（楕円体の各軸の分散が並ぶ）
-        - $SS^\top$を両側から$R$で挟むと任意の向きに回転できる
+        $R=2\begin{pmatrix}
+            1/2-(q_j^2+ q_k^2) & (q_iq_j - q_rq_k) & (q_i q_k + q_r q_j)
+        \end{pmatrix}$
+- 理由: 共分散行列として必要な要件を満たす（半正定値対称行列になる）
     - [確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)も参照のこと
 
 ---
