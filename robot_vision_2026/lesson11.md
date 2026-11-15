@@ -195,13 +195,12 @@ marp: true
    - RGBそれぞれに対して用意すると、球面上の任意の点のRGBを表現できる
    - ラプラス方程式の解で構成（電子軌道と同じ）
        - 高い周波数成分を増やしていくと細かい表現が可能に
-- 図
-    - 左: 球面に数値の大小を濃淡で描いたもの
-    - 右: 数値の大小を中心からの高低で描いたもの
+- 図: 球面に数値の大小を濃淡で描いたもの
+    - 下にいくほど高い周波数成分を持つ
 
-![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cubicharmonics_3840x2160.png/1600px-Cubicharmonics_3840x2160.png)
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/1/12/Rotating_spherical_harmonics.gif)
 
-$\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Cubicharmonics_3840x2160.png))
+$\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Cyp CC BY-SA 3.0](https://en.wikipedia.org/wiki/Spherical_harmonics#/media/File:Rotating_spherical_harmonics.gif))
 
 ---
 
