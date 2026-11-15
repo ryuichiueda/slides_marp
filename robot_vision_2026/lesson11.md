@@ -271,7 +271,7 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Cyp CC BY-SA 
     - 必要な数より少ない
     - 数を増やしていく
 - ガウス分布を加減する操作
-    - 増やす操作（あるガウス分布の誤差が大きいとき）: cloneとsplit
+    - 増やす操作（あるガウス分布の位置の誤差が大きいとき）: cloneとsplit
         - clone（ガウス分布が小さい場合）: ガウス分布を複製してそばに置く
         - split（ガウス分布が大きい場合）: ガウス分布を分割
     - 減らす操作: pruning
