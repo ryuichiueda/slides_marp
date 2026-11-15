@@ -200,7 +200,6 @@ marp: true
             1/2-(q_j^2+ q_k^2) & (q_iq_j - q_rq_k) & (q_i q_k + q_r q_j)
         \end{pmatrix}$
 - 理由: 共分散行列として必要な要件を満たす（半正定値対称行列になる）
-    - [確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)も参照のこと
 
 ---
 
