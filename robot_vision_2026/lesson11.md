@@ -33,7 +33,7 @@ marp: true
 - カメラ画像からカメラの位置・姿勢と被写体の3次元形状を復元する問題・技術
     - 位置・姿勢は以後あわせて「姿勢」と表現
     - 参考: https://demuc.de/papers/schoenberger2016sfm.pdf
-- SLAMとの違い
+- SLAM（simultaneous localization and mapping）との違い
    - Visual SLAMとあまり変わらないが、より被写体の形状に興味がある
        - 基本的なSfMはカメラの移動量を画像だけから求めようとする
        - SLAMはロボットの移動する空間にも興味がある
