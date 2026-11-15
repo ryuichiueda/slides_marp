@@ -197,7 +197,9 @@ marp: true
         \end{pmatrix}$
     - $R$: 回転行列（クォータニオンでパラメータづけられ4パラメータ）
         $R=2\begin{pmatrix}
-            1/2-(q_j^2+ q_k^2) & (q_iq_j - q_rq_k) & (q_i q_k + q_r q_j)
+            1/2-(q_j^2+ q_k^2) & q_iq_j - q_rq_k & q_i q_k + q_r q_j \\
+            q_i q_j + q_r q_k & 1/2 - (q_i^2 + q_k^2) & q_j q_k - q_r q_i \\
+            q_i q_k - q_r q_j & q_j q_k + q_r q_i & 1/2 - (q_i^2 + q_j^2)
         \end{pmatrix}$
 - 理由: 共分散行列として必要な要件を満たす（固有値が負にならない）
 
