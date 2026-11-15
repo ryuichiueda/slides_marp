@@ -91,8 +91,8 @@ marp: true
 
 - ある3次元空間中の点の光（radiance、輝き）を次の関数で表現
     - $(r, g, b) = \text{RGB}(x, y, z, \theta, \phi)$
-        - 点の位置と<span style="color:red">視線の向き</span>で色を決める
-            - 向きで色を変える: リアルな表現のために重要（3DGSでも利用）
+        - 点の位置と視線の向きで色を決める
+            - <span style="color:red">向きで色を変える</span>: リアルな表現のために重要（3DGSでも利用）
         - 図4に視点で色を変える効果の例
     - $\sigma = \sigma(x, y, z)$
         - 点の位置で「密度」を決める
