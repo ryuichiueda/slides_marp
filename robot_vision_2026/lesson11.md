@@ -151,8 +151,15 @@ marp: true
    - 人工ニューラルネットワークは使わない（使う必要がなかった）
        - 講師の解釈: たぶん局所的な計算で済むのでそんなに複雑な関数（ANN）の表現が不要
        - 計算時間も少ない（論文の図1）: NeRFの48時間に対して6分
-- [使用例](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
+
+---
+
+### 3DGSの使用例
+
+- [例その1](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
    - 水面への映り込みなどに注目
+- [例その2](https://www.youtube.com/watch?v=iz4fGWnEH2s)
+   - 作り方も見せてくれてます
 - [NVIDIAのチュートリアル](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
 
 ![bg right:25% 90%](figs/3d_gaussians.svg)
@@ -216,6 +223,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Cyp CC BY-SA 
     - $\ell$が軌道
     - $n$に対してパラメータ数は$3n^2$に
         - $n=3, 4$だとそれぞれ$27, 48$
+
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/1/12/Rotating_spherical_harmonics.gif)
 
 ---
 
