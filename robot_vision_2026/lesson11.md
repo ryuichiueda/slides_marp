@@ -70,7 +70,7 @@ marp: true
         - 基礎行列$F$を求める（↑済んでいない場合に対応するとき）
         - 他、ホモグラフィー行列や三焦点テンソルなど
 - 世界座標系にひとつずつカメラの姿勢を置いていく
-- バンドル調整<span style="color:red">$\Rightarrow$この出力をNeRFに使う</span>
+- バンドル調整<span style="color:red">$\Rightarrow$この出力をNeRFや3DGSに使う</span>
     - graph-based SLAMの要領（最小二乗法）で全カメラの姿勢を調整
 - 各画像のピクセルの位置を世界座標系で確定させていく
 
