@@ -6,7 +6,9 @@
 - [第5回: 想起・生成の制御](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson5.html)
 - [第6回: 言葉の認識](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson6.html)
 - [第7回: Transformerの応用](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson7.html)
-- [第8回: 画像処理と言語処理の融合](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson8.html)
+- [第8回: 画像処理/生成の進化と言語処理との融合](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson8.html)
+- [第9回: 画像と言語、ロボット制御の融合I](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson9.html)
+- [第10回: 画像と言語、ロボット制御の融合II](https://ryuichiueda.github.io/slides_marp/robot_vision_2026/lesson10.html)
 
 ## 参考: 2025年度の大学院講義
 

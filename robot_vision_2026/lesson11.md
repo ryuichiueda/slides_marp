@@ -28,12 +28,12 @@ marp: true
 
 ---
 
-## SfM
+## SfM（structure from motion）
 
 - カメラ画像からカメラの位置・姿勢と被写体の3次元形状を復元する問題・技術
     - 位置・姿勢は以後あわせて「姿勢」と表現
     - 参考: https://demuc.de/papers/schoenberger2016sfm.pdf
-- SLAMとの違い
+- SLAM（simultaneous localization and mapping）との違い
    - Visual SLAMとあまり変わらないが、より被写体の形状に興味がある
        - 基本的なSfMはカメラの移動量を画像だけから求めようとする
        - SLAMはロボットの移動する空間にも興味がある
@@ -70,7 +70,7 @@ marp: true
         - 基礎行列$F$を求める（↑済んでいない場合に対応するとき）
         - 他、ホモグラフィー行列や三焦点テンソルなど
 - 世界座標系にひとつずつカメラの姿勢を置いていく
-- バンドル調整<span style="color:red">$\Rightarrow$この出力をNeRFに使う</span>
+- バンドル調整<span style="color:red">$\Rightarrow$この出力をNeRFや3DGSに使う</span>
     - graph-based SLAMの要領（最小二乗法）で全カメラの姿勢を調整
 - 各画像のピクセルの位置を世界座標系で確定させていく
 
@@ -92,6 +92,7 @@ marp: true
 - ある3次元空間中の点の光（radiance、輝き）を次の関数で表現
     - $(r, g, b) = \text{RGB}(x, y, z, \theta, \phi)$
         - 点の位置と視線の向きで色を決める
+            - <span style="color:red">向きで色を変える</span>: リアルな表現のために重要（3DGSでも利用）
         - 図4に視点で色を変える効果の例
     - $\sigma = \sigma(x, y, z)$
         - 点の位置で「密度」を決める
@@ -123,8 +124,8 @@ marp: true
     - 中間で再度、位置$\boldsymbol{x} = (x,y,z)$を連結
     - 後ろの層で$\boldsymbol{d} = (\theta, \phi)$を連結
 - 出力（2箇所）
-    - $\boldsymbol{d}$を連結する層の1つを$\sigma$値に
-    - 最終層の出力を$(r,g,b)$値に
+    - $\boldsymbol{d}$を連結する層の1つを$\sigma$値に（$\sigma$値は向きに無関係なので）
+    - 最終層の出力を$(r,g,b)$値に（向きを考慮）
 
 
 ---
@@ -147,14 +148,25 @@ marp: true
 ## 3D Gaussian splatting（3DGS）[[Kerbl2023]](https://arxiv.org/pdf/2308.04079)
 
 - NeRFのような光の表現を、ガウス分布を空間中に置いて表現
-   - 人工ニューラルネットワークは使わない（使う必要がなかった）
-       - 講師の解釈: たぶん局所的な計算で済むのでそんなに複雑な関数（ANN）の表現が不要
-       - 計算時間も少ない（論文の図1）: NeRFの48時間に対して6分
-- [使用例](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
-   - 水面への映り込みなどに注目
-- [NVIDIAのチュートリアル](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
+    - ガウス分布: $\mathcal{N}(\boldsymbol{x} | \boldsymbol{\mu}, \Sigma) = \frac{1}{\sqrt{(2\pi)^n |\Sigma|}}
+	\exp\left\{-\frac{1}{2}(\boldsymbol{x} - \boldsymbol{\mu})^\top \Sigma^{-1} (\boldsymbol{x} - \boldsymbol{\mu}) \right\}$
+       - 3次元中で楕円状にぼやっと広がる色の塊
+- ANNは使わない（使う必要がなかった）
+   - 講師の解釈: たぶん局所的な計算で済むのでそんなに複雑な関数（ANN）の表現が不要
+   - 計算時間も少ない（論文の図1）: NeRFの48時間に対して6分
 
 ![bg right:25% 90%](figs/3d_gaussians.svg)
+
+---
+
+### 3DGSの使用例
+
+- [例その1](https://www.youtube.com/watch?v=mD0oBE9LJTQ)
+   - 水面への映り込みなどに注目
+- [例その2](https://www.youtube.com/watch?v=iz4fGWnEH2s)
+   - 作り方も見せてくれてます
+- [NVIDIAのチュートリアル](https://www.youtube.com/watch?v=zLIOZ7g4kfA)
+
 
 ---
 
@@ -178,12 +190,18 @@ marp: true
 
 - 計算には$\Sigma = RSS^\top R^\top$という表現を使用
     - $S$: スケーリング行列（3次元の対角行列なので3パラメータ）
+        - $S = \begin{pmatrix}
+            \sigma_1 & 0 & 0 \\
+            0 & \sigma_2 & 0 \\
+             0 & 0 & \sigma_3
+        \end{pmatrix}$
     - $R$: 回転行列（クォータニオンでパラメータづけられ4パラメータ）
-- 理由: 共分散行列として必要な要件を満たすように
-    - なんでこれが共分散行列として適切なのか
-        - $SS^\top$: 対角成分が$0$以上の行列に（楕円体の各軸の分散が並ぶ）
-        - $SS^\top$を両側から$R$で挟むと任意の向きに回転できる
-    - [確率ロボティクスのスライド](https://ryuichiueda.github.io/slides_marp/prob_robotics_2025/lesson4-3.html#9)も参照のこと
+        $R=2\begin{pmatrix}
+            1/2-(q_j^2+ q_k^2) & q_iq_j - q_rq_k & q_i q_k + q_r q_j \\
+            q_i q_j + q_r q_k & 1/2 - (q_i^2 + q_k^2) & q_j q_k - q_r q_i \\
+            q_i q_k - q_r q_j & q_j q_k + q_r q_i & 1/2 - (q_i^2 + q_j^2)
+        \end{pmatrix}$
+- 理由: 共分散行列として必要な要件を満たす（固有値が負にならない）
 
 ---
 
@@ -194,13 +212,12 @@ marp: true
    - RGBそれぞれに対して用意すると、球面上の任意の点のRGBを表現できる
    - ラプラス方程式の解で構成（電子軌道と同じ）
        - 高い周波数成分を増やしていくと細かい表現が可能に
-- 図
-    - 左: 球面に数値の大小を濃淡で描いたもの
-    - 右: 数値の大小を中心からの高低で描いたもの
+- 図: 球面に数値の大小を濃淡で描いたもの
+    - 下にいくほど高い周波数成分を持つ
 
-![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cubicharmonics_3840x2160.png/1600px-Cubicharmonics_3840x2160.png)
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/1/12/Rotating_spherical_harmonics.gif)
 
-$\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC BY-SA 3.0](https://commons.wikimedia.org/wiki/File:Cubicharmonics_3840x2160.png))
+$\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Cyp CC BY-SA 3.0](https://en.wikipedia.org/wiki/Spherical_harmonics#/media/File:Rotating_spherical_harmonics.gif))
 
 ---
 
@@ -216,6 +233,8 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
     - $\ell$が軌道
     - $n$に対してパラメータ数は$3n^2$に
         - $n=3, 4$だとそれぞれ$27, 48$
+
+![bg right:25% 100%](https://upload.wikimedia.org/wikipedia/commons/1/12/Rotating_spherical_harmonics.gif)
 
 ---
 
@@ -237,12 +256,22 @@ $\qquad\qquad\qquad$<span style="font-size:60%">(画像: [Image by Daigokuz CC B
 
 ### 学習
 
-- NeRFと同様、モデルから画像を作って元の画像と比較してパラメータ修正
-- ガウス分布の個数の調整
-    - 初期化ではSfMで計算に使った特徴点の数だけで、必要な数より少ない
+- NeRFと同じ点: モデルから画像を作って元の画像と比較してパラメータ修正
+    - パラメータ: ガウス分布の位置・共分散行列のパラメータ、球面調和関数のパラメータ
+    - 1層しかないANNと捉えることができる
+- NeRFと異なる点: ガウス分布が増えたり減ったりする
+    - 次ページ
+
+
+---
+
+### ガウス分布の個数
+
+- 初期値: SfMで計算に使った特徴点の数だけ
+    - 必要な数より少ない
     - 数を増やしていく
 - ガウス分布を加減する操作
-    - 増やす操作（あるガウス分布の誤差が大きいとき）: cloneとsplit
+    - 増やす操作（あるガウス分布の位置の誤差が大きいとき）: cloneとsplit
         - clone（ガウス分布が小さい場合）: ガウス分布を複製してそばに置く
         - split（ガウス分布が大きい場合）: ガウス分布を分割
     - 減らす操作: pruning
