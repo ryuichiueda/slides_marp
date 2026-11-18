@@ -80,8 +80,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 		0 & 0 & 1
 	\end{pmatrix}$
         - $\alpha_\text{la}, \alpha_\text{lo}$: 1mあたりの緯度、経度
-     - $\boldsymbol{c} = (p_\text{la} \ p_\text{lo} \ \varphi_0)^\top$
-	    - いずれも原点調整の変数
+     - $\boldsymbol{c} = (p_\text{la0} \ p_\text{lo0} \ \varphi_0)^\top$
+	    - いずれも原点調整の定数
      - $Q$: 誤差の大きさを測って共分散行列にしたもの
          - この場合は対角成分（分散）にだけ数値を置けばよさそう
 - 右辺が尤度関数に（計測された$\boldsymbol{z}\rightarrow \boldsymbol{x}$の尤もらしさ）
