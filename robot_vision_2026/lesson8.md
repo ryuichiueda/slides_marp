@@ -95,7 +95,7 @@ marp: true
 
 ### Stable Diffusion（v1）の構造
 
-- [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+- [[Rombach+ 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
     - 画像左側の赤枠: VQGAN
         - まずこれを学習
     - 中央の緑枠: 拡散モデル
