@@ -233,7 +233,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
         - GPT-3の改造版
         - 画像も埋め込みベクトルにして入力できるように
     - [VQ-VAE](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#8)（論文では[discrete VAE（dVAE）](https://ryuichiueda.github.io/slides_marp/advanced_vision/lesson5.html#3)といっている）
-        - $256 \times 256$の画像を$32 \times 32$の画像（というより符号列）にエンコード
+        - $256 \times 256$の画像を$32 \times 32$の符号列にエンコード
 
 
 ---
@@ -267,12 +267,12 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 - Guided Language to Image Diffusion for generation and Editingの頭文字
     - generationがかわいそう
     - 「言語で誘導された画像の生成、編集のための拡散モデル」
-- 自然言語+[分類器なしガイダンス](lesson4-2.html#5)で拡散モデルに画像を生成させる
+- 自然言語+分類器なしガイダンスで拡散モデルに画像を生成させる
     - （他、「CLIPガイダンス」も試されたが分類器なしのほうが結果がよかった）
-    - 自然言語をTransformerでベクトルにしたものを分類器なしガイダンスに利用
-    - 構造はU-Net
-    - 雑音の分散を固定でなく学習
-        - そのほうがステップ数を減らせるという事実が判明[[Nichol+ 2021]](https://arxiv.org/abs/2102.09672)
+    - 自然言語をTransformerでベクトルにしたものをガイダンスに利用
+    - 拡散モデルの構造はU-Net
+        - 雑音の分散を固定でなく学習
+            - そのほうがステップ数を減らせるという事実が判明[[Nichol+ 2021]](https://arxiv.org/abs/2102.09672)
 - 生成される画像: 論文の図1
 
 ---
@@ -294,8 +294,7 @@ e^{\boldsymbol{i}_k\cdot\boldsymbol{t}_k /T}$
 - DALL·Eの後継
 - 基本的なアイデア
     - CLIPを使う
-    - テキストと画像が同じ潜在空間にいるので、
-    潜在空間のベクトル$\rightarrow$画像でテキストも画像に変換可能
+    - テキストと画像が同じ潜在空間にいるので、「潜在空間のベクトル$\rightarrow$画像」でテキストも画像に変換可能
         - ただし、整った画像を出力するためにいろいろ工夫
 
 ---
