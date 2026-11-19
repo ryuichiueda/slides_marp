@@ -74,6 +74,7 @@ marp: true
 
 ## VQGAN[[Esser+ 2021]](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf)
 
+- 構造: 図2
 - VQ-VAEの出力をGANの仕組みでよりシャープに
     - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
 - 他の工夫
