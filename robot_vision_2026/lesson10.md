@@ -22,7 +22,6 @@ marp: true
 ## 今日やること
 
 - 本題の前に
-    - flow matching
     - LoRA（low-rank adaptation）
 - VLA（vision-language-action model）、ロボット基盤モデル
     - [河原塚先生のスライド](https://speakerdeck.com/haraduka/miru2025-tiyutoriarujiang-yan-robotutoji-pan-moderunozui-qian-xian)も参考になります
