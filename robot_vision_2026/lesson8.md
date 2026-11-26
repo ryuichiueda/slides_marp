@@ -74,6 +74,7 @@ marp: true
 
 ## VQGAN[[Esser+ 2021]](https://openaccess.thecvf.com/content/CVPR2021/papers/Esser_Taming_Transformers_for_High-Resolution_Image_Synthesis_CVPR_2021_paper.pdf)
 
+- 構造: 図2
 - VQ-VAEの出力をGANの仕組みでよりシャープに
     - 復元された画像を識別器にかける（ぼやけると偽物とバレる）
 - 他の工夫
@@ -95,7 +96,7 @@ marp: true
 
 ### Stable Diffusion（v1）の構造
 
-- [[Rombach 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
+- [[Rombach+ 2022]](https://arxiv.org/abs/2112.10752)の図3（[Wikipediaに掲載されている図](https://upload.wikimedia.org/wikipedia/commons/f/f6/Stable_Diffusion_architecture.png)）
     - 画像左側の赤枠: VQGAN
         - まずこれを学習
     - 中央の緑枠: 拡散モデル
@@ -109,7 +110,7 @@ marp: true
 
 - Transformerを拡散モデルで構成
     - さらに潜在拡散モデルも使用
-    - ラベルを入力して出力をコントロール（[分類器なしガイダンス](lesson4-2.html#5)）
+    - ラベルを入力して出力をコントロール（分類器なしガイダンス）
 - 構造
     - [[Peebles 2022]](https://arxiv.org/abs/2212.09748)の図3
         - 入力: 画像のトークンの他、ラベルを表すベクトルと時刻を表すベクトルを足したトークン1つ

@@ -182,40 +182,9 @@ $\qquad$<span style="color:red">原因$f$や$P$をデータから逆算する問
 
 ---
 
-## （偏）微分方程式で解けない場合の最適化
-
-- $n$個のパラメータで構成される損失関数の最適化を考えてみましょう
-    - $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$
-        - どうやって$w_{1:n}$をいじって$\mathcal{L}$の値を減らすか
-- ためしに$\Delta w_{1:n}$だけずらしてみる
-    - $\mathcal{L}(w_{1:n}| x_{1:N}, y_{1:N})$が$\mathcal{L}(w_{1:n} + \Delta w_{1:n}| x_{1:N}, y_{1:N})$に
-        - 後者の値が小さくなったら$w_{1:n}$を$w_{1:n} + \Delta w_{1:n}$に変更すると
-        「よりよく」なる
-    - 問題: いろいろ$\Delta w_{1:n}$を試すとよいんだけどパラメータが多いと組み合わせが多くて大変
-    $\Rightarrow$計算で一番よい$\Delta w_{1:n}$を求められないだろうか?
-
----
-
-### ふたたび偏微分
-
-- $\nabla \mathcal{L}(w_{1:n} | x_{1:N}, y_{1:N} ) = \left( \dfrac{\partial\mathcal{L}}{\partial w_0},  \dfrac{\partial\mathcal{L}}{\partial w_1}, \dots, \dfrac{\partial\mathcal{L}}{\partial w_n} \right)$
-    は、$w_0, w_1, \dots, w_n$それぞれを少しずらしたときの$\mathcal{L}$の変化量
-- 変化量の計算
-    - $\Delta \mathcal{L} = \dfrac{\partial \mathcal{L}}{\partial w_1}\Delta w_1 + \dfrac{\partial \mathcal{L}}{\partial w_2} \Delta w_2 + \dots \dfrac{\partial \mathcal{L}}{\partial w_m} \Delta w_m = \nabla \mathcal{L}(w_{1:n})^\top \Delta w_{1:n}$
-- わかること
-    - $|\Delta w_{1:n}| \le \alpha$という制限がある場合、最も減るのは内積が最小になる<span style="color:red">$\Delta w_{1:n} = - \alpha \nabla \mathcal{L}(w_{1:n})$</span>のとき
-        - $\nabla \mathcal{L}(w_{1:n})$: <span style="color:red">勾配ベクトル</span>
-    - 上記の赤字の式にしたがってパラメータを更新すればよい
-        - これがANNのやっていること
-
-
----
-
 ### 最小二乗法と損失関数に関するまとめ
 
 - 損失関数を偏微分して連立方程式を解ければ、任意の式に最小二乗法（と、その他さまざまな最適化手法）を適用可能
-- 連立方程式が解けない場合は勾配ベクトルにしたがって少しずつパラメータを変更していけば良いパラメータが見つかる
-    - 具体例はアドバンストビジョンに
 - しかし、なにか足りないんじゃないでしょうか?
     - 前回（ベイズの定理）の話を踏まえるとなにか抜けてないか?
 
