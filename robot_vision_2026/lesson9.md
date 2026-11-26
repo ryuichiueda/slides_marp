@@ -43,8 +43,8 @@ marp: true
 
 - Pathways Language and Image model
     - 構造: 論文の図1（ViT+Transformerエンコーダ+Transformerデコーダ）
-        - 言葉のトークンもViTの出す画像の特徴量のトークンも同じ長さのベクトルにしてTransformerに入力
-        - 交差注意機構も使うらしい（未調査）
+        - 言葉のトークンもViTの出す画像の特徴量のトークンも同じ長さのベクトルにしてエンコーダに入力
+        - 交差注意機構を使って出力を作る
 
 ---
 
