@@ -179,7 +179,8 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ## おまけ1: 世界モデル[[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)
 
-- なにか: 未来の状態を予測し、ロボットを制御するモデル
+- なにか: 未来の状態を予測し、ロボットを制御するモデル・アイデア
+    - 現在にも強い影響
 - 次の3つのANNで構成（図は次のページ）
     - Vモデル（VAE model）: 時刻$t$の風景を潜在空間のベクトル$\boldsymbol{z}_t$に圧縮
     - Mモデル（MDN-RNN model）: $\boldsymbol{z}_t$や行動$a_t$などから<span style="color:red">$\boldsymbol{z}_{t+1}$を予測</span>
