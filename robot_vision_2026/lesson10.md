@@ -185,4 +185,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - Mモデル（MDN-RNN model）: $\boldsymbol{z}_t$とロボットの行動$a_t$と自身の内部状態$\boldsymbol{h}_t$から、$\boldsymbol{z}_{t+1}$を予測
         - MDN: mixture density network（混合ガウス分布を推定）
         - RNN: recurrent neural network
-    - Cモデル（controller model）: VモデルとMモデルのRNNの出力から$a_t$を出力
+    - Cモデル（controller model）: $a_t$を出力
