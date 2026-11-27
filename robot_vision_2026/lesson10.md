@@ -187,4 +187,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
         - RNN: recurrent neural network
     - Cモデル（controller model）: 行動$a_t$を出力
 
-<center style="color:red">次の状態を予測ができると適切な行動を選ぶこともできるだろうという考え</center>
+<center style="color:red">次状態が予測ができると適切な行動を選択できるだろうという考え</center>
