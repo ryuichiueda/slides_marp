@@ -228,10 +228,9 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 ### Cモデルと全体の接続
 
 <div class="columns">
-<div style="width:350px">
+<div>
 
-- Cモデル
-    - 単なるアフィン変換
+- Cモデル: 単なるアフィン変換
     - $\boldsymbol{a}_t =W_c [\boldsymbol{z}_t \ \boldsymbol{h}_t] + \boldsymbol{b}_c$
 
 </div>
