@@ -243,3 +243,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 </div>
 </div>
+
+---
+
+### [[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)でできたこと
