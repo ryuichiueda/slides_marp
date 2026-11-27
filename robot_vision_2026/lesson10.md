@@ -183,4 +183,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - 次の3つのANNで構成
     - Vモデル（VAE model）: 時刻$t$の風景を潜在空間のベクトル$\boldsymbol{z}_t$に圧縮
     - Mモデル（MDN-RNN model）: $\boldsymbol{z}_t$とロボットの行動$a_t$と自身の内部状態$\boldsymbol{h}_t$から、$\boldsymbol{z}_{t+1}$を予測
-        - MDN: 
+        - MDN: mixture density network（混合ガウス分布を推定）
+        - RNN: recurrent neural network
