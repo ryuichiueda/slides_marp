@@ -194,4 +194,6 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ### モデル
 
-https://worldmodels.github.io/
+- Vモデル
+![w:600](figs/world_model_vae.svg)
+（CC-BY-SA 4.0 by [worldmodels/worldmodels.github.io](https://github.com/worldmodels/worldmodels.github.io/)）
