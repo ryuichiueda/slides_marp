@@ -229,4 +229,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 - Cモデル: 単なるアフィン変換
     - $\boldsymbol{a}_t =W_c [\boldsymbol{z}_t \ \boldsymbol{h}_t] + \boldsymbol{b}_c$
+- 全体（$\boldsymbol{z}_{t+1}$は使わない）
 
