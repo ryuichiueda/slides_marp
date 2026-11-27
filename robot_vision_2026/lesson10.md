@@ -179,4 +179,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ## おまけ1: 世界モデル[[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)
 
-- 
+- 頭の中で未来を予測
