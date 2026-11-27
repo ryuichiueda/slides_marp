@@ -1,5 +1,11 @@
 ---
 marp: true
+style: |
+    .columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    }
 ---
 
 <!-- footer: "ロボットビジョン第10回" -->
@@ -194,6 +200,15 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ### モデル
 
+<div class="columns">
+<div>
 - Vモデル
-![w:600](figs/world_model_vae.svg)
-（CC-BY-SA 4.0 by [worldmodels/worldmodels.github.io](https://github.com/worldmodels/worldmodels.github.io/)）
+<img src="figs/world_model_vae.svg" />
+<a style="font-size:70%" href="https://github.com/worldmodels/worldmodels.github.io">image: CC-BY-SA 4.0 in worldmodels/worldmodels.github.io</a>
+</div>
+<div>
+- Mモデル
+<img src="https://raw.githubusercontent.com/worldmodels/worldmodels.github.io/refs/heads/master/assets/mdn_rnn_new.svg" />
+<span style="font-size:70%">image: 同左</span>
+</div>
+</div>
