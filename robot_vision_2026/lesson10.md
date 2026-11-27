@@ -189,10 +189,10 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - 現在にも強い影響
 - 次の3つのANNで構成（図は次のページ）
     - Vモデル（VAE model）: 時刻$t$の風景を潜在空間のベクトル$\boldsymbol{z}_t$に圧縮
-    - Mモデル（MDN-RNN model）: $\boldsymbol{z}_t$や行動$a_t$などから<span style="color:red">$\boldsymbol{z}_{t+1}$を予測</span>
+    - Mモデル（MDN-RNN model）: $\boldsymbol{z}_t$や行動$\boldsymbol{a}_t$などから<span style="color:red">$\boldsymbol{z}_{t+1}$を予測</span>
         - MDN: mixture density network（混合ガウス分布を推定）
         - RNN: recurrent neural network
-    - Cモデル（controller model）: 行動$a_t$を出力
+    - Cモデル（controller model）: 行動$\boldsymbol{a}_t$を出力
 
 <center style="color:red">次状態が予測ができると適切な行動を選択できるだろうという考え</center>
 
@@ -222,3 +222,11 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 </div>
 </div>
+
+---
+
+### Cモデルと全体の接続
+
+- Cモデル: 単なるアフィン変換
+    - $\boldsymbol{a}_t =W_c [\boldsymbol{z}_t \ \boldsymbol{h}_t] + \boldsymbol{b}_c$
+
