@@ -177,7 +177,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ---
 
-## おまけ1: 世界モデル[[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)
+## おまけ1: 世界モデル[[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)（[サイト](https://worldmodels.github.io/)）
 
 - なにか: 未来の状態を予測し、ロボットを制御するモデル・アイデア
     - 現在にも強い影響
@@ -189,3 +189,9 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - Cモデル（controller model）: 行動$a_t$を出力
 
 <center style="color:red">次状態が予測ができると適切な行動を選択できるだろうという考え</center>
+
+---
+
+### モデル
+
+https://worldmodels.github.io/
