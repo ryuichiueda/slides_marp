@@ -237,8 +237,9 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 <div>
 
 - 全体（MDN、$\boldsymbol{z}_{t+1}$は使わない）
+    - $\boldsymbol{h}_t$のなかに次の状態の手がかり
 
-![w:900](figs/world_model_schematic.svg)
+![](figs/world_model_schematic.svg)
 
 </div>
 </div>
