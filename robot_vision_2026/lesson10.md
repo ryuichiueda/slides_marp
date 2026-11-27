@@ -218,8 +218,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
     - $\boldsymbol{h}$: RNNの内部状態
     - $\tau$: 「温度」
 
-![](https://raw.githubusercontent.com/worldmodels/worldmodels.github.io/refs/heads/master/assets/mdn_rnn_new.svg)
-<span style="font-size:70%">image: 同左</span>
+![](https://raw.githubusercontent.com/worldmodels/worldmodels.github.io/refs/heads/master/assets/mdn_rnn_new.svg)<span style="font-size:70%">出典: 同左</span>
 
 </div>
 </div>
