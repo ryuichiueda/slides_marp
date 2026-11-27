@@ -227,7 +227,19 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ### Cモデルと全体の接続
 
-- Cモデル: 単なるアフィン変換
+<div class="columns">
+<div style="width:350px">
+
+- Cモデル
+    - 単なるアフィン変換
     - $\boldsymbol{a}_t =W_c [\boldsymbol{z}_t \ \boldsymbol{h}_t] + \boldsymbol{b}_c$
+
+</div>
+<div>
+
 - 全体（MDN、$\boldsymbol{z}_{t+1}$は使わない）
 
+![w:900](figs/world_model_schematic.svg)
+
+</div>
+</div>
