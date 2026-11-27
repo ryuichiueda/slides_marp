@@ -202,13 +202,24 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 <div class="columns">
 <div>
+
+
 - Vモデル
-<img src="figs/world_model_vae.svg" />
-<a style="font-size:70%" href="https://github.com/worldmodels/worldmodels.github.io">image: CC-BY-SA 4.0 in worldmodels/worldmodels.github.io</a>
+    - 普通のVAE
+
+![](figs/world_model_vae.svg)
+<span style="font-size:70%">image: CC-BY-SA 4.0 in [worldmodels/worldmodels.github.io](https://github.com/worldmodels/worldmodels.github.io)</span>
+
 </div>
 <div>
+
 - Mモデル
-<img src="https://raw.githubusercontent.com/worldmodels/worldmodels.github.io/refs/heads/master/assets/mdn_rnn_new.svg" />
+    - RNNの先にMDNをつけて次の潜在ベクトルを予測させる
+    - $\boldsymbol{h}$: RNNの内部状態
+    - $\tau$: 「温度」
+
+![](https://raw.githubusercontent.com/worldmodels/worldmodels.github.io/refs/heads/master/assets/mdn_rnn_new.svg)
 <span style="font-size:70%">image: 同左</span>
+
 </div>
 </div>
