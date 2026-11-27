@@ -182,7 +182,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - なにか: 未来の状態を予測し、ロボットを制御するモデル
 - 次の3つのANNで構成（図は次のページ）
     - Vモデル（VAE model）: 時刻$t$の風景を潜在空間のベクトル$\boldsymbol{z}_t$に圧縮
-    - Mモデル（MDN-RNN model）: 次の時刻のベクトル$\boldsymbol{z}_{t+1}$を予測
+    - Mモデル（MDN-RNN model）: $\boldsymbol{z}$や行動$a_t$などから次の時刻のベクトル$\boldsymbol{z}_{t+1}$を予測
         - MDN: mixture density network（混合ガウス分布を推定）
         - RNN: recurrent neural network
     - Cモデル（controller model）: 行動$a_t$を出力
