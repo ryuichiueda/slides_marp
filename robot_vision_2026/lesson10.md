@@ -250,7 +250,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 
 ### [[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)でできたこと
 
-- 自動車レースゲーム環境内での学習
+- ゲーム環境内での学習
     - V、Mと順に学習して最後にCをゲーム環境で学習
 - <span style="color:red">MDNの出力を使った学習（"training inside of the dream"）</span>
     - 各行動に対して次にどうなるか分かっているので、一番よい行動を選べば良い
