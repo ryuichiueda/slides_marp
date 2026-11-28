@@ -263,3 +263,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - 講義の内容との関連
     - LLMの調整（毒の作り方等に答えないようにする）
     - ANNを使って制御則を獲得させる（[動画](https://youtu.be/d9agnoab5h8?si=4-X6kU7IqJQ_BmSE)）
+- これまで習ってきた損失関数の値を低減する仕組みと何が違うのか
+    - 時系列上で得られる複数の出力に対して損失関数が定義される
