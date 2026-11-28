@@ -263,6 +263,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - 講義の内容との関連
     - LLMの調整（毒の作り方等に答えないようにする）
     - ANNを使って制御則を獲得させる（[動画](https://youtu.be/d9agnoab5h8?si=4-X6kU7IqJQ_BmSE)）
+        - あるいはVLAが失敗するときの微調整にも使える
 
 ---
 
@@ -277,5 +278,6 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
             - OK: 右折$\rightarrow$左折$\rightarrow$前進$\rightarrow$左折
             - OK: 左折$\rightarrow$右折$\rightarrow$前進$\rightarrow$右折
             - NG: 左折$\rightarrow$前進$\rightarrow$右折$\rightarrow$左折
+        - VLAだけだとうまくいかないときの対策が「もっとデータを」しかない
 
 <center style="color:red">どうするか・・・はもう時間がないので割愛</center>
