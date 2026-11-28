@@ -263,4 +263,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - 講義の内容との関連
     - LLMの調整（毒の作り方等に答えないようにする）
     - ANNを使って制御則を獲得させる
-
+        - [動画](https://youtu.be/d9agnoab5h8?si=4-X6kU7IqJQ_BmSE)）
