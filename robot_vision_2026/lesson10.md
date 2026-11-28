@@ -280,4 +280,9 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
             - NG: 左折$\rightarrow$前進$\rightarrow$右折$\rightarrow$左折
         - VLAだけだとうまくいかないときの対策が「もっとデータを」しかない
 
-<center style="color:red">どうするか・・・はもう時間がないので割愛</center>
+<center style="color:red">どうするか・・・は書籍を紹介して終わり（次ページ）</center>
+
+---
+
+### これまで習ってきた損失関数の値を低減する仕組みとの違い
+
