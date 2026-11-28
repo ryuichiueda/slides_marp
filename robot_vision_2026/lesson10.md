@@ -251,4 +251,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 ### [[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)でできたこと
 
 - 自動車レースゲームでの学習
-    - V、Mと順に学習して最後にCをゲーム環境からのデータで学習
+    - V、Mと順に学習して最後にCをゲーム環境で学習
