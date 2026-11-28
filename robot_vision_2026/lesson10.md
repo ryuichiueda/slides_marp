@@ -271,4 +271,8 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - 複数の出力を待たないと損失関数が定義できない
     - 例1: GPTの出力
         - 学習中は1サブワードごとに損失関数が決まる
-        - 「ヤバい文」の矯正には文全体が出力されないとできない
+        - 文全体の評価は文全体が出力されないとできない
+    - 例2: ロボットの制御（街中でどこか目的地に行きたい時）
+        - OK: 右折$\rightarrow$前進$\rightarrow$左折
+        - OK: 左折$\rightarrow$前進$\rightarrow$右折
+        - NG: 左折$\rightarrow$前進$\rightarrow$左折
