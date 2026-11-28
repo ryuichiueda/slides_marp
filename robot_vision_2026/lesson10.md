@@ -277,3 +277,5 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
             - OK: 右折$\rightarrow$左折$\rightarrow$前進$\rightarrow$左折
             - OK: 左折$\rightarrow$右折$\rightarrow$前進$\rightarrow$右折
             - NG: 左折$\rightarrow$前進$\rightarrow$右折$\rightarrow$左折
+
+<center style="color:red">どうするか・・・はもう時間がないので割愛</center>
