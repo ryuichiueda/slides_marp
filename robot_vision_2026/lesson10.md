@@ -233,6 +233,7 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 - Cモデル: 単なるアフィン変換
     - $\boldsymbol{a}_t =W_c [\boldsymbol{z}_t \ \boldsymbol{h}_t] + \boldsymbol{b}_c$
     - Cモデルが簡単に行動を選べるようにV、Mのほうを鍛える 
+    - covariance matrix adaptation evolution strategyというテクニックを使うらしい（各自調査を）
 
 </div>
 <div>
@@ -250,4 +251,4 @@ $\Longrightarrow$<span style="color:red">LoRAが使えるようになってい�
 ### [[Ha and Schmidhuber 2018]](https://arxiv.org/abs/1803.10122)でできたこと
 
 - 自動車レースゲームでの学習
-    - V、Mと順に学習して最後にCを
+    - V、Mと順に学習して最後にCをゲーム環境からのデータで学習
